@@ -1,0 +1,25 @@
+{
+  "schema_version": "0.2.0",
+  "repo": "mahmoud/glom",
+  "window": {
+    "since": "2023-01-01T00:00:00+00:00",
+    "until": "2026-09-13T00:00:00+00:00"
+  },
+  "summary": {
+    "accepted": 0,
+    "rejected": 20,
+    "issues_scanned": 20,
+    "timelines_fetched": 8,
+    "api_calls": 0,
+    "cache_hits": 9,
+    "rate_remaining": null,
+    "unmerged_pr_traps": 0,
+    "opaque_connected_events": 0,
+    "mainline_points": 79
+  },
+  "rejections": {
+    "over_budget": 12,
+    "no_merged_pr": 8
+  },
+  "candidates": []
+}

@@ -1,0 +1,993 @@
+{
+  "summary": {
+    "label": "recipehub",
+    "root": "/Users/adityagk/Desktop/projects/recipehub",
+    "files_total": 29,
+    "files_by_language": {
+      "javascript": 29
+    },
+    "symbols_total": 117,
+    "tests_total": 0,
+    "calls_total": 1142,
+    "syntax_errors": 2,
+    "unparsed_known_language": 0,
+    "edges_total": 156,
+    "edges_by_kind": {
+      "contain": 117,
+      "import": 39
+    },
+    "scan_seconds": 0.079,
+    "import_records": 94,
+    "import_records_with_any_edge_on_line": 39,
+    "import_count_caveat": "Records without edges include external imports and unsupported resolution; this is not recall. Multiple bindings on a line can be only partly resolved.",
+    "files_with_incoming_edges": 26,
+    "most_imported_files": [
+      [
+        "src/context/RecipeContext.jsx",
+        5
+      ],
+      [
+        "src/context/StoriesContext.jsx",
+        3
+      ],
+      [
+        "server/models/User.js",
+        2
+      ],
+      [
+        "src/services/speechService.js",
+        2
+      ],
+      [
+        "src/services/audioService.js",
+        2
+      ]
+    ],
+    "docstrings_in_memory": 0,
+    "docstrings_saved": 0,
+    "calls_saved": 0,
+    "issues": {
+      "duplicate_symbol_ids": {},
+      "dangling_edges": [],
+      "symbol_parents_missing_in_file": [],
+      "python_definitions_not_indexed": []
+    },
+    "previous": {
+      "path": "/Users/adityagk/Desktop/projects/recipehub/repo_graph.json",
+      "sha256": "3edf262325f38a519edc3a8f518fa00c7d74c2c015a7ba7014356f7a47f8cfc7",
+      "schema": "0.2.0",
+      "statistics": {
+        "files_total": 29,
+        "files_by_language": {
+          "javascript": 29
+        },
+        "symbols_total": 117,
+        "tests_total": 0,
+        "calls_total": 1142,
+        "syntax_errors": 2,
+        "unparsed_known_language": 0,
+        "edges_total": 156,
+        "edges_by_kind": {
+          "contain": 117,
+          "import": 39
+        }
+      },
+      "import_edges": 39,
+      "comparison_caveat": "Old artifacts do not establish identical source, query, or configuration versions."
+    }
+  },
+  "files": [
+    {
+      "path": "server/server.js",
+      "language": "javascript",
+      "parser": "tree_sitter",
+      "syntax_error": false,
+      "symbols": 0,
+      "calls_in_memory": 25,
+      "calls_with_declared_symbol_owner": 0,
+      "docstrings_in_memory": 0,
+      "incoming_edge_count": 0,
+      "incoming_files": [],
+      "imports_without_resolved_edge_on_line": [
+        {
+          "raw": "import express from 'express';",
+          "module": "express",
+          "symbols": [
+            "express"
+          ],
+          "line": 1
+        },
+        {
+          "raw": "import mongoose from 'mongoose';",
+          "module": "mongoose",
+          "symbols": [
+            "mongoose"
+          ],
+          "line": 2
+        },
+        {
+          "raw": "import cors from 'cors';",
+          "module": "cors",
+          "symbols": [
+            "cors"
+          ],
+          "line": 3
+        },
+        {
+          "raw": "import dotenv from 'dotenv';",
+          "module": "dotenv",
+          "symbols": [
+            "dotenv"
+          ],
+          "line": 4
+        }
+      ]
+    },
+    {
+      "path": "server/middleware/auth.js",
+      "language": "javascript",
+      "parser": "tree_sitter",
+      "syntax_error": false,
+      "symbols": 1,
+      "calls_in_memory": 11,
+      "calls_with_declared_symbol_owner": 0,
+      "docstrings_in_memory": 0,
+      "incoming_edge_count": 1,
+      "incoming_files": [
+        "server/routes/auth.js"
+      ],
+      "imports_without_resolved_edge_on_line": [
+        {
+          "raw": "import jwt from 'jsonwebtoken';",
+          "module": "jsonwebtoken",
+          "symbols": [
+            "jwt"
+          ],
+          "line": 1
+        }
+      ]
+    },
+    {
+      "path": "server/models/Playlist.js",
+      "language": "javascript",
+      "parser": "tree_sitter",
+      "syntax_error": false,
+      "symbols": 0,
+      "calls_in_memory": 2,
+      "calls_with_declared_symbol_owner": 0,
+      "docstrings_in_memory": 0,
+      "incoming_edge_count": 1,
+      "incoming_files": [
+        "server/routes/playlists.js"
+      ],
+      "imports_without_resolved_edge_on_line": [
+        {
+          "raw": "import mongoose from 'mongoose';",
+          "module": "mongoose",
+          "symbols": [
+            "mongoose"
+          ],
+          "line": 1
+        }
+      ]
+    },
+    {
+      "path": "server/models/Recipe.js",
+      "language": "javascript",
+      "parser": "tree_sitter",
+      "syntax_error": false,
+      "symbols": 0,
+      "calls_in_memory": 2,
+      "calls_with_declared_symbol_owner": 0,
+      "docstrings_in_memory": 0,
+      "incoming_edge_count": 1,
+      "incoming_files": [
+        "server/routes/recipes.js"
+      ],
+      "imports_without_resolved_edge_on_line": [
+        {
+          "raw": "import mongoose from 'mongoose';",
+          "module": "mongoose",
+          "symbols": [
+            "mongoose"
+          ],
+          "line": 1
+        }
+      ]
+    },
+    {
+      "path": "server/models/Story.js",
+      "language": "javascript",
+      "parser": "tree_sitter",
+      "syntax_error": false,
+      "symbols": 0,
+      "calls_in_memory": 2,
+      "calls_with_declared_symbol_owner": 0,
+      "docstrings_in_memory": 0,
+      "incoming_edge_count": 1,
+      "incoming_files": [
+        "server/routes/stories.js"
+      ],
+      "imports_without_resolved_edge_on_line": [
+        {
+          "raw": "import mongoose from 'mongoose';",
+          "module": "mongoose",
+          "symbols": [
+            "mongoose"
+          ],
+          "line": 1
+        }
+      ]
+    },
+    {
+      "path": "server/models/User.js",
+      "language": "javascript",
+      "parser": "tree_sitter",
+      "syntax_error": false,
+      "symbols": 0,
+      "calls_in_memory": 7,
+      "calls_with_declared_symbol_owner": 0,
+      "docstrings_in_memory": 0,
+      "incoming_edge_count": 2,
+      "incoming_files": [
+        "server/middleware/auth.js",
+        "server/routes/auth.js"
+      ],
+      "imports_without_resolved_edge_on_line": [
+        {
+          "raw": "import mongoose from 'mongoose';",
+          "module": "mongoose",
+          "symbols": [
+            "mongoose"
+          ],
+          "line": 1
+        },
+        {
+          "raw": "import bcrypt from 'bcryptjs';",
+          "module": "bcryptjs",
+          "symbols": [
+            "bcrypt"
+          ],
+          "line": 2
+        }
+      ]
+    },
+    {
+      "path": "server/routes/auth.js",
+      "language": "javascript",
+      "parser": "tree_sitter",
+      "syntax_error": false,
+      "symbols": 0,
+      "calls_in_memory": 35,
+      "calls_with_declared_symbol_owner": 0,
+      "docstrings_in_memory": 0,
+      "incoming_edge_count": 0,
+      "incoming_files": [],
+      "imports_without_resolved_edge_on_line": [
+        {
+          "raw": "import express from 'express';",
+          "module": "express",
+          "symbols": [
+            "express"
+          ],
+          "line": 1
+        },
+        {
+          "raw": "import jwt from 'jsonwebtoken';",
+          "module": "jsonwebtoken",
+          "symbols": [
+            "jwt"
+          ],
+          "line": 2
+        }
+      ]
+    },
+    {
+      "path": "server/routes/playlists.js",
+      "language": "javascript",
+      "parser": "tree_sitter",
+      "syntax_error": false,
+      "symbols": 0,
+      "calls_in_memory": 62,
+      "calls_with_declared_symbol_owner": 0,
+      "docstrings_in_memory": 0,
+      "incoming_edge_count": 1,
+      "incoming_files": [
+        "server/server.js"
+      ],
+      "imports_without_resolved_edge_on_line": [
+        {
+          "raw": "import express from 'express';",
+          "module": "express",
+          "symbols": [
+            "express"
+          ],
+          "line": 1
+        }
+      ]
+    },
+    {
+      "path": "server/routes/recipes.js",
+      "language": "javascript",
+      "parser": "tree_sitter",
+      "syntax_error": false,
+      "symbols": 0,
+      "calls_in_memory": 35,
+      "calls_with_declared_symbol_owner": 0,
+      "docstrings_in_memory": 0,
+      "incoming_edge_count": 1,
+      "incoming_files": [
+        "server/server.js"
+      ],
+      "imports_without_resolved_edge_on_line": [
+        {
+          "raw": "import express from 'express';",
+          "module": "express",
+          "symbols": [
+            "express"
+          ],
+          "line": 1
+        }
+      ]
+    },
+    {
+      "path": "server/routes/stories.js",
+      "language": "javascript",
+      "parser": "tree_sitter",
+      "syntax_error": false,
+      "symbols": 0,
+      "calls_in_memory": 35,
+      "calls_with_declared_symbol_owner": 0,
+      "docstrings_in_memory": 0,
+      "incoming_edge_count": 1,
+      "incoming_files": [
+        "server/server.js"
+      ],
+      "imports_without_resolved_edge_on_line": [
+        {
+          "raw": "import express from 'express';",
+          "module": "express",
+          "symbols": [
+            "express"
+          ],
+          "line": 1
+        }
+      ]
+    },
+    {
+      "path": "src/App.jsx",
+      "language": "javascript",
+      "parser": "tree_sitter",
+      "syntax_error": false,
+      "symbols": 3,
+      "calls_in_memory": 1,
+      "calls_with_declared_symbol_owner": 0,
+      "docstrings_in_memory": 0,
+      "incoming_edge_count": 1,
+      "incoming_files": [
+        "src/main.jsx"
+      ],
+      "imports_without_resolved_edge_on_line": [
+        {
+          "raw": "import React from 'react';",
+          "module": "react",
+          "symbols": [
+            "React"
+          ],
+          "line": 1
+        },
+        {
+          "raw": "import { BrowserRouter as Router, Routes, Route, Link, useLocation, Navigate } from 'react-router-dom';",
+          "module": "react-router-dom",
+          "symbols": [
+            "BrowserRouter",
+            "Router",
+            "Routes",
+            "Route",
+            "Link",
+            "useLocation",
+            "Navigate"
+          ],
+          "line": 2
+        },
+        {
+          "raw": "import './App.css';",
+          "module": "./App.css",
+          "symbols": [],
+          "line": 9
+        }
+      ]
+    },
+    {
+      "path": "src/CreateArea.jsx",
+      "language": "javascript",
+      "parser": "tree_sitter",
+      "syntax_error": true,
+      "symbols": 16,
+      "calls_in_memory": 209,
+      "calls_with_declared_symbol_owner": 0,
+      "docstrings_in_memory": 0,
+      "incoming_edge_count": 2,
+      "incoming_files": [
+        "src/RecipeDisplay.jsx",
+        "src/components/Home/Home.jsx"
+      ],
+      "imports_without_resolved_edge_on_line": [
+        {
+          "raw": "import React, { useState, useEffect, useRef } from 'react';",
+          "module": "react",
+          "symbols": [
+            "React",
+            "useState",
+            "useEffect",
+            "useRef"
+          ],
+          "line": 1
+        },
+        {
+          "raw": "import Modal from 'react-bootstrap/Modal';",
+          "module": "react-bootstrap/Modal",
+          "symbols": [
+            "Modal"
+          ],
+          "line": 2
+        },
+        {
+          "raw": "import Form from 'react-bootstrap/Form';",
+          "module": "react-bootstrap/Form",
+          "symbols": [
+            "Form"
+          ],
+          "line": 3
+        },
+        {
+          "raw": "import './styles/Modal.css';",
+          "module": "./styles/Modal.css",
+          "symbols": [],
+          "line": 7
+        },
+        {
+          "raw": "import './CreateArea.css';",
+          "module": "./CreateArea.css",
+          "symbols": [],
+          "line": 8
+        }
+      ]
+    },
+    {
+      "path": "src/RecipeDisplay.jsx",
+      "language": "javascript",
+      "parser": "tree_sitter",
+      "syntax_error": false,
+      "symbols": 11,
+      "calls_in_memory": 38,
+      "calls_with_declared_symbol_owner": 0,
+      "docstrings_in_memory": 0,
+      "incoming_edge_count": 2,
+      "incoming_files": [
+        "src/components/Home/Home.jsx",
+        "src/components/SearchPage/SearchPage.jsx"
+      ],
+      "imports_without_resolved_edge_on_line": [
+        {
+          "raw": "import React, { useState, useRef } from 'react';",
+          "module": "react",
+          "symbols": [
+            "React",
+            "useState",
+            "useRef"
+          ],
+          "line": 1
+        },
+        {
+          "raw": "import Modal from 'react-bootstrap/Modal';",
+          "module": "react-bootstrap/Modal",
+          "symbols": [
+            "Modal"
+          ],
+          "line": 2
+        },
+        {
+          "raw": "import './RecipeDisplay.css';",
+          "module": "./RecipeDisplay.css",
+          "symbols": [],
+          "line": 8
+        }
+      ]
+    },
+    {
+      "path": "src/main.jsx",
+      "language": "javascript",
+      "parser": "tree_sitter",
+      "syntax_error": false,
+      "symbols": 0,
+      "calls_in_memory": 3,
+      "calls_with_declared_symbol_owner": 0,
+      "docstrings_in_memory": 0,
+      "incoming_edge_count": 0,
+      "incoming_files": [],
+      "imports_without_resolved_edge_on_line": [
+        {
+          "raw": "import React from 'react'",
+          "module": "react",
+          "symbols": [
+            "React"
+          ],
+          "line": 1
+        },
+        {
+          "raw": "import ReactDOM from 'react-dom/client'",
+          "module": "react-dom/client",
+          "symbols": [
+            "ReactDOM"
+          ],
+          "line": 2
+        },
+        {
+          "raw": "import './index.css'",
+          "module": "./index.css",
+          "symbols": [],
+          "line": 4
+        }
+      ]
+    },
+    {
+      "path": "src/components/CookingMode/CookingMode.jsx",
+      "language": "javascript",
+      "parser": "tree_sitter",
+      "syntax_error": false,
+      "symbols": 7,
+      "calls_in_memory": 55,
+      "calls_with_declared_symbol_owner": 0,
+      "docstrings_in_memory": 0,
+      "incoming_edge_count": 1,
+      "incoming_files": [
+        "src/RecipeDisplay.jsx"
+      ],
+      "imports_without_resolved_edge_on_line": [
+        {
+          "raw": "import React, { useState, useEffect, useRef } from 'react';",
+          "module": "react",
+          "symbols": [
+            "React",
+            "useState",
+            "useEffect",
+            "useRef"
+          ],
+          "line": 1
+        },
+        {
+          "raw": "import Modal from 'react-bootstrap/Modal';",
+          "module": "react-bootstrap/Modal",
+          "symbols": [
+            "Modal"
+          ],
+          "line": 2
+        },
+        {
+          "raw": "import './CookingMode.css';",
+          "module": "./CookingMode.css",
+          "symbols": [],
+          "line": 3
+        }
+      ]
+    },
+    {
+      "path": "src/components/Home/Home.jsx",
+      "language": "javascript",
+      "parser": "tree_sitter",
+      "syntax_error": false,
+      "symbols": 1,
+      "calls_in_memory": 2,
+      "calls_with_declared_symbol_owner": 0,
+      "docstrings_in_memory": 0,
+      "incoming_edge_count": 1,
+      "incoming_files": [
+        "src/App.jsx"
+      ],
+      "imports_without_resolved_edge_on_line": [
+        {
+          "raw": "import React from 'react';",
+          "module": "react",
+          "symbols": [
+            "React"
+          ],
+          "line": 1
+        }
+      ]
+    },
+    {
+      "path": "src/components/RecipeFinder/Dish.jsx",
+      "language": "javascript",
+      "parser": "tree_sitter",
+      "syntax_error": false,
+      "symbols": 4,
+      "calls_in_memory": 54,
+      "calls_with_declared_symbol_owner": 0,
+      "docstrings_in_memory": 0,
+      "incoming_edge_count": 1,
+      "incoming_files": [
+        "src/components/RecipeFinder/DishList.jsx"
+      ],
+      "imports_without_resolved_edge_on_line": [
+        {
+          "raw": "import React, { useState } from 'react';",
+          "module": "react",
+          "symbols": [
+            "React",
+            "useState"
+          ],
+          "line": 1
+        },
+        {
+          "raw": "import { Modal } from 'react-bootstrap';",
+          "module": "react-bootstrap",
+          "symbols": [
+            "Modal"
+          ],
+          "line": 2
+        },
+        {
+          "raw": "import '../../styles/Modal.css';",
+          "module": "../../styles/Modal.css",
+          "symbols": [],
+          "line": 5
+        },
+        {
+          "raw": "import './RecipeFinder.css';",
+          "module": "./RecipeFinder.css",
+          "symbols": [],
+          "line": 6
+        }
+      ]
+    },
+    {
+      "path": "src/components/RecipeFinder/DishList.jsx",
+      "language": "javascript",
+      "parser": "tree_sitter",
+      "syntax_error": false,
+      "symbols": 1,
+      "calls_in_memory": 1,
+      "calls_with_declared_symbol_owner": 0,
+      "docstrings_in_memory": 0,
+      "incoming_edge_count": 1,
+      "incoming_files": [
+        "src/components/RecipeFinder/RecipeFinder.jsx"
+      ],
+      "imports_without_resolved_edge_on_line": [
+        {
+          "raw": "import React from 'react';",
+          "module": "react",
+          "symbols": [
+            "React"
+          ],
+          "line": 1
+        },
+        {
+          "raw": "import './RecipeFinder.css';",
+          "module": "./RecipeFinder.css",
+          "symbols": [],
+          "line": 3
+        }
+      ]
+    },
+    {
+      "path": "src/components/RecipeFinder/RecipeFinder.jsx",
+      "language": "javascript",
+      "parser": "tree_sitter",
+      "syntax_error": false,
+      "symbols": 2,
+      "calls_in_memory": 12,
+      "calls_with_declared_symbol_owner": 0,
+      "docstrings_in_memory": 0,
+      "incoming_edge_count": 1,
+      "incoming_files": [
+        "src/App.jsx"
+      ],
+      "imports_without_resolved_edge_on_line": [
+        {
+          "raw": "import React, { useState } from 'react';",
+          "module": "react",
+          "symbols": [
+            "React",
+            "useState"
+          ],
+          "line": 1
+        },
+        {
+          "raw": "import { useNavigate } from 'react-router-dom';",
+          "module": "react-router-dom",
+          "symbols": [
+            "useNavigate"
+          ],
+          "line": 2
+        },
+        {
+          "raw": "import './RecipeFinder.css';",
+          "module": "./RecipeFinder.css",
+          "symbols": [],
+          "line": 6
+        }
+      ]
+    },
+    {
+      "path": "src/components/RecipeFinder/SearchForm.jsx",
+      "language": "javascript",
+      "parser": "tree_sitter",
+      "syntax_error": false,
+      "symbols": 9,
+      "calls_in_memory": 81,
+      "calls_with_declared_symbol_owner": 0,
+      "docstrings_in_memory": 0,
+      "incoming_edge_count": 1,
+      "incoming_files": [
+        "src/components/RecipeFinder/RecipeFinder.jsx"
+      ],
+      "imports_without_resolved_edge_on_line": [
+        {
+          "raw": "import React, { useState, useRef, useEffect } from 'react';",
+          "module": "react",
+          "symbols": [
+            "React",
+            "useState",
+            "useRef",
+            "useEffect"
+          ],
+          "line": 1
+        },
+        {
+          "raw": "import { FloatingLabel, Form } from 'react-bootstrap';",
+          "module": "react-bootstrap",
+          "symbols": [
+            "FloatingLabel",
+            "Form"
+          ],
+          "line": 2
+        },
+        {
+          "raw": "import './RecipeFinder.css';",
+          "module": "./RecipeFinder.css",
+          "symbols": [],
+          "line": 3
+        }
+      ]
+    },
+    {
+      "path": "src/components/SearchPage/SearchPage.jsx",
+      "language": "javascript",
+      "parser": "tree_sitter",
+      "syntax_error": false,
+      "symbols": 5,
+      "calls_in_memory": 97,
+      "calls_with_declared_symbol_owner": 0,
+      "docstrings_in_memory": 0,
+      "incoming_edge_count": 1,
+      "incoming_files": [
+        "src/App.jsx"
+      ],
+      "imports_without_resolved_edge_on_line": [
+        {
+          "raw": "import React, { useState, useEffect, useRef, useMemo } from 'react';",
+          "module": "react",
+          "symbols": [
+            "React",
+            "useState",
+            "useEffect",
+            "useRef",
+            "useMemo"
+          ],
+          "line": 1
+        },
+        {
+          "raw": "import './SearchPage.css';",
+          "module": "./SearchPage.css",
+          "symbols": [],
+          "line": 5
+        }
+      ]
+    },
+    {
+      "path": "src/components/Stories/Stories.jsx",
+      "language": "javascript",
+      "parser": "tree_sitter",
+      "syntax_error": true,
+      "symbols": 17,
+      "calls_in_memory": 155,
+      "calls_with_declared_symbol_owner": 0,
+      "docstrings_in_memory": 0,
+      "incoming_edge_count": 1,
+      "incoming_files": [
+        "src/App.jsx"
+      ],
+      "imports_without_resolved_edge_on_line": [
+        {
+          "raw": "import React, { useState } from 'react';",
+          "module": "react",
+          "symbols": [
+            "React",
+            "useState"
+          ],
+          "line": 1
+        },
+        {
+          "raw": "import Modal from 'react-bootstrap/Modal';",
+          "module": "react-bootstrap/Modal",
+          "symbols": [
+            "Modal"
+          ],
+          "line": 2
+        },
+        {
+          "raw": "import Form from 'react-bootstrap/Form';",
+          "module": "react-bootstrap/Form",
+          "symbols": [
+            "Form"
+          ],
+          "line": 3
+        },
+        {
+          "raw": "import '../../styles/Modal.css';",
+          "module": "../../styles/Modal.css",
+          "symbols": [],
+          "line": 5
+        },
+        {
+          "raw": "import './Stories.css';",
+          "module": "./Stories.css",
+          "symbols": [],
+          "line": 6
+        }
+      ]
+    },
+    {
+      "path": "src/context/RecipeContext.jsx",
+      "language": "javascript",
+      "parser": "tree_sitter",
+      "syntax_error": false,
+      "symbols": 6,
+      "calls_in_memory": 27,
+      "calls_with_declared_symbol_owner": 0,
+      "docstrings_in_memory": 0,
+      "incoming_edge_count": 5,
+      "incoming_files": [
+        "src/App.jsx",
+        "src/RecipeDisplay.jsx",
+        "src/components/Home/Home.jsx",
+        "src/components/RecipeFinder/Dish.jsx",
+        "src/components/SearchPage/SearchPage.jsx"
+      ],
+      "imports_without_resolved_edge_on_line": [
+        {
+          "raw": "import React, { createContext, useContext, useState, useEffect } from 'react';",
+          "module": "react",
+          "symbols": [
+            "React",
+            "createContext",
+            "useContext",
+            "useState",
+            "useEffect"
+          ],
+          "line": 1
+        }
+      ]
+    },
+    {
+      "path": "src/context/StoriesContext.jsx",
+      "language": "javascript",
+      "parser": "tree_sitter",
+      "syntax_error": false,
+      "symbols": 12,
+      "calls_in_memory": 59,
+      "calls_with_declared_symbol_owner": 0,
+      "docstrings_in_memory": 0,
+      "incoming_edge_count": 3,
+      "incoming_files": [
+        "src/App.jsx",
+        "src/components/SearchPage/SearchPage.jsx",
+        "src/components/Stories/Stories.jsx"
+      ],
+      "imports_without_resolved_edge_on_line": [
+        {
+          "raw": "import React, { createContext, useContext, useState, useEffect } from 'react';",
+          "module": "react",
+          "symbols": [
+            "React",
+            "createContext",
+            "useContext",
+            "useState",
+            "useEffect"
+          ],
+          "line": 1
+        }
+      ]
+    },
+    {
+      "path": "src/services/apiService.js",
+      "language": "javascript",
+      "parser": "tree_sitter",
+      "syntax_error": false,
+      "symbols": 1,
+      "calls_in_memory": 29,
+      "calls_with_declared_symbol_owner": 0,
+      "docstrings_in_memory": 0,
+      "incoming_edge_count": 2,
+      "incoming_files": [
+        "src/context/RecipeContext.jsx",
+        "src/context/StoriesContext.jsx"
+      ],
+      "imports_without_resolved_edge_on_line": []
+    },
+    {
+      "path": "src/services/audioService.js",
+      "language": "javascript",
+      "parser": "tree_sitter",
+      "syntax_error": false,
+      "symbols": 7,
+      "calls_in_memory": 15,
+      "calls_with_declared_symbol_owner": 11,
+      "docstrings_in_memory": 0,
+      "incoming_edge_count": 2,
+      "incoming_files": [
+        "src/CreateArea.jsx",
+        "src/RecipeDisplay.jsx"
+      ],
+      "imports_without_resolved_edge_on_line": []
+    },
+    {
+      "path": "src/services/geminiService.js",
+      "language": "javascript",
+      "parser": "tree_sitter",
+      "syntax_error": false,
+      "symbols": 3,
+      "calls_in_memory": 60,
+      "calls_with_declared_symbol_owner": 0,
+      "docstrings_in_memory": 0,
+      "incoming_edge_count": 1,
+      "incoming_files": [
+        "src/CreateArea.jsx"
+      ],
+      "imports_without_resolved_edge_on_line": [
+        {
+          "raw": "import { GoogleGenerativeAI } from '@google/generative-ai';",
+          "module": "@google/generative-ai",
+          "symbols": [
+            "GoogleGenerativeAI"
+          ],
+          "line": 1
+        }
+      ]
+    },
+    {
+      "path": "src/services/speechService.js",
+      "language": "javascript",
+      "parser": "tree_sitter",
+      "syntax_error": false,
+      "symbols": 8,
+      "calls_in_memory": 13,
+      "calls_with_declared_symbol_owner": 10,
+      "docstrings_in_memory": 0,
+      "incoming_edge_count": 2,
+      "incoming_files": [
+        "src/CreateArea.jsx",
+        "src/RecipeDisplay.jsx"
+      ],
+      "imports_without_resolved_edge_on_line": []
+    },
+    {
+      "path": "src/services/spoonacularApi.js",
+      "language": "javascript",
+      "parser": "tree_sitter",
+      "syntax_error": false,
+      "symbols": 3,
+      "calls_in_memory": 15,
+      "calls_with_declared_symbol_owner": 0,
+      "docstrings_in_memory": 0,
+      "incoming_edge_count": 2,
+      "incoming_files": [
+        "src/components/RecipeFinder/Dish.jsx",
+        "src/components/RecipeFinder/RecipeFinder.jsx"
+      ],
+      "imports_without_resolved_edge_on_line": []
+    }
+  ]
+}

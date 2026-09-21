@@ -1,0 +1,20 @@
+{
+  "git": {
+    "head": null,
+    "status_porcelain": null
+  },
+  "source_sha256": {
+    "main.go": "9f458a541c8ed330c77dcb41cd516d710ab0ebce2661b88349b1e0b24a68502c",
+    "rpc/client.go": "9800af4275a36767856e4022e806170d21043e099ee04ef51603a234ea8d5344",
+    "rpc/codec.go": "51c6350fe444400c4cda241f21fa82bbc46c9ffdbc443d9711554fa74fef9da7",
+    "rpc/protocol.go": "8edd496220353cf0d2305ea41b389ce1ef38f753166538b476f5edec2b531644",
+    "rpc/registry.go": "2a6935cea90470ee4a318ffa9cbe3f3edc523476cdc0986f37f501ccce3c26b4",
+    "rpc/server.go": "9c0fce180beb81497670b1b9aa8d1e9847315c8576eee6f2f3ac0d2768dd2ad1",
+    "tests/calculator_test.go": "ac39e780c0b9e7a7eac58adfeff817f081b28a872d2b75f054af0cf40ed15bfe",
+    "tests/integration_test.go": "78549f0a58b6bd4a808e3646c9febf4c9cb7871f29e6bcc8367d3a5f1f7423c7"
+  },
+  "root_config_sha256": {
+    "go.mod": "81e27ae18d18ebf087f3f3498b8c17593d338d0c2b2c4651afa8dd09e776e77e"
+  },
+  "scanned_sources_digest": "c0162433b560649fbea016331742b9d6922027480a74d9bb908757e79ef57c8c"
+}

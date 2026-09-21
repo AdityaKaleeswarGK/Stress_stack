@@ -1,0 +1,21 @@
+{
+  "git": {
+    "head": null,
+    "status_porcelain": null
+  },
+  "source_sha256": {
+    "src/app.rs": "ec8d017f26483068cda1d6c38f3ff5291c54e68ecea38f058965bfca37135622",
+    "src/engine.rs": "15be891e0d812f46e88bef57be8cd1947a809949ab5d3ce77a865a1ac5db25d5",
+    "src/history.rs": "3701f72d7677ef6deea7879c46001258a73cfc41c1967b156d9147285b4225de",
+    "src/main.rs": "6c42be8c07b0934f13d191073291b55ee4f9362f78182ac38404278219d905dc",
+    "src/models.rs": "4e77f05d2e08b0cccdee8ba996453e3f5b630c6e96ce7a8647b8803eb498d758",
+    "src/parser.rs": "9292c537696a885a824528b172b4f0c12ca67dfe99ca226aede9eb1bb88824f9",
+    "src/persistence.rs": "d6f05ceccbb4f94a05fb0dfe5e26663d8c6730e36497dde0b969feda3d7f45b7",
+    "src/ui.rs": "e8917a24049f29f16c097473365480c0fd20017206f8b2fa1fb5765b1ac7abdc"
+  },
+  "root_config_sha256": {
+    "Cargo.toml": "c307b983b3ece608d33f464378e572251dc0b346a45154be6a47cf9c7da7f8d3",
+    "Cargo.lock": "9aed1a187874a741b3c656d70144a5ded924af0ed5689457f9db08c424c7e3d0"
+  },
+  "scanned_sources_digest": "cfe5b92c4da12da029dfd3cea4c3d11abf2812e0dc6ea261fca2ba39886d1607"
+}

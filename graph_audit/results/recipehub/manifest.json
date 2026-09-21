@@ -1,0 +1,41 @@
+{
+  "git": {
+    "head": "6eb9cb7f4e6b2ef1dd264a0f1117efea9a2d7952",
+    "status_porcelain": "M README.md\n D package-lock.json"
+  },
+  "source_sha256": {
+    "server/server.js": "9609830961aeda868b9ed48ab5f13a3a035ae432fd58cdab0a0c315d9790c846",
+    "server/middleware/auth.js": "742dfc467c951f4acc2a08e224ec39db41605f501e7342321e179d73b7a4ccea",
+    "server/models/Playlist.js": "ac9d5e62bd2223c2311d5cbdb2103e0df06a20ed8668771b895609a0ac49c4f8",
+    "server/models/Recipe.js": "ec187e0aa796c3a3aa3ce24f1b8e7365159658d683f352ce88e31d554827518d",
+    "server/models/Story.js": "cff883871a2035c77a9cacd7c897d1e87ec4ba931bc5560f32de84a61ee3867a",
+    "server/models/User.js": "b28e3ba88e7fb5c1b5a3e5b23a2ee2a0ebb5ce760b98b935886308fdd90308bb",
+    "server/routes/auth.js": "5d6e8b6e2b67003d978ddefa1ac81122065a424220daea9a965a9bb3baf398eb",
+    "server/routes/playlists.js": "cafa99483269c9c3e65ccaa030bc89e1813ea696cc1c89eec3db012cb27c4fc7",
+    "server/routes/recipes.js": "db22592a4947c72549175bdebcecf29048987849ab8958bebb9487ec3bcc345c",
+    "server/routes/stories.js": "e3097a307e9c25acae972ea4fe8acc08bec8b9dcfd7cfea2acf8496abb284af3",
+    "src/App.jsx": "4ecf010c4877cb9dd6a7d258dcbb3120c6302becdc78b61493ab293f6b525555",
+    "src/CreateArea.jsx": "b9aeda855c2067b7683a2d0da95282aaded602a6c40cc77687dbf367e6df71e5",
+    "src/RecipeDisplay.jsx": "3c2dce676b9d01a4043b6e816a5ff49c5aa1c09cd0d2c00374a591b908efe1b7",
+    "src/main.jsx": "6935df3a7df39c6abf5419b35c1018b8cc2b2125bf847dcaab202232d1c59b05",
+    "src/components/CookingMode/CookingMode.jsx": "ce43ea76e1b1108bf37a6f1995f14c5ca0dd7f8ff9283d76c25578e67f3325a2",
+    "src/components/Home/Home.jsx": "3004a91ce7f10bc9634168a3617c98821ab3d8f37cede6eb697fce0c9c0d77cb",
+    "src/components/RecipeFinder/Dish.jsx": "311c60f12557a842689ba51ef6e77087b9c5df0a48c1f62eeb9461194ec95404",
+    "src/components/RecipeFinder/DishList.jsx": "536b25c56a75b49f0e76e556054987821072b5de216a05a00ff770736106bebd",
+    "src/components/RecipeFinder/RecipeFinder.jsx": "14842d8a36bc6213b626a990011296fc7ccaae499a17fededa961c739ef2fd43",
+    "src/components/RecipeFinder/SearchForm.jsx": "9de0e6f72aab3fcd7eeeb2b2e0ac2d3197cc1defa1f603aff810b12fdb98f18c",
+    "src/components/SearchPage/SearchPage.jsx": "32a560a3dbb0be507990547be145eac78ad0eed49666563f516f907a36b49b95",
+    "src/components/Stories/Stories.jsx": "61d3e5d0351ef34c52afafd94bbf0b400b3aad7ce40c9428f498f09724122708",
+    "src/context/RecipeContext.jsx": "563ef4e386a0c17f48e5fcb0f2c0f085c7fd46cd96444a4aad097673080fa90a",
+    "src/context/StoriesContext.jsx": "fcdea69e601c6b5354c7001ded5b3e62dc91977ad1d4ab6664676ef5e82856db",
+    "src/services/apiService.js": "e0c6b69aa2d89fc7389b2426c8a3b36a135a28cd6beb2bbadd2a449bace175d7",
+    "src/services/audioService.js": "1da27a67b9d43bb89cb5e7a455cea60534cebc02fcb85750ca818d5c31102ca9",
+    "src/services/geminiService.js": "bbb404dfce91ccedcdc060232b7ea08eea832266ffe74e5d06e80fd61dd2a79d",
+    "src/services/speechService.js": "9296c9a9054e8520a765da9a6c8e5d11fecfcbf0e379cb61820ad6b8a6a0cf4f",
+    "src/services/spoonacularApi.js": "58660938f3eb975babd6f47cdc5a5e6bbb25f260b0f99af45b52b661783153eb"
+  },
+  "root_config_sha256": {
+    "package.json": "cf64a3eabf5bec16ff0288b332baa34994840360eb51b134defaa748e0761ff6"
+  },
+  "scanned_sources_digest": "e3893e9b0e5ca1780f7507430e84d6d54bc3cce46a6c6d16a5ed8de6a2e45187"
+}

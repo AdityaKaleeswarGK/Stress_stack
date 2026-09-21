@@ -1,0 +1,1907 @@
+{
+  "schema_version": "0.2.0",
+  "root": "/Users/adityagk/Desktop/projects/calc-rs",
+  "statistics": {
+    "files_total": 8,
+    "files_by_language": {
+      "rust": 8
+    },
+    "symbols_total": 55,
+    "tests_total": 4,
+    "calls_total": 305,
+    "syntax_errors": 0,
+    "unparsed_known_language": 0,
+    "edges_total": 69,
+    "edges_by_kind": {
+      "contain": 55,
+      "import": 14
+    }
+  },
+  "files": [
+    {
+      "path": "src/app.rs",
+      "language": "rust",
+      "parser": "tree_sitter",
+      "has_syntax_error": false,
+      "imports": [
+        {
+          "raw": "use crate::models::{AngularUnit, HistoryEntry, AppState};",
+          "module": "crate::models",
+          "symbols": [
+            "AngularUnit",
+            "HistoryEntry",
+            "AppState"
+          ],
+          "line": 1
+        },
+        {
+          "raw": "use crate::engine::MathEngine;",
+          "module": "crate::engine",
+          "symbols": [
+            "MathEngine"
+          ],
+          "line": 2
+        },
+        {
+          "raw": "use crate::history::HistoryStore;",
+          "module": "crate::history",
+          "symbols": [
+            "HistoryStore"
+          ],
+          "line": 3
+        },
+        {
+          "raw": "use crate::parser;",
+          "module": "crate",
+          "symbols": [
+            "parser"
+          ],
+          "line": 4
+        }
+      ],
+      "symbols": [
+        {
+          "name": "AppController",
+          "qualified_name": "AppController",
+          "kind": "struct",
+          "start_line": 6,
+          "end_line": 10,
+          "first_body_line": 6,
+          "last_body_line": 10,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 168,
+          "body_end_byte": 243,
+          "bases": [],
+          "parent": "",
+          "id": "src/app.rs::AppController"
+        },
+        {
+          "name": "new",
+          "qualified_name": "AppController.new",
+          "kind": "method",
+          "start_line": 13,
+          "end_line": 19,
+          "first_body_line": 13,
+          "last_body_line": 19,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 291,
+          "body_end_byte": 450,
+          "bases": [],
+          "parent": "AppController",
+          "id": "src/app.rs::AppController.new"
+        },
+        {
+          "name": "get_state",
+          "qualified_name": "AppController.get_state",
+          "kind": "method",
+          "start_line": 21,
+          "end_line": 23,
+          "first_body_line": 21,
+          "last_body_line": 23,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 493,
+          "body_end_byte": 520,
+          "bases": [],
+          "parent": "AppController",
+          "id": "src/app.rs::AppController.get_state"
+        },
+        {
+          "name": "push_char",
+          "qualified_name": "AppController.push_char",
+          "kind": "method",
+          "start_line": 25,
+          "end_line": 28,
+          "first_body_line": 25,
+          "last_body_line": 28,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 563,
+          "body_end_byte": 649,
+          "bases": [],
+          "parent": "AppController",
+          "id": "src/app.rs::AppController.push_char"
+        },
+        {
+          "name": "backspace",
+          "qualified_name": "AppController.backspace",
+          "kind": "method",
+          "start_line": 30,
+          "end_line": 33,
+          "first_body_line": 30,
+          "last_body_line": 33,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 683,
+          "body_end_byte": 767,
+          "bases": [],
+          "parent": "AppController",
+          "id": "src/app.rs::AppController.backspace"
+        },
+        {
+          "name": "clear_input",
+          "qualified_name": "AppController.clear_input",
+          "kind": "method",
+          "start_line": 35,
+          "end_line": 38,
+          "first_body_line": 35,
+          "last_body_line": 38,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 803,
+          "body_end_byte": 889,
+          "bases": [],
+          "parent": "AppController",
+          "id": "src/app.rs::AppController.clear_input"
+        },
+        {
+          "name": "toggle_unit",
+          "qualified_name": "AppController.toggle_unit",
+          "kind": "method",
+          "start_line": 40,
+          "end_line": 45,
+          "first_body_line": 40,
+          "last_body_line": 45,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 925,
+          "body_end_byte": 1125,
+          "bases": [],
+          "parent": "AppController",
+          "id": "src/app.rs::AppController.toggle_unit"
+        },
+        {
+          "name": "submit",
+          "qualified_name": "AppController.submit",
+          "kind": "method",
+          "start_line": 47,
+          "end_line": 69,
+          "first_body_line": 47,
+          "last_body_line": 69,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 1156,
+          "body_end_byte": 1951,
+          "bases": [],
+          "parent": "AppController",
+          "id": "src/app.rs::AppController.submit"
+        },
+        {
+          "name": "tick",
+          "qualified_name": "AppController.tick",
+          "kind": "method",
+          "start_line": 72,
+          "end_line": 72,
+          "first_body_line": 72,
+          "last_body_line": 72,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 2060,
+          "body_end_byte": 2062,
+          "bases": [],
+          "parent": "AppController",
+          "id": "src/app.rs::AppController.tick"
+        }
+      ]
+    },
+    {
+      "path": "src/engine.rs",
+      "language": "rust",
+      "parser": "tree_sitter",
+      "has_syntax_error": false,
+      "imports": [
+        {
+          "raw": "use crate::models::{ASTNode, AngularUnit, MathError, ResultValue};",
+          "module": "crate::models",
+          "symbols": [
+            "ASTNode",
+            "AngularUnit",
+            "MathError",
+            "ResultValue"
+          ],
+          "line": 1
+        },
+        {
+          "raw": "use rust_decimal_macros::dec;",
+          "module": "rust_decimal_macros",
+          "symbols": [
+            "dec"
+          ],
+          "line": 4
+        }
+      ],
+      "symbols": [
+        {
+          "name": "MathEngine",
+          "qualified_name": "MathEngine",
+          "kind": "struct",
+          "start_line": 9,
+          "end_line": 11,
+          "first_body_line": 9,
+          "last_body_line": 11,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 256,
+          "body_end_byte": 288,
+          "bases": [],
+          "parent": "",
+          "id": "src/engine.rs::MathEngine"
+        },
+        {
+          "name": "default",
+          "qualified_name": "MathEngine.default",
+          "kind": "method",
+          "start_line": 14,
+          "end_line": 16,
+          "first_body_line": 14,
+          "last_body_line": 16,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 345,
+          "body_end_byte": 389,
+          "bases": [
+            "Default"
+          ],
+          "parent": "MathEngine",
+          "id": "src/engine.rs::MathEngine.default"
+        },
+        {
+          "name": "new",
+          "qualified_name": "MathEngine.new",
+          "kind": "method",
+          "start_line": 20,
+          "end_line": 22,
+          "first_body_line": 20,
+          "last_body_line": 22,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 455,
+          "body_end_byte": 494,
+          "bases": [],
+          "parent": "MathEngine",
+          "id": "src/engine.rs::MathEngine.new"
+        },
+        {
+          "name": "evaluate",
+          "qualified_name": "MathEngine.evaluate",
+          "kind": "method",
+          "start_line": 24,
+          "end_line": 31,
+          "first_body_line": 24,
+          "last_body_line": 31,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 591,
+          "body_end_byte": 793,
+          "bases": [],
+          "parent": "MathEngine",
+          "id": "src/engine.rs::MathEngine.evaluate"
+        },
+        {
+          "name": "eval_recursive",
+          "qualified_name": "MathEngine.eval_recursive",
+          "kind": "method",
+          "start_line": 33,
+          "end_line": 80,
+          "first_body_line": 33,
+          "last_body_line": 80,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 889,
+          "body_end_byte": 2827,
+          "bases": [],
+          "parent": "MathEngine",
+          "id": "src/engine.rs::MathEngine.eval_recursive"
+        }
+      ]
+    },
+    {
+      "path": "src/history.rs",
+      "language": "rust",
+      "parser": "tree_sitter",
+      "has_syntax_error": false,
+      "imports": [
+        {
+          "raw": "use std::sync::{Arc, Mutex};",
+          "module": "std::sync",
+          "symbols": [
+            "Arc",
+            "Mutex"
+          ],
+          "line": 1
+        },
+        {
+          "raw": "use crate::models::HistoryEntry;",
+          "module": "crate::models",
+          "symbols": [
+            "HistoryEntry"
+          ],
+          "line": 2
+        },
+        {
+          "raw": "use serde::{Deserialize, Serialize, Serializer, Deserializer};",
+          "module": "serde",
+          "symbols": [
+            "Deserialize",
+            "Serialize",
+            "Serializer",
+            "Deserializer"
+          ],
+          "line": 3
+        },
+        {
+          "raw": "use crate::models::{HistoryEntry, ResultValue};",
+          "module": "crate::models",
+          "symbols": [
+            "HistoryEntry",
+            "ResultValue"
+          ],
+          "line": 66
+        },
+        {
+          "raw": "use std::thread;",
+          "module": "std",
+          "symbols": [
+            "thread"
+          ],
+          "line": 67
+        }
+      ],
+      "symbols": [
+        {
+          "name": "HistoryStore",
+          "qualified_name": "HistoryStore",
+          "kind": "struct",
+          "start_line": 6,
+          "end_line": 9,
+          "first_body_line": 6,
+          "last_body_line": 9,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 167,
+          "body_end_byte": 234,
+          "bases": [],
+          "parent": "",
+          "id": "src/history.rs::HistoryStore"
+        },
+        {
+          "name": "serialize",
+          "qualified_name": "HistoryStore.serialize",
+          "kind": "method",
+          "start_line": 12,
+          "end_line": 19,
+          "first_body_line": 15,
+          "last_body_line": 19,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 376,
+          "body_end_byte": 516,
+          "bases": [
+            "Serialize"
+          ],
+          "parent": "HistoryStore",
+          "id": "src/history.rs::HistoryStore.serialize"
+        },
+        {
+          "name": "deserialize",
+          "qualified_name": "HistoryStore.deserialize",
+          "kind": "method",
+          "start_line": 23,
+          "end_line": 32,
+          "first_body_line": 26,
+          "last_body_line": 32,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 675,
+          "body_end_byte": 885,
+          "bases": [
+            "Deserialize"
+          ],
+          "parent": "HistoryStore",
+          "id": "src/history.rs::HistoryStore.deserialize"
+        },
+        {
+          "name": "default",
+          "qualified_name": "HistoryStore.default",
+          "kind": "method",
+          "start_line": 36,
+          "end_line": 38,
+          "first_body_line": 36,
+          "last_body_line": 38,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 946,
+          "body_end_byte": 975,
+          "bases": [
+            "Default"
+          ],
+          "parent": "HistoryStore",
+          "id": "src/history.rs::HistoryStore.default"
+        },
+        {
+          "name": "new",
+          "qualified_name": "HistoryStore.new",
+          "kind": "method",
+          "start_line": 42,
+          "end_line": 47,
+          "first_body_line": 42,
+          "last_body_line": 47,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 1039,
+          "body_end_byte": 1165,
+          "bases": [],
+          "parent": "HistoryStore",
+          "id": "src/history.rs::HistoryStore.new"
+        },
+        {
+          "name": "push",
+          "qualified_name": "HistoryStore.push",
+          "kind": "method",
+          "start_line": 49,
+          "end_line": 55,
+          "first_body_line": 49,
+          "last_body_line": 55,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 1211,
+          "body_end_byte": 1383,
+          "bases": [],
+          "parent": "HistoryStore",
+          "id": "src/history.rs::HistoryStore.push"
+        },
+        {
+          "name": "get_all",
+          "qualified_name": "HistoryStore.get_all",
+          "kind": "method",
+          "start_line": 57,
+          "end_line": 60,
+          "first_body_line": 57,
+          "last_body_line": 60,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 1432,
+          "body_end_byte": 1512,
+          "bases": [],
+          "parent": "HistoryStore",
+          "id": "src/history.rs::HistoryStore.get_all"
+        },
+        {
+          "name": "test_max_size_enforcement",
+          "qualified_name": "test_max_size_enforcement",
+          "kind": "function",
+          "start_line": 70,
+          "end_line": 79,
+          "first_body_line": 70,
+          "last_body_line": 79,
+          "is_test": true,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 1680,
+          "body_end_byte": 2103,
+          "bases": [],
+          "parent": "",
+          "id": "src/history.rs::test_max_size_enforcement"
+        },
+        {
+          "name": "test_concurrent_access",
+          "qualified_name": "test_concurrent_access",
+          "kind": "function",
+          "start_line": 82,
+          "end_line": 98,
+          "first_body_line": 82,
+          "last_body_line": 98,
+          "is_test": true,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 2149,
+          "body_end_byte": 2603,
+          "bases": [],
+          "parent": "",
+          "id": "src/history.rs::test_concurrent_access"
+        }
+      ]
+    },
+    {
+      "path": "src/main.rs",
+      "language": "rust",
+      "parser": "tree_sitter",
+      "has_syntax_error": false,
+      "imports": [
+        {
+          "raw": "use crossterm::{\n    event::{self, DisableMouseCapture, EnableMouseCapture, Event, KeyCode, KeyModifiers},\n    execute,\n    terminal::{disable_raw_mode, enable_raw_mode, EnterAlternateScreen, LeaveAlternateScreen},\n};",
+          "module": "crossterm",
+          "symbols": [
+            "execute"
+          ],
+          "line": 1
+        },
+        {
+          "raw": "use std::{error::Error, io, time::{Duration, Instant}};",
+          "module": "std",
+          "symbols": [
+            "io"
+          ],
+          "line": 6
+        },
+        {
+          "raw": "use ratatui::{backend::CrosstermBackend, Terminal};",
+          "module": "ratatui",
+          "symbols": [
+            "Terminal"
+          ],
+          "line": 7
+        },
+        {
+          "raw": "use app::AppController as App;",
+          "module": "app",
+          "symbols": [
+            "AppController"
+          ],
+          "line": 17
+        },
+        {
+          "raw": "use ui::UI;",
+          "module": "ui",
+          "symbols": [
+            "UI"
+          ],
+          "line": 18
+        }
+      ],
+      "symbols": [
+        {
+          "name": "main",
+          "qualified_name": "main",
+          "kind": "function",
+          "start_line": 21,
+          "end_line": 84,
+          "first_body_line": 21,
+          "last_body_line": 84,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 516,
+          "body_end_byte": 2439,
+          "bases": [],
+          "parent": "",
+          "id": "src/main.rs::main"
+        }
+      ]
+    },
+    {
+      "path": "src/models.rs",
+      "language": "rust",
+      "parser": "tree_sitter",
+      "has_syntax_error": false,
+      "imports": [
+        {
+          "raw": "use serde::{Deserialize, Serialize};",
+          "module": "serde",
+          "symbols": [
+            "Deserialize",
+            "Serialize"
+          ],
+          "line": 1
+        },
+        {
+          "raw": "use rust_decimal::Decimal;",
+          "module": "rust_decimal",
+          "symbols": [
+            "Decimal"
+          ],
+          "line": 2
+        },
+        {
+          "raw": "use std::time::{SystemTime, UNIX_EPOCH};",
+          "module": "std::time",
+          "symbols": [
+            "SystemTime",
+            "UNIX_EPOCH"
+          ],
+          "line": 3
+        }
+      ],
+      "symbols": [
+        {
+          "name": "AngularUnit",
+          "qualified_name": "AngularUnit",
+          "kind": "enum",
+          "start_line": 6,
+          "end_line": 9,
+          "first_body_line": 6,
+          "last_body_line": 9,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 196,
+          "body_end_byte": 225,
+          "bases": [],
+          "parent": "",
+          "id": "src/models.rs::AngularUnit"
+        },
+        {
+          "name": "MathError",
+          "qualified_name": "MathError",
+          "kind": "enum",
+          "start_line": 12,
+          "end_line": 16,
+          "first_body_line": 12,
+          "last_body_line": 16,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 294,
+          "body_end_byte": 356,
+          "bases": [],
+          "parent": "",
+          "id": "src/models.rs::MathError"
+        },
+        {
+          "name": "ASTNode",
+          "qualified_name": "ASTNode",
+          "kind": "enum",
+          "start_line": 19,
+          "end_line": 23,
+          "first_body_line": 19,
+          "last_body_line": 23,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 423,
+          "body_end_byte": 532,
+          "bases": [],
+          "parent": "",
+          "id": "src/models.rs::ASTNode"
+        },
+        {
+          "name": "ResultValue",
+          "qualified_name": "ResultValue",
+          "kind": "struct",
+          "start_line": 26,
+          "end_line": 30,
+          "first_body_line": 26,
+          "last_body_line": 30,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 605,
+          "body_end_byte": 689,
+          "bases": [],
+          "parent": "",
+          "id": "src/models.rs::ResultValue"
+        },
+        {
+          "name": "default",
+          "qualified_name": "ResultValue.default",
+          "kind": "method",
+          "start_line": 33,
+          "end_line": 39,
+          "first_body_line": 33,
+          "last_body_line": 39,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 747,
+          "body_end_byte": 879,
+          "bases": [
+            "Default"
+          ],
+          "parent": "ResultValue",
+          "id": "src/models.rs::ResultValue.default"
+        },
+        {
+          "name": "HistoryEntry",
+          "qualified_name": "HistoryEntry",
+          "kind": "struct",
+          "start_line": 43,
+          "end_line": 47,
+          "first_body_line": 43,
+          "last_body_line": 47,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 955,
+          "body_end_byte": 1039,
+          "bases": [],
+          "parent": "",
+          "id": "src/models.rs::HistoryEntry"
+        },
+        {
+          "name": "new",
+          "qualified_name": "HistoryEntry.new",
+          "kind": "method",
+          "start_line": 50,
+          "end_line": 61,
+          "first_body_line": 50,
+          "last_body_line": 61,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 1125,
+          "body_end_byte": 1372,
+          "bases": [],
+          "parent": "HistoryEntry",
+          "id": "src/models.rs::HistoryEntry.new"
+        },
+        {
+          "name": "AppState",
+          "qualified_name": "AppState",
+          "kind": "struct",
+          "start_line": 65,
+          "end_line": 71,
+          "first_body_line": 65,
+          "last_body_line": 71,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 1420,
+          "body_end_byte": 1589,
+          "bases": [],
+          "parent": "",
+          "id": "src/models.rs::AppState"
+        },
+        {
+          "name": "default",
+          "qualified_name": "AppState.default",
+          "kind": "method",
+          "start_line": 74,
+          "end_line": 82,
+          "first_body_line": 74,
+          "last_body_line": 82,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 1644,
+          "body_end_byte": 1859,
+          "bases": [
+            "Default"
+          ],
+          "parent": "AppState",
+          "id": "src/models.rs::AppState.default"
+        }
+      ]
+    },
+    {
+      "path": "src/parser.rs",
+      "language": "rust",
+      "parser": "tree_sitter",
+      "has_syntax_error": false,
+      "imports": [
+        {
+          "raw": "use crate::models::{ASTNode, MathError};",
+          "module": "crate::models",
+          "symbols": [
+            "ASTNode",
+            "MathError"
+          ],
+          "line": 1
+        },
+        {
+          "raw": "use rust_decimal::Decimal;",
+          "module": "rust_decimal",
+          "symbols": [
+            "Decimal"
+          ],
+          "line": 2
+        },
+        {
+          "raw": "use std::str::FromStr;",
+          "module": "std::str",
+          "symbols": [
+            "FromStr"
+          ],
+          "line": 3
+        }
+      ],
+      "symbols": [
+        {
+          "name": "Token",
+          "qualified_name": "Token",
+          "kind": "enum",
+          "start_line": 6,
+          "end_line": 15,
+          "first_body_line": 6,
+          "last_body_line": 15,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 138,
+          "body_end_byte": 257,
+          "bases": [],
+          "parent": "",
+          "id": "src/parser.rs::Token"
+        },
+        {
+          "name": "Tokenizer",
+          "qualified_name": "Tokenizer",
+          "kind": "struct",
+          "start_line": 17,
+          "end_line": 20,
+          "first_body_line": 17,
+          "last_body_line": 20,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 276,
+          "body_end_byte": 319,
+          "bases": [],
+          "parent": "",
+          "id": "src/parser.rs::Tokenizer"
+        },
+        {
+          "name": "new",
+          "qualified_name": "Tokenizer.new",
+          "kind": "method",
+          "start_line": 23,
+          "end_line": 56,
+          "first_body_line": 23,
+          "last_body_line": 56,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 389,
+          "body_end_byte": 1938,
+          "bases": [],
+          "parent": "Tokenizer",
+          "id": "src/parser.rs::Tokenizer.new"
+        },
+        {
+          "name": "peek",
+          "qualified_name": "Tokenizer.peek",
+          "kind": "method",
+          "start_line": 58,
+          "end_line": 60,
+          "first_body_line": 58,
+          "last_body_line": 60,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 1977,
+          "body_end_byte": 2018,
+          "bases": [],
+          "parent": "Tokenizer",
+          "id": "src/parser.rs::Tokenizer.peek"
+        },
+        {
+          "name": "consume",
+          "qualified_name": "Tokenizer.consume",
+          "kind": "method",
+          "start_line": 62,
+          "end_line": 66,
+          "first_body_line": 62,
+          "last_body_line": 66,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 2063,
+          "body_end_byte": 2174,
+          "bases": [],
+          "parent": "Tokenizer",
+          "id": "src/parser.rs::Tokenizer.consume"
+        },
+        {
+          "name": "parse",
+          "qualified_name": "parse",
+          "kind": "function",
+          "start_line": 69,
+          "end_line": 72,
+          "first_body_line": 69,
+          "last_body_line": 72,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 2236,
+          "body_end_byte": 2325,
+          "bases": [],
+          "parent": "",
+          "id": "src/parser.rs::parse"
+        },
+        {
+          "name": "parse_expression",
+          "qualified_name": "parse_expression",
+          "kind": "function",
+          "start_line": 74,
+          "end_line": 91,
+          "first_body_line": 74,
+          "last_body_line": 91,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 2404,
+          "body_end_byte": 2972,
+          "bases": [],
+          "parent": "",
+          "id": "src/parser.rs::parse_expression"
+        },
+        {
+          "name": "parse_term",
+          "qualified_name": "parse_term",
+          "kind": "function",
+          "start_line": 93,
+          "end_line": 110,
+          "first_body_line": 93,
+          "last_body_line": 110,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 3045,
+          "body_end_byte": 3627,
+          "bases": [],
+          "parent": "",
+          "id": "src/parser.rs::parse_term"
+        },
+        {
+          "name": "parse_factor",
+          "qualified_name": "parse_factor",
+          "kind": "function",
+          "start_line": 112,
+          "end_line": 137,
+          "first_body_line": 112,
+          "last_body_line": 137,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 3702,
+          "body_end_byte": 4742,
+          "bases": [],
+          "parent": "",
+          "id": "src/parser.rs::parse_factor"
+        }
+      ]
+    },
+    {
+      "path": "src/persistence.rs",
+      "language": "rust",
+      "parser": "tree_sitter",
+      "has_syntax_error": false,
+      "imports": [
+        {
+          "raw": "use serde::{Deserialize, Serialize};",
+          "module": "serde",
+          "symbols": [
+            "Deserialize",
+            "Serialize"
+          ],
+          "line": 1
+        },
+        {
+          "raw": "use std::fs::{self, File};",
+          "module": "std::fs",
+          "symbols": [
+            "File"
+          ],
+          "line": 2
+        },
+        {
+          "raw": "use std::io::{BufReader, Write};",
+          "module": "std::io",
+          "symbols": [
+            "BufReader",
+            "Write"
+          ],
+          "line": 3
+        },
+        {
+          "raw": "use std::path::{Path};",
+          "module": "std::path",
+          "symbols": [
+            "Path"
+          ],
+          "line": 4
+        },
+        {
+          "raw": "use crate::history::HistoryStore;",
+          "module": "crate::history",
+          "symbols": [
+            "HistoryStore"
+          ],
+          "line": 5
+        },
+        {
+          "raw": "use crate::history::HistoryStore;",
+          "module": "crate::history",
+          "symbols": [
+            "HistoryStore"
+          ],
+          "line": 48
+        },
+        {
+          "raw": "use crate::models::{HistoryEntry, ResultValue};",
+          "module": "crate::models",
+          "symbols": [
+            "HistoryEntry",
+            "ResultValue"
+          ],
+          "line": 49
+        }
+      ],
+      "symbols": [
+        {
+          "name": "PersistenceError",
+          "qualified_name": "PersistenceError",
+          "kind": "enum",
+          "start_line": 8,
+          "end_line": 11,
+          "first_body_line": 8,
+          "last_body_line": 11,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 198,
+          "body_end_byte": 263,
+          "bases": [],
+          "parent": "",
+          "id": "src/persistence.rs::PersistenceError"
+        },
+        {
+          "name": "from",
+          "qualified_name": "PersistenceError.from",
+          "kind": "method",
+          "start_line": 14,
+          "end_line": 16,
+          "first_body_line": 14,
+          "last_body_line": 16,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 355,
+          "body_end_byte": 396,
+          "bases": [
+            "From"
+          ],
+          "parent": "PersistenceError",
+          "id": "src/persistence.rs::PersistenceError.from@14"
+        },
+        {
+          "name": "from",
+          "qualified_name": "PersistenceError.from",
+          "kind": "method",
+          "start_line": 20,
+          "end_line": 22,
+          "first_body_line": 20,
+          "last_body_line": 22,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 496,
+          "body_end_byte": 548,
+          "bases": [
+            "From"
+          ],
+          "parent": "PersistenceError",
+          "id": "src/persistence.rs::PersistenceError.from@20"
+        },
+        {
+          "name": "save_state",
+          "qualified_name": "save_state",
+          "kind": "function",
+          "start_line": 25,
+          "end_line": 36,
+          "first_body_line": 25,
+          "last_body_line": 36,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 648,
+          "body_end_byte": 901,
+          "bases": [],
+          "parent": "",
+          "id": "src/persistence.rs::save_state"
+        },
+        {
+          "name": "load_state",
+          "qualified_name": "load_state",
+          "kind": "function",
+          "start_line": 38,
+          "end_line": 43,
+          "first_body_line": 38,
+          "last_body_line": 43,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 987,
+          "body_end_byte": 1141,
+          "bases": [],
+          "parent": "",
+          "id": "src/persistence.rs::load_state"
+        },
+        {
+          "name": "test_round_trip",
+          "qualified_name": "test_round_trip",
+          "kind": "function",
+          "start_line": 52,
+          "end_line": 69,
+          "first_body_line": 52,
+          "last_body_line": 69,
+          "is_test": true,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 1314,
+          "body_end_byte": 1915,
+          "bases": [],
+          "parent": "",
+          "id": "src/persistence.rs::test_round_trip"
+        },
+        {
+          "name": "test_corrupt_binary",
+          "qualified_name": "test_corrupt_binary",
+          "kind": "function",
+          "start_line": 72,
+          "end_line": 79,
+          "first_body_line": 72,
+          "last_body_line": 79,
+          "is_test": true,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 1958,
+          "body_end_byte": 2176,
+          "bases": [],
+          "parent": "",
+          "id": "src/persistence.rs::test_corrupt_binary"
+        }
+      ]
+    },
+    {
+      "path": "src/ui.rs",
+      "language": "rust",
+      "parser": "tree_sitter",
+      "has_syntax_error": false,
+      "imports": [
+        {
+          "raw": "use ratatui::{\n    layout::{Constraint, Direction, Layout, Rect},\n    style::Style,\n    widgets::{Block, Borders, List, ListItem, Paragraph},\n    Frame,\n};",
+          "module": "ratatui",
+          "symbols": [
+            "Frame"
+          ],
+          "line": 1
+        },
+        {
+          "raw": "use crate::models::AppState;",
+          "module": "crate::models",
+          "symbols": [
+            "AppState"
+          ],
+          "line": 8
+        }
+      ],
+      "symbols": [
+        {
+          "name": "UI",
+          "qualified_name": "UI",
+          "kind": "struct",
+          "start_line": 10,
+          "end_line": 10,
+          "first_body_line": 10,
+          "last_body_line": 10,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 201,
+          "body_end_byte": 203,
+          "bases": [],
+          "parent": "",
+          "id": "src/ui.rs::UI"
+        },
+        {
+          "name": "new",
+          "qualified_name": "UI.new",
+          "kind": "method",
+          "start_line": 13,
+          "end_line": 15,
+          "first_body_line": 13,
+          "last_body_line": 15,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 240,
+          "body_end_byte": 263,
+          "bases": [],
+          "parent": "UI",
+          "id": "src/ui.rs::UI.new"
+        },
+        {
+          "name": "draw",
+          "qualified_name": "UI.draw",
+          "kind": "method",
+          "start_line": 17,
+          "end_line": 30,
+          "first_body_line": 17,
+          "last_body_line": 30,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 321,
+          "body_end_byte": 749,
+          "bases": [],
+          "parent": "UI",
+          "id": "src/ui.rs::UI.draw"
+        },
+        {
+          "name": "render_history",
+          "qualified_name": "UI.render_history",
+          "kind": "method",
+          "start_line": 32,
+          "end_line": 48,
+          "first_body_line": 32,
+          "last_body_line": 48,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 825,
+          "body_end_byte": 1338,
+          "bases": [],
+          "parent": "UI",
+          "id": "src/ui.rs::UI.render_history"
+        },
+        {
+          "name": "render_input",
+          "qualified_name": "UI.render_input",
+          "kind": "method",
+          "start_line": 50,
+          "end_line": 66,
+          "first_body_line": 50,
+          "last_body_line": 66,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 1412,
+          "body_end_byte": 1977,
+          "bases": [],
+          "parent": "UI",
+          "id": "src/ui.rs::UI.render_input"
+        },
+        {
+          "name": "render_status_bar",
+          "qualified_name": "UI.render_status_bar",
+          "kind": "method",
+          "start_line": 68,
+          "end_line": 87,
+          "first_body_line": 68,
+          "last_body_line": 87,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 2056,
+          "body_end_byte": 2766,
+          "bases": [],
+          "parent": "UI",
+          "id": "src/ui.rs::UI.render_status_bar"
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "src/app.rs",
+      "target": "src/models.rs",
+      "kind": "import",
+      "line": 1,
+      "raw": "use crate::models::{AngularUnit, HistoryEntry, AppState};",
+      "symbols": [
+        "AngularUnit",
+        "HistoryEntry",
+        "AppState"
+      ]
+    },
+    {
+      "source": "src/app.rs",
+      "target": "src/engine.rs",
+      "kind": "import",
+      "line": 2,
+      "raw": "use crate::engine::MathEngine;",
+      "symbols": [
+        "MathEngine"
+      ]
+    },
+    {
+      "source": "src/app.rs",
+      "target": "src/history.rs",
+      "kind": "import",
+      "line": 3,
+      "raw": "use crate::history::HistoryStore;",
+      "symbols": [
+        "HistoryStore"
+      ]
+    },
+    {
+      "source": "src/app.rs",
+      "target": "src/parser.rs",
+      "kind": "import",
+      "line": 4,
+      "raw": "use crate::parser;",
+      "symbols": [
+        "parser"
+      ]
+    },
+    {
+      "source": "src/engine.rs",
+      "target": "src/models.rs",
+      "kind": "import",
+      "line": 1,
+      "raw": "use crate::models::{ASTNode, AngularUnit, MathError, ResultValue};",
+      "symbols": [
+        "ASTNode",
+        "AngularUnit",
+        "MathError",
+        "ResultValue"
+      ]
+    },
+    {
+      "source": "src/history.rs",
+      "target": "src/models.rs",
+      "kind": "import",
+      "line": 2,
+      "raw": "use crate::models::HistoryEntry;",
+      "symbols": [
+        "HistoryEntry"
+      ]
+    },
+    {
+      "source": "src/history.rs",
+      "target": "src/models.rs",
+      "kind": "import",
+      "line": 66,
+      "raw": "use crate::models::{HistoryEntry, ResultValue};",
+      "symbols": [
+        "HistoryEntry",
+        "ResultValue"
+      ]
+    },
+    {
+      "source": "src/main.rs",
+      "target": "src/app.rs",
+      "kind": "import",
+      "line": 17,
+      "raw": "use app::AppController as App;",
+      "symbols": [
+        "AppController"
+      ]
+    },
+    {
+      "source": "src/main.rs",
+      "target": "src/ui.rs",
+      "kind": "import",
+      "line": 18,
+      "raw": "use ui::UI;",
+      "symbols": [
+        "UI"
+      ]
+    },
+    {
+      "source": "src/parser.rs",
+      "target": "src/models.rs",
+      "kind": "import",
+      "line": 1,
+      "raw": "use crate::models::{ASTNode, MathError};",
+      "symbols": [
+        "ASTNode",
+        "MathError"
+      ]
+    },
+    {
+      "source": "src/persistence.rs",
+      "target": "src/history.rs",
+      "kind": "import",
+      "line": 5,
+      "raw": "use crate::history::HistoryStore;",
+      "symbols": [
+        "HistoryStore"
+      ]
+    },
+    {
+      "source": "src/persistence.rs",
+      "target": "src/history.rs",
+      "kind": "import",
+      "line": 48,
+      "raw": "use crate::history::HistoryStore;",
+      "symbols": [
+        "HistoryStore"
+      ]
+    },
+    {
+      "source": "src/persistence.rs",
+      "target": "src/models.rs",
+      "kind": "import",
+      "line": 49,
+      "raw": "use crate::models::{HistoryEntry, ResultValue};",
+      "symbols": [
+        "HistoryEntry",
+        "ResultValue"
+      ]
+    },
+    {
+      "source": "src/ui.rs",
+      "target": "src/models.rs",
+      "kind": "import",
+      "line": 8,
+      "raw": "use crate::models::AppState;",
+      "symbols": [
+        "AppState"
+      ]
+    },
+    {
+      "source": "src/app.rs",
+      "target": "src/app.rs::AppController",
+      "kind": "contain",
+      "line": 6,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/app.rs::AppController",
+      "target": "src/app.rs::AppController.new",
+      "kind": "contain",
+      "line": 13,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/app.rs::AppController",
+      "target": "src/app.rs::AppController.get_state",
+      "kind": "contain",
+      "line": 21,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/app.rs::AppController",
+      "target": "src/app.rs::AppController.push_char",
+      "kind": "contain",
+      "line": 25,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/app.rs::AppController",
+      "target": "src/app.rs::AppController.backspace",
+      "kind": "contain",
+      "line": 30,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/app.rs::AppController",
+      "target": "src/app.rs::AppController.clear_input",
+      "kind": "contain",
+      "line": 35,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/app.rs::AppController",
+      "target": "src/app.rs::AppController.toggle_unit",
+      "kind": "contain",
+      "line": 40,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/app.rs::AppController",
+      "target": "src/app.rs::AppController.submit",
+      "kind": "contain",
+      "line": 47,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/app.rs::AppController",
+      "target": "src/app.rs::AppController.tick",
+      "kind": "contain",
+      "line": 72,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/engine.rs",
+      "target": "src/engine.rs::MathEngine",
+      "kind": "contain",
+      "line": 9,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/engine.rs::MathEngine",
+      "target": "src/engine.rs::MathEngine.default",
+      "kind": "contain",
+      "line": 14,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/engine.rs::MathEngine",
+      "target": "src/engine.rs::MathEngine.new",
+      "kind": "contain",
+      "line": 20,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/engine.rs::MathEngine",
+      "target": "src/engine.rs::MathEngine.evaluate",
+      "kind": "contain",
+      "line": 24,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/engine.rs::MathEngine",
+      "target": "src/engine.rs::MathEngine.eval_recursive",
+      "kind": "contain",
+      "line": 33,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/history.rs",
+      "target": "src/history.rs::HistoryStore",
+      "kind": "contain",
+      "line": 6,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/history.rs::HistoryStore",
+      "target": "src/history.rs::HistoryStore.serialize",
+      "kind": "contain",
+      "line": 12,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/history.rs::HistoryStore",
+      "target": "src/history.rs::HistoryStore.deserialize",
+      "kind": "contain",
+      "line": 23,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/history.rs::HistoryStore",
+      "target": "src/history.rs::HistoryStore.default",
+      "kind": "contain",
+      "line": 36,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/history.rs::HistoryStore",
+      "target": "src/history.rs::HistoryStore.new",
+      "kind": "contain",
+      "line": 42,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/history.rs::HistoryStore",
+      "target": "src/history.rs::HistoryStore.push",
+      "kind": "contain",
+      "line": 49,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/history.rs::HistoryStore",
+      "target": "src/history.rs::HistoryStore.get_all",
+      "kind": "contain",
+      "line": 57,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/history.rs",
+      "target": "src/history.rs::test_max_size_enforcement",
+      "kind": "contain",
+      "line": 70,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/history.rs",
+      "target": "src/history.rs::test_concurrent_access",
+      "kind": "contain",
+      "line": 82,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/main.rs",
+      "target": "src/main.rs::main",
+      "kind": "contain",
+      "line": 21,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/models.rs",
+      "target": "src/models.rs::AngularUnit",
+      "kind": "contain",
+      "line": 6,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/models.rs",
+      "target": "src/models.rs::MathError",
+      "kind": "contain",
+      "line": 12,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/models.rs",
+      "target": "src/models.rs::ASTNode",
+      "kind": "contain",
+      "line": 19,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/models.rs",
+      "target": "src/models.rs::ResultValue",
+      "kind": "contain",
+      "line": 26,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/models.rs::ResultValue",
+      "target": "src/models.rs::ResultValue.default",
+      "kind": "contain",
+      "line": 33,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/models.rs",
+      "target": "src/models.rs::HistoryEntry",
+      "kind": "contain",
+      "line": 43,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/models.rs::HistoryEntry",
+      "target": "src/models.rs::HistoryEntry.new",
+      "kind": "contain",
+      "line": 50,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/models.rs",
+      "target": "src/models.rs::AppState",
+      "kind": "contain",
+      "line": 65,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/models.rs::AppState",
+      "target": "src/models.rs::AppState.default",
+      "kind": "contain",
+      "line": 74,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/parser.rs",
+      "target": "src/parser.rs::Token",
+      "kind": "contain",
+      "line": 6,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/parser.rs",
+      "target": "src/parser.rs::Tokenizer",
+      "kind": "contain",
+      "line": 17,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/parser.rs::Tokenizer",
+      "target": "src/parser.rs::Tokenizer.new",
+      "kind": "contain",
+      "line": 23,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/parser.rs::Tokenizer",
+      "target": "src/parser.rs::Tokenizer.peek",
+      "kind": "contain",
+      "line": 58,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/parser.rs::Tokenizer",
+      "target": "src/parser.rs::Tokenizer.consume",
+      "kind": "contain",
+      "line": 62,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/parser.rs",
+      "target": "src/parser.rs::parse",
+      "kind": "contain",
+      "line": 69,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/parser.rs",
+      "target": "src/parser.rs::parse_expression",
+      "kind": "contain",
+      "line": 74,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/parser.rs",
+      "target": "src/parser.rs::parse_term",
+      "kind": "contain",
+      "line": 93,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/parser.rs",
+      "target": "src/parser.rs::parse_factor",
+      "kind": "contain",
+      "line": 112,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/persistence.rs",
+      "target": "src/persistence.rs::PersistenceError",
+      "kind": "contain",
+      "line": 8,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/persistence.rs::PersistenceError",
+      "target": "src/persistence.rs::PersistenceError.from@14",
+      "kind": "contain",
+      "line": 14,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/persistence.rs::PersistenceError",
+      "target": "src/persistence.rs::PersistenceError.from@20",
+      "kind": "contain",
+      "line": 20,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/persistence.rs",
+      "target": "src/persistence.rs::save_state",
+      "kind": "contain",
+      "line": 25,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/persistence.rs",
+      "target": "src/persistence.rs::load_state",
+      "kind": "contain",
+      "line": 38,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/persistence.rs",
+      "target": "src/persistence.rs::test_round_trip",
+      "kind": "contain",
+      "line": 52,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/persistence.rs",
+      "target": "src/persistence.rs::test_corrupt_binary",
+      "kind": "contain",
+      "line": 72,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/ui.rs",
+      "target": "src/ui.rs::UI",
+      "kind": "contain",
+      "line": 10,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/ui.rs::UI",
+      "target": "src/ui.rs::UI.new",
+      "kind": "contain",
+      "line": 13,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/ui.rs::UI",
+      "target": "src/ui.rs::UI.draw",
+      "kind": "contain",
+      "line": 17,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/ui.rs::UI",
+      "target": "src/ui.rs::UI.render_history",
+      "kind": "contain",
+      "line": 32,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/ui.rs::UI",
+      "target": "src/ui.rs::UI.render_input",
+      "kind": "contain",
+      "line": 50,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/ui.rs::UI",
+      "target": "src/ui.rs::UI.render_status_bar",
+      "kind": "contain",
+      "line": 68,
+      "raw": "",
+      "symbols": []
+    }
+  ]
+}

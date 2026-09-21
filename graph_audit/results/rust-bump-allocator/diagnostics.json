@@ -1,0 +1,231 @@
+{
+  "summary": {
+    "label": "rust-bump-allocator",
+    "root": "/Users/adityagk/Desktop/projects/rust-bump-allocator",
+    "files_total": 6,
+    "files_by_language": {
+      "rust": 6
+    },
+    "symbols_total": 17,
+    "tests_total": 8,
+    "calls_total": 68,
+    "syntax_errors": 0,
+    "unparsed_known_language": 0,
+    "edges_total": 20,
+    "edges_by_kind": {
+      "contain": 17,
+      "import": 3
+    },
+    "scan_seconds": 0.012,
+    "import_records": 12,
+    "import_records_with_any_edge_on_line": 3,
+    "import_count_caveat": "Records without edges include external imports and unsupported resolution; this is not recall. Multiple bindings on a line can be only partly resolved.",
+    "files_with_incoming_edges": 2,
+    "most_imported_files": [
+      [
+        "src/state.rs",
+        2
+      ],
+      [
+        "src/allocator.rs",
+        1
+      ]
+    ],
+    "docstrings_in_memory": 0,
+    "docstrings_saved": 0,
+    "calls_saved": 0,
+    "issues": {
+      "duplicate_symbol_ids": {},
+      "dangling_edges": [],
+      "symbol_parents_missing_in_file": [],
+      "python_definitions_not_indexed": []
+    },
+    "previous": {
+      "path": "/Users/adityagk/Desktop/projects/rust-bump-allocator/repo_graph.json",
+      "sha256": "379d15c584951c8925d07461dc86361b19d8be11cabe3f1eac04b97e170e0bae",
+      "schema": "0.2.0",
+      "statistics": {
+        "files_total": 6,
+        "files_by_language": {
+          "rust": 6
+        },
+        "symbols_total": 17,
+        "tests_total": 8,
+        "calls_total": 68,
+        "syntax_errors": 0,
+        "unparsed_known_language": 0,
+        "edges_total": 17,
+        "edges_by_kind": {
+          "contain": 17
+        }
+      },
+      "import_edges": 0,
+      "comparison_caveat": "Old artifacts do not establish identical source, query, or configuration versions."
+    }
+  },
+  "files": [
+    {
+      "path": "src/allocator.rs",
+      "language": "rust",
+      "parser": "tree_sitter",
+      "syntax_error": false,
+      "symbols": 3,
+      "calls_in_memory": 1,
+      "calls_with_declared_symbol_owner": 1,
+      "docstrings_in_memory": 0,
+      "incoming_edge_count": 1,
+      "incoming_files": [
+        "src/lib.rs"
+      ],
+      "imports_without_resolved_edge_on_line": [
+        {
+          "raw": "use core::alloc::{GlobalAlloc, Layout};",
+          "module": "core::alloc",
+          "symbols": [
+            "GlobalAlloc",
+            "Layout"
+          ],
+          "line": 1
+        }
+      ]
+    },
+    {
+      "path": "src/lib.rs",
+      "language": "rust",
+      "parser": "tree_sitter",
+      "syntax_error": false,
+      "symbols": 0,
+      "calls_in_memory": 0,
+      "calls_with_declared_symbol_owner": 0,
+      "docstrings_in_memory": 0,
+      "incoming_edge_count": 0,
+      "incoming_files": [],
+      "imports_without_resolved_edge_on_line": []
+    },
+    {
+      "path": "src/main.rs",
+      "language": "rust",
+      "parser": "tree_sitter",
+      "syntax_error": false,
+      "symbols": 1,
+      "calls_in_memory": 11,
+      "calls_with_declared_symbol_owner": 0,
+      "docstrings_in_memory": 0,
+      "incoming_edge_count": 0,
+      "incoming_files": [],
+      "imports_without_resolved_edge_on_line": [
+        {
+          "raw": "use memory_allocator::get_stats;",
+          "module": "memory_allocator",
+          "symbols": [
+            "get_stats"
+          ],
+          "line": 1
+        }
+      ]
+    },
+    {
+      "path": "src/state.rs",
+      "language": "rust",
+      "parser": "tree_sitter",
+      "syntax_error": false,
+      "symbols": 5,
+      "calls_in_memory": 9,
+      "calls_with_declared_symbol_owner": 0,
+      "docstrings_in_memory": 0,
+      "incoming_edge_count": 2,
+      "incoming_files": [
+        "src/allocator.rs",
+        "src/lib.rs"
+      ],
+      "imports_without_resolved_edge_on_line": [
+        {
+          "raw": "use spin::Mutex;",
+          "module": "spin",
+          "symbols": [
+            "Mutex"
+          ],
+          "line": 1
+        },
+        {
+          "raw": "use core::alloc::Layout;",
+          "module": "core::alloc",
+          "symbols": [
+            "Layout"
+          ],
+          "line": 2
+        }
+      ]
+    },
+    {
+      "path": "tests/integration_tests.rs",
+      "language": "rust",
+      "parser": "tree_sitter",
+      "syntax_error": false,
+      "symbols": 5,
+      "calls_in_memory": 33,
+      "calls_with_declared_symbol_owner": 0,
+      "docstrings_in_memory": 0,
+      "incoming_edge_count": 0,
+      "incoming_files": [],
+      "imports_without_resolved_edge_on_line": [
+        {
+          "raw": "use std::thread;",
+          "module": "std",
+          "symbols": [
+            "thread"
+          ],
+          "line": 3
+        },
+        {
+          "raw": "use std::sync::Arc;",
+          "module": "std::sync",
+          "symbols": [
+            "Arc"
+          ],
+          "line": 4
+        },
+        {
+          "raw": "use std::panic;",
+          "module": "std",
+          "symbols": [
+            "panic"
+          ],
+          "line": 5
+        }
+      ]
+    },
+    {
+      "path": "tests/test_state.rs",
+      "language": "rust",
+      "parser": "tree_sitter",
+      "syntax_error": false,
+      "symbols": 3,
+      "calls_in_memory": 14,
+      "calls_with_declared_symbol_owner": 0,
+      "docstrings_in_memory": 0,
+      "incoming_edge_count": 0,
+      "incoming_files": [],
+      "imports_without_resolved_edge_on_line": [
+        {
+          "raw": "use memory_allocator::state::{align_up, reserve_space, get_stats};",
+          "module": "memory_allocator::state",
+          "symbols": [
+            "align_up",
+            "reserve_space",
+            "get_stats"
+          ],
+          "line": 3
+        },
+        {
+          "raw": "use core::alloc::Layout;",
+          "module": "core::alloc",
+          "symbols": [
+            "Layout"
+          ],
+          "line": 4
+        }
+      ]
+    }
+  ]
+}

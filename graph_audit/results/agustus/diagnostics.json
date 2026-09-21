@@ -1,0 +1,216 @@
+{
+  "summary": {
+    "label": "agustus",
+    "root": "/Users/adityagk/Desktop/projects/agustus",
+    "files_total": 6,
+    "files_by_language": {
+      "typescript": 6
+    },
+    "symbols_total": 83,
+    "tests_total": 7,
+    "calls_total": 352,
+    "syntax_errors": 0,
+    "unparsed_known_language": 0,
+    "edges_total": 100,
+    "edges_by_kind": {
+      "contain": 83,
+      "import": 4,
+      "inherit": 13
+    },
+    "scan_seconds": 0.08,
+    "import_records": 11,
+    "import_records_with_any_edge_on_line": 4,
+    "import_count_caveat": "Records without edges include external imports and unsupported resolution; this is not recall. Multiple bindings on a line can be only partly resolved.",
+    "files_with_incoming_edges": 3,
+    "most_imported_files": [
+      [
+        "src/time-groups.ts",
+        2
+      ],
+      [
+        "src/auth.ts",
+        1
+      ],
+      [
+        "src/mcp.ts",
+        1
+      ]
+    ],
+    "docstrings_in_memory": 0,
+    "docstrings_saved": 0,
+    "calls_saved": 0,
+    "issues": {
+      "duplicate_symbol_ids": {},
+      "dangling_edges": [],
+      "symbol_parents_missing_in_file": [],
+      "python_definitions_not_indexed": []
+    },
+    "previous": {
+      "path": "/Users/adityagk/Desktop/projects/agustus/repo_graph.json",
+      "sha256": "5aee4df0aa8976035f236e46b8ae64b648ed46c7f2041ad43c18e225ff9093c4",
+      "schema": "0.1.0",
+      "statistics": {
+        "files_total": 6,
+        "files_by_language": {
+          "typescript": 6
+        },
+        "symbols_total": 83,
+        "tests_total": 7,
+        "syntax_errors": 0,
+        "unparsed_known_language": 0,
+        "edges_total": 4
+      },
+      "import_edges": 4,
+      "comparison_caveat": "Old artifacts do not establish identical source, query, or configuration versions."
+    }
+  },
+  "files": [
+    {
+      "path": "worker-configuration.d.ts",
+      "language": "typescript",
+      "parser": "tree_sitter",
+      "syntax_error": false,
+      "symbols": 42,
+      "calls_in_memory": 0,
+      "calls_with_declared_symbol_owner": 0,
+      "docstrings_in_memory": 0,
+      "incoming_edge_count": 0,
+      "incoming_files": [],
+      "imports_without_resolved_edge_on_line": []
+    },
+    {
+      "path": "src/auth.ts",
+      "language": "typescript",
+      "parser": "tree_sitter",
+      "syntax_error": false,
+      "symbols": 10,
+      "calls_in_memory": 68,
+      "calls_with_declared_symbol_owner": 0,
+      "docstrings_in_memory": 0,
+      "incoming_edge_count": 1,
+      "incoming_files": [
+        "src/index.ts"
+      ],
+      "imports_without_resolved_edge_on_line": [
+        {
+          "raw": "import {\n  AuthorizationError,\n  type AuthRequest,\n  type OAuthHelpers,\n} from \"@cloudflare/workers-oauth-provider\";",
+          "module": "@cloudflare/workers-oauth-provider",
+          "symbols": [
+            "AuthorizationError",
+            "AuthRequest",
+            "OAuthHelpers"
+          ],
+          "line": 1
+        }
+      ]
+    },
+    {
+      "path": "src/index.ts",
+      "language": "typescript",
+      "parser": "tree_sitter",
+      "syntax_error": false,
+      "symbols": 1,
+      "calls_in_memory": 1,
+      "calls_with_declared_symbol_owner": 0,
+      "docstrings_in_memory": 0,
+      "incoming_edge_count": 0,
+      "incoming_files": [],
+      "imports_without_resolved_edge_on_line": [
+        {
+          "raw": "import OAuthProvider from \"@cloudflare/workers-oauth-provider\";",
+          "module": "@cloudflare/workers-oauth-provider",
+          "symbols": [
+            "OAuthProvider"
+          ],
+          "line": 1
+        }
+      ]
+    },
+    {
+      "path": "src/mcp.ts",
+      "language": "typescript",
+      "parser": "tree_sitter",
+      "syntax_error": false,
+      "symbols": 6,
+      "calls_in_memory": 164,
+      "calls_with_declared_symbol_owner": 0,
+      "docstrings_in_memory": 0,
+      "incoming_edge_count": 1,
+      "incoming_files": [
+        "src/index.ts"
+      ],
+      "imports_without_resolved_edge_on_line": [
+        {
+          "raw": "import { McpServer } from \"@modelcontextprotocol/server\";",
+          "module": "@modelcontextprotocol/server",
+          "symbols": [
+            "McpServer"
+          ],
+          "line": 1
+        },
+        {
+          "raw": "import { createMcpHandler } from \"agents/mcp/server\";",
+          "module": "agents/mcp/server",
+          "symbols": [
+            "createMcpHandler"
+          ],
+          "line": 2
+        },
+        {
+          "raw": "import { z } from \"zod\";",
+          "module": "zod",
+          "symbols": [
+            "z"
+          ],
+          "line": 3
+        }
+      ]
+    },
+    {
+      "path": "src/time-groups.ts",
+      "language": "typescript",
+      "parser": "tree_sitter",
+      "syntax_error": false,
+      "symbols": 17,
+      "calls_in_memory": 94,
+      "calls_with_declared_symbol_owner": 0,
+      "docstrings_in_memory": 0,
+      "incoming_edge_count": 2,
+      "incoming_files": [
+        "src/mcp.ts",
+        "tests/time-groups.test.ts"
+      ],
+      "imports_without_resolved_edge_on_line": []
+    },
+    {
+      "path": "tests/time-groups.test.ts",
+      "language": "typescript",
+      "parser": "tree_sitter",
+      "syntax_error": false,
+      "symbols": 7,
+      "calls_in_memory": 25,
+      "calls_with_declared_symbol_owner": 0,
+      "docstrings_in_memory": 0,
+      "incoming_edge_count": 0,
+      "incoming_files": [],
+      "imports_without_resolved_edge_on_line": [
+        {
+          "raw": "import assert from \"node:assert/strict\";",
+          "module": "node:assert/strict",
+          "symbols": [
+            "assert"
+          ],
+          "line": 1
+        },
+        {
+          "raw": "import { test } from \"node:test\";",
+          "module": "node:test",
+          "symbols": [
+            "test"
+          ],
+          "line": 2
+        }
+      ]
+    }
+  ]
+}

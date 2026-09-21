@@ -1,0 +1,2312 @@
+{
+  "schema_version": "0.4.0",
+  "root": "/Users/adityagk/Desktop/projects/tui-calculator",
+  "snapshot": {
+    "content_hashes": {
+      "main.py": "940af3d54ba39bb9cd51cad1ccd975da08bcb42a7266f6723ef5701116ed94b8",
+      "pyproject.toml": "1b68d3fb9ef85494289ff87c16373a6bba3d8daab68e15c286285bf8864d12f1",
+      "src/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "src/constants.py": "4d4b298685ccbd2f13b55be38a9c07d2599ec5e81181d9610dabbff23b210df4",
+      "src/engine.py": "5384d6913d99c0f93e84dea8b7d17c58cf3c6dce35035fa6ec443dd955472400",
+      "src/ui.py": "faf4257553c2bde9d51752121052877ecb31797c8c2739125d26c8feb3d8d05c",
+      "tests/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "tests/test_constants.py": "f7d6b61d43467dbc9ba2237f67cdf7e30403033870a81be31b05a298dc67638d",
+      "tests/test_engine.py": "30d848d933c765f4a3b40eca959cd73de52083a2a9aa49c7070373ad8bbd56bc",
+      "tests/test_ui.py": "dcfaa42878f388f14151f2e1b7743d33f627ed18a2c519cccd85146ce0fb8bea"
+    },
+    "languages": [
+      "javascript",
+      "python",
+      "rust",
+      "tsx",
+      "typescript"
+    ],
+    "versions": {
+      "tree-sitter": "0.26.0",
+      "tree-sitter-language-pack": "1.16.2",
+      "pathspec": "1.1.1"
+    },
+    "extractor_hash": "44ccfe7586b5f3eff43f966f46c823a6c1e2039679d38965961dfbd515fa3b6b",
+    "git_commit": null,
+    "id": "c3136f17c64a0591e13101fa634f3c042eef7115a6c0d431a5c9b241b6ad26c6"
+  },
+  "diagnostics": [],
+  "statistics": {
+    "files_total": 9,
+    "files_by_language": {
+      "python": 9
+    },
+    "symbols_total": 20,
+    "tests_total": 6,
+    "calls_total": 55,
+    "syntax_errors": 0,
+    "unparsed_known_language": 0,
+    "edges_total": 38,
+    "edges_by_kind": {
+      "contain": 20,
+      "import": 14,
+      "invoke": 4
+    },
+    "import_bindings": 23,
+    "import_uses": 23,
+    "binding_status": {
+      "internal": 5,
+      "conditional": 0,
+      "external": 9,
+      "unresolved": 9,
+      "ambiguous": 0,
+      "unsupported": 0
+    }
+  },
+  "files": [
+    {
+      "path": "main.py",
+      "language": "python",
+      "parser": "ast",
+      "has_syntax_error": false,
+      "is_empty": false,
+      "source_hash": "940af3d54ba39bb9cd51cad1ccd975da08bcb42a7266f6723ef5701116ed94b8",
+      "bound_names": [
+        "app"
+      ],
+      "bindings": [
+        {
+          "id": "main.py@0:0",
+          "module": "src.ui",
+          "name": "CalculatorApp",
+          "local": "CalculatorApp",
+          "scope": "",
+          "line": 1,
+          "raw": "from src.ui import CalculatorApp",
+          "kind": "from",
+          "reexport": true,
+          "conditional": false,
+          "uses": [
+            {
+              "owner": "",
+              "expression": "CalculatorApp",
+              "kind": "call",
+              "source_text": "CalculatorApp",
+              "line": 4,
+              "start_byte": 71,
+              "end_byte": 84,
+              "target_file": "src/ui.py",
+              "target_symbol": "src/ui.py::CalculatorApp",
+              "status": "internal",
+              "binding_target_file": "src/ui.py",
+              "binding_target_symbol": "src/ui.py::CalculatorApp"
+            }
+          ],
+          "status": "internal",
+          "reason": "module_and_binding_resolved",
+          "target_file": "src/ui.py",
+          "target_symbol": "src/ui.py::CalculatorApp",
+          "bound_module": "",
+          "module_scope": "",
+          "start_byte": 0
+        }
+      ],
+      "calls": [
+        {
+          "name": "CalculatorApp",
+          "line": 4,
+          "caller": "",
+          "expression": "CalculatorApp"
+        },
+        {
+          "name": "run",
+          "line": 5,
+          "caller": "",
+          "expression": "app.run"
+        }
+      ],
+      "diagnostics": [],
+      "modules": [],
+      "exports": [],
+      "imports": [
+        {
+          "raw": "from src.ui import CalculatorApp",
+          "module": "src.ui",
+          "symbols": [
+            "CalculatorApp"
+          ],
+          "line": 1
+        }
+      ],
+      "symbols": []
+    },
+    {
+      "path": "src/__init__.py",
+      "language": "python",
+      "parser": "none",
+      "has_syntax_error": false,
+      "is_empty": true,
+      "source_hash": "",
+      "bound_names": [],
+      "bindings": [],
+      "calls": [],
+      "diagnostics": [],
+      "modules": [],
+      "exports": [],
+      "imports": [],
+      "symbols": []
+    },
+    {
+      "path": "src/constants.py",
+      "language": "python",
+      "parser": "ast",
+      "has_syntax_error": false,
+      "is_empty": false,
+      "source_hash": "4d4b298685ccbd2f13b55be38a9c07d2599ec5e81181d9610dabbff23b210df4",
+      "bound_names": [
+        "MAX_BUFFER_LENGTH",
+        "OPERATION_ADD",
+        "OPERATION_SUB"
+      ],
+      "bindings": [],
+      "calls": [],
+      "diagnostics": [],
+      "modules": [],
+      "exports": [],
+      "imports": [],
+      "symbols": []
+    },
+    {
+      "path": "src/engine.py",
+      "language": "python",
+      "parser": "ast",
+      "has_syntax_error": false,
+      "is_empty": false,
+      "source_hash": "5384d6913d99c0f93e84dea8b7d17c58cf3c6dce35035fa6ec443dd955472400",
+      "bound_names": [
+        "CalculatorState"
+      ],
+      "bindings": [
+        {
+          "id": "src/engine.py@0:0",
+          "module": "src.constants",
+          "name": "OPERATION_ADD",
+          "local": "OPERATION_ADD",
+          "scope": "",
+          "line": 1,
+          "raw": "from src.constants import OPERATION_ADD, OPERATION_SUB, MAX_BUFFER_LENGTH",
+          "kind": "from",
+          "reexport": true,
+          "conditional": false,
+          "uses": [
+            {
+              "owner": "CalculatorState.calculate",
+              "expression": "OPERATION_ADD",
+              "kind": "reference",
+              "source_text": "OPERATION_ADD",
+              "line": 30,
+              "start_byte": 833,
+              "end_byte": 846,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "unresolved",
+              "binding_target_file": "src/constants.py",
+              "binding_target_symbol": null
+            }
+          ],
+          "status": "unresolved",
+          "reason": "module_resolved_symbol_unknown",
+          "target_file": "src/constants.py",
+          "target_symbol": null,
+          "bound_module": "",
+          "module_scope": "",
+          "start_byte": 0
+        },
+        {
+          "id": "src/engine.py@0:1",
+          "module": "src.constants",
+          "name": "OPERATION_SUB",
+          "local": "OPERATION_SUB",
+          "scope": "",
+          "line": 1,
+          "raw": "from src.constants import OPERATION_ADD, OPERATION_SUB, MAX_BUFFER_LENGTH",
+          "kind": "from",
+          "reexport": true,
+          "conditional": false,
+          "uses": [
+            {
+              "owner": "CalculatorState.calculate",
+              "expression": "OPERATION_SUB",
+              "kind": "reference",
+              "source_text": "OPERATION_SUB",
+              "line": 32,
+              "start_byte": 909,
+              "end_byte": 922,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "unresolved",
+              "binding_target_file": "src/constants.py",
+              "binding_target_symbol": null
+            }
+          ],
+          "status": "unresolved",
+          "reason": "module_resolved_symbol_unknown",
+          "target_file": "src/constants.py",
+          "target_symbol": null,
+          "bound_module": "",
+          "module_scope": "",
+          "start_byte": 0
+        },
+        {
+          "id": "src/engine.py@0:2",
+          "module": "src.constants",
+          "name": "MAX_BUFFER_LENGTH",
+          "local": "MAX_BUFFER_LENGTH",
+          "scope": "",
+          "line": 1,
+          "raw": "from src.constants import OPERATION_ADD, OPERATION_SUB, MAX_BUFFER_LENGTH",
+          "kind": "from",
+          "reexport": true,
+          "conditional": false,
+          "uses": [
+            {
+              "owner": "CalculatorState.append_digit",
+              "expression": "MAX_BUFFER_LENGTH",
+              "kind": "reference",
+              "source_text": "MAX_BUFFER_LENGTH",
+              "line": 16,
+              "start_byte": 424,
+              "end_byte": 441,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "unresolved",
+              "binding_target_file": "src/constants.py",
+              "binding_target_symbol": null
+            }
+          ],
+          "status": "unresolved",
+          "reason": "module_resolved_symbol_unknown",
+          "target_file": "src/constants.py",
+          "target_symbol": null,
+          "bound_module": "",
+          "module_scope": "",
+          "start_byte": 0
+        }
+      ],
+      "calls": [
+        {
+          "name": "clear",
+          "line": 5,
+          "caller": "CalculatorState.__init__",
+          "expression": "self.clear"
+        },
+        {
+          "name": "isdigit",
+          "line": 13,
+          "caller": "CalculatorState.is_invalid_input",
+          "expression": "char.isdigit"
+        },
+        {
+          "name": "len",
+          "line": 16,
+          "caller": "CalculatorState.append_digit",
+          "expression": "len"
+        },
+        {
+          "name": "int",
+          "line": 21,
+          "caller": "CalculatorState.set_operator",
+          "expression": "int"
+        },
+        {
+          "name": "int",
+          "line": 29,
+          "caller": "CalculatorState.calculate",
+          "expression": "int"
+        },
+        {
+          "name": "str",
+          "line": 35,
+          "caller": "CalculatorState.calculate",
+          "expression": "str"
+        }
+      ],
+      "diagnostics": [],
+      "modules": [],
+      "exports": [],
+      "imports": [
+        {
+          "raw": "from src.constants import OPERATION_ADD, OPERATION_SUB, MAX_BUFFER_LENGTH",
+          "module": "src.constants",
+          "symbols": [
+            "OPERATION_ADD",
+            "OPERATION_SUB",
+            "MAX_BUFFER_LENGTH"
+          ],
+          "line": 1
+        }
+      ],
+      "symbols": [
+        {
+          "name": "CalculatorState",
+          "qualified_name": "CalculatorState",
+          "kind": "class",
+          "start_line": 3,
+          "end_line": 36,
+          "first_body_line": 4,
+          "last_body_line": 36,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 102,
+          "body_end_byte": 1037,
+          "bases": [],
+          "parent": "",
+          "id": "src/engine.py::CalculatorState",
+          "docstring": "",
+          "start_byte": 75,
+          "end_byte": 1037,
+          "signature": "class CalculatorState"
+        },
+        {
+          "name": "__init__",
+          "qualified_name": "CalculatorState.__init__",
+          "kind": "method",
+          "start_line": 4,
+          "end_line": 5,
+          "first_body_line": 5,
+          "last_body_line": 5,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 130,
+          "body_end_byte": 142,
+          "bases": [],
+          "parent": "CalculatorState",
+          "id": "src/engine.py::CalculatorState.__init__",
+          "docstring": "",
+          "start_byte": 102,
+          "end_byte": 142,
+          "signature": "def __init__(self)"
+        },
+        {
+          "name": "clear",
+          "qualified_name": "CalculatorState.clear",
+          "kind": "method",
+          "start_line": 7,
+          "end_line": 10,
+          "first_body_line": 8,
+          "last_body_line": 10,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 173,
+          "body_end_byte": 249,
+          "bases": [],
+          "parent": "CalculatorState",
+          "id": "src/engine.py::CalculatorState.clear",
+          "docstring": "",
+          "start_byte": 148,
+          "end_byte": 249,
+          "signature": "def clear(self)"
+        },
+        {
+          "name": "is_invalid_input",
+          "qualified_name": "CalculatorState.is_invalid_input",
+          "kind": "method",
+          "start_line": 12,
+          "end_line": 13,
+          "first_body_line": 13,
+          "last_body_line": 13,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 297,
+          "body_end_byte": 351,
+          "bases": [],
+          "parent": "CalculatorState",
+          "id": "src/engine.py::CalculatorState.is_invalid_input",
+          "docstring": "",
+          "start_byte": 255,
+          "end_byte": 351,
+          "signature": "def is_invalid_input(self, char)"
+        },
+        {
+          "name": "append_digit",
+          "qualified_name": "CalculatorState.append_digit",
+          "kind": "method",
+          "start_line": 15,
+          "end_line": 17,
+          "first_body_line": 16,
+          "last_body_line": 17,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 395,
+          "body_end_byte": 481,
+          "bases": [],
+          "parent": "CalculatorState",
+          "id": "src/engine.py::CalculatorState.append_digit",
+          "docstring": "",
+          "start_byte": 357,
+          "end_byte": 481,
+          "signature": "def append_digit(self, char)"
+        },
+        {
+          "name": "set_operator",
+          "qualified_name": "CalculatorState.set_operator",
+          "kind": "method",
+          "start_line": 19,
+          "end_line": 23,
+          "first_body_line": 20,
+          "last_body_line": 23,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 523,
+          "body_end_byte": 658,
+          "bases": [],
+          "parent": "CalculatorState",
+          "id": "src/engine.py::CalculatorState.set_operator",
+          "docstring": "",
+          "start_byte": 487,
+          "end_byte": 658,
+          "signature": "def set_operator(self, op)"
+        },
+        {
+          "name": "calculate",
+          "qualified_name": "CalculatorState.calculate",
+          "kind": "method",
+          "start_line": 25,
+          "end_line": 36,
+          "first_body_line": 26,
+          "last_body_line": 36,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 693,
+          "body_end_byte": 1037,
+          "bases": [],
+          "parent": "CalculatorState",
+          "id": "src/engine.py::CalculatorState.calculate",
+          "docstring": "",
+          "start_byte": 664,
+          "end_byte": 1037,
+          "signature": "def calculate(self)"
+        }
+      ]
+    },
+    {
+      "path": "src/ui.py",
+      "language": "python",
+      "parser": "ast",
+      "has_syntax_error": false,
+      "is_empty": false,
+      "source_hash": "faf4257553c2bde9d51752121052877ecb31797c8c2739125d26c8feb3d8d05c",
+      "bound_names": [
+        "CalculatorApp"
+      ],
+      "bindings": [
+        {
+          "id": "src/ui.py@0:0",
+          "module": "textual.app",
+          "name": "App",
+          "local": "App",
+          "scope": "",
+          "line": 1,
+          "raw": "from textual.app import App, ComposeResult",
+          "kind": "from",
+          "reexport": true,
+          "conditional": false,
+          "uses": [
+            {
+              "owner": "CalculatorApp",
+              "expression": "App",
+              "kind": "base",
+              "source_text": "App",
+              "line": 7,
+              "start_byte": 241,
+              "end_byte": 244,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "external",
+              "binding_target_file": null,
+              "binding_target_symbol": null
+            }
+          ],
+          "status": "external",
+          "reason": "stdlib_or_declared_dependency",
+          "target_file": null,
+          "target_symbol": null,
+          "bound_module": "",
+          "module_scope": "",
+          "start_byte": 0
+        },
+        {
+          "id": "src/ui.py@0:1",
+          "module": "textual.app",
+          "name": "ComposeResult",
+          "local": "ComposeResult",
+          "scope": "",
+          "line": 1,
+          "raw": "from textual.app import App, ComposeResult",
+          "kind": "from",
+          "reexport": true,
+          "conditional": false,
+          "uses": [
+            {
+              "owner": "CalculatorApp.compose",
+              "expression": "ComposeResult",
+              "kind": "annotation",
+              "source_text": "ComposeResult",
+              "line": 24,
+              "start_byte": 561,
+              "end_byte": 574,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "external",
+              "binding_target_file": null,
+              "binding_target_symbol": null
+            }
+          ],
+          "status": "external",
+          "reason": "stdlib_or_declared_dependency",
+          "target_file": null,
+          "target_symbol": null,
+          "bound_module": "",
+          "module_scope": "",
+          "start_byte": 0
+        },
+        {
+          "id": "src/ui.py@43:2",
+          "module": "textual.containers",
+          "name": "Container",
+          "local": "Container",
+          "scope": "",
+          "line": 2,
+          "raw": "from textual.containers import Container",
+          "kind": "from",
+          "reexport": true,
+          "conditional": false,
+          "uses": [
+            {
+              "owner": "CalculatorApp.compose",
+              "expression": "Container",
+              "kind": "call",
+              "source_text": "Container",
+              "line": 25,
+              "start_byte": 590,
+              "end_byte": 599,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "external",
+              "binding_target_file": null,
+              "binding_target_symbol": null
+            }
+          ],
+          "status": "external",
+          "reason": "stdlib_or_declared_dependency",
+          "target_file": null,
+          "target_symbol": null,
+          "bound_module": "",
+          "module_scope": "",
+          "start_byte": 43
+        },
+        {
+          "id": "src/ui.py@84:3",
+          "module": "textual.widgets",
+          "name": "Label",
+          "local": "Label",
+          "scope": "",
+          "line": 3,
+          "raw": "from textual.widgets import Label, Static",
+          "kind": "from",
+          "reexport": true,
+          "conditional": false,
+          "uses": [
+            {
+              "owner": "CalculatorApp.compose",
+              "expression": "Label",
+              "kind": "call",
+              "source_text": "Label",
+              "line": 26,
+              "start_byte": 613,
+              "end_byte": 618,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "external",
+              "binding_target_file": null,
+              "binding_target_symbol": null
+            },
+            {
+              "owner": "CalculatorApp._update_display",
+              "expression": "Label",
+              "kind": "reference",
+              "source_text": "Label",
+              "line": 30,
+              "start_byte": 726,
+              "end_byte": 731,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "external",
+              "binding_target_file": null,
+              "binding_target_symbol": null
+            }
+          ],
+          "status": "external",
+          "reason": "stdlib_or_declared_dependency",
+          "target_file": null,
+          "target_symbol": null,
+          "bound_module": "",
+          "module_scope": "",
+          "start_byte": 84
+        },
+        {
+          "id": "src/ui.py@84:4",
+          "module": "textual.widgets",
+          "name": "Static",
+          "local": "Static",
+          "scope": "",
+          "line": 3,
+          "raw": "from textual.widgets import Label, Static",
+          "kind": "from",
+          "reexport": true,
+          "conditional": false,
+          "uses": [],
+          "status": "external",
+          "reason": "stdlib_or_declared_dependency",
+          "target_file": null,
+          "target_symbol": null,
+          "bound_module": "",
+          "module_scope": "",
+          "start_byte": 84
+        },
+        {
+          "id": "src/ui.py@126:5",
+          "module": "src.engine",
+          "name": "CalculatorState",
+          "local": "CalculatorState",
+          "scope": "",
+          "line": 4,
+          "raw": "from src.engine import CalculatorState",
+          "kind": "from",
+          "reexport": true,
+          "conditional": false,
+          "uses": [
+            {
+              "owner": "CalculatorApp.__init__",
+              "expression": "CalculatorState",
+              "kind": "call",
+              "source_text": "CalculatorState",
+              "line": 22,
+              "start_byte": 517,
+              "end_byte": 532,
+              "target_file": "src/engine.py",
+              "target_symbol": "src/engine.py::CalculatorState",
+              "status": "internal",
+              "binding_target_file": "src/engine.py",
+              "binding_target_symbol": "src/engine.py::CalculatorState"
+            }
+          ],
+          "status": "internal",
+          "reason": "module_and_binding_resolved",
+          "target_file": "src/engine.py",
+          "target_symbol": "src/engine.py::CalculatorState",
+          "bound_module": "",
+          "module_scope": "",
+          "start_byte": 126
+        },
+        {
+          "id": "src/ui.py@165:6",
+          "module": "src.constants",
+          "name": "OPERATION_ADD",
+          "local": "OPERATION_ADD",
+          "scope": "",
+          "line": 5,
+          "raw": "from src.constants import OPERATION_ADD, OPERATION_SUB",
+          "kind": "from",
+          "reexport": true,
+          "conditional": false,
+          "uses": [
+            {
+              "owner": "CalculatorApp.on_key",
+              "expression": "OPERATION_ADD",
+              "kind": "reference",
+              "source_text": "OPERATION_ADD",
+              "line": 39,
+              "start_byte": 1028,
+              "end_byte": 1041,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "unresolved",
+              "binding_target_file": "src/constants.py",
+              "binding_target_symbol": null
+            }
+          ],
+          "status": "unresolved",
+          "reason": "module_resolved_symbol_unknown",
+          "target_file": "src/constants.py",
+          "target_symbol": null,
+          "bound_module": "",
+          "module_scope": "",
+          "start_byte": 165
+        },
+        {
+          "id": "src/ui.py@165:7",
+          "module": "src.constants",
+          "name": "OPERATION_SUB",
+          "local": "OPERATION_SUB",
+          "scope": "",
+          "line": 5,
+          "raw": "from src.constants import OPERATION_ADD, OPERATION_SUB",
+          "kind": "from",
+          "reexport": true,
+          "conditional": false,
+          "uses": [
+            {
+              "owner": "CalculatorApp.on_key",
+              "expression": "OPERATION_SUB",
+              "kind": "reference",
+              "source_text": "OPERATION_SUB",
+              "line": 41,
+              "start_byte": 1104,
+              "end_byte": 1117,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "unresolved",
+              "binding_target_file": "src/constants.py",
+              "binding_target_symbol": null
+            }
+          ],
+          "status": "unresolved",
+          "reason": "module_resolved_symbol_unknown",
+          "target_file": "src/constants.py",
+          "target_symbol": null,
+          "bound_module": "",
+          "module_scope": "",
+          "start_byte": 165
+        }
+      ],
+      "calls": [
+        {
+          "name": "__init__",
+          "line": 21,
+          "caller": "CalculatorApp.__init__",
+          "expression": "super().__init__"
+        },
+        {
+          "name": "super",
+          "line": 21,
+          "caller": "CalculatorApp.__init__",
+          "expression": "super"
+        },
+        {
+          "name": "CalculatorState",
+          "line": 22,
+          "caller": "CalculatorApp.__init__",
+          "expression": "CalculatorState"
+        },
+        {
+          "name": "Container",
+          "line": 25,
+          "caller": "CalculatorApp.compose",
+          "expression": "Container"
+        },
+        {
+          "name": "Label",
+          "line": 26,
+          "caller": "CalculatorApp.compose",
+          "expression": "Label"
+        },
+        {
+          "name": "query_one",
+          "line": 30,
+          "caller": "CalculatorApp._update_display",
+          "expression": "self.query_one"
+        },
+        {
+          "name": "update",
+          "line": 31,
+          "caller": "CalculatorApp._update_display",
+          "expression": "display.update"
+        },
+        {
+          "name": "str",
+          "line": 31,
+          "caller": "CalculatorApp._update_display",
+          "expression": "str"
+        },
+        {
+          "name": "isdigit",
+          "line": 36,
+          "caller": "CalculatorApp.on_key",
+          "expression": "key.isdigit"
+        },
+        {
+          "name": "append_digit",
+          "line": 37,
+          "caller": "CalculatorApp.on_key",
+          "expression": "self.state.append_digit"
+        },
+        {
+          "name": "set_operator",
+          "line": 39,
+          "caller": "CalculatorApp.on_key",
+          "expression": "self.state.set_operator"
+        },
+        {
+          "name": "set_operator",
+          "line": 41,
+          "caller": "CalculatorApp.on_key",
+          "expression": "self.state.set_operator"
+        },
+        {
+          "name": "calculate",
+          "line": 43,
+          "caller": "CalculatorApp.on_key",
+          "expression": "self.state.calculate"
+        },
+        {
+          "name": "clear",
+          "line": 45,
+          "caller": "CalculatorApp.on_key",
+          "expression": "self.state.clear"
+        },
+        {
+          "name": "_update_display",
+          "line": 47,
+          "caller": "CalculatorApp.on_key",
+          "expression": "self._update_display"
+        }
+      ],
+      "diagnostics": [],
+      "modules": [],
+      "exports": [],
+      "imports": [
+        {
+          "raw": "from textual.app import App, ComposeResult",
+          "module": "textual.app",
+          "symbols": [
+            "App",
+            "ComposeResult"
+          ],
+          "line": 1
+        },
+        {
+          "raw": "from textual.containers import Container",
+          "module": "textual.containers",
+          "symbols": [
+            "Container"
+          ],
+          "line": 2
+        },
+        {
+          "raw": "from textual.widgets import Label, Static",
+          "module": "textual.widgets",
+          "symbols": [
+            "Label",
+            "Static"
+          ],
+          "line": 3
+        },
+        {
+          "raw": "from src.engine import CalculatorState",
+          "module": "src.engine",
+          "symbols": [
+            "CalculatorState"
+          ],
+          "line": 4
+        },
+        {
+          "raw": "from src.constants import OPERATION_ADD, OPERATION_SUB",
+          "module": "src.constants",
+          "symbols": [
+            "OPERATION_ADD",
+            "OPERATION_SUB"
+          ],
+          "line": 5
+        }
+      ],
+      "symbols": [
+        {
+          "name": "CalculatorApp",
+          "qualified_name": "CalculatorApp",
+          "kind": "class",
+          "start_line": 7,
+          "end_line": 47,
+          "first_body_line": 8,
+          "last_body_line": 47,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 251,
+          "body_end_byte": 1292,
+          "bases": [
+            "App"
+          ],
+          "parent": "",
+          "id": "src/ui.py::CalculatorApp",
+          "docstring": "",
+          "start_byte": 221,
+          "end_byte": 1292,
+          "signature": "class CalculatorApp"
+        },
+        {
+          "name": "__init__",
+          "qualified_name": "CalculatorApp.__init__",
+          "kind": "method",
+          "start_line": 20,
+          "end_line": 22,
+          "first_body_line": 21,
+          "last_body_line": 22,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 477,
+          "body_end_byte": 534,
+          "bases": [],
+          "parent": "CalculatorApp",
+          "id": "src/ui.py::CalculatorApp.__init__",
+          "docstring": "",
+          "start_byte": 449,
+          "end_byte": 534,
+          "signature": "def __init__(self)"
+        },
+        {
+          "name": "compose",
+          "qualified_name": "CalculatorApp.compose",
+          "kind": "method",
+          "start_line": 24,
+          "end_line": 27,
+          "first_body_line": 25,
+          "last_body_line": 27,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": true,
+          "body_start_byte": 584,
+          "body_end_byte": 648,
+          "bases": [],
+          "parent": "CalculatorApp",
+          "id": "src/ui.py::CalculatorApp.compose",
+          "docstring": "",
+          "start_byte": 540,
+          "end_byte": 648,
+          "signature": "def compose(self)"
+        },
+        {
+          "name": "_update_display",
+          "qualified_name": "CalculatorApp._update_display",
+          "kind": "method",
+          "start_line": 29,
+          "end_line": 31,
+          "first_body_line": 30,
+          "last_body_line": 31,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 689,
+          "body_end_byte": 836,
+          "bases": [],
+          "parent": "CalculatorApp",
+          "id": "src/ui.py::CalculatorApp._update_display",
+          "docstring": "",
+          "start_byte": 654,
+          "end_byte": 836,
+          "signature": "def _update_display(self)"
+        },
+        {
+          "name": "on_key",
+          "qualified_name": "CalculatorApp.on_key",
+          "kind": "method",
+          "start_line": 33,
+          "end_line": 47,
+          "first_body_line": 34,
+          "last_body_line": 47,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 883,
+          "body_end_byte": 1292,
+          "bases": [],
+          "parent": "CalculatorApp",
+          "id": "src/ui.py::CalculatorApp.on_key",
+          "docstring": "",
+          "start_byte": 842,
+          "end_byte": 1292,
+          "signature": "def on_key(self, event)"
+        }
+      ]
+    },
+    {
+      "path": "tests/__init__.py",
+      "language": "python",
+      "parser": "none",
+      "has_syntax_error": false,
+      "is_empty": true,
+      "source_hash": "",
+      "bound_names": [],
+      "bindings": [],
+      "calls": [],
+      "diagnostics": [],
+      "modules": [],
+      "exports": [],
+      "imports": [],
+      "symbols": []
+    },
+    {
+      "path": "tests/test_constants.py",
+      "language": "python",
+      "parser": "ast",
+      "has_syntax_error": false,
+      "is_empty": false,
+      "source_hash": "f7d6b61d43467dbc9ba2237f67cdf7e30403033870a81be31b05a298dc67638d",
+      "bound_names": [
+        "test_constants_values"
+      ],
+      "bindings": [
+        {
+          "id": "tests/test_constants.py@0:0",
+          "module": "src.constants",
+          "name": "MAX_BUFFER_LENGTH",
+          "local": "MAX_BUFFER_LENGTH",
+          "scope": "",
+          "line": 1,
+          "raw": "from src.constants import MAX_BUFFER_LENGTH",
+          "kind": "from",
+          "reexport": true,
+          "conditional": false,
+          "uses": [
+            {
+              "owner": "test_constants_values",
+              "expression": "MAX_BUFFER_LENGTH",
+              "kind": "reference",
+              "source_text": "MAX_BUFFER_LENGTH",
+              "line": 4,
+              "start_byte": 85,
+              "end_byte": 102,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "unresolved",
+              "binding_target_file": "src/constants.py",
+              "binding_target_symbol": null
+            }
+          ],
+          "status": "unresolved",
+          "reason": "module_resolved_symbol_unknown",
+          "target_file": "src/constants.py",
+          "target_symbol": null,
+          "bound_module": "",
+          "module_scope": "",
+          "start_byte": 0
+        }
+      ],
+      "calls": [],
+      "diagnostics": [],
+      "modules": [],
+      "exports": [],
+      "imports": [
+        {
+          "raw": "from src.constants import MAX_BUFFER_LENGTH",
+          "module": "src.constants",
+          "symbols": [
+            "MAX_BUFFER_LENGTH"
+          ],
+          "line": 1
+        }
+      ],
+      "symbols": [
+        {
+          "name": "test_constants_values",
+          "qualified_name": "test_constants_values",
+          "kind": "function",
+          "start_line": 3,
+          "end_line": 4,
+          "first_body_line": 4,
+          "last_body_line": 4,
+          "is_test": true,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 78,
+          "body_end_byte": 108,
+          "bases": [],
+          "parent": "",
+          "id": "tests/test_constants.py::test_constants_values",
+          "docstring": "",
+          "start_byte": 45,
+          "end_byte": 108,
+          "signature": "def test_constants_values()"
+        }
+      ]
+    },
+    {
+      "path": "tests/test_engine.py",
+      "language": "python",
+      "parser": "ast",
+      "has_syntax_error": false,
+      "is_empty": false,
+      "source_hash": "30d848d933c765f4a3b40eca959cd73de52083a2a9aa49c7070373ad8bbd56bc",
+      "bound_names": [
+        "TestCalculatorEngine"
+      ],
+      "bindings": [
+        {
+          "id": "tests/test_engine.py@0:0",
+          "module": "unittest",
+          "name": "",
+          "local": "unittest",
+          "scope": "",
+          "line": 1,
+          "raw": "import unittest",
+          "kind": "module",
+          "reexport": true,
+          "conditional": false,
+          "uses": [
+            {
+              "owner": "TestCalculatorEngine",
+              "expression": "unittest.TestCase",
+              "kind": "base",
+              "source_text": "unittest.TestCase",
+              "line": 5,
+              "start_byte": 157,
+              "end_byte": 174,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "external",
+              "binding_target_file": null,
+              "binding_target_symbol": null
+            },
+            {
+              "owner": "",
+              "expression": "unittest.main",
+              "kind": "call",
+              "source_text": "unittest.main",
+              "line": 43,
+              "start_byte": 1409,
+              "end_byte": 1422,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "external",
+              "binding_target_file": null,
+              "binding_target_symbol": null
+            }
+          ],
+          "status": "external",
+          "reason": "stdlib_or_declared_dependency",
+          "target_file": null,
+          "target_symbol": null,
+          "bound_module": "unittest",
+          "module_scope": "",
+          "start_byte": 0
+        },
+        {
+          "id": "tests/test_engine.py@16:1",
+          "module": "src.engine",
+          "name": "CalculatorState",
+          "local": "CalculatorState",
+          "scope": "",
+          "line": 2,
+          "raw": "from src.engine import CalculatorState",
+          "kind": "from",
+          "reexport": true,
+          "conditional": false,
+          "uses": [
+            {
+              "owner": "TestCalculatorEngine.setUp",
+              "expression": "CalculatorState",
+              "kind": "call",
+              "source_text": "CalculatorState",
+              "line": 7,
+              "start_byte": 218,
+              "end_byte": 233,
+              "target_file": "src/engine.py",
+              "target_symbol": "src/engine.py::CalculatorState",
+              "status": "internal",
+              "binding_target_file": "src/engine.py",
+              "binding_target_symbol": "src/engine.py::CalculatorState"
+            }
+          ],
+          "status": "internal",
+          "reason": "module_and_binding_resolved",
+          "target_file": "src/engine.py",
+          "target_symbol": "src/engine.py::CalculatorState",
+          "bound_module": "",
+          "module_scope": "",
+          "start_byte": 16
+        },
+        {
+          "id": "tests/test_engine.py@55:2",
+          "module": "src.constants",
+          "name": "OPERATION_ADD",
+          "local": "OPERATION_ADD",
+          "scope": "",
+          "line": 3,
+          "raw": "from src.constants import OPERATION_ADD, OPERATION_SUB, MAX_BUFFER_LENGTH",
+          "kind": "from",
+          "reexport": true,
+          "conditional": false,
+          "uses": [
+            {
+              "owner": "TestCalculatorEngine.test_addition",
+              "expression": "OPERATION_ADD",
+              "kind": "reference",
+              "source_text": "OPERATION_ADD",
+              "line": 12,
+              "start_byte": 353,
+              "end_byte": 366,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "unresolved",
+              "binding_target_file": "src/constants.py",
+              "binding_target_symbol": null
+            }
+          ],
+          "status": "unresolved",
+          "reason": "module_resolved_symbol_unknown",
+          "target_file": "src/constants.py",
+          "target_symbol": null,
+          "bound_module": "",
+          "module_scope": "",
+          "start_byte": 55
+        },
+        {
+          "id": "tests/test_engine.py@55:3",
+          "module": "src.constants",
+          "name": "OPERATION_SUB",
+          "local": "OPERATION_SUB",
+          "scope": "",
+          "line": 3,
+          "raw": "from src.constants import OPERATION_ADD, OPERATION_SUB, MAX_BUFFER_LENGTH",
+          "kind": "from",
+          "reexport": true,
+          "conditional": false,
+          "uses": [
+            {
+              "owner": "TestCalculatorEngine.test_subtraction",
+              "expression": "OPERATION_SUB",
+              "kind": "reference",
+              "source_text": "OPERATION_SUB",
+              "line": 22,
+              "start_byte": 691,
+              "end_byte": 704,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "unresolved",
+              "binding_target_file": "src/constants.py",
+              "binding_target_symbol": null
+            }
+          ],
+          "status": "unresolved",
+          "reason": "module_resolved_symbol_unknown",
+          "target_file": "src/constants.py",
+          "target_symbol": null,
+          "bound_module": "",
+          "module_scope": "",
+          "start_byte": 55
+        },
+        {
+          "id": "tests/test_engine.py@55:4",
+          "module": "src.constants",
+          "name": "MAX_BUFFER_LENGTH",
+          "local": "MAX_BUFFER_LENGTH",
+          "scope": "",
+          "line": 3,
+          "raw": "from src.constants import OPERATION_ADD, OPERATION_SUB, MAX_BUFFER_LENGTH",
+          "kind": "from",
+          "reexport": true,
+          "conditional": false,
+          "uses": [
+            {
+              "owner": "TestCalculatorEngine.test_buffer_limit",
+              "expression": "MAX_BUFFER_LENGTH",
+              "kind": "reference",
+              "source_text": "MAX_BUFFER_LENGTH",
+              "line": 30,
+              "start_byte": 989,
+              "end_byte": 1006,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "unresolved",
+              "binding_target_file": "src/constants.py",
+              "binding_target_symbol": null
+            },
+            {
+              "owner": "TestCalculatorEngine.test_buffer_limit",
+              "expression": "MAX_BUFFER_LENGTH",
+              "kind": "reference",
+              "source_text": "MAX_BUFFER_LENGTH",
+              "line": 33,
+              "start_byte": 1117,
+              "end_byte": 1134,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "unresolved",
+              "binding_target_file": "src/constants.py",
+              "binding_target_symbol": null
+            }
+          ],
+          "status": "unresolved",
+          "reason": "module_resolved_symbol_unknown",
+          "target_file": "src/constants.py",
+          "target_symbol": null,
+          "bound_module": "",
+          "module_scope": "",
+          "start_byte": 55
+        }
+      ],
+      "calls": [
+        {
+          "name": "CalculatorState",
+          "line": 7,
+          "caller": "TestCalculatorEngine.setUp",
+          "expression": "CalculatorState"
+        },
+        {
+          "name": "append_digit",
+          "line": 11,
+          "caller": "TestCalculatorEngine.test_addition",
+          "expression": "self.calc.append_digit"
+        },
+        {
+          "name": "set_operator",
+          "line": 12,
+          "caller": "TestCalculatorEngine.test_addition",
+          "expression": "self.calc.set_operator"
+        },
+        {
+          "name": "append_digit",
+          "line": 13,
+          "caller": "TestCalculatorEngine.test_addition",
+          "expression": "self.calc.append_digit"
+        },
+        {
+          "name": "calculate",
+          "line": 14,
+          "caller": "TestCalculatorEngine.test_addition",
+          "expression": "self.calc.calculate"
+        },
+        {
+          "name": "assertEqual",
+          "line": 15,
+          "caller": "TestCalculatorEngine.test_addition",
+          "expression": "self.assertEqual"
+        },
+        {
+          "name": "assertEqual",
+          "line": 16,
+          "caller": "TestCalculatorEngine.test_addition",
+          "expression": "self.assertEqual"
+        },
+        {
+          "name": "append_digit",
+          "line": 20,
+          "caller": "TestCalculatorEngine.test_subtraction",
+          "expression": "self.calc.append_digit"
+        },
+        {
+          "name": "append_digit",
+          "line": 21,
+          "caller": "TestCalculatorEngine.test_subtraction",
+          "expression": "self.calc.append_digit"
+        },
+        {
+          "name": "set_operator",
+          "line": 22,
+          "caller": "TestCalculatorEngine.test_subtraction",
+          "expression": "self.calc.set_operator"
+        },
+        {
+          "name": "append_digit",
+          "line": 23,
+          "caller": "TestCalculatorEngine.test_subtraction",
+          "expression": "self.calc.append_digit"
+        },
+        {
+          "name": "calculate",
+          "line": 24,
+          "caller": "TestCalculatorEngine.test_subtraction",
+          "expression": "self.calc.calculate"
+        },
+        {
+          "name": "assertEqual",
+          "line": 25,
+          "caller": "TestCalculatorEngine.test_subtraction",
+          "expression": "self.assertEqual"
+        },
+        {
+          "name": "assertEqual",
+          "line": 26,
+          "caller": "TestCalculatorEngine.test_subtraction",
+          "expression": "self.assertEqual"
+        },
+        {
+          "name": "range",
+          "line": 30,
+          "caller": "TestCalculatorEngine.test_buffer_limit",
+          "expression": "range"
+        },
+        {
+          "name": "append_digit",
+          "line": 31,
+          "caller": "TestCalculatorEngine.test_buffer_limit",
+          "expression": "self.calc.append_digit"
+        },
+        {
+          "name": "assertEqual",
+          "line": 33,
+          "caller": "TestCalculatorEngine.test_buffer_limit",
+          "expression": "self.assertEqual"
+        },
+        {
+          "name": "len",
+          "line": 33,
+          "caller": "TestCalculatorEngine.test_buffer_limit",
+          "expression": "len"
+        },
+        {
+          "name": "append_digit",
+          "line": 36,
+          "caller": "TestCalculatorEngine.test_state_reset",
+          "expression": "self.calc.append_digit"
+        },
+        {
+          "name": "clear",
+          "line": 37,
+          "caller": "TestCalculatorEngine.test_state_reset",
+          "expression": "self.calc.clear"
+        },
+        {
+          "name": "assertEqual",
+          "line": 38,
+          "caller": "TestCalculatorEngine.test_state_reset",
+          "expression": "self.assertEqual"
+        },
+        {
+          "name": "assertEqual",
+          "line": 39,
+          "caller": "TestCalculatorEngine.test_state_reset",
+          "expression": "self.assertEqual"
+        },
+        {
+          "name": "assertIsNone",
+          "line": 40,
+          "caller": "TestCalculatorEngine.test_state_reset",
+          "expression": "self.assertIsNone"
+        },
+        {
+          "name": "main",
+          "line": 43,
+          "caller": "",
+          "expression": "unittest.main"
+        }
+      ],
+      "diagnostics": [],
+      "modules": [],
+      "exports": [],
+      "imports": [
+        {
+          "raw": "import unittest",
+          "module": "unittest",
+          "symbols": [],
+          "line": 1
+        },
+        {
+          "raw": "from src.engine import CalculatorState",
+          "module": "src.engine",
+          "symbols": [
+            "CalculatorState"
+          ],
+          "line": 2
+        },
+        {
+          "raw": "from src.constants import OPERATION_ADD, OPERATION_SUB, MAX_BUFFER_LENGTH",
+          "module": "src.constants",
+          "symbols": [
+            "OPERATION_ADD",
+            "OPERATION_SUB",
+            "MAX_BUFFER_LENGTH"
+          ],
+          "line": 3
+        }
+      ],
+      "symbols": [
+        {
+          "name": "TestCalculatorEngine",
+          "qualified_name": "TestCalculatorEngine",
+          "kind": "class",
+          "start_line": 5,
+          "end_line": 40,
+          "first_body_line": 6,
+          "last_body_line": 40,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 181,
+          "body_end_byte": 1376,
+          "bases": [
+            "unittest.TestCase"
+          ],
+          "parent": "",
+          "id": "tests/test_engine.py::TestCalculatorEngine",
+          "docstring": "",
+          "start_byte": 130,
+          "end_byte": 1376,
+          "signature": "class TestCalculatorEngine"
+        },
+        {
+          "name": "setUp",
+          "qualified_name": "TestCalculatorEngine.setUp",
+          "kind": "method",
+          "start_line": 6,
+          "end_line": 7,
+          "first_body_line": 7,
+          "last_body_line": 7,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 206,
+          "body_end_byte": 235,
+          "bases": [],
+          "parent": "TestCalculatorEngine",
+          "id": "tests/test_engine.py::TestCalculatorEngine.setUp",
+          "docstring": "",
+          "start_byte": 181,
+          "end_byte": 235,
+          "signature": "def setUp(self)"
+        },
+        {
+          "name": "test_addition",
+          "qualified_name": "TestCalculatorEngine.test_addition",
+          "kind": "method",
+          "start_line": 9,
+          "end_line": 16,
+          "first_body_line": 11,
+          "last_body_line": 16,
+          "is_test": true,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 294,
+          "body_end_byte": 533,
+          "bases": [],
+          "parent": "TestCalculatorEngine",
+          "id": "tests/test_engine.py::TestCalculatorEngine.test_addition",
+          "docstring": "",
+          "start_byte": 241,
+          "end_byte": 533,
+          "signature": "def test_addition(self)"
+        },
+        {
+          "name": "test_subtraction",
+          "qualified_name": "TestCalculatorEngine.test_subtraction",
+          "kind": "method",
+          "start_line": 18,
+          "end_line": 26,
+          "first_body_line": 20,
+          "last_body_line": 26,
+          "is_test": true,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 596,
+          "body_end_byte": 871,
+          "bases": [],
+          "parent": "TestCalculatorEngine",
+          "id": "tests/test_engine.py::TestCalculatorEngine.test_subtraction",
+          "docstring": "",
+          "start_byte": 539,
+          "end_byte": 871,
+          "signature": "def test_subtraction(self)"
+        },
+        {
+          "name": "test_buffer_limit",
+          "qualified_name": "TestCalculatorEngine.test_buffer_limit",
+          "kind": "method",
+          "start_line": 28,
+          "end_line": 33,
+          "first_body_line": 30,
+          "last_body_line": 33,
+          "is_test": true,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 974,
+          "body_end_byte": 1135,
+          "bases": [],
+          "parent": "TestCalculatorEngine",
+          "id": "tests/test_engine.py::TestCalculatorEngine.test_buffer_limit",
+          "docstring": "",
+          "start_byte": 877,
+          "end_byte": 1135,
+          "signature": "def test_buffer_limit(self)"
+        },
+        {
+          "name": "test_state_reset",
+          "qualified_name": "TestCalculatorEngine.test_state_reset",
+          "kind": "method",
+          "start_line": 35,
+          "end_line": 40,
+          "first_body_line": 36,
+          "last_body_line": 40,
+          "is_test": true,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 1177,
+          "body_end_byte": 1376,
+          "bases": [],
+          "parent": "TestCalculatorEngine",
+          "id": "tests/test_engine.py::TestCalculatorEngine.test_state_reset",
+          "docstring": "",
+          "start_byte": 1141,
+          "end_byte": 1376,
+          "signature": "def test_state_reset(self)"
+        }
+      ]
+    },
+    {
+      "path": "tests/test_ui.py",
+      "language": "python",
+      "parser": "ast",
+      "has_syntax_error": false,
+      "is_empty": false,
+      "source_hash": "dcfaa42878f388f14151f2e1b7743d33f627ed18a2c519cccd85146ce0fb8bea",
+      "bound_names": [
+        "test_key_press_updates_display"
+      ],
+      "bindings": [
+        {
+          "id": "tests/test_ui.py@0:0",
+          "module": "pytest",
+          "name": "",
+          "local": "pytest",
+          "scope": "",
+          "line": 1,
+          "raw": "import pytest",
+          "kind": "module",
+          "reexport": true,
+          "conditional": false,
+          "uses": [
+            {
+              "owner": "",
+              "expression": "pytest.mark.asyncio",
+              "kind": "reference",
+              "source_text": "pytest.mark.asyncio",
+              "line": 7,
+              "start_byte": 154,
+              "end_byte": 173,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "external",
+              "binding_target_file": null,
+              "binding_target_symbol": null
+            }
+          ],
+          "status": "external",
+          "reason": "no_matching_local_package",
+          "target_file": null,
+          "target_symbol": null,
+          "bound_module": "pytest",
+          "module_scope": "",
+          "start_byte": 0
+        },
+        {
+          "id": "tests/test_ui.py@14:1",
+          "module": "textual.pilot",
+          "name": "Pilot",
+          "local": "Pilot",
+          "scope": "",
+          "line": 2,
+          "raw": "from textual.pilot import Pilot",
+          "kind": "from",
+          "reexport": true,
+          "conditional": false,
+          "uses": [],
+          "status": "external",
+          "reason": "stdlib_or_declared_dependency",
+          "target_file": null,
+          "target_symbol": null,
+          "bound_module": "",
+          "module_scope": "",
+          "start_byte": 14
+        },
+        {
+          "id": "tests/test_ui.py@46:2",
+          "module": "src.ui",
+          "name": "CalculatorApp",
+          "local": "CalculatorApp",
+          "scope": "",
+          "line": 3,
+          "raw": "from src.ui import CalculatorApp",
+          "kind": "from",
+          "reexport": true,
+          "conditional": false,
+          "uses": [
+            {
+              "owner": "test_key_press_updates_display",
+              "expression": "CalculatorApp",
+              "kind": "call",
+              "source_text": "CalculatorApp",
+              "line": 13,
+              "start_byte": 357,
+              "end_byte": 370,
+              "target_file": "src/ui.py",
+              "target_symbol": "src/ui.py::CalculatorApp",
+              "status": "internal",
+              "binding_target_file": "src/ui.py",
+              "binding_target_symbol": "src/ui.py::CalculatorApp"
+            }
+          ],
+          "status": "internal",
+          "reason": "module_and_binding_resolved",
+          "target_file": "src/ui.py",
+          "target_symbol": "src/ui.py::CalculatorApp",
+          "bound_module": "",
+          "module_scope": "",
+          "start_byte": 46
+        },
+        {
+          "id": "tests/test_ui.py@79:3",
+          "module": "src.engine",
+          "name": "CalculatorState",
+          "local": "CalculatorState",
+          "scope": "",
+          "line": 4,
+          "raw": "from src.engine import CalculatorState",
+          "kind": "from",
+          "reexport": true,
+          "conditional": false,
+          "uses": [],
+          "status": "internal",
+          "reason": "module_and_binding_resolved",
+          "target_file": "src/engine.py",
+          "target_symbol": "src/engine.py::CalculatorState",
+          "bound_module": "",
+          "module_scope": "",
+          "start_byte": 79
+        },
+        {
+          "id": "tests/test_ui.py@118:4",
+          "module": "textual.widgets",
+          "name": "Label",
+          "local": "Label",
+          "scope": "",
+          "line": 5,
+          "raw": "from textual.widgets import Label",
+          "kind": "from",
+          "reexport": true,
+          "conditional": false,
+          "uses": [
+            {
+              "owner": "test_key_press_updates_display",
+              "expression": "Label",
+              "kind": "reference",
+              "source_text": "Label",
+              "line": 16,
+              "start_byte": 486,
+              "end_byte": 491,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "external",
+              "binding_target_file": null,
+              "binding_target_symbol": null
+            }
+          ],
+          "status": "external",
+          "reason": "stdlib_or_declared_dependency",
+          "target_file": null,
+          "target_symbol": null,
+          "bound_module": "",
+          "module_scope": "",
+          "start_byte": 118
+        }
+      ],
+      "calls": [
+        {
+          "name": "CalculatorApp",
+          "line": 13,
+          "caller": "test_key_press_updates_display",
+          "expression": "CalculatorApp"
+        },
+        {
+          "name": "run_test",
+          "line": 14,
+          "caller": "test_key_press_updates_display",
+          "expression": "app.run_test"
+        },
+        {
+          "name": "query_one",
+          "line": 16,
+          "caller": "test_key_press_updates_display",
+          "expression": "app.query_one"
+        },
+        {
+          "name": "str",
+          "line": 26,
+          "caller": "test_key_press_updates_display",
+          "expression": "str"
+        },
+        {
+          "name": "press",
+          "line": 29,
+          "caller": "test_key_press_updates_display",
+          "expression": "pilot.press"
+        },
+        {
+          "name": "str",
+          "line": 32,
+          "caller": "test_key_press_updates_display",
+          "expression": "str"
+        },
+        {
+          "name": "press",
+          "line": 35,
+          "caller": "test_key_press_updates_display",
+          "expression": "pilot.press"
+        },
+        {
+          "name": "str",
+          "line": 38,
+          "caller": "test_key_press_updates_display",
+          "expression": "str"
+        }
+      ],
+      "diagnostics": [],
+      "modules": [],
+      "exports": [],
+      "imports": [
+        {
+          "raw": "import pytest",
+          "module": "pytest",
+          "symbols": [],
+          "line": 1
+        },
+        {
+          "raw": "from textual.pilot import Pilot",
+          "module": "textual.pilot",
+          "symbols": [
+            "Pilot"
+          ],
+          "line": 2
+        },
+        {
+          "raw": "from src.ui import CalculatorApp",
+          "module": "src.ui",
+          "symbols": [
+            "CalculatorApp"
+          ],
+          "line": 3
+        },
+        {
+          "raw": "from src.engine import CalculatorState",
+          "module": "src.engine",
+          "symbols": [
+            "CalculatorState"
+          ],
+          "line": 4
+        },
+        {
+          "raw": "from textual.widgets import Label",
+          "module": "textual.widgets",
+          "symbols": [
+            "Label"
+          ],
+          "line": 5
+        }
+      ],
+      "symbols": [
+        {
+          "name": "test_key_press_updates_display",
+          "qualified_name": "test_key_press_updates_display",
+          "kind": "function",
+          "start_line": 8,
+          "end_line": 38,
+          "first_body_line": 9,
+          "last_body_line": 38,
+          "is_test": true,
+          "is_async": true,
+          "is_generator": false,
+          "body_start_byte": 222,
+          "body_end_byte": 1595,
+          "bases": [],
+          "parent": "",
+          "id": "tests/test_ui.py::test_key_press_updates_display",
+          "docstring": "Validates that UI components map to Engine state.\nChecks that key events trigger correct engine methods.",
+          "start_byte": 174,
+          "end_byte": 1595,
+          "signature": "async def test_key_press_updates_display()"
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "main.py",
+      "target": "src/ui.py",
+      "kind": "import",
+      "line": 1,
+      "raw": "from src.ui import CalculatorApp",
+      "symbols": [
+        "CalculatorApp"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "main.py",
+      "target": "src/ui.py::CalculatorApp",
+      "kind": "invoke",
+      "line": 4,
+      "raw": "CalculatorApp",
+      "symbols": [
+        "CalculatorApp"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "src/engine.py",
+      "target": "src/constants.py",
+      "kind": "import",
+      "line": 1,
+      "raw": "from src.constants import OPERATION_ADD, OPERATION_SUB, MAX_BUFFER_LENGTH",
+      "symbols": [
+        "OPERATION_ADD"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "src/engine.py",
+      "target": "src/constants.py",
+      "kind": "import",
+      "line": 1,
+      "raw": "from src.constants import OPERATION_ADD, OPERATION_SUB, MAX_BUFFER_LENGTH",
+      "symbols": [
+        "OPERATION_SUB"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "src/engine.py",
+      "target": "src/constants.py",
+      "kind": "import",
+      "line": 1,
+      "raw": "from src.constants import OPERATION_ADD, OPERATION_SUB, MAX_BUFFER_LENGTH",
+      "symbols": [
+        "MAX_BUFFER_LENGTH"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "src/ui.py",
+      "target": "src/engine.py",
+      "kind": "import",
+      "line": 4,
+      "raw": "from src.engine import CalculatorState",
+      "symbols": [
+        "CalculatorState"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "src/ui.py::CalculatorApp.__init__",
+      "target": "src/engine.py::CalculatorState",
+      "kind": "invoke",
+      "line": 22,
+      "raw": "CalculatorState",
+      "symbols": [
+        "CalculatorState"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "src/ui.py",
+      "target": "src/constants.py",
+      "kind": "import",
+      "line": 5,
+      "raw": "from src.constants import OPERATION_ADD, OPERATION_SUB",
+      "symbols": [
+        "OPERATION_ADD"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "src/ui.py",
+      "target": "src/constants.py",
+      "kind": "import",
+      "line": 5,
+      "raw": "from src.constants import OPERATION_ADD, OPERATION_SUB",
+      "symbols": [
+        "OPERATION_SUB"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "tests/test_constants.py",
+      "target": "src/constants.py",
+      "kind": "import",
+      "line": 1,
+      "raw": "from src.constants import MAX_BUFFER_LENGTH",
+      "symbols": [
+        "MAX_BUFFER_LENGTH"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "tests/test_engine.py",
+      "target": "src/engine.py",
+      "kind": "import",
+      "line": 2,
+      "raw": "from src.engine import CalculatorState",
+      "symbols": [
+        "CalculatorState"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "tests/test_engine.py::TestCalculatorEngine.setUp",
+      "target": "src/engine.py::CalculatorState",
+      "kind": "invoke",
+      "line": 7,
+      "raw": "CalculatorState",
+      "symbols": [
+        "CalculatorState"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "tests/test_engine.py",
+      "target": "src/constants.py",
+      "kind": "import",
+      "line": 3,
+      "raw": "from src.constants import OPERATION_ADD, OPERATION_SUB, MAX_BUFFER_LENGTH",
+      "symbols": [
+        "OPERATION_ADD"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "tests/test_engine.py",
+      "target": "src/constants.py",
+      "kind": "import",
+      "line": 3,
+      "raw": "from src.constants import OPERATION_ADD, OPERATION_SUB, MAX_BUFFER_LENGTH",
+      "symbols": [
+        "OPERATION_SUB"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "tests/test_engine.py",
+      "target": "src/constants.py",
+      "kind": "import",
+      "line": 3,
+      "raw": "from src.constants import OPERATION_ADD, OPERATION_SUB, MAX_BUFFER_LENGTH",
+      "symbols": [
+        "MAX_BUFFER_LENGTH"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "tests/test_ui.py",
+      "target": "src/ui.py",
+      "kind": "import",
+      "line": 3,
+      "raw": "from src.ui import CalculatorApp",
+      "symbols": [
+        "CalculatorApp"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "tests/test_ui.py::test_key_press_updates_display",
+      "target": "src/ui.py::CalculatorApp",
+      "kind": "invoke",
+      "line": 13,
+      "raw": "CalculatorApp",
+      "symbols": [
+        "CalculatorApp"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "tests/test_ui.py",
+      "target": "src/engine.py",
+      "kind": "import",
+      "line": 4,
+      "raw": "from src.engine import CalculatorState",
+      "symbols": [
+        "CalculatorState"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "src/engine.py",
+      "target": "src/engine.py::CalculatorState",
+      "kind": "contain",
+      "line": 3,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "src/engine.py::CalculatorState",
+      "target": "src/engine.py::CalculatorState.__init__",
+      "kind": "contain",
+      "line": 4,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "src/engine.py::CalculatorState",
+      "target": "src/engine.py::CalculatorState.clear",
+      "kind": "contain",
+      "line": 7,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "src/engine.py::CalculatorState",
+      "target": "src/engine.py::CalculatorState.is_invalid_input",
+      "kind": "contain",
+      "line": 12,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "src/engine.py::CalculatorState",
+      "target": "src/engine.py::CalculatorState.append_digit",
+      "kind": "contain",
+      "line": 15,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "src/engine.py::CalculatorState",
+      "target": "src/engine.py::CalculatorState.set_operator",
+      "kind": "contain",
+      "line": 19,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "src/engine.py::CalculatorState",
+      "target": "src/engine.py::CalculatorState.calculate",
+      "kind": "contain",
+      "line": 25,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "src/ui.py",
+      "target": "src/ui.py::CalculatorApp",
+      "kind": "contain",
+      "line": 7,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "src/ui.py::CalculatorApp",
+      "target": "src/ui.py::CalculatorApp.__init__",
+      "kind": "contain",
+      "line": 20,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "src/ui.py::CalculatorApp",
+      "target": "src/ui.py::CalculatorApp.compose",
+      "kind": "contain",
+      "line": 24,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "src/ui.py::CalculatorApp",
+      "target": "src/ui.py::CalculatorApp._update_display",
+      "kind": "contain",
+      "line": 29,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "src/ui.py::CalculatorApp",
+      "target": "src/ui.py::CalculatorApp.on_key",
+      "kind": "contain",
+      "line": 33,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "tests/test_constants.py",
+      "target": "tests/test_constants.py::test_constants_values",
+      "kind": "contain",
+      "line": 3,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "tests/test_engine.py",
+      "target": "tests/test_engine.py::TestCalculatorEngine",
+      "kind": "contain",
+      "line": 5,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "tests/test_engine.py::TestCalculatorEngine",
+      "target": "tests/test_engine.py::TestCalculatorEngine.setUp",
+      "kind": "contain",
+      "line": 6,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "tests/test_engine.py::TestCalculatorEngine",
+      "target": "tests/test_engine.py::TestCalculatorEngine.test_addition",
+      "kind": "contain",
+      "line": 9,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "tests/test_engine.py::TestCalculatorEngine",
+      "target": "tests/test_engine.py::TestCalculatorEngine.test_subtraction",
+      "kind": "contain",
+      "line": 18,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "tests/test_engine.py::TestCalculatorEngine",
+      "target": "tests/test_engine.py::TestCalculatorEngine.test_buffer_limit",
+      "kind": "contain",
+      "line": 28,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "tests/test_engine.py::TestCalculatorEngine",
+      "target": "tests/test_engine.py::TestCalculatorEngine.test_state_reset",
+      "kind": "contain",
+      "line": 35,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "tests/test_ui.py",
+      "target": "tests/test_ui.py::test_key_press_updates_display",
+      "kind": "contain",
+      "line": 8,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    }
+  ]
+}

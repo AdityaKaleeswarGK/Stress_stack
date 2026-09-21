@@ -1,0 +1,4067 @@
+{
+  "summary": {
+    "label": "pluggy",
+    "root": "/Users/adityagk/Desktop/projects/pluggy",
+    "files_total": 31,
+    "files_by_language": {
+      "python": 31
+    },
+    "symbols_total": 297,
+    "tests_total": 128,
+    "calls_total": 1591,
+    "syntax_errors": 0,
+    "unparsed_known_language": 0,
+    "edges_total": 332,
+    "edges_by_kind": {
+      "contain": 297,
+      "import": 33,
+      "inherit": 2
+    },
+    "scan_seconds": 0.198,
+    "import_records": 217,
+    "import_records_with_any_edge_on_line": 33,
+    "import_count_caveat": "Records without edges include external imports and unsupported resolution; this is not recall. Multiple bindings on a line can be only partly resolved.",
+    "files_with_incoming_edges": 7,
+    "most_imported_files": [
+      [
+        "src/pluggy/_hooks.py",
+        18
+      ],
+      [
+        "src/pluggy/_result.py",
+        6
+      ],
+      [
+        "src/pluggy/_warnings.py",
+        3
+      ],
+      [
+        "src/pluggy/_manager.py",
+        2
+      ],
+      [
+        "src/pluggy/_compat.py",
+        2
+      ]
+    ],
+    "docstrings_in_memory": 112,
+    "docstrings_saved": 0,
+    "calls_saved": 0,
+    "issues": {
+      "duplicate_symbol_ids": {},
+      "dangling_edges": [],
+      "symbol_parents_missing_in_file": [],
+      "python_definitions_not_indexed": [
+        {
+          "path": "docs/conf.py",
+          "qualified_name": "configure_logging.WarnLogFilter",
+          "line": 112
+        },
+        {
+          "path": "docs/conf.py",
+          "qualified_name": "configure_logging.WarnLogFilter.filter",
+          "line": 113
+        },
+        {
+          "path": "src/pluggy/_hooks.py",
+          "qualified_name": "HookRelay.__getattr__",
+          "line": 398
+        },
+        {
+          "path": "src/pluggy/_hooks.py",
+          "qualified_name": "HookimplMarker.__call__.setattr_hookimpl_opts",
+          "line": 264
+        },
+        {
+          "path": "src/pluggy/_hooks.py",
+          "qualified_name": "HookspecMarker.__call__.setattr_hookspec_opts",
+          "line": 147
+        },
+        {
+          "path": "src/pluggy/_manager.py",
+          "qualified_name": "PluginManager.add_hookcall_monitoring.traced_hookexec",
+          "line": 470
+        },
+        {
+          "path": "src/pluggy/_manager.py",
+          "qualified_name": "PluginManager.add_hookcall_monitoring.undo",
+          "line": 485
+        },
+        {
+          "path": "src/pluggy/_manager.py",
+          "qualified_name": "PluginManager.enable_tracing.after",
+          "line": 503
+        },
+        {
+          "path": "src/pluggy/_manager.py",
+          "qualified_name": "PluginManager.enable_tracing.before",
+          "line": 497
+        },
+        {
+          "path": "testing/benchmark.py",
+          "qualified_name": "test_call_hook.HookSpec",
+          "line": 137
+        },
+        {
+          "path": "testing/benchmark.py",
+          "qualified_name": "test_call_hook.HookSpec.fun",
+          "line": 139
+        },
+        {
+          "path": "testing/benchmark.py",
+          "qualified_name": "test_call_hook.Plugin",
+          "line": 142
+        },
+        {
+          "path": "testing/benchmark.py",
+          "qualified_name": "test_call_hook.Plugin.__init__",
+          "line": 143
+        },
+        {
+          "path": "testing/benchmark.py",
+          "qualified_name": "test_call_hook.Plugin.__repr__",
+          "line": 146
+        },
+        {
+          "path": "testing/benchmark.py",
+          "qualified_name": "test_call_hook.Plugin.fun",
+          "line": 150
+        },
+        {
+          "path": "testing/benchmark.py",
+          "qualified_name": "test_call_hook.PluginWrap",
+          "line": 154
+        },
+        {
+          "path": "testing/benchmark.py",
+          "qualified_name": "test_call_hook.PluginWrap.__init__",
+          "line": 155
+        },
+        {
+          "path": "testing/benchmark.py",
+          "qualified_name": "test_call_hook.PluginWrap.__repr__",
+          "line": 158
+        },
+        {
+          "path": "testing/benchmark.py",
+          "qualified_name": "test_call_hook.PluginWrap.fun",
+          "line": 162
+        },
+        {
+          "path": "testing/benchmark.py",
+          "qualified_name": "test_hook_and_wrappers_speed.setup",
+          "line": 105
+        },
+        {
+          "path": "testing/conftest.py",
+          "qualified_name": "he_pm.Hooks",
+          "line": 14
+        },
+        {
+          "path": "testing/conftest.py",
+          "qualified_name": "he_pm.Hooks.he_method1",
+          "line": 16
+        },
+        {
+          "path": "testing/test_details.py",
+          "qualified_name": "test_hook_nonspec_call.Plugin",
+          "line": 249
+        },
+        {
+          "path": "testing/test_details.py",
+          "qualified_name": "test_hook_nonspec_call.Plugin.a_hook",
+          "line": 251
+        },
+        {
+          "path": "testing/test_details.py",
+          "qualified_name": "test_not_all_arguments_are_provided_issues_a_warning.Spec",
+          "line": 158
+        },
+        {
+          "path": "testing/test_details.py",
+          "qualified_name": "test_not_all_arguments_are_provided_issues_a_warning.Spec.hello",
+          "line": 160
+        },
+        {
+          "path": "testing/test_details.py",
+          "qualified_name": "test_not_all_arguments_are_provided_issues_a_warning.Spec.herstory",
+          "line": 164
+        },
+        {
+          "path": "testing/test_details.py",
+          "qualified_name": "test_parse_hookimpl_override.MyPluginManager",
+          "line": 16
+        },
+        {
+          "path": "testing/test_details.py",
+          "qualified_name": "test_parse_hookimpl_override.MyPluginManager.parse_hookimpl_opts",
+          "line": 17
+        },
+        {
+          "path": "testing/test_details.py",
+          "qualified_name": "test_parse_hookimpl_override.Plugin",
+          "line": 23
+        },
+        {
+          "path": "testing/test_details.py",
+          "qualified_name": "test_parse_hookimpl_override.Plugin.x1meth",
+          "line": 24
+        },
+        {
+          "path": "testing/test_details.py",
+          "qualified_name": "test_parse_hookimpl_override.Plugin.x1meth2",
+          "line": 28
+        },
+        {
+          "path": "testing/test_details.py",
+          "qualified_name": "test_parse_hookimpl_override.Plugin.x1meth3",
+          "line": 32
+        },
+        {
+          "path": "testing/test_details.py",
+          "qualified_name": "test_parse_hookimpl_override.Spec",
+          "line": 35
+        },
+        {
+          "path": "testing/test_details.py",
+          "qualified_name": "test_parse_hookimpl_override.Spec.x1meth",
+          "line": 37
+        },
+        {
+          "path": "testing/test_details.py",
+          "qualified_name": "test_parse_hookimpl_override.Spec.x1meth2",
+          "line": 41
+        },
+        {
+          "path": "testing/test_details.py",
+          "qualified_name": "test_parse_hookimpl_override.Spec.x1meth3",
+          "line": 45
+        },
+        {
+          "path": "testing/test_details.py",
+          "qualified_name": "test_plugin_getattr_raises_errors.DontTouchMe",
+          "line": 136
+        },
+        {
+          "path": "testing/test_details.py",
+          "qualified_name": "test_plugin_getattr_raises_errors.DontTouchMe.__getattr__",
+          "line": 137
+        },
+        {
+          "path": "testing/test_details.py",
+          "qualified_name": "test_plugin_getattr_raises_errors.Module",
+          "line": 140
+        },
+        {
+          "path": "testing/test_details.py",
+          "qualified_name": "test_repr.Plugin",
+          "line": 184
+        },
+        {
+          "path": "testing/test_details.py",
+          "qualified_name": "test_repr.Plugin.myhook",
+          "line": 186
+        },
+        {
+          "path": "testing/test_details.py",
+          "qualified_name": "test_warn_when_deprecated_args_specified.Plugin",
+          "line": 112
+        },
+        {
+          "path": "testing/test_details.py",
+          "qualified_name": "test_warn_when_deprecated_args_specified.Plugin.foo",
+          "line": 114
+        },
+        {
+          "path": "testing/test_details.py",
+          "qualified_name": "test_warn_when_deprecated_args_specified.Spec",
+          "line": 102
+        },
+        {
+          "path": "testing/test_details.py",
+          "qualified_name": "test_warn_when_deprecated_args_specified.Spec.foo",
+          "line": 109
+        },
+        {
+          "path": "testing/test_details.py",
+          "qualified_name": "test_warn_when_deprecated_specified.Plugin",
+          "line": 82
+        },
+        {
+          "path": "testing/test_details.py",
+          "qualified_name": "test_warn_when_deprecated_specified.Plugin.foo",
+          "line": 84
+        },
+        {
+          "path": "testing/test_details.py",
+          "qualified_name": "test_warn_when_deprecated_specified.Spec",
+          "line": 77
+        },
+        {
+          "path": "testing/test_details.py",
+          "qualified_name": "test_warn_when_deprecated_specified.Spec.foo",
+          "line": 79
+        },
+        {
+          "path": "testing/test_details.py",
+          "qualified_name": "test_wrapper_runtimeerror_passtrough.Fail",
+          "line": 267
+        },
+        {
+          "path": "testing/test_details.py",
+          "qualified_name": "test_wrapper_runtimeerror_passtrough.Fail.fail_late",
+          "line": 269
+        },
+        {
+          "path": "testing/test_details.py",
+          "qualified_name": "test_wrapper_runtimeerror_passtrough.Plugin",
+          "line": 272
+        },
+        {
+          "path": "testing/test_details.py",
+          "qualified_name": "test_wrapper_runtimeerror_passtrough.Plugin.fail_late",
+          "line": 274
+        },
+        {
+          "path": "testing/test_helpers.py",
+          "qualified_name": "test_formatdef.function1",
+          "line": 72
+        },
+        {
+          "path": "testing/test_helpers.py",
+          "qualified_name": "test_formatdef.function2",
+          "line": 77
+        },
+        {
+          "path": "testing/test_helpers.py",
+          "qualified_name": "test_formatdef.function3",
+          "line": 82
+        },
+        {
+          "path": "testing/test_helpers.py",
+          "qualified_name": "test_formatdef.function4",
+          "line": 87
+        },
+        {
+          "path": "testing/test_helpers.py",
+          "qualified_name": "test_varnames.A",
+          "line": 15
+        },
+        {
+          "path": "testing/test_helpers.py",
+          "qualified_name": "test_varnames.A.f",
+          "line": 16
+        },
+        {
+          "path": "testing/test_helpers.py",
+          "qualified_name": "test_varnames.B",
+          "line": 19
+        },
+        {
+          "path": "testing/test_helpers.py",
+          "qualified_name": "test_varnames.B.__call__",
+          "line": 20
+        },
+        {
+          "path": "testing/test_helpers.py",
+          "qualified_name": "test_varnames.f",
+          "line": 12
+        },
+        {
+          "path": "testing/test_helpers.py",
+          "qualified_name": "test_varnames_bound_method_from_module_function.MyClass",
+          "line": 129
+        },
+        {
+          "path": "testing/test_helpers.py",
+          "qualified_name": "test_varnames_bound_method_from_module_function.standalone",
+          "line": 126
+        },
+        {
+          "path": "testing/test_helpers.py",
+          "qualified_name": "test_varnames_class.C",
+          "line": 36
+        },
+        {
+          "path": "testing/test_helpers.py",
+          "qualified_name": "test_varnames_class.C.__init__",
+          "line": 37
+        },
+        {
+          "path": "testing/test_helpers.py",
+          "qualified_name": "test_varnames_class.D",
+          "line": 40
+        },
+        {
+          "path": "testing/test_helpers.py",
+          "qualified_name": "test_varnames_class.E",
+          "line": 43
+        },
+        {
+          "path": "testing/test_helpers.py",
+          "qualified_name": "test_varnames_class.E.__init__",
+          "line": 44
+        },
+        {
+          "path": "testing/test_helpers.py",
+          "qualified_name": "test_varnames_class.F",
+          "line": 47
+        },
+        {
+          "path": "testing/test_helpers.py",
+          "qualified_name": "test_varnames_classmethod.MyClass",
+          "line": 150
+        },
+        {
+          "path": "testing/test_helpers.py",
+          "qualified_name": "test_varnames_classmethod.MyClass.cm",
+          "line": 152
+        },
+        {
+          "path": "testing/test_helpers.py",
+          "qualified_name": "test_varnames_decorator.Example",
+          "line": 107
+        },
+        {
+          "path": "testing/test_helpers.py",
+          "qualified_name": "test_varnames_decorator.Example.example_method",
+          "line": 109
+        },
+        {
+          "path": "testing/test_helpers.py",
+          "qualified_name": "test_varnames_decorator.example",
+          "line": 104
+        },
+        {
+          "path": "testing/test_helpers.py",
+          "qualified_name": "test_varnames_decorator.my_decorator",
+          "line": 96
+        },
+        {
+          "path": "testing/test_helpers.py",
+          "qualified_name": "test_varnames_decorator.my_decorator.wrapper",
+          "line": 98
+        },
+        {
+          "path": "testing/test_helpers.py",
+          "qualified_name": "test_varnames_default.f",
+          "line": 29
+        },
+        {
+          "path": "testing/test_helpers.py",
+          "qualified_name": "test_varnames_hookspec_without_self.MySpecs",
+          "line": 180
+        },
+        {
+          "path": "testing/test_helpers.py",
+          "qualified_name": "test_varnames_hookspec_without_self.MySpecs.my_hook",
+          "line": 181
+        },
+        {
+          "path": "testing/test_helpers.py",
+          "qualified_name": "test_varnames_keyword_only.f1",
+          "line": 57
+        },
+        {
+          "path": "testing/test_helpers.py",
+          "qualified_name": "test_varnames_keyword_only.f2",
+          "line": 60
+        },
+        {
+          "path": "testing/test_helpers.py",
+          "qualified_name": "test_varnames_keyword_only.f3",
+          "line": 63
+        },
+        {
+          "path": "testing/test_helpers.py",
+          "qualified_name": "test_varnames_legacy_noself_no_warn_with_self.MySpecs",
+          "line": 212
+        },
+        {
+          "path": "testing/test_helpers.py",
+          "qualified_name": "test_varnames_legacy_noself_no_warn_with_self.MySpecs.my_hook",
+          "line": 213
+        },
+        {
+          "path": "testing/test_helpers.py",
+          "qualified_name": "test_varnames_legacy_noself_suppressed_for_timeout_hooks.TimeoutHooks",
+          "line": 242
+        },
+        {
+          "path": "testing/test_helpers.py",
+          "qualified_name": "test_varnames_legacy_noself_suppressed_for_timeout_hooks.TimeoutHooks.pytest_timeout_cancel_timer",
+          "line": 246
+        },
+        {
+          "path": "testing/test_helpers.py",
+          "qualified_name": "test_varnames_legacy_noself_suppressed_for_timeout_hooks.TimeoutHooks.pytest_timeout_set_timer",
+          "line": 243
+        },
+        {
+          "path": "testing/test_helpers.py",
+          "qualified_name": "test_varnames_legacy_noself_warns.MySpecs",
+          "line": 195
+        },
+        {
+          "path": "testing/test_helpers.py",
+          "qualified_name": "test_varnames_legacy_noself_warns.MySpecs.my_hook",
+          "line": 196
+        },
+        {
+          "path": "testing/test_helpers.py",
+          "qualified_name": "test_varnames_no_legacy_noself_no_warn.MySpecs",
+          "line": 227
+        },
+        {
+          "path": "testing/test_helpers.py",
+          "qualified_name": "test_varnames_no_legacy_noself_no_warn.MySpecs.my_hook",
+          "line": 228
+        },
+        {
+          "path": "testing/test_helpers.py",
+          "qualified_name": "test_varnames_staticmethod.MyClass",
+          "line": 161
+        },
+        {
+          "path": "testing/test_helpers.py",
+          "qualified_name": "test_varnames_staticmethod.MyClass.sm",
+          "line": 163
+        },
+        {
+          "path": "testing/test_helpers.py",
+          "qualified_name": "test_varnames_unconventional_first_param_name.MyClass",
+          "line": 139
+        },
+        {
+          "path": "testing/test_helpers.py",
+          "qualified_name": "test_varnames_unconventional_first_param_name.MyClass.method",
+          "line": 140
+        },
+        {
+          "path": "testing/test_helpers.py",
+          "qualified_name": "test_varnames_unresolvable_annotation.func_with_bad_annotation",
+          "line": 268
+        },
+        {
+          "path": "testing/test_hookcaller.py",
+          "qualified_name": "AddMeth.__call__.wrap",
+          "line": 45
+        },
+        {
+          "path": "testing/test_hookcaller.py",
+          "qualified_name": "hc.Hooks",
+          "line": 22
+        },
+        {
+          "path": "testing/test_hookcaller.py",
+          "qualified_name": "hc.Hooks.he_method1",
+          "line": 24
+        },
+        {
+          "path": "testing/test_hookcaller.py",
+          "qualified_name": "test_adding_nonwrappers.he_method1",
+          "line": 71
+        },
+        {
+          "path": "testing/test_hookcaller.py",
+          "qualified_name": "test_adding_nonwrappers.he_method2",
+          "line": 75
+        },
+        {
+          "path": "testing/test_hookcaller.py",
+          "qualified_name": "test_adding_nonwrappers.he_method3",
+          "line": 79
+        },
+        {
+          "path": "testing/test_hookcaller.py",
+          "qualified_name": "test_adding_nonwrappers_tryfirst.he_method1",
+          "line": 144
+        },
+        {
+          "path": "testing/test_hookcaller.py",
+          "qualified_name": "test_adding_nonwrappers_tryfirst.he_method1_b",
+          "line": 152
+        },
+        {
+          "path": "testing/test_hookcaller.py",
+          "qualified_name": "test_adding_nonwrappers_tryfirst.he_method1_middle",
+          "line": 148
+        },
+        {
+          "path": "testing/test_hookcaller.py",
+          "qualified_name": "test_adding_nonwrappers_trylast.he_method1",
+          "line": 91
+        },
+        {
+          "path": "testing/test_hookcaller.py",
+          "qualified_name": "test_adding_nonwrappers_trylast.he_method1_b",
+          "line": 95
+        },
+        {
+          "path": "testing/test_hookcaller.py",
+          "qualified_name": "test_adding_nonwrappers_trylast.he_method1_middle",
+          "line": 87
+        },
+        {
+          "path": "testing/test_hookcaller.py",
+          "qualified_name": "test_adding_nonwrappers_trylast2.he_method1",
+          "line": 136
+        },
+        {
+          "path": "testing/test_hookcaller.py",
+          "qualified_name": "test_adding_nonwrappers_trylast2.he_method1_b",
+          "line": 132
+        },
+        {
+          "path": "testing/test_hookcaller.py",
+          "qualified_name": "test_adding_nonwrappers_trylast2.he_method1_middle",
+          "line": 128
+        },
+        {
+          "path": "testing/test_hookcaller.py",
+          "qualified_name": "test_adding_nonwrappers_trylast3.he_method1_a",
+          "line": 103
+        },
+        {
+          "path": "testing/test_hookcaller.py",
+          "qualified_name": "test_adding_nonwrappers_trylast3.he_method1_b",
+          "line": 107
+        },
+        {
+          "path": "testing/test_hookcaller.py",
+          "qualified_name": "test_adding_nonwrappers_trylast3.he_method1_c",
+          "line": 111
+        },
+        {
+          "path": "testing/test_hookcaller.py",
+          "qualified_name": "test_adding_nonwrappers_trylast3.he_method1_d",
+          "line": 115
+        },
+        {
+          "path": "testing/test_hookcaller.py",
+          "qualified_name": "test_adding_wrappers_complex.m1",
+          "line": 208
+        },
+        {
+          "path": "testing/test_hookcaller.py",
+          "qualified_name": "test_adding_wrappers_complex.m10",
+          "line": 256
+        },
+        {
+          "path": "testing/test_hookcaller.py",
+          "qualified_name": "test_adding_wrappers_complex.m11",
+          "line": 261
+        },
+        {
+          "path": "testing/test_hookcaller.py",
+          "qualified_name": "test_adding_wrappers_complex.m12",
+          "line": 266
+        },
+        {
+          "path": "testing/test_hookcaller.py",
+          "qualified_name": "test_adding_wrappers_complex.m13",
+          "line": 285
+        },
+        {
+          "path": "testing/test_hookcaller.py",
+          "qualified_name": "test_adding_wrappers_complex.m2",
+          "line": 214
+        },
+        {
+          "path": "testing/test_hookcaller.py",
+          "qualified_name": "test_adding_wrappers_complex.m3",
+          "line": 219
+        },
+        {
+          "path": "testing/test_hookcaller.py",
+          "qualified_name": "test_adding_wrappers_complex.m4",
+          "line": 224
+        },
+        {
+          "path": "testing/test_hookcaller.py",
+          "qualified_name": "test_adding_wrappers_complex.m5",
+          "line": 229
+        },
+        {
+          "path": "testing/test_hookcaller.py",
+          "qualified_name": "test_adding_wrappers_complex.m6",
+          "line": 235
+        },
+        {
+          "path": "testing/test_hookcaller.py",
+          "qualified_name": "test_adding_wrappers_complex.m7",
+          "line": 240
+        },
+        {
+          "path": "testing/test_hookcaller.py",
+          "qualified_name": "test_adding_wrappers_complex.m8",
+          "line": 245
+        },
+        {
+          "path": "testing/test_hookcaller.py",
+          "qualified_name": "test_adding_wrappers_complex.m9",
+          "line": 251
+        },
+        {
+          "path": "testing/test_hookcaller.py",
+          "qualified_name": "test_adding_wrappers_ordering.he_method1",
+          "line": 160
+        },
+        {
+          "path": "testing/test_hookcaller.py",
+          "qualified_name": "test_adding_wrappers_ordering.he_method1_fun",
+          "line": 164
+        },
+        {
+          "path": "testing/test_hookcaller.py",
+          "qualified_name": "test_adding_wrappers_ordering.he_method1_middle",
+          "line": 168
+        },
+        {
+          "path": "testing/test_hookcaller.py",
+          "qualified_name": "test_adding_wrappers_ordering.he_method3",
+          "line": 176
+        },
+        {
+          "path": "testing/test_hookcaller.py",
+          "qualified_name": "test_adding_wrappers_ordering.he_method3_fun",
+          "line": 172
+        },
+        {
+          "path": "testing/test_hookcaller.py",
+          "qualified_name": "test_adding_wrappers_ordering_tryfirst.he_method1",
+          "line": 190
+        },
+        {
+          "path": "testing/test_hookcaller.py",
+          "qualified_name": "test_adding_wrappers_ordering_tryfirst.he_method2",
+          "line": 194
+        },
+        {
+          "path": "testing/test_hookcaller.py",
+          "qualified_name": "test_adding_wrappers_ordering_tryfirst.he_method3",
+          "line": 198
+        },
+        {
+          "path": "testing/test_hookcaller.py",
+          "qualified_name": "test_call_extra_hook_order.extra1",
+          "line": 485
+        },
+        {
+          "path": "testing/test_hookcaller.py",
+          "qualified_name": "test_call_extra_hook_order.extra2",
+          "line": 489
+        },
+        {
+          "path": "testing/test_hookcaller.py",
+          "qualified_name": "test_call_extra_hook_order.method1",
+          "line": 450
+        },
+        {
+          "path": "testing/test_hookcaller.py",
+          "qualified_name": "test_call_extra_hook_order.method2",
+          "line": 455
+        },
+        {
+          "path": "testing/test_hookcaller.py",
+          "qualified_name": "test_call_extra_hook_order.method3",
+          "line": 460
+        },
+        {
+          "path": "testing/test_hookcaller.py",
+          "qualified_name": "test_call_extra_hook_order.method4",
+          "line": 465
+        },
+        {
+          "path": "testing/test_hookcaller.py",
+          "qualified_name": "test_call_extra_hook_order.method5",
+          "line": 472
+        },
+        {
+          "path": "testing/test_hookcaller.py",
+          "qualified_name": "test_call_extra_hook_order.method6",
+          "line": 479
+        },
+        {
+          "path": "testing/test_hookcaller.py",
+          "qualified_name": "test_hook_conflict.Api1",
+          "line": 426
+        },
+        {
+          "path": "testing/test_hookcaller.py",
+          "qualified_name": "test_hook_conflict.Api1.conflict",
+          "line": 428
+        },
+        {
+          "path": "testing/test_hookcaller.py",
+          "qualified_name": "test_hook_conflict.Api2",
+          "line": 431
+        },
+        {
+          "path": "testing/test_hookcaller.py",
+          "qualified_name": "test_hook_conflict.Api2.conflict",
+          "line": 433
+        },
+        {
+          "path": "testing/test_hookcaller.py",
+          "qualified_name": "test_hookimpl.he_myhook1",
+          "line": 331
+        },
+        {
+          "path": "testing/test_hookcaller.py",
+          "qualified_name": "test_hookrelay_registration_by_specname.Api",
+          "line": 372
+        },
+        {
+          "path": "testing/test_hookcaller.py",
+          "qualified_name": "test_hookrelay_registration_by_specname.Api.hello",
+          "line": 374
+        },
+        {
+          "path": "testing/test_hookcaller.py",
+          "qualified_name": "test_hookrelay_registration_by_specname.Plugin",
+          "line": 382
+        },
+        {
+          "path": "testing/test_hookcaller.py",
+          "qualified_name": "test_hookrelay_registration_by_specname.Plugin.foo",
+          "line": 384
+        },
+        {
+          "path": "testing/test_hookcaller.py",
+          "qualified_name": "test_hookrelay_registration_by_specname_raises.Api",
+          "line": 397
+        },
+        {
+          "path": "testing/test_hookcaller.py",
+          "qualified_name": "test_hookrelay_registration_by_specname_raises.Api.hello",
+          "line": 399
+        },
+        {
+          "path": "testing/test_hookcaller.py",
+          "qualified_name": "test_hookrelay_registration_by_specname_raises.Plugin",
+          "line": 405
+        },
+        {
+          "path": "testing/test_hookcaller.py",
+          "qualified_name": "test_hookrelay_registration_by_specname_raises.Plugin.foo",
+          "line": 407
+        },
+        {
+          "path": "testing/test_hookcaller.py",
+          "qualified_name": "test_hookrelay_registration_by_specname_raises.Plugin2",
+          "line": 415
+        },
+        {
+          "path": "testing/test_hookcaller.py",
+          "qualified_name": "test_hookrelay_registration_by_specname_raises.Plugin2.hello",
+          "line": 417
+        },
+        {
+          "path": "testing/test_hookcaller.py",
+          "qualified_name": "test_hookrelay_registry.Api",
+          "line": 344
+        },
+        {
+          "path": "testing/test_hookcaller.py",
+          "qualified_name": "test_hookrelay_registry.Api.hello",
+          "line": 346
+        },
+        {
+          "path": "testing/test_hookcaller.py",
+          "qualified_name": "test_hookrelay_registry.Plugin",
+          "line": 354
+        },
+        {
+          "path": "testing/test_hookcaller.py",
+          "qualified_name": "test_hookrelay_registry.Plugin.hello",
+          "line": 356
+        },
+        {
+          "path": "testing/test_hookcaller.py",
+          "qualified_name": "test_hookspec.HookSpec",
+          "line": 305
+        },
+        {
+          "path": "testing/test_hookcaller.py",
+          "qualified_name": "test_hookspec.HookSpec.he_myhook1",
+          "line": 307
+        },
+        {
+          "path": "testing/test_hookcaller.py",
+          "qualified_name": "test_hookspec.HookSpec.he_myhook2",
+          "line": 311
+        },
+        {
+          "path": "testing/test_hookcaller.py",
+          "qualified_name": "test_hookspec.HookSpec.he_myhook3",
+          "line": 315
+        },
+        {
+          "path": "testing/test_hookcaller.py",
+          "qualified_name": "test_remove_plugin_not_found_raises.Plugin",
+          "line": 520
+        },
+        {
+          "path": "testing/test_hookcaller.py",
+          "qualified_name": "test_remove_plugin_not_found_raises.Plugin.he_method1",
+          "line": 522
+        },
+        {
+          "path": "testing/test_invocations.py",
+          "qualified_name": "test_argmismatch.Api",
+          "line": 17
+        },
+        {
+          "path": "testing/test_invocations.py",
+          "qualified_name": "test_argmismatch.Api.hello",
+          "line": 19
+        },
+        {
+          "path": "testing/test_invocations.py",
+          "qualified_name": "test_argmismatch.Plugin",
+          "line": 24
+        },
+        {
+          "path": "testing/test_invocations.py",
+          "qualified_name": "test_argmismatch.Plugin.hello",
+          "line": 26
+        },
+        {
+          "path": "testing/test_invocations.py",
+          "qualified_name": "test_call_order.Api",
+          "line": 78
+        },
+        {
+          "path": "testing/test_invocations.py",
+          "qualified_name": "test_call_order.Api.hello",
+          "line": 80
+        },
+        {
+          "path": "testing/test_invocations.py",
+          "qualified_name": "test_call_order.Plugin1",
+          "line": 85
+        },
+        {
+          "path": "testing/test_invocations.py",
+          "qualified_name": "test_call_order.Plugin1.hello",
+          "line": 87
+        },
+        {
+          "path": "testing/test_invocations.py",
+          "qualified_name": "test_call_order.Plugin2",
+          "line": 90
+        },
+        {
+          "path": "testing/test_invocations.py",
+          "qualified_name": "test_call_order.Plugin2.hello",
+          "line": 92
+        },
+        {
+          "path": "testing/test_invocations.py",
+          "qualified_name": "test_call_order.Plugin3",
+          "line": 95
+        },
+        {
+          "path": "testing/test_invocations.py",
+          "qualified_name": "test_call_order.Plugin3.hello",
+          "line": 97
+        },
+        {
+          "path": "testing/test_invocations.py",
+          "qualified_name": "test_call_order.Plugin4",
+          "line": 100
+        },
+        {
+          "path": "testing/test_invocations.py",
+          "qualified_name": "test_call_order.Plugin4.hello",
+          "line": 102
+        },
+        {
+          "path": "testing/test_invocations.py",
+          "qualified_name": "test_call_order.Plugin5",
+          "line": 109
+        },
+        {
+          "path": "testing/test_invocations.py",
+          "qualified_name": "test_call_order.Plugin5.hello",
+          "line": 111
+        },
+        {
+          "path": "testing/test_invocations.py",
+          "qualified_name": "test_firstresult_definition.Api",
+          "line": 127
+        },
+        {
+          "path": "testing/test_invocations.py",
+          "qualified_name": "test_firstresult_definition.Api.hello",
+          "line": 129
+        },
+        {
+          "path": "testing/test_invocations.py",
+          "qualified_name": "test_firstresult_definition.Plugin1",
+          "line": 134
+        },
+        {
+          "path": "testing/test_invocations.py",
+          "qualified_name": "test_firstresult_definition.Plugin1.hello",
+          "line": 136
+        },
+        {
+          "path": "testing/test_invocations.py",
+          "qualified_name": "test_firstresult_definition.Plugin2",
+          "line": 139
+        },
+        {
+          "path": "testing/test_invocations.py",
+          "qualified_name": "test_firstresult_definition.Plugin2.hello",
+          "line": 141
+        },
+        {
+          "path": "testing/test_invocations.py",
+          "qualified_name": "test_firstresult_definition.Plugin3",
+          "line": 144
+        },
+        {
+          "path": "testing/test_invocations.py",
+          "qualified_name": "test_firstresult_definition.Plugin3.hello",
+          "line": 146
+        },
+        {
+          "path": "testing/test_invocations.py",
+          "qualified_name": "test_firstresult_definition.Plugin4",
+          "line": 149
+        },
+        {
+          "path": "testing/test_invocations.py",
+          "qualified_name": "test_firstresult_definition.Plugin4.hello",
+          "line": 151
+        },
+        {
+          "path": "testing/test_invocations.py",
+          "qualified_name": "test_firstresult_definition.Plugin5",
+          "line": 157
+        },
+        {
+          "path": "testing/test_invocations.py",
+          "qualified_name": "test_firstresult_definition.Plugin5.hello",
+          "line": 159
+        },
+        {
+          "path": "testing/test_invocations.py",
+          "qualified_name": "test_firstresult_force_result.Api",
+          "line": 211
+        },
+        {
+          "path": "testing/test_invocations.py",
+          "qualified_name": "test_firstresult_force_result.Api.hello",
+          "line": 213
+        },
+        {
+          "path": "testing/test_invocations.py",
+          "qualified_name": "test_firstresult_force_result.Plugin1",
+          "line": 218
+        },
+        {
+          "path": "testing/test_invocations.py",
+          "qualified_name": "test_firstresult_force_result.Plugin1.hello",
+          "line": 220
+        },
+        {
+          "path": "testing/test_invocations.py",
+          "qualified_name": "test_firstresult_force_result.Plugin2",
+          "line": 223
+        },
+        {
+          "path": "testing/test_invocations.py",
+          "qualified_name": "test_firstresult_force_result.Plugin2.hello",
+          "line": 225
+        },
+        {
+          "path": "testing/test_invocations.py",
+          "qualified_name": "test_firstresult_force_result.Plugin3",
+          "line": 231
+        },
+        {
+          "path": "testing/test_invocations.py",
+          "qualified_name": "test_firstresult_force_result.Plugin3.hello",
+          "line": 233
+        },
+        {
+          "path": "testing/test_invocations.py",
+          "qualified_name": "test_firstresult_force_result_hookwrapper.Api",
+          "line": 176
+        },
+        {
+          "path": "testing/test_invocations.py",
+          "qualified_name": "test_firstresult_force_result_hookwrapper.Api.hello",
+          "line": 178
+        },
+        {
+          "path": "testing/test_invocations.py",
+          "qualified_name": "test_firstresult_force_result_hookwrapper.Plugin1",
+          "line": 183
+        },
+        {
+          "path": "testing/test_invocations.py",
+          "qualified_name": "test_firstresult_force_result_hookwrapper.Plugin1.hello",
+          "line": 185
+        },
+        {
+          "path": "testing/test_invocations.py",
+          "qualified_name": "test_firstresult_force_result_hookwrapper.Plugin2",
+          "line": 188
+        },
+        {
+          "path": "testing/test_invocations.py",
+          "qualified_name": "test_firstresult_force_result_hookwrapper.Plugin2.hello",
+          "line": 190
+        },
+        {
+          "path": "testing/test_invocations.py",
+          "qualified_name": "test_firstresult_force_result_hookwrapper.Plugin3",
+          "line": 196
+        },
+        {
+          "path": "testing/test_invocations.py",
+          "qualified_name": "test_firstresult_force_result_hookwrapper.Plugin3.hello",
+          "line": 198
+        },
+        {
+          "path": "testing/test_invocations.py",
+          "qualified_name": "test_firstresult_no_plugin.Api",
+          "line": 270
+        },
+        {
+          "path": "testing/test_invocations.py",
+          "qualified_name": "test_firstresult_no_plugin.Api.hello",
+          "line": 272
+        },
+        {
+          "path": "testing/test_invocations.py",
+          "qualified_name": "test_firstresult_returns_none.Api",
+          "line": 248
+        },
+        {
+          "path": "testing/test_invocations.py",
+          "qualified_name": "test_firstresult_returns_none.Api.hello",
+          "line": 250
+        },
+        {
+          "path": "testing/test_invocations.py",
+          "qualified_name": "test_firstresult_returns_none.Plugin1",
+          "line": 255
+        },
+        {
+          "path": "testing/test_invocations.py",
+          "qualified_name": "test_firstresult_returns_none.Plugin1.hello",
+          "line": 257
+        },
+        {
+          "path": "testing/test_invocations.py",
+          "qualified_name": "test_no_hookspec.Plugin",
+          "line": 286
+        },
+        {
+          "path": "testing/test_invocations.py",
+          "qualified_name": "test_no_hookspec.Plugin.hello",
+          "line": 288
+        },
+        {
+          "path": "testing/test_invocations.py",
+          "qualified_name": "test_non_wrapper_generator.Api",
+          "line": 300
+        },
+        {
+          "path": "testing/test_invocations.py",
+          "qualified_name": "test_non_wrapper_generator.Api.hello",
+          "line": 302
+        },
+        {
+          "path": "testing/test_invocations.py",
+          "qualified_name": "test_non_wrapper_generator.Plugin1",
+          "line": 307
+        },
+        {
+          "path": "testing/test_invocations.py",
+          "qualified_name": "test_non_wrapper_generator.Plugin1.hello",
+          "line": 309
+        },
+        {
+          "path": "testing/test_invocations.py",
+          "qualified_name": "test_non_wrapper_generator.Plugin2",
+          "line": 312
+        },
+        {
+          "path": "testing/test_invocations.py",
+          "qualified_name": "test_non_wrapper_generator.Plugin2.hello",
+          "line": 314
+        },
+        {
+          "path": "testing/test_invocations.py",
+          "qualified_name": "test_non_wrapper_generator.Plugin3",
+          "line": 318
+        },
+        {
+          "path": "testing/test_invocations.py",
+          "qualified_name": "test_non_wrapper_generator.Plugin3.hello",
+          "line": 320
+        },
+        {
+          "path": "testing/test_invocations.py",
+          "qualified_name": "test_only_kwargs.Api",
+          "line": 36
+        },
+        {
+          "path": "testing/test_invocations.py",
+          "qualified_name": "test_only_kwargs.Api.hello",
+          "line": 38
+        },
+        {
+          "path": "testing/test_invocations.py",
+          "qualified_name": "test_opt_in_args.Api",
+          "line": 54
+        },
+        {
+          "path": "testing/test_invocations.py",
+          "qualified_name": "test_opt_in_args.Api.hello",
+          "line": 56
+        },
+        {
+          "path": "testing/test_invocations.py",
+          "qualified_name": "test_opt_in_args.Plugin1",
+          "line": 59
+        },
+        {
+          "path": "testing/test_invocations.py",
+          "qualified_name": "test_opt_in_args.Plugin1.hello",
+          "line": 61
+        },
+        {
+          "path": "testing/test_invocations.py",
+          "qualified_name": "test_opt_in_args.Plugin2",
+          "line": 64
+        },
+        {
+          "path": "testing/test_invocations.py",
+          "qualified_name": "test_opt_in_args.Plugin2.hello",
+          "line": 66
+        },
+        {
+          "path": "testing/test_invocations.py",
+          "qualified_name": "test_wrappers_yield_never_fails.Plugin",
+          "line": 361
+        },
+        {
+          "path": "testing/test_invocations.py",
+          "qualified_name": "test_wrappers_yield_never_fails.Plugin.wrap",
+          "line": 363
+        },
+        {
+          "path": "testing/test_invocations.py",
+          "qualified_name": "test_wrappers_yield_twice_fails.Plugin",
+          "line": 340
+        },
+        {
+          "path": "testing/test_invocations.py",
+          "qualified_name": "test_wrappers_yield_twice_fails.Plugin.wrap",
+          "line": 342
+        },
+        {
+          "path": "testing/test_multicall.py",
+          "qualified_name": "test_call_none_is_no_result.m1",
+          "line": 65
+        },
+        {
+          "path": "testing/test_multicall.py",
+          "qualified_name": "test_call_none_is_no_result.m2",
+          "line": 69
+        },
+        {
+          "path": "testing/test_multicall.py",
+          "qualified_name": "test_hookwrapper.m1",
+          "line": 82
+        },
+        {
+          "path": "testing/test_multicall.py",
+          "qualified_name": "test_hookwrapper.m2",
+          "line": 88
+        },
+        {
+          "path": "testing/test_multicall.py",
+          "qualified_name": "test_hookwrapper_exception.m1",
+          "line": 254
+        },
+        {
+          "path": "testing/test_multicall.py",
+          "qualified_name": "test_hookwrapper_exception.m2",
+          "line": 262
+        },
+        {
+          "path": "testing/test_multicall.py",
+          "qualified_name": "test_hookwrapper_force_exception.m1",
+          "line": 274
+        },
+        {
+          "path": "testing/test_multicall.py",
+          "qualified_name": "test_hookwrapper_force_exception.m2",
+          "line": 284
+        },
+        {
+          "path": "testing/test_multicall.py",
+          "qualified_name": "test_hookwrapper_force_exception.m3",
+          "line": 296
+        },
+        {
+          "path": "testing/test_multicall.py",
+          "qualified_name": "test_hookwrapper_force_exception.m4",
+          "line": 302
+        },
+        {
+          "path": "testing/test_multicall.py",
+          "qualified_name": "test_hookwrapper_not_yield.m1",
+          "line": 189
+        },
+        {
+          "path": "testing/test_multicall.py",
+          "qualified_name": "test_hookwrapper_order.m1",
+          "line": 149
+        },
+        {
+          "path": "testing/test_multicall.py",
+          "qualified_name": "test_hookwrapper_order.m2",
+          "line": 155
+        },
+        {
+          "path": "testing/test_multicall.py",
+          "qualified_name": "test_hookwrapper_order.m3",
+          "line": 162
+        },
+        {
+          "path": "testing/test_multicall.py",
+          "qualified_name": "test_hookwrapper_order.m4",
+          "line": 168
+        },
+        {
+          "path": "testing/test_multicall.py",
+          "qualified_name": "test_hookwrapper_too_many_yield.m1",
+          "line": 208
+        },
+        {
+          "path": "testing/test_multicall.py",
+          "qualified_name": "test_hookwrapper_two_yields.m",
+          "line": 103
+        },
+        {
+          "path": "testing/test_multicall.py",
+          "qualified_name": "test_hookwrapper_yield_not_executed.m1",
+          "line": 198
+        },
+        {
+          "path": "testing/test_multicall.py",
+          "qualified_name": "test_keyword_args.A",
+          "line": 36
+        },
+        {
+          "path": "testing/test_multicall.py",
+          "qualified_name": "test_keyword_args.A.f",
+          "line": 38
+        },
+        {
+          "path": "testing/test_multicall.py",
+          "qualified_name": "test_keyword_args.f",
+          "line": 33
+        },
+        {
+          "path": "testing/test_multicall.py",
+          "qualified_name": "test_keyword_args_with_defaultargs.f",
+          "line": 47
+        },
+        {
+          "path": "testing/test_multicall.py",
+          "qualified_name": "test_suppress_inner_wrapper_teardown_exc.m1",
+          "line": 450
+        },
+        {
+          "path": "testing/test_multicall.py",
+          "qualified_name": "test_suppress_inner_wrapper_teardown_exc.m2",
+          "line": 457
+        },
+        {
+          "path": "testing/test_multicall.py",
+          "qualified_name": "test_suppress_inner_wrapper_teardown_exc.m3",
+          "line": 467
+        },
+        {
+          "path": "testing/test_multicall.py",
+          "qualified_name": "test_tags_call_error.f",
+          "line": 56
+        },
+        {
+          "path": "testing/test_multicall.py",
+          "qualified_name": "test_unwind_inner_wrapper_teardown_exc.m1",
+          "line": 382
+        },
+        {
+          "path": "testing/test_multicall.py",
+          "qualified_name": "test_unwind_inner_wrapper_teardown_exc.m2",
+          "line": 394
+        },
+        {
+          "path": "testing/test_multicall.py",
+          "qualified_name": "test_wrapper.m1",
+          "line": 115
+        },
+        {
+          "path": "testing/test_multicall.py",
+          "qualified_name": "test_wrapper.m2",
+          "line": 122
+        },
+        {
+          "path": "testing/test_multicall.py",
+          "qualified_name": "test_wrapper_exception.m1",
+          "line": 324
+        },
+        {
+          "path": "testing/test_multicall.py",
+          "qualified_name": "test_wrapper_exception.m2",
+          "line": 336
+        },
+        {
+          "path": "testing/test_multicall.py",
+          "qualified_name": "test_wrapper_exception_chaining.m1",
+          "line": 347
+        },
+        {
+          "path": "testing/test_multicall.py",
+          "qualified_name": "test_wrapper_exception_chaining.m2",
+          "line": 351
+        },
+        {
+          "path": "testing/test_multicall.py",
+          "qualified_name": "test_wrapper_exception_chaining.m3",
+          "line": 358
+        },
+        {
+          "path": "testing/test_multicall.py",
+          "qualified_name": "test_wrapper_exception_chaining.m4",
+          "line": 363
+        },
+        {
+          "path": "testing/test_multicall.py",
+          "qualified_name": "test_wrapper_stopiteration_passtrough.stop",
+          "line": 433
+        },
+        {
+          "path": "testing/test_multicall.py",
+          "qualified_name": "test_wrapper_stopiteration_passtrough.wrap",
+          "line": 421
+        },
+        {
+          "path": "testing/test_multicall.py",
+          "qualified_name": "test_wrapper_stopiteration_passtrough.wrap_path2",
+          "line": 429
+        },
+        {
+          "path": "testing/test_multicall.py",
+          "qualified_name": "test_wrapper_too_many_yield.m1",
+          "line": 232
+        },
+        {
+          "path": "testing/test_multicall.py",
+          "qualified_name": "test_wrapper_two_yields.m",
+          "line": 137
+        },
+        {
+          "path": "testing/test_multicall.py",
+          "qualified_name": "test_wrapper_yield_not_executed.m1",
+          "line": 220
+        },
+        {
+          "path": "testing/test_pluginmanager.py",
+          "qualified_name": "test_add_hookspecs_nohooks.NoHooks",
+          "line": 579
+        },
+        {
+          "path": "testing/test_pluginmanager.py",
+          "qualified_name": "test_add_tracefuncs.after",
+          "line": 647
+        },
+        {
+          "path": "testing/test_pluginmanager.py",
+          "qualified_name": "test_add_tracefuncs.api1",
+          "line": 631
+        },
+        {
+          "path": "testing/test_pluginmanager.py",
+          "qualified_name": "test_add_tracefuncs.api1.he_method1",
+          "line": 633
+        },
+        {
+          "path": "testing/test_pluginmanager.py",
+          "qualified_name": "test_add_tracefuncs.api2",
+          "line": 636
+        },
+        {
+          "path": "testing/test_pluginmanager.py",
+          "qualified_name": "test_add_tracefuncs.api2.he_method1",
+          "line": 638
+        },
+        {
+          "path": "testing/test_pluginmanager.py",
+          "qualified_name": "test_add_tracefuncs.before",
+          "line": 644
+        },
+        {
+          "path": "testing/test_pluginmanager.py",
+          "qualified_name": "test_call_extra.Hooks",
+          "line": 413
+        },
+        {
+          "path": "testing/test_pluginmanager.py",
+          "qualified_name": "test_call_extra.Hooks.he_method1",
+          "line": 415
+        },
+        {
+          "path": "testing/test_pluginmanager.py",
+          "qualified_name": "test_call_extra.he_method1",
+          "line": 420
+        },
+        {
+          "path": "testing/test_pluginmanager.py",
+          "qualified_name": "test_call_with_too_few_args.Hooks",
+          "line": 428
+        },
+        {
+          "path": "testing/test_pluginmanager.py",
+          "qualified_name": "test_call_with_too_few_args.Hooks.he_method1",
+          "line": 430
+        },
+        {
+          "path": "testing/test_pluginmanager.py",
+          "qualified_name": "test_call_with_too_few_args.Plugin1",
+          "line": 435
+        },
+        {
+          "path": "testing/test_pluginmanager.py",
+          "qualified_name": "test_call_with_too_few_args.Plugin1.he_method1",
+          "line": 437
+        },
+        {
+          "path": "testing/test_pluginmanager.py",
+          "qualified_name": "test_check_pending_nonspec_hook.Plugin",
+          "line": 810
+        },
+        {
+          "path": "testing/test_pluginmanager.py",
+          "qualified_name": "test_check_pending_nonspec_hook.Plugin.a_hook",
+          "line": 812
+        },
+        {
+          "path": "testing/test_pluginmanager.py",
+          "qualified_name": "test_check_pending_optionalhook.Plugin",
+          "line": 795
+        },
+        {
+          "path": "testing/test_pluginmanager.py",
+          "qualified_name": "test_check_pending_optionalhook.Plugin.a_hook",
+          "line": 797
+        },
+        {
+          "path": "testing/test_pluginmanager.py",
+          "qualified_name": "test_check_pending_skips_underscore.Plugin",
+          "line": 782
+        },
+        {
+          "path": "testing/test_pluginmanager.py",
+          "qualified_name": "test_check_pending_skips_underscore.Plugin._problem",
+          "line": 784
+        },
+        {
+          "path": "testing/test_pluginmanager.py",
+          "qualified_name": "test_get_hookcallers.Hooks",
+          "line": 533
+        },
+        {
+          "path": "testing/test_pluginmanager.py",
+          "qualified_name": "test_get_hookcallers.Hooks.he_method1",
+          "line": 535
+        },
+        {
+          "path": "testing/test_pluginmanager.py",
+          "qualified_name": "test_get_hookcallers.Hooks.he_method2",
+          "line": 538
+        },
+        {
+          "path": "testing/test_pluginmanager.py",
+          "qualified_name": "test_get_hookcallers.Plugin1",
+          "line": 542
+        },
+        {
+          "path": "testing/test_pluginmanager.py",
+          "qualified_name": "test_get_hookcallers.Plugin1.he_method1",
+          "line": 544
+        },
+        {
+          "path": "testing/test_pluginmanager.py",
+          "qualified_name": "test_get_hookcallers.Plugin1.he_method2",
+          "line": 547
+        },
+        {
+          "path": "testing/test_pluginmanager.py",
+          "qualified_name": "test_get_hookcallers.Plugin2",
+          "line": 549
+        },
+        {
+          "path": "testing/test_pluginmanager.py",
+          "qualified_name": "test_get_hookcallers.Plugin2.he_method1",
+          "line": 551
+        },
+        {
+          "path": "testing/test_pluginmanager.py",
+          "qualified_name": "test_get_hookcallers.Plugin3",
+          "line": 553
+        },
+        {
+          "path": "testing/test_pluginmanager.py",
+          "qualified_name": "test_get_hookcallers.Plugin3.he_method2",
+          "line": 555
+        },
+        {
+          "path": "testing/test_pluginmanager.py",
+          "qualified_name": "test_get_hookcallers_no_duplicates.Api",
+          "line": 865
+        },
+        {
+          "path": "testing/test_pluginmanager.py",
+          "qualified_name": "test_get_hookcallers_no_duplicates.Api.goodbye",
+          "line": 870
+        },
+        {
+          "path": "testing/test_pluginmanager.py",
+          "qualified_name": "test_get_hookcallers_no_duplicates.Api.hello",
+          "line": 867
+        },
+        {
+          "path": "testing/test_pluginmanager.py",
+          "qualified_name": "test_get_hookcallers_no_duplicates.Plugin",
+          "line": 874
+        },
+        {
+          "path": "testing/test_pluginmanager.py",
+          "qualified_name": "test_get_hookcallers_no_duplicates.Plugin.goodbye",
+          "line": 884
+        },
+        {
+          "path": "testing/test_pluginmanager.py",
+          "qualified_name": "test_get_hookcallers_no_duplicates.Plugin.hello",
+          "line": 876
+        },
+        {
+          "path": "testing/test_pluginmanager.py",
+          "qualified_name": "test_get_hookcallers_no_duplicates.Plugin.hello_again",
+          "line": 880
+        },
+        {
+          "path": "testing/test_pluginmanager.py",
+          "qualified_name": "test_get_hookimpls.Hooks",
+          "line": 501
+        },
+        {
+          "path": "testing/test_pluginmanager.py",
+          "qualified_name": "test_get_hookimpls.Hooks.he_method1",
+          "line": 503
+        },
+        {
+          "path": "testing/test_pluginmanager.py",
+          "qualified_name": "test_get_hookimpls.Plugin1",
+          "line": 509
+        },
+        {
+          "path": "testing/test_pluginmanager.py",
+          "qualified_name": "test_get_hookimpls.Plugin1.he_method1",
+          "line": 511
+        },
+        {
+          "path": "testing/test_pluginmanager.py",
+          "qualified_name": "test_get_hookimpls.Plugin2",
+          "line": 514
+        },
+        {
+          "path": "testing/test_pluginmanager.py",
+          "qualified_name": "test_get_hookimpls.Plugin2.he_method1",
+          "line": 516
+        },
+        {
+          "path": "testing/test_pluginmanager.py",
+          "qualified_name": "test_get_hookimpls.PluginNo",
+          "line": 519
+        },
+        {
+          "path": "testing/test_pluginmanager.py",
+          "qualified_name": "test_has_plugin.A",
+          "line": 55
+        },
+        {
+          "path": "testing/test_pluginmanager.py",
+          "qualified_name": "test_historic_with_subset_hook_caller.Hooks",
+          "line": 268
+        },
+        {
+          "path": "testing/test_pluginmanager.py",
+          "qualified_name": "test_historic_with_subset_hook_caller.Hooks.he_method1",
+          "line": 270
+        },
+        {
+          "path": "testing/test_pluginmanager.py",
+          "qualified_name": "test_historic_with_subset_hook_caller.Plugin",
+          "line": 276
+        },
+        {
+          "path": "testing/test_pluginmanager.py",
+          "qualified_name": "test_historic_with_subset_hook_caller.Plugin.he_method1",
+          "line": 278
+        },
+        {
+          "path": "testing/test_pluginmanager.py",
+          "qualified_name": "test_historic_with_subset_hook_caller.Plugin2",
+          "line": 284
+        },
+        {
+          "path": "testing/test_pluginmanager.py",
+          "qualified_name": "test_historic_with_subset_hook_caller.Plugin2.he_method1",
+          "line": 286
+        },
+        {
+          "path": "testing/test_pluginmanager.py",
+          "qualified_name": "test_hook_tracing.api1",
+          "line": 670
+        },
+        {
+          "path": "testing/test_pluginmanager.py",
+          "qualified_name": "test_hook_tracing.api1.he_method1",
+          "line": 672
+        },
+        {
+          "path": "testing/test_pluginmanager.py",
+          "qualified_name": "test_hook_tracing.api2",
+          "line": 675
+        },
+        {
+          "path": "testing/test_pluginmanager.py",
+          "qualified_name": "test_hook_tracing.api2.he_method1",
+          "line": 677
+        },
+        {
+          "path": "testing/test_pluginmanager.py",
+          "qualified_name": "test_load_setuptools_instantiation.Distribution",
+          "line": 600
+        },
+        {
+          "path": "testing/test_pluginmanager.py",
+          "qualified_name": "test_load_setuptools_instantiation.EntryPoint",
+          "line": 589
+        },
+        {
+          "path": "testing/test_pluginmanager.py",
+          "qualified_name": "test_load_setuptools_instantiation.EntryPoint.load",
+          "line": 594
+        },
+        {
+          "path": "testing/test_pluginmanager.py",
+          "qualified_name": "test_load_setuptools_instantiation.EntryPoint.load.PseudoPlugin",
+          "line": 595
+        },
+        {
+          "path": "testing/test_pluginmanager.py",
+          "qualified_name": "test_load_setuptools_instantiation.my_distributions",
+          "line": 606
+        },
+        {
+          "path": "testing/test_pluginmanager.py",
+          "qualified_name": "test_pm.A",
+          "line": 34
+        },
+        {
+          "path": "testing/test_pluginmanager.py",
+          "qualified_name": "test_pm_name.A",
+          "line": 79
+        },
+        {
+          "path": "testing/test_pluginmanager.py",
+          "qualified_name": "test_register.MyPlugin",
+          "line": 184
+        },
+        {
+          "path": "testing/test_pluginmanager.py",
+          "qualified_name": "test_register.MyPlugin.he_method1",
+          "line": 186
+        },
+        {
+          "path": "testing/test_pluginmanager.py",
+          "qualified_name": "test_register_both_wrapper_and_hookwrapper.hello",
+          "line": 169
+        },
+        {
+          "path": "testing/test_pluginmanager.py",
+          "qualified_name": "test_register_both_wrapper_and_hookwrapper.hello.he_method1",
+          "line": 171
+        },
+        {
+          "path": "testing/test_pluginmanager.py",
+          "qualified_name": "test_register_dynamic_attr.A",
+          "line": 65
+        },
+        {
+          "path": "testing/test_pluginmanager.py",
+          "qualified_name": "test_register_dynamic_attr.A.__getattr__",
+          "line": 66
+        },
+        {
+          "path": "testing/test_pluginmanager.py",
+          "qualified_name": "test_register_historic.Hooks",
+          "line": 239
+        },
+        {
+          "path": "testing/test_pluginmanager.py",
+          "qualified_name": "test_register_historic.Hooks.he_method1",
+          "line": 241
+        },
+        {
+          "path": "testing/test_pluginmanager.py",
+          "qualified_name": "test_register_historic.Plugin",
+          "line": 248
+        },
+        {
+          "path": "testing/test_pluginmanager.py",
+          "qualified_name": "test_register_historic.Plugin.he_method1",
+          "line": 250
+        },
+        {
+          "path": "testing/test_pluginmanager.py",
+          "qualified_name": "test_register_historic.Plugin2",
+          "line": 256
+        },
+        {
+          "path": "testing/test_pluginmanager.py",
+          "qualified_name": "test_register_historic.Plugin2.he_method1",
+          "line": 258
+        },
+        {
+          "path": "testing/test_pluginmanager.py",
+          "qualified_name": "test_register_historic_incompat_hookwrapper.Hooks",
+          "line": 377
+        },
+        {
+          "path": "testing/test_pluginmanager.py",
+          "qualified_name": "test_register_historic_incompat_hookwrapper.Hooks.he_method1",
+          "line": 379
+        },
+        {
+          "path": "testing/test_pluginmanager.py",
+          "qualified_name": "test_register_historic_incompat_hookwrapper.Plugin",
+          "line": 386
+        },
+        {
+          "path": "testing/test_pluginmanager.py",
+          "qualified_name": "test_register_historic_incompat_hookwrapper.Plugin.he_method1",
+          "line": 388
+        },
+        {
+          "path": "testing/test_pluginmanager.py",
+          "qualified_name": "test_register_historic_incompat_wrapper.Hooks",
+          "line": 396
+        },
+        {
+          "path": "testing/test_pluginmanager.py",
+          "qualified_name": "test_register_historic_incompat_wrapper.Hooks.he_method1",
+          "line": 398
+        },
+        {
+          "path": "testing/test_pluginmanager.py",
+          "qualified_name": "test_register_historic_incompat_wrapper.Plugin",
+          "line": 403
+        },
+        {
+          "path": "testing/test_pluginmanager.py",
+          "qualified_name": "test_register_historic_incompat_wrapper.Plugin.he_method1",
+          "line": 405
+        },
+        {
+          "path": "testing/test_pluginmanager.py",
+          "qualified_name": "test_register_hookwrapper_not_a_generator_function.hello",
+          "line": 156
+        },
+        {
+          "path": "testing/test_pluginmanager.py",
+          "qualified_name": "test_register_hookwrapper_not_a_generator_function.hello.he_method1",
+          "line": 158
+        },
+        {
+          "path": "testing/test_pluginmanager.py",
+          "qualified_name": "test_register_mismatch_arg.hello",
+          "line": 143
+        },
+        {
+          "path": "testing/test_pluginmanager.py",
+          "qualified_name": "test_register_mismatch_arg.hello.he_method1",
+          "line": 145
+        },
+        {
+          "path": "testing/test_pluginmanager.py",
+          "qualified_name": "test_register_mismatch_method.hello",
+          "line": 129
+        },
+        {
+          "path": "testing/test_pluginmanager.py",
+          "qualified_name": "test_register_mismatch_method.hello.he_method_notexists",
+          "line": 131
+        },
+        {
+          "path": "testing/test_pluginmanager.py",
+          "qualified_name": "test_register_unknown_hooks.Hooks",
+          "line": 226
+        },
+        {
+          "path": "testing/test_pluginmanager.py",
+          "qualified_name": "test_register_unknown_hooks.Hooks.he_method1",
+          "line": 228
+        },
+        {
+          "path": "testing/test_pluginmanager.py",
+          "qualified_name": "test_register_unknown_hooks.Plugin1",
+          "line": 218
+        },
+        {
+          "path": "testing/test_pluginmanager.py",
+          "qualified_name": "test_register_unknown_hooks.Plugin1.he_method1",
+          "line": 220
+        },
+        {
+          "path": "testing/test_pluginmanager.py",
+          "qualified_name": "test_register_while_calling.Hooks",
+          "line": 718
+        },
+        {
+          "path": "testing/test_pluginmanager.py",
+          "qualified_name": "test_register_while_calling.Hooks.configure",
+          "line": 720
+        },
+        {
+          "path": "testing/test_pluginmanager.py",
+          "qualified_name": "test_register_while_calling.Plugin1",
+          "line": 723
+        },
+        {
+          "path": "testing/test_pluginmanager.py",
+          "qualified_name": "test_register_while_calling.Plugin1.configure",
+          "line": 725
+        },
+        {
+          "path": "testing/test_pluginmanager.py",
+          "qualified_name": "test_register_while_calling.Plugin2",
+          "line": 728
+        },
+        {
+          "path": "testing/test_pluginmanager.py",
+          "qualified_name": "test_register_while_calling.Plugin2.__init__",
+          "line": 729
+        },
+        {
+          "path": "testing/test_pluginmanager.py",
+          "qualified_name": "test_register_while_calling.Plugin2.configure",
+          "line": 733
+        },
+        {
+          "path": "testing/test_pluginmanager.py",
+          "qualified_name": "test_register_while_calling.Plugin3",
+          "line": 741
+        },
+        {
+          "path": "testing/test_pluginmanager.py",
+          "qualified_name": "test_register_while_calling.Plugin3.configure",
+          "line": 743
+        },
+        {
+          "path": "testing/test_pluginmanager.py",
+          "qualified_name": "test_register_while_calling.Plugin4",
+          "line": 746
+        },
+        {
+          "path": "testing/test_pluginmanager.py",
+          "qualified_name": "test_register_while_calling.Plugin4.configure",
+          "line": 748
+        },
+        {
+          "path": "testing/test_pluginmanager.py",
+          "qualified_name": "test_register_while_calling.Plugin5",
+          "line": 751
+        },
+        {
+          "path": "testing/test_pluginmanager.py",
+          "qualified_name": "test_register_while_calling.Plugin5.configure",
+          "line": 753
+        },
+        {
+          "path": "testing/test_pluginmanager.py",
+          "qualified_name": "test_register_while_calling.Plugin6",
+          "line": 756
+        },
+        {
+          "path": "testing/test_pluginmanager.py",
+          "qualified_name": "test_register_while_calling.Plugin6.configure",
+          "line": 758
+        },
+        {
+          "path": "testing/test_pluginmanager.py",
+          "qualified_name": "test_set_blocked.A",
+          "line": 98
+        },
+        {
+          "path": "testing/test_pluginmanager.py",
+          "qualified_name": "test_subset_hook_caller.Hooks",
+          "line": 449
+        },
+        {
+          "path": "testing/test_pluginmanager.py",
+          "qualified_name": "test_subset_hook_caller.Hooks.he_method1",
+          "line": 451
+        },
+        {
+          "path": "testing/test_pluginmanager.py",
+          "qualified_name": "test_subset_hook_caller.Plugin1",
+          "line": 458
+        },
+        {
+          "path": "testing/test_pluginmanager.py",
+          "qualified_name": "test_subset_hook_caller.Plugin1.he_method1",
+          "line": 460
+        },
+        {
+          "path": "testing/test_pluginmanager.py",
+          "qualified_name": "test_subset_hook_caller.Plugin2",
+          "line": 463
+        },
+        {
+          "path": "testing/test_pluginmanager.py",
+          "qualified_name": "test_subset_hook_caller.Plugin2.he_method1",
+          "line": 465
+        },
+        {
+          "path": "testing/test_pluginmanager.py",
+          "qualified_name": "test_subset_hook_caller.PluginNo",
+          "line": 468
+        },
+        {
+          "path": "testing/test_pluginmanager.py",
+          "qualified_name": "test_unregister_blocked.Plugin",
+          "line": 206
+        },
+        {
+          "path": "testing/test_pluginmanager.py",
+          "qualified_name": "test_unregister_plugin_with_multi_hookimpls.Api",
+          "line": 829
+        },
+        {
+          "path": "testing/test_pluginmanager.py",
+          "qualified_name": "test_unregister_plugin_with_multi_hookimpls.Api.hello",
+          "line": 831
+        },
+        {
+          "path": "testing/test_pluginmanager.py",
+          "qualified_name": "test_unregister_plugin_with_multi_hookimpls.Plugin",
+          "line": 835
+        },
+        {
+          "path": "testing/test_pluginmanager.py",
+          "qualified_name": "test_unregister_plugin_with_multi_hookimpls.Plugin.hello",
+          "line": 837
+        },
+        {
+          "path": "testing/test_pluginmanager.py",
+          "qualified_name": "test_unregister_plugin_with_multi_hookimpls.Plugin.hello_again",
+          "line": 841
+        },
+        {
+          "path": "testing/test_pluginmanager.py",
+          "qualified_name": "test_with_callbacks_immediately_executed.Hooks",
+          "line": 343
+        },
+        {
+          "path": "testing/test_pluginmanager.py",
+          "qualified_name": "test_with_callbacks_immediately_executed.Hooks.he_method1",
+          "line": 345
+        },
+        {
+          "path": "testing/test_pluginmanager.py",
+          "qualified_name": "test_with_callbacks_immediately_executed.Plugin1",
+          "line": 350
+        },
+        {
+          "path": "testing/test_pluginmanager.py",
+          "qualified_name": "test_with_callbacks_immediately_executed.Plugin1.he_method1",
+          "line": 352
+        },
+        {
+          "path": "testing/test_pluginmanager.py",
+          "qualified_name": "test_with_callbacks_immediately_executed.Plugin2",
+          "line": 355
+        },
+        {
+          "path": "testing/test_pluginmanager.py",
+          "qualified_name": "test_with_callbacks_immediately_executed.Plugin2.he_method1",
+          "line": 357
+        },
+        {
+          "path": "testing/test_pluginmanager.py",
+          "qualified_name": "test_with_callbacks_immediately_executed.Plugin3",
+          "line": 360
+        },
+        {
+          "path": "testing/test_pluginmanager.py",
+          "qualified_name": "test_with_callbacks_immediately_executed.Plugin3.he_method1",
+          "line": 362
+        },
+        {
+          "path": "testing/test_pluginmanager.py",
+          "qualified_name": "test_with_result_memorized.Hooks",
+          "line": 313
+        },
+        {
+          "path": "testing/test_pluginmanager.py",
+          "qualified_name": "test_with_result_memorized.Hooks.he_method1",
+          "line": 315
+        },
+        {
+          "path": "testing/test_pluginmanager.py",
+          "qualified_name": "test_with_result_memorized.Plugin1",
+          "line": 320
+        },
+        {
+          "path": "testing/test_pluginmanager.py",
+          "qualified_name": "test_with_result_memorized.Plugin1.he_method1",
+          "line": 322
+        },
+        {
+          "path": "testing/test_pluginmanager.py",
+          "qualified_name": "test_with_result_memorized.Plugin2",
+          "line": 330
+        },
+        {
+          "path": "testing/test_pluginmanager.py",
+          "qualified_name": "test_with_result_memorized.Plugin2.he_method1",
+          "line": 332
+        },
+        {
+          "path": "testing/test_pluginmanager.py",
+          "qualified_name": "test_with_result_memorized.callback",
+          "line": 310
+        },
+        {
+          "path": "testing/test_result.py",
+          "qualified_name": "test_exceptions_traceback_doesnt_get_longer_and_longer.bad",
+          "line": 7
+        },
+        {
+          "path": "testing/test_warnings.py",
+          "qualified_name": "test_hookspec_missing_self_warns.Api",
+          "line": 58
+        },
+        {
+          "path": "testing/test_warnings.py",
+          "qualified_name": "test_hookspec_missing_self_warns.Api.my_hook",
+          "line": 60
+        },
+        {
+          "path": "testing/test_warnings.py",
+          "qualified_name": "test_hookspec_staticmethod_no_warning.Api",
+          "line": 86
+        },
+        {
+          "path": "testing/test_warnings.py",
+          "qualified_name": "test_hookspec_staticmethod_no_warning.Api.my_hook",
+          "line": 89
+        },
+        {
+          "path": "testing/test_warnings.py",
+          "qualified_name": "test_hookspec_with_self_no_warning.Api",
+          "line": 73
+        },
+        {
+          "path": "testing/test_warnings.py",
+          "qualified_name": "test_hookspec_with_self_no_warning.Api.my_hook",
+          "line": 75
+        },
+        {
+          "path": "testing/test_warnings.py",
+          "qualified_name": "test_teardown_raised_warning.Api",
+          "line": 17
+        },
+        {
+          "path": "testing/test_warnings.py",
+          "qualified_name": "test_teardown_raised_warning.Api.my_hook",
+          "line": 19
+        },
+        {
+          "path": "testing/test_warnings.py",
+          "qualified_name": "test_teardown_raised_warning.Plugin1",
+          "line": 24
+        },
+        {
+          "path": "testing/test_warnings.py",
+          "qualified_name": "test_teardown_raised_warning.Plugin1.my_hook",
+          "line": 26
+        },
+        {
+          "path": "testing/test_warnings.py",
+          "qualified_name": "test_teardown_raised_warning.Plugin2",
+          "line": 29
+        },
+        {
+          "path": "testing/test_warnings.py",
+          "qualified_name": "test_teardown_raised_warning.Plugin2.my_hook",
+          "line": 31
+        },
+        {
+          "path": "testing/test_warnings.py",
+          "qualified_name": "test_teardown_raised_warning.Plugin3",
+          "line": 35
+        },
+        {
+          "path": "testing/test_warnings.py",
+          "qualified_name": "test_teardown_raised_warning.Plugin3.my_hook",
+          "line": 37
+        }
+      ]
+    },
+    "previous": null
+  },
+  "files": [
+    {
+      "path": "docs/conf.py",
+      "language": "python",
+      "parser": "ast",
+      "syntax_error": false,
+      "symbols": 2,
+      "calls_in_memory": 7,
+      "calls_with_declared_symbol_owner": 6,
+      "docstrings_in_memory": 1,
+      "incoming_edge_count": 0,
+      "incoming_files": [],
+      "imports_without_resolved_edge_on_line": [
+        {
+          "raw": "from importlib import metadata",
+          "module": "importlib",
+          "symbols": [
+            "metadata"
+          ],
+          "line": 1
+        },
+        {
+          "raw": "from typing import TYPE_CHECKING",
+          "module": "typing",
+          "symbols": [
+            "TYPE_CHECKING"
+          ],
+          "line": 2
+        },
+        {
+          "raw": "import sphinx.application",
+          "module": "sphinx.application",
+          "symbols": [],
+          "line": 6
+        },
+        {
+          "raw": "import logging",
+          "module": "logging",
+          "symbols": [],
+          "line": 108
+        },
+        {
+          "raw": "import sphinx.util.logging",
+          "module": "sphinx.util.logging",
+          "symbols": [],
+          "line": 110
+        }
+      ]
+    },
+    {
+      "path": "docs/examples/toy-example.py",
+      "language": "python",
+      "parser": "ast",
+      "syntax_error": false,
+      "symbols": 6,
+      "calls_in_memory": 2,
+      "calls_with_declared_symbol_owner": 0,
+      "docstrings_in_memory": 4,
+      "incoming_edge_count": 0,
+      "incoming_files": [],
+      "imports_without_resolved_edge_on_line": [
+        {
+          "raw": "import pluggy",
+          "module": "pluggy",
+          "symbols": [],
+          "line": 1
+        }
+      ]
+    },
+    {
+      "path": "docs/examples/eggsample/setup.py",
+      "language": "python",
+      "parser": "ast",
+      "syntax_error": false,
+      "symbols": 0,
+      "calls_in_memory": 0,
+      "calls_with_declared_symbol_owner": 0,
+      "docstrings_in_memory": 0,
+      "incoming_edge_count": 0,
+      "incoming_files": [],
+      "imports_without_resolved_edge_on_line": [
+        {
+          "raw": "from setuptools import find_packages",
+          "module": "setuptools",
+          "symbols": [
+            "find_packages"
+          ],
+          "line": 1
+        },
+        {
+          "raw": "from setuptools import setup",
+          "module": "setuptools",
+          "symbols": [
+            "setup"
+          ],
+          "line": 2
+        }
+      ]
+    },
+    {
+      "path": "docs/examples/eggsample/eggsample/__init__.py",
+      "language": "python",
+      "parser": "ast",
+      "syntax_error": false,
+      "symbols": 0,
+      "calls_in_memory": 0,
+      "calls_with_declared_symbol_owner": 0,
+      "docstrings_in_memory": 0,
+      "incoming_edge_count": 0,
+      "incoming_files": [],
+      "imports_without_resolved_edge_on_line": [
+        {
+          "raw": "import pluggy",
+          "module": "pluggy",
+          "symbols": [],
+          "line": 1
+        }
+      ]
+    },
+    {
+      "path": "docs/examples/eggsample/eggsample/hookspecs.py",
+      "language": "python",
+      "parser": "ast",
+      "syntax_error": false,
+      "symbols": 2,
+      "calls_in_memory": 0,
+      "calls_with_declared_symbol_owner": 0,
+      "docstrings_in_memory": 2,
+      "incoming_edge_count": 0,
+      "incoming_files": [],
+      "imports_without_resolved_edge_on_line": [
+        {
+          "raw": "import pluggy",
+          "module": "pluggy",
+          "symbols": [],
+          "line": 1
+        }
+      ]
+    },
+    {
+      "path": "docs/examples/eggsample/eggsample/host.py",
+      "language": "python",
+      "parser": "ast",
+      "syntax_error": false,
+      "symbols": 7,
+      "calls_in_memory": 23,
+      "calls_with_declared_symbol_owner": 9,
+      "docstrings_in_memory": 0,
+      "incoming_edge_count": 0,
+      "incoming_files": [],
+      "imports_without_resolved_edge_on_line": [
+        {
+          "raw": "import itertools",
+          "module": "itertools",
+          "symbols": [],
+          "line": 1
+        },
+        {
+          "raw": "import random",
+          "module": "random",
+          "symbols": [],
+          "line": 2
+        },
+        {
+          "raw": "from eggsample import hookspecs",
+          "module": "eggsample",
+          "symbols": [
+            "hookspecs"
+          ],
+          "line": 4
+        },
+        {
+          "raw": "from eggsample import lib",
+          "module": "eggsample",
+          "symbols": [
+            "lib"
+          ],
+          "line": 5
+        },
+        {
+          "raw": "import pluggy",
+          "module": "pluggy",
+          "symbols": [],
+          "line": 7
+        }
+      ]
+    },
+    {
+      "path": "docs/examples/eggsample/eggsample/lib.py",
+      "language": "python",
+      "parser": "ast",
+      "syntax_error": false,
+      "symbols": 2,
+      "calls_in_memory": 0,
+      "calls_with_declared_symbol_owner": 0,
+      "docstrings_in_memory": 0,
+      "incoming_edge_count": 0,
+      "incoming_files": [],
+      "imports_without_resolved_edge_on_line": [
+        {
+          "raw": "import eggsample",
+          "module": "eggsample",
+          "symbols": [],
+          "line": 1
+        }
+      ]
+    },
+    {
+      "path": "docs/examples/eggsample-spam/eggsample_spam.py",
+      "language": "python",
+      "parser": "ast",
+      "syntax_error": false,
+      "symbols": 2,
+      "calls_in_memory": 0,
+      "calls_with_declared_symbol_owner": 0,
+      "docstrings_in_memory": 2,
+      "incoming_edge_count": 0,
+      "incoming_files": [],
+      "imports_without_resolved_edge_on_line": [
+        {
+          "raw": "import eggsample",
+          "module": "eggsample",
+          "symbols": [],
+          "line": 1
+        }
+      ]
+    },
+    {
+      "path": "docs/examples/eggsample-spam/setup.py",
+      "language": "python",
+      "parser": "ast",
+      "syntax_error": false,
+      "symbols": 0,
+      "calls_in_memory": 0,
+      "calls_with_declared_symbol_owner": 0,
+      "docstrings_in_memory": 0,
+      "incoming_edge_count": 0,
+      "incoming_files": [],
+      "imports_without_resolved_edge_on_line": [
+        {
+          "raw": "from setuptools import setup",
+          "module": "setuptools",
+          "symbols": [
+            "setup"
+          ],
+          "line": 1
+        }
+      ]
+    },
+    {
+      "path": "downstream/run_downstream.py",
+      "language": "python",
+      "parser": "ast",
+      "syntax_error": false,
+      "symbols": 21,
+      "calls_in_memory": 84,
+      "calls_with_declared_symbol_owner": 77,
+      "docstrings_in_memory": 2,
+      "incoming_edge_count": 0,
+      "incoming_files": [],
+      "imports_without_resolved_edge_on_line": [
+        {
+          "raw": "from __future__ import annotations",
+          "module": "__future__",
+          "symbols": [
+            "annotations"
+          ],
+          "line": 7
+        },
+        {
+          "raw": "import argparse",
+          "module": "argparse",
+          "symbols": [],
+          "line": 9
+        },
+        {
+          "raw": "from collections.abc import Mapping",
+          "module": "collections.abc",
+          "symbols": [
+            "Mapping"
+          ],
+          "line": 10
+        },
+        {
+          "raw": "from collections.abc import Sequence",
+          "module": "collections.abc",
+          "symbols": [
+            "Sequence"
+          ],
+          "line": 11
+        },
+        {
+          "raw": "import os",
+          "module": "os",
+          "symbols": [],
+          "line": 12
+        },
+        {
+          "raw": "from pathlib import Path",
+          "module": "pathlib",
+          "symbols": [
+            "Path"
+          ],
+          "line": 13
+        },
+        {
+          "raw": "import shlex",
+          "module": "shlex",
+          "symbols": [],
+          "line": 14
+        },
+        {
+          "raw": "import subprocess",
+          "module": "subprocess",
+          "symbols": [],
+          "line": 15
+        },
+        {
+          "raw": "import sys",
+          "module": "sys",
+          "symbols": [],
+          "line": 16
+        },
+        {
+          "raw": "from typing import Annotated",
+          "module": "typing",
+          "symbols": [
+            "Annotated"
+          ],
+          "line": 17
+        },
+        {
+          "raw": "from pydantic import BaseModel",
+          "module": "pydantic",
+          "symbols": [
+            "BaseModel"
+          ],
+          "line": 19
+        },
+        {
+          "raw": "from pydantic import ConfigDict",
+          "module": "pydantic",
+          "symbols": [
+            "ConfigDict"
+          ],
+          "line": 20
+        },
+        {
+          "raw": "from pydantic import Field",
+          "module": "pydantic",
+          "symbols": [
+            "Field"
+          ],
+          "line": 21
+        },
+        {
+          "raw": "from pydantic import field_validator",
+          "module": "pydantic",
+          "symbols": [
+            "field_validator"
+          ],
+          "line": 22
+        },
+        {
+          "raw": "from pydantic import model_validator",
+          "module": "pydantic",
+          "symbols": [
+            "model_validator"
+          ],
+          "line": 23
+        },
+        {
+          "raw": "from pydantic import ValidationError",
+          "module": "pydantic",
+          "symbols": [
+            "ValidationError"
+          ],
+          "line": 24
+        },
+        {
+          "raw": "import tomllib",
+          "module": "tomllib",
+          "symbols": [],
+          "line": 25
+        }
+      ]
+    },
+    {
+      "path": "scripts/release.py",
+      "language": "python",
+      "parser": "ast",
+      "syntax_error": false,
+      "symbols": 5,
+      "calls_in_memory": 23,
+      "calls_with_declared_symbol_owner": 23,
+      "docstrings_in_memory": 3,
+      "incoming_edge_count": 0,
+      "incoming_files": [],
+      "imports_without_resolved_edge_on_line": [
+        {
+          "raw": "import argparse",
+          "module": "argparse",
+          "symbols": [],
+          "line": 5
+        },
+        {
+          "raw": "from subprocess import check_call",
+          "module": "subprocess",
+          "symbols": [
+            "check_call"
+          ],
+          "line": 6
+        },
+        {
+          "raw": "import sys",
+          "module": "sys",
+          "symbols": [],
+          "line": 7
+        },
+        {
+          "raw": "from colorama import Fore",
+          "module": "colorama",
+          "symbols": [
+            "Fore"
+          ],
+          "line": 9
+        },
+        {
+          "raw": "from colorama import init",
+          "module": "colorama",
+          "symbols": [
+            "init"
+          ],
+          "line": 10
+        },
+        {
+          "raw": "from git import Remote",
+          "module": "git",
+          "symbols": [
+            "Remote"
+          ],
+          "line": 11
+        },
+        {
+          "raw": "from git import Repo",
+          "module": "git",
+          "symbols": [
+            "Repo"
+          ],
+          "line": 12
+        }
+      ]
+    },
+    {
+      "path": "scripts/towncrier-draft-to-file.py",
+      "language": "python",
+      "parser": "ast",
+      "syntax_error": false,
+      "symbols": 1,
+      "calls_in_memory": 2,
+      "calls_with_declared_symbol_owner": 2,
+      "docstrings_in_memory": 1,
+      "incoming_edge_count": 0,
+      "incoming_files": [],
+      "imports_without_resolved_edge_on_line": [
+        {
+          "raw": "from subprocess import call",
+          "module": "subprocess",
+          "symbols": [
+            "call"
+          ],
+          "line": 1
+        },
+        {
+          "raw": "import sys",
+          "module": "sys",
+          "symbols": [],
+          "line": 2
+        }
+      ]
+    },
+    {
+      "path": "src/pluggy/__init__.py",
+      "language": "python",
+      "parser": "ast",
+      "syntax_error": false,
+      "symbols": 1,
+      "calls_in_memory": 2,
+      "calls_with_declared_symbol_owner": 2,
+      "docstrings_in_memory": 0,
+      "incoming_edge_count": 0,
+      "incoming_files": [],
+      "imports_without_resolved_edge_on_line": [
+        {
+          "raw": "from importlib.metadata import version",
+          "module": "importlib.metadata",
+          "symbols": [
+            "version"
+          ],
+          "line": 34
+        }
+      ]
+    },
+    {
+      "path": "src/pluggy/_callers.py",
+      "language": "python",
+      "parser": "ast",
+      "syntax_error": false,
+      "symbols": 4,
+      "calls_in_memory": 35,
+      "calls_with_declared_symbol_owner": 35,
+      "docstrings_in_memory": 2,
+      "incoming_edge_count": 1,
+      "incoming_files": [
+        "src/pluggy/_manager.py"
+      ],
+      "imports_without_resolved_edge_on_line": [
+        {
+          "raw": "from __future__ import annotations",
+          "module": "__future__",
+          "symbols": [
+            "annotations"
+          ],
+          "line": 5
+        },
+        {
+          "raw": "from collections.abc import Generator",
+          "module": "collections.abc",
+          "symbols": [
+            "Generator"
+          ],
+          "line": 7
+        },
+        {
+          "raw": "from collections.abc import Mapping",
+          "module": "collections.abc",
+          "symbols": [
+            "Mapping"
+          ],
+          "line": 8
+        },
+        {
+          "raw": "from collections.abc import Sequence",
+          "module": "collections.abc",
+          "symbols": [
+            "Sequence"
+          ],
+          "line": 9
+        },
+        {
+          "raw": "from typing import cast",
+          "module": "typing",
+          "symbols": [
+            "cast"
+          ],
+          "line": 10
+        },
+        {
+          "raw": "from typing import NoReturn",
+          "module": "typing",
+          "symbols": [
+            "NoReturn"
+          ],
+          "line": 11
+        },
+        {
+          "raw": "from typing import TYPE_CHECKING",
+          "module": "typing",
+          "symbols": [
+            "TYPE_CHECKING"
+          ],
+          "line": 12
+        },
+        {
+          "raw": "from typing import TypeAlias",
+          "module": "typing",
+          "symbols": [
+            "TypeAlias"
+          ],
+          "line": 13
+        },
+        {
+          "raw": "import warnings",
+          "module": "warnings",
+          "symbols": [],
+          "line": 14
+        }
+      ]
+    },
+    {
+      "path": "src/pluggy/_compat.py",
+      "language": "python",
+      "parser": "ast",
+      "syntax_error": false,
+      "symbols": 5,
+      "calls_in_memory": 3,
+      "calls_with_declared_symbol_owner": 0,
+      "docstrings_in_memory": 4,
+      "incoming_edge_count": 2,
+      "incoming_files": [
+        "src/pluggy/_manager.py"
+      ],
+      "imports_without_resolved_edge_on_line": [
+        {
+          "raw": "from __future__ import annotations",
+          "module": "__future__",
+          "symbols": [
+            "annotations"
+          ],
+          "line": 8
+        },
+        {
+          "raw": "import importlib.metadata",
+          "module": "importlib.metadata",
+          "symbols": [],
+          "line": 10
+        },
+        {
+          "raw": "from typing import Any",
+          "module": "typing",
+          "symbols": [
+            "Any"
+          ],
+          "line": 11
+        }
+      ]
+    },
+    {
+      "path": "src/pluggy/_hooks.py",
+      "language": "python",
+      "parser": "ast",
+      "syntax_error": false,
+      "symbols": 41,
+      "calls_in_memory": 71,
+      "calls_with_declared_symbol_owner": 15,
+      "docstrings_in_memory": 22,
+      "incoming_edge_count": 18,
+      "incoming_files": [
+        "src/pluggy/__init__.py",
+        "src/pluggy/_callers.py",
+        "src/pluggy/_manager.py"
+      ],
+      "imports_without_resolved_edge_on_line": [
+        {
+          "raw": "from __future__ import annotations",
+          "module": "__future__",
+          "symbols": [
+            "annotations"
+          ],
+          "line": 5
+        },
+        {
+          "raw": "from collections.abc import Callable",
+          "module": "collections.abc",
+          "symbols": [
+            "Callable"
+          ],
+          "line": 7
+        },
+        {
+          "raw": "from collections.abc import Generator",
+          "module": "collections.abc",
+          "symbols": [
+            "Generator"
+          ],
+          "line": 8
+        },
+        {
+          "raw": "from collections.abc import Mapping",
+          "module": "collections.abc",
+          "symbols": [
+            "Mapping"
+          ],
+          "line": 9
+        },
+        {
+          "raw": "from collections.abc import Sequence",
+          "module": "collections.abc",
+          "symbols": [
+            "Sequence"
+          ],
+          "line": 10
+        },
+        {
+          "raw": "from collections.abc import Set",
+          "module": "collections.abc",
+          "symbols": [
+            "Set"
+          ],
+          "line": 11
+        },
+        {
+          "raw": "import inspect",
+          "module": "inspect",
+          "symbols": [],
+          "line": 12
+        },
+        {
+          "raw": "import sys",
+          "module": "sys",
+          "symbols": [],
+          "line": 13
+        },
+        {
+          "raw": "import types",
+          "module": "types",
+          "symbols": [],
+          "line": 14
+        },
+        {
+          "raw": "from types import ModuleType",
+          "module": "types",
+          "symbols": [
+            "ModuleType"
+          ],
+          "line": 15
+        },
+        {
+          "raw": "from typing import Any",
+          "module": "typing",
+          "symbols": [
+            "Any"
+          ],
+          "line": 16
+        },
+        {
+          "raw": "from typing import Final",
+          "module": "typing",
+          "symbols": [
+            "Final"
+          ],
+          "line": 17
+        },
+        {
+          "raw": "from typing import final",
+          "module": "typing",
+          "symbols": [
+            "final"
+          ],
+          "line": 18
+        },
+        {
+          "raw": "from typing import overload",
+          "module": "typing",
+          "symbols": [
+            "overload"
+          ],
+          "line": 19
+        },
+        {
+          "raw": "from typing import TYPE_CHECKING",
+          "module": "typing",
+          "symbols": [
+            "TYPE_CHECKING"
+          ],
+          "line": 20
+        },
+        {
+          "raw": "from typing import TypeAlias",
+          "module": "typing",
+          "symbols": [
+            "TypeAlias"
+          ],
+          "line": 21
+        },
+        {
+          "raw": "from typing import TypedDict",
+          "module": "typing",
+          "symbols": [
+            "TypedDict"
+          ],
+          "line": 22
+        },
+        {
+          "raw": "from typing import TypeVar",
+          "module": "typing",
+          "symbols": [
+            "TypeVar"
+          ],
+          "line": 23
+        },
+        {
+          "raw": "import warnings",
+          "module": "warnings",
+          "symbols": [],
+          "line": 24
+        }
+      ]
+    },
+    {
+      "path": "src/pluggy/_manager.py",
+      "language": "python",
+      "parser": "ast",
+      "syntax_error": false,
+      "symbols": 31,
+      "calls_in_memory": 115,
+      "calls_with_declared_symbol_owner": 4,
+      "docstrings_in_memory": 25,
+      "incoming_edge_count": 2,
+      "incoming_files": [
+        "src/pluggy/__init__.py"
+      ],
+      "imports_without_resolved_edge_on_line": [
+        {
+          "raw": "from __future__ import annotations",
+          "module": "__future__",
+          "symbols": [
+            "annotations"
+          ],
+          "line": 1
+        },
+        {
+          "raw": "from collections.abc import Callable",
+          "module": "collections.abc",
+          "symbols": [
+            "Callable"
+          ],
+          "line": 3
+        },
+        {
+          "raw": "from collections.abc import Iterable",
+          "module": "collections.abc",
+          "symbols": [
+            "Iterable"
+          ],
+          "line": 4
+        },
+        {
+          "raw": "from collections.abc import Mapping",
+          "module": "collections.abc",
+          "symbols": [
+            "Mapping"
+          ],
+          "line": 5
+        },
+        {
+          "raw": "from collections.abc import Sequence",
+          "module": "collections.abc",
+          "symbols": [
+            "Sequence"
+          ],
+          "line": 6
+        },
+        {
+          "raw": "import inspect",
+          "module": "inspect",
+          "symbols": [],
+          "line": 7
+        },
+        {
+          "raw": "import types",
+          "module": "types",
+          "symbols": [],
+          "line": 8
+        },
+        {
+          "raw": "from typing import Any",
+          "module": "typing",
+          "symbols": [
+            "Any"
+          ],
+          "line": 9
+        },
+        {
+          "raw": "from typing import cast",
+          "module": "typing",
+          "symbols": [
+            "cast"
+          ],
+          "line": 10
+        },
+        {
+          "raw": "from typing import Final",
+          "module": "typing",
+          "symbols": [
+            "Final"
+          ],
+          "line": 11
+        },
+        {
+          "raw": "from typing import TYPE_CHECKING",
+          "module": "typing",
+          "symbols": [
+            "TYPE_CHECKING"
+          ],
+          "line": 12
+        },
+        {
+          "raw": "from typing import TypeAlias",
+          "module": "typing",
+          "symbols": [
+            "TypeAlias"
+          ],
+          "line": 13
+        },
+        {
+          "raw": "import warnings",
+          "module": "warnings",
+          "symbols": [],
+          "line": 14
+        },
+        {
+          "raw": "import importlib.metadata",
+          "module": "importlib.metadata",
+          "symbols": [],
+          "line": 32
+        },
+        {
+          "raw": "import importlib.metadata",
+          "module": "importlib.metadata",
+          "symbols": [],
+          "line": 391
+        }
+      ]
+    },
+    {
+      "path": "src/pluggy/_result.py",
+      "language": "python",
+      "parser": "ast",
+      "syntax_error": false,
+      "symbols": 9,
+      "calls_in_memory": 5,
+      "calls_with_declared_symbol_owner": 0,
+      "docstrings_in_memory": 9,
+      "incoming_edge_count": 6,
+      "incoming_files": [
+        "src/pluggy/__init__.py",
+        "src/pluggy/_callers.py",
+        "src/pluggy/_hooks.py",
+        "src/pluggy/_manager.py"
+      ],
+      "imports_without_resolved_edge_on_line": [
+        {
+          "raw": "from __future__ import annotations",
+          "module": "__future__",
+          "symbols": [
+            "annotations"
+          ],
+          "line": 5
+        },
+        {
+          "raw": "from collections.abc import Callable",
+          "module": "collections.abc",
+          "symbols": [
+            "Callable"
+          ],
+          "line": 7
+        },
+        {
+          "raw": "from types import TracebackType",
+          "module": "types",
+          "symbols": [
+            "TracebackType"
+          ],
+          "line": 8
+        },
+        {
+          "raw": "from typing import cast",
+          "module": "typing",
+          "symbols": [
+            "cast"
+          ],
+          "line": 9
+        },
+        {
+          "raw": "from typing import final",
+          "module": "typing",
+          "symbols": [
+            "final"
+          ],
+          "line": 10
+        },
+        {
+          "raw": "from typing import Generic",
+          "module": "typing",
+          "symbols": [
+            "Generic"
+          ],
+          "line": 11
+        },
+        {
+          "raw": "from typing import TypeAlias",
+          "module": "typing",
+          "symbols": [
+            "TypeAlias"
+          ],
+          "line": 12
+        },
+        {
+          "raw": "from typing import TypeVar",
+          "module": "typing",
+          "symbols": [
+            "TypeVar"
+          ],
+          "line": 13
+        }
+      ]
+    },
+    {
+      "path": "src/pluggy/_tracing.py",
+      "language": "python",
+      "parser": "ast",
+      "syntax_error": false,
+      "symbols": 11,
+      "calls_in_memory": 18,
+      "calls_with_declared_symbol_owner": 0,
+      "docstrings_in_memory": 0,
+      "incoming_edge_count": 1,
+      "incoming_files": [
+        "src/pluggy/_manager.py"
+      ],
+      "imports_without_resolved_edge_on_line": [
+        {
+          "raw": "from __future__ import annotations",
+          "module": "__future__",
+          "symbols": [
+            "annotations"
+          ],
+          "line": 5
+        },
+        {
+          "raw": "from collections.abc import Callable",
+          "module": "collections.abc",
+          "symbols": [
+            "Callable"
+          ],
+          "line": 7
+        },
+        {
+          "raw": "from collections.abc import Sequence",
+          "module": "collections.abc",
+          "symbols": [
+            "Sequence"
+          ],
+          "line": 8
+        },
+        {
+          "raw": "from typing import Any",
+          "module": "typing",
+          "symbols": [
+            "Any"
+          ],
+          "line": 9
+        }
+      ]
+    },
+    {
+      "path": "src/pluggy/_warnings.py",
+      "language": "python",
+      "parser": "ast",
+      "syntax_error": false,
+      "symbols": 2,
+      "calls_in_memory": 0,
+      "calls_with_declared_symbol_owner": 0,
+      "docstrings_in_memory": 2,
+      "incoming_edge_count": 3,
+      "incoming_files": [
+        "src/pluggy/__init__.py",
+        "src/pluggy/_callers.py"
+      ],
+      "imports_without_resolved_edge_on_line": [
+        {
+          "raw": "from typing import final",
+          "module": "typing",
+          "symbols": [
+            "final"
+          ],
+          "line": 1
+        }
+      ]
+    },
+    {
+      "path": "testing/benchmark.py",
+      "language": "python",
+      "parser": "ast",
+      "syntax_error": false,
+      "symbols": 12,
+      "calls_in_memory": 42,
+      "calls_with_declared_symbol_owner": 38,
+      "docstrings_in_memory": 1,
+      "incoming_edge_count": 0,
+      "incoming_files": [],
+      "imports_without_resolved_edge_on_line": [
+        {
+          "raw": "import inspect",
+          "module": "inspect",
+          "symbols": [],
+          "line": 5
+        },
+        {
+          "raw": "import sys",
+          "module": "sys",
+          "symbols": [],
+          "line": 6
+        },
+        {
+          "raw": "from typing import Any",
+          "module": "typing",
+          "symbols": [
+            "Any"
+          ],
+          "line": 7
+        },
+        {
+          "raw": "import pytest",
+          "module": "pytest",
+          "symbols": [],
+          "line": 9
+        },
+        {
+          "raw": "from pluggy import HookimplMarker",
+          "module": "pluggy",
+          "symbols": [
+            "HookimplMarker"
+          ],
+          "line": 11
+        },
+        {
+          "raw": "from pluggy import HookspecMarker",
+          "module": "pluggy",
+          "symbols": [
+            "HookspecMarker"
+          ],
+          "line": 12
+        },
+        {
+          "raw": "from pluggy import PluginManager",
+          "module": "pluggy",
+          "symbols": [
+            "PluginManager"
+          ],
+          "line": 13
+        },
+        {
+          "raw": "from pluggy._callers import _multicall",
+          "module": "pluggy._callers",
+          "symbols": [
+            "_multicall"
+          ],
+          "line": 14
+        },
+        {
+          "raw": "from pluggy._hooks import HookImpl",
+          "module": "pluggy._hooks",
+          "symbols": [
+            "HookImpl"
+          ],
+          "line": 15
+        },
+        {
+          "raw": "from pluggy._hooks import varnames",
+          "module": "pluggy._hooks",
+          "symbols": [
+            "varnames"
+          ],
+          "line": 16
+        }
+      ]
+    },
+    {
+      "path": "testing/conftest.py",
+      "language": "python",
+      "parser": "ast",
+      "syntax_error": false,
+      "symbols": 2,
+      "calls_in_memory": 6,
+      "calls_with_declared_symbol_owner": 6,
+      "docstrings_in_memory": 0,
+      "incoming_edge_count": 0,
+      "incoming_files": [],
+      "imports_without_resolved_edge_on_line": [
+        {
+          "raw": "import pytest",
+          "module": "pytest",
+          "symbols": [],
+          "line": 1
+        },
+        {
+          "raw": "from pluggy import HookspecMarker",
+          "module": "pluggy",
+          "symbols": [
+            "HookspecMarker"
+          ],
+          "line": 3
+        },
+        {
+          "raw": "from pluggy import PluginManager",
+          "module": "pluggy",
+          "symbols": [
+            "PluginManager"
+          ],
+          "line": 4
+        }
+      ]
+    },
+    {
+      "path": "testing/test_details.py",
+      "language": "python",
+      "parser": "ast",
+      "syntax_error": false,
+      "symbols": 14,
+      "calls_in_memory": 102,
+      "calls_with_declared_symbol_owner": 89,
+      "docstrings_in_memory": 3,
+      "incoming_edge_count": 0,
+      "incoming_files": [],
+      "imports_without_resolved_edge_on_line": [
+        {
+          "raw": "from importlib.metadata import distribution",
+          "module": "importlib.metadata",
+          "symbols": [
+            "distribution"
+          ],
+          "line": 1
+        },
+        {
+          "raw": "import pytest",
+          "module": "pytest",
+          "symbols": [],
+          "line": 3
+        },
+        {
+          "raw": "import pluggy",
+          "module": "pluggy",
+          "symbols": [],
+          "line": 5
+        },
+        {
+          "raw": "from pluggy import HookimplMarker",
+          "module": "pluggy",
+          "symbols": [
+            "HookimplMarker"
+          ],
+          "line": 6
+        },
+        {
+          "raw": "from pluggy import HookspecMarker",
+          "module": "pluggy",
+          "symbols": [
+            "HookspecMarker"
+          ],
+          "line": 7
+        },
+        {
+          "raw": "from pluggy import PluginManager",
+          "module": "pluggy",
+          "symbols": [
+            "PluginManager"
+          ],
+          "line": 8
+        },
+        {
+          "raw": "from pluggy._compat import DistFacade",
+          "module": "pluggy._compat",
+          "symbols": [
+            "DistFacade"
+          ],
+          "line": 199
+        },
+        {
+          "raw": "from pluggy._compat import DistFacade",
+          "module": "pluggy._compat",
+          "symbols": [
+            "DistFacade"
+          ],
+          "line": 208
+        },
+        {
+          "raw": "from pluggy._compat import DistFacade",
+          "module": "pluggy._compat",
+          "symbols": [
+            "DistFacade"
+          ],
+          "line": 220
+        }
+      ]
+    },
+    {
+      "path": "testing/test_helpers.py",
+      "language": "python",
+      "parser": "ast",
+      "syntax_error": false,
+      "symbols": 16,
+      "calls_in_memory": 64,
+      "calls_with_declared_symbol_owner": 59,
+      "docstrings_in_memory": 8,
+      "incoming_edge_count": 0,
+      "incoming_files": [],
+      "imports_without_resolved_edge_on_line": [
+        {
+          "raw": "from collections.abc import Callable",
+          "module": "collections.abc",
+          "symbols": [
+            "Callable"
+          ],
+          "line": 1
+        },
+        {
+          "raw": "from functools import wraps",
+          "module": "functools",
+          "symbols": [
+            "wraps"
+          ],
+          "line": 2
+        },
+        {
+          "raw": "from typing import Any",
+          "module": "typing",
+          "symbols": [
+            "Any"
+          ],
+          "line": 3
+        },
+        {
+          "raw": "from typing import cast",
+          "module": "typing",
+          "symbols": [
+            "cast"
+          ],
+          "line": 4
+        },
+        {
+          "raw": "from typing import TypeVar",
+          "module": "typing",
+          "symbols": [
+            "TypeVar"
+          ],
+          "line": 5
+        },
+        {
+          "raw": "from pluggy._hooks import varnames",
+          "module": "pluggy._hooks",
+          "symbols": [
+            "varnames"
+          ],
+          "line": 7
+        },
+        {
+          "raw": "from pluggy._manager import _formatdef",
+          "module": "pluggy._manager",
+          "symbols": [
+            "_formatdef"
+          ],
+          "line": 8
+        },
+        {
+          "raw": "import warnings",
+          "module": "warnings",
+          "symbols": [],
+          "line": 193
+        },
+        {
+          "raw": "import warnings",
+          "module": "warnings",
+          "symbols": [],
+          "line": 210
+        },
+        {
+          "raw": "import warnings",
+          "module": "warnings",
+          "symbols": [],
+          "line": 225
+        },
+        {
+          "raw": "import warnings",
+          "module": "warnings",
+          "symbols": [],
+          "line": 240
+        }
+      ]
+    },
+    {
+      "path": "testing/test_hookcaller.py",
+      "language": "python",
+      "parser": "ast",
+      "syntax_error": false,
+      "symbols": 22,
+      "calls_in_memory": 217,
+      "calls_with_declared_symbol_owner": 150,
+      "docstrings_in_memory": 5,
+      "incoming_edge_count": 0,
+      "incoming_files": [],
+      "imports_without_resolved_edge_on_line": [
+        {
+          "raw": "from collections.abc import Callable",
+          "module": "collections.abc",
+          "symbols": [
+            "Callable"
+          ],
+          "line": 1
+        },
+        {
+          "raw": "from collections.abc import Generator",
+          "module": "collections.abc",
+          "symbols": [
+            "Generator"
+          ],
+          "line": 2
+        },
+        {
+          "raw": "from collections.abc import Sequence",
+          "module": "collections.abc",
+          "symbols": [
+            "Sequence"
+          ],
+          "line": 3
+        },
+        {
+          "raw": "from typing import TypeVar",
+          "module": "typing",
+          "symbols": [
+            "TypeVar"
+          ],
+          "line": 4
+        },
+        {
+          "raw": "import pytest",
+          "module": "pytest",
+          "symbols": [],
+          "line": 6
+        },
+        {
+          "raw": "from pluggy import HookimplMarker",
+          "module": "pluggy",
+          "symbols": [
+            "HookimplMarker"
+          ],
+          "line": 8
+        },
+        {
+          "raw": "from pluggy import HookspecMarker",
+          "module": "pluggy",
+          "symbols": [
+            "HookspecMarker"
+          ],
+          "line": 9
+        },
+        {
+          "raw": "from pluggy import PluginManager",
+          "module": "pluggy",
+          "symbols": [
+            "PluginManager"
+          ],
+          "line": 10
+        },
+        {
+          "raw": "from pluggy import PluginValidationError",
+          "module": "pluggy",
+          "symbols": [
+            "PluginValidationError"
+          ],
+          "line": 11
+        },
+        {
+          "raw": "from pluggy._hooks import HookCaller",
+          "module": "pluggy._hooks",
+          "symbols": [
+            "HookCaller"
+          ],
+          "line": 12
+        },
+        {
+          "raw": "from pluggy._hooks import HookImpl",
+          "module": "pluggy._hooks",
+          "symbols": [
+            "HookImpl"
+          ],
+          "line": 13
+        }
+      ]
+    },
+    {
+      "path": "testing/test_invocations.py",
+      "language": "python",
+      "parser": "ast",
+      "syntax_error": false,
+      "symbols": 13,
+      "calls_in_memory": 125,
+      "calls_with_declared_symbol_owner": 108,
+      "docstrings_in_memory": 7,
+      "incoming_edge_count": 0,
+      "incoming_files": [],
+      "imports_without_resolved_edge_on_line": [
+        {
+          "raw": "from collections.abc import Iterator",
+          "module": "collections.abc",
+          "symbols": [
+            "Iterator"
+          ],
+          "line": 1
+        },
+        {
+          "raw": "from typing import Any",
+          "module": "typing",
+          "symbols": [
+            "Any"
+          ],
+          "line": 2
+        },
+        {
+          "raw": "import pytest",
+          "module": "pytest",
+          "symbols": [],
+          "line": 4
+        },
+        {
+          "raw": "from pluggy import HookimplMarker",
+          "module": "pluggy",
+          "symbols": [
+            "HookimplMarker"
+          ],
+          "line": 6
+        },
+        {
+          "raw": "from pluggy import HookspecMarker",
+          "module": "pluggy",
+          "symbols": [
+            "HookspecMarker"
+          ],
+          "line": 7
+        },
+        {
+          "raw": "from pluggy import PluginManager",
+          "module": "pluggy",
+          "symbols": [
+            "PluginManager"
+          ],
+          "line": 8
+        },
+        {
+          "raw": "from pluggy import PluginValidationError",
+          "module": "pluggy",
+          "symbols": [
+            "PluginValidationError"
+          ],
+          "line": 9
+        }
+      ]
+    },
+    {
+      "path": "testing/test_multicall.py",
+      "language": "python",
+      "parser": "ast",
+      "syntax_error": false,
+      "symbols": 22,
+      "calls_in_memory": 222,
+      "calls_with_declared_symbol_owner": 139,
+      "docstrings_in_memory": 0,
+      "incoming_edge_count": 0,
+      "incoming_files": [],
+      "imports_without_resolved_edge_on_line": [
+        {
+          "raw": "from collections.abc import Callable",
+          "module": "collections.abc",
+          "symbols": [
+            "Callable"
+          ],
+          "line": 1
+        },
+        {
+          "raw": "from collections.abc import Mapping",
+          "module": "collections.abc",
+          "symbols": [
+            "Mapping"
+          ],
+          "line": 2
+        },
+        {
+          "raw": "from collections.abc import Sequence",
+          "module": "collections.abc",
+          "symbols": [
+            "Sequence"
+          ],
+          "line": 3
+        },
+        {
+          "raw": "import pytest",
+          "module": "pytest",
+          "symbols": [],
+          "line": 5
+        },
+        {
+          "raw": "from pluggy import HookCallError",
+          "module": "pluggy",
+          "symbols": [
+            "HookCallError"
+          ],
+          "line": 7
+        },
+        {
+          "raw": "from pluggy import HookimplMarker",
+          "module": "pluggy",
+          "symbols": [
+            "HookimplMarker"
+          ],
+          "line": 8
+        },
+        {
+          "raw": "from pluggy import HookspecMarker",
+          "module": "pluggy",
+          "symbols": [
+            "HookspecMarker"
+          ],
+          "line": 9
+        },
+        {
+          "raw": "from pluggy._callers import _multicall",
+          "module": "pluggy._callers",
+          "symbols": [
+            "_multicall"
+          ],
+          "line": 10
+        },
+        {
+          "raw": "from pluggy._hooks import HookImpl",
+          "module": "pluggy._hooks",
+          "symbols": [
+            "HookImpl"
+          ],
+          "line": 11
+        }
+      ]
+    },
+    {
+      "path": "testing/test_pluginmanager.py",
+      "language": "python",
+      "parser": "ast",
+      "syntax_error": false,
+      "symbols": 34,
+      "calls_in_memory": 353,
+      "calls_with_declared_symbol_owner": 310,
+      "docstrings_in_memory": 6,
+      "incoming_edge_count": 0,
+      "incoming_files": [],
+      "imports_without_resolved_edge_on_line": [
+        {
+          "raw": "import importlib.metadata",
+          "module": "importlib.metadata",
+          "symbols": [],
+          "line": 5
+        },
+        {
+          "raw": "from typing import Any",
+          "module": "typing",
+          "symbols": [
+            "Any"
+          ],
+          "line": 6
+        },
+        {
+          "raw": "from typing import cast",
+          "module": "typing",
+          "symbols": [
+            "cast"
+          ],
+          "line": 7
+        },
+        {
+          "raw": "import pytest",
+          "module": "pytest",
+          "symbols": [],
+          "line": 9
+        },
+        {
+          "raw": "from pluggy import HookCallError",
+          "module": "pluggy",
+          "symbols": [
+            "HookCallError"
+          ],
+          "line": 11
+        },
+        {
+          "raw": "from pluggy import HookimplMarker",
+          "module": "pluggy",
+          "symbols": [
+            "HookimplMarker"
+          ],
+          "line": 12
+        },
+        {
+          "raw": "from pluggy import HookspecMarker",
+          "module": "pluggy",
+          "symbols": [
+            "HookspecMarker"
+          ],
+          "line": 13
+        },
+        {
+          "raw": "from pluggy import PluginManager",
+          "module": "pluggy",
+          "symbols": [
+            "PluginManager"
+          ],
+          "line": 14
+        },
+        {
+          "raw": "from pluggy import PluginValidationError",
+          "module": "pluggy",
+          "symbols": [
+            "PluginValidationError"
+          ],
+          "line": 15
+        }
+      ]
+    },
+    {
+      "path": "testing/test_result.py",
+      "language": "python",
+      "parser": "ast",
+      "syntax_error": false,
+      "symbols": 1,
+      "calls_in_memory": 10,
+      "calls_with_declared_symbol_owner": 10,
+      "docstrings_in_memory": 0,
+      "incoming_edge_count": 0,
+      "incoming_files": [],
+      "imports_without_resolved_edge_on_line": [
+        {
+          "raw": "import traceback",
+          "module": "traceback",
+          "symbols": [],
+          "line": 1
+        },
+        {
+          "raw": "from pluggy import Result",
+          "module": "pluggy",
+          "symbols": [
+            "Result"
+          ],
+          "line": 3
+        }
+      ]
+    },
+    {
+      "path": "testing/test_tracer.py",
+      "language": "python",
+      "parser": "ast",
+      "syntax_error": false,
+      "symbols": 5,
+      "calls_in_memory": 34,
+      "calls_with_declared_symbol_owner": 34,
+      "docstrings_in_memory": 0,
+      "incoming_edge_count": 0,
+      "incoming_files": [],
+      "imports_without_resolved_edge_on_line": [
+        {
+          "raw": "import pytest",
+          "module": "pytest",
+          "symbols": [],
+          "line": 1
+        },
+        {
+          "raw": "from pluggy._tracing import TagTracer",
+          "module": "pluggy._tracing",
+          "symbols": [
+            "TagTracer"
+          ],
+          "line": 3
+        }
+      ]
+    },
+    {
+      "path": "testing/test_warnings.py",
+      "language": "python",
+      "parser": "ast",
+      "syntax_error": false,
+      "symbols": 4,
+      "calls_in_memory": 26,
+      "calls_with_declared_symbol_owner": 23,
+      "docstrings_in_memory": 3,
+      "incoming_edge_count": 0,
+      "incoming_files": [],
+      "imports_without_resolved_edge_on_line": [
+        {
+          "raw": "from pathlib import Path",
+          "module": "pathlib",
+          "symbols": [
+            "Path"
+          ],
+          "line": 1
+        },
+        {
+          "raw": "import warnings",
+          "module": "warnings",
+          "symbols": [],
+          "line": 2
+        },
+        {
+          "raw": "import pytest",
+          "module": "pytest",
+          "symbols": [],
+          "line": 4
+        },
+        {
+          "raw": "from pluggy import HookimplMarker",
+          "module": "pluggy",
+          "symbols": [
+            "HookimplMarker"
+          ],
+          "line": 6
+        },
+        {
+          "raw": "from pluggy import HookspecMarker",
+          "module": "pluggy",
+          "symbols": [
+            "HookspecMarker"
+          ],
+          "line": 7
+        },
+        {
+          "raw": "from pluggy import PluggyTeardownRaisedWarning",
+          "module": "pluggy",
+          "symbols": [
+            "PluggyTeardownRaisedWarning"
+          ],
+          "line": 8
+        },
+        {
+          "raw": "from pluggy import PluginManager",
+          "module": "pluggy",
+          "symbols": [
+            "PluginManager"
+          ],
+          "line": 9
+        }
+      ]
+    }
+  ]
+}

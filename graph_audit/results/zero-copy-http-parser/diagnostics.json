@@ -1,0 +1,142 @@
+{
+  "summary": {
+    "label": "zero-copy-http-parser",
+    "root": "/Users/adityagk/Desktop/projects/zero-copy-http-parser",
+    "files_total": 5,
+    "files_by_language": {
+      "rust": 5
+    },
+    "symbols_total": 16,
+    "tests_total": 5,
+    "calls_total": 42,
+    "syntax_errors": 0,
+    "unparsed_known_language": 0,
+    "edges_total": 21,
+    "edges_by_kind": {
+      "contain": 16,
+      "import": 5
+    },
+    "scan_seconds": 0.008,
+    "import_records": 7,
+    "import_records_with_any_edge_on_line": 5,
+    "import_count_caveat": "Records without edges include external imports and unsupported resolution; this is not recall. Multiple bindings on a line can be only partly resolved.",
+    "files_with_incoming_edges": 3,
+    "most_imported_files": [
+      [
+        "src/error.rs",
+        2
+      ],
+      [
+        "src/types.rs",
+        2
+      ],
+      [
+        "src/parser.rs",
+        1
+      ]
+    ],
+    "docstrings_in_memory": 0,
+    "docstrings_saved": 0,
+    "calls_saved": 0,
+    "issues": {
+      "duplicate_symbol_ids": {},
+      "dangling_edges": [],
+      "symbol_parents_missing_in_file": [],
+      "python_definitions_not_indexed": []
+    },
+    "previous": null
+  },
+  "files": [
+    {
+      "path": "src/error.rs",
+      "language": "rust",
+      "parser": "tree_sitter",
+      "syntax_error": false,
+      "symbols": 2,
+      "calls_in_memory": 5,
+      "calls_with_declared_symbol_owner": 5,
+      "docstrings_in_memory": 0,
+      "incoming_edge_count": 2,
+      "incoming_files": [
+        "src/lib.rs",
+        "src/parser.rs"
+      ],
+      "imports_without_resolved_edge_on_line": [
+        {
+          "raw": "use std::fmt;",
+          "module": "std",
+          "symbols": [
+            "fmt"
+          ],
+          "line": 1
+        }
+      ]
+    },
+    {
+      "path": "src/lib.rs",
+      "language": "rust",
+      "parser": "tree_sitter",
+      "syntax_error": false,
+      "symbols": 0,
+      "calls_in_memory": 0,
+      "calls_with_declared_symbol_owner": 0,
+      "docstrings_in_memory": 0,
+      "incoming_edge_count": 0,
+      "incoming_files": [],
+      "imports_without_resolved_edge_on_line": []
+    },
+    {
+      "path": "src/parser.rs",
+      "language": "rust",
+      "parser": "tree_sitter",
+      "syntax_error": false,
+      "symbols": 5,
+      "calls_in_memory": 17,
+      "calls_with_declared_symbol_owner": 17,
+      "docstrings_in_memory": 0,
+      "incoming_edge_count": 1,
+      "incoming_files": [
+        "src/lib.rs"
+      ],
+      "imports_without_resolved_edge_on_line": []
+    },
+    {
+      "path": "src/types.rs",
+      "language": "rust",
+      "parser": "tree_sitter",
+      "syntax_error": false,
+      "symbols": 4,
+      "calls_in_memory": 5,
+      "calls_with_declared_symbol_owner": 5,
+      "docstrings_in_memory": 0,
+      "incoming_edge_count": 2,
+      "incoming_files": [
+        "src/lib.rs",
+        "src/parser.rs"
+      ],
+      "imports_without_resolved_edge_on_line": []
+    },
+    {
+      "path": "tests/integration_tests.rs",
+      "language": "rust",
+      "parser": "tree_sitter",
+      "syntax_error": false,
+      "symbols": 5,
+      "calls_in_memory": 15,
+      "calls_with_declared_symbol_owner": 0,
+      "docstrings_in_memory": 0,
+      "incoming_edge_count": 0,
+      "incoming_files": [],
+      "imports_without_resolved_edge_on_line": [
+        {
+          "raw": "use zero_copy_http_parser::{HttpParser};",
+          "module": "zero_copy_http_parser",
+          "symbols": [
+            "HttpParser"
+          ],
+          "line": 1
+        }
+      ]
+    }
+  ]
+}

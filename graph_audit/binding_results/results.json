@@ -1,0 +1,706 @@
+{
+  "scope": "Python/Rust/JS-TS import binding and use checks",
+  "repositories": [
+    {
+      "repository": "glom",
+      "seconds": 0.7135,
+      "files_total": 33,
+      "files_by_language": {
+        "python": 33
+      },
+      "symbols_total": 637,
+      "tests_total": 181,
+      "calls_total": 3237,
+      "syntax_errors": 0,
+      "unparsed_known_language": 0,
+      "edges_total": 2240,
+      "edges_by_kind": {
+        "contain": 637,
+        "import": 371,
+        "inherit": 23,
+        "invoke": 1056,
+        "reference": 153
+      },
+      "import_bindings": 393,
+      "import_uses": 2167,
+      "binding_status": {
+        "internal": 207,
+        "conditional": 0,
+        "external": 109,
+        "unresolved": 77,
+        "ambiguous": 0,
+        "unsupported": 0
+      },
+      "distinct_file_import_pairs": 64,
+      "snapshot_id": "318edb5de56ebdc6043dea00f1821dc056a2ad6f2d77be0c6b9d052e9b007c51"
+    },
+    {
+      "repository": "pluggy",
+      "seconds": 0.2659,
+      "files_total": 31,
+      "files_by_language": {
+        "python": 31
+      },
+      "symbols_total": 733,
+      "tests_total": 127,
+      "calls_total": 1410,
+      "syntax_errors": 0,
+      "unparsed_known_language": 0,
+      "edges_total": 1058,
+      "edges_by_kind": {
+        "contain": 733,
+        "import": 110,
+        "inherit": 3,
+        "invoke": 85,
+        "reference": 127
+      },
+      "import_bindings": 217,
+      "import_uses": 601,
+      "binding_status": {
+        "internal": 76,
+        "conditional": 1,
+        "external": 137,
+        "unresolved": 3,
+        "ambiguous": 0,
+        "unsupported": 0
+      },
+      "distinct_file_import_pairs": 52,
+      "snapshot_id": "62d801961159bd53b1336124a81bf77acb0220ae8a2678ea59cbff2688fc1e02"
+    },
+    {
+      "repository": "click",
+      "seconds": 4.1566,
+      "files_total": 81,
+      "files_by_language": {
+        "python": 81
+      },
+      "symbols_total": 1937,
+      "tests_total": 546,
+      "calls_total": 6486,
+      "syntax_errors": 0,
+      "unparsed_known_language": 0,
+      "edges_total": 4138,
+      "edges_by_kind": {
+        "contain": 1937,
+        "import": 340,
+        "inherit": 71,
+        "invoke": 1486,
+        "reference": 304
+      },
+      "import_bindings": 673,
+      "import_uses": 4674,
+      "binding_status": {
+        "internal": 251,
+        "conditional": 24,
+        "external": 345,
+        "unresolved": 38,
+        "ambiguous": 15,
+        "unsupported": 0
+      },
+      "distinct_file_import_pairs": 164,
+      "snapshot_id": "7180d11ee4da4df8d18df3c61a100c390416d52d02ff0025a1343d1ca67582c6"
+    },
+    {
+      "repository": "calc-rs",
+      "seconds": 0.075,
+      "files_total": 8,
+      "files_by_language": {
+        "rust": 8
+      },
+      "symbols_total": 57,
+      "tests_total": 6,
+      "calls_total": 305,
+      "syntax_errors": 0,
+      "unparsed_known_language": 0,
+      "edges_total": 135,
+      "edges_by_kind": {
+        "contain": 57,
+        "import": 29,
+        "invoke": 18,
+        "reference": 31
+      },
+      "import_bindings": 76,
+      "import_uses": 150,
+      "binding_status": {
+        "internal": 17,
+        "conditional": 5,
+        "external": 50,
+        "unresolved": 0,
+        "ambiguous": 0,
+        "unsupported": 4
+      },
+      "distinct_file_import_pairs": 17,
+      "snapshot_id": "63b5342da1f11d4ba6d209f901da03541cde0a0f3236d7422e5a734fdab72ea7"
+    },
+    {
+      "repository": "rust-bump-allocator",
+      "seconds": 0.0359,
+      "files_total": 6,
+      "files_by_language": {
+        "rust": 6
+      },
+      "symbols_total": 19,
+      "tests_total": 10,
+      "calls_total": 68,
+      "syntax_errors": 0,
+      "unparsed_known_language": 0,
+      "edges_total": 36,
+      "edges_by_kind": {
+        "contain": 19,
+        "import": 10,
+        "invoke": 6,
+        "reference": 1
+      },
+      "import_bindings": 16,
+      "import_uses": 18,
+      "binding_status": {
+        "internal": 5,
+        "conditional": 3,
+        "external": 8,
+        "unresolved": 0,
+        "ambiguous": 0,
+        "unsupported": 0
+      },
+      "distinct_file_import_pairs": 5,
+      "snapshot_id": "5e5dbf27a4292218a04004386912161bde41a9fdc2cd0f49ac48e4dc7b53a629"
+    },
+    {
+      "repository": "tui-calculator",
+      "seconds": 0.0354,
+      "files_total": 9,
+      "files_by_language": {
+        "python": 9
+      },
+      "symbols_total": 20,
+      "tests_total": 6,
+      "calls_total": 55,
+      "syntax_errors": 0,
+      "unparsed_known_language": 0,
+      "edges_total": 38,
+      "edges_by_kind": {
+        "contain": 20,
+        "import": 14,
+        "invoke": 4
+      },
+      "import_bindings": 23,
+      "import_uses": 23,
+      "binding_status": {
+        "internal": 5,
+        "conditional": 0,
+        "external": 9,
+        "unresolved": 9,
+        "ambiguous": 0,
+        "unsupported": 0
+      },
+      "distinct_file_import_pairs": 9,
+      "snapshot_id": "c3136f17c64a0591e13101fa634f3c042eef7115a6c0d431a5c9b241b6ad26c6"
+    },
+    {
+      "repository": "FlappyBird-TS-Canvas",
+      "seconds": 0.1512,
+      "files_total": 9,
+      "files_by_language": {
+        "typescript": 9
+      },
+      "symbols_total": 54,
+      "tests_total": 8,
+      "calls_total": 120,
+      "syntax_errors": 0,
+      "unparsed_known_language": 0,
+      "edges_total": 124,
+      "edges_by_kind": {
+        "contain": 54,
+        "import": 21,
+        "invoke": 8,
+        "reference": 41
+      },
+      "import_bindings": 32,
+      "import_uses": 69,
+      "binding_status": {
+        "internal": 21,
+        "conditional": 0,
+        "external": 11,
+        "unresolved": 0,
+        "ambiguous": 0,
+        "unsupported": 0
+      },
+      "distinct_file_import_pairs": 14,
+      "snapshot_id": "80468fc8dc569e09b9fd451726d1052a9ef393d5b13054d18a94723647d5af05"
+    },
+    {
+      "repository": "agustus",
+      "seconds": 0.0655,
+      "files_total": 5,
+      "files_by_language": {
+        "typescript": 5
+      },
+      "symbols_total": 56,
+      "tests_total": 7,
+      "calls_total": 352,
+      "syntax_errors": 0,
+      "unparsed_known_language": 0,
+      "edges_total": 85,
+      "edges_by_kind": {
+        "contain": 56,
+        "import": 10,
+        "invoke": 15,
+        "reference": 4
+      },
+      "import_bindings": 19,
+      "import_uses": 107,
+      "binding_status": {
+        "internal": 10,
+        "conditional": 0,
+        "external": 9,
+        "unresolved": 0,
+        "ambiguous": 0,
+        "unsupported": 0
+      },
+      "distinct_file_import_pairs": 4,
+      "snapshot_id": "b99a94689eae893106cbc665ac2909d6e5930e34b671fa8d156d639f7665f2d9"
+    },
+    {
+      "repository": "sample",
+      "seconds": 0.0364,
+      "files_total": 12,
+      "files_by_language": {
+        "python": 4,
+        "rust": 4,
+        "typescript": 4
+      },
+      "symbols_total": 28,
+      "tests_total": 3,
+      "calls_total": 39,
+      "syntax_errors": 0,
+      "unparsed_known_language": 0,
+      "edges_total": 87,
+      "edges_by_kind": {
+        "contain": 28,
+        "import": 32,
+        "inherit": 1,
+        "invoke": 22,
+        "reference": 4
+      },
+      "import_bindings": 33,
+      "import_uses": 36,
+      "binding_status": {
+        "internal": 27,
+        "conditional": 0,
+        "external": 6,
+        "unresolved": 0,
+        "ambiguous": 0,
+        "unsupported": 0
+      },
+      "distinct_file_import_pairs": 13,
+      "snapshot_id": "ad4082afe0aa0d08ec807537f0f6d34416cab2ed5ee1f8c96b0e7f4acf1e1673"
+    }
+  ],
+  "checks": [
+    {
+      "repository": "glom",
+      "file": "glom/mutation.py",
+      "local": "Path",
+      "expected_binding": "glom/core.py::Path",
+      "owner": "Assign.__init__",
+      "expression": "Path.from_text",
+      "expected_reference": "glom/core.py::Path.from_text",
+      "source_witness": "path = Path.from_text(path)",
+      "passed": true,
+      "observed": [
+        {
+          "owner": "Assign.__init__",
+          "expression": "Path.from_text",
+          "kind": "call",
+          "source_text": "Path.from_text",
+          "line": 151,
+          "start_byte": 4814,
+          "end_byte": 4828,
+          "target_file": "glom/core.py",
+          "target_symbol": "glom/core.py::Path.from_text",
+          "status": "internal",
+          "binding_target_file": "glom/core.py",
+          "binding_target_symbol": "glom/core.py::Path"
+        }
+      ]
+    },
+    {
+      "repository": "glom",
+      "file": "glom/mutation.py",
+      "local": "Path",
+      "expected_binding": "glom/core.py::Path",
+      "owner": "Delete.__init__",
+      "expression": "Path.from_text",
+      "expected_reference": "glom/core.py::Path.from_text",
+      "source_witness": "path = Path.from_text(path)",
+      "passed": true,
+      "observed": [
+        {
+          "owner": "Delete.__init__",
+          "expression": "Path.from_text",
+          "kind": "call",
+          "source_text": "Path.from_text",
+          "line": 297,
+          "start_byte": 9570,
+          "end_byte": 9584,
+          "target_file": "glom/core.py",
+          "target_symbol": "glom/core.py::Path.from_text",
+          "status": "internal",
+          "binding_target_file": "glom/core.py",
+          "binding_target_symbol": "glom/core.py::Path"
+        }
+      ]
+    },
+    {
+      "repository": "pluggy",
+      "file": "src/pluggy/_manager.py",
+      "local": "_multicall",
+      "expected_binding": "src/pluggy/_callers.py::_multicall",
+      "owner": "PluginManager.__init__",
+      "expression": "_multicall",
+      "expected_reference": "src/pluggy/_callers.py::_multicall",
+      "source_witness": "self._inner_hookexec = _multicall",
+      "passed": true,
+      "observed": [
+        {
+          "owner": "PluginManager.__init__",
+          "expression": "_multicall",
+          "kind": "reference",
+          "source_text": "_multicall",
+          "line": 97,
+          "start_byte": 2984,
+          "end_byte": 2994,
+          "target_file": "src/pluggy/_callers.py",
+          "target_symbol": "src/pluggy/_callers.py::_multicall",
+          "status": "internal",
+          "binding_target_file": "src/pluggy/_callers.py",
+          "binding_target_symbol": "src/pluggy/_callers.py::_multicall"
+        }
+      ]
+    },
+    {
+      "repository": "pluggy",
+      "file": "testing/test_pluginmanager.py",
+      "local": "PluginManager",
+      "expected_binding": "src/pluggy/_manager.py::PluginManager",
+      "owner": "test_pm",
+      "expression": "PluginManager",
+      "expected_reference": "src/pluggy/_manager.py::PluginManager",
+      "source_witness": "def test_pm(pm: PluginManager)",
+      "passed": true,
+      "observed": [
+        {
+          "owner": "test_pm",
+          "expression": "PluginManager",
+          "kind": "annotation",
+          "source_text": "PluginManager",
+          "line": 31,
+          "start_byte": 719,
+          "end_byte": 732,
+          "target_file": "src/pluggy/_manager.py",
+          "target_symbol": "src/pluggy/_manager.py::PluginManager",
+          "status": "internal",
+          "binding_target_file": "src/pluggy/_manager.py",
+          "binding_target_symbol": "src/pluggy/_manager.py::PluginManager"
+        }
+      ]
+    },
+    {
+      "repository": "calc-rs",
+      "file": "src/engine.rs",
+      "local": "ASTNode",
+      "expected_binding": "src/models.rs::ASTNode",
+      "owner": "MathEngine.evaluate",
+      "expression": "ASTNode",
+      "expected_reference": "src/models.rs::ASTNode",
+      "source_witness": "pub fn evaluate(&self, node: ASTNode",
+      "passed": true,
+      "observed": [
+        {
+          "owner": "MathEngine.evaluate",
+          "expression": "ASTNode",
+          "kind": "reference",
+          "source_text": "ASTNode",
+          "line": 24,
+          "start_byte": 529,
+          "end_byte": 536,
+          "target_file": "src/models.rs",
+          "target_symbol": "src/models.rs::ASTNode",
+          "status": "internal",
+          "binding_target_file": "src/models.rs",
+          "binding_target_symbol": "src/models.rs::ASTNode"
+        }
+      ]
+    },
+    {
+      "repository": "rust-bump-allocator",
+      "file": "src/allocator.rs",
+      "local": "reserve_space",
+      "expected_binding": "src/state.rs::reserve_space",
+      "owner": "BumpAllocator.alloc",
+      "expression": "reserve_space",
+      "expected_reference": "src/state.rs::reserve_space",
+      "source_witness": "reserve_space(layout)",
+      "passed": true,
+      "observed": [
+        {
+          "owner": "BumpAllocator.alloc",
+          "expression": "reserve_space",
+          "kind": "call",
+          "source_text": "reserve_space",
+          "line": 8,
+          "start_byte": 209,
+          "end_byte": 222,
+          "target_file": "src/state.rs",
+          "target_symbol": "src/state.rs::reserve_space",
+          "status": "internal",
+          "binding_target_file": "src/state.rs",
+          "binding_target_symbol": "src/state.rs::reserve_space"
+        }
+      ]
+    },
+    {
+      "repository": "rust-bump-allocator",
+      "file": "tests/test_state.rs",
+      "local": "get_stats",
+      "expected_binding": "src/state.rs::get_stats",
+      "owner": "tests.test_state_mutation",
+      "expression": "get_stats",
+      "expected_reference": "src/state.rs::get_stats",
+      "source_witness": "let before = get_stats().used;",
+      "passed": true,
+      "observed": [
+        {
+          "owner": "tests.test_state_mutation",
+          "expression": "get_stats",
+          "kind": "call",
+          "source_text": "get_stats",
+          "line": 16,
+          "start_byte": 393,
+          "end_byte": 402,
+          "target_file": "src/state.rs",
+          "target_symbol": "src/state.rs::get_stats",
+          "status": "conditional",
+          "binding_target_file": "src/state.rs",
+          "binding_target_symbol": "src/state.rs::get_stats"
+        },
+        {
+          "owner": "tests.test_state_mutation",
+          "expression": "get_stats",
+          "kind": "call",
+          "source_text": "get_stats",
+          "line": 22,
+          "start_byte": 585,
+          "end_byte": 594,
+          "target_file": "src/state.rs",
+          "target_symbol": "src/state.rs::get_stats",
+          "status": "conditional",
+          "binding_target_file": "src/state.rs",
+          "binding_target_symbol": "src/state.rs::get_stats"
+        }
+      ]
+    },
+    {
+      "repository": "rust-bump-allocator",
+      "file": "tests/test_state.rs",
+      "local": "reserve_space",
+      "expected_binding": "src/state.rs::reserve_space",
+      "owner": "tests.test_bounds_detection",
+      "expression": "reserve_space",
+      "expected_reference": "src/state.rs::reserve_space",
+      "source_witness": "reserve_space(huge_layout);",
+      "passed": true,
+      "observed": [
+        {
+          "owner": "tests.test_bounds_detection",
+          "expression": "reserve_space",
+          "kind": "call",
+          "source_text": "reserve_space",
+          "line": 30,
+          "start_byte": 830,
+          "end_byte": 843,
+          "target_file": "src/state.rs",
+          "target_symbol": "src/state.rs::reserve_space",
+          "status": "conditional",
+          "binding_target_file": "src/state.rs",
+          "binding_target_symbol": "src/state.rs::reserve_space"
+        }
+      ]
+    },
+    {
+      "repository": "FlappyBird-TS-Canvas",
+      "file": "engine/renderer.ts",
+      "local": "GameSnapshot",
+      "expected_binding": "types/game.ts::GameSnapshot",
+      "owner": "Renderer.render",
+      "expression": "GameSnapshot",
+      "expected_reference": "types/game.ts::GameSnapshot",
+      "source_witness": "public render(snapshot: GameSnapshot): void {",
+      "passed": true,
+      "observed": [
+        {
+          "owner": "Renderer.render",
+          "expression": "GameSnapshot",
+          "kind": "reference",
+          "source_text": "GameSnapshot",
+          "line": 14,
+          "start_byte": 366,
+          "end_byte": 378,
+          "target_file": "types/game.ts",
+          "target_symbol": "types/game.ts::GameSnapshot",
+          "status": "internal",
+          "binding_target_file": "types/game.ts",
+          "binding_target_symbol": "types/game.ts::GameSnapshot"
+        }
+      ]
+    },
+    {
+      "repository": "FlappyBird-TS-Canvas",
+      "file": "engine/renderer.ts",
+      "local": "GamePhase",
+      "expected_binding": "types/game.ts::GamePhase",
+      "owner": "Renderer.render",
+      "expression": "GamePhase.Menu",
+      "expected_reference": "types/game.ts::GamePhase.Menu",
+      "source_witness": "if (snapshot.phase === GamePhase.Menu)",
+      "passed": true,
+      "observed": [
+        {
+          "owner": "Renderer.render",
+          "expression": "GamePhase.Menu",
+          "kind": "reference",
+          "source_text": "GamePhase.Menu",
+          "line": 20,
+          "start_byte": 569,
+          "end_byte": 583,
+          "target_file": "types/game.ts",
+          "target_symbol": "types/game.ts::GamePhase.Menu",
+          "status": "internal",
+          "binding_target_file": "types/game.ts",
+          "binding_target_symbol": "types/game.ts::GamePhase"
+        }
+      ]
+    },
+    {
+      "repository": "FlappyBird-TS-Canvas",
+      "file": "main.ts",
+      "local": "GamePhase",
+      "expected_binding": "types/game.ts::GamePhase",
+      "owner": "gameLoop",
+      "expression": "GamePhase.Active",
+      "expected_reference": "types/game.ts::GamePhase.Active",
+      "source_witness": "function gameLoop(timestamp: number) {",
+      "passed": true,
+      "observed": [
+        {
+          "owner": "gameLoop",
+          "expression": "GamePhase.Active",
+          "kind": "reference",
+          "source_text": "GamePhase.Active",
+          "line": 61,
+          "start_byte": 1723,
+          "end_byte": 1739,
+          "target_file": "types/game.ts",
+          "target_symbol": "types/game.ts::GamePhase.Active",
+          "status": "internal",
+          "binding_target_file": "types/game.ts",
+          "binding_target_symbol": "types/game.ts::GamePhase"
+        }
+      ]
+    },
+    {
+      "repository": "agustus",
+      "file": "src/mcp.ts",
+      "local": "groupBySavedPeriod",
+      "expected_binding": "src/time-groups.ts::groupBySavedPeriod",
+      "owner": "createServer",
+      "expression": "groupBySavedPeriod",
+      "expected_reference": "src/time-groups.ts::groupBySavedPeriod",
+      "source_witness": "groupBySavedPeriod(words, { timeZone })",
+      "passed": true,
+      "observed": [
+        {
+          "owner": "createServer",
+          "expression": "groupBySavedPeriod",
+          "kind": "call",
+          "source_text": "groupBySavedPeriod",
+          "line": 432,
+          "start_byte": 11669,
+          "end_byte": 11687,
+          "target_file": "src/time-groups.ts",
+          "target_symbol": "src/time-groups.ts::groupBySavedPeriod",
+          "status": "internal",
+          "binding_target_file": "src/time-groups.ts",
+          "binding_target_symbol": "src/time-groups.ts::groupBySavedPeriod"
+        }
+      ]
+    },
+    {
+      "repository": "agustus",
+      "file": "src/index.ts",
+      "local": "AppEnv",
+      "expected_binding": "src/auth.ts::AppEnv",
+      "owner": "fetch",
+      "expression": "AppEnv",
+      "expected_reference": "src/auth.ts::AppEnv",
+      "source_witness": "fetch(request: Request, env: AppEnv, ctx: ExecutionContext)",
+      "passed": true,
+      "observed": [
+        {
+          "owner": "fetch",
+          "expression": "AppEnv",
+          "kind": "reference",
+          "source_text": "AppEnv",
+          "line": 6,
+          "start_byte": 210,
+          "end_byte": 216,
+          "target_file": "src/auth.ts",
+          "target_symbol": "src/auth.ts::AppEnv",
+          "status": "internal",
+          "binding_target_file": "src/auth.ts",
+          "binding_target_symbol": "src/auth.ts::AppEnv"
+        }
+      ]
+    },
+    {
+      "repository": "sample",
+      "file": "typescript/src/service.ts",
+      "local": "Box",
+      "expected_binding": "typescript/src/model.ts::Basket",
+      "owner": "build",
+      "expression": "Box",
+      "expected_reference": "typescript/src/model.ts::Basket",
+      "source_witness": "import { Basket as Box } from \"./index.ts\";",
+      "passed": true,
+      "observed": [
+        {
+          "owner": "build",
+          "expression": "Box",
+          "kind": "reference",
+          "source_text": "Box",
+          "line": 8,
+          "start_byte": 319,
+          "end_byte": 322,
+          "target_file": "typescript/src/model.ts",
+          "target_symbol": "typescript/src/model.ts::Basket",
+          "status": "internal",
+          "binding_target_file": "typescript/src/model.ts",
+          "binding_target_symbol": "typescript/src/model.ts::Basket"
+        },
+        {
+          "owner": "build",
+          "expression": "Box",
+          "kind": "call",
+          "source_text": "Box",
+          "line": 9,
+          "start_byte": 338,
+          "end_byte": 341,
+          "target_file": "typescript/src/model.ts",
+          "target_symbol": "typescript/src/model.ts::Basket",
+          "status": "internal",
+          "binding_target_file": "typescript/src/model.ts",
+          "binding_target_symbol": "typescript/src/model.ts::Basket"
+        }
+      ]
+    }
+  ]
+}

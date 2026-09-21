@@ -1,0 +1,22 @@
+{
+  "git": {
+    "head": null,
+    "status_porcelain": null
+  },
+  "source_sha256": {
+    "main.ts": "8d8407782edc35296d2c49d0eacf7c24e2a5418565a5a56fec2da98d5e19230b",
+    "vite.config.ts": "5a4781e0762b45ca85cccaa9dba10f345917949e88785884f0a3aba611244ba8",
+    "core/input.ts": "81eeda872e1beee4c59c78280fff1ca6ab599be6dfa429f9917b87a5c271edff",
+    "core/state.ts": "b5575c550d459252e56363dd901d640ed93393fb1a438e61756117a746349fc2",
+    "engine/physics.ts": "ccdbb8806160edc64b212c406c64195fe3d626e67fd2daa60c3c5ee3429b51ee",
+    "engine/renderer.ts": "aca254cad90a3b2e97786c8b3ae283f7bfe702574daebb85bba578b50753d4b0",
+    "tests/integration.test.ts": "436dd64ac3a74bc0d48f9c63dcedc19615e26422f4328c4f87845a373b7d3613",
+    "tests/performance.test.ts": "c4fd6b983190daa7b421c702fb5ac0bb8bc0e2f925459d4a07e177eb7a6d4c5b",
+    "types/game.ts": "61d49c945aaa0813bef7bf88909197f104e2709075d7781dc91379d1bb866d3c"
+  },
+  "root_config_sha256": {
+    "package.json": "31f61df29ba6da3f33d98d7cb5353646c723475e8160a6b58a1b3354a36b251a",
+    "tsconfig.json": "a4face74f9eb9ef9d9e89e939d7cb4f6f8c3dacef007c06c20501183be9b8b5c"
+  },
+  "scanned_sources_digest": "25bb2e2a98399ec4dd163c861c69192d5f04ac881f9be28f952fa3c760a8e137"
+}

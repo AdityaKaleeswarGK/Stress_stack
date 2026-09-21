@@ -1,0 +1,1564 @@
+{
+  "summary": {
+    "label": "glom",
+    "root": "/Users/adityagk/Desktop/projects/glom",
+    "files_total": 33,
+    "files_by_language": {
+      "python": 33
+    },
+    "symbols_total": 570,
+    "tests_total": 181,
+    "calls_total": 3100,
+    "syntax_errors": 0,
+    "unparsed_known_language": 0,
+    "edges_total": 649,
+    "edges_by_kind": {
+      "contain": 570,
+      "import": 56,
+      "inherit": 23
+    },
+    "scan_seconds": 0.341,
+    "import_records": 152,
+    "import_records_with_any_edge_on_line": 56,
+    "import_count_caveat": "Records without edges include external imports and unsupported resolution; this is not recall. Multiple bindings on a line can be only partly resolved.",
+    "files_with_incoming_edges": 10,
+    "most_imported_files": [
+      [
+        "glom/__init__.py",
+        24
+      ],
+      [
+        "glom/core.py",
+        15
+      ],
+      [
+        "glom/matching.py",
+        4
+      ],
+      [
+        "glom/cli.py",
+        3
+      ],
+      [
+        "glom/reduction.py",
+        2
+      ]
+    ],
+    "docstrings_in_memory": 124,
+    "docstrings_saved": 0,
+    "calls_saved": 0,
+    "issues": {
+      "duplicate_symbol_ids": {},
+      "dangling_edges": [],
+      "symbol_parents_missing_in_file": [],
+      "python_definitions_not_indexed": [
+        {
+          "path": "glom/core.py",
+          "qualified_name": "Path.from_text.create",
+          "line": 696
+        },
+        {
+          "path": "glom/core.py",
+          "qualified_name": "TargetRegistry._register_builtin_ops._get_iterable_handler",
+          "line": 2277
+        },
+        {
+          "path": "glom/core.py",
+          "qualified_name": "format_target_spec_trace.mk_fmt",
+          "line": 261
+        },
+        {
+          "path": "glom/matching.py",
+          "qualified_name": "Check._ValidationError",
+          "line": 1015
+        },
+        {
+          "path": "glom/matching.py",
+          "qualified_name": "Check.__init__._get_arg_val",
+          "line": 954
+        },
+        {
+          "path": "glom/matching.py",
+          "qualified_name": "Check.__init__.truthy",
+          "line": 974
+        },
+        {
+          "path": "glom/test/test_basic.py",
+          "qualified_name": "test_abstract_iterable.MyIterable",
+          "line": 192
+        },
+        {
+          "path": "glom/test/test_basic.py",
+          "qualified_name": "test_abstract_iterable.MyIterable.__iter__",
+          "line": 193
+        },
+        {
+          "path": "glom/test/test_basic.py",
+          "qualified_name": "test_call_and_target.F",
+          "line": 203
+        },
+        {
+          "path": "glom/test/test_basic.py",
+          "qualified_name": "test_call_and_target.F",
+          "line": 212
+        },
+        {
+          "path": "glom/test/test_basic.py",
+          "qualified_name": "test_call_and_target.F.__init__",
+          "line": 204
+        },
+        {
+          "path": "glom/test/test_basic.py",
+          "qualified_name": "test_call_and_target.F.__init__",
+          "line": 213
+        },
+        {
+          "path": "glom/test/test_basic.py",
+          "qualified_name": "test_initial_integration.Example",
+          "line": 14
+        },
+        {
+          "path": "glom/test/test_basic.py",
+          "qualified_name": "test_invoke.ret_args",
+          "line": 284
+        },
+        {
+          "path": "glom/test/test_basic.py",
+          "qualified_name": "test_invoke.test",
+          "line": 237
+        },
+        {
+          "path": "glom/test/test_error.py",
+          "qualified_name": "_make_stack._debug_some_str",
+          "line": 131
+        },
+        {
+          "path": "glom/test/test_error.py",
+          "qualified_name": "test_all_public_errors._test_exc",
+          "line": 521
+        },
+        {
+          "path": "glom/test/test_error.py",
+          "qualified_name": "test_error_types.err_raise",
+          "line": 463
+        },
+        {
+          "path": "glom/test/test_error.py",
+          "qualified_name": "test_fallback.BadExc",
+          "line": 477
+        },
+        {
+          "path": "glom/test/test_error.py",
+          "qualified_name": "test_fallback.BadExc.__init__",
+          "line": 478
+        },
+        {
+          "path": "glom/test/test_error.py",
+          "qualified_name": "test_fallback.raise_bad",
+          "line": 486
+        },
+        {
+          "path": "glom/test/test_error.py",
+          "qualified_name": "test_long_target_repr.ObjectWithLongRepr",
+          "line": 275
+        },
+        {
+          "path": "glom/test/test_error.py",
+          "qualified_name": "test_long_target_repr.ObjectWithLongRepr.__repr__",
+          "line": 276
+        },
+        {
+          "path": "glom/test/test_match.py",
+          "qualified_name": "test_sample.bad",
+          "line": 304
+        },
+        {
+          "path": "glom/test/test_match.py",
+          "qualified_name": "test_sample.good",
+          "line": 301
+        },
+        {
+          "path": "glom/test/test_match.py",
+          "qualified_name": "test_sky.as_type",
+          "line": 354
+        },
+        {
+          "path": "glom/test/test_match.py",
+          "qualified_name": "test_sky.default_if_none",
+          "line": 378
+        },
+        {
+          "path": "glom/test/test_match.py",
+          "qualified_name": "test_sky.in_range",
+          "line": 369
+        },
+        {
+          "path": "glom/test/test_match.py",
+          "qualified_name": "test_sky.none_or",
+          "line": 360
+        },
+        {
+          "path": "glom/test/test_match.py",
+          "qualified_name": "test_sky.nullable_list_of",
+          "line": 384
+        },
+        {
+          "path": "glom/test/test_mutation.py",
+          "qualified_name": "test_assign.Foo",
+          "line": 9
+        },
+        {
+          "path": "glom/test/test_mutation.py",
+          "qualified_name": "test_assign.r",
+          "line": 20
+        },
+        {
+          "path": "glom/test/test_mutation.py",
+          "qualified_name": "test_assign_missing_dict.debugdict",
+          "line": 128
+        },
+        {
+          "path": "glom/test/test_mutation.py",
+          "qualified_name": "test_assign_missing_object.Container",
+          "line": 142
+        },
+        {
+          "path": "glom/test/test_mutation.py",
+          "qualified_name": "test_assign_missing_unassignable.Tarjay",
+          "line": 184
+        },
+        {
+          "path": "glom/test/test_mutation.py",
+          "qualified_name": "test_assign_missing_unassignable.Tarjay.__init__",
+          "line": 187
+        },
+        {
+          "path": "glom/test/test_mutation.py",
+          "qualified_name": "test_assign_missing_unassignable.Tarjay.unassignable",
+          "line": 191
+        },
+        {
+          "path": "glom/test/test_mutation.py",
+          "qualified_name": "test_assign_missing_with_extant_keys._get_default_struct",
+          "line": 166
+        },
+        {
+          "path": "glom/test/test_mutation.py",
+          "qualified_name": "test_bad_assign_target.BadTarget",
+          "line": 67
+        },
+        {
+          "path": "glom/test/test_mutation.py",
+          "qualified_name": "test_bad_assign_target.BadTarget.__setattr__",
+          "line": 68
+        },
+        {
+          "path": "glom/test/test_mutation.py",
+          "qualified_name": "test_bad_delete_target.BadTarget",
+          "line": 279
+        },
+        {
+          "path": "glom/test/test_mutation.py",
+          "qualified_name": "test_bad_delete_target.BadTarget.__delattr__",
+          "line": 280
+        },
+        {
+          "path": "glom/test/test_mutation.py",
+          "qualified_name": "test_delete.Foo",
+          "line": 217
+        },
+        {
+          "path": "glom/test/test_mutation.py",
+          "qualified_name": "test_delete.Foo.__init__",
+          "line": 218
+        },
+        {
+          "path": "glom/test/test_mutation.py",
+          "qualified_name": "test_delete.r",
+          "line": 230
+        },
+        {
+          "path": "glom/test/test_path_and_t.py",
+          "qualified_name": "test_path_star.A",
+          "line": 266
+        },
+        {
+          "path": "glom/test/test_path_and_t.py",
+          "qualified_name": "test_path_star.A.__init__",
+          "line": 267
+        },
+        {
+          "path": "glom/test/test_path_and_t.py",
+          "qualified_name": "test_path_star.ErrDict",
+          "line": 257
+        },
+        {
+          "path": "glom/test/test_path_and_t.py",
+          "qualified_name": "test_path_star.ErrDict.__getitem__",
+          "line": 258
+        },
+        {
+          "path": "glom/test/test_path_and_t.py",
+          "qualified_name": "test_t_picklability.TargetType",
+          "line": 102
+        },
+        {
+          "path": "glom/test/test_path_and_t.py",
+          "qualified_name": "test_t_picklability.TargetType.__init__",
+          "line": 103
+        },
+        {
+          "path": "glom/test/test_reduction.py",
+          "qualified_name": "test_fold_bad_iter.bad_iter",
+          "line": 78
+        },
+        {
+          "path": "glom/test/test_scope_vars.py",
+          "qualified_name": "test_let.FailAssign",
+          "line": 103
+        },
+        {
+          "path": "glom/test/test_scope_vars.py",
+          "qualified_name": "test_let.FailAssign.__setattr__",
+          "line": 104
+        },
+        {
+          "path": "glom/test/test_scope_vars.py",
+          "qualified_name": "test_s_scope_assign.FailAssign",
+          "line": 25
+        },
+        {
+          "path": "glom/test/test_scope_vars.py",
+          "qualified_name": "test_s_scope_assign.FailAssign.__setattr__",
+          "line": 26
+        },
+        {
+          "path": "glom/test/test_streaming.py",
+          "qualified_name": "test_faulty_iterate.bad_iter",
+          "line": 186
+        },
+        {
+          "path": "glom/test/test_target_types.py",
+          "qualified_name": "test_duck_register.LilRanger",
+          "line": 118
+        },
+        {
+          "path": "glom/test/test_target_types.py",
+          "qualified_name": "test_duck_register.LilRanger.__init__",
+          "line": 119
+        },
+        {
+          "path": "glom/test/test_target_types.py",
+          "qualified_name": "test_duck_register.LilRanger.__iter__",
+          "line": 122
+        },
+        {
+          "path": "glom/test/test_target_types.py",
+          "qualified_name": "test_exact_register.BetterList",
+          "line": 102
+        },
+        {
+          "path": "glom/test/test_target_types.py",
+          "qualified_name": "test_faulty_iterate.bad_iter",
+          "line": 202
+        },
+        {
+          "path": "glom/test/test_target_types.py",
+          "qualified_name": "test_faulty_op_registration.NewType",
+          "line": 219
+        },
+        {
+          "path": "glom/test/test_target_types.py",
+          "qualified_name": "test_faulty_op_registration._autodiscover_faulty_return",
+          "line": 240
+        },
+        {
+          "path": "glom/test/test_target_types.py",
+          "qualified_name": "test_faulty_op_registration._autodiscover_raise",
+          "line": 222
+        },
+        {
+          "path": "glom/test/test_target_types.py",
+          "qualified_name": "test_faulty_op_registration._autodiscover_sneaky",
+          "line": 246
+        },
+        {
+          "path": "glom/test/test_target_types.py",
+          "qualified_name": "test_reregister_type.NewType",
+          "line": 269
+        }
+      ]
+    },
+    "previous": null
+  },
+  "files": [
+    {
+      "path": "setup.py",
+      "language": "python",
+      "parser": "ast",
+      "syntax_error": false,
+      "symbols": 1,
+      "calls_in_memory": 3,
+      "calls_with_declared_symbol_owner": 3,
+      "docstrings_in_memory": 0,
+      "incoming_edge_count": 0,
+      "incoming_files": [],
+      "imports_without_resolved_edge_on_line": [
+        {
+          "raw": "import importlib.util",
+          "module": "importlib.util",
+          "symbols": [],
+          "line": 1
+        },
+        {
+          "raw": "import os",
+          "module": "os",
+          "symbols": [],
+          "line": 2
+        },
+        {
+          "raw": "from setuptools import setup",
+          "module": "setuptools",
+          "symbols": [
+            "setup"
+          ],
+          "line": 4
+        }
+      ]
+    },
+    {
+      "path": "docs/conf.py",
+      "language": "python",
+      "parser": "ast",
+      "syntax_error": false,
+      "symbols": 0,
+      "calls_in_memory": 0,
+      "calls_with_declared_symbol_owner": 0,
+      "docstrings_in_memory": 0,
+      "incoming_edge_count": 0,
+      "incoming_files": [],
+      "imports_without_resolved_edge_on_line": [
+        {
+          "raw": "import os",
+          "module": "os",
+          "symbols": [],
+          "line": 15
+        },
+        {
+          "raw": "import sys",
+          "module": "sys",
+          "symbols": [],
+          "line": 16
+        },
+        {
+          "raw": "import sphinx",
+          "module": "sphinx",
+          "symbols": [],
+          "line": 17
+        },
+        {
+          "raw": "from pprint import pprint",
+          "module": "pprint",
+          "symbols": [
+            "pprint"
+          ],
+          "line": 18
+        },
+        {
+          "raw": "import sphinx_rtd_theme",
+          "module": "sphinx_rtd_theme",
+          "symbols": [],
+          "line": 115
+        }
+      ]
+    },
+    {
+      "path": "glom/__init__.py",
+      "language": "python",
+      "parser": "ast",
+      "syntax_error": false,
+      "symbols": 0,
+      "calls_in_memory": 0,
+      "calls_with_declared_symbol_owner": 0,
+      "docstrings_in_memory": 0,
+      "incoming_edge_count": 24,
+      "incoming_files": [
+        "glom/cli.py",
+        "glom/test/perf_report.py",
+        "glom/test/test_basic.py",
+        "glom/test/test_check.py",
+        "glom/test/test_error.py",
+        "glom/test/test_fill.py",
+        "glom/test/test_grouping.py",
+        "glom/test/test_match.py",
+        "glom/test/test_mutation.py",
+        "glom/test/test_path_and_t.py",
+        "glom/test/test_reduction.py",
+        "glom/test/test_scope_vars.py",
+        "glom/test/test_snippets.py",
+        "glom/test/test_spec.py",
+        "glom/test/test_streaming.py",
+        "glom/test/test_target_types.py"
+      ],
+      "imports_without_resolved_edge_on_line": []
+    },
+    {
+      "path": "glom/__main__.py",
+      "language": "python",
+      "parser": "ast",
+      "syntax_error": false,
+      "symbols": 0,
+      "calls_in_memory": 0,
+      "calls_with_declared_symbol_owner": 0,
+      "docstrings_in_memory": 0,
+      "incoming_edge_count": 0,
+      "incoming_files": [],
+      "imports_without_resolved_edge_on_line": []
+    },
+    {
+      "path": "glom/_version.py",
+      "language": "python",
+      "parser": "ast",
+      "syntax_error": false,
+      "symbols": 0,
+      "calls_in_memory": 0,
+      "calls_with_declared_symbol_owner": 0,
+      "docstrings_in_memory": 0,
+      "incoming_edge_count": 1,
+      "incoming_files": [
+        "glom/__init__.py"
+      ],
+      "imports_without_resolved_edge_on_line": []
+    },
+    {
+      "path": "glom/cli.py",
+      "language": "python",
+      "parser": "ast",
+      "syntax_error": false,
+      "symbols": 9,
+      "calls_in_memory": 63,
+      "calls_with_declared_symbol_owner": 63,
+      "docstrings_in_memory": 2,
+      "incoming_edge_count": 3,
+      "incoming_files": [
+        "glom/__main__.py",
+        "glom/test/test_cli.py",
+        "tests/stress_stack_generated/test_generated_2.py"
+      ],
+      "imports_without_resolved_edge_on_line": [
+        {
+          "raw": "import os",
+          "module": "os",
+          "symbols": [],
+          "line": 30
+        },
+        {
+          "raw": "import ast",
+          "module": "ast",
+          "symbols": [],
+          "line": 31
+        },
+        {
+          "raw": "import sys",
+          "module": "sys",
+          "symbols": [],
+          "line": 32
+        },
+        {
+          "raw": "import json",
+          "module": "json",
+          "symbols": [],
+          "line": 33
+        },
+        {
+          "raw": "from face import Command, face_middleware, PosArgSpec, UsageError",
+          "module": "face",
+          "symbols": [
+            "Command",
+            "face_middleware",
+            "PosArgSpec",
+            "UsageError"
+          ],
+          "line": 35
+        },
+        {
+          "raw": "from face.utils import isatty",
+          "module": "face.utils",
+          "symbols": [
+            "isatty"
+          ],
+          "line": 36
+        },
+        {
+          "raw": "from boltons.iterutils import is_scalar",
+          "module": "boltons.iterutils",
+          "symbols": [
+            "is_scalar"
+          ],
+          "line": 37
+        },
+        {
+          "raw": "import pdb",
+          "module": "pdb",
+          "symbols": [],
+          "line": 124
+        },
+        {
+          "raw": "import yaml",
+          "module": "yaml",
+          "symbols": [],
+          "line": 148
+        },
+        {
+          "raw": "import tomllib",
+          "module": "tomllib",
+          "symbols": [],
+          "line": 160
+        },
+        {
+          "raw": "import tomli",
+          "module": "tomli",
+          "symbols": [],
+          "line": 165
+        }
+      ]
+    },
+    {
+      "path": "glom/core.py",
+      "language": "python",
+      "parser": "ast",
+      "syntax_error": false,
+      "symbols": 172,
+      "calls_in_memory": 549,
+      "calls_with_declared_symbol_owner": 271,
+      "docstrings_in_memory": 51,
+      "incoming_edge_count": 15,
+      "incoming_files": [
+        "glom/__init__.py",
+        "glom/grouping.py",
+        "glom/matching.py",
+        "glom/mutation.py",
+        "glom/reduction.py",
+        "glom/streaming.py",
+        "glom/test/test_basic.py",
+        "glom/test/test_error.py",
+        "glom/test/test_match.py",
+        "glom/test/test_mutation.py",
+        "glom/test/test_path_and_t.py",
+        "glom/test/test_scope_vars.py",
+        "glom/test/test_target_types.py"
+      ],
+      "imports_without_resolved_edge_on_line": [
+        {
+          "raw": "import os",
+          "module": "os",
+          "symbols": [],
+          "line": 20
+        },
+        {
+          "raw": "import sys",
+          "module": "sys",
+          "symbols": [],
+          "line": 21
+        },
+        {
+          "raw": "import pdb",
+          "module": "pdb",
+          "symbols": [],
+          "line": 22
+        },
+        {
+          "raw": "import copy",
+          "module": "copy",
+          "symbols": [],
+          "line": 23
+        },
+        {
+          "raw": "import warnings",
+          "module": "warnings",
+          "symbols": [],
+          "line": 24
+        },
+        {
+          "raw": "import operator",
+          "module": "operator",
+          "symbols": [],
+          "line": 25
+        },
+        {
+          "raw": "from abc import ABCMeta",
+          "module": "abc",
+          "symbols": [
+            "ABCMeta"
+          ],
+          "line": 26
+        },
+        {
+          "raw": "import string",
+          "module": "string",
+          "symbols": [],
+          "line": 27
+        },
+        {
+          "raw": "from collections import OrderedDict",
+          "module": "collections",
+          "symbols": [
+            "OrderedDict"
+          ],
+          "line": 28
+        },
+        {
+          "raw": "import traceback",
+          "module": "traceback",
+          "symbols": [],
+          "line": 29
+        },
+        {
+          "raw": "from face.helpers import get_wrap_width",
+          "module": "face.helpers",
+          "symbols": [
+            "get_wrap_width"
+          ],
+          "line": 31
+        },
+        {
+          "raw": "from boltons.typeutils import make_sentinel",
+          "module": "boltons.typeutils",
+          "symbols": [
+            "make_sentinel"
+          ],
+          "line": 32
+        },
+        {
+          "raw": "from collections import ChainMap",
+          "module": "collections",
+          "symbols": [
+            "ChainMap"
+          ],
+          "line": 37
+        },
+        {
+          "raw": "from reprlib import Repr, recursive_repr",
+          "module": "reprlib",
+          "symbols": [
+            "Repr",
+            "recursive_repr"
+          ],
+          "line": 38
+        }
+      ]
+    },
+    {
+      "path": "glom/grouping.py",
+      "language": "python",
+      "parser": "ast",
+      "syntax_error": false,
+      "symbols": 26,
+      "calls_in_memory": 29,
+      "calls_with_declared_symbol_owner": 22,
+      "docstrings_in_memory": 8,
+      "incoming_edge_count": 2,
+      "incoming_files": [
+        "glom/reduction.py",
+        "glom/test/test_grouping.py"
+      ],
+      "imports_without_resolved_edge_on_line": [
+        {
+          "raw": "import random",
+          "module": "random",
+          "symbols": [],
+          "line": 5
+        },
+        {
+          "raw": "from boltons.typeutils import make_sentinel",
+          "module": "boltons.typeutils",
+          "symbols": [
+            "make_sentinel"
+          ],
+          "line": 7
+        }
+      ]
+    },
+    {
+      "path": "glom/matching.py",
+      "language": "python",
+      "parser": "ast",
+      "syntax_error": false,
+      "symbols": 88,
+      "calls_in_memory": 220,
+      "calls_with_declared_symbol_owner": 60,
+      "docstrings_in_memory": 19,
+      "incoming_edge_count": 4,
+      "incoming_files": [
+        "glom/__init__.py",
+        "glom/streaming.py",
+        "glom/test/test_error.py",
+        "glom/test/test_match.py"
+      ],
+      "imports_without_resolved_edge_on_line": [
+        {
+          "raw": "import re",
+          "module": "re",
+          "symbols": [],
+          "line": 10
+        },
+        {
+          "raw": "from boltons.iterutils import is_iterable",
+          "module": "boltons.iterutils",
+          "symbols": [
+            "is_iterable"
+          ],
+          "line": 12
+        },
+        {
+          "raw": "from boltons.typeutils import make_sentinel",
+          "module": "boltons.typeutils",
+          "symbols": [
+            "make_sentinel"
+          ],
+          "line": 13
+        }
+      ]
+    },
+    {
+      "path": "glom/mutation.py",
+      "language": "python",
+      "parser": "ast",
+      "syntax_error": false,
+      "symbols": 18,
+      "calls_in_memory": 60,
+      "calls_with_declared_symbol_owner": 21,
+      "docstrings_in_memory": 5,
+      "incoming_edge_count": 2,
+      "incoming_files": [
+        "glom/__init__.py",
+        "glom/test/test_scope_vars.py"
+      ],
+      "imports_without_resolved_edge_on_line": [
+        {
+          "raw": "import operator",
+          "module": "operator",
+          "symbols": [],
+          "line": 20
+        }
+      ]
+    },
+    {
+      "path": "glom/reduction.py",
+      "language": "python",
+      "parser": "ast",
+      "syntax_error": false,
+      "symbols": 23,
+      "calls_in_memory": 56,
+      "calls_with_declared_symbol_owner": 18,
+      "docstrings_in_memory": 8,
+      "incoming_edge_count": 2,
+      "incoming_files": [
+        "glom/__init__.py",
+        "glom/test/test_grouping.py"
+      ],
+      "imports_without_resolved_edge_on_line": [
+        {
+          "raw": "import operator",
+          "module": "operator",
+          "symbols": [],
+          "line": 1
+        },
+        {
+          "raw": "import itertools",
+          "module": "itertools",
+          "symbols": [],
+          "line": 2
+        },
+        {
+          "raw": "from boltons.typeutils import make_sentinel",
+          "module": "boltons.typeutils",
+          "symbols": [
+            "make_sentinel"
+          ],
+          "line": 4
+        }
+      ]
+    },
+    {
+      "path": "glom/streaming.py",
+      "language": "python",
+      "parser": "ast",
+      "syntax_error": false,
+      "symbols": 23,
+      "calls_in_memory": 60,
+      "calls_with_declared_symbol_owner": 0,
+      "docstrings_in_memory": 15,
+      "incoming_edge_count": 1,
+      "incoming_files": [
+        "glom/__init__.py"
+      ],
+      "imports_without_resolved_edge_on_line": [
+        {
+          "raw": "from itertools import islice, dropwhile, takewhile, chain",
+          "module": "itertools",
+          "symbols": [
+            "islice",
+            "dropwhile",
+            "takewhile",
+            "chain"
+          ],
+          "line": 12
+        },
+        {
+          "raw": "from functools import partial",
+          "module": "functools",
+          "symbols": [
+            "partial"
+          ],
+          "line": 13
+        },
+        {
+          "raw": "from boltons.iterutils import split_iter, chunked_iter, windowed_iter, unique_iter, first",
+          "module": "boltons.iterutils",
+          "symbols": [
+            "split_iter",
+            "chunked_iter",
+            "windowed_iter",
+            "unique_iter",
+            "first"
+          ],
+          "line": 22
+        },
+        {
+          "raw": "from boltons.funcutils import FunctionBuilder",
+          "module": "boltons.funcutils",
+          "symbols": [
+            "FunctionBuilder"
+          ],
+          "line": 29
+        },
+        {
+          "raw": "from itertools import imap, ifilter",
+          "module": "itertools",
+          "symbols": [
+            "imap",
+            "ifilter"
+          ],
+          "line": 16
+        }
+      ]
+    },
+    {
+      "path": "glom/tutorial.py",
+      "language": "python",
+      "parser": "ast",
+      "syntax_error": false,
+      "symbols": 8,
+      "calls_in_memory": 4,
+      "calls_with_declared_symbol_owner": 0,
+      "docstrings_in_memory": 1,
+      "incoming_edge_count": 2,
+      "incoming_files": [
+        "glom/test/test_tutorial.py"
+      ],
+      "imports_without_resolved_edge_on_line": [
+        {
+          "raw": "import datetime",
+          "module": "datetime",
+          "symbols": [],
+          "line": 435
+        },
+        {
+          "raw": "from itertools import count",
+          "module": "itertools",
+          "symbols": [
+            "count"
+          ],
+          "line": 436
+        },
+        {
+          "raw": "from collections import OrderedDict",
+          "module": "collections",
+          "symbols": [
+            "OrderedDict"
+          ],
+          "line": 437
+        },
+        {
+          "raw": "import attr",
+          "module": "attr",
+          "symbols": [],
+          "line": 438
+        },
+        {
+          "raw": "from attr import Factory",
+          "module": "attr",
+          "symbols": [
+            "Factory"
+          ],
+          "line": 439
+        }
+      ]
+    },
+    {
+      "path": "glom/test/__init__.py",
+      "language": "python",
+      "parser": "none",
+      "syntax_error": false,
+      "symbols": 0,
+      "calls_in_memory": 0,
+      "calls_with_declared_symbol_owner": 0,
+      "docstrings_in_memory": 0,
+      "incoming_edge_count": 0,
+      "incoming_files": [],
+      "imports_without_resolved_edge_on_line": []
+    },
+    {
+      "path": "glom/test/conftest.py",
+      "language": "python",
+      "parser": "ast",
+      "syntax_error": false,
+      "symbols": 0,
+      "calls_in_memory": 0,
+      "calls_with_declared_symbol_owner": 0,
+      "docstrings_in_memory": 0,
+      "incoming_edge_count": 0,
+      "incoming_files": [],
+      "imports_without_resolved_edge_on_line": [
+        {
+          "raw": "import os",
+          "module": "os",
+          "symbols": [],
+          "line": 1
+        },
+        {
+          "raw": "import sys",
+          "module": "sys",
+          "symbols": [],
+          "line": 2
+        }
+      ]
+    },
+    {
+      "path": "glom/test/perf_report.py",
+      "language": "python",
+      "parser": "ast",
+      "syntax_error": false,
+      "symbols": 4,
+      "calls_in_memory": 23,
+      "calls_with_declared_symbol_owner": 23,
+      "docstrings_in_memory": 1,
+      "incoming_edge_count": 0,
+      "incoming_files": [],
+      "imports_without_resolved_edge_on_line": [
+        {
+          "raw": "import time",
+          "module": "time",
+          "symbols": [],
+          "line": 5
+        },
+        {
+          "raw": "import attr",
+          "module": "attr",
+          "symbols": [],
+          "line": 7
+        }
+      ]
+    },
+    {
+      "path": "glom/test/test_basic.py",
+      "language": "python",
+      "parser": "ast",
+      "syntax_error": false,
+      "symbols": 22,
+      "calls_in_memory": 229,
+      "calls_with_declared_symbol_owner": 226,
+      "docstrings_in_memory": 0,
+      "incoming_edge_count": 0,
+      "incoming_files": [],
+      "imports_without_resolved_edge_on_line": [
+        {
+          "raw": "import sys",
+          "module": "sys",
+          "symbols": [],
+          "line": 1
+        },
+        {
+          "raw": "from xml.etree import ElementTree",
+          "module": "xml.etree",
+          "symbols": [
+            "ElementTree"
+          ],
+          "line": 2
+        },
+        {
+          "raw": "import pytest",
+          "module": "pytest",
+          "symbols": [],
+          "line": 4
+        },
+        {
+          "raw": "import pdb",
+          "module": "pdb",
+          "symbols": [],
+          "line": 413
+        }
+      ]
+    },
+    {
+      "path": "glom/test/test_check.py",
+      "language": "python",
+      "parser": "ast",
+      "syntax_error": false,
+      "symbols": 3,
+      "calls_in_memory": 69,
+      "calls_with_declared_symbol_owner": 69,
+      "docstrings_in_memory": 0,
+      "incoming_edge_count": 0,
+      "incoming_files": [],
+      "imports_without_resolved_edge_on_line": [
+        {
+          "raw": "from pytest import raises",
+          "module": "pytest",
+          "symbols": [
+            "raises"
+          ],
+          "line": 1
+        }
+      ]
+    },
+    {
+      "path": "glom/test/test_cli.py",
+      "language": "python",
+      "parser": "ast",
+      "syntax_error": false,
+      "symbols": 14,
+      "calls_in_memory": 54,
+      "calls_with_declared_symbol_owner": 54,
+      "docstrings_in_memory": 0,
+      "incoming_edge_count": 0,
+      "incoming_files": [],
+      "imports_without_resolved_edge_on_line": [
+        {
+          "raw": "import os",
+          "module": "os",
+          "symbols": [],
+          "line": 1
+        },
+        {
+          "raw": "import subprocess",
+          "module": "subprocess",
+          "symbols": [],
+          "line": 2
+        },
+        {
+          "raw": "import pytest",
+          "module": "pytest",
+          "symbols": [],
+          "line": 4
+        },
+        {
+          "raw": "from face import CommandChecker, CommandLineError",
+          "module": "face",
+          "symbols": [
+            "CommandChecker",
+            "CommandLineError"
+          ],
+          "line": 5
+        }
+      ]
+    },
+    {
+      "path": "glom/test/test_error.py",
+      "language": "python",
+      "parser": "ast",
+      "syntax_error": false,
+      "symbols": 26,
+      "calls_in_memory": 152,
+      "calls_with_declared_symbol_owner": 139,
+      "docstrings_in_memory": 4,
+      "incoming_edge_count": 0,
+      "incoming_files": [],
+      "imports_without_resolved_edge_on_line": [
+        {
+          "raw": "import os",
+          "module": "os",
+          "symbols": [],
+          "line": 1
+        },
+        {
+          "raw": "import traceback",
+          "module": "traceback",
+          "symbols": [],
+          "line": 2
+        },
+        {
+          "raw": "import pytest",
+          "module": "pytest",
+          "symbols": [],
+          "line": 4
+        },
+        {
+          "raw": "from boltons.funcutils import FunctionBuilder",
+          "module": "boltons.funcutils",
+          "symbols": [
+            "FunctionBuilder"
+          ],
+          "line": 160
+        },
+        {
+          "raw": "import copy",
+          "module": "copy",
+          "symbols": [],
+          "line": 503
+        }
+      ]
+    },
+    {
+      "path": "glom/test/test_fill.py",
+      "language": "python",
+      "parser": "ast",
+      "syntax_error": false,
+      "symbols": 1,
+      "calls_in_memory": 28,
+      "calls_with_declared_symbol_owner": 28,
+      "docstrings_in_memory": 0,
+      "incoming_edge_count": 0,
+      "incoming_files": [],
+      "imports_without_resolved_edge_on_line": []
+    },
+    {
+      "path": "glom/test/test_grouping.py",
+      "language": "python",
+      "parser": "ast",
+      "syntax_error": false,
+      "symbols": 6,
+      "calls_in_memory": 109,
+      "calls_with_declared_symbol_owner": 109,
+      "docstrings_in_memory": 0,
+      "incoming_edge_count": 0,
+      "incoming_files": [],
+      "imports_without_resolved_edge_on_line": [
+        {
+          "raw": "from pytest import raises",
+          "module": "pytest",
+          "symbols": [
+            "raises"
+          ],
+          "line": 1
+        }
+      ]
+    },
+    {
+      "path": "glom/test/test_match.py",
+      "language": "python",
+      "parser": "ast",
+      "syntax_error": false,
+      "symbols": 25,
+      "calls_in_memory": 432,
+      "calls_with_declared_symbol_owner": 416,
+      "docstrings_in_memory": 6,
+      "incoming_edge_count": 0,
+      "incoming_files": [],
+      "imports_without_resolved_edge_on_line": [
+        {
+          "raw": "import re",
+          "module": "re",
+          "symbols": [],
+          "line": 1
+        },
+        {
+          "raw": "import json",
+          "module": "json",
+          "symbols": [],
+          "line": 2
+        },
+        {
+          "raw": "import pytest",
+          "module": "pytest",
+          "symbols": [],
+          "line": 4
+        },
+        {
+          "raw": "import datetime",
+          "module": "datetime",
+          "symbols": [],
+          "line": 281
+        },
+        {
+          "raw": "import json",
+          "module": "json",
+          "symbols": [],
+          "line": 417
+        }
+      ]
+    },
+    {
+      "path": "glom/test/test_mutation.py",
+      "language": "python",
+      "parser": "ast",
+      "syntax_error": false,
+      "symbols": 20,
+      "calls_in_memory": 187,
+      "calls_with_declared_symbol_owner": 182,
+      "docstrings_in_memory": 3,
+      "incoming_edge_count": 0,
+      "incoming_files": [],
+      "imports_without_resolved_edge_on_line": [
+        {
+          "raw": "import pytest",
+          "module": "pytest",
+          "symbols": [],
+          "line": 1
+        },
+        {
+          "raw": "from itertools import count",
+          "module": "itertools",
+          "symbols": [
+            "count"
+          ],
+          "line": 124
+        }
+      ]
+    },
+    {
+      "path": "glom/test/test_path_and_t.py",
+      "language": "python",
+      "parser": "ast",
+      "syntax_error": false,
+      "symbols": 27,
+      "calls_in_memory": 226,
+      "calls_with_declared_symbol_owner": 226,
+      "docstrings_in_memory": 1,
+      "incoming_edge_count": 0,
+      "incoming_files": [],
+      "imports_without_resolved_edge_on_line": [
+        {
+          "raw": "from pytest import raises",
+          "module": "pytest",
+          "symbols": [
+            "raises"
+          ],
+          "line": 1
+        },
+        {
+          "raw": "import pickle",
+          "module": "pickle",
+          "symbols": [],
+          "line": 100
+        }
+      ]
+    },
+    {
+      "path": "glom/test/test_reduction.py",
+      "language": "python",
+      "parser": "ast",
+      "syntax_error": false,
+      "symbols": 9,
+      "calls_in_memory": 91,
+      "calls_with_declared_symbol_owner": 90,
+      "docstrings_in_memory": 0,
+      "incoming_edge_count": 0,
+      "incoming_files": [],
+      "imports_without_resolved_edge_on_line": [
+        {
+          "raw": "import operator",
+          "module": "operator",
+          "symbols": [],
+          "line": 1
+        },
+        {
+          "raw": "import pytest",
+          "module": "pytest",
+          "symbols": [],
+          "line": 3
+        },
+        {
+          "raw": "from boltons.dictutils import OMD",
+          "module": "boltons.dictutils",
+          "symbols": [
+            "OMD"
+          ],
+          "line": 4
+        }
+      ]
+    },
+    {
+      "path": "glom/test/test_scope_vars.py",
+      "language": "python",
+      "parser": "ast",
+      "syntax_error": false,
+      "symbols": 6,
+      "calls_in_memory": 90,
+      "calls_with_declared_symbol_owner": 88,
+      "docstrings_in_memory": 0,
+      "incoming_edge_count": 0,
+      "incoming_files": [],
+      "imports_without_resolved_edge_on_line": [
+        {
+          "raw": "import pytest",
+          "module": "pytest",
+          "symbols": [],
+          "line": 1
+        }
+      ]
+    },
+    {
+      "path": "glom/test/test_snippets.py",
+      "language": "python",
+      "parser": "ast",
+      "syntax_error": false,
+      "symbols": 3,
+      "calls_in_memory": 14,
+      "calls_with_declared_symbol_owner": 14,
+      "docstrings_in_memory": 0,
+      "incoming_edge_count": 0,
+      "incoming_files": [],
+      "imports_without_resolved_edge_on_line": [
+        {
+          "raw": "import copy",
+          "module": "copy",
+          "symbols": [],
+          "line": 1
+        },
+        {
+          "raw": "from collections import deque",
+          "module": "collections",
+          "symbols": [
+            "deque"
+          ],
+          "line": 2
+        },
+        {
+          "raw": "from decimal import Decimal",
+          "module": "decimal",
+          "symbols": [
+            "Decimal"
+          ],
+          "line": 3
+        },
+        {
+          "raw": "import json",
+          "module": "json",
+          "symbols": [],
+          "line": 4
+        },
+        {
+          "raw": "import os",
+          "module": "os",
+          "symbols": [],
+          "line": 5
+        },
+        {
+          "raw": "import textwrap",
+          "module": "textwrap",
+          "symbols": [],
+          "line": 6
+        },
+        {
+          "raw": "import pytest",
+          "module": "pytest",
+          "symbols": [],
+          "line": 8
+        }
+      ]
+    },
+    {
+      "path": "glom/test/test_spec.py",
+      "language": "python",
+      "parser": "ast",
+      "syntax_error": false,
+      "symbols": 2,
+      "calls_in_memory": 15,
+      "calls_with_declared_symbol_owner": 15,
+      "docstrings_in_memory": 0,
+      "incoming_edge_count": 0,
+      "incoming_files": [],
+      "imports_without_resolved_edge_on_line": [
+        {
+          "raw": "import pytest",
+          "module": "pytest",
+          "symbols": [],
+          "line": 1
+        }
+      ]
+    },
+    {
+      "path": "glom/test/test_streaming.py",
+      "language": "python",
+      "parser": "ast",
+      "syntax_error": false,
+      "symbols": 13,
+      "calls_in_memory": 212,
+      "calls_with_declared_symbol_owner": 211,
+      "docstrings_in_memory": 0,
+      "incoming_edge_count": 0,
+      "incoming_files": [],
+      "imports_without_resolved_edge_on_line": [
+        {
+          "raw": "import pytest",
+          "module": "pytest",
+          "symbols": [],
+          "line": 1
+        },
+        {
+          "raw": "from itertools import count",
+          "module": "itertools",
+          "symbols": [
+            "count"
+          ],
+          "line": 3
+        }
+      ]
+    },
+    {
+      "path": "glom/test/test_target_types.py",
+      "language": "python",
+      "parser": "ast",
+      "syntax_error": false,
+      "symbols": 18,
+      "calls_in_memory": 115,
+      "calls_with_declared_symbol_owner": 109,
+      "docstrings_in_memory": 0,
+      "incoming_edge_count": 0,
+      "incoming_files": [],
+      "imports_without_resolved_edge_on_line": [
+        {
+          "raw": "import pytest",
+          "module": "pytest",
+          "symbols": [],
+          "line": 1
+        }
+      ]
+    },
+    {
+      "path": "glom/test/test_tutorial.py",
+      "language": "python",
+      "parser": "ast",
+      "syntax_error": false,
+      "symbols": 2,
+      "calls_in_memory": 6,
+      "calls_with_declared_symbol_owner": 6,
+      "docstrings_in_memory": 0,
+      "incoming_edge_count": 0,
+      "incoming_files": [],
+      "imports_without_resolved_edge_on_line": []
+    },
+    {
+      "path": "tests/stress_stack_generated/test_generated_2.py",
+      "language": "python",
+      "parser": "ast",
+      "syntax_error": false,
+      "symbols": 1,
+      "calls_in_memory": 4,
+      "calls_with_declared_symbol_owner": 4,
+      "docstrings_in_memory": 0,
+      "incoming_edge_count": 0,
+      "incoming_files": [],
+      "imports_without_resolved_edge_on_line": [
+        {
+          "raw": "import pytest",
+          "module": "pytest",
+          "symbols": [],
+          "line": 1
+        }
+      ]
+    }
+  ]
+}

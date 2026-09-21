@@ -1,0 +1,4378 @@
+{
+  "schema_version": "0.2.0",
+  "root": "/Users/adityagk/Desktop/projects/recipehub",
+  "statistics": {
+    "files_total": 29,
+    "files_by_language": {
+      "javascript": 29
+    },
+    "symbols_total": 117,
+    "tests_total": 0,
+    "calls_total": 1142,
+    "syntax_errors": 2,
+    "unparsed_known_language": 0,
+    "edges_total": 156,
+    "edges_by_kind": {
+      "contain": 117,
+      "import": 39
+    }
+  },
+  "files": [
+    {
+      "path": "server/server.js",
+      "language": "javascript",
+      "parser": "tree_sitter",
+      "has_syntax_error": false,
+      "imports": [
+        {
+          "raw": "import express from 'express';",
+          "module": "express",
+          "symbols": [
+            "express"
+          ],
+          "line": 1
+        },
+        {
+          "raw": "import mongoose from 'mongoose';",
+          "module": "mongoose",
+          "symbols": [
+            "mongoose"
+          ],
+          "line": 2
+        },
+        {
+          "raw": "import cors from 'cors';",
+          "module": "cors",
+          "symbols": [
+            "cors"
+          ],
+          "line": 3
+        },
+        {
+          "raw": "import dotenv from 'dotenv';",
+          "module": "dotenv",
+          "symbols": [
+            "dotenv"
+          ],
+          "line": 4
+        },
+        {
+          "raw": "import recipeRoutes from './routes/recipes.js';",
+          "module": "./routes/recipes.js",
+          "symbols": [
+            "recipeRoutes"
+          ],
+          "line": 5
+        },
+        {
+          "raw": "import storyRoutes from './routes/stories.js';",
+          "module": "./routes/stories.js",
+          "symbols": [
+            "storyRoutes"
+          ],
+          "line": 6
+        },
+        {
+          "raw": "import playlistRoutes from './routes/playlists.js';",
+          "module": "./routes/playlists.js",
+          "symbols": [
+            "playlistRoutes"
+          ],
+          "line": 7
+        }
+      ],
+      "symbols": []
+    },
+    {
+      "path": "server/middleware/auth.js",
+      "language": "javascript",
+      "parser": "tree_sitter",
+      "has_syntax_error": false,
+      "imports": [
+        {
+          "raw": "import jwt from 'jsonwebtoken';",
+          "module": "jsonwebtoken",
+          "symbols": [
+            "jwt"
+          ],
+          "line": 1
+        },
+        {
+          "raw": "import User from '../models/User.js';",
+          "module": "../models/User.js",
+          "symbols": [
+            "User"
+          ],
+          "line": 2
+        }
+      ],
+      "symbols": [
+        {
+          "name": "verifyToken",
+          "qualified_name": "verifyToken",
+          "kind": "function",
+          "start_line": 6,
+          "end_line": 30,
+          "first_body_line": 6,
+          "last_body_line": 30,
+          "is_test": false,
+          "is_async": true,
+          "is_generator": false,
+          "body_start_byte": 210,
+          "body_end_byte": 788,
+          "bases": [],
+          "parent": "",
+          "id": "server/middleware/auth.js::verifyToken"
+        }
+      ]
+    },
+    {
+      "path": "server/models/Playlist.js",
+      "language": "javascript",
+      "parser": "tree_sitter",
+      "has_syntax_error": false,
+      "imports": [
+        {
+          "raw": "import mongoose from 'mongoose';",
+          "module": "mongoose",
+          "symbols": [
+            "mongoose"
+          ],
+          "line": 1
+        }
+      ],
+      "symbols": []
+    },
+    {
+      "path": "server/models/Recipe.js",
+      "language": "javascript",
+      "parser": "tree_sitter",
+      "has_syntax_error": false,
+      "imports": [
+        {
+          "raw": "import mongoose from 'mongoose';",
+          "module": "mongoose",
+          "symbols": [
+            "mongoose"
+          ],
+          "line": 1
+        }
+      ],
+      "symbols": []
+    },
+    {
+      "path": "server/models/Story.js",
+      "language": "javascript",
+      "parser": "tree_sitter",
+      "has_syntax_error": false,
+      "imports": [
+        {
+          "raw": "import mongoose from 'mongoose';",
+          "module": "mongoose",
+          "symbols": [
+            "mongoose"
+          ],
+          "line": 1
+        }
+      ],
+      "symbols": []
+    },
+    {
+      "path": "server/models/User.js",
+      "language": "javascript",
+      "parser": "tree_sitter",
+      "has_syntax_error": false,
+      "imports": [
+        {
+          "raw": "import mongoose from 'mongoose';",
+          "module": "mongoose",
+          "symbols": [
+            "mongoose"
+          ],
+          "line": 1
+        },
+        {
+          "raw": "import bcrypt from 'bcryptjs';",
+          "module": "bcryptjs",
+          "symbols": [
+            "bcrypt"
+          ],
+          "line": 2
+        }
+      ],
+      "symbols": []
+    },
+    {
+      "path": "server/routes/auth.js",
+      "language": "javascript",
+      "parser": "tree_sitter",
+      "has_syntax_error": false,
+      "imports": [
+        {
+          "raw": "import express from 'express';",
+          "module": "express",
+          "symbols": [
+            "express"
+          ],
+          "line": 1
+        },
+        {
+          "raw": "import jwt from 'jsonwebtoken';",
+          "module": "jsonwebtoken",
+          "symbols": [
+            "jwt"
+          ],
+          "line": 2
+        },
+        {
+          "raw": "import { verifyToken } from '../middleware/auth.js';",
+          "module": "../middleware/auth.js",
+          "symbols": [
+            "verifyToken"
+          ],
+          "line": 3
+        },
+        {
+          "raw": "import User from '../models/User.js';",
+          "module": "../models/User.js",
+          "symbols": [
+            "User"
+          ],
+          "line": 4
+        }
+      ],
+      "symbols": []
+    },
+    {
+      "path": "server/routes/playlists.js",
+      "language": "javascript",
+      "parser": "tree_sitter",
+      "has_syntax_error": false,
+      "imports": [
+        {
+          "raw": "import express from 'express';",
+          "module": "express",
+          "symbols": [
+            "express"
+          ],
+          "line": 1
+        },
+        {
+          "raw": "import Playlist from '../models/Playlist.js';",
+          "module": "../models/Playlist.js",
+          "symbols": [
+            "Playlist"
+          ],
+          "line": 2
+        }
+      ],
+      "symbols": []
+    },
+    {
+      "path": "server/routes/recipes.js",
+      "language": "javascript",
+      "parser": "tree_sitter",
+      "has_syntax_error": false,
+      "imports": [
+        {
+          "raw": "import express from 'express';",
+          "module": "express",
+          "symbols": [
+            "express"
+          ],
+          "line": 1
+        },
+        {
+          "raw": "import Recipe from '../models/Recipe.js';",
+          "module": "../models/Recipe.js",
+          "symbols": [
+            "Recipe"
+          ],
+          "line": 2
+        }
+      ],
+      "symbols": []
+    },
+    {
+      "path": "server/routes/stories.js",
+      "language": "javascript",
+      "parser": "tree_sitter",
+      "has_syntax_error": false,
+      "imports": [
+        {
+          "raw": "import express from 'express';",
+          "module": "express",
+          "symbols": [
+            "express"
+          ],
+          "line": 1
+        },
+        {
+          "raw": "import Story from '../models/Story.js';",
+          "module": "../models/Story.js",
+          "symbols": [
+            "Story"
+          ],
+          "line": 2
+        }
+      ],
+      "symbols": []
+    },
+    {
+      "path": "src/App.jsx",
+      "language": "javascript",
+      "parser": "tree_sitter",
+      "has_syntax_error": false,
+      "imports": [
+        {
+          "raw": "import React from 'react';",
+          "module": "react",
+          "symbols": [
+            "React"
+          ],
+          "line": 1
+        },
+        {
+          "raw": "import { BrowserRouter as Router, Routes, Route, Link, useLocation, Navigate } from 'react-router-dom';",
+          "module": "react-router-dom",
+          "symbols": [
+            "BrowserRouter",
+            "Router",
+            "Routes",
+            "Route",
+            "Link",
+            "useLocation",
+            "Navigate"
+          ],
+          "line": 2
+        },
+        {
+          "raw": "import { RecipeProvider } from './context/RecipeContext';",
+          "module": "./context/RecipeContext",
+          "symbols": [
+            "RecipeProvider"
+          ],
+          "line": 3
+        },
+        {
+          "raw": "import { StoriesProvider } from './context/StoriesContext';",
+          "module": "./context/StoriesContext",
+          "symbols": [
+            "StoriesProvider"
+          ],
+          "line": 4
+        },
+        {
+          "raw": "import Home from './components/Home/Home';",
+          "module": "./components/Home/Home",
+          "symbols": [
+            "Home"
+          ],
+          "line": 5
+        },
+        {
+          "raw": "import RecipeFinder from './components/RecipeFinder/RecipeFinder';",
+          "module": "./components/RecipeFinder/RecipeFinder",
+          "symbols": [
+            "RecipeFinder"
+          ],
+          "line": 6
+        },
+        {
+          "raw": "import Stories from './components/Stories/Stories';",
+          "module": "./components/Stories/Stories",
+          "symbols": [
+            "Stories"
+          ],
+          "line": 7
+        },
+        {
+          "raw": "import SearchPage from './components/SearchPage/SearchPage';",
+          "module": "./components/SearchPage/SearchPage",
+          "symbols": [
+            "SearchPage"
+          ],
+          "line": 8
+        },
+        {
+          "raw": "import './App.css';",
+          "module": "./App.css",
+          "symbols": [],
+          "line": 9
+        }
+      ],
+      "symbols": [
+        {
+          "name": "NavigationContent",
+          "qualified_name": "NavigationContent",
+          "kind": "function",
+          "start_line": 11,
+          "end_line": 49,
+          "first_body_line": 11,
+          "last_body_line": 49,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 522,
+          "body_end_byte": 1891,
+          "bases": [],
+          "parent": "",
+          "id": "src/App.jsx::NavigationContent"
+        },
+        {
+          "name": "AppContent",
+          "qualified_name": "AppContent",
+          "kind": "function",
+          "start_line": 51,
+          "end_line": 66,
+          "first_body_line": 51,
+          "last_body_line": 66,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 1915,
+          "body_end_byte": 2481,
+          "bases": [],
+          "parent": "",
+          "id": "src/App.jsx::AppContent"
+        },
+        {
+          "name": "App",
+          "qualified_name": "App",
+          "kind": "function",
+          "start_line": 68,
+          "end_line": 76,
+          "first_body_line": 68,
+          "last_body_line": 76,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 2513,
+          "body_end_byte": 2679,
+          "bases": [],
+          "parent": "",
+          "id": "src/App.jsx::App"
+        }
+      ]
+    },
+    {
+      "path": "src/CreateArea.jsx",
+      "language": "javascript",
+      "parser": "tree_sitter",
+      "has_syntax_error": true,
+      "imports": [
+        {
+          "raw": "import React, { useState, useEffect, useRef } from 'react';",
+          "module": "react",
+          "symbols": [
+            "React",
+            "useState",
+            "useEffect",
+            "useRef"
+          ],
+          "line": 1
+        },
+        {
+          "raw": "import Modal from 'react-bootstrap/Modal';",
+          "module": "react-bootstrap/Modal",
+          "symbols": [
+            "Modal"
+          ],
+          "line": 2
+        },
+        {
+          "raw": "import Form from 'react-bootstrap/Form';",
+          "module": "react-bootstrap/Form",
+          "symbols": [
+            "Form"
+          ],
+          "line": 3
+        },
+        {
+          "raw": "import { SpeechRecognitionService } from './services/speechService';",
+          "module": "./services/speechService",
+          "symbols": [
+            "SpeechRecognitionService"
+          ],
+          "line": 4
+        },
+        {
+          "raw": "import { AudioRecorderService } from './services/audioService';",
+          "module": "./services/audioService",
+          "symbols": [
+            "AudioRecorderService"
+          ],
+          "line": 5
+        },
+        {
+          "raw": "import { formatRecipeWithGemini } from './services/geminiService';",
+          "module": "./services/geminiService",
+          "symbols": [
+            "formatRecipeWithGemini"
+          ],
+          "line": 6
+        },
+        {
+          "raw": "import './styles/Modal.css';",
+          "module": "./styles/Modal.css",
+          "symbols": [],
+          "line": 7
+        },
+        {
+          "raw": "import './CreateArea.css';",
+          "module": "./CreateArea.css",
+          "symbols": [],
+          "line": 8
+        }
+      ],
+      "symbols": [
+        {
+          "name": "CreateArea",
+          "qualified_name": "CreateArea",
+          "kind": "function",
+          "start_line": 10,
+          "end_line": 984,
+          "first_body_line": 10,
+          "last_body_line": 984,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 472,
+          "body_end_byte": 46441,
+          "bases": [],
+          "parent": "",
+          "id": "src/CreateArea.jsx::CreateArea"
+        },
+        {
+          "name": "handleClick",
+          "qualified_name": "handleClick",
+          "kind": "function",
+          "start_line": 87,
+          "end_line": 95,
+          "first_body_line": 87,
+          "last_body_line": 95,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 3731,
+          "body_end_byte": 3973,
+          "bases": [],
+          "parent": "",
+          "id": "src/CreateArea.jsx::handleClick"
+        },
+        {
+          "name": "handleCloseModeModal",
+          "qualified_name": "handleCloseModeModal",
+          "kind": "function",
+          "start_line": 105,
+          "end_line": 107,
+          "first_body_line": 105,
+          "last_body_line": 107,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 4207,
+          "body_end_byte": 4247,
+          "bases": [],
+          "parent": "",
+          "id": "src/CreateArea.jsx::handleCloseModeModal"
+        },
+        {
+          "name": "handleCloseRecipeModal",
+          "qualified_name": "handleCloseRecipeModal",
+          "kind": "function",
+          "start_line": 109,
+          "end_line": 128,
+          "first_body_line": 109,
+          "last_body_line": 128,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 4291,
+          "body_end_byte": 4908,
+          "bases": [],
+          "parent": "",
+          "id": "src/CreateArea.jsx::handleCloseRecipeModal"
+        },
+        {
+          "name": "handleSelectMode",
+          "qualified_name": "handleSelectMode",
+          "kind": "function",
+          "start_line": 130,
+          "end_line": 141,
+          "first_body_line": 130,
+          "last_body_line": 141,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 4958,
+          "body_end_byte": 5235,
+          "bases": [],
+          "parent": "",
+          "id": "src/CreateArea.jsx::handleSelectMode"
+        },
+        {
+          "name": "handleAddIngredient",
+          "qualified_name": "handleAddIngredient",
+          "kind": "function",
+          "start_line": 143,
+          "end_line": 168,
+          "first_body_line": 143,
+          "last_body_line": 168,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 5276,
+          "body_end_byte": 6199,
+          "bases": [],
+          "parent": "",
+          "id": "src/CreateArea.jsx::handleAddIngredient"
+        },
+        {
+          "name": "handleAddInstruction",
+          "qualified_name": "handleAddInstruction",
+          "kind": "function",
+          "start_line": 170,
+          "end_line": 196,
+          "first_body_line": 170,
+          "last_body_line": 196,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 6241,
+          "body_end_byte": 7211,
+          "bases": [],
+          "parent": "",
+          "id": "src/CreateArea.jsx::handleAddInstruction"
+        },
+        {
+          "name": "handleKeyPress",
+          "qualified_name": "handleKeyPress",
+          "kind": "function",
+          "start_line": 198,
+          "end_line": 207,
+          "first_body_line": 198,
+          "last_body_line": 207,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 7256,
+          "body_end_byte": 7525,
+          "bases": [],
+          "parent": "",
+          "id": "src/CreateArea.jsx::handleKeyPress"
+        },
+        {
+          "name": "handleEdit",
+          "qualified_name": "handleEdit",
+          "kind": "function",
+          "start_line": 209,
+          "end_line": 221,
+          "first_body_line": 209,
+          "last_body_line": 221,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 7568,
+          "body_end_byte": 8028,
+          "bases": [],
+          "parent": "",
+          "id": "src/CreateArea.jsx::handleEdit"
+        },
+        {
+          "name": "handleStartListening",
+          "qualified_name": "handleStartListening",
+          "kind": "function",
+          "start_line": 223,
+          "end_line": 291,
+          "first_body_line": 223,
+          "last_body_line": 291,
+          "is_test": false,
+          "is_async": true,
+          "is_generator": false,
+          "body_start_byte": 8076,
+          "body_end_byte": 10855,
+          "bases": [],
+          "parent": "",
+          "id": "src/CreateArea.jsx::handleStartListening"
+        },
+        {
+          "name": "handleStopListening",
+          "qualified_name": "handleStopListening",
+          "kind": "function",
+          "start_line": 293,
+          "end_line": 318,
+          "first_body_line": 293,
+          "last_body_line": 318,
+          "is_test": false,
+          "is_async": true,
+          "is_generator": false,
+          "body_start_byte": 10902,
+          "body_end_byte": 11809,
+          "bases": [],
+          "parent": "",
+          "id": "src/CreateArea.jsx::handleStopListening"
+        },
+        {
+          "name": "handleSaveEditedTranscript",
+          "qualified_name": "handleSaveEditedTranscript",
+          "kind": "function",
+          "start_line": 320,
+          "end_line": 356,
+          "first_body_line": 320,
+          "last_body_line": 356,
+          "is_test": false,
+          "is_async": true,
+          "is_generator": false,
+          "body_start_byte": 11863,
+          "body_end_byte": 13257,
+          "bases": [],
+          "parent": "",
+          "id": "src/CreateArea.jsx::handleSaveEditedTranscript"
+        },
+        {
+          "name": "handleCancelEdit",
+          "qualified_name": "handleCancelEdit",
+          "kind": "function",
+          "start_line": 358,
+          "end_line": 361,
+          "first_body_line": 358,
+          "last_body_line": 361,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 13295,
+          "body_end_byte": 13374,
+          "bases": [],
+          "parent": "",
+          "id": "src/CreateArea.jsx::handleCancelEdit"
+        },
+        {
+          "name": "handleAddRecipe",
+          "qualified_name": "handleAddRecipe",
+          "kind": "function",
+          "start_line": 363,
+          "end_line": 420,
+          "first_body_line": 363,
+          "last_body_line": 420,
+          "is_test": false,
+          "is_async": true,
+          "is_generator": false,
+          "body_start_byte": 13417,
+          "body_end_byte": 15234,
+          "bases": [],
+          "parent": "",
+          "id": "src/CreateArea.jsx::handleAddRecipe"
+        },
+        {
+          "name": "formatIngredientDisplay",
+          "qualified_name": "formatIngredientDisplay",
+          "kind": "function",
+          "start_line": 422,
+          "end_line": 429,
+          "first_body_line": 422,
+          "last_body_line": 429,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 15289,
+          "body_end_byte": 15506,
+          "bases": [],
+          "parent": "",
+          "id": "src/CreateArea.jsx::formatIngredientDisplay"
+        },
+        {
+          "name": "formatInstructionDisplay",
+          "qualified_name": "formatInstructionDisplay",
+          "kind": "function",
+          "start_line": 431,
+          "end_line": 440,
+          "first_body_line": 431,
+          "last_body_line": 440,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 15563,
+          "body_end_byte": 15835,
+          "bases": [],
+          "parent": "",
+          "id": "src/CreateArea.jsx::formatInstructionDisplay"
+        }
+      ]
+    },
+    {
+      "path": "src/RecipeDisplay.jsx",
+      "language": "javascript",
+      "parser": "tree_sitter",
+      "has_syntax_error": false,
+      "imports": [
+        {
+          "raw": "import React, { useState, useRef } from 'react';",
+          "module": "react",
+          "symbols": [
+            "React",
+            "useState",
+            "useRef"
+          ],
+          "line": 1
+        },
+        {
+          "raw": "import Modal from 'react-bootstrap/Modal';",
+          "module": "react-bootstrap/Modal",
+          "symbols": [
+            "Modal"
+          ],
+          "line": 2
+        },
+        {
+          "raw": "import { speakText, stopSpeaking } from './services/speechService';",
+          "module": "./services/speechService",
+          "symbols": [
+            "speakText",
+            "stopSpeaking"
+          ],
+          "line": 3
+        },
+        {
+          "raw": "import { playAudio } from './services/audioService';",
+          "module": "./services/audioService",
+          "symbols": [
+            "playAudio"
+          ],
+          "line": 4
+        },
+        {
+          "raw": "import CookingMode from './components/CookingMode/CookingMode';",
+          "module": "./components/CookingMode/CookingMode",
+          "symbols": [
+            "CookingMode"
+          ],
+          "line": 5
+        },
+        {
+          "raw": "import { useRecipes } from './context/RecipeContext';",
+          "module": "./context/RecipeContext",
+          "symbols": [
+            "useRecipes"
+          ],
+          "line": 6
+        },
+        {
+          "raw": "import CreateArea from './CreateArea';",
+          "module": "./CreateArea",
+          "symbols": [
+            "CreateArea"
+          ],
+          "line": 7
+        },
+        {
+          "raw": "import './RecipeDisplay.css';",
+          "module": "./RecipeDisplay.css",
+          "symbols": [],
+          "line": 8
+        }
+      ],
+      "symbols": [
+        {
+          "name": "RecipeDisplay",
+          "qualified_name": "RecipeDisplay",
+          "kind": "function",
+          "start_line": 10,
+          "end_line": 293,
+          "first_body_line": 10,
+          "last_body_line": 293,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 451,
+          "body_end_byte": 13602,
+          "bases": [],
+          "parent": "",
+          "id": "src/RecipeDisplay.jsx::RecipeDisplay"
+        },
+        {
+          "name": "handleCloseModal",
+          "qualified_name": "handleCloseModal",
+          "kind": "function",
+          "start_line": 19,
+          "end_line": 23,
+          "first_body_line": 19,
+          "last_body_line": 23,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 889,
+          "body_end_byte": 981,
+          "bases": [],
+          "parent": "",
+          "id": "src/RecipeDisplay.jsx::handleCloseModal"
+        },
+        {
+          "name": "handleOpenModal",
+          "qualified_name": "handleOpenModal",
+          "kind": "function",
+          "start_line": 25,
+          "end_line": 27,
+          "first_body_line": 25,
+          "last_body_line": 27,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 1018,
+          "body_end_byte": 1053,
+          "bases": [],
+          "parent": "",
+          "id": "src/RecipeDisplay.jsx::handleOpenModal"
+        },
+        {
+          "name": "handleSpeakInstruction",
+          "qualified_name": "handleSpeakInstruction",
+          "kind": "function",
+          "start_line": 29,
+          "end_line": 55,
+          "first_body_line": 29,
+          "last_body_line": 55,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 1115,
+          "body_end_byte": 2031,
+          "bases": [],
+          "parent": "",
+          "id": "src/RecipeDisplay.jsx::handleSpeakInstruction"
+        },
+        {
+          "name": "formatIngredientDisplay",
+          "qualified_name": "formatIngredientDisplay",
+          "kind": "function",
+          "start_line": 57,
+          "end_line": 64,
+          "first_body_line": 57,
+          "last_body_line": 64,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 2086,
+          "body_end_byte": 2303,
+          "bases": [],
+          "parent": "",
+          "id": "src/RecipeDisplay.jsx::formatIngredientDisplay"
+        },
+        {
+          "name": "formatInstructionDisplay",
+          "qualified_name": "formatInstructionDisplay",
+          "kind": "function",
+          "start_line": 66,
+          "end_line": 75,
+          "first_body_line": 66,
+          "last_body_line": 75,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 2360,
+          "body_end_byte": 2632,
+          "bases": [],
+          "parent": "",
+          "id": "src/RecipeDisplay.jsx::formatInstructionDisplay"
+        },
+        {
+          "name": "handlePlayOriginalAudio",
+          "qualified_name": "handlePlayOriginalAudio",
+          "kind": "function",
+          "start_line": 77,
+          "end_line": 94,
+          "first_body_line": 77,
+          "last_body_line": 94,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 2677,
+          "body_end_byte": 3235,
+          "bases": [],
+          "parent": "",
+          "id": "src/RecipeDisplay.jsx::handlePlayOriginalAudio"
+        },
+        {
+          "name": "handleStartCookingMode",
+          "qualified_name": "handleStartCookingMode",
+          "kind": "function",
+          "start_line": 96,
+          "end_line": 99,
+          "first_body_line": 96,
+          "last_body_line": 99,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 3279,
+          "body_end_byte": 3349,
+          "bases": [],
+          "parent": "",
+          "id": "src/RecipeDisplay.jsx::handleStartCookingMode"
+        },
+        {
+          "name": "handleEdit",
+          "qualified_name": "handleEdit",
+          "kind": "function",
+          "start_line": 101,
+          "end_line": 104,
+          "first_body_line": 101,
+          "last_body_line": 104,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 3381,
+          "body_end_byte": 3449,
+          "bases": [],
+          "parent": "",
+          "id": "src/RecipeDisplay.jsx::handleEdit"
+        },
+        {
+          "name": "handleDelete",
+          "qualified_name": "handleDelete",
+          "kind": "function",
+          "start_line": 106,
+          "end_line": 111,
+          "first_body_line": 106,
+          "last_body_line": 111,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 3483,
+          "body_end_byte": 3648,
+          "bases": [],
+          "parent": "",
+          "id": "src/RecipeDisplay.jsx::handleDelete"
+        },
+        {
+          "name": "handleSaveEdit",
+          "qualified_name": "handleSaveEdit",
+          "kind": "function",
+          "start_line": 113,
+          "end_line": 116,
+          "first_body_line": 113,
+          "last_body_line": 116,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 3697,
+          "body_end_byte": 3785,
+          "bases": [],
+          "parent": "",
+          "id": "src/RecipeDisplay.jsx::handleSaveEdit"
+        }
+      ]
+    },
+    {
+      "path": "src/main.jsx",
+      "language": "javascript",
+      "parser": "tree_sitter",
+      "has_syntax_error": false,
+      "imports": [
+        {
+          "raw": "import React from 'react'",
+          "module": "react",
+          "symbols": [
+            "React"
+          ],
+          "line": 1
+        },
+        {
+          "raw": "import ReactDOM from 'react-dom/client'",
+          "module": "react-dom/client",
+          "symbols": [
+            "ReactDOM"
+          ],
+          "line": 2
+        },
+        {
+          "raw": "import App from './App.jsx'",
+          "module": "./App.jsx",
+          "symbols": [
+            "App"
+          ],
+          "line": 3
+        },
+        {
+          "raw": "import './index.css'",
+          "module": "./index.css",
+          "symbols": [],
+          "line": 4
+        }
+      ],
+      "symbols": []
+    },
+    {
+      "path": "src/components/CookingMode/CookingMode.jsx",
+      "language": "javascript",
+      "parser": "tree_sitter",
+      "has_syntax_error": false,
+      "imports": [
+        {
+          "raw": "import React, { useState, useEffect, useRef } from 'react';",
+          "module": "react",
+          "symbols": [
+            "React",
+            "useState",
+            "useEffect",
+            "useRef"
+          ],
+          "line": 1
+        },
+        {
+          "raw": "import Modal from 'react-bootstrap/Modal';",
+          "module": "react-bootstrap/Modal",
+          "symbols": [
+            "Modal"
+          ],
+          "line": 2
+        },
+        {
+          "raw": "import './CookingMode.css';",
+          "module": "./CookingMode.css",
+          "symbols": [],
+          "line": 3
+        }
+      ],
+      "symbols": [
+        {
+          "name": "CookingMode",
+          "qualified_name": "CookingMode",
+          "kind": "function",
+          "start_line": 5,
+          "end_line": 255,
+          "first_body_line": 5,
+          "last_body_line": 255,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 195,
+          "body_end_byte": 10715,
+          "bases": [],
+          "parent": "",
+          "id": "src/components/CookingMode/CookingMode.jsx::CookingMode"
+        },
+        {
+          "name": "parseTime",
+          "qualified_name": "parseTime",
+          "kind": "function",
+          "start_line": 31,
+          "end_line": 52,
+          "first_body_line": 31,
+          "last_body_line": 52,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 1106,
+          "body_end_byte": 1881,
+          "bases": [],
+          "parent": "",
+          "id": "src/components/CookingMode/CookingMode.jsx::parseTime"
+        },
+        {
+          "name": "playAlarmSound",
+          "qualified_name": "playAlarmSound",
+          "kind": "function",
+          "start_line": 54,
+          "end_line": 71,
+          "first_body_line": 54,
+          "last_body_line": 71,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 1917,
+          "body_end_byte": 2648,
+          "bases": [],
+          "parent": "",
+          "id": "src/components/CookingMode/CookingMode.jsx::playAlarmSound"
+        },
+        {
+          "name": "startTimer",
+          "qualified_name": "startTimer",
+          "kind": "function",
+          "start_line": 73,
+          "end_line": 88,
+          "first_body_line": 73,
+          "last_body_line": 88,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 2687,
+          "body_end_byte": 3142,
+          "bases": [],
+          "parent": "",
+          "id": "src/components/CookingMode/CookingMode.jsx::startTimer"
+        },
+        {
+          "name": "handleProceedToInstructions",
+          "qualified_name": "handleProceedToInstructions",
+          "kind": "function",
+          "start_line": 90,
+          "end_line": 104,
+          "first_body_line": 90,
+          "last_body_line": 104,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 3191,
+          "body_end_byte": 3746,
+          "bases": [],
+          "parent": "",
+          "id": "src/components/CookingMode/CookingMode.jsx::handleProceedToInstructions"
+        },
+        {
+          "name": "handleNextInstruction",
+          "qualified_name": "handleNextInstruction",
+          "kind": "function",
+          "start_line": 106,
+          "end_line": 127,
+          "first_body_line": 106,
+          "last_body_line": 127,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 3789,
+          "body_end_byte": 4627,
+          "bases": [],
+          "parent": "",
+          "id": "src/components/CookingMode/CookingMode.jsx::handleNextInstruction"
+        },
+        {
+          "name": "formatTime",
+          "qualified_name": "formatTime",
+          "kind": "function",
+          "start_line": 129,
+          "end_line": 134,
+          "first_body_line": 129,
+          "last_body_line": 134,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 4666,
+          "body_end_byte": 4854,
+          "bases": [],
+          "parent": "",
+          "id": "src/components/CookingMode/CookingMode.jsx::formatTime"
+        }
+      ]
+    },
+    {
+      "path": "src/components/Home/Home.jsx",
+      "language": "javascript",
+      "parser": "tree_sitter",
+      "has_syntax_error": false,
+      "imports": [
+        {
+          "raw": "import React from 'react';",
+          "module": "react",
+          "symbols": [
+            "React"
+          ],
+          "line": 1
+        },
+        {
+          "raw": "import { useRecipes } from '../../context/RecipeContext';",
+          "module": "../../context/RecipeContext",
+          "symbols": [
+            "useRecipes"
+          ],
+          "line": 2
+        },
+        {
+          "raw": "import CreateArea from '../../CreateArea';",
+          "module": "../../CreateArea",
+          "symbols": [
+            "CreateArea"
+          ],
+          "line": 3
+        },
+        {
+          "raw": "import RecipeDisplay from '../../RecipeDisplay';",
+          "module": "../../RecipeDisplay",
+          "symbols": [
+            "RecipeDisplay"
+          ],
+          "line": 4
+        }
+      ],
+      "symbols": [
+        {
+          "name": "Home",
+          "qualified_name": "Home",
+          "kind": "function",
+          "start_line": 6,
+          "end_line": 30,
+          "first_body_line": 6,
+          "last_body_line": 30,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 209,
+          "body_end_byte": 1046,
+          "bases": [],
+          "parent": "",
+          "id": "src/components/Home/Home.jsx::Home"
+        }
+      ]
+    },
+    {
+      "path": "src/components/RecipeFinder/Dish.jsx",
+      "language": "javascript",
+      "parser": "tree_sitter",
+      "has_syntax_error": false,
+      "imports": [
+        {
+          "raw": "import React, { useState } from 'react';",
+          "module": "react",
+          "symbols": [
+            "React",
+            "useState"
+          ],
+          "line": 1
+        },
+        {
+          "raw": "import { Modal } from 'react-bootstrap';",
+          "module": "react-bootstrap",
+          "symbols": [
+            "Modal"
+          ],
+          "line": 2
+        },
+        {
+          "raw": "import { getRecipeInformation, getRecipeInstructions } from '../../services/spoonacularApi';",
+          "module": "../../services/spoonacularApi",
+          "symbols": [
+            "getRecipeInformation",
+            "getRecipeInstructions"
+          ],
+          "line": 3
+        },
+        {
+          "raw": "import { useRecipes } from '../../context/RecipeContext';",
+          "module": "../../context/RecipeContext",
+          "symbols": [
+            "useRecipes"
+          ],
+          "line": 4
+        },
+        {
+          "raw": "import '../../styles/Modal.css';",
+          "module": "../../styles/Modal.css",
+          "symbols": [],
+          "line": 5
+        },
+        {
+          "raw": "import './RecipeFinder.css';",
+          "module": "./RecipeFinder.css",
+          "symbols": [],
+          "line": 6
+        }
+      ],
+      "symbols": [
+        {
+          "name": "Dish",
+          "qualified_name": "Dish",
+          "kind": "function",
+          "start_line": 8,
+          "end_line": 227,
+          "first_body_line": 8,
+          "last_body_line": 227,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 335,
+          "body_end_byte": 8317,
+          "bases": [],
+          "parent": "",
+          "id": "src/components/RecipeFinder/Dish.jsx::Dish"
+        },
+        {
+          "name": "handleRecipeClick",
+          "qualified_name": "handleRecipeClick",
+          "kind": "function",
+          "start_line": 17,
+          "end_line": 41,
+          "first_body_line": 17,
+          "last_body_line": 41,
+          "is_test": false,
+          "is_async": true,
+          "is_generator": false,
+          "body_start_byte": 729,
+          "body_end_byte": 1480,
+          "bases": [],
+          "parent": "",
+          "id": "src/components/RecipeFinder/Dish.jsx::handleRecipeClick"
+        },
+        {
+          "name": "handleSaveRecipe",
+          "qualified_name": "handleSaveRecipe",
+          "kind": "function",
+          "start_line": 43,
+          "end_line": 98,
+          "first_body_line": 43,
+          "last_body_line": 98,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 1516,
+          "body_end_byte": 3653,
+          "bases": [],
+          "parent": "",
+          "id": "src/components/RecipeFinder/Dish.jsx::handleSaveRecipe"
+        },
+        {
+          "name": "handleCloseModal",
+          "qualified_name": "handleCloseModal",
+          "kind": "function",
+          "start_line": 100,
+          "end_line": 105,
+          "first_body_line": 100,
+          "last_body_line": 105,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 3689,
+          "body_end_byte": 3793,
+          "bases": [],
+          "parent": "",
+          "id": "src/components/RecipeFinder/Dish.jsx::handleCloseModal"
+        }
+      ]
+    },
+    {
+      "path": "src/components/RecipeFinder/DishList.jsx",
+      "language": "javascript",
+      "parser": "tree_sitter",
+      "has_syntax_error": false,
+      "imports": [
+        {
+          "raw": "import React from 'react';",
+          "module": "react",
+          "symbols": [
+            "React"
+          ],
+          "line": 1
+        },
+        {
+          "raw": "import Dish from './Dish';",
+          "module": "./Dish",
+          "symbols": [
+            "Dish"
+          ],
+          "line": 2
+        },
+        {
+          "raw": "import './RecipeFinder.css';",
+          "module": "./RecipeFinder.css",
+          "symbols": [],
+          "line": 3
+        }
+      ],
+      "symbols": [
+        {
+          "name": "DishList",
+          "qualified_name": "DishList",
+          "kind": "function",
+          "start_line": 5,
+          "end_line": 25,
+          "first_body_line": 5,
+          "last_body_line": 25,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 129,
+          "body_end_byte": 632,
+          "bases": [],
+          "parent": "",
+          "id": "src/components/RecipeFinder/DishList.jsx::DishList"
+        }
+      ]
+    },
+    {
+      "path": "src/components/RecipeFinder/RecipeFinder.jsx",
+      "language": "javascript",
+      "parser": "tree_sitter",
+      "has_syntax_error": false,
+      "imports": [
+        {
+          "raw": "import React, { useState } from 'react';",
+          "module": "react",
+          "symbols": [
+            "React",
+            "useState"
+          ],
+          "line": 1
+        },
+        {
+          "raw": "import { useNavigate } from 'react-router-dom';",
+          "module": "react-router-dom",
+          "symbols": [
+            "useNavigate"
+          ],
+          "line": 2
+        },
+        {
+          "raw": "import SearchForm from './SearchForm';",
+          "module": "./SearchForm",
+          "symbols": [
+            "SearchForm"
+          ],
+          "line": 3
+        },
+        {
+          "raw": "import DishList from './DishList';",
+          "module": "./DishList",
+          "symbols": [
+            "DishList"
+          ],
+          "line": 4
+        },
+        {
+          "raw": "import { searchRecipes } from '../../services/spoonacularApi';",
+          "module": "../../services/spoonacularApi",
+          "symbols": [
+            "searchRecipes"
+          ],
+          "line": 5
+        },
+        {
+          "raw": "import './RecipeFinder.css';",
+          "module": "./RecipeFinder.css",
+          "symbols": [],
+          "line": 6
+        }
+      ],
+      "symbols": [
+        {
+          "name": "RecipeFinder",
+          "qualified_name": "RecipeFinder",
+          "kind": "function",
+          "start_line": 8,
+          "end_line": 68,
+          "first_body_line": 8,
+          "last_body_line": 68,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 295,
+          "body_end_byte": 2029,
+          "bases": [],
+          "parent": "",
+          "id": "src/components/RecipeFinder/RecipeFinder.jsx::RecipeFinder"
+        },
+        {
+          "name": "handleSearch",
+          "qualified_name": "handleSearch",
+          "kind": "function",
+          "start_line": 14,
+          "end_line": 26,
+          "first_body_line": 14,
+          "last_body_line": 26,
+          "is_test": false,
+          "is_async": true,
+          "is_generator": false,
+          "body_start_byte": 518,
+          "body_end_byte": 831,
+          "bases": [],
+          "parent": "",
+          "id": "src/components/RecipeFinder/RecipeFinder.jsx::handleSearch"
+        }
+      ]
+    },
+    {
+      "path": "src/components/RecipeFinder/SearchForm.jsx",
+      "language": "javascript",
+      "parser": "tree_sitter",
+      "has_syntax_error": false,
+      "imports": [
+        {
+          "raw": "import React, { useState, useRef, useEffect } from 'react';",
+          "module": "react",
+          "symbols": [
+            "React",
+            "useState",
+            "useRef",
+            "useEffect"
+          ],
+          "line": 1
+        },
+        {
+          "raw": "import { FloatingLabel, Form } from 'react-bootstrap';",
+          "module": "react-bootstrap",
+          "symbols": [
+            "FloatingLabel",
+            "Form"
+          ],
+          "line": 2
+        },
+        {
+          "raw": "import './RecipeFinder.css';",
+          "module": "./RecipeFinder.css",
+          "symbols": [],
+          "line": 3
+        }
+      ],
+      "symbols": [
+        {
+          "name": "SearchForm",
+          "qualified_name": "SearchForm",
+          "kind": "function",
+          "start_line": 5,
+          "end_line": 300,
+          "first_body_line": 5,
+          "last_body_line": 300,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 194,
+          "body_end_byte": 10679,
+          "bases": [],
+          "parent": "",
+          "id": "src/components/RecipeFinder/SearchForm.jsx::SearchForm"
+        },
+        {
+          "name": "handleClickOutside",
+          "qualified_name": "handleClickOutside",
+          "kind": "function",
+          "start_line": 42,
+          "end_line": 52,
+          "first_body_line": 42,
+          "last_body_line": 52,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 1754,
+          "body_end_byte": 2187,
+          "bases": [],
+          "parent": "",
+          "id": "src/components/RecipeFinder/SearchForm.jsx::handleClickOutside"
+        },
+        {
+          "name": "handleAddCuisine",
+          "qualified_name": "handleAddCuisine",
+          "kind": "function",
+          "start_line": 73,
+          "end_line": 79,
+          "first_body_line": 73,
+          "last_body_line": 79,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 2896,
+          "body_end_byte": 3054,
+          "bases": [],
+          "parent": "",
+          "id": "src/components/RecipeFinder/SearchForm.jsx::handleAddCuisine"
+        },
+        {
+          "name": "handleRemoveCuisine",
+          "qualified_name": "handleRemoveCuisine",
+          "kind": "function",
+          "start_line": 81,
+          "end_line": 83,
+          "first_body_line": 81,
+          "last_body_line": 83,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 3100,
+          "body_end_byte": 3159,
+          "bases": [],
+          "parent": "",
+          "id": "src/components/RecipeFinder/SearchForm.jsx::handleRemoveCuisine"
+        },
+        {
+          "name": "handleAddDiet",
+          "qualified_name": "handleAddDiet",
+          "kind": "function",
+          "start_line": 85,
+          "end_line": 91,
+          "first_body_line": 85,
+          "last_body_line": 91,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 3196,
+          "body_end_byte": 3333,
+          "bases": [],
+          "parent": "",
+          "id": "src/components/RecipeFinder/SearchForm.jsx::handleAddDiet"
+        },
+        {
+          "name": "handleRemoveDiet",
+          "qualified_name": "handleRemoveDiet",
+          "kind": "function",
+          "start_line": 93,
+          "end_line": 95,
+          "first_body_line": 93,
+          "last_body_line": 95,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 3373,
+          "body_end_byte": 3423,
+          "bases": [],
+          "parent": "",
+          "id": "src/components/RecipeFinder/SearchForm.jsx::handleRemoveDiet"
+        },
+        {
+          "name": "handleAddIntolerance",
+          "qualified_name": "handleAddIntolerance",
+          "kind": "function",
+          "start_line": 97,
+          "end_line": 103,
+          "first_body_line": 97,
+          "last_body_line": 103,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 3474,
+          "body_end_byte": 3660,
+          "bases": [],
+          "parent": "",
+          "id": "src/components/RecipeFinder/SearchForm.jsx::handleAddIntolerance"
+        },
+        {
+          "name": "handleRemoveIntolerance",
+          "qualified_name": "handleRemoveIntolerance",
+          "kind": "function",
+          "start_line": 105,
+          "end_line": 107,
+          "first_body_line": 105,
+          "last_body_line": 107,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 3714,
+          "body_end_byte": 3785,
+          "bases": [],
+          "parent": "",
+          "id": "src/components/RecipeFinder/SearchForm.jsx::handleRemoveIntolerance"
+        },
+        {
+          "name": "handleSearchClick",
+          "qualified_name": "handleSearchClick",
+          "kind": "function",
+          "start_line": 109,
+          "end_line": 116,
+          "first_body_line": 109,
+          "last_body_line": 116,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 3822,
+          "body_end_byte": 3975,
+          "bases": [],
+          "parent": "",
+          "id": "src/components/RecipeFinder/SearchForm.jsx::handleSearchClick"
+        }
+      ]
+    },
+    {
+      "path": "src/components/SearchPage/SearchPage.jsx",
+      "language": "javascript",
+      "parser": "tree_sitter",
+      "has_syntax_error": false,
+      "imports": [
+        {
+          "raw": "import React, { useState, useEffect, useRef, useMemo } from 'react';",
+          "module": "react",
+          "symbols": [
+            "React",
+            "useState",
+            "useEffect",
+            "useRef",
+            "useMemo"
+          ],
+          "line": 1
+        },
+        {
+          "raw": "import { useRecipes } from '../../context/RecipeContext';",
+          "module": "../../context/RecipeContext",
+          "symbols": [
+            "useRecipes"
+          ],
+          "line": 2
+        },
+        {
+          "raw": "import { useStories } from '../../context/StoriesContext';",
+          "module": "../../context/StoriesContext",
+          "symbols": [
+            "useStories"
+          ],
+          "line": 3
+        },
+        {
+          "raw": "import RecipeDisplay from '../../RecipeDisplay';",
+          "module": "../../RecipeDisplay",
+          "symbols": [
+            "RecipeDisplay"
+          ],
+          "line": 4
+        },
+        {
+          "raw": "import './SearchPage.css';",
+          "module": "./SearchPage.css",
+          "symbols": [],
+          "line": 5
+        }
+      ],
+      "symbols": [
+        {
+          "name": "SearchPage",
+          "qualified_name": "SearchPage",
+          "kind": "function",
+          "start_line": 7,
+          "end_line": 338,
+          "first_body_line": 7,
+          "last_body_line": 338,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 300,
+          "body_end_byte": 15925,
+          "bases": [],
+          "parent": "",
+          "id": "src/components/SearchPage/SearchPage.jsx::SearchPage"
+        },
+        {
+          "name": "performSearch",
+          "qualified_name": "performSearch",
+          "kind": "function",
+          "start_line": 43,
+          "end_line": 115,
+          "first_body_line": 43,
+          "last_body_line": 115,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 1606,
+          "body_end_byte": 4790,
+          "bases": [],
+          "parent": "",
+          "id": "src/components/SearchPage/SearchPage.jsx::performSearch"
+        },
+        {
+          "name": "handleTagToggle",
+          "qualified_name": "handleTagToggle",
+          "kind": "function",
+          "start_line": 117,
+          "end_line": 128,
+          "first_body_line": 117,
+          "last_body_line": 128,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 4830,
+          "body_end_byte": 5203,
+          "bases": [],
+          "parent": "",
+          "id": "src/components/SearchPage/SearchPage.jsx::handleTagToggle"
+        },
+        {
+          "name": "handleRemoveTag",
+          "qualified_name": "handleRemoveTag",
+          "kind": "function",
+          "start_line": 130,
+          "end_line": 132,
+          "first_body_line": 130,
+          "last_body_line": 132,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 5243,
+          "body_end_byte": 5312,
+          "bases": [],
+          "parent": "",
+          "id": "src/components/SearchPage/SearchPage.jsx::handleRemoveTag"
+        },
+        {
+          "name": "clearAllFilters",
+          "qualified_name": "clearAllFilters",
+          "kind": "function",
+          "start_line": 134,
+          "end_line": 137,
+          "first_body_line": 134,
+          "last_body_line": 137,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 5349,
+          "body_end_byte": 5413,
+          "bases": [],
+          "parent": "",
+          "id": "src/components/SearchPage/SearchPage.jsx::clearAllFilters"
+        }
+      ]
+    },
+    {
+      "path": "src/components/Stories/Stories.jsx",
+      "language": "javascript",
+      "parser": "tree_sitter",
+      "has_syntax_error": true,
+      "imports": [
+        {
+          "raw": "import React, { useState } from 'react';",
+          "module": "react",
+          "symbols": [
+            "React",
+            "useState"
+          ],
+          "line": 1
+        },
+        {
+          "raw": "import Modal from 'react-bootstrap/Modal';",
+          "module": "react-bootstrap/Modal",
+          "symbols": [
+            "Modal"
+          ],
+          "line": 2
+        },
+        {
+          "raw": "import Form from 'react-bootstrap/Form';",
+          "module": "react-bootstrap/Form",
+          "symbols": [
+            "Form"
+          ],
+          "line": 3
+        },
+        {
+          "raw": "import { useStories } from '../../context/StoriesContext';",
+          "module": "../../context/StoriesContext",
+          "symbols": [
+            "useStories"
+          ],
+          "line": 4
+        },
+        {
+          "raw": "import '../../styles/Modal.css';",
+          "module": "../../styles/Modal.css",
+          "symbols": [],
+          "line": 5
+        },
+        {
+          "raw": "import './Stories.css';",
+          "module": "./Stories.css",
+          "symbols": [],
+          "line": 6
+        }
+      ],
+      "symbols": [
+        {
+          "name": "Stories",
+          "qualified_name": "Stories",
+          "kind": "function",
+          "start_line": 8,
+          "end_line": 680,
+          "first_body_line": 8,
+          "last_body_line": 680,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 276,
+          "body_end_byte": 35143,
+          "bases": [],
+          "parent": "",
+          "id": "src/components/Stories/Stories.jsx::Stories"
+        },
+        {
+          "name": "handleCreateStory",
+          "qualified_name": "handleCreateStory",
+          "kind": "function",
+          "start_line": 33,
+          "end_line": 38,
+          "first_body_line": 33,
+          "last_body_line": 38,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 1466,
+          "body_end_byte": 1655,
+          "bases": [],
+          "parent": "",
+          "id": "src/components/Stories/Stories.jsx::handleCreateStory"
+        },
+        {
+          "name": "handleEditStory",
+          "qualified_name": "handleEditStory",
+          "kind": "function",
+          "start_line": 40,
+          "end_line": 51,
+          "first_body_line": 40,
+          "last_body_line": 51,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 1697,
+          "body_end_byte": 2033,
+          "bases": [],
+          "parent": "",
+          "id": "src/components/Stories/Stories.jsx::handleEditStory"
+        },
+        {
+          "name": "handleSaveStory",
+          "qualified_name": "handleSaveStory",
+          "kind": "function",
+          "start_line": 53,
+          "end_line": 67,
+          "first_body_line": 53,
+          "last_body_line": 67,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 2070,
+          "body_end_byte": 2513,
+          "bases": [],
+          "parent": "",
+          "id": "src/components/Stories/Stories.jsx::handleSaveStory"
+        },
+        {
+          "name": "handleDeleteStory",
+          "qualified_name": "handleDeleteStory",
+          "kind": "function",
+          "start_line": 69,
+          "end_line": 73,
+          "first_body_line": 69,
+          "last_body_line": 73,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 2554,
+          "body_end_byte": 2677,
+          "bases": [],
+          "parent": "",
+          "id": "src/components/Stories/Stories.jsx::handleDeleteStory"
+        },
+        {
+          "name": "handleCreatePlaylist",
+          "qualified_name": "handleCreatePlaylist",
+          "kind": "function",
+          "start_line": 75,
+          "end_line": 80,
+          "first_body_line": 75,
+          "last_body_line": 80,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 2719,
+          "body_end_byte": 2895,
+          "bases": [],
+          "parent": "",
+          "id": "src/components/Stories/Stories.jsx::handleCreatePlaylist"
+        },
+        {
+          "name": "handleEditPlaylist",
+          "qualified_name": "handleEditPlaylist",
+          "kind": "function",
+          "start_line": 82,
+          "end_line": 91,
+          "first_body_line": 82,
+          "last_body_line": 91,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 2943,
+          "body_end_byte": 3225,
+          "bases": [],
+          "parent": "",
+          "id": "src/components/Stories/Stories.jsx::handleEditPlaylist"
+        },
+        {
+          "name": "handleSavePlaylist",
+          "qualified_name": "handleSavePlaylist",
+          "kind": "function",
+          "start_line": 93,
+          "end_line": 107,
+          "first_body_line": 93,
+          "last_body_line": 107,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 3265,
+          "body_end_byte": 3723,
+          "bases": [],
+          "parent": "",
+          "id": "src/components/Stories/Stories.jsx::handleSavePlaylist"
+        },
+        {
+          "name": "handleDeletePlaylist",
+          "qualified_name": "handleDeletePlaylist",
+          "kind": "function",
+          "start_line": 109,
+          "end_line": 113,
+          "first_body_line": 109,
+          "last_body_line": 113,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 3767,
+          "body_end_byte": 3896,
+          "bases": [],
+          "parent": "",
+          "id": "src/components/Stories/Stories.jsx::handleDeletePlaylist"
+        },
+        {
+          "name": "handleAddToPlaylist",
+          "qualified_name": "handleAddToPlaylist",
+          "kind": "function",
+          "start_line": 115,
+          "end_line": 118,
+          "first_body_line": 115,
+          "last_body_line": 118,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 3956,
+          "body_end_byte": 4055,
+          "bases": [],
+          "parent": "",
+          "id": "src/components/Stories/Stories.jsx::handleAddToPlaylist"
+        },
+        {
+          "name": "handleMoveStory",
+          "qualified_name": "handleMoveStory",
+          "kind": "function",
+          "start_line": 120,
+          "end_line": 123,
+          "first_body_line": 120,
+          "last_body_line": 123,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 4097,
+          "body_end_byte": 4174,
+          "bases": [],
+          "parent": "",
+          "id": "src/components/Stories/Stories.jsx::handleMoveStory"
+        },
+        {
+          "name": "handleConfirmMoveStory",
+          "qualified_name": "handleConfirmMoveStory",
+          "kind": "function",
+          "start_line": 125,
+          "end_line": 140,
+          "first_body_line": 125,
+          "last_body_line": 140,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 4218,
+          "body_end_byte": 4831,
+          "bases": [],
+          "parent": "",
+          "id": "src/components/Stories/Stories.jsx::handleConfirmMoveStory"
+        },
+        {
+          "name": "handleRemoveFromPlaylist",
+          "qualified_name": "handleRemoveFromPlaylist",
+          "kind": "function",
+          "start_line": 142,
+          "end_line": 146,
+          "first_body_line": 142,
+          "last_body_line": 146,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 4896,
+          "body_end_byte": 5041,
+          "bases": [],
+          "parent": "",
+          "id": "src/components/Stories/Stories.jsx::handleRemoveFromPlaylist"
+        },
+        {
+          "name": "togglePlaylist",
+          "qualified_name": "togglePlaylist",
+          "kind": "function",
+          "start_line": 148,
+          "end_line": 150,
+          "first_body_line": 148,
+          "last_body_line": 150,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 5087,
+          "body_end_byte": 5180,
+          "bases": [],
+          "parent": "",
+          "id": "src/components/Stories/Stories.jsx::togglePlaylist"
+        },
+        {
+          "name": "getStoriesInPlaylist",
+          "qualified_name": "getStoriesInPlaylist",
+          "kind": "function",
+          "start_line": 152,
+          "end_line": 156,
+          "first_body_line": 152,
+          "last_body_line": 156,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 5232,
+          "body_end_byte": 5438,
+          "bases": [],
+          "parent": "",
+          "id": "src/components/Stories/Stories.jsx::getStoriesInPlaylist"
+        },
+        {
+          "name": "getPlaylistsForStory",
+          "qualified_name": "getPlaylistsForStory",
+          "kind": "function",
+          "start_line": 158,
+          "end_line": 160,
+          "first_body_line": 158,
+          "last_body_line": 160,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 5487,
+          "body_end_byte": 5576,
+          "bases": [],
+          "parent": "",
+          "id": "src/components/Stories/Stories.jsx::getPlaylistsForStory"
+        },
+        {
+          "name": "handlePasteUrl",
+          "qualified_name": "handlePasteUrl",
+          "kind": "function",
+          "start_line": 162,
+          "end_line": 189,
+          "first_body_line": 162,
+          "last_body_line": 189,
+          "is_test": false,
+          "is_async": true,
+          "is_generator": false,
+          "body_start_byte": 5618,
+          "body_end_byte": 6994,
+          "bases": [],
+          "parent": "",
+          "id": "src/components/Stories/Stories.jsx::handlePasteUrl"
+        }
+      ]
+    },
+    {
+      "path": "src/context/RecipeContext.jsx",
+      "language": "javascript",
+      "parser": "tree_sitter",
+      "has_syntax_error": false,
+      "imports": [
+        {
+          "raw": "import React, { createContext, useContext, useState, useEffect } from 'react';",
+          "module": "react",
+          "symbols": [
+            "React",
+            "createContext",
+            "useContext",
+            "useState",
+            "useEffect"
+          ],
+          "line": 1
+        },
+        {
+          "raw": "import { recipesAPI } from '../services/apiService';",
+          "module": "../services/apiService",
+          "symbols": [
+            "recipesAPI"
+          ],
+          "line": 2
+        }
+      ],
+      "symbols": [
+        {
+          "name": "useRecipes",
+          "qualified_name": "useRecipes",
+          "kind": "function",
+          "start_line": 6,
+          "end_line": 12,
+          "first_body_line": 6,
+          "last_body_line": 12,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 205,
+          "body_end_byte": 365,
+          "bases": [],
+          "parent": "",
+          "id": "src/context/RecipeContext.jsx::useRecipes"
+        },
+        {
+          "name": "RecipeProvider",
+          "qualified_name": "RecipeProvider",
+          "kind": "function",
+          "start_line": 14,
+          "end_line": 92,
+          "first_body_line": 14,
+          "last_body_line": 92,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 416,
+          "body_end_byte": 2579,
+          "bases": [],
+          "parent": "",
+          "id": "src/context/RecipeContext.jsx::RecipeProvider"
+        },
+        {
+          "name": "loadRecipes",
+          "qualified_name": "loadRecipes",
+          "kind": "function",
+          "start_line": 24,
+          "end_line": 43,
+          "first_body_line": 24,
+          "last_body_line": 43,
+          "is_test": false,
+          "is_async": true,
+          "is_generator": false,
+          "body_start_byte": 679,
+          "body_end_byte": 1202,
+          "bases": [],
+          "parent": "",
+          "id": "src/context/RecipeContext.jsx::loadRecipes"
+        },
+        {
+          "name": "addRecipe",
+          "qualified_name": "addRecipe",
+          "kind": "function",
+          "start_line": 45,
+          "end_line": 58,
+          "first_body_line": 45,
+          "last_body_line": 58,
+          "is_test": false,
+          "is_async": true,
+          "is_generator": false,
+          "body_start_byte": 1246,
+          "body_end_byte": 1633,
+          "bases": [],
+          "parent": "",
+          "id": "src/context/RecipeContext.jsx::addRecipe"
+        },
+        {
+          "name": "updateRecipe",
+          "qualified_name": "updateRecipe",
+          "kind": "function",
+          "start_line": 60,
+          "end_line": 75,
+          "first_body_line": 60,
+          "last_body_line": 75,
+          "is_test": false,
+          "is_async": true,
+          "is_generator": false,
+          "body_start_byte": 1688,
+          "body_end_byte": 2113,
+          "bases": [],
+          "parent": "",
+          "id": "src/context/RecipeContext.jsx::updateRecipe"
+        },
+        {
+          "name": "deleteRecipe",
+          "qualified_name": "deleteRecipe",
+          "kind": "function",
+          "start_line": 77,
+          "end_line": 85,
+          "first_body_line": 77,
+          "last_body_line": 85,
+          "is_test": false,
+          "is_async": true,
+          "is_generator": false,
+          "body_start_byte": 2153,
+          "body_end_byte": 2379,
+          "bases": [],
+          "parent": "",
+          "id": "src/context/RecipeContext.jsx::deleteRecipe"
+        }
+      ]
+    },
+    {
+      "path": "src/context/StoriesContext.jsx",
+      "language": "javascript",
+      "parser": "tree_sitter",
+      "has_syntax_error": false,
+      "imports": [
+        {
+          "raw": "import React, { createContext, useContext, useState, useEffect } from 'react';",
+          "module": "react",
+          "symbols": [
+            "React",
+            "createContext",
+            "useContext",
+            "useState",
+            "useEffect"
+          ],
+          "line": 1
+        },
+        {
+          "raw": "import { storiesAPI, playlistsAPI } from '../services/apiService';",
+          "module": "../services/apiService",
+          "symbols": [
+            "storiesAPI",
+            "playlistsAPI"
+          ],
+          "line": 2
+        }
+      ],
+      "symbols": [
+        {
+          "name": "useStories",
+          "qualified_name": "useStories",
+          "kind": "function",
+          "start_line": 6,
+          "end_line": 12,
+          "first_body_line": 6,
+          "last_body_line": 12,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 220,
+          "body_end_byte": 382,
+          "bases": [],
+          "parent": "",
+          "id": "src/context/StoriesContext.jsx::useStories"
+        },
+        {
+          "name": "StoriesProvider",
+          "qualified_name": "StoriesProvider",
+          "kind": "function",
+          "start_line": 14,
+          "end_line": 218,
+          "first_body_line": 14,
+          "last_body_line": 218,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 434,
+          "body_end_byte": 6046,
+          "bases": [],
+          "parent": "",
+          "id": "src/context/StoriesContext.jsx::StoriesProvider"
+        },
+        {
+          "name": "loadStories",
+          "qualified_name": "loadStories",
+          "kind": "function",
+          "start_line": 26,
+          "end_line": 43,
+          "first_body_line": 26,
+          "last_body_line": 43,
+          "is_test": false,
+          "is_async": true,
+          "is_generator": false,
+          "body_start_byte": 765,
+          "body_end_byte": 1189,
+          "bases": [],
+          "parent": "",
+          "id": "src/context/StoriesContext.jsx::loadStories"
+        },
+        {
+          "name": "loadPlaylists",
+          "qualified_name": "loadPlaylists",
+          "kind": "function",
+          "start_line": 45,
+          "end_line": 62,
+          "first_body_line": 45,
+          "last_body_line": 62,
+          "is_test": false,
+          "is_async": true,
+          "is_generator": false,
+          "body_start_byte": 1228,
+          "body_end_byte": 1704,
+          "bases": [],
+          "parent": "",
+          "id": "src/context/StoriesContext.jsx::loadPlaylists"
+        },
+        {
+          "name": "addStory",
+          "qualified_name": "addStory",
+          "kind": "function",
+          "start_line": 64,
+          "end_line": 77,
+          "first_body_line": 64,
+          "last_body_line": 77,
+          "is_test": false,
+          "is_async": true,
+          "is_generator": false,
+          "body_start_byte": 1746,
+          "body_end_byte": 2124,
+          "bases": [],
+          "parent": "",
+          "id": "src/context/StoriesContext.jsx::addStory"
+        },
+        {
+          "name": "updateStory",
+          "qualified_name": "updateStory",
+          "kind": "function",
+          "start_line": 79,
+          "end_line": 94,
+          "first_body_line": 79,
+          "last_body_line": 94,
+          "is_test": false,
+          "is_async": true,
+          "is_generator": false,
+          "body_start_byte": 2177,
+          "body_end_byte": 2594,
+          "bases": [],
+          "parent": "",
+          "id": "src/context/StoriesContext.jsx::updateStory"
+        },
+        {
+          "name": "deleteStory",
+          "qualified_name": "deleteStory",
+          "kind": "function",
+          "start_line": 96,
+          "end_line": 104,
+          "first_body_line": 96,
+          "last_body_line": 104,
+          "is_test": false,
+          "is_async": true,
+          "is_generator": false,
+          "body_start_byte": 2633,
+          "body_end_byte": 2856,
+          "bases": [],
+          "parent": "",
+          "id": "src/context/StoriesContext.jsx::deleteStory"
+        },
+        {
+          "name": "addPlaylist",
+          "qualified_name": "addPlaylist",
+          "kind": "function",
+          "start_line": 106,
+          "end_line": 123,
+          "first_body_line": 106,
+          "last_body_line": 123,
+          "is_test": false,
+          "is_async": true,
+          "is_generator": false,
+          "body_start_byte": 2904,
+          "body_end_byte": 3435,
+          "bases": [],
+          "parent": "",
+          "id": "src/context/StoriesContext.jsx::addPlaylist"
+        },
+        {
+          "name": "updatePlaylist",
+          "qualified_name": "updatePlaylist",
+          "kind": "function",
+          "start_line": 125,
+          "end_line": 144,
+          "first_body_line": 125,
+          "last_body_line": 144,
+          "is_test": false,
+          "is_async": true,
+          "is_generator": false,
+          "body_start_byte": 3494,
+          "body_end_byte": 4053,
+          "bases": [],
+          "parent": "",
+          "id": "src/context/StoriesContext.jsx::updatePlaylist"
+        },
+        {
+          "name": "deletePlaylist",
+          "qualified_name": "deletePlaylist",
+          "kind": "function",
+          "start_line": 146,
+          "end_line": 154,
+          "first_body_line": 146,
+          "last_body_line": 154,
+          "is_test": false,
+          "is_async": true,
+          "is_generator": false,
+          "body_start_byte": 4095,
+          "body_end_byte": 4335,
+          "bases": [],
+          "parent": "",
+          "id": "src/context/StoriesContext.jsx::deletePlaylist"
+        },
+        {
+          "name": "addStoryToPlaylist",
+          "qualified_name": "addStoryToPlaylist",
+          "kind": "function",
+          "start_line": 156,
+          "end_line": 175,
+          "first_body_line": 156,
+          "last_body_line": 175,
+          "is_test": false,
+          "is_async": true,
+          "is_generator": false,
+          "body_start_byte": 4398,
+          "body_end_byte": 4974,
+          "bases": [],
+          "parent": "",
+          "id": "src/context/StoriesContext.jsx::addStoryToPlaylist"
+        },
+        {
+          "name": "removeStoryFromPlaylist",
+          "qualified_name": "removeStoryFromPlaylist",
+          "kind": "function",
+          "start_line": 177,
+          "end_line": 196,
+          "first_body_line": 177,
+          "last_body_line": 196,
+          "is_test": false,
+          "is_async": true,
+          "is_generator": false,
+          "body_start_byte": 5042,
+          "body_end_byte": 5625,
+          "bases": [],
+          "parent": "",
+          "id": "src/context/StoriesContext.jsx::removeStoryFromPlaylist"
+        }
+      ]
+    },
+    {
+      "path": "src/services/apiService.js",
+      "language": "javascript",
+      "parser": "tree_sitter",
+      "has_syntax_error": false,
+      "imports": [],
+      "symbols": [
+        {
+          "name": "apiRequest",
+          "qualified_name": "apiRequest",
+          "kind": "function",
+          "start_line": 5,
+          "end_line": 30,
+          "first_body_line": 5,
+          "last_body_line": 30,
+          "is_test": false,
+          "is_async": true,
+          "is_generator": false,
+          "body_start_byte": 227,
+          "body_end_byte": 919,
+          "bases": [],
+          "parent": "",
+          "id": "src/services/apiService.js::apiRequest"
+        }
+      ]
+    },
+    {
+      "path": "src/services/audioService.js",
+      "language": "javascript",
+      "parser": "tree_sitter",
+      "has_syntax_error": false,
+      "imports": [],
+      "symbols": [
+        {
+          "name": "AudioRecorderService",
+          "qualified_name": "AudioRecorderService",
+          "kind": "class",
+          "start_line": 2,
+          "end_line": 63,
+          "first_body_line": 2,
+          "last_body_line": 63,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 61,
+          "body_end_byte": 1653,
+          "bases": [],
+          "parent": "",
+          "id": "src/services/audioService.js::AudioRecorderService"
+        },
+        {
+          "name": "constructor",
+          "qualified_name": "AudioRecorderService.constructor",
+          "kind": "method",
+          "start_line": 3,
+          "end_line": 7,
+          "first_body_line": 3,
+          "last_body_line": 7,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 79,
+          "body_end_byte": 166,
+          "bases": [],
+          "parent": "AudioRecorderService",
+          "id": "src/services/audioService.js::AudioRecorderService.constructor"
+        },
+        {
+          "name": "startRecording",
+          "qualified_name": "AudioRecorderService.startRecording",
+          "kind": "method",
+          "start_line": 9,
+          "end_line": 29,
+          "first_body_line": 9,
+          "last_body_line": 29,
+          "is_test": false,
+          "is_async": true,
+          "is_generator": false,
+          "body_start_byte": 193,
+          "body_end_byte": 727,
+          "bases": [],
+          "parent": "AudioRecorderService",
+          "id": "src/services/audioService.js::AudioRecorderService.startRecording"
+        },
+        {
+          "name": "stopRecording",
+          "qualified_name": "AudioRecorderService.stopRecording",
+          "kind": "method",
+          "start_line": 31,
+          "end_line": 58,
+          "first_body_line": 31,
+          "last_body_line": 58,
+          "is_test": false,
+          "is_async": true,
+          "is_generator": false,
+          "body_start_byte": 753,
+          "body_end_byte": 1550,
+          "bases": [],
+          "parent": "AudioRecorderService",
+          "id": "src/services/audioService.js::AudioRecorderService.stopRecording"
+        },
+        {
+          "name": "isSupported",
+          "qualified_name": "AudioRecorderService.isSupported",
+          "kind": "method",
+          "start_line": 60,
+          "end_line": 62,
+          "first_body_line": 60,
+          "last_body_line": 62,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 1568,
+          "body_end_byte": 1651,
+          "bases": [],
+          "parent": "AudioRecorderService",
+          "id": "src/services/audioService.js::AudioRecorderService.isSupported"
+        },
+        {
+          "name": "playAudio",
+          "qualified_name": "playAudio",
+          "kind": "function",
+          "start_line": 66,
+          "end_line": 78,
+          "first_body_line": 66,
+          "last_body_line": 78,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 1737,
+          "body_end_byte": 1939,
+          "bases": [],
+          "parent": "",
+          "id": "src/services/audioService.js::playAudio"
+        },
+        {
+          "name": "stopAudio",
+          "qualified_name": "stopAudio",
+          "kind": "function",
+          "start_line": 81,
+          "end_line": 86,
+          "first_body_line": 81,
+          "last_body_line": 86,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 2001,
+          "body_end_byte": 2069,
+          "bases": [],
+          "parent": "",
+          "id": "src/services/audioService.js::stopAudio"
+        }
+      ]
+    },
+    {
+      "path": "src/services/geminiService.js",
+      "language": "javascript",
+      "parser": "tree_sitter",
+      "has_syntax_error": false,
+      "imports": [
+        {
+          "raw": "import { GoogleGenerativeAI } from '@google/generative-ai';",
+          "module": "@google/generative-ai",
+          "symbols": [
+            "GoogleGenerativeAI"
+          ],
+          "line": 1
+        }
+      ],
+      "symbols": [
+        {
+          "name": "getGeminiAPIKey",
+          "qualified_name": "getGeminiAPIKey",
+          "kind": "function",
+          "start_line": 4,
+          "end_line": 6,
+          "first_body_line": 4,
+          "last_body_line": 6,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 116,
+          "body_end_byte": 171,
+          "bases": [],
+          "parent": "",
+          "id": "src/services/geminiService.js::getGeminiAPIKey"
+        },
+        {
+          "name": "validateAndNormalizeRecipe",
+          "qualified_name": "validateAndNormalizeRecipe",
+          "kind": "function",
+          "start_line": 9,
+          "end_line": 73,
+          "first_body_line": 9,
+          "last_body_line": 73,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 271,
+          "body_end_byte": 2213,
+          "bases": [],
+          "parent": "",
+          "id": "src/services/geminiService.js::validateAndNormalizeRecipe"
+        },
+        {
+          "name": "formatRecipeWithGemini",
+          "qualified_name": "formatRecipeWithGemini",
+          "kind": "function",
+          "start_line": 75,
+          "end_line": 193,
+          "first_body_line": 75,
+          "last_body_line": 193,
+          "is_test": false,
+          "is_async": true,
+          "is_generator": false,
+          "body_start_byte": 2281,
+          "body_end_byte": 6620,
+          "bases": [],
+          "parent": "",
+          "id": "src/services/geminiService.js::formatRecipeWithGemini"
+        }
+      ]
+    },
+    {
+      "path": "src/services/speechService.js",
+      "language": "javascript",
+      "parser": "tree_sitter",
+      "has_syntax_error": false,
+      "imports": [],
+      "symbols": [
+        {
+          "name": "SpeechRecognitionService",
+          "qualified_name": "SpeechRecognitionService",
+          "kind": "class",
+          "start_line": 3,
+          "end_line": 95,
+          "first_body_line": 3,
+          "last_body_line": 95,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 90,
+          "body_end_byte": 2365,
+          "bases": [],
+          "parent": "",
+          "id": "src/services/speechService.js::SpeechRecognitionService"
+        },
+        {
+          "name": "constructor",
+          "qualified_name": "SpeechRecognitionService.constructor",
+          "kind": "method",
+          "start_line": 4,
+          "end_line": 12,
+          "first_body_line": 4,
+          "last_body_line": 12,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 108,
+          "body_end_byte": 309,
+          "bases": [],
+          "parent": "SpeechRecognitionService",
+          "id": "src/services/speechService.js::SpeechRecognitionService.constructor"
+        },
+        {
+          "name": "initializeRecognition",
+          "qualified_name": "SpeechRecognitionService.initializeRecognition",
+          "kind": "method",
+          "start_line": 14,
+          "end_line": 59,
+          "first_body_line": 14,
+          "last_body_line": 59,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 337,
+          "body_end_byte": 1586,
+          "bases": [],
+          "parent": "SpeechRecognitionService",
+          "id": "src/services/speechService.js::SpeechRecognitionService.initializeRecognition"
+        },
+        {
+          "name": "startListening",
+          "qualified_name": "SpeechRecognitionService.startListening",
+          "kind": "method",
+          "start_line": 61,
+          "end_line": 83,
+          "first_body_line": 61,
+          "last_body_line": 83,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 1631,
+          "body_end_byte": 2123,
+          "bases": [],
+          "parent": "SpeechRecognitionService",
+          "id": "src/services/speechService.js::SpeechRecognitionService.startListening"
+        },
+        {
+          "name": "stopListening",
+          "qualified_name": "SpeechRecognitionService.stopListening",
+          "kind": "method",
+          "start_line": 85,
+          "end_line": 90,
+          "first_body_line": 85,
+          "last_body_line": 90,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 2143,
+          "body_end_byte": 2265,
+          "bases": [],
+          "parent": "SpeechRecognitionService",
+          "id": "src/services/speechService.js::SpeechRecognitionService.stopListening"
+        },
+        {
+          "name": "isSupported",
+          "qualified_name": "SpeechRecognitionService.isSupported",
+          "kind": "method",
+          "start_line": 92,
+          "end_line": 94,
+          "first_body_line": 92,
+          "last_body_line": 94,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 2283,
+          "body_end_byte": 2363,
+          "bases": [],
+          "parent": "SpeechRecognitionService",
+          "id": "src/services/speechService.js::SpeechRecognitionService.isSupported"
+        },
+        {
+          "name": "speakText",
+          "qualified_name": "speakText",
+          "kind": "function",
+          "start_line": 98,
+          "end_line": 115,
+          "first_body_line": 98,
+          "last_body_line": 115,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 2454,
+          "body_end_byte": 2862,
+          "bases": [],
+          "parent": "",
+          "id": "src/services/speechService.js::speakText"
+        },
+        {
+          "name": "stopSpeaking",
+          "qualified_name": "stopSpeaking",
+          "kind": "function",
+          "start_line": 117,
+          "end_line": 121,
+          "first_body_line": 117,
+          "last_body_line": 121,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 2899,
+          "body_end_byte": 2980,
+          "bases": [],
+          "parent": "",
+          "id": "src/services/speechService.js::stopSpeaking"
+        }
+      ]
+    },
+    {
+      "path": "src/services/spoonacularApi.js",
+      "language": "javascript",
+      "parser": "tree_sitter",
+      "has_syntax_error": false,
+      "imports": [],
+      "symbols": [
+        {
+          "name": "searchRecipes",
+          "qualified_name": "searchRecipes",
+          "kind": "function",
+          "start_line": 5,
+          "end_line": 38,
+          "first_body_line": 5,
+          "last_body_line": 38,
+          "is_test": false,
+          "is_async": true,
+          "is_generator": false,
+          "body_start_byte": 189,
+          "body_end_byte": 1102,
+          "bases": [],
+          "parent": "",
+          "id": "src/services/spoonacularApi.js::searchRecipes"
+        },
+        {
+          "name": "getRecipeInformation",
+          "qualified_name": "getRecipeInformation",
+          "kind": "function",
+          "start_line": 40,
+          "end_line": 53,
+          "first_body_line": 40,
+          "last_body_line": 53,
+          "is_test": false,
+          "is_async": true,
+          "is_generator": false,
+          "body_start_byte": 1161,
+          "body_end_byte": 1521,
+          "bases": [],
+          "parent": "",
+          "id": "src/services/spoonacularApi.js::getRecipeInformation"
+        },
+        {
+          "name": "getRecipeInstructions",
+          "qualified_name": "getRecipeInstructions",
+          "kind": "function",
+          "start_line": 55,
+          "end_line": 68,
+          "first_body_line": 55,
+          "last_body_line": 68,
+          "is_test": false,
+          "is_async": true,
+          "is_generator": false,
+          "body_start_byte": 1581,
+          "body_end_byte": 1952,
+          "bases": [],
+          "parent": "",
+          "id": "src/services/spoonacularApi.js::getRecipeInstructions"
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "server/server.js",
+      "target": "server/routes/recipes.js",
+      "kind": "import",
+      "line": 5,
+      "raw": "import recipeRoutes from './routes/recipes.js';",
+      "symbols": [
+        "recipeRoutes"
+      ]
+    },
+    {
+      "source": "server/server.js",
+      "target": "server/routes/stories.js",
+      "kind": "import",
+      "line": 6,
+      "raw": "import storyRoutes from './routes/stories.js';",
+      "symbols": [
+        "storyRoutes"
+      ]
+    },
+    {
+      "source": "server/server.js",
+      "target": "server/routes/playlists.js",
+      "kind": "import",
+      "line": 7,
+      "raw": "import playlistRoutes from './routes/playlists.js';",
+      "symbols": [
+        "playlistRoutes"
+      ]
+    },
+    {
+      "source": "server/middleware/auth.js",
+      "target": "server/models/User.js",
+      "kind": "import",
+      "line": 2,
+      "raw": "import User from '../models/User.js';",
+      "symbols": [
+        "User"
+      ]
+    },
+    {
+      "source": "server/routes/auth.js",
+      "target": "server/middleware/auth.js",
+      "kind": "import",
+      "line": 3,
+      "raw": "import { verifyToken } from '../middleware/auth.js';",
+      "symbols": [
+        "verifyToken"
+      ]
+    },
+    {
+      "source": "server/routes/auth.js",
+      "target": "server/models/User.js",
+      "kind": "import",
+      "line": 4,
+      "raw": "import User from '../models/User.js';",
+      "symbols": [
+        "User"
+      ]
+    },
+    {
+      "source": "server/routes/playlists.js",
+      "target": "server/models/Playlist.js",
+      "kind": "import",
+      "line": 2,
+      "raw": "import Playlist from '../models/Playlist.js';",
+      "symbols": [
+        "Playlist"
+      ]
+    },
+    {
+      "source": "server/routes/recipes.js",
+      "target": "server/models/Recipe.js",
+      "kind": "import",
+      "line": 2,
+      "raw": "import Recipe from '../models/Recipe.js';",
+      "symbols": [
+        "Recipe"
+      ]
+    },
+    {
+      "source": "server/routes/stories.js",
+      "target": "server/models/Story.js",
+      "kind": "import",
+      "line": 2,
+      "raw": "import Story from '../models/Story.js';",
+      "symbols": [
+        "Story"
+      ]
+    },
+    {
+      "source": "src/App.jsx",
+      "target": "src/context/RecipeContext.jsx",
+      "kind": "import",
+      "line": 3,
+      "raw": "import { RecipeProvider } from './context/RecipeContext';",
+      "symbols": [
+        "RecipeProvider"
+      ]
+    },
+    {
+      "source": "src/App.jsx",
+      "target": "src/context/StoriesContext.jsx",
+      "kind": "import",
+      "line": 4,
+      "raw": "import { StoriesProvider } from './context/StoriesContext';",
+      "symbols": [
+        "StoriesProvider"
+      ]
+    },
+    {
+      "source": "src/App.jsx",
+      "target": "src/components/Home/Home.jsx",
+      "kind": "import",
+      "line": 5,
+      "raw": "import Home from './components/Home/Home';",
+      "symbols": [
+        "Home"
+      ]
+    },
+    {
+      "source": "src/App.jsx",
+      "target": "src/components/RecipeFinder/RecipeFinder.jsx",
+      "kind": "import",
+      "line": 6,
+      "raw": "import RecipeFinder from './components/RecipeFinder/RecipeFinder';",
+      "symbols": [
+        "RecipeFinder"
+      ]
+    },
+    {
+      "source": "src/App.jsx",
+      "target": "src/components/Stories/Stories.jsx",
+      "kind": "import",
+      "line": 7,
+      "raw": "import Stories from './components/Stories/Stories';",
+      "symbols": [
+        "Stories"
+      ]
+    },
+    {
+      "source": "src/App.jsx",
+      "target": "src/components/SearchPage/SearchPage.jsx",
+      "kind": "import",
+      "line": 8,
+      "raw": "import SearchPage from './components/SearchPage/SearchPage';",
+      "symbols": [
+        "SearchPage"
+      ]
+    },
+    {
+      "source": "src/CreateArea.jsx",
+      "target": "src/services/speechService.js",
+      "kind": "import",
+      "line": 4,
+      "raw": "import { SpeechRecognitionService } from './services/speechService';",
+      "symbols": [
+        "SpeechRecognitionService"
+      ]
+    },
+    {
+      "source": "src/CreateArea.jsx",
+      "target": "src/services/audioService.js",
+      "kind": "import",
+      "line": 5,
+      "raw": "import { AudioRecorderService } from './services/audioService';",
+      "symbols": [
+        "AudioRecorderService"
+      ]
+    },
+    {
+      "source": "src/CreateArea.jsx",
+      "target": "src/services/geminiService.js",
+      "kind": "import",
+      "line": 6,
+      "raw": "import { formatRecipeWithGemini } from './services/geminiService';",
+      "symbols": [
+        "formatRecipeWithGemini"
+      ]
+    },
+    {
+      "source": "src/RecipeDisplay.jsx",
+      "target": "src/services/speechService.js",
+      "kind": "import",
+      "line": 3,
+      "raw": "import { speakText, stopSpeaking } from './services/speechService';",
+      "symbols": [
+        "speakText",
+        "stopSpeaking"
+      ]
+    },
+    {
+      "source": "src/RecipeDisplay.jsx",
+      "target": "src/services/audioService.js",
+      "kind": "import",
+      "line": 4,
+      "raw": "import { playAudio } from './services/audioService';",
+      "symbols": [
+        "playAudio"
+      ]
+    },
+    {
+      "source": "src/RecipeDisplay.jsx",
+      "target": "src/components/CookingMode/CookingMode.jsx",
+      "kind": "import",
+      "line": 5,
+      "raw": "import CookingMode from './components/CookingMode/CookingMode';",
+      "symbols": [
+        "CookingMode"
+      ]
+    },
+    {
+      "source": "src/RecipeDisplay.jsx",
+      "target": "src/context/RecipeContext.jsx",
+      "kind": "import",
+      "line": 6,
+      "raw": "import { useRecipes } from './context/RecipeContext';",
+      "symbols": [
+        "useRecipes"
+      ]
+    },
+    {
+      "source": "src/RecipeDisplay.jsx",
+      "target": "src/CreateArea.jsx",
+      "kind": "import",
+      "line": 7,
+      "raw": "import CreateArea from './CreateArea';",
+      "symbols": [
+        "CreateArea"
+      ]
+    },
+    {
+      "source": "src/main.jsx",
+      "target": "src/App.jsx",
+      "kind": "import",
+      "line": 3,
+      "raw": "import App from './App.jsx'",
+      "symbols": [
+        "App"
+      ]
+    },
+    {
+      "source": "src/components/Home/Home.jsx",
+      "target": "src/context/RecipeContext.jsx",
+      "kind": "import",
+      "line": 2,
+      "raw": "import { useRecipes } from '../../context/RecipeContext';",
+      "symbols": [
+        "useRecipes"
+      ]
+    },
+    {
+      "source": "src/components/Home/Home.jsx",
+      "target": "src/CreateArea.jsx",
+      "kind": "import",
+      "line": 3,
+      "raw": "import CreateArea from '../../CreateArea';",
+      "symbols": [
+        "CreateArea"
+      ]
+    },
+    {
+      "source": "src/components/Home/Home.jsx",
+      "target": "src/RecipeDisplay.jsx",
+      "kind": "import",
+      "line": 4,
+      "raw": "import RecipeDisplay from '../../RecipeDisplay';",
+      "symbols": [
+        "RecipeDisplay"
+      ]
+    },
+    {
+      "source": "src/components/RecipeFinder/Dish.jsx",
+      "target": "src/services/spoonacularApi.js",
+      "kind": "import",
+      "line": 3,
+      "raw": "import { getRecipeInformation, getRecipeInstructions } from '../../services/spoonacularApi';",
+      "symbols": [
+        "getRecipeInformation",
+        "getRecipeInstructions"
+      ]
+    },
+    {
+      "source": "src/components/RecipeFinder/Dish.jsx",
+      "target": "src/context/RecipeContext.jsx",
+      "kind": "import",
+      "line": 4,
+      "raw": "import { useRecipes } from '../../context/RecipeContext';",
+      "symbols": [
+        "useRecipes"
+      ]
+    },
+    {
+      "source": "src/components/RecipeFinder/DishList.jsx",
+      "target": "src/components/RecipeFinder/Dish.jsx",
+      "kind": "import",
+      "line": 2,
+      "raw": "import Dish from './Dish';",
+      "symbols": [
+        "Dish"
+      ]
+    },
+    {
+      "source": "src/components/RecipeFinder/RecipeFinder.jsx",
+      "target": "src/components/RecipeFinder/SearchForm.jsx",
+      "kind": "import",
+      "line": 3,
+      "raw": "import SearchForm from './SearchForm';",
+      "symbols": [
+        "SearchForm"
+      ]
+    },
+    {
+      "source": "src/components/RecipeFinder/RecipeFinder.jsx",
+      "target": "src/components/RecipeFinder/DishList.jsx",
+      "kind": "import",
+      "line": 4,
+      "raw": "import DishList from './DishList';",
+      "symbols": [
+        "DishList"
+      ]
+    },
+    {
+      "source": "src/components/RecipeFinder/RecipeFinder.jsx",
+      "target": "src/services/spoonacularApi.js",
+      "kind": "import",
+      "line": 5,
+      "raw": "import { searchRecipes } from '../../services/spoonacularApi';",
+      "symbols": [
+        "searchRecipes"
+      ]
+    },
+    {
+      "source": "src/components/SearchPage/SearchPage.jsx",
+      "target": "src/context/RecipeContext.jsx",
+      "kind": "import",
+      "line": 2,
+      "raw": "import { useRecipes } from '../../context/RecipeContext';",
+      "symbols": [
+        "useRecipes"
+      ]
+    },
+    {
+      "source": "src/components/SearchPage/SearchPage.jsx",
+      "target": "src/context/StoriesContext.jsx",
+      "kind": "import",
+      "line": 3,
+      "raw": "import { useStories } from '../../context/StoriesContext';",
+      "symbols": [
+        "useStories"
+      ]
+    },
+    {
+      "source": "src/components/SearchPage/SearchPage.jsx",
+      "target": "src/RecipeDisplay.jsx",
+      "kind": "import",
+      "line": 4,
+      "raw": "import RecipeDisplay from '../../RecipeDisplay';",
+      "symbols": [
+        "RecipeDisplay"
+      ]
+    },
+    {
+      "source": "src/components/Stories/Stories.jsx",
+      "target": "src/context/StoriesContext.jsx",
+      "kind": "import",
+      "line": 4,
+      "raw": "import { useStories } from '../../context/StoriesContext';",
+      "symbols": [
+        "useStories"
+      ]
+    },
+    {
+      "source": "src/context/RecipeContext.jsx",
+      "target": "src/services/apiService.js",
+      "kind": "import",
+      "line": 2,
+      "raw": "import { recipesAPI } from '../services/apiService';",
+      "symbols": [
+        "recipesAPI"
+      ]
+    },
+    {
+      "source": "src/context/StoriesContext.jsx",
+      "target": "src/services/apiService.js",
+      "kind": "import",
+      "line": 2,
+      "raw": "import { storiesAPI, playlistsAPI } from '../services/apiService';",
+      "symbols": [
+        "storiesAPI",
+        "playlistsAPI"
+      ]
+    },
+    {
+      "source": "server/middleware/auth.js",
+      "target": "server/middleware/auth.js::verifyToken",
+      "kind": "contain",
+      "line": 6,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/App.jsx",
+      "target": "src/App.jsx::NavigationContent",
+      "kind": "contain",
+      "line": 11,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/App.jsx",
+      "target": "src/App.jsx::AppContent",
+      "kind": "contain",
+      "line": 51,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/App.jsx",
+      "target": "src/App.jsx::App",
+      "kind": "contain",
+      "line": 68,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/CreateArea.jsx",
+      "target": "src/CreateArea.jsx::CreateArea",
+      "kind": "contain",
+      "line": 10,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/CreateArea.jsx",
+      "target": "src/CreateArea.jsx::handleClick",
+      "kind": "contain",
+      "line": 87,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/CreateArea.jsx",
+      "target": "src/CreateArea.jsx::handleCloseModeModal",
+      "kind": "contain",
+      "line": 105,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/CreateArea.jsx",
+      "target": "src/CreateArea.jsx::handleCloseRecipeModal",
+      "kind": "contain",
+      "line": 109,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/CreateArea.jsx",
+      "target": "src/CreateArea.jsx::handleSelectMode",
+      "kind": "contain",
+      "line": 130,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/CreateArea.jsx",
+      "target": "src/CreateArea.jsx::handleAddIngredient",
+      "kind": "contain",
+      "line": 143,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/CreateArea.jsx",
+      "target": "src/CreateArea.jsx::handleAddInstruction",
+      "kind": "contain",
+      "line": 170,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/CreateArea.jsx",
+      "target": "src/CreateArea.jsx::handleKeyPress",
+      "kind": "contain",
+      "line": 198,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/CreateArea.jsx",
+      "target": "src/CreateArea.jsx::handleEdit",
+      "kind": "contain",
+      "line": 209,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/CreateArea.jsx",
+      "target": "src/CreateArea.jsx::handleStartListening",
+      "kind": "contain",
+      "line": 223,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/CreateArea.jsx",
+      "target": "src/CreateArea.jsx::handleStopListening",
+      "kind": "contain",
+      "line": 293,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/CreateArea.jsx",
+      "target": "src/CreateArea.jsx::handleSaveEditedTranscript",
+      "kind": "contain",
+      "line": 320,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/CreateArea.jsx",
+      "target": "src/CreateArea.jsx::handleCancelEdit",
+      "kind": "contain",
+      "line": 358,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/CreateArea.jsx",
+      "target": "src/CreateArea.jsx::handleAddRecipe",
+      "kind": "contain",
+      "line": 363,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/CreateArea.jsx",
+      "target": "src/CreateArea.jsx::formatIngredientDisplay",
+      "kind": "contain",
+      "line": 422,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/CreateArea.jsx",
+      "target": "src/CreateArea.jsx::formatInstructionDisplay",
+      "kind": "contain",
+      "line": 431,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/RecipeDisplay.jsx",
+      "target": "src/RecipeDisplay.jsx::RecipeDisplay",
+      "kind": "contain",
+      "line": 10,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/RecipeDisplay.jsx",
+      "target": "src/RecipeDisplay.jsx::handleCloseModal",
+      "kind": "contain",
+      "line": 19,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/RecipeDisplay.jsx",
+      "target": "src/RecipeDisplay.jsx::handleOpenModal",
+      "kind": "contain",
+      "line": 25,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/RecipeDisplay.jsx",
+      "target": "src/RecipeDisplay.jsx::handleSpeakInstruction",
+      "kind": "contain",
+      "line": 29,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/RecipeDisplay.jsx",
+      "target": "src/RecipeDisplay.jsx::formatIngredientDisplay",
+      "kind": "contain",
+      "line": 57,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/RecipeDisplay.jsx",
+      "target": "src/RecipeDisplay.jsx::formatInstructionDisplay",
+      "kind": "contain",
+      "line": 66,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/RecipeDisplay.jsx",
+      "target": "src/RecipeDisplay.jsx::handlePlayOriginalAudio",
+      "kind": "contain",
+      "line": 77,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/RecipeDisplay.jsx",
+      "target": "src/RecipeDisplay.jsx::handleStartCookingMode",
+      "kind": "contain",
+      "line": 96,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/RecipeDisplay.jsx",
+      "target": "src/RecipeDisplay.jsx::handleEdit",
+      "kind": "contain",
+      "line": 101,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/RecipeDisplay.jsx",
+      "target": "src/RecipeDisplay.jsx::handleDelete",
+      "kind": "contain",
+      "line": 106,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/RecipeDisplay.jsx",
+      "target": "src/RecipeDisplay.jsx::handleSaveEdit",
+      "kind": "contain",
+      "line": 113,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/components/CookingMode/CookingMode.jsx",
+      "target": "src/components/CookingMode/CookingMode.jsx::CookingMode",
+      "kind": "contain",
+      "line": 5,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/components/CookingMode/CookingMode.jsx",
+      "target": "src/components/CookingMode/CookingMode.jsx::parseTime",
+      "kind": "contain",
+      "line": 31,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/components/CookingMode/CookingMode.jsx",
+      "target": "src/components/CookingMode/CookingMode.jsx::playAlarmSound",
+      "kind": "contain",
+      "line": 54,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/components/CookingMode/CookingMode.jsx",
+      "target": "src/components/CookingMode/CookingMode.jsx::startTimer",
+      "kind": "contain",
+      "line": 73,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/components/CookingMode/CookingMode.jsx",
+      "target": "src/components/CookingMode/CookingMode.jsx::handleProceedToInstructions",
+      "kind": "contain",
+      "line": 90,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/components/CookingMode/CookingMode.jsx",
+      "target": "src/components/CookingMode/CookingMode.jsx::handleNextInstruction",
+      "kind": "contain",
+      "line": 106,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/components/CookingMode/CookingMode.jsx",
+      "target": "src/components/CookingMode/CookingMode.jsx::formatTime",
+      "kind": "contain",
+      "line": 129,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/components/Home/Home.jsx",
+      "target": "src/components/Home/Home.jsx::Home",
+      "kind": "contain",
+      "line": 6,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/components/RecipeFinder/Dish.jsx",
+      "target": "src/components/RecipeFinder/Dish.jsx::Dish",
+      "kind": "contain",
+      "line": 8,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/components/RecipeFinder/Dish.jsx",
+      "target": "src/components/RecipeFinder/Dish.jsx::handleRecipeClick",
+      "kind": "contain",
+      "line": 17,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/components/RecipeFinder/Dish.jsx",
+      "target": "src/components/RecipeFinder/Dish.jsx::handleSaveRecipe",
+      "kind": "contain",
+      "line": 43,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/components/RecipeFinder/Dish.jsx",
+      "target": "src/components/RecipeFinder/Dish.jsx::handleCloseModal",
+      "kind": "contain",
+      "line": 100,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/components/RecipeFinder/DishList.jsx",
+      "target": "src/components/RecipeFinder/DishList.jsx::DishList",
+      "kind": "contain",
+      "line": 5,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/components/RecipeFinder/RecipeFinder.jsx",
+      "target": "src/components/RecipeFinder/RecipeFinder.jsx::RecipeFinder",
+      "kind": "contain",
+      "line": 8,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/components/RecipeFinder/RecipeFinder.jsx",
+      "target": "src/components/RecipeFinder/RecipeFinder.jsx::handleSearch",
+      "kind": "contain",
+      "line": 14,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/components/RecipeFinder/SearchForm.jsx",
+      "target": "src/components/RecipeFinder/SearchForm.jsx::SearchForm",
+      "kind": "contain",
+      "line": 5,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/components/RecipeFinder/SearchForm.jsx",
+      "target": "src/components/RecipeFinder/SearchForm.jsx::handleClickOutside",
+      "kind": "contain",
+      "line": 42,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/components/RecipeFinder/SearchForm.jsx",
+      "target": "src/components/RecipeFinder/SearchForm.jsx::handleAddCuisine",
+      "kind": "contain",
+      "line": 73,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/components/RecipeFinder/SearchForm.jsx",
+      "target": "src/components/RecipeFinder/SearchForm.jsx::handleRemoveCuisine",
+      "kind": "contain",
+      "line": 81,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/components/RecipeFinder/SearchForm.jsx",
+      "target": "src/components/RecipeFinder/SearchForm.jsx::handleAddDiet",
+      "kind": "contain",
+      "line": 85,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/components/RecipeFinder/SearchForm.jsx",
+      "target": "src/components/RecipeFinder/SearchForm.jsx::handleRemoveDiet",
+      "kind": "contain",
+      "line": 93,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/components/RecipeFinder/SearchForm.jsx",
+      "target": "src/components/RecipeFinder/SearchForm.jsx::handleAddIntolerance",
+      "kind": "contain",
+      "line": 97,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/components/RecipeFinder/SearchForm.jsx",
+      "target": "src/components/RecipeFinder/SearchForm.jsx::handleRemoveIntolerance",
+      "kind": "contain",
+      "line": 105,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/components/RecipeFinder/SearchForm.jsx",
+      "target": "src/components/RecipeFinder/SearchForm.jsx::handleSearchClick",
+      "kind": "contain",
+      "line": 109,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/components/SearchPage/SearchPage.jsx",
+      "target": "src/components/SearchPage/SearchPage.jsx::SearchPage",
+      "kind": "contain",
+      "line": 7,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/components/SearchPage/SearchPage.jsx",
+      "target": "src/components/SearchPage/SearchPage.jsx::performSearch",
+      "kind": "contain",
+      "line": 43,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/components/SearchPage/SearchPage.jsx",
+      "target": "src/components/SearchPage/SearchPage.jsx::handleTagToggle",
+      "kind": "contain",
+      "line": 117,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/components/SearchPage/SearchPage.jsx",
+      "target": "src/components/SearchPage/SearchPage.jsx::handleRemoveTag",
+      "kind": "contain",
+      "line": 130,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/components/SearchPage/SearchPage.jsx",
+      "target": "src/components/SearchPage/SearchPage.jsx::clearAllFilters",
+      "kind": "contain",
+      "line": 134,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/components/Stories/Stories.jsx",
+      "target": "src/components/Stories/Stories.jsx::Stories",
+      "kind": "contain",
+      "line": 8,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/components/Stories/Stories.jsx",
+      "target": "src/components/Stories/Stories.jsx::handleCreateStory",
+      "kind": "contain",
+      "line": 33,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/components/Stories/Stories.jsx",
+      "target": "src/components/Stories/Stories.jsx::handleEditStory",
+      "kind": "contain",
+      "line": 40,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/components/Stories/Stories.jsx",
+      "target": "src/components/Stories/Stories.jsx::handleSaveStory",
+      "kind": "contain",
+      "line": 53,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/components/Stories/Stories.jsx",
+      "target": "src/components/Stories/Stories.jsx::handleDeleteStory",
+      "kind": "contain",
+      "line": 69,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/components/Stories/Stories.jsx",
+      "target": "src/components/Stories/Stories.jsx::handleCreatePlaylist",
+      "kind": "contain",
+      "line": 75,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/components/Stories/Stories.jsx",
+      "target": "src/components/Stories/Stories.jsx::handleEditPlaylist",
+      "kind": "contain",
+      "line": 82,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/components/Stories/Stories.jsx",
+      "target": "src/components/Stories/Stories.jsx::handleSavePlaylist",
+      "kind": "contain",
+      "line": 93,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/components/Stories/Stories.jsx",
+      "target": "src/components/Stories/Stories.jsx::handleDeletePlaylist",
+      "kind": "contain",
+      "line": 109,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/components/Stories/Stories.jsx",
+      "target": "src/components/Stories/Stories.jsx::handleAddToPlaylist",
+      "kind": "contain",
+      "line": 115,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/components/Stories/Stories.jsx",
+      "target": "src/components/Stories/Stories.jsx::handleMoveStory",
+      "kind": "contain",
+      "line": 120,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/components/Stories/Stories.jsx",
+      "target": "src/components/Stories/Stories.jsx::handleConfirmMoveStory",
+      "kind": "contain",
+      "line": 125,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/components/Stories/Stories.jsx",
+      "target": "src/components/Stories/Stories.jsx::handleRemoveFromPlaylist",
+      "kind": "contain",
+      "line": 142,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/components/Stories/Stories.jsx",
+      "target": "src/components/Stories/Stories.jsx::togglePlaylist",
+      "kind": "contain",
+      "line": 148,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/components/Stories/Stories.jsx",
+      "target": "src/components/Stories/Stories.jsx::getStoriesInPlaylist",
+      "kind": "contain",
+      "line": 152,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/components/Stories/Stories.jsx",
+      "target": "src/components/Stories/Stories.jsx::getPlaylistsForStory",
+      "kind": "contain",
+      "line": 158,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/components/Stories/Stories.jsx",
+      "target": "src/components/Stories/Stories.jsx::handlePasteUrl",
+      "kind": "contain",
+      "line": 162,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/context/RecipeContext.jsx",
+      "target": "src/context/RecipeContext.jsx::useRecipes",
+      "kind": "contain",
+      "line": 6,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/context/RecipeContext.jsx",
+      "target": "src/context/RecipeContext.jsx::RecipeProvider",
+      "kind": "contain",
+      "line": 14,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/context/RecipeContext.jsx",
+      "target": "src/context/RecipeContext.jsx::loadRecipes",
+      "kind": "contain",
+      "line": 24,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/context/RecipeContext.jsx",
+      "target": "src/context/RecipeContext.jsx::addRecipe",
+      "kind": "contain",
+      "line": 45,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/context/RecipeContext.jsx",
+      "target": "src/context/RecipeContext.jsx::updateRecipe",
+      "kind": "contain",
+      "line": 60,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/context/RecipeContext.jsx",
+      "target": "src/context/RecipeContext.jsx::deleteRecipe",
+      "kind": "contain",
+      "line": 77,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/context/StoriesContext.jsx",
+      "target": "src/context/StoriesContext.jsx::useStories",
+      "kind": "contain",
+      "line": 6,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/context/StoriesContext.jsx",
+      "target": "src/context/StoriesContext.jsx::StoriesProvider",
+      "kind": "contain",
+      "line": 14,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/context/StoriesContext.jsx",
+      "target": "src/context/StoriesContext.jsx::loadStories",
+      "kind": "contain",
+      "line": 26,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/context/StoriesContext.jsx",
+      "target": "src/context/StoriesContext.jsx::loadPlaylists",
+      "kind": "contain",
+      "line": 45,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/context/StoriesContext.jsx",
+      "target": "src/context/StoriesContext.jsx::addStory",
+      "kind": "contain",
+      "line": 64,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/context/StoriesContext.jsx",
+      "target": "src/context/StoriesContext.jsx::updateStory",
+      "kind": "contain",
+      "line": 79,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/context/StoriesContext.jsx",
+      "target": "src/context/StoriesContext.jsx::deleteStory",
+      "kind": "contain",
+      "line": 96,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/context/StoriesContext.jsx",
+      "target": "src/context/StoriesContext.jsx::addPlaylist",
+      "kind": "contain",
+      "line": 106,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/context/StoriesContext.jsx",
+      "target": "src/context/StoriesContext.jsx::updatePlaylist",
+      "kind": "contain",
+      "line": 125,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/context/StoriesContext.jsx",
+      "target": "src/context/StoriesContext.jsx::deletePlaylist",
+      "kind": "contain",
+      "line": 146,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/context/StoriesContext.jsx",
+      "target": "src/context/StoriesContext.jsx::addStoryToPlaylist",
+      "kind": "contain",
+      "line": 156,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/context/StoriesContext.jsx",
+      "target": "src/context/StoriesContext.jsx::removeStoryFromPlaylist",
+      "kind": "contain",
+      "line": 177,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/services/apiService.js",
+      "target": "src/services/apiService.js::apiRequest",
+      "kind": "contain",
+      "line": 5,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/services/audioService.js",
+      "target": "src/services/audioService.js::AudioRecorderService",
+      "kind": "contain",
+      "line": 2,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/services/audioService.js::AudioRecorderService",
+      "target": "src/services/audioService.js::AudioRecorderService.constructor",
+      "kind": "contain",
+      "line": 3,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/services/audioService.js::AudioRecorderService",
+      "target": "src/services/audioService.js::AudioRecorderService.startRecording",
+      "kind": "contain",
+      "line": 9,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/services/audioService.js::AudioRecorderService",
+      "target": "src/services/audioService.js::AudioRecorderService.stopRecording",
+      "kind": "contain",
+      "line": 31,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/services/audioService.js::AudioRecorderService",
+      "target": "src/services/audioService.js::AudioRecorderService.isSupported",
+      "kind": "contain",
+      "line": 60,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/services/audioService.js",
+      "target": "src/services/audioService.js::playAudio",
+      "kind": "contain",
+      "line": 66,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/services/audioService.js",
+      "target": "src/services/audioService.js::stopAudio",
+      "kind": "contain",
+      "line": 81,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/services/geminiService.js",
+      "target": "src/services/geminiService.js::getGeminiAPIKey",
+      "kind": "contain",
+      "line": 4,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/services/geminiService.js",
+      "target": "src/services/geminiService.js::validateAndNormalizeRecipe",
+      "kind": "contain",
+      "line": 9,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/services/geminiService.js",
+      "target": "src/services/geminiService.js::formatRecipeWithGemini",
+      "kind": "contain",
+      "line": 75,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/services/speechService.js",
+      "target": "src/services/speechService.js::SpeechRecognitionService",
+      "kind": "contain",
+      "line": 3,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/services/speechService.js::SpeechRecognitionService",
+      "target": "src/services/speechService.js::SpeechRecognitionService.constructor",
+      "kind": "contain",
+      "line": 4,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/services/speechService.js::SpeechRecognitionService",
+      "target": "src/services/speechService.js::SpeechRecognitionService.initializeRecognition",
+      "kind": "contain",
+      "line": 14,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/services/speechService.js::SpeechRecognitionService",
+      "target": "src/services/speechService.js::SpeechRecognitionService.startListening",
+      "kind": "contain",
+      "line": 61,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/services/speechService.js::SpeechRecognitionService",
+      "target": "src/services/speechService.js::SpeechRecognitionService.stopListening",
+      "kind": "contain",
+      "line": 85,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/services/speechService.js::SpeechRecognitionService",
+      "target": "src/services/speechService.js::SpeechRecognitionService.isSupported",
+      "kind": "contain",
+      "line": 92,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/services/speechService.js",
+      "target": "src/services/speechService.js::speakText",
+      "kind": "contain",
+      "line": 98,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/services/speechService.js",
+      "target": "src/services/speechService.js::stopSpeaking",
+      "kind": "contain",
+      "line": 117,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/services/spoonacularApi.js",
+      "target": "src/services/spoonacularApi.js::searchRecipes",
+      "kind": "contain",
+      "line": 5,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/services/spoonacularApi.js",
+      "target": "src/services/spoonacularApi.js::getRecipeInformation",
+      "kind": "contain",
+      "line": 40,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/services/spoonacularApi.js",
+      "target": "src/services/spoonacularApi.js::getRecipeInstructions",
+      "kind": "contain",
+      "line": 55,
+      "raw": "",
+      "symbols": []
+    }
+  ]
+}

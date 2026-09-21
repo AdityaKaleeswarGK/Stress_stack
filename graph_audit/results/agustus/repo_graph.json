@@ -1,0 +1,2440 @@
+{
+  "schema_version": "0.2.0",
+  "root": "/Users/adityagk/Desktop/projects/agustus",
+  "statistics": {
+    "files_total": 6,
+    "files_by_language": {
+      "typescript": 6
+    },
+    "symbols_total": 83,
+    "tests_total": 7,
+    "calls_total": 352,
+    "syntax_errors": 0,
+    "unparsed_known_language": 0,
+    "edges_total": 100,
+    "edges_by_kind": {
+      "contain": 83,
+      "import": 4,
+      "inherit": 13
+    }
+  },
+  "files": [
+    {
+      "path": "worker-configuration.d.ts",
+      "language": "typescript",
+      "parser": "tree_sitter",
+      "has_syntax_error": false,
+      "imports": [],
+      "symbols": [
+        {
+          "name": "DOMException",
+          "qualified_name": "DOMException",
+          "kind": "class",
+          "start_line": 39,
+          "end_line": 87,
+          "first_body_line": 39,
+          "last_body_line": 87,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 1746,
+          "body_end_byte": 3793,
+          "bases": [
+            "Error"
+          ],
+          "parent": "",
+          "id": "worker-configuration.d.ts::DOMException"
+        },
+        {
+          "name": "CompileError",
+          "qualified_name": "CompileError",
+          "kind": "class",
+          "start_line": 219,
+          "end_line": 221,
+          "first_body_line": 219,
+          "last_body_line": 221,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 9541,
+          "body_end_byte": 9587,
+          "bases": [
+            "Error"
+          ],
+          "parent": "",
+          "id": "worker-configuration.d.ts::CompileError"
+        },
+        {
+          "name": "RuntimeError",
+          "qualified_name": "RuntimeError",
+          "kind": "class",
+          "start_line": 222,
+          "end_line": 224,
+          "first_body_line": 222,
+          "last_body_line": 224,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 9625,
+          "body_end_byte": 9671,
+          "bases": [
+            "Error"
+          ],
+          "parent": "",
+          "id": "worker-configuration.d.ts::RuntimeError"
+        },
+        {
+          "name": "Global",
+          "qualified_name": "Global",
+          "kind": "class",
+          "start_line": 230,
+          "end_line": 234,
+          "first_body_line": 230,
+          "last_body_line": 234,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 9868,
+          "body_end_byte": 9983,
+          "bases": [],
+          "parent": "",
+          "id": "worker-configuration.d.ts::Global"
+        },
+        {
+          "name": "Instance",
+          "qualified_name": "Instance",
+          "kind": "class",
+          "start_line": 240,
+          "end_line": 243,
+          "first_body_line": 240,
+          "last_body_line": 243,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 10259,
+          "body_end_byte": 10357,
+          "bases": [],
+          "parent": "",
+          "id": "worker-configuration.d.ts::Instance"
+        },
+        {
+          "name": "Memory",
+          "qualified_name": "Memory",
+          "kind": "class",
+          "start_line": 249,
+          "end_line": 253,
+          "first_body_line": 249,
+          "last_body_line": 253,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 10491,
+          "body_end_byte": 10624,
+          "bases": [],
+          "parent": "",
+          "id": "worker-configuration.d.ts::Memory"
+        },
+        {
+          "name": "Table",
+          "qualified_name": "Table",
+          "kind": "class",
+          "start_line": 275,
+          "end_line": 281,
+          "first_body_line": 275,
+          "last_body_line": 281,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 11347,
+          "body_end_byte": 11580,
+          "bases": [],
+          "parent": "",
+          "id": "worker-configuration.d.ts::Table"
+        },
+        {
+          "name": "WebSocketRequestResponsePair",
+          "qualified_name": "WebSocketRequestResponsePair",
+          "kind": "class",
+          "start_line": 620,
+          "end_line": 624,
+          "first_body_line": 620,
+          "last_body_line": 624,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 29118,
+          "body_end_byte": 29228,
+          "bases": [],
+          "parent": "",
+          "id": "worker-configuration.d.ts::WebSocketRequestResponsePair"
+        },
+        {
+          "name": "Event",
+          "qualified_name": "Event",
+          "kind": "class",
+          "start_line": 648,
+          "end_line": 766,
+          "first_body_line": 648,
+          "last_body_line": 766,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 30167,
+          "body_end_byte": 35568,
+          "bases": [],
+          "parent": "",
+          "id": "worker-configuration.d.ts::Event"
+        },
+        {
+          "name": "EventTarget",
+          "qualified_name": "EventTarget",
+          "kind": "class",
+          "start_line": 782,
+          "end_line": 802,
+          "first_body_line": 782,
+          "last_body_line": 802,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 36284,
+          "body_end_byte": 37609,
+          "bases": [],
+          "parent": "",
+          "id": "worker-configuration.d.ts::EventTarget"
+        },
+        {
+          "name": "AbortController",
+          "qualified_name": "AbortController",
+          "kind": "class",
+          "start_line": 820,
+          "end_line": 834,
+          "first_body_line": 820,
+          "last_body_line": 834,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 38172,
+          "body_end_byte": 38802,
+          "bases": [],
+          "parent": "",
+          "id": "worker-configuration.d.ts::AbortController"
+        },
+        {
+          "name": "CustomEvent",
+          "qualified_name": "CustomEvent",
+          "kind": "class",
+          "start_line": 906,
+          "end_line": 914,
+          "first_body_line": 906,
+          "last_body_line": 914,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 42132,
+          "body_end_byte": 42456,
+          "bases": [
+            "Event"
+          ],
+          "parent": "",
+          "id": "worker-configuration.d.ts::CustomEvent"
+        },
+        {
+          "name": "Blob",
+          "qualified_name": "Blob",
+          "kind": "class",
+          "start_line": 926,
+          "end_line": 970,
+          "first_body_line": 926,
+          "last_body_line": 970,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 42914,
+          "body_end_byte": 44919,
+          "bases": [],
+          "parent": "",
+          "id": "worker-configuration.d.ts::Blob"
+        },
+        {
+          "name": "File",
+          "qualified_name": "File",
+          "kind": "class",
+          "start_line": 979,
+          "end_line": 993,
+          "first_body_line": 979,
+          "last_body_line": 993,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 45198,
+          "body_end_byte": 45909,
+          "bases": [
+            "Blob"
+          ],
+          "parent": "",
+          "id": "worker-configuration.d.ts::File"
+        },
+        {
+          "name": "DigestStream",
+          "qualified_name": "DigestStream",
+          "kind": "class",
+          "start_line": 1270,
+          "end_line": 1274,
+          "first_body_line": 1270,
+          "last_body_line": 1274,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 58038,
+          "body_end_byte": 58189,
+          "bases": [
+            "WritableStream"
+          ],
+          "parent": "",
+          "id": "worker-configuration.d.ts::DigestStream"
+        },
+        {
+          "name": "TextDecoder",
+          "qualified_name": "TextDecoder",
+          "kind": "class",
+          "start_line": 1280,
+          "end_line": 1291,
+          "first_body_line": 1280,
+          "last_body_line": 1291,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 58441,
+          "body_end_byte": 58933,
+          "bases": [],
+          "parent": "",
+          "id": "worker-configuration.d.ts::TextDecoder"
+        },
+        {
+          "name": "TextEncoder",
+          "qualified_name": "TextEncoder",
+          "kind": "class",
+          "start_line": 1297,
+          "end_line": 1312,
+          "first_body_line": 1297,
+          "last_body_line": 1312,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 59155,
+          "body_end_byte": 59977,
+          "bases": [],
+          "parent": "",
+          "id": "worker-configuration.d.ts::TextEncoder"
+        },
+        {
+          "name": "ErrorEvent",
+          "qualified_name": "ErrorEvent",
+          "kind": "class",
+          "start_line": 1329,
+          "end_line": 1361,
+          "first_body_line": 1329,
+          "last_body_line": 1361,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 60447,
+          "body_end_byte": 62010,
+          "bases": [
+            "Event"
+          ],
+          "parent": "",
+          "id": "worker-configuration.d.ts::ErrorEvent"
+        },
+        {
+          "name": "MessageEvent",
+          "qualified_name": "MessageEvent",
+          "kind": "class",
+          "start_line": 1374,
+          "end_line": 1406,
+          "first_body_line": 1374,
+          "last_body_line": 1406,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 62367,
+          "body_end_byte": 63736,
+          "bases": [
+            "Event"
+          ],
+          "parent": "",
+          "id": "worker-configuration.d.ts::MessageEvent"
+        },
+        {
+          "name": "FormData",
+          "qualified_name": "FormData",
+          "kind": "class",
+          "start_line": 1434,
+          "end_line": 1510,
+          "first_body_line": 1434,
+          "last_body_line": 1510,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 65007,
+          "body_end_byte": 68695,
+          "bases": [],
+          "parent": "",
+          "id": "worker-configuration.d.ts::FormData"
+        },
+        {
+          "name": "HTMLRewriter",
+          "qualified_name": "HTMLRewriter",
+          "kind": "class",
+          "start_line": 1514,
+          "end_line": 1519,
+          "first_body_line": 1514,
+          "last_body_line": 1519,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 68772,
+          "body_end_byte": 69002,
+          "bases": [],
+          "parent": "",
+          "id": "worker-configuration.d.ts::HTMLRewriter"
+        },
+        {
+          "name": "Headers",
+          "qualified_name": "Headers",
+          "kind": "class",
+          "start_line": 1607,
+          "end_line": 1660,
+          "first_body_line": 1607,
+          "last_body_line": 1660,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 72724,
+          "body_end_byte": 75262,
+          "bases": [],
+          "parent": "",
+          "id": "worker-configuration.d.ts::Headers"
+        },
+        {
+          "name": "ReadableStreamDefaultReader",
+          "qualified_name": "ReadableStreamDefaultReader",
+          "kind": "class",
+          "start_line": 2281,
+          "end_line": 2297,
+          "first_body_line": 2281,
+          "last_body_line": 2297,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 103194,
+          "body_end_byte": 103926,
+          "bases": [],
+          "parent": "",
+          "id": "worker-configuration.d.ts::ReadableStreamDefaultReader"
+        },
+        {
+          "name": "ReadableStreamBYOBReader",
+          "qualified_name": "ReadableStreamBYOBReader",
+          "kind": "class",
+          "start_line": 2303,
+          "end_line": 2320,
+          "first_body_line": 2303,
+          "last_body_line": 2320,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 104230,
+          "body_end_byte": 105111,
+          "bases": [],
+          "parent": "",
+          "id": "worker-configuration.d.ts::ReadableStreamBYOBReader"
+        },
+        {
+          "name": "WritableStream",
+          "qualified_name": "WritableStream",
+          "kind": "class",
+          "start_line": 2490,
+          "end_line": 2516,
+          "first_body_line": 2490,
+          "last_body_line": 2516,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 113853,
+          "body_end_byte": 115190,
+          "bases": [],
+          "parent": "",
+          "id": "worker-configuration.d.ts::WritableStream"
+        },
+        {
+          "name": "WritableStreamDefaultWriter",
+          "qualified_name": "WritableStreamDefaultWriter",
+          "kind": "class",
+          "start_line": 2522,
+          "end_line": 2566,
+          "first_body_line": 2522,
+          "last_body_line": 2566,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 115590,
+          "body_end_byte": 117505,
+          "bases": [],
+          "parent": "",
+          "id": "worker-configuration.d.ts::WritableStreamDefaultWriter"
+        },
+        {
+          "name": "TransformStream",
+          "qualified_name": "TransformStream",
+          "kind": "class",
+          "start_line": 2572,
+          "end_line": 2586,
+          "first_body_line": 2572,
+          "last_body_line": 2586,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 117785,
+          "body_end_byte": 118528,
+          "bases": [],
+          "parent": "",
+          "id": "worker-configuration.d.ts::TransformStream"
+        },
+        {
+          "name": "FixedLengthStream",
+          "qualified_name": "FixedLengthStream",
+          "kind": "class",
+          "start_line": 2587,
+          "end_line": 2589,
+          "first_body_line": 2587,
+          "last_body_line": 2589,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 118593,
+          "body_end_byte": 118704,
+          "bases": [
+            "IdentityTransformStream"
+          ],
+          "parent": "",
+          "id": "worker-configuration.d.ts::FixedLengthStream"
+        },
+        {
+          "name": "IdentityTransformStream",
+          "qualified_name": "IdentityTransformStream",
+          "kind": "class",
+          "start_line": 2590,
+          "end_line": 2592,
+          "first_body_line": 2590,
+          "last_body_line": 2592,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 118810,
+          "body_end_byte": 118888,
+          "bases": [
+            "TransformStream"
+          ],
+          "parent": "",
+          "id": "worker-configuration.d.ts::IdentityTransformStream"
+        },
+        {
+          "name": "CompressionStream",
+          "qualified_name": "CompressionStream",
+          "kind": "class",
+          "start_line": 2604,
+          "end_line": 2606,
+          "first_body_line": 2604,
+          "last_body_line": 2606,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 119359,
+          "body_end_byte": 119423,
+          "bases": [
+            "TransformStream"
+          ],
+          "parent": "",
+          "id": "worker-configuration.d.ts::CompressionStream"
+        },
+        {
+          "name": "DecompressionStream",
+          "qualified_name": "DecompressionStream",
+          "kind": "class",
+          "start_line": 2612,
+          "end_line": 2614,
+          "first_body_line": 2612,
+          "last_body_line": 2614,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 119739,
+          "body_end_byte": 119803,
+          "bases": [
+            "TransformStream"
+          ],
+          "parent": "",
+          "id": "worker-configuration.d.ts::DecompressionStream"
+        },
+        {
+          "name": "TextEncoderStream",
+          "qualified_name": "TextEncoderStream",
+          "kind": "class",
+          "start_line": 2620,
+          "end_line": 2623,
+          "first_body_line": 2620,
+          "last_body_line": 2623,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 120096,
+          "body_end_byte": 120146,
+          "bases": [
+            "TransformStream"
+          ],
+          "parent": "",
+          "id": "worker-configuration.d.ts::TextEncoderStream"
+        },
+        {
+          "name": "TextDecoderStream",
+          "qualified_name": "TextDecoderStream",
+          "kind": "class",
+          "start_line": 2629,
+          "end_line": 2634,
+          "first_body_line": 2629,
+          "last_body_line": 2634,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 120487,
+          "body_end_byte": 120657,
+          "bases": [
+            "TransformStream"
+          ],
+          "parent": "",
+          "id": "worker-configuration.d.ts::TextDecoderStream"
+        },
+        {
+          "name": "ByteLengthQueuingStrategy",
+          "qualified_name": "ByteLengthQueuingStrategy",
+          "kind": "class",
+          "start_line": 2644,
+          "end_line": 2654,
+          "first_body_line": 2644,
+          "last_body_line": 2654,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 121102,
+          "body_end_byte": 121640,
+          "bases": [],
+          "parent": "",
+          "id": "worker-configuration.d.ts::ByteLengthQueuingStrategy"
+        },
+        {
+          "name": "CountQueuingStrategy",
+          "qualified_name": "CountQueuingStrategy",
+          "kind": "class",
+          "start_line": 2660,
+          "end_line": 2670,
+          "first_body_line": 2660,
+          "last_body_line": 2670,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 121957,
+          "body_end_byte": 122481,
+          "bases": [
+            "QueuingStrategy"
+          ],
+          "parent": "",
+          "id": "worker-configuration.d.ts::CountQueuingStrategy"
+        },
+        {
+          "name": "URL",
+          "qualified_name": "URL",
+          "kind": "class",
+          "start_line": 2798,
+          "end_line": 2964,
+          "first_body_line": 2798,
+          "last_body_line": 2964,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 126713,
+          "body_end_byte": 134413,
+          "bases": [],
+          "parent": "",
+          "id": "worker-configuration.d.ts::URL"
+        },
+        {
+          "name": "URLSearchParams",
+          "qualified_name": "URLSearchParams",
+          "kind": "class",
+          "start_line": 2970,
+          "end_line": 3036,
+          "first_body_line": 2970,
+          "last_body_line": 3036,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 134637,
+          "body_end_byte": 137712,
+          "bases": [],
+          "parent": "",
+          "id": "worker-configuration.d.ts::URLSearchParams"
+        },
+        {
+          "name": "URLPattern",
+          "qualified_name": "URLPattern",
+          "kind": "class",
+          "start_line": 3037,
+          "end_line": 3050,
+          "first_body_line": 3037,
+          "last_body_line": 3050,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 137738,
+          "body_end_byte": 138279,
+          "bases": [],
+          "parent": "",
+          "id": "worker-configuration.d.ts::URLPattern"
+        },
+        {
+          "name": "CloseEvent",
+          "qualified_name": "CloseEvent",
+          "kind": "class",
+          "start_line": 3085,
+          "end_line": 3105,
+          "first_body_line": 3085,
+          "last_body_line": 3105,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 139257,
+          "body_end_byte": 140245,
+          "bases": [
+            "Event"
+          ],
+          "parent": "",
+          "id": "worker-configuration.d.ts::CloseEvent"
+        },
+        {
+          "name": "EventSource",
+          "qualified_name": "EventSource",
+          "kind": "class",
+          "start_line": 3258,
+          "end_line": 3300,
+          "first_body_line": 3258,
+          "last_body_line": 3300,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 145889,
+          "body_end_byte": 147847,
+          "bases": [
+            "EventTarget"
+          ],
+          "parent": "",
+          "id": "worker-configuration.d.ts::EventSource"
+        },
+        {
+          "name": "MessageChannel",
+          "qualified_name": "MessageChannel",
+          "kind": "class",
+          "start_line": 3404,
+          "end_line": 3418,
+          "first_body_line": 3404,
+          "last_body_line": 3418,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 151605,
+          "body_end_byte": 152181,
+          "bases": [],
+          "parent": "",
+          "id": "worker-configuration.d.ts::MessageChannel"
+        },
+        {
+          "name": "NonRetryableError",
+          "qualified_name": "NonRetryableError",
+          "kind": "class",
+          "start_line": 14586,
+          "end_line": 14588,
+          "first_body_line": 14586,
+          "last_body_line": 14588,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 546064,
+          "body_end_byte": 546131,
+          "bases": [
+            "Error"
+          ],
+          "parent": "",
+          "id": "worker-configuration.d.ts::NonRetryableError"
+        }
+      ]
+    },
+    {
+      "path": "src/auth.ts",
+      "language": "typescript",
+      "parser": "tree_sitter",
+      "has_syntax_error": false,
+      "imports": [
+        {
+          "raw": "import {\n  AuthorizationError,\n  type AuthRequest,\n  type OAuthHelpers,\n} from \"@cloudflare/workers-oauth-provider\";",
+          "module": "@cloudflare/workers-oauth-provider",
+          "symbols": [
+            "AuthorizationError",
+            "AuthRequest",
+            "OAuthHelpers"
+          ],
+          "line": 1
+        }
+      ],
+      "symbols": [
+        {
+          "name": "escapeHtml",
+          "qualified_name": "escapeHtml",
+          "kind": "function",
+          "start_line": 41,
+          "end_line": 48,
+          "first_body_line": 41,
+          "last_body_line": 48,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 961,
+          "body_end_byte": 1130,
+          "bases": [],
+          "parent": "",
+          "id": "src/auth.ts::escapeHtml"
+        },
+        {
+          "name": "createState",
+          "qualified_name": "createState",
+          "kind": "function",
+          "start_line": 50,
+          "end_line": 56,
+          "first_body_line": 50,
+          "last_body_line": 56,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 1163,
+          "body_end_byte": 1349,
+          "bases": [],
+          "parent": "",
+          "id": "src/auth.ts::createState"
+        },
+        {
+          "name": "pendingLoginKey",
+          "qualified_name": "pendingLoginKey",
+          "kind": "function",
+          "start_line": 58,
+          "end_line": 60,
+          "first_body_line": 58,
+          "last_body_line": 60,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 1399,
+          "body_end_byte": 1446,
+          "bases": [],
+          "parent": "",
+          "id": "src/auth.ts::pendingLoginKey"
+        },
+        {
+          "name": "errorRedirect",
+          "qualified_name": "errorRedirect",
+          "kind": "function",
+          "start_line": 62,
+          "end_line": 75,
+          "first_body_line": 66,
+          "last_body_line": 75,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 1578,
+          "body_end_byte": 1935,
+          "bases": [],
+          "parent": "",
+          "id": "src/auth.ts::errorRedirect"
+        },
+        {
+          "name": "authorizationErrorResponse",
+          "qualified_name": "authorizationErrorResponse",
+          "kind": "function",
+          "start_line": 77,
+          "end_line": 88,
+          "first_body_line": 77,
+          "last_body_line": 88,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 2010,
+          "body_end_byte": 2452,
+          "bases": [],
+          "parent": "",
+          "id": "src/auth.ts::authorizationErrorResponse"
+        },
+        {
+          "name": "consentPage",
+          "qualified_name": "consentPage",
+          "kind": "function",
+          "start_line": 90,
+          "end_line": 135,
+          "first_body_line": 90,
+          "last_body_line": 135,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 2520,
+          "body_end_byte": 4699,
+          "bases": [],
+          "parent": "",
+          "id": "src/auth.ts::consentPage"
+        },
+        {
+          "name": "handleAuthorize",
+          "qualified_name": "handleAuthorize",
+          "kind": "function",
+          "start_line": 137,
+          "end_line": 164,
+          "first_body_line": 137,
+          "last_body_line": 164,
+          "is_test": false,
+          "is_async": true,
+          "is_generator": false,
+          "body_start_byte": 4782,
+          "body_end_byte": 5549,
+          "bases": [],
+          "parent": "",
+          "id": "src/auth.ts::handleAuthorize"
+        },
+        {
+          "name": "handleGoogleStart",
+          "qualified_name": "handleGoogleStart",
+          "kind": "function",
+          "start_line": 166,
+          "end_line": 191,
+          "first_body_line": 166,
+          "last_body_line": 191,
+          "is_test": false,
+          "is_async": true,
+          "is_generator": false,
+          "body_start_byte": 5634,
+          "body_end_byte": 6626,
+          "bases": [],
+          "parent": "",
+          "id": "src/auth.ts::handleGoogleStart"
+        },
+        {
+          "name": "handleGoogleCallback",
+          "qualified_name": "handleGoogleCallback",
+          "kind": "function",
+          "start_line": 193,
+          "end_line": 282,
+          "first_body_line": 193,
+          "last_body_line": 282,
+          "is_test": false,
+          "is_async": true,
+          "is_generator": false,
+          "body_start_byte": 6714,
+          "body_end_byte": 9362,
+          "bases": [],
+          "parent": "",
+          "id": "src/auth.ts::handleGoogleCallback"
+        },
+        {
+          "name": "fetch",
+          "qualified_name": "fetch",
+          "kind": "method",
+          "start_line": 285,
+          "end_line": 309,
+          "first_body_line": 285,
+          "last_body_line": 309,
+          "is_test": false,
+          "is_async": true,
+          "is_generator": false,
+          "body_start_byte": 9457,
+          "body_end_byte": 10041,
+          "bases": [],
+          "parent": "",
+          "id": "src/auth.ts::fetch"
+        }
+      ]
+    },
+    {
+      "path": "src/index.ts",
+      "language": "typescript",
+      "parser": "tree_sitter",
+      "has_syntax_error": false,
+      "imports": [
+        {
+          "raw": "import OAuthProvider from \"@cloudflare/workers-oauth-provider\";",
+          "module": "@cloudflare/workers-oauth-provider",
+          "symbols": [
+            "OAuthProvider"
+          ],
+          "line": 1
+        },
+        {
+          "raw": "import { authHandler, type AppEnv } from \"./auth\";",
+          "module": "./auth",
+          "symbols": [
+            "authHandler",
+            "AppEnv"
+          ],
+          "line": 2
+        },
+        {
+          "raw": "import { handleMcpRequest } from \"./mcp\";",
+          "module": "./mcp",
+          "symbols": [
+            "handleMcpRequest"
+          ],
+          "line": 3
+        }
+      ],
+      "symbols": [
+        {
+          "name": "fetch",
+          "qualified_name": "fetch",
+          "kind": "method",
+          "start_line": 6,
+          "end_line": 8,
+          "first_body_line": 6,
+          "last_body_line": 8,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 260,
+          "body_end_byte": 313,
+          "bases": [],
+          "parent": "",
+          "id": "src/index.ts::fetch"
+        }
+      ]
+    },
+    {
+      "path": "src/mcp.ts",
+      "language": "typescript",
+      "parser": "tree_sitter",
+      "has_syntax_error": false,
+      "imports": [
+        {
+          "raw": "import { McpServer } from \"@modelcontextprotocol/server\";",
+          "module": "@modelcontextprotocol/server",
+          "symbols": [
+            "McpServer"
+          ],
+          "line": 1
+        },
+        {
+          "raw": "import { createMcpHandler } from \"agents/mcp/server\";",
+          "module": "agents/mcp/server",
+          "symbols": [
+            "createMcpHandler"
+          ],
+          "line": 2
+        },
+        {
+          "raw": "import { z } from \"zod\";",
+          "module": "zod",
+          "symbols": [
+            "z"
+          ],
+          "line": 3
+        },
+        {
+          "raw": "import {\n  filterBySavedPeriod,\n  groupBySavedPeriod,\n  localDateRangeToUtcBounds,\n  savedPeriodLabel,\n} from \"./time-groups\";",
+          "module": "./time-groups",
+          "symbols": [
+            "filterBySavedPeriod",
+            "groupBySavedPeriod",
+            "localDateRangeToUtcBounds",
+            "savedPeriodLabel"
+          ],
+          "line": 4
+        }
+      ],
+      "symbols": [
+        {
+          "name": "normalizeTerm",
+          "qualified_name": "normalizeTerm",
+          "kind": "function",
+          "start_line": 118,
+          "end_line": 120,
+          "first_body_line": 118,
+          "last_body_line": 120,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 2300,
+          "body_end_byte": 2339,
+          "bases": [],
+          "parent": "",
+          "id": "src/mcp.ts::normalizeTerm"
+        },
+        {
+          "name": "findWord",
+          "qualified_name": "findWord",
+          "kind": "function",
+          "start_line": 122,
+          "end_line": 165,
+          "first_body_line": 126,
+          "last_body_line": 165,
+          "is_test": false,
+          "is_async": true,
+          "is_generator": false,
+          "body_start_byte": 2454,
+          "body_end_byte": 3447,
+          "bases": [],
+          "parent": "",
+          "id": "src/mcp.ts::findWord"
+        },
+        {
+          "name": "listVocabularyWords",
+          "qualified_name": "listVocabularyWords",
+          "kind": "function",
+          "start_line": 167,
+          "end_line": 214,
+          "first_body_line": 171,
+          "last_body_line": 214,
+          "is_test": false,
+          "is_async": true,
+          "is_generator": false,
+          "body_start_byte": 3603,
+          "body_end_byte": 4871,
+          "bases": [],
+          "parent": "",
+          "id": "src/mcp.ts::listVocabularyWords"
+        },
+        {
+          "name": "createServer",
+          "qualified_name": "createServer",
+          "kind": "function",
+          "start_line": 216,
+          "end_line": 522,
+          "first_body_line": 216,
+          "last_body_line": 522,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 4922,
+          "body_end_byte": 15005,
+          "bases": [],
+          "parent": "",
+          "id": "src/mcp.ts::createServer"
+        },
+        {
+          "name": "handleMcpRequest",
+          "qualified_name": "handleMcpRequest",
+          "kind": "function",
+          "start_line": 524,
+          "end_line": 542,
+          "first_body_line": 528,
+          "last_body_line": 542,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 15119,
+          "body_end_byte": 15418,
+          "bases": [],
+          "parent": "",
+          "id": "src/mcp.ts::handleMcpRequest"
+        },
+        {
+          "name": "onerror",
+          "qualified_name": "onerror",
+          "kind": "method",
+          "start_line": 531,
+          "end_line": 538,
+          "first_body_line": 531,
+          "last_body_line": 538,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 15224,
+          "body_end_byte": 15371,
+          "bases": [],
+          "parent": "",
+          "id": "src/mcp.ts::onerror"
+        }
+      ]
+    },
+    {
+      "path": "src/time-groups.ts",
+      "language": "typescript",
+      "parser": "tree_sitter",
+      "has_syntax_error": false,
+      "imports": [],
+      "symbols": [
+        {
+          "name": "parseD1Timestamp",
+          "qualified_name": "parseD1Timestamp",
+          "kind": "function",
+          "start_line": 58,
+          "end_line": 69,
+          "first_body_line": 58,
+          "last_body_line": 69,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 1017,
+          "body_end_byte": 1321,
+          "bases": [],
+          "parent": "",
+          "id": "src/time-groups.ts::parseD1Timestamp"
+        },
+        {
+          "name": "calendarDate",
+          "qualified_name": "calendarDate",
+          "kind": "function",
+          "start_line": 71,
+          "end_line": 85,
+          "first_body_line": 71,
+          "last_body_line": 85,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 1389,
+          "body_end_byte": 1749,
+          "bases": [],
+          "parent": "",
+          "id": "src/time-groups.ts::calendarDate"
+        },
+        {
+          "name": "parseLocalDate",
+          "qualified_name": "parseLocalDate",
+          "kind": "function",
+          "start_line": 87,
+          "end_line": 111,
+          "first_body_line": 87,
+          "last_body_line": 111,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 1804,
+          "body_end_byte": 2400,
+          "bases": [],
+          "parent": "",
+          "id": "src/time-groups.ts::parseLocalDate"
+        },
+        {
+          "name": "addCalendarDays",
+          "qualified_name": "addCalendarDays",
+          "kind": "function",
+          "start_line": 113,
+          "end_line": 123,
+          "first_body_line": 113,
+          "last_body_line": 123,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 2475,
+          "body_end_byte": 2687,
+          "bases": [],
+          "parent": "",
+          "id": "src/time-groups.ts::addCalendarDays"
+        },
+        {
+          "name": "timeZoneOffsetMilliseconds",
+          "qualified_name": "timeZoneOffsetMilliseconds",
+          "kind": "function",
+          "start_line": 125,
+          "end_line": 148,
+          "first_body_line": 125,
+          "last_body_line": 148,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 2763,
+          "body_end_byte": 3435,
+          "bases": [],
+          "parent": "",
+          "id": "src/time-groups.ts::timeZoneOffsetMilliseconds"
+        },
+        {
+          "name": "localMidnightAsUtc",
+          "qualified_name": "localMidnightAsUtc",
+          "kind": "function",
+          "start_line": 150,
+          "end_line": 164,
+          "first_body_line": 150,
+          "last_body_line": 164,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 3509,
+          "body_end_byte": 4035,
+          "bases": [],
+          "parent": "",
+          "id": "src/time-groups.ts::localMidnightAsUtc"
+        },
+        {
+          "name": "formatD1UtcTimestamp",
+          "qualified_name": "formatD1UtcTimestamp",
+          "kind": "function",
+          "start_line": 166,
+          "end_line": 168,
+          "first_body_line": 166,
+          "last_body_line": 168,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 4087,
+          "body_end_byte": 4150,
+          "bases": [],
+          "parent": "",
+          "id": "src/time-groups.ts::formatD1UtcTimestamp"
+        },
+        {
+          "name": "dayNumber",
+          "qualified_name": "dayNumber",
+          "kind": "function",
+          "start_line": 170,
+          "end_line": 172,
+          "first_body_line": 170,
+          "last_body_line": 172,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 4199,
+          "body_end_byte": 4280,
+          "bases": [],
+          "parent": "",
+          "id": "src/time-groups.ts::dayNumber"
+        },
+        {
+          "name": "mondayOfWeek",
+          "qualified_name": "mondayOfWeek",
+          "kind": "function",
+          "start_line": 174,
+          "end_line": 180,
+          "first_body_line": 174,
+          "last_body_line": 180,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 4332,
+          "body_end_byte": 4520,
+          "bases": [],
+          "parent": "",
+          "id": "src/time-groups.ts::mondayOfWeek"
+        },
+        {
+          "name": "monthLabel",
+          "qualified_name": "monthLabel",
+          "kind": "function",
+          "start_line": 182,
+          "end_line": 188,
+          "first_body_line": 182,
+          "last_body_line": 188,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 4588,
+          "body_end_byte": 4754,
+          "bases": [],
+          "parent": "",
+          "id": "src/time-groups.ts::monthLabel"
+        },
+        {
+          "name": "groupIdentity",
+          "qualified_name": "groupIdentity",
+          "kind": "function",
+          "start_line": 190,
+          "end_line": 226,
+          "first_body_line": 194,
+          "last_body_line": 226,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 4890,
+          "body_end_byte": 5745,
+          "bases": [],
+          "parent": "",
+          "id": "src/time-groups.ts::groupIdentity"
+        },
+        {
+          "name": "assertValidTimeZone",
+          "qualified_name": "assertValidTimeZone",
+          "kind": "function",
+          "start_line": 228,
+          "end_line": 234,
+          "first_body_line": 228,
+          "last_body_line": 234,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 5807,
+          "body_end_byte": 5952,
+          "bases": [],
+          "parent": "",
+          "id": "src/time-groups.ts::assertValidTimeZone"
+        },
+        {
+          "name": "localDateRangeToUtcBounds",
+          "qualified_name": "localDateRangeToUtcBounds",
+          "kind": "function",
+          "start_line": 236,
+          "end_line": 255,
+          "first_body_line": 240,
+          "last_body_line": 255,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 6075,
+          "body_end_byte": 6516,
+          "bases": [],
+          "parent": "",
+          "id": "src/time-groups.ts::localDateRangeToUtcBounds"
+        },
+        {
+          "name": "savedPeriodLabel",
+          "qualified_name": "savedPeriodLabel",
+          "kind": "function",
+          "start_line": 257,
+          "end_line": 261,
+          "first_body_line": 259,
+          "last_body_line": 261,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 6607,
+          "body_end_byte": 6648,
+          "bases": [],
+          "parent": "",
+          "id": "src/time-groups.ts::savedPeriodLabel"
+        },
+        {
+          "name": "isInSavedPeriod",
+          "qualified_name": "isInSavedPeriod",
+          "kind": "function",
+          "start_line": 263,
+          "end_line": 294,
+          "first_body_line": 267,
+          "last_body_line": 294,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 6787,
+          "body_end_byte": 7723,
+          "bases": [],
+          "parent": "",
+          "id": "src/time-groups.ts::isInSavedPeriod"
+        },
+        {
+          "name": "filterBySavedPeriod",
+          "qualified_name": "filterBySavedPeriod",
+          "kind": "function",
+          "start_line": 296,
+          "end_line": 315,
+          "first_body_line": 303,
+          "last_body_line": 315,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 7919,
+          "body_end_byte": 8224,
+          "bases": [],
+          "parent": "",
+          "id": "src/time-groups.ts::filterBySavedPeriod"
+        },
+        {
+          "name": "groupBySavedPeriod",
+          "qualified_name": "groupBySavedPeriod",
+          "kind": "function",
+          "start_line": 317,
+          "end_line": 342,
+          "first_body_line": 320,
+          "last_body_line": 342,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 8372,
+          "body_end_byte": 8997,
+          "bases": [],
+          "parent": "",
+          "id": "src/time-groups.ts::groupBySavedPeriod"
+        }
+      ]
+    },
+    {
+      "path": "tests/time-groups.test.ts",
+      "language": "typescript",
+      "parser": "tree_sitter",
+      "has_syntax_error": false,
+      "imports": [
+        {
+          "raw": "import assert from \"node:assert/strict\";",
+          "module": "node:assert/strict",
+          "symbols": [
+            "assert"
+          ],
+          "line": 1
+        },
+        {
+          "raw": "import { test } from \"node:test\";",
+          "module": "node:test",
+          "symbols": [
+            "test"
+          ],
+          "line": 2
+        },
+        {
+          "raw": "import {\n  filterBySavedPeriod,\n  groupBySavedPeriod,\n  localDateRangeToUtcBounds,\n} from \"../src/time-groups.ts\";",
+          "module": "../src/time-groups.ts",
+          "symbols": [
+            "filterBySavedPeriod",
+            "groupBySavedPeriod",
+            "localDateRangeToUtcBounds"
+          ],
+          "line": 3
+        }
+      ],
+      "symbols": [
+        {
+          "name": "groups saved words without duplicating them",
+          "qualified_name": "groups saved words without duplicating them",
+          "kind": "test",
+          "start_line": 11,
+          "end_line": 45,
+          "first_body_line": 11,
+          "last_body_line": 45,
+          "is_test": true,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "tests/time-groups.test.ts::groups saved words without duplicating them"
+        },
+        {
+          "name": "uses the selected time zone when deciding what counts as today",
+          "qualified_name": "uses the selected time zone when deciding what counts as today",
+          "kind": "test",
+          "start_line": 47,
+          "end_line": 57,
+          "first_body_line": 47,
+          "last_body_line": 57,
+          "is_test": true,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "tests/time-groups.test.ts::uses the selected time zone when deciding what counts as today"
+        },
+        {
+          "name": "filters yesterday separately from this week",
+          "qualified_name": "filters yesterday separately from this week",
+          "kind": "test",
+          "start_line": 59,
+          "end_line": 73,
+          "first_body_line": 59,
+          "last_body_line": 73,
+          "is_test": true,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "tests/time-groups.test.ts::filters yesterday separately from this week"
+        },
+        {
+          "name": "treats past 7 days as a rolling window and weeks as Monday-based",
+          "qualified_name": "treats past 7 days as a rolling window and weeks as Monday-based",
+          "kind": "test",
+          "start_line": 75,
+          "end_line": 101,
+          "first_body_line": 75,
+          "last_body_line": 101,
+          "is_test": true,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "tests/time-groups.test.ts::treats past 7 days as a rolling window and weeks as Monday-based"
+        },
+        {
+          "name": "converts an inclusive India date range into UTC query boundaries",
+          "qualified_name": "converts an inclusive India date range into UTC query boundaries",
+          "kind": "test",
+          "start_line": 103,
+          "end_line": 115,
+          "first_body_line": 103,
+          "last_body_line": 115,
+          "is_test": true,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "tests/time-groups.test.ts::converts an inclusive India date range into UTC query boundaries"
+        },
+        {
+          "name": "handles daylight-saving offsets at each range boundary",
+          "qualified_name": "handles daylight-saving offsets at each range boundary",
+          "kind": "test",
+          "start_line": 117,
+          "end_line": 129,
+          "first_body_line": 117,
+          "last_body_line": 129,
+          "is_test": true,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "tests/time-groups.test.ts::handles daylight-saving offsets at each range boundary"
+        },
+        {
+          "name": "rejects invalid or reversed local date ranges",
+          "qualified_name": "rejects invalid or reversed local date ranges",
+          "kind": "test",
+          "start_line": 131,
+          "end_line": 140,
+          "first_body_line": 131,
+          "last_body_line": 140,
+          "is_test": true,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "tests/time-groups.test.ts::rejects invalid or reversed local date ranges"
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "src/index.ts",
+      "target": "src/auth.ts",
+      "kind": "import",
+      "line": 2,
+      "raw": "import { authHandler, type AppEnv } from \"./auth\";",
+      "symbols": [
+        "authHandler",
+        "AppEnv"
+      ]
+    },
+    {
+      "source": "src/index.ts",
+      "target": "src/mcp.ts",
+      "kind": "import",
+      "line": 3,
+      "raw": "import { handleMcpRequest } from \"./mcp\";",
+      "symbols": [
+        "handleMcpRequest"
+      ]
+    },
+    {
+      "source": "src/mcp.ts",
+      "target": "src/time-groups.ts",
+      "kind": "import",
+      "line": 4,
+      "raw": "import {\n  filterBySavedPeriod,\n  groupBySavedPeriod,\n  localDateRangeToUtcBounds,\n  savedPeriodLabel,\n} from \"./time-groups\";",
+      "symbols": [
+        "filterBySavedPeriod",
+        "groupBySavedPeriod",
+        "localDateRangeToUtcBounds",
+        "savedPeriodLabel"
+      ]
+    },
+    {
+      "source": "tests/time-groups.test.ts",
+      "target": "src/time-groups.ts",
+      "kind": "import",
+      "line": 3,
+      "raw": "import {\n  filterBySavedPeriod,\n  groupBySavedPeriod,\n  localDateRangeToUtcBounds,\n} from \"../src/time-groups.ts\";",
+      "symbols": [
+        "filterBySavedPeriod",
+        "groupBySavedPeriod",
+        "localDateRangeToUtcBounds"
+      ]
+    },
+    {
+      "source": "worker-configuration.d.ts",
+      "target": "worker-configuration.d.ts::DOMException",
+      "kind": "contain",
+      "line": 39,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "worker-configuration.d.ts",
+      "target": "worker-configuration.d.ts::CompileError",
+      "kind": "contain",
+      "line": 219,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "worker-configuration.d.ts",
+      "target": "worker-configuration.d.ts::RuntimeError",
+      "kind": "contain",
+      "line": 222,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "worker-configuration.d.ts",
+      "target": "worker-configuration.d.ts::Global",
+      "kind": "contain",
+      "line": 230,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "worker-configuration.d.ts",
+      "target": "worker-configuration.d.ts::Instance",
+      "kind": "contain",
+      "line": 240,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "worker-configuration.d.ts",
+      "target": "worker-configuration.d.ts::Memory",
+      "kind": "contain",
+      "line": 249,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "worker-configuration.d.ts",
+      "target": "worker-configuration.d.ts::Table",
+      "kind": "contain",
+      "line": 275,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "worker-configuration.d.ts",
+      "target": "worker-configuration.d.ts::WebSocketRequestResponsePair",
+      "kind": "contain",
+      "line": 620,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "worker-configuration.d.ts",
+      "target": "worker-configuration.d.ts::Event",
+      "kind": "contain",
+      "line": 648,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "worker-configuration.d.ts",
+      "target": "worker-configuration.d.ts::EventTarget",
+      "kind": "contain",
+      "line": 782,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "worker-configuration.d.ts",
+      "target": "worker-configuration.d.ts::AbortController",
+      "kind": "contain",
+      "line": 820,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "worker-configuration.d.ts",
+      "target": "worker-configuration.d.ts::CustomEvent",
+      "kind": "contain",
+      "line": 906,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "worker-configuration.d.ts",
+      "target": "worker-configuration.d.ts::Blob",
+      "kind": "contain",
+      "line": 926,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "worker-configuration.d.ts",
+      "target": "worker-configuration.d.ts::File",
+      "kind": "contain",
+      "line": 979,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "worker-configuration.d.ts",
+      "target": "worker-configuration.d.ts::DigestStream",
+      "kind": "contain",
+      "line": 1270,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "worker-configuration.d.ts",
+      "target": "worker-configuration.d.ts::TextDecoder",
+      "kind": "contain",
+      "line": 1280,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "worker-configuration.d.ts",
+      "target": "worker-configuration.d.ts::TextEncoder",
+      "kind": "contain",
+      "line": 1297,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "worker-configuration.d.ts",
+      "target": "worker-configuration.d.ts::ErrorEvent",
+      "kind": "contain",
+      "line": 1329,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "worker-configuration.d.ts",
+      "target": "worker-configuration.d.ts::MessageEvent",
+      "kind": "contain",
+      "line": 1374,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "worker-configuration.d.ts",
+      "target": "worker-configuration.d.ts::FormData",
+      "kind": "contain",
+      "line": 1434,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "worker-configuration.d.ts",
+      "target": "worker-configuration.d.ts::HTMLRewriter",
+      "kind": "contain",
+      "line": 1514,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "worker-configuration.d.ts",
+      "target": "worker-configuration.d.ts::Headers",
+      "kind": "contain",
+      "line": 1607,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "worker-configuration.d.ts",
+      "target": "worker-configuration.d.ts::ReadableStreamDefaultReader",
+      "kind": "contain",
+      "line": 2281,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "worker-configuration.d.ts",
+      "target": "worker-configuration.d.ts::ReadableStreamBYOBReader",
+      "kind": "contain",
+      "line": 2303,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "worker-configuration.d.ts",
+      "target": "worker-configuration.d.ts::WritableStream",
+      "kind": "contain",
+      "line": 2490,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "worker-configuration.d.ts",
+      "target": "worker-configuration.d.ts::WritableStreamDefaultWriter",
+      "kind": "contain",
+      "line": 2522,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "worker-configuration.d.ts",
+      "target": "worker-configuration.d.ts::TransformStream",
+      "kind": "contain",
+      "line": 2572,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "worker-configuration.d.ts",
+      "target": "worker-configuration.d.ts::FixedLengthStream",
+      "kind": "contain",
+      "line": 2587,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "worker-configuration.d.ts",
+      "target": "worker-configuration.d.ts::IdentityTransformStream",
+      "kind": "contain",
+      "line": 2590,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "worker-configuration.d.ts",
+      "target": "worker-configuration.d.ts::CompressionStream",
+      "kind": "contain",
+      "line": 2604,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "worker-configuration.d.ts",
+      "target": "worker-configuration.d.ts::DecompressionStream",
+      "kind": "contain",
+      "line": 2612,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "worker-configuration.d.ts",
+      "target": "worker-configuration.d.ts::TextEncoderStream",
+      "kind": "contain",
+      "line": 2620,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "worker-configuration.d.ts",
+      "target": "worker-configuration.d.ts::TextDecoderStream",
+      "kind": "contain",
+      "line": 2629,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "worker-configuration.d.ts",
+      "target": "worker-configuration.d.ts::ByteLengthQueuingStrategy",
+      "kind": "contain",
+      "line": 2644,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "worker-configuration.d.ts",
+      "target": "worker-configuration.d.ts::CountQueuingStrategy",
+      "kind": "contain",
+      "line": 2660,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "worker-configuration.d.ts",
+      "target": "worker-configuration.d.ts::URL",
+      "kind": "contain",
+      "line": 2798,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "worker-configuration.d.ts",
+      "target": "worker-configuration.d.ts::URLSearchParams",
+      "kind": "contain",
+      "line": 2970,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "worker-configuration.d.ts",
+      "target": "worker-configuration.d.ts::URLPattern",
+      "kind": "contain",
+      "line": 3037,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "worker-configuration.d.ts",
+      "target": "worker-configuration.d.ts::CloseEvent",
+      "kind": "contain",
+      "line": 3085,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "worker-configuration.d.ts",
+      "target": "worker-configuration.d.ts::EventSource",
+      "kind": "contain",
+      "line": 3258,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "worker-configuration.d.ts",
+      "target": "worker-configuration.d.ts::MessageChannel",
+      "kind": "contain",
+      "line": 3404,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "worker-configuration.d.ts",
+      "target": "worker-configuration.d.ts::NonRetryableError",
+      "kind": "contain",
+      "line": 14586,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/auth.ts",
+      "target": "src/auth.ts::escapeHtml",
+      "kind": "contain",
+      "line": 41,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/auth.ts",
+      "target": "src/auth.ts::createState",
+      "kind": "contain",
+      "line": 50,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/auth.ts",
+      "target": "src/auth.ts::pendingLoginKey",
+      "kind": "contain",
+      "line": 58,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/auth.ts",
+      "target": "src/auth.ts::errorRedirect",
+      "kind": "contain",
+      "line": 62,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/auth.ts",
+      "target": "src/auth.ts::authorizationErrorResponse",
+      "kind": "contain",
+      "line": 77,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/auth.ts",
+      "target": "src/auth.ts::consentPage",
+      "kind": "contain",
+      "line": 90,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/auth.ts",
+      "target": "src/auth.ts::handleAuthorize",
+      "kind": "contain",
+      "line": 137,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/auth.ts",
+      "target": "src/auth.ts::handleGoogleStart",
+      "kind": "contain",
+      "line": 166,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/auth.ts",
+      "target": "src/auth.ts::handleGoogleCallback",
+      "kind": "contain",
+      "line": 193,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/auth.ts",
+      "target": "src/auth.ts::fetch",
+      "kind": "contain",
+      "line": 285,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/index.ts",
+      "target": "src/index.ts::fetch",
+      "kind": "contain",
+      "line": 6,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/mcp.ts",
+      "target": "src/mcp.ts::normalizeTerm",
+      "kind": "contain",
+      "line": 118,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/mcp.ts",
+      "target": "src/mcp.ts::findWord",
+      "kind": "contain",
+      "line": 122,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/mcp.ts",
+      "target": "src/mcp.ts::listVocabularyWords",
+      "kind": "contain",
+      "line": 167,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/mcp.ts",
+      "target": "src/mcp.ts::createServer",
+      "kind": "contain",
+      "line": 216,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/mcp.ts",
+      "target": "src/mcp.ts::handleMcpRequest",
+      "kind": "contain",
+      "line": 524,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/mcp.ts",
+      "target": "src/mcp.ts::onerror",
+      "kind": "contain",
+      "line": 531,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/time-groups.ts",
+      "target": "src/time-groups.ts::parseD1Timestamp",
+      "kind": "contain",
+      "line": 58,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/time-groups.ts",
+      "target": "src/time-groups.ts::calendarDate",
+      "kind": "contain",
+      "line": 71,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/time-groups.ts",
+      "target": "src/time-groups.ts::parseLocalDate",
+      "kind": "contain",
+      "line": 87,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/time-groups.ts",
+      "target": "src/time-groups.ts::addCalendarDays",
+      "kind": "contain",
+      "line": 113,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/time-groups.ts",
+      "target": "src/time-groups.ts::timeZoneOffsetMilliseconds",
+      "kind": "contain",
+      "line": 125,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/time-groups.ts",
+      "target": "src/time-groups.ts::localMidnightAsUtc",
+      "kind": "contain",
+      "line": 150,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/time-groups.ts",
+      "target": "src/time-groups.ts::formatD1UtcTimestamp",
+      "kind": "contain",
+      "line": 166,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/time-groups.ts",
+      "target": "src/time-groups.ts::dayNumber",
+      "kind": "contain",
+      "line": 170,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/time-groups.ts",
+      "target": "src/time-groups.ts::mondayOfWeek",
+      "kind": "contain",
+      "line": 174,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/time-groups.ts",
+      "target": "src/time-groups.ts::monthLabel",
+      "kind": "contain",
+      "line": 182,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/time-groups.ts",
+      "target": "src/time-groups.ts::groupIdentity",
+      "kind": "contain",
+      "line": 190,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/time-groups.ts",
+      "target": "src/time-groups.ts::assertValidTimeZone",
+      "kind": "contain",
+      "line": 228,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/time-groups.ts",
+      "target": "src/time-groups.ts::localDateRangeToUtcBounds",
+      "kind": "contain",
+      "line": 236,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/time-groups.ts",
+      "target": "src/time-groups.ts::savedPeriodLabel",
+      "kind": "contain",
+      "line": 257,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/time-groups.ts",
+      "target": "src/time-groups.ts::isInSavedPeriod",
+      "kind": "contain",
+      "line": 263,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/time-groups.ts",
+      "target": "src/time-groups.ts::filterBySavedPeriod",
+      "kind": "contain",
+      "line": 296,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/time-groups.ts",
+      "target": "src/time-groups.ts::groupBySavedPeriod",
+      "kind": "contain",
+      "line": 317,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "tests/time-groups.test.ts",
+      "target": "tests/time-groups.test.ts::groups saved words without duplicating them",
+      "kind": "contain",
+      "line": 11,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "tests/time-groups.test.ts",
+      "target": "tests/time-groups.test.ts::uses the selected time zone when deciding what counts as today",
+      "kind": "contain",
+      "line": 47,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "tests/time-groups.test.ts",
+      "target": "tests/time-groups.test.ts::filters yesterday separately from this week",
+      "kind": "contain",
+      "line": 59,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "tests/time-groups.test.ts",
+      "target": "tests/time-groups.test.ts::treats past 7 days as a rolling window and weeks as Monday-based",
+      "kind": "contain",
+      "line": 75,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "tests/time-groups.test.ts",
+      "target": "tests/time-groups.test.ts::converts an inclusive India date range into UTC query boundaries",
+      "kind": "contain",
+      "line": 103,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "tests/time-groups.test.ts",
+      "target": "tests/time-groups.test.ts::handles daylight-saving offsets at each range boundary",
+      "kind": "contain",
+      "line": 117,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "tests/time-groups.test.ts",
+      "target": "tests/time-groups.test.ts::rejects invalid or reversed local date ranges",
+      "kind": "contain",
+      "line": 131,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "worker-configuration.d.ts::CustomEvent",
+      "target": "worker-configuration.d.ts::Event",
+      "kind": "inherit",
+      "line": 906,
+      "raw": "Event",
+      "symbols": []
+    },
+    {
+      "source": "worker-configuration.d.ts::File",
+      "target": "worker-configuration.d.ts::Blob",
+      "kind": "inherit",
+      "line": 979,
+      "raw": "Blob",
+      "symbols": []
+    },
+    {
+      "source": "worker-configuration.d.ts::DigestStream",
+      "target": "worker-configuration.d.ts::WritableStream",
+      "kind": "inherit",
+      "line": 1270,
+      "raw": "WritableStream",
+      "symbols": []
+    },
+    {
+      "source": "worker-configuration.d.ts::ErrorEvent",
+      "target": "worker-configuration.d.ts::Event",
+      "kind": "inherit",
+      "line": 1329,
+      "raw": "Event",
+      "symbols": []
+    },
+    {
+      "source": "worker-configuration.d.ts::MessageEvent",
+      "target": "worker-configuration.d.ts::Event",
+      "kind": "inherit",
+      "line": 1374,
+      "raw": "Event",
+      "symbols": []
+    },
+    {
+      "source": "worker-configuration.d.ts::FixedLengthStream",
+      "target": "worker-configuration.d.ts::IdentityTransformStream",
+      "kind": "inherit",
+      "line": 2587,
+      "raw": "IdentityTransformStream",
+      "symbols": []
+    },
+    {
+      "source": "worker-configuration.d.ts::IdentityTransformStream",
+      "target": "worker-configuration.d.ts::TransformStream",
+      "kind": "inherit",
+      "line": 2590,
+      "raw": "TransformStream",
+      "symbols": []
+    },
+    {
+      "source": "worker-configuration.d.ts::CompressionStream",
+      "target": "worker-configuration.d.ts::TransformStream",
+      "kind": "inherit",
+      "line": 2604,
+      "raw": "TransformStream",
+      "symbols": []
+    },
+    {
+      "source": "worker-configuration.d.ts::DecompressionStream",
+      "target": "worker-configuration.d.ts::TransformStream",
+      "kind": "inherit",
+      "line": 2612,
+      "raw": "TransformStream",
+      "symbols": []
+    },
+    {
+      "source": "worker-configuration.d.ts::TextEncoderStream",
+      "target": "worker-configuration.d.ts::TransformStream",
+      "kind": "inherit",
+      "line": 2620,
+      "raw": "TransformStream",
+      "symbols": []
+    },
+    {
+      "source": "worker-configuration.d.ts::TextDecoderStream",
+      "target": "worker-configuration.d.ts::TransformStream",
+      "kind": "inherit",
+      "line": 2629,
+      "raw": "TransformStream",
+      "symbols": []
+    },
+    {
+      "source": "worker-configuration.d.ts::CloseEvent",
+      "target": "worker-configuration.d.ts::Event",
+      "kind": "inherit",
+      "line": 3085,
+      "raw": "Event",
+      "symbols": []
+    },
+    {
+      "source": "worker-configuration.d.ts::EventSource",
+      "target": "worker-configuration.d.ts::EventTarget",
+      "kind": "inherit",
+      "line": 3258,
+      "raw": "EventTarget",
+      "symbols": []
+    }
+  ]
+}

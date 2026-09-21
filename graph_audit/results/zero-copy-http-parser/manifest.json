@@ -1,0 +1,18 @@
+{
+  "git": {
+    "head": null,
+    "status_porcelain": null
+  },
+  "source_sha256": {
+    "src/error.rs": "f9e123a9051bbb1de80c1f06cf976667c02b3ad2f7babd60b89bea4260172adf",
+    "src/lib.rs": "61b3f2095bbe3da24d28d8be1ee6b44f2a77017ef62bb429b11926e14d27333a",
+    "src/parser.rs": "d2c8130c5c5f4e21017bbc1da460e6d00caa7aa50efd5159593ff0ee33345a8d",
+    "src/types.rs": "6a9b8c7dd0ac8dad2cf92b1831e0cfd0c96d1bd52e8b5208fab7e279ce37dc08",
+    "tests/integration_tests.rs": "63962b79d5073831ed0defdfa57923166885b3047953b886077c1a2a198b7f7f"
+  },
+  "root_config_sha256": {
+    "Cargo.toml": "c5e3d8298667afd2f1fcd02d19bebe20f7133a14ebaa66c03fcb0fd96f9b1e1c",
+    "Cargo.lock": "f4f54fcf3fdd767879446e03ff1a54aff10775a63273f770245cbd301c0dca07"
+  },
+  "scanned_sources_digest": "e6c8c924ef66225e3e92af2203f8c36f1c692a106c98fc6adfedf7600384d93c"
+}

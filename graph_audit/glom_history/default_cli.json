@@ -1,0 +1,19 @@
+{
+  "schema_version": "0.1.0",
+  "repo": "mahmoud/glom",
+  "ref": "HEAD",
+  "built_at": "2026-09-12T11:23:42.939516+00:00",
+  "summary": {
+    "kept": 0,
+    "dropped": 0,
+    "needs_enrichment": 0,
+    "by_style": {},
+    "mainline_points": 0,
+    "commits_measured": 0,
+    "walk_since": null,
+    "walk_until": null
+  },
+  "dropped_reasons": {},
+  "commits": [],
+  "needs_enrichment": []
+}

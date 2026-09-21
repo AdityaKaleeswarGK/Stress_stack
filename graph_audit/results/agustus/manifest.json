@@ -1,0 +1,19 @@
+{
+  "git": {
+    "head": "1b590d38084379cc15d8465dcfe66c6e7c7223fe",
+    "status_porcelain": "M .gitignore\n M package-lock.json\n M package.json\n M src/index.ts\n M src/mcp.ts\n M worker-configuration.d.ts\n M wrangler.jsonc"
+  },
+  "source_sha256": {
+    "worker-configuration.d.ts": "070715d042dbc68094301929eec969288b6ea29cd0a441934936b78e483a44f0",
+    "src/auth.ts": "2f1ee748437c9a6ab66f5974dc439c134467142477a81e33488fd6075f0df810",
+    "src/index.ts": "42336a9f2fe6bc4624213711dc6c9ad08dea72b5f3ca6c3fc7a7298d1dda7eed",
+    "src/mcp.ts": "7067faeacea171a2abfcdef489463b82bbbbd08e333f2f11e911e9d199a3c820",
+    "src/time-groups.ts": "f7cca2568350907a1b8bab7cd31109b82ea0df38c8ecddbd3d5503b4f3c36a0c",
+    "tests/time-groups.test.ts": "e71125ffd8d9ef3e840997428e6b8ae97c379dc66d4a0f047d1af14d0c3b1561"
+  },
+  "root_config_sha256": {
+    "package.json": "8adabfd1c09e066e4993a5c01e9fc31a8b9d895dea487a6713b53ec8c7d9469e",
+    "tsconfig.json": "8064730ad44664882dac0864426bcd3b01f657e188296165ab3f27dcbe354f03"
+  },
+  "scanned_sources_digest": "7c0d59ac23fd88dcacf84692fe9d421fcb27dd84a5ddb01ad393efb871b8c5e1"
+}

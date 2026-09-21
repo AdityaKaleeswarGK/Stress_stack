@@ -1,0 +1,15 @@
+{
+  "accepted": 0,
+  "rejected": 20,
+  "issues_scanned": 20,
+  "timelines_fetched": 8,
+  "api_calls": 0,
+  "cache_hits": 9,
+  "rate_remaining": null,
+  "unmerged_pr_traps": 0,
+  "opaque_connected_events": 0,
+  "mainline_points": 79
+}
+Rejections: {'over_budget': 12, 'no_merged_pr': 8}
+June 2026 focused discovery: {'accepted': 0, 'rejected': 3, 'issues_scanned': 3, 'timelines_fetched': 3, 'api_calls': 1, 'cache_hits': 12, 'rate_remaining': 9, 'unmerged_pr_traps': 0, 'opaque_connected_events': 0, 'mainline_points': 2} {'no_merged_pr': 2, 'link_unconfirmed': 1}
+Public API calls: 1, cache hits: 19

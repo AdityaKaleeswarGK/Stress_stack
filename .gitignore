@@ -1,0 +1,21 @@
+# vendored reference implementations — re-clone, don't commit
+deep_research/implementations/*
+!deep_research/implementations/.gitkeep
+
+# python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# local run output
+output/
+workspace/
+.fleet/
+.env
+.claude
+.DS_Store

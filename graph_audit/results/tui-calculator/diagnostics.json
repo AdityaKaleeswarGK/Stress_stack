@@ -1,0 +1,254 @@
+{
+  "summary": {
+    "label": "tui-calculator",
+    "root": "/Users/adityagk/Desktop/projects/tui-calculator",
+    "files_total": 9,
+    "files_by_language": {
+      "python": 9
+    },
+    "symbols_total": 20,
+    "tests_total": 7,
+    "calls_total": 52,
+    "syntax_errors": 0,
+    "unparsed_known_language": 0,
+    "edges_total": 29,
+    "edges_by_kind": {
+      "contain": 20,
+      "import": 9
+    },
+    "scan_seconds": 0.019,
+    "import_records": 16,
+    "import_records_with_any_edge_on_line": 9,
+    "import_count_caveat": "Records without edges include external imports and unsupported resolution; this is not recall. Multiple bindings on a line can be only partly resolved.",
+    "files_with_incoming_edges": 3,
+    "most_imported_files": [
+      [
+        "src/constants.py",
+        4
+      ],
+      [
+        "src/engine.py",
+        3
+      ],
+      [
+        "src/ui.py",
+        2
+      ]
+    ],
+    "docstrings_in_memory": 1,
+    "docstrings_saved": 0,
+    "calls_saved": 0,
+    "issues": {
+      "duplicate_symbol_ids": {},
+      "dangling_edges": [],
+      "symbol_parents_missing_in_file": [],
+      "python_definitions_not_indexed": []
+    },
+    "previous": {
+      "path": "/Users/adityagk/Desktop/projects/tui-calculator/repo_graph.json",
+      "sha256": "572cbf46c89af06dd45340c3c2d0e30dcd5e97262e647dfb25720bb111683e34",
+      "schema": "0.1.0",
+      "statistics": {
+        "files_total": 9,
+        "files_by_language": {
+          "python": 9
+        },
+        "symbols_total": 20,
+        "tests_total": 7,
+        "syntax_errors": 0,
+        "unparsed_known_language": 0,
+        "edges_total": 9
+      },
+      "import_edges": 9,
+      "comparison_caveat": "Old artifacts do not establish identical source, query, or configuration versions."
+    }
+  },
+  "files": [
+    {
+      "path": "main.py",
+      "language": "python",
+      "parser": "ast",
+      "syntax_error": false,
+      "symbols": 0,
+      "calls_in_memory": 0,
+      "calls_with_declared_symbol_owner": 0,
+      "docstrings_in_memory": 0,
+      "incoming_edge_count": 0,
+      "incoming_files": [],
+      "imports_without_resolved_edge_on_line": []
+    },
+    {
+      "path": "src/__init__.py",
+      "language": "python",
+      "parser": "none",
+      "syntax_error": false,
+      "symbols": 0,
+      "calls_in_memory": 0,
+      "calls_with_declared_symbol_owner": 0,
+      "docstrings_in_memory": 0,
+      "incoming_edge_count": 0,
+      "incoming_files": [],
+      "imports_without_resolved_edge_on_line": []
+    },
+    {
+      "path": "src/constants.py",
+      "language": "python",
+      "parser": "ast",
+      "syntax_error": false,
+      "symbols": 0,
+      "calls_in_memory": 0,
+      "calls_with_declared_symbol_owner": 0,
+      "docstrings_in_memory": 0,
+      "incoming_edge_count": 4,
+      "incoming_files": [
+        "src/engine.py",
+        "src/ui.py",
+        "tests/test_constants.py",
+        "tests/test_engine.py"
+      ],
+      "imports_without_resolved_edge_on_line": []
+    },
+    {
+      "path": "src/engine.py",
+      "language": "python",
+      "parser": "ast",
+      "syntax_error": false,
+      "symbols": 7,
+      "calls_in_memory": 6,
+      "calls_with_declared_symbol_owner": 0,
+      "docstrings_in_memory": 0,
+      "incoming_edge_count": 3,
+      "incoming_files": [
+        "src/ui.py",
+        "tests/test_engine.py",
+        "tests/test_ui.py"
+      ],
+      "imports_without_resolved_edge_on_line": []
+    },
+    {
+      "path": "src/ui.py",
+      "language": "python",
+      "parser": "ast",
+      "syntax_error": false,
+      "symbols": 5,
+      "calls_in_memory": 15,
+      "calls_with_declared_symbol_owner": 0,
+      "docstrings_in_memory": 0,
+      "incoming_edge_count": 2,
+      "incoming_files": [
+        "main.py",
+        "tests/test_ui.py"
+      ],
+      "imports_without_resolved_edge_on_line": [
+        {
+          "raw": "from textual.app import App, ComposeResult",
+          "module": "textual.app",
+          "symbols": [
+            "App",
+            "ComposeResult"
+          ],
+          "line": 1
+        },
+        {
+          "raw": "from textual.containers import Container",
+          "module": "textual.containers",
+          "symbols": [
+            "Container"
+          ],
+          "line": 2
+        },
+        {
+          "raw": "from textual.widgets import Label, Static",
+          "module": "textual.widgets",
+          "symbols": [
+            "Label",
+            "Static"
+          ],
+          "line": 3
+        }
+      ]
+    },
+    {
+      "path": "tests/__init__.py",
+      "language": "python",
+      "parser": "none",
+      "syntax_error": false,
+      "symbols": 0,
+      "calls_in_memory": 0,
+      "calls_with_declared_symbol_owner": 0,
+      "docstrings_in_memory": 0,
+      "incoming_edge_count": 0,
+      "incoming_files": [],
+      "imports_without_resolved_edge_on_line": []
+    },
+    {
+      "path": "tests/test_constants.py",
+      "language": "python",
+      "parser": "ast",
+      "syntax_error": false,
+      "symbols": 1,
+      "calls_in_memory": 0,
+      "calls_with_declared_symbol_owner": 0,
+      "docstrings_in_memory": 0,
+      "incoming_edge_count": 0,
+      "incoming_files": [],
+      "imports_without_resolved_edge_on_line": []
+    },
+    {
+      "path": "tests/test_engine.py",
+      "language": "python",
+      "parser": "ast",
+      "syntax_error": false,
+      "symbols": 6,
+      "calls_in_memory": 23,
+      "calls_with_declared_symbol_owner": 0,
+      "docstrings_in_memory": 0,
+      "incoming_edge_count": 0,
+      "incoming_files": [],
+      "imports_without_resolved_edge_on_line": [
+        {
+          "raw": "import unittest",
+          "module": "unittest",
+          "symbols": [],
+          "line": 1
+        }
+      ]
+    },
+    {
+      "path": "tests/test_ui.py",
+      "language": "python",
+      "parser": "ast",
+      "syntax_error": false,
+      "symbols": 1,
+      "calls_in_memory": 8,
+      "calls_with_declared_symbol_owner": 8,
+      "docstrings_in_memory": 1,
+      "incoming_edge_count": 0,
+      "incoming_files": [],
+      "imports_without_resolved_edge_on_line": [
+        {
+          "raw": "import pytest",
+          "module": "pytest",
+          "symbols": [],
+          "line": 1
+        },
+        {
+          "raw": "from textual.pilot import Pilot",
+          "module": "textual.pilot",
+          "symbols": [
+            "Pilot"
+          ],
+          "line": 2
+        },
+        {
+          "raw": "from textual.widgets import Label",
+          "module": "textual.widgets",
+          "symbols": [
+            "Label"
+          ],
+          "line": 5
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "git": {
+    "head": null,
+    "status_porcelain": null
+  },
+  "source_sha256": {
+    "src/allocator.rs": "9990a7e9d5d0799cdcb8a081ab1a8470d670a721dc6faa1153f4ebc228257bd8",
+    "src/lib.rs": "10adc4fceba587b2bbe41feae830bb5ed08369e9b8be3020d89151d87dd51910",
+    "src/main.rs": "d3711d9e77f0f1ce38c7c6a74720135800817c21c02cd23262c676f13e02f70e",
+    "src/state.rs": "8baf977b48af9a5e1a078a1c7cf57cc286d231a22481c2248298cce581de06f6",
+    "tests/integration_tests.rs": "3338b8789cb7d19d00494ae0ff3985944062ca842e5f1a3c275fbc74ede91340",
+    "tests/test_state.rs": "85ce7cca0620c463025eef99eada0be9e82289e44dd3fdcb35030fcd5fbc74d9"
+  },
+  "root_config_sha256": {
+    "Cargo.toml": "9e0045c68deecbdbf0c19cac03f3a22257643a766d1b11400c0d777c81b2494c",
+    "Cargo.lock": "6bca378d6d047f5336a84c9619d28770861b5ebee7e177189c2964e46efd9bbc"
+  },
+  "scanned_sources_digest": "784cab86581889e5391fc8769d71ade25b0615c7f0bb8984d7ddfacd50bd61e8"
+}

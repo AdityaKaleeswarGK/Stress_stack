@@ -1,0 +1,643 @@
+{
+  "schema_version": "0.2.0",
+  "root": "/Users/adityagk/Desktop/projects/rust-bump-allocator",
+  "statistics": {
+    "files_total": 6,
+    "files_by_language": {
+      "rust": 6
+    },
+    "symbols_total": 17,
+    "tests_total": 8,
+    "calls_total": 68,
+    "syntax_errors": 0,
+    "unparsed_known_language": 0,
+    "edges_total": 20,
+    "edges_by_kind": {
+      "contain": 17,
+      "import": 3
+    }
+  },
+  "files": [
+    {
+      "path": "src/allocator.rs",
+      "language": "rust",
+      "parser": "tree_sitter",
+      "has_syntax_error": false,
+      "imports": [
+        {
+          "raw": "use core::alloc::{GlobalAlloc, Layout};",
+          "module": "core::alloc",
+          "symbols": [
+            "GlobalAlloc",
+            "Layout"
+          ],
+          "line": 1
+        },
+        {
+          "raw": "use crate::state::reserve_space;",
+          "module": "crate::state",
+          "symbols": [
+            "reserve_space"
+          ],
+          "line": 2
+        }
+      ],
+      "symbols": [
+        {
+          "name": "BumpAllocator",
+          "qualified_name": "BumpAllocator",
+          "kind": "struct",
+          "start_line": 4,
+          "end_line": 4,
+          "first_body_line": 4,
+          "last_body_line": 4,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "src/allocator.rs::BumpAllocator"
+        },
+        {
+          "name": "alloc",
+          "qualified_name": "BumpAllocator.alloc",
+          "kind": "method",
+          "start_line": 7,
+          "end_line": 9,
+          "first_body_line": 7,
+          "last_body_line": 9,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 199,
+          "body_end_byte": 236,
+          "bases": [
+            "GlobalAlloc"
+          ],
+          "parent": "BumpAllocator",
+          "id": "src/allocator.rs::BumpAllocator.alloc"
+        },
+        {
+          "name": "dealloc",
+          "qualified_name": "BumpAllocator.dealloc",
+          "kind": "method",
+          "start_line": 11,
+          "end_line": 13,
+          "first_body_line": 11,
+          "last_body_line": 13,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 299,
+          "body_end_byte": 388,
+          "bases": [
+            "GlobalAlloc"
+          ],
+          "parent": "BumpAllocator",
+          "id": "src/allocator.rs::BumpAllocator.dealloc"
+        }
+      ]
+    },
+    {
+      "path": "src/lib.rs",
+      "language": "rust",
+      "parser": "tree_sitter",
+      "has_syntax_error": false,
+      "imports": [
+        {
+          "raw": "use crate::allocator::BumpAllocator;",
+          "module": "crate::allocator",
+          "symbols": [
+            "BumpAllocator"
+          ],
+          "line": 4
+        },
+        {
+          "raw": "pub use crate::state::{get_stats, ArenaStats};",
+          "module": "crate::state",
+          "symbols": [
+            "get_stats",
+            "ArenaStats"
+          ],
+          "line": 5
+        }
+      ],
+      "symbols": []
+    },
+    {
+      "path": "src/main.rs",
+      "language": "rust",
+      "parser": "tree_sitter",
+      "has_syntax_error": false,
+      "imports": [
+        {
+          "raw": "use memory_allocator::get_stats;",
+          "module": "memory_allocator",
+          "symbols": [
+            "get_stats"
+          ],
+          "line": 1
+        }
+      ],
+      "symbols": [
+        {
+          "name": "main",
+          "qualified_name": "main",
+          "kind": "function",
+          "start_line": 3,
+          "end_line": 22,
+          "first_body_line": 3,
+          "last_body_line": 22,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 44,
+          "body_end_byte": 570,
+          "bases": [],
+          "parent": "",
+          "id": "src/main.rs::main"
+        }
+      ]
+    },
+    {
+      "path": "src/state.rs",
+      "language": "rust",
+      "parser": "tree_sitter",
+      "has_syntax_error": false,
+      "imports": [
+        {
+          "raw": "use spin::Mutex;",
+          "module": "spin",
+          "symbols": [
+            "Mutex"
+          ],
+          "line": 1
+        },
+        {
+          "raw": "use core::alloc::Layout;",
+          "module": "core::alloc",
+          "symbols": [
+            "Layout"
+          ],
+          "line": 2
+        }
+      ],
+      "symbols": [
+        {
+          "name": "ArenaStats",
+          "qualified_name": "ArenaStats",
+          "kind": "struct",
+          "start_line": 7,
+          "end_line": 10,
+          "first_body_line": 7,
+          "last_body_line": 10,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 172,
+          "body_end_byte": 221,
+          "bases": [],
+          "parent": "",
+          "id": "src/state.rs::ArenaStats"
+        },
+        {
+          "name": "ArenaState",
+          "qualified_name": "ArenaState",
+          "kind": "struct",
+          "start_line": 12,
+          "end_line": 15,
+          "first_body_line": 12,
+          "last_body_line": 15,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 245,
+          "body_end_byte": 286,
+          "bases": [],
+          "parent": "",
+          "id": "src/state.rs::ArenaState"
+        },
+        {
+          "name": "align_up",
+          "qualified_name": "align_up",
+          "kind": "function",
+          "start_line": 22,
+          "end_line": 24,
+          "first_body_line": 22,
+          "last_body_line": 24,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 446,
+          "body_end_byte": 487,
+          "bases": [],
+          "parent": "",
+          "id": "src/state.rs::align_up"
+        },
+        {
+          "name": "reserve_space",
+          "qualified_name": "reserve_space",
+          "kind": "function",
+          "start_line": 26,
+          "end_line": 42,
+          "first_body_line": 26,
+          "last_body_line": 42,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 537,
+          "body_end_byte": 887,
+          "bases": [],
+          "parent": "",
+          "id": "src/state.rs::reserve_space"
+        },
+        {
+          "name": "get_stats",
+          "qualified_name": "get_stats",
+          "kind": "function",
+          "start_line": 44,
+          "end_line": 50,
+          "first_body_line": 44,
+          "last_body_line": 50,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 922,
+          "body_end_byte": 1038,
+          "bases": [],
+          "parent": "",
+          "id": "src/state.rs::get_stats"
+        }
+      ]
+    },
+    {
+      "path": "tests/integration_tests.rs",
+      "language": "rust",
+      "parser": "tree_sitter",
+      "has_syntax_error": false,
+      "imports": [
+        {
+          "raw": "use std::thread;",
+          "module": "std",
+          "symbols": [
+            "thread"
+          ],
+          "line": 3
+        },
+        {
+          "raw": "use std::sync::Arc;",
+          "module": "std::sync",
+          "symbols": [
+            "Arc"
+          ],
+          "line": 4
+        },
+        {
+          "raw": "use std::panic;",
+          "module": "std",
+          "symbols": [
+            "panic"
+          ],
+          "line": 5
+        }
+      ],
+      "symbols": [
+        {
+          "name": "test_alignment_properties",
+          "qualified_name": "test_alignment_properties",
+          "kind": "function",
+          "start_line": 8,
+          "end_line": 15,
+          "first_body_line": 8,
+          "last_body_line": 15,
+          "is_test": true,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 138,
+          "body_end_byte": 469,
+          "bases": [],
+          "parent": "",
+          "id": "tests/integration_tests.rs::test_alignment_properties"
+        },
+        {
+          "name": "test_non_overlap",
+          "qualified_name": "test_non_overlap",
+          "kind": "function",
+          "start_line": 18,
+          "end_line": 35,
+          "first_body_line": 18,
+          "last_body_line": 35,
+          "is_test": true,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 509,
+          "body_end_byte": 1125,
+          "bases": [],
+          "parent": "",
+          "id": "tests/integration_tests.rs::test_non_overlap"
+        },
+        {
+          "name": "test_oom_panic",
+          "qualified_name": "test_oom_panic",
+          "kind": "function",
+          "start_line": 38,
+          "end_line": 46,
+          "first_body_line": 38,
+          "last_body_line": 46,
+          "is_test": true,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 1163,
+          "body_end_byte": 1597,
+          "bases": [],
+          "parent": "",
+          "id": "tests/integration_tests.rs::test_oom_panic"
+        },
+        {
+          "name": "test_thread_contention",
+          "qualified_name": "test_thread_contention",
+          "kind": "function",
+          "start_line": 49,
+          "end_line": 63,
+          "first_body_line": 49,
+          "last_body_line": 63,
+          "is_test": true,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 1643,
+          "body_end_byte": 2103,
+          "bases": [],
+          "parent": "",
+          "id": "tests/integration_tests.rs::test_thread_contention"
+        },
+        {
+          "name": "test_stdlib_collections",
+          "qualified_name": "test_stdlib_collections",
+          "kind": "function",
+          "start_line": 66,
+          "end_line": 73,
+          "first_body_line": 66,
+          "last_body_line": 73,
+          "is_test": true,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 2150,
+          "body_end_byte": 2325,
+          "bases": [],
+          "parent": "",
+          "id": "tests/integration_tests.rs::test_stdlib_collections"
+        }
+      ]
+    },
+    {
+      "path": "tests/test_state.rs",
+      "language": "rust",
+      "parser": "tree_sitter",
+      "has_syntax_error": false,
+      "imports": [
+        {
+          "raw": "use memory_allocator::state::{align_up, reserve_space, get_stats};",
+          "module": "memory_allocator::state",
+          "symbols": [
+            "align_up",
+            "reserve_space",
+            "get_stats"
+          ],
+          "line": 3
+        },
+        {
+          "raw": "use core::alloc::Layout;",
+          "module": "core::alloc",
+          "symbols": [
+            "Layout"
+          ],
+          "line": 4
+        }
+      ],
+      "symbols": [
+        {
+          "name": "test_align_math",
+          "qualified_name": "test_align_math",
+          "kind": "function",
+          "start_line": 7,
+          "end_line": 12,
+          "first_body_line": 7,
+          "last_body_line": 12,
+          "is_test": true,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 163,
+          "body_end_byte": 327,
+          "bases": [],
+          "parent": "",
+          "id": "tests/test_state.rs::test_align_math"
+        },
+        {
+          "name": "test_state_mutation",
+          "qualified_name": "test_state_mutation",
+          "kind": "function",
+          "start_line": 15,
+          "end_line": 24,
+          "first_body_line": 15,
+          "last_body_line": 24,
+          "is_test": true,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 370,
+          "body_end_byte": 647,
+          "bases": [],
+          "parent": "",
+          "id": "tests/test_state.rs::test_state_mutation"
+        },
+        {
+          "name": "test_bounds_detection",
+          "qualified_name": "test_bounds_detection",
+          "kind": "function",
+          "start_line": 28,
+          "end_line": 31,
+          "first_body_line": 28,
+          "last_body_line": 31,
+          "is_test": true,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 746,
+          "body_end_byte": 863,
+          "bases": [],
+          "parent": "",
+          "id": "tests/test_state.rs::test_bounds_detection"
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "src/allocator.rs",
+      "target": "src/state.rs",
+      "kind": "import",
+      "line": 2,
+      "raw": "use crate::state::reserve_space;",
+      "symbols": [
+        "reserve_space"
+      ]
+    },
+    {
+      "source": "src/lib.rs",
+      "target": "src/allocator.rs",
+      "kind": "import",
+      "line": 4,
+      "raw": "use crate::allocator::BumpAllocator;",
+      "symbols": [
+        "BumpAllocator"
+      ]
+    },
+    {
+      "source": "src/lib.rs",
+      "target": "src/state.rs",
+      "kind": "import",
+      "line": 5,
+      "raw": "pub use crate::state::{get_stats, ArenaStats};",
+      "symbols": [
+        "get_stats",
+        "ArenaStats"
+      ]
+    },
+    {
+      "source": "src/allocator.rs",
+      "target": "src/allocator.rs::BumpAllocator",
+      "kind": "contain",
+      "line": 4,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/allocator.rs::BumpAllocator",
+      "target": "src/allocator.rs::BumpAllocator.alloc",
+      "kind": "contain",
+      "line": 7,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/allocator.rs::BumpAllocator",
+      "target": "src/allocator.rs::BumpAllocator.dealloc",
+      "kind": "contain",
+      "line": 11,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/main.rs",
+      "target": "src/main.rs::main",
+      "kind": "contain",
+      "line": 3,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/state.rs",
+      "target": "src/state.rs::ArenaStats",
+      "kind": "contain",
+      "line": 7,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/state.rs",
+      "target": "src/state.rs::ArenaState",
+      "kind": "contain",
+      "line": 12,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/state.rs",
+      "target": "src/state.rs::align_up",
+      "kind": "contain",
+      "line": 22,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/state.rs",
+      "target": "src/state.rs::reserve_space",
+      "kind": "contain",
+      "line": 26,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/state.rs",
+      "target": "src/state.rs::get_stats",
+      "kind": "contain",
+      "line": 44,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "tests/integration_tests.rs",
+      "target": "tests/integration_tests.rs::test_alignment_properties",
+      "kind": "contain",
+      "line": 8,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "tests/integration_tests.rs",
+      "target": "tests/integration_tests.rs::test_non_overlap",
+      "kind": "contain",
+      "line": 18,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "tests/integration_tests.rs",
+      "target": "tests/integration_tests.rs::test_oom_panic",
+      "kind": "contain",
+      "line": 38,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "tests/integration_tests.rs",
+      "target": "tests/integration_tests.rs::test_thread_contention",
+      "kind": "contain",
+      "line": 49,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "tests/integration_tests.rs",
+      "target": "tests/integration_tests.rs::test_stdlib_collections",
+      "kind": "contain",
+      "line": 66,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "tests/test_state.rs",
+      "target": "tests/test_state.rs::test_align_math",
+      "kind": "contain",
+      "line": 7,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "tests/test_state.rs",
+      "target": "tests/test_state.rs::test_state_mutation",
+      "kind": "contain",
+      "line": 15,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "tests/test_state.rs",
+      "target": "tests/test_state.rs::test_bounds_detection",
+      "kind": "contain",
+      "line": 28,
+      "raw": "",
+      "symbols": []
+    }
+  ]
+}

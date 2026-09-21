@@ -1,0 +1,4258 @@
+{
+  "schema_version": "0.2.0",
+  "root": "/Users/adityagk/Desktop/projects/task_repo/fleet",
+  "statistics": {
+    "files_total": 24,
+    "files_by_language": {
+      "python": 24
+    },
+    "symbols_total": 124,
+    "tests_total": 45,
+    "calls_total": 493,
+    "syntax_errors": 0,
+    "unparsed_known_language": 0,
+    "edges_total": 124,
+    "edges_by_kind": {
+      "contain": 124
+    }
+  },
+  "files": [
+    {
+      "path": "src/fleet/__init__.py",
+      "language": "python",
+      "parser": "ast",
+      "has_syntax_error": false,
+      "imports": [
+        {
+          "raw": "from __future__ import annotations",
+          "module": "__future__",
+          "symbols": [
+            "annotations"
+          ],
+          "line": 6
+        }
+      ],
+      "symbols": []
+    },
+    {
+      "path": "src/fleet/cli.py",
+      "language": "python",
+      "parser": "ast",
+      "has_syntax_error": false,
+      "imports": [
+        {
+          "raw": "from __future__ import annotations",
+          "module": "__future__",
+          "symbols": [
+            "annotations"
+          ],
+          "line": 9
+        },
+        {
+          "raw": "import sys",
+          "module": "sys",
+          "symbols": [],
+          "line": 11
+        },
+        {
+          "raw": "from pathlib import Path",
+          "module": "pathlib",
+          "symbols": [
+            "Path"
+          ],
+          "line": 12
+        },
+        {
+          "raw": "import click",
+          "module": "click",
+          "symbols": [],
+          "line": 14
+        },
+        {
+          "raw": "from rich.console import Console",
+          "module": "rich.console",
+          "symbols": [
+            "Console"
+          ],
+          "line": 15
+        },
+        {
+          "raw": "from rich.table import Table",
+          "module": "rich.table",
+          "symbols": [
+            "Table"
+          ],
+          "line": 16
+        },
+        {
+          "raw": "from fleet import __version__",
+          "module": "fleet",
+          "symbols": [
+            "__version__"
+          ],
+          "line": 18
+        },
+        {
+          "raw": "from fleet.graph.scan import scan_repo, write_graph",
+          "module": "fleet.graph.scan",
+          "symbols": [
+            "scan_repo",
+            "write_graph"
+          ],
+          "line": 19
+        }
+      ],
+      "symbols": [
+        {
+          "name": "app",
+          "qualified_name": "app",
+          "kind": "function",
+          "start_line": 27,
+          "end_line": 37,
+          "first_body_line": 28,
+          "last_body_line": 37,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "src/fleet/cli.py::app"
+        },
+        {
+          "name": "scan",
+          "qualified_name": "scan",
+          "kind": "function",
+          "start_line": 49,
+          "end_line": 92,
+          "first_body_line": 50,
+          "last_body_line": 92,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "src/fleet/cli.py::scan"
+        }
+      ]
+    },
+    {
+      "path": "src/fleet/emitter/__init__.py",
+      "language": "python",
+      "parser": "none",
+      "has_syntax_error": false,
+      "imports": [],
+      "symbols": []
+    },
+    {
+      "path": "src/fleet/emitter/harbor.py",
+      "language": "python",
+      "parser": "ast",
+      "has_syntax_error": false,
+      "imports": [
+        {
+          "raw": "from __future__ import annotations",
+          "module": "__future__",
+          "symbols": [
+            "annotations"
+          ],
+          "line": 12
+        },
+        {
+          "raw": "from dataclasses import dataclass, field",
+          "module": "dataclasses",
+          "symbols": [
+            "dataclass",
+            "field"
+          ],
+          "line": 14
+        },
+        {
+          "raw": "from pathlib import Path",
+          "module": "pathlib",
+          "symbols": [
+            "Path"
+          ],
+          "line": 15
+        },
+        {
+          "raw": "from typing import Any",
+          "module": "typing",
+          "symbols": [
+            "Any"
+          ],
+          "line": 16
+        }
+      ],
+      "symbols": [
+        {
+          "name": "HarborTask",
+          "qualified_name": "HarborTask",
+          "kind": "class",
+          "start_line": 20,
+          "end_line": 25,
+          "first_body_line": 21,
+          "last_body_line": 25,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "src/fleet/emitter/harbor.py::HarborTask"
+        },
+        {
+          "name": "write_task",
+          "qualified_name": "write_task",
+          "kind": "function",
+          "start_line": 28,
+          "end_line": 29,
+          "first_body_line": 29,
+          "last_body_line": 29,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "src/fleet/emitter/harbor.py::write_task"
+        }
+      ]
+    },
+    {
+      "path": "src/fleet/graph/__init__.py",
+      "language": "python",
+      "parser": "ast",
+      "has_syntax_error": false,
+      "imports": [
+        {
+          "raw": "from __future__ import annotations",
+          "module": "__future__",
+          "symbols": [
+            "annotations"
+          ],
+          "line": 23
+        },
+        {
+          "raw": "from fleet.graph.models import CONTAIN, IMPORT, INHERIT, INVOKE, SCHEMA_VERSION, Edge, ExtractedCall, ExtractedImport, ExtractedSymbol, ParsedFile",
+          "module": "fleet.graph.models",
+          "symbols": [
+            "CONTAIN",
+            "IMPORT",
+            "INHERIT",
+            "INVOKE",
+            "SCHEMA_VERSION",
+            "Edge",
+            "ExtractedCall",
+            "ExtractedImport",
+            "ExtractedSymbol",
+            "ParsedFile"
+          ],
+          "line": 25
+        },
+        {
+          "raw": "from fleet.graph.parser import parse_source",
+          "module": "fleet.graph.parser",
+          "symbols": [
+            "parse_source"
+          ],
+          "line": 37
+        },
+        {
+          "raw": "from fleet.graph.scan import RepoGraph, scan_repo, write_graph",
+          "module": "fleet.graph.scan",
+          "symbols": [
+            "RepoGraph",
+            "scan_repo",
+            "write_graph"
+          ],
+          "line": 38
+        },
+        {
+          "raw": "from fleet.graph.spec import LanguageSpec, TestRules, detect_language, register, supported_extensions, supported_languages",
+          "module": "fleet.graph.spec",
+          "symbols": [
+            "LanguageSpec",
+            "TestRules",
+            "detect_language",
+            "register",
+            "supported_extensions",
+            "supported_languages"
+          ],
+          "line": 39
+        }
+      ],
+      "symbols": []
+    },
+    {
+      "path": "src/fleet/graph/engine.py",
+      "language": "python",
+      "parser": "ast",
+      "has_syntax_error": false,
+      "imports": [
+        {
+          "raw": "from __future__ import annotations",
+          "module": "__future__",
+          "symbols": [
+            "annotations"
+          ],
+          "line": 29
+        },
+        {
+          "raw": "from typing import Any",
+          "module": "typing",
+          "symbols": [
+            "Any"
+          ],
+          "line": 31
+        },
+        {
+          "raw": "from fleet.graph.models import ExtractedCall, ExtractedImport, ExtractedSymbol, ParsedFile",
+          "module": "fleet.graph.models",
+          "symbols": [
+            "ExtractedCall",
+            "ExtractedImport",
+            "ExtractedSymbol",
+            "ParsedFile"
+          ],
+          "line": 33
+        },
+        {
+          "raw": "from fleet.graph.spec import LanguageSpec",
+          "module": "fleet.graph.spec",
+          "symbols": [
+            "LanguageSpec"
+          ],
+          "line": 34
+        },
+        {
+          "raw": "import tree_sitter",
+          "module": "tree_sitter",
+          "symbols": [],
+          "line": 37
+        },
+        {
+          "raw": "from tree_sitter_language_pack import get_parser",
+          "module": "tree_sitter_language_pack",
+          "symbols": [
+            "get_parser"
+          ],
+          "line": 38
+        },
+        {
+          "raw": "from tree_sitter_language_pack import get_language",
+          "module": "tree_sitter_language_pack",
+          "symbols": [
+            "get_language"
+          ],
+          "line": 164
+        }
+      ],
+      "symbols": [
+        {
+          "name": "_text",
+          "qualified_name": "_text",
+          "kind": "function",
+          "start_line": 59,
+          "end_line": 60,
+          "first_body_line": 60,
+          "last_body_line": 60,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "src/fleet/graph/engine.py::_text"
+        },
+        {
+          "name": "_unquote",
+          "qualified_name": "_unquote",
+          "kind": "function",
+          "start_line": 63,
+          "end_line": 68,
+          "first_body_line": 64,
+          "last_body_line": 68,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "src/fleet/graph/engine.py::_unquote"
+        },
+        {
+          "name": "_body_node",
+          "qualified_name": "_body_node",
+          "kind": "function",
+          "start_line": 71,
+          "end_line": 80,
+          "first_body_line": 72,
+          "last_body_line": 80,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "src/fleet/graph/engine.py::_body_node"
+        },
+        {
+          "name": "_has_keyword",
+          "qualified_name": "_has_keyword",
+          "kind": "function",
+          "start_line": 83,
+          "end_line": 87,
+          "first_body_line": 84,
+          "last_body_line": 87,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "src/fleet/graph/engine.py::_has_keyword"
+        },
+        {
+          "name": "_is_generator",
+          "qualified_name": "_is_generator",
+          "kind": "function",
+          "start_line": 90,
+          "end_line": 91,
+          "first_body_line": 91,
+          "last_body_line": 91,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "src/fleet/graph/engine.py::_is_generator"
+        },
+        {
+          "name": "_key",
+          "qualified_name": "_key",
+          "kind": "function",
+          "start_line": 94,
+          "end_line": 102,
+          "first_body_line": 95,
+          "last_body_line": 102,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "src/fleet/graph/engine.py::_key"
+        },
+        {
+          "name": "_split_patterns",
+          "qualified_name": "_split_patterns",
+          "kind": "function",
+          "start_line": 105,
+          "end_line": 143,
+          "first_body_line": 106,
+          "last_body_line": 143,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "src/fleet/graph/engine.py::_split_patterns"
+        },
+        {
+          "name": "_compile",
+          "qualified_name": "_compile",
+          "kind": "function",
+          "start_line": 146,
+          "end_line": 185,
+          "first_body_line": 147,
+          "last_body_line": 185,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "src/fleet/graph/engine.py::_compile"
+        },
+        {
+          "name": "dropped_patterns",
+          "qualified_name": "dropped_patterns",
+          "kind": "function",
+          "start_line": 188,
+          "end_line": 192,
+          "first_body_line": 189,
+          "last_body_line": 192,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "src/fleet/graph/engine.py::dropped_patterns"
+        },
+        {
+          "name": "_kind_of",
+          "qualified_name": "_kind_of",
+          "kind": "function",
+          "start_line": 195,
+          "end_line": 196,
+          "first_body_line": 196,
+          "last_body_line": 196,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "src/fleet/graph/engine.py::_kind_of"
+        },
+        {
+          "name": "_Container",
+          "qualified_name": "_Container",
+          "kind": "class",
+          "start_line": 199,
+          "end_line": 207,
+          "first_body_line": 200,
+          "last_body_line": 207,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "src/fleet/graph/engine.py::_Container"
+        },
+        {
+          "name": "__init__",
+          "qualified_name": "_Container.__init__",
+          "kind": "method",
+          "start_line": 204,
+          "end_line": 207,
+          "first_body_line": 205,
+          "last_body_line": 207,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "_Container",
+          "id": "src/fleet/graph/engine.py::_Container.__init__"
+        },
+        {
+          "name": "extract",
+          "qualified_name": "extract",
+          "kind": "function",
+          "start_line": 210,
+          "end_line": 282,
+          "first_body_line": 211,
+          "last_body_line": 282,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "src/fleet/graph/engine.py::extract"
+        },
+        {
+          "name": "_anchor_of",
+          "qualified_name": "_anchor_of",
+          "kind": "function",
+          "start_line": 292,
+          "end_line": 299,
+          "first_body_line": 293,
+          "last_body_line": 299,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "src/fleet/graph/engine.py::_anchor_of"
+        },
+        {
+          "name": "_merge_matches",
+          "qualified_name": "_merge_matches",
+          "kind": "function",
+          "start_line": 302,
+          "end_line": 330,
+          "first_body_line": 303,
+          "last_body_line": 330,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "src/fleet/graph/engine.py::_merge_matches"
+        },
+        {
+          "name": "_definition_kind",
+          "qualified_name": "_definition_kind",
+          "kind": "function",
+          "start_line": 346,
+          "end_line": 351,
+          "first_body_line": 347,
+          "last_body_line": 351,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "src/fleet/graph/engine.py::_definition_kind"
+        },
+        {
+          "name": "_container_of",
+          "qualified_name": "_container_of",
+          "kind": "function",
+          "start_line": 354,
+          "end_line": 365,
+          "first_body_line": 355,
+          "last_body_line": 365,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "src/fleet/graph/engine.py::_container_of"
+        },
+        {
+          "name": "_enclosing",
+          "qualified_name": "_enclosing",
+          "kind": "function",
+          "start_line": 368,
+          "end_line": 383,
+          "first_body_line": 369,
+          "last_body_line": 383,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "src/fleet/graph/engine.py::_enclosing"
+        },
+        {
+          "name": "_enclosing_name",
+          "qualified_name": "_enclosing_name",
+          "kind": "function",
+          "start_line": 386,
+          "end_line": 388,
+          "first_body_line": 387,
+          "last_body_line": 388,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "src/fleet/graph/engine.py::_enclosing_name"
+        },
+        {
+          "name": "_symbol_of",
+          "qualified_name": "_symbol_of",
+          "kind": "function",
+          "start_line": 391,
+          "end_line": 471,
+          "first_body_line": 398,
+          "last_body_line": 471,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "src/fleet/graph/engine.py::_symbol_of"
+        },
+        {
+          "name": "_annotations_of",
+          "qualified_name": "_annotations_of",
+          "kind": "function",
+          "start_line": 474,
+          "end_line": 494,
+          "first_body_line": 475,
+          "last_body_line": 494,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "src/fleet/graph/engine.py::_annotations_of"
+        },
+        {
+          "name": "_import_of",
+          "qualified_name": "_import_of",
+          "kind": "function",
+          "start_line": 497,
+          "end_line": 505,
+          "first_body_line": 498,
+          "last_body_line": 505,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "src/fleet/graph/engine.py::_import_of"
+        }
+      ]
+    },
+    {
+      "path": "src/fleet/graph/ignore.py",
+      "language": "python",
+      "parser": "ast",
+      "has_syntax_error": false,
+      "imports": [
+        {
+          "raw": "from __future__ import annotations",
+          "module": "__future__",
+          "symbols": [
+            "annotations"
+          ],
+          "line": 25
+        },
+        {
+          "raw": "import fnmatch",
+          "module": "fnmatch",
+          "symbols": [],
+          "line": 27
+        },
+        {
+          "raw": "from dataclasses import dataclass, field",
+          "module": "dataclasses",
+          "symbols": [
+            "dataclass",
+            "field"
+          ],
+          "line": 28
+        },
+        {
+          "raw": "from pathlib import Path",
+          "module": "pathlib",
+          "symbols": [
+            "Path"
+          ],
+          "line": 29
+        }
+      ],
+      "symbols": [
+        {
+          "name": "_Pattern",
+          "qualified_name": "_Pattern",
+          "kind": "class",
+          "start_line": 78,
+          "end_line": 81,
+          "first_body_line": 79,
+          "last_body_line": 81,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "src/fleet/graph/ignore.py::_Pattern"
+        },
+        {
+          "name": "_compile",
+          "qualified_name": "_compile",
+          "kind": "function",
+          "start_line": 84,
+          "end_line": 91,
+          "first_body_line": 85,
+          "last_body_line": 91,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "src/fleet/graph/ignore.py::_compile"
+        },
+        {
+          "name": "IgnoreRules",
+          "qualified_name": "IgnoreRules",
+          "kind": "class",
+          "start_line": 95,
+          "end_line": 107,
+          "first_body_line": 96,
+          "last_body_line": 107,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "src/fleet/graph/ignore.py::IgnoreRules"
+        },
+        {
+          "name": "matches",
+          "qualified_name": "IgnoreRules.matches",
+          "kind": "method",
+          "start_line": 98,
+          "end_line": 107,
+          "first_body_line": 99,
+          "last_body_line": 107,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "IgnoreRules",
+          "id": "src/fleet/graph/ignore.py::IgnoreRules.matches"
+        },
+        {
+          "name": "load_ignore_rules",
+          "qualified_name": "load_ignore_rules",
+          "kind": "function",
+          "start_line": 110,
+          "end_line": 117,
+          "first_body_line": 111,
+          "last_body_line": 117,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "src/fleet/graph/ignore.py::load_ignore_rules"
+        }
+      ]
+    },
+    {
+      "path": "src/fleet/graph/models.py",
+      "language": "python",
+      "parser": "ast",
+      "has_syntax_error": false,
+      "imports": [
+        {
+          "raw": "from __future__ import annotations",
+          "module": "__future__",
+          "symbols": [
+            "annotations"
+          ],
+          "line": 9
+        },
+        {
+          "raw": "from dataclasses import dataclass, field",
+          "module": "dataclasses",
+          "symbols": [
+            "dataclass",
+            "field"
+          ],
+          "line": 11
+        },
+        {
+          "raw": "from typing import Any",
+          "module": "typing",
+          "symbols": [
+            "Any"
+          ],
+          "line": 12
+        }
+      ],
+      "symbols": [
+        {
+          "name": "ExtractedImport",
+          "qualified_name": "ExtractedImport",
+          "kind": "class",
+          "start_line": 18,
+          "end_line": 22,
+          "first_body_line": 19,
+          "last_body_line": 22,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "src/fleet/graph/models.py::ExtractedImport"
+        },
+        {
+          "name": "ExtractedSymbol",
+          "qualified_name": "ExtractedSymbol",
+          "kind": "class",
+          "start_line": 26,
+          "end_line": 86,
+          "first_body_line": 27,
+          "last_body_line": 86,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "src/fleet/graph/models.py::ExtractedSymbol"
+        },
+        {
+          "name": "id",
+          "qualified_name": "ExtractedSymbol.id",
+          "kind": "method",
+          "start_line": 65,
+          "end_line": 67,
+          "first_body_line": 66,
+          "last_body_line": 67,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "ExtractedSymbol",
+          "id": "src/fleet/graph/models.py::ExtractedSymbol.id"
+        },
+        {
+          "name": "to_dict",
+          "qualified_name": "ExtractedSymbol.to_dict",
+          "kind": "method",
+          "start_line": 69,
+          "end_line": 86,
+          "first_body_line": 70,
+          "last_body_line": 86,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "ExtractedSymbol",
+          "id": "src/fleet/graph/models.py::ExtractedSymbol.to_dict"
+        },
+        {
+          "name": "ExtractedCall",
+          "qualified_name": "ExtractedCall",
+          "kind": "class",
+          "start_line": 90,
+          "end_line": 102,
+          "first_body_line": 91,
+          "last_body_line": 102,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "src/fleet/graph/models.py::ExtractedCall"
+        },
+        {
+          "name": "ParsedFile",
+          "qualified_name": "ParsedFile",
+          "kind": "class",
+          "start_line": 106,
+          "end_line": 138,
+          "first_body_line": 107,
+          "last_body_line": 138,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "src/fleet/graph/models.py::ParsedFile"
+        },
+        {
+          "name": "tests",
+          "qualified_name": "ParsedFile.tests",
+          "kind": "method",
+          "start_line": 124,
+          "end_line": 125,
+          "first_body_line": 125,
+          "last_body_line": 125,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "ParsedFile",
+          "id": "src/fleet/graph/models.py::ParsedFile.tests"
+        },
+        {
+          "name": "to_dict",
+          "qualified_name": "ParsedFile.to_dict",
+          "kind": "method",
+          "start_line": 127,
+          "end_line": 138,
+          "first_body_line": 128,
+          "last_body_line": 138,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "ParsedFile",
+          "id": "src/fleet/graph/models.py::ParsedFile.to_dict"
+        },
+        {
+          "name": "Edge",
+          "qualified_name": "Edge",
+          "kind": "class",
+          "start_line": 150,
+          "end_line": 169,
+          "first_body_line": 151,
+          "last_body_line": 169,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "src/fleet/graph/models.py::Edge"
+        },
+        {
+          "name": "to_dict",
+          "qualified_name": "Edge.to_dict",
+          "kind": "method",
+          "start_line": 161,
+          "end_line": 169,
+          "first_body_line": 162,
+          "last_body_line": 169,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "Edge",
+          "id": "src/fleet/graph/models.py::Edge.to_dict"
+        }
+      ]
+    },
+    {
+      "path": "src/fleet/graph/parser.py",
+      "language": "python",
+      "parser": "ast",
+      "has_syntax_error": false,
+      "imports": [
+        {
+          "raw": "from __future__ import annotations",
+          "module": "__future__",
+          "symbols": [
+            "annotations"
+          ],
+          "line": 9
+        },
+        {
+          "raw": "from dataclasses import replace",
+          "module": "dataclasses",
+          "symbols": [
+            "replace"
+          ],
+          "line": 11
+        },
+        {
+          "raw": "from typing import Callable",
+          "module": "typing",
+          "symbols": [
+            "Callable"
+          ],
+          "line": 12
+        },
+        {
+          "raw": "from fleet.graph import engine, pyast",
+          "module": "fleet.graph",
+          "symbols": [
+            "engine",
+            "pyast"
+          ],
+          "line": 14
+        },
+        {
+          "raw": "from fleet.graph import languages",
+          "module": "fleet.graph",
+          "symbols": [
+            "languages"
+          ],
+          "line": 15
+        },
+        {
+          "raw": "from fleet.graph.models import ParsedFile",
+          "module": "fleet.graph.models",
+          "symbols": [
+            "ParsedFile"
+          ],
+          "line": 16
+        },
+        {
+          "raw": "from fleet.graph.spec import LanguageSpec, detect_language, spec_for",
+          "module": "fleet.graph.spec",
+          "symbols": [
+            "LanguageSpec",
+            "detect_language",
+            "spec_for"
+          ],
+          "line": 17
+        }
+      ],
+      "symbols": [
+        {
+          "name": "parse_source",
+          "qualified_name": "parse_source",
+          "kind": "function",
+          "start_line": 25,
+          "end_line": 46,
+          "first_body_line": 26,
+          "last_body_line": 46,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "src/fleet/graph/parser.py::parse_source"
+        },
+        {
+          "name": "_disambiguate_ids",
+          "qualified_name": "_disambiguate_ids",
+          "kind": "function",
+          "start_line": 49,
+          "end_line": 69,
+          "first_body_line": 50,
+          "last_body_line": 69,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "src/fleet/graph/parser.py::_disambiguate_ids"
+        }
+      ]
+    },
+    {
+      "path": "src/fleet/graph/pyast.py",
+      "language": "python",
+      "parser": "ast",
+      "has_syntax_error": false,
+      "imports": [
+        {
+          "raw": "from __future__ import annotations",
+          "module": "__future__",
+          "symbols": [
+            "annotations"
+          ],
+          "line": 11
+        },
+        {
+          "raw": "import ast",
+          "module": "ast",
+          "symbols": [],
+          "line": 13
+        },
+        {
+          "raw": "from typing import Any",
+          "module": "typing",
+          "symbols": [
+            "Any"
+          ],
+          "line": 14
+        },
+        {
+          "raw": "from fleet.graph.models import ExtractedCall, ExtractedImport, ExtractedSymbol, ParsedFile",
+          "module": "fleet.graph.models",
+          "symbols": [
+            "ExtractedCall",
+            "ExtractedImport",
+            "ExtractedSymbol",
+            "ParsedFile"
+          ],
+          "line": 16
+        },
+        {
+          "raw": "from fleet.graph.spec import LanguageSpec",
+          "module": "fleet.graph.spec",
+          "symbols": [
+            "LanguageSpec"
+          ],
+          "line": 17
+        }
+      ],
+      "symbols": [
+        {
+          "name": "extract",
+          "qualified_name": "extract",
+          "kind": "function",
+          "start_line": 20,
+          "end_line": 66,
+          "first_body_line": 21,
+          "last_body_line": 66,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "src/fleet/graph/pyast.py::extract"
+        },
+        {
+          "name": "_decorators",
+          "qualified_name": "_decorators",
+          "kind": "function",
+          "start_line": 69,
+          "end_line": 70,
+          "first_body_line": 70,
+          "last_body_line": 70,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "src/fleet/graph/pyast.py::_decorators"
+        },
+        {
+          "name": "_function",
+          "qualified_name": "_function",
+          "kind": "function",
+          "start_line": 73,
+          "end_line": 92,
+          "first_body_line": 74,
+          "last_body_line": 92,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "src/fleet/graph/pyast.py::_function"
+        },
+        {
+          "name": "_class",
+          "qualified_name": "_class",
+          "kind": "function",
+          "start_line": 95,
+          "end_line": 113,
+          "first_body_line": 96,
+          "last_body_line": 113,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "src/fleet/graph/pyast.py::_class"
+        },
+        {
+          "name": "_calls",
+          "qualified_name": "_calls",
+          "kind": "function",
+          "start_line": 116,
+          "end_line": 133,
+          "first_body_line": 117,
+          "last_body_line": 133,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "src/fleet/graph/pyast.py::_calls"
+        }
+      ]
+    },
+    {
+      "path": "src/fleet/graph/resolve.py",
+      "language": "python",
+      "parser": "ast",
+      "has_syntax_error": false,
+      "imports": [
+        {
+          "raw": "from __future__ import annotations",
+          "module": "__future__",
+          "symbols": [
+            "annotations"
+          ],
+          "line": 22
+        },
+        {
+          "raw": "import posixpath",
+          "module": "posixpath",
+          "symbols": [],
+          "line": 24
+        },
+        {
+          "raw": "from typing import Callable",
+          "module": "typing",
+          "symbols": [
+            "Callable"
+          ],
+          "line": 25
+        },
+        {
+          "raw": "from fleet.graph.models import CONTAIN, IMPORT, INHERIT, Edge, ParsedFile",
+          "module": "fleet.graph.models",
+          "symbols": [
+            "CONTAIN",
+            "IMPORT",
+            "INHERIT",
+            "Edge",
+            "ParsedFile"
+          ],
+          "line": 27
+        },
+        {
+          "raw": "from fleet.graph.spec import LanguageSpec, spec_for, specs_in_family",
+          "module": "fleet.graph.spec",
+          "symbols": [
+            "LanguageSpec",
+            "spec_for",
+            "specs_in_family"
+          ],
+          "line": 28
+        }
+      ],
+      "symbols": [
+        {
+          "name": "_split_source_root",
+          "qualified_name": "_split_source_root",
+          "kind": "function",
+          "start_line": 39,
+          "end_line": 66,
+          "first_body_line": 40,
+          "last_body_line": 66,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "src/fleet/graph/resolve.py::_split_source_root"
+        },
+        {
+          "name": "_module_parts",
+          "qualified_name": "_module_parts",
+          "kind": "function",
+          "start_line": 69,
+          "end_line": 81,
+          "first_body_line": 70,
+          "last_body_line": 81,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "src/fleet/graph/resolve.py::_module_parts"
+        },
+        {
+          "name": "_dotted_name",
+          "qualified_name": "_dotted_name",
+          "kind": "function",
+          "start_line": 84,
+          "end_line": 94,
+          "first_body_line": 85,
+          "last_body_line": 94,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "src/fleet/graph/resolve.py::_dotted_name"
+        },
+        {
+          "name": "_resolve_markers",
+          "qualified_name": "_resolve_markers",
+          "kind": "function",
+          "start_line": 97,
+          "end_line": 120,
+          "first_body_line": 98,
+          "last_body_line": 120,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "src/fleet/graph/resolve.py::_resolve_markers"
+        },
+        {
+          "name": "_relative_dotted",
+          "qualified_name": "_relative_dotted",
+          "kind": "function",
+          "start_line": 123,
+          "end_line": 138,
+          "first_body_line": 124,
+          "last_body_line": 138,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "src/fleet/graph/resolve.py::_relative_dotted"
+        },
+        {
+          "name": "resolve_dotted",
+          "qualified_name": "resolve_dotted",
+          "kind": "function",
+          "start_line": 141,
+          "end_line": 200,
+          "first_body_line": 146,
+          "last_body_line": 200,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "src/fleet/graph/resolve.py::resolve_dotted"
+        },
+        {
+          "name": "resolve_relative",
+          "qualified_name": "resolve_relative",
+          "kind": "function",
+          "start_line": 208,
+          "end_line": 248,
+          "first_body_line": 209,
+          "last_body_line": 248,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "src/fleet/graph/resolve.py::resolve_relative"
+        },
+        {
+          "name": "contain_edges",
+          "qualified_name": "contain_edges",
+          "kind": "function",
+          "start_line": 262,
+          "end_line": 282,
+          "first_body_line": 263,
+          "last_body_line": 282,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "src/fleet/graph/resolve.py::contain_edges"
+        },
+        {
+          "name": "inherit_edges",
+          "qualified_name": "inherit_edges",
+          "kind": "function",
+          "start_line": 285,
+          "end_line": 322,
+          "first_body_line": 286,
+          "last_body_line": 322,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "src/fleet/graph/resolve.py::inherit_edges"
+        },
+        {
+          "name": "resolve_edges",
+          "qualified_name": "resolve_edges",
+          "kind": "function",
+          "start_line": 325,
+          "end_line": 349,
+          "first_body_line": 326,
+          "last_body_line": 349,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "src/fleet/graph/resolve.py::resolve_edges"
+        }
+      ]
+    },
+    {
+      "path": "src/fleet/graph/scan.py",
+      "language": "python",
+      "parser": "ast",
+      "has_syntax_error": false,
+      "imports": [
+        {
+          "raw": "from __future__ import annotations",
+          "module": "__future__",
+          "symbols": [
+            "annotations"
+          ],
+          "line": 7
+        },
+        {
+          "raw": "import json",
+          "module": "json",
+          "symbols": [],
+          "line": 9
+        },
+        {
+          "raw": "import os",
+          "module": "os",
+          "symbols": [],
+          "line": 10
+        },
+        {
+          "raw": "from dataclasses import dataclass, field",
+          "module": "dataclasses",
+          "symbols": [
+            "dataclass",
+            "field"
+          ],
+          "line": 11
+        },
+        {
+          "raw": "from pathlib import Path",
+          "module": "pathlib",
+          "symbols": [
+            "Path"
+          ],
+          "line": 12
+        },
+        {
+          "raw": "from typing import Any, Iterator",
+          "module": "typing",
+          "symbols": [
+            "Any",
+            "Iterator"
+          ],
+          "line": 13
+        },
+        {
+          "raw": "from fleet.graph.ignore import IgnoreRules, load_ignore_rules",
+          "module": "fleet.graph.ignore",
+          "symbols": [
+            "IgnoreRules",
+            "load_ignore_rules"
+          ],
+          "line": 15
+        },
+        {
+          "raw": "from fleet.graph.models import SCHEMA_VERSION, Edge, ParsedFile",
+          "module": "fleet.graph.models",
+          "symbols": [
+            "SCHEMA_VERSION",
+            "Edge",
+            "ParsedFile"
+          ],
+          "line": 16
+        },
+        {
+          "raw": "from fleet.graph.parser import parse_source",
+          "module": "fleet.graph.parser",
+          "symbols": [
+            "parse_source"
+          ],
+          "line": 17
+        },
+        {
+          "raw": "from fleet.graph.resolve import resolve_edges",
+          "module": "fleet.graph.resolve",
+          "symbols": [
+            "resolve_edges"
+          ],
+          "line": 18
+        }
+      ],
+      "symbols": [
+        {
+          "name": "iter_source_files",
+          "qualified_name": "iter_source_files",
+          "kind": "function",
+          "start_line": 21,
+          "end_line": 30,
+          "first_body_line": 22,
+          "last_body_line": 30,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": true,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "src/fleet/graph/scan.py::iter_source_files"
+        },
+        {
+          "name": "RepoGraph",
+          "qualified_name": "RepoGraph",
+          "kind": "class",
+          "start_line": 34,
+          "end_line": 81,
+          "first_body_line": 35,
+          "last_body_line": 81,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "src/fleet/graph/scan.py::RepoGraph"
+        },
+        {
+          "name": "statistics",
+          "qualified_name": "RepoGraph.statistics",
+          "kind": "method",
+          "start_line": 39,
+          "end_line": 72,
+          "first_body_line": 40,
+          "last_body_line": 72,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "RepoGraph",
+          "id": "src/fleet/graph/scan.py::RepoGraph.statistics"
+        },
+        {
+          "name": "to_dict",
+          "qualified_name": "RepoGraph.to_dict",
+          "kind": "method",
+          "start_line": 74,
+          "end_line": 81,
+          "first_body_line": 75,
+          "last_body_line": 81,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "RepoGraph",
+          "id": "src/fleet/graph/scan.py::RepoGraph.to_dict"
+        },
+        {
+          "name": "scan_repo",
+          "qualified_name": "scan_repo",
+          "kind": "function",
+          "start_line": 84,
+          "end_line": 105,
+          "first_body_line": 85,
+          "last_body_line": 105,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "src/fleet/graph/scan.py::scan_repo"
+        },
+        {
+          "name": "write_graph",
+          "qualified_name": "write_graph",
+          "kind": "function",
+          "start_line": 108,
+          "end_line": 109,
+          "first_body_line": 109,
+          "last_body_line": 109,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "src/fleet/graph/scan.py::write_graph"
+        }
+      ]
+    },
+    {
+      "path": "src/fleet/graph/spec.py",
+      "language": "python",
+      "parser": "ast",
+      "has_syntax_error": false,
+      "imports": [
+        {
+          "raw": "from __future__ import annotations",
+          "module": "__future__",
+          "symbols": [
+            "annotations"
+          ],
+          "line": 16
+        },
+        {
+          "raw": "from dataclasses import dataclass, field",
+          "module": "dataclasses",
+          "symbols": [
+            "dataclass",
+            "field"
+          ],
+          "line": 18
+        },
+        {
+          "raw": "from pathlib import Path",
+          "module": "pathlib",
+          "symbols": [
+            "Path"
+          ],
+          "line": 19
+        }
+      ],
+      "symbols": [
+        {
+          "name": "TestRules",
+          "qualified_name": "TestRules",
+          "kind": "class",
+          "start_line": 25,
+          "end_line": 42,
+          "first_body_line": 26,
+          "last_body_line": 42,
+          "is_test": true,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "src/fleet/graph/spec.py::TestRules"
+        },
+        {
+          "name": "matches",
+          "qualified_name": "TestRules.matches",
+          "kind": "method",
+          "start_line": 39,
+          "end_line": 42,
+          "first_body_line": 40,
+          "last_body_line": 42,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "TestRules",
+          "id": "src/fleet/graph/spec.py::TestRules.matches"
+        },
+        {
+          "name": "LanguageSpec",
+          "qualified_name": "LanguageSpec",
+          "kind": "class",
+          "start_line": 46,
+          "end_line": 113,
+          "first_body_line": 47,
+          "last_body_line": 113,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "src/fleet/graph/spec.py::LanguageSpec"
+        },
+        {
+          "name": "__post_init__",
+          "qualified_name": "LanguageSpec.__post_init__",
+          "kind": "method",
+          "start_line": 101,
+          "end_line": 108,
+          "first_body_line": 103,
+          "last_body_line": 108,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "LanguageSpec",
+          "id": "src/fleet/graph/spec.py::LanguageSpec.__post_init__"
+        },
+        {
+          "name": "query_source",
+          "qualified_name": "LanguageSpec.query_source",
+          "kind": "method",
+          "start_line": 110,
+          "end_line": 113,
+          "first_body_line": 111,
+          "last_body_line": 113,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "LanguageSpec",
+          "id": "src/fleet/graph/spec.py::LanguageSpec.query_source"
+        },
+        {
+          "name": "register",
+          "qualified_name": "register",
+          "kind": "function",
+          "start_line": 120,
+          "end_line": 124,
+          "first_body_line": 121,
+          "last_body_line": 124,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "src/fleet/graph/spec.py::register"
+        },
+        {
+          "name": "detect_language",
+          "qualified_name": "detect_language",
+          "kind": "function",
+          "start_line": 127,
+          "end_line": 130,
+          "first_body_line": 128,
+          "last_body_line": 130,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "src/fleet/graph/spec.py::detect_language"
+        },
+        {
+          "name": "spec_for",
+          "qualified_name": "spec_for",
+          "kind": "function",
+          "start_line": 133,
+          "end_line": 134,
+          "first_body_line": 134,
+          "last_body_line": 134,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "src/fleet/graph/spec.py::spec_for"
+        },
+        {
+          "name": "specs_in_family",
+          "qualified_name": "specs_in_family",
+          "kind": "function",
+          "start_line": 137,
+          "end_line": 138,
+          "first_body_line": 138,
+          "last_body_line": 138,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "src/fleet/graph/spec.py::specs_in_family"
+        },
+        {
+          "name": "supported_extensions",
+          "qualified_name": "supported_extensions",
+          "kind": "function",
+          "start_line": 141,
+          "end_line": 142,
+          "first_body_line": 142,
+          "last_body_line": 142,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "src/fleet/graph/spec.py::supported_extensions"
+        },
+        {
+          "name": "supported_languages",
+          "qualified_name": "supported_languages",
+          "kind": "function",
+          "start_line": 145,
+          "end_line": 146,
+          "first_body_line": 146,
+          "last_body_line": 146,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "src/fleet/graph/spec.py::supported_languages"
+        },
+        {
+          "name": "all_specs",
+          "qualified_name": "all_specs",
+          "kind": "function",
+          "start_line": 149,
+          "end_line": 150,
+          "first_body_line": 150,
+          "last_body_line": 150,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "src/fleet/graph/spec.py::all_specs"
+        }
+      ]
+    },
+    {
+      "path": "src/fleet/graph/languages/__init__.py",
+      "language": "python",
+      "parser": "ast",
+      "has_syntax_error": false,
+      "imports": [
+        {
+          "raw": "from __future__ import annotations",
+          "module": "__future__",
+          "symbols": [
+            "annotations"
+          ],
+          "line": 10
+        },
+        {
+          "raw": "from fleet.graph.languages import go, java, javascript, python, rust",
+          "module": "fleet.graph.languages",
+          "symbols": [
+            "go",
+            "java",
+            "javascript",
+            "python",
+            "rust"
+          ],
+          "line": 12
+        }
+      ],
+      "symbols": []
+    },
+    {
+      "path": "src/fleet/graph/languages/go.py",
+      "language": "python",
+      "parser": "ast",
+      "has_syntax_error": false,
+      "imports": [
+        {
+          "raw": "from __future__ import annotations",
+          "module": "__future__",
+          "symbols": [
+            "annotations"
+          ],
+          "line": 10
+        },
+        {
+          "raw": "from fleet.graph.spec import LanguageSpec, TestRules, register",
+          "module": "fleet.graph.spec",
+          "symbols": [
+            "LanguageSpec",
+            "TestRules",
+            "register"
+          ],
+          "line": 12
+        }
+      ],
+      "symbols": []
+    },
+    {
+      "path": "src/fleet/graph/languages/java.py",
+      "language": "python",
+      "parser": "ast",
+      "has_syntax_error": false,
+      "imports": [
+        {
+          "raw": "from __future__ import annotations",
+          "module": "__future__",
+          "symbols": [
+            "annotations"
+          ],
+          "line": 14
+        },
+        {
+          "raw": "from fleet.graph.spec import LanguageSpec, TestRules, register",
+          "module": "fleet.graph.spec",
+          "symbols": [
+            "LanguageSpec",
+            "TestRules",
+            "register"
+          ],
+          "line": 16
+        }
+      ],
+      "symbols": []
+    },
+    {
+      "path": "src/fleet/graph/languages/javascript.py",
+      "language": "python",
+      "parser": "ast",
+      "has_syntax_error": false,
+      "imports": [
+        {
+          "raw": "from __future__ import annotations",
+          "module": "__future__",
+          "symbols": [
+            "annotations"
+          ],
+          "line": 14
+        },
+        {
+          "raw": "from fleet.graph.spec import LanguageSpec, TestRules, register",
+          "module": "fleet.graph.spec",
+          "symbols": [
+            "LanguageSpec",
+            "TestRules",
+            "register"
+          ],
+          "line": 16
+        }
+      ],
+      "symbols": []
+    },
+    {
+      "path": "src/fleet/graph/languages/python.py",
+      "language": "python",
+      "parser": "ast",
+      "has_syntax_error": false,
+      "imports": [
+        {
+          "raw": "from __future__ import annotations",
+          "module": "__future__",
+          "symbols": [
+            "annotations"
+          ],
+          "line": 3
+        },
+        {
+          "raw": "from fleet.graph.spec import LanguageSpec, TestRules, register",
+          "module": "fleet.graph.spec",
+          "symbols": [
+            "LanguageSpec",
+            "TestRules",
+            "register"
+          ],
+          "line": 5
+        }
+      ],
+      "symbols": []
+    },
+    {
+      "path": "src/fleet/graph/languages/rust.py",
+      "language": "python",
+      "parser": "ast",
+      "has_syntax_error": false,
+      "imports": [
+        {
+          "raw": "from __future__ import annotations",
+          "module": "__future__",
+          "symbols": [
+            "annotations"
+          ],
+          "line": 8
+        },
+        {
+          "raw": "from fleet.graph.spec import LanguageSpec, TestRules, register",
+          "module": "fleet.graph.spec",
+          "symbols": [
+            "LanguageSpec",
+            "TestRules",
+            "register"
+          ],
+          "line": 10
+        }
+      ],
+      "symbols": []
+    },
+    {
+      "path": "src/fleet/pipelines/__init__.py",
+      "language": "python",
+      "parser": "ast",
+      "has_syntax_error": false,
+      "imports": [
+        {
+          "raw": "from __future__ import annotations",
+          "module": "__future__",
+          "symbols": [
+            "annotations"
+          ],
+          "line": 8
+        },
+        {
+          "raw": "from fleet.pipelines.base import Pipeline",
+          "module": "fleet.pipelines.base",
+          "symbols": [
+            "Pipeline"
+          ],
+          "line": 10
+        }
+      ],
+      "symbols": []
+    },
+    {
+      "path": "src/fleet/pipelines/base.py",
+      "language": "python",
+      "parser": "ast",
+      "has_syntax_error": false,
+      "imports": [
+        {
+          "raw": "from __future__ import annotations",
+          "module": "__future__",
+          "symbols": [
+            "annotations"
+          ],
+          "line": 10
+        },
+        {
+          "raw": "from dataclasses import dataclass, field",
+          "module": "dataclasses",
+          "symbols": [
+            "dataclass",
+            "field"
+          ],
+          "line": 12
+        },
+        {
+          "raw": "from pathlib import Path",
+          "module": "pathlib",
+          "symbols": [
+            "Path"
+          ],
+          "line": 13
+        },
+        {
+          "raw": "from typing import Any, ClassVar, Protocol",
+          "module": "typing",
+          "symbols": [
+            "Any",
+            "ClassVar",
+            "Protocol"
+          ],
+          "line": 14
+        }
+      ],
+      "symbols": [
+        {
+          "name": "PipelineResult",
+          "qualified_name": "PipelineResult",
+          "kind": "class",
+          "start_line": 18,
+          "end_line": 24,
+          "first_body_line": 19,
+          "last_body_line": 24,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "src/fleet/pipelines/base.py::PipelineResult"
+        },
+        {
+          "name": "Pipeline",
+          "qualified_name": "Pipeline",
+          "kind": "class",
+          "start_line": 27,
+          "end_line": 42,
+          "first_body_line": 28,
+          "last_body_line": 42,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [
+            "Protocol"
+          ],
+          "parent": "",
+          "id": "src/fleet/pipelines/base.py::Pipeline"
+        },
+        {
+          "name": "__init__",
+          "qualified_name": "Pipeline.__init__",
+          "kind": "method",
+          "start_line": 38,
+          "end_line": 38,
+          "first_body_line": 38,
+          "last_body_line": 38,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "Pipeline",
+          "id": "src/fleet/pipelines/base.py::Pipeline.__init__"
+        },
+        {
+          "name": "run",
+          "qualified_name": "Pipeline.run",
+          "kind": "method",
+          "start_line": 40,
+          "end_line": 42,
+          "first_body_line": 41,
+          "last_body_line": 42,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "Pipeline",
+          "id": "src/fleet/pipelines/base.py::Pipeline.run"
+        }
+      ]
+    },
+    {
+      "path": "tests/test_graph.py",
+      "language": "python",
+      "parser": "ast",
+      "has_syntax_error": false,
+      "imports": [
+        {
+          "raw": "from __future__ import annotations",
+          "module": "__future__",
+          "symbols": [
+            "annotations"
+          ],
+          "line": 1
+        },
+        {
+          "raw": "from pathlib import Path",
+          "module": "pathlib",
+          "symbols": [
+            "Path"
+          ],
+          "line": 3
+        },
+        {
+          "raw": "from fleet.graph.resolve import resolve_edges",
+          "module": "fleet.graph.resolve",
+          "symbols": [
+            "resolve_edges"
+          ],
+          "line": 5
+        },
+        {
+          "raw": "from fleet.graph.spec import detect_language",
+          "module": "fleet.graph.spec",
+          "symbols": [
+            "detect_language"
+          ],
+          "line": 6
+        },
+        {
+          "raw": "from fleet.graph.parser import parse_source",
+          "module": "fleet.graph.parser",
+          "symbols": [
+            "parse_source"
+          ],
+          "line": 7
+        },
+        {
+          "raw": "from fleet.graph.scan import scan_repo, write_graph",
+          "module": "fleet.graph.scan",
+          "symbols": [
+            "scan_repo",
+            "write_graph"
+          ],
+          "line": 8
+        },
+        {
+          "raw": "from fleet.graph.engine import TREE_SITTER_AVAILABLE",
+          "module": "fleet.graph.engine",
+          "symbols": [
+            "TREE_SITTER_AVAILABLE"
+          ],
+          "line": 80
+        },
+        {
+          "raw": "from fleet.graph.engine import TREE_SITTER_AVAILABLE",
+          "module": "fleet.graph.engine",
+          "symbols": [
+            "TREE_SITTER_AVAILABLE"
+          ],
+          "line": 108
+        },
+        {
+          "raw": "from fleet.graph.engine import TREE_SITTER_AVAILABLE",
+          "module": "fleet.graph.engine",
+          "symbols": [
+            "TREE_SITTER_AVAILABLE"
+          ],
+          "line": 147
+        },
+        {
+          "raw": "from fleet.graph.engine import TREE_SITTER_AVAILABLE",
+          "module": "fleet.graph.engine",
+          "symbols": [
+            "TREE_SITTER_AVAILABLE"
+          ],
+          "line": 195
+        },
+        {
+          "raw": "from fleet.graph.engine import TREE_SITTER_AVAILABLE",
+          "module": "fleet.graph.engine",
+          "symbols": [
+            "TREE_SITTER_AVAILABLE"
+          ],
+          "line": 221
+        },
+        {
+          "raw": "from fleet.graph.engine import TREE_SITTER_AVAILABLE",
+          "module": "fleet.graph.engine",
+          "symbols": [
+            "TREE_SITTER_AVAILABLE"
+          ],
+          "line": 253
+        },
+        {
+          "raw": "from fleet.graph.engine import TREE_SITTER_AVAILABLE",
+          "module": "fleet.graph.engine",
+          "symbols": [
+            "TREE_SITTER_AVAILABLE"
+          ],
+          "line": 280
+        },
+        {
+          "raw": "from fleet.graph.engine import TREE_SITTER_AVAILABLE",
+          "module": "fleet.graph.engine",
+          "symbols": [
+            "TREE_SITTER_AVAILABLE"
+          ],
+          "line": 297
+        },
+        {
+          "raw": "from fleet.graph.engine import TREE_SITTER_AVAILABLE",
+          "module": "fleet.graph.engine",
+          "symbols": [
+            "TREE_SITTER_AVAILABLE"
+          ],
+          "line": 315
+        },
+        {
+          "raw": "from fleet.graph.engine import TREE_SITTER_AVAILABLE",
+          "module": "fleet.graph.engine",
+          "symbols": [
+            "TREE_SITTER_AVAILABLE"
+          ],
+          "line": 327
+        },
+        {
+          "raw": "from fleet.graph.engine import TREE_SITTER_AVAILABLE",
+          "module": "fleet.graph.engine",
+          "symbols": [
+            "TREE_SITTER_AVAILABLE"
+          ],
+          "line": 345
+        }
+      ],
+      "symbols": [
+        {
+          "name": "test_detect_language",
+          "qualified_name": "test_detect_language",
+          "kind": "function",
+          "start_line": 11,
+          "end_line": 16,
+          "first_body_line": 12,
+          "last_body_line": 16,
+          "is_test": true,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "tests/test_graph.py::test_detect_language"
+        },
+        {
+          "name": "test_python_symbols_and_imports",
+          "qualified_name": "test_python_symbols_and_imports",
+          "kind": "function",
+          "start_line": 19,
+          "end_line": 48,
+          "first_body_line": 20,
+          "last_body_line": 48,
+          "is_test": true,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "tests/test_graph.py::test_python_symbols_and_imports"
+        },
+        {
+          "name": "test_python_class_bases_are_captured",
+          "qualified_name": "test_python_class_bases_are_captured",
+          "kind": "function",
+          "start_line": 51,
+          "end_line": 64,
+          "first_body_line": 52,
+          "last_body_line": 64,
+          "is_test": true,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "tests/test_graph.py::test_python_class_bases_are_captured"
+        },
+        {
+          "name": "test_python_syntax_error_is_reported_not_swallowed",
+          "qualified_name": "test_python_syntax_error_is_reported_not_swallowed",
+          "kind": "function",
+          "start_line": 67,
+          "end_line": 70,
+          "first_body_line": 68,
+          "last_body_line": 70,
+          "is_test": true,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "tests/test_graph.py::test_python_syntax_error_is_reported_not_swallowed"
+        },
+        {
+          "name": "test_unknown_extension_is_unparsed_not_guessed",
+          "qualified_name": "test_unknown_extension_is_unparsed_not_guessed",
+          "kind": "function",
+          "start_line": 73,
+          "end_line": 76,
+          "first_body_line": 74,
+          "last_body_line": 76,
+          "is_test": true,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "tests/test_graph.py::test_unknown_extension_is_unparsed_not_guessed"
+        },
+        {
+          "name": "test_go_symbols_via_tree_sitter",
+          "qualified_name": "test_go_symbols_via_tree_sitter",
+          "kind": "function",
+          "start_line": 79,
+          "end_line": 104,
+          "first_body_line": 80,
+          "last_body_line": 104,
+          "is_test": true,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "tests/test_graph.py::test_go_symbols_via_tree_sitter"
+        },
+        {
+          "name": "test_go_method_receiver_and_grouped_imports",
+          "qualified_name": "test_go_method_receiver_and_grouped_imports",
+          "kind": "function",
+          "start_line": 107,
+          "end_line": 143,
+          "first_body_line": 108,
+          "last_body_line": 143,
+          "is_test": true,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "tests/test_graph.py::test_go_method_receiver_and_grouped_imports"
+        },
+        {
+          "name": "test_rust_impl_and_trait_impl_qualify_methods_by_self_type",
+          "qualified_name": "test_rust_impl_and_trait_impl_qualify_methods_by_self_type",
+          "kind": "function",
+          "start_line": 146,
+          "end_line": 191,
+          "first_body_line": 147,
+          "last_body_line": 191,
+          "is_test": true,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "tests/test_graph.py::test_rust_impl_and_trait_impl_qualify_methods_by_self_type"
+        },
+        {
+          "name": "test_js_arrow_and_function_expression_consts_are_captured",
+          "qualified_name": "test_js_arrow_and_function_expression_consts_are_captured",
+          "kind": "function",
+          "start_line": 194,
+          "end_line": 217,
+          "first_body_line": 195,
+          "last_body_line": 217,
+          "is_test": true,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "tests/test_graph.py::test_js_arrow_and_function_expression_consts_are_captured"
+        },
+        {
+          "name": "test_js_class_method_qualified_name_and_async_flag",
+          "qualified_name": "test_js_class_method_qualified_name_and_async_flag",
+          "kind": "function",
+          "start_line": 220,
+          "end_line": 249,
+          "first_body_line": 221,
+          "last_body_line": 249,
+          "is_test": true,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "tests/test_graph.py::test_js_class_method_qualified_name_and_async_flag"
+        },
+        {
+          "name": "test_js_class_extends_is_captured",
+          "qualified_name": "test_js_class_extends_is_captured",
+          "kind": "function",
+          "start_line": 252,
+          "end_line": 270,
+          "first_body_line": 253,
+          "last_body_line": 270,
+          "is_test": true,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "tests/test_graph.py::test_js_class_extends_is_captured"
+        },
+        {
+          "name": "test_ts_specific_syntax_uses_the_real_typescript_grammar",
+          "qualified_name": "test_ts_specific_syntax_uses_the_real_typescript_grammar",
+          "kind": "function",
+          "start_line": 273,
+          "end_line": 288,
+          "first_body_line": 274,
+          "last_body_line": 288,
+          "is_test": true,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "tests/test_graph.py::test_ts_specific_syntax_uses_the_real_typescript_grammar"
+        },
+        {
+          "name": "test_tsx_uses_its_own_grammar_not_plain_typescript_or_javascript",
+          "qualified_name": "test_tsx_uses_its_own_grammar_not_plain_typescript_or_javascript",
+          "kind": "function",
+          "start_line": 291,
+          "end_line": 311,
+          "first_body_line": 292,
+          "last_body_line": 311,
+          "is_test": true,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "tests/test_graph.py::test_tsx_uses_its_own_grammar_not_plain_typescript_or_javascript"
+        },
+        {
+          "name": "test_js_import_module_is_the_specifier_not_the_whole_statement",
+          "qualified_name": "test_js_import_module_is_the_specifier_not_the_whole_statement",
+          "kind": "function",
+          "start_line": 314,
+          "end_line": 323,
+          "first_body_line": 315,
+          "last_body_line": 323,
+          "is_test": true,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "tests/test_graph.py::test_js_import_module_is_the_specifier_not_the_whole_statement"
+        },
+        {
+          "name": "test_js_import_symbols_cover_named_type_default_and_namespace",
+          "qualified_name": "test_js_import_symbols_cover_named_type_default_and_namespace",
+          "kind": "function",
+          "start_line": 326,
+          "end_line": 341,
+          "first_body_line": 327,
+          "last_body_line": 341,
+          "is_test": true,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "tests/test_graph.py::test_js_import_symbols_cover_named_type_default_and_namespace"
+        },
+        {
+          "name": "test_js_edges_resolve_relative_imports_with_and_without_extension",
+          "qualified_name": "test_js_edges_resolve_relative_imports_with_and_without_extension",
+          "kind": "function",
+          "start_line": 344,
+          "end_line": 369,
+          "first_body_line": 345,
+          "last_body_line": 369,
+          "is_test": true,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "tests/test_graph.py::test_js_edges_resolve_relative_imports_with_and_without_extension"
+        },
+        {
+          "name": "test_python_edges_resolve_absolute_relative_and_from_submodule",
+          "qualified_name": "test_python_edges_resolve_absolute_relative_and_from_submodule",
+          "kind": "function",
+          "start_line": 372,
+          "end_line": 390,
+          "first_body_line": 373,
+          "last_body_line": 390,
+          "is_test": true,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "tests/test_graph.py::test_python_edges_resolve_absolute_relative_and_from_submodule"
+        },
+        {
+          "name": "test_scan_repo_end_to_end",
+          "qualified_name": "test_scan_repo_end_to_end",
+          "kind": "function",
+          "start_line": 393,
+          "end_line": 411,
+          "first_body_line": 394,
+          "last_body_line": 411,
+          "is_test": true,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "tests/test_graph.py::test_scan_repo_end_to_end"
+        },
+        {
+          "name": "test_fleetignore_defaults_cover_python_js_ts_go",
+          "qualified_name": "test_fleetignore_defaults_cover_python_js_ts_go",
+          "kind": "function",
+          "start_line": 414,
+          "end_line": 430,
+          "first_body_line": 415,
+          "last_body_line": 430,
+          "is_test": true,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "tests/test_graph.py::test_fleetignore_defaults_cover_python_js_ts_go"
+        },
+        {
+          "name": "test_fleetignore_file_adds_project_specific_excludes",
+          "qualified_name": "test_fleetignore_file_adds_project_specific_excludes",
+          "kind": "function",
+          "start_line": 433,
+          "end_line": 441,
+          "first_body_line": 434,
+          "last_body_line": 441,
+          "is_test": true,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "tests/test_graph.py::test_fleetignore_file_adds_project_specific_excludes"
+        }
+      ]
+    },
+    {
+      "path": "tests/test_languages.py",
+      "language": "python",
+      "parser": "ast",
+      "has_syntax_error": false,
+      "imports": [
+        {
+          "raw": "from __future__ import annotations",
+          "module": "__future__",
+          "symbols": [
+            "annotations"
+          ],
+          "line": 8
+        },
+        {
+          "raw": "from pathlib import Path",
+          "module": "pathlib",
+          "symbols": [
+            "Path"
+          ],
+          "line": 10
+        },
+        {
+          "raw": "import pytest",
+          "module": "pytest",
+          "symbols": [],
+          "line": 12
+        },
+        {
+          "raw": "from fleet.graph import CONTAIN, INHERIT, parse_source",
+          "module": "fleet.graph",
+          "symbols": [
+            "CONTAIN",
+            "INHERIT",
+            "parse_source"
+          ],
+          "line": 14
+        },
+        {
+          "raw": "from fleet.graph.engine import TREE_SITTER_AVAILABLE, dropped_patterns",
+          "module": "fleet.graph.engine",
+          "symbols": [
+            "TREE_SITTER_AVAILABLE",
+            "dropped_patterns"
+          ],
+          "line": 15
+        },
+        {
+          "raw": "from fleet.graph.resolve import contain_edges, inherit_edges, resolve_edges",
+          "module": "fleet.graph.resolve",
+          "symbols": [
+            "contain_edges",
+            "inherit_edges",
+            "resolve_edges"
+          ],
+          "line": 16
+        },
+        {
+          "raw": "from fleet.graph.spec import all_specs, spec_for, supported_languages",
+          "module": "fleet.graph.spec",
+          "symbols": [
+            "all_specs",
+            "spec_for",
+            "supported_languages"
+          ],
+          "line": 17
+        },
+        {
+          "raw": "from fleet.graph import scan_repo",
+          "module": "fleet.graph",
+          "symbols": [
+            "scan_repo"
+          ],
+          "line": 354
+        }
+      ],
+      "symbols": [
+        {
+          "name": "test_every_registered_language_ships_the_query_it_names",
+          "qualified_name": "test_every_registered_language_ships_the_query_it_names",
+          "kind": "function",
+          "start_line": 27,
+          "end_line": 32,
+          "first_body_line": 28,
+          "last_body_line": 32,
+          "is_test": true,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "tests/test_languages.py::test_every_registered_language_ships_the_query_it_names"
+        },
+        {
+          "name": "test_only_expected_dialect_patterns_are_dropped",
+          "qualified_name": "test_only_expected_dialect_patterns_are_dropped",
+          "kind": "function",
+          "start_line": 35,
+          "end_line": 53,
+          "first_body_line": 36,
+          "last_body_line": 53,
+          "is_test": true,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "tests/test_languages.py::test_only_expected_dialect_patterns_are_dropped"
+        },
+        {
+          "name": "test_no_query_uses_an_optional_field_pattern",
+          "qualified_name": "test_no_query_uses_an_optional_field_pattern",
+          "kind": "function",
+          "start_line": 56,
+          "end_line": 79,
+          "first_body_line": 57,
+          "last_body_line": 79,
+          "is_test": true,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "tests/test_languages.py::test_no_query_uses_an_optional_field_pattern"
+        },
+        {
+          "name": "test_rust_trait_impl_capture_survives_field_order",
+          "qualified_name": "test_rust_trait_impl_capture_survives_field_order",
+          "kind": "function",
+          "start_line": 82,
+          "end_line": 94,
+          "first_body_line": 83,
+          "last_body_line": 94,
+          "is_test": true,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "tests/test_languages.py::test_rust_trait_impl_capture_survives_field_order"
+        },
+        {
+          "name": "test_java_works_without_touching_the_engine",
+          "qualified_name": "test_java_works_without_touching_the_engine",
+          "kind": "function",
+          "start_line": 97,
+          "end_line": 123,
+          "first_body_line": 98,
+          "last_body_line": 123,
+          "is_test": true,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "tests/test_languages.py::test_java_works_without_touching_the_engine"
+        },
+        {
+          "name": "test_java_imports_resolve_through_the_shared_dotted_strategy",
+          "qualified_name": "test_java_imports_resolve_through_the_shared_dotted_strategy",
+          "kind": "function",
+          "start_line": 126,
+          "end_line": 137,
+          "first_body_line": 127,
+          "last_body_line": 137,
+          "is_test": true,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "tests/test_languages.py::test_java_imports_resolve_through_the_shared_dotted_strategy"
+        },
+        {
+          "name": "test_rust_imports_resolve_through_the_shared_dotted_strategy",
+          "qualified_name": "test_rust_imports_resolve_through_the_shared_dotted_strategy",
+          "kind": "function",
+          "start_line": 145,
+          "end_line": 161,
+          "first_body_line": 146,
+          "last_body_line": 161,
+          "is_test": true,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "tests/test_languages.py::test_rust_imports_resolve_through_the_shared_dotted_strategy"
+        },
+        {
+          "name": "test_a_crate_rooted_import_beats_the_bare_crate_root",
+          "qualified_name": "test_a_crate_rooted_import_beats_the_bare_crate_root",
+          "kind": "function",
+          "start_line": 164,
+          "end_line": 176,
+          "first_body_line": 165,
+          "last_body_line": 176,
+          "is_test": true,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "tests/test_languages.py::test_a_crate_rooted_import_beats_the_bare_crate_root"
+        },
+        {
+          "name": "test_a_nested_crate_root_is_found_and_scoped_to_its_own_crate",
+          "qualified_name": "test_a_nested_crate_root_is_found_and_scoped_to_its_own_crate",
+          "kind": "function",
+          "start_line": 179,
+          "end_line": 194,
+          "first_body_line": 180,
+          "last_body_line": 194,
+          "is_test": true,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "tests/test_languages.py::test_a_nested_crate_root_is_found_and_scoped_to_its_own_crate"
+        },
+        {
+          "name": "test_rust_super_and_self_relative_imports_resolve",
+          "qualified_name": "test_rust_super_and_self_relative_imports_resolve",
+          "kind": "function",
+          "start_line": 197,
+          "end_line": 203,
+          "first_body_line": 198,
+          "last_body_line": 203,
+          "is_test": true,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "tests/test_languages.py::test_rust_super_and_self_relative_imports_resolve"
+        },
+        {
+          "name": "test_go_type_declarations_are_captured_at_all",
+          "qualified_name": "test_go_type_declarations_are_captured_at_all",
+          "kind": "function",
+          "start_line": 206,
+          "end_line": 216,
+          "first_body_line": 207,
+          "last_body_line": 216,
+          "is_test": true,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "tests/test_languages.py::test_go_type_declarations_are_captured_at_all"
+        },
+        {
+          "name": "test_class_bases_do_not_leak_onto_its_methods",
+          "qualified_name": "test_class_bases_do_not_leak_onto_its_methods",
+          "kind": "function",
+          "start_line": 219,
+          "end_line": 229,
+          "first_body_line": 220,
+          "last_body_line": 229,
+          "is_test": true,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "tests/test_languages.py::test_class_bases_do_not_leak_onto_its_methods"
+        },
+        {
+          "name": "test_rust_impl_still_hands_its_trait_to_the_methods_inside_it",
+          "qualified_name": "test_rust_impl_still_hands_its_trait_to_the_methods_inside_it",
+          "kind": "function",
+          "start_line": 232,
+          "end_line": 241,
+          "first_body_line": 233,
+          "last_body_line": 241,
+          "is_test": true,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "tests/test_languages.py::test_rust_impl_still_hands_its_trait_to_the_methods_inside_it"
+        },
+        {
+          "name": "test_js_iterator_named_functions_are_not_reported_as_tests",
+          "qualified_name": "test_js_iterator_named_functions_are_not_reported_as_tests",
+          "kind": "function",
+          "start_line": 244,
+          "end_line": 252,
+          "first_body_line": 245,
+          "last_body_line": 252,
+          "is_test": true,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "tests/test_languages.py::test_js_iterator_named_functions_are_not_reported_as_tests"
+        },
+        {
+          "name": "test_two_impls_of_the_same_trait_method_stay_two_nodes",
+          "qualified_name": "test_two_impls_of_the_same_trait_method_stay_two_nodes",
+          "kind": "function",
+          "start_line": 260,
+          "end_line": 276,
+          "first_body_line": 261,
+          "last_body_line": 276,
+          "is_test": true,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "tests/test_languages.py::test_two_impls_of_the_same_trait_method_stay_two_nodes"
+        },
+        {
+          "name": "test_contain_edges_run_file_to_class_to_method",
+          "qualified_name": "test_contain_edges_run_file_to_class_to_method",
+          "kind": "function",
+          "start_line": 279,
+          "end_line": 283,
+          "first_body_line": 280,
+          "last_body_line": 283,
+          "is_test": true,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "tests/test_languages.py::test_contain_edges_run_file_to_class_to_method"
+        },
+        {
+          "name": "test_inherit_edges_connect_a_base_name_to_its_definition",
+          "qualified_name": "test_inherit_edges_connect_a_base_name_to_its_definition",
+          "kind": "function",
+          "start_line": 286,
+          "end_line": 292,
+          "first_body_line": 287,
+          "last_body_line": 292,
+          "is_test": true,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "tests/test_languages.py::test_inherit_edges_connect_a_base_name_to_its_definition"
+        },
+        {
+          "name": "test_ambiguous_base_names_are_dropped_not_guessed",
+          "qualified_name": "test_ambiguous_base_names_are_dropped_not_guessed",
+          "kind": "function",
+          "start_line": 295,
+          "end_line": 304,
+          "first_body_line": 296,
+          "last_body_line": 304,
+          "is_test": true,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "tests/test_languages.py::test_ambiguous_base_names_are_dropped_not_guessed"
+        },
+        {
+          "name": "test_a_base_defined_in_the_same_file_wins_over_a_remote_one",
+          "qualified_name": "test_a_base_defined_in_the_same_file_wins_over_a_remote_one",
+          "kind": "function",
+          "start_line": 307,
+          "end_line": 314,
+          "first_body_line": 308,
+          "last_body_line": 314,
+          "is_test": true,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "tests/test_languages.py::test_a_base_defined_in_the_same_file_wins_over_a_remote_one"
+        },
+        {
+          "name": "test_unresolved_bases_are_not_an_error",
+          "qualified_name": "test_unresolved_bases_are_not_an_error",
+          "kind": "function",
+          "start_line": 317,
+          "end_line": 321,
+          "first_body_line": 318,
+          "last_body_line": 321,
+          "is_test": true,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "tests/test_languages.py::test_unresolved_bases_are_not_an_error"
+        },
+        {
+          "name": "test_calls_are_recorded_but_not_yet_turned_into_edges",
+          "qualified_name": "test_calls_are_recorded_but_not_yet_turned_into_edges",
+          "kind": "function",
+          "start_line": 324,
+          "end_line": 330,
+          "first_body_line": 325,
+          "last_body_line": 330,
+          "is_test": true,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "tests/test_languages.py::test_calls_are_recorded_but_not_yet_turned_into_edges"
+        },
+        {
+          "name": "test_a_typescript_file_resolves_an_import_onto_a_tsx_file",
+          "qualified_name": "test_a_typescript_file_resolves_an_import_onto_a_tsx_file",
+          "kind": "function",
+          "start_line": 338,
+          "end_line": 347,
+          "first_body_line": 339,
+          "last_body_line": 347,
+          "is_test": true,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "tests/test_languages.py::test_a_typescript_file_resolves_an_import_onto_a_tsx_file"
+        },
+        {
+          "name": "test_scan_reports_edges_broken_down_by_kind",
+          "qualified_name": "test_scan_reports_edges_broken_down_by_kind",
+          "kind": "function",
+          "start_line": 350,
+          "end_line": 360,
+          "first_body_line": 351,
+          "last_body_line": 360,
+          "is_test": true,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "tests/test_languages.py::test_scan_reports_edges_broken_down_by_kind"
+        }
+      ]
+    },
+    {
+      "path": "tests/test_pipeline_contract.py",
+      "language": "python",
+      "parser": "ast",
+      "has_syntax_error": false,
+      "imports": [
+        {
+          "raw": "from __future__ import annotations",
+          "module": "__future__",
+          "symbols": [
+            "annotations"
+          ],
+          "line": 8
+        },
+        {
+          "raw": "from fleet.pipelines import PIPELINES",
+          "module": "fleet.pipelines",
+          "symbols": [
+            "PIPELINES"
+          ],
+          "line": 10
+        }
+      ],
+      "symbols": [
+        {
+          "name": "test_every_pipeline_satisfies_the_protocol",
+          "qualified_name": "test_every_pipeline_satisfies_the_protocol",
+          "kind": "function",
+          "start_line": 13,
+          "end_line": 16,
+          "first_body_line": 14,
+          "last_body_line": 16,
+          "is_test": true,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "tests/test_pipeline_contract.py::test_every_pipeline_satisfies_the_protocol"
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "src/fleet/cli.py",
+      "target": "src/fleet/cli.py::app",
+      "kind": "contain",
+      "line": 27,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/fleet/cli.py",
+      "target": "src/fleet/cli.py::scan",
+      "kind": "contain",
+      "line": 49,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/fleet/emitter/harbor.py",
+      "target": "src/fleet/emitter/harbor.py::HarborTask",
+      "kind": "contain",
+      "line": 20,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/fleet/emitter/harbor.py",
+      "target": "src/fleet/emitter/harbor.py::write_task",
+      "kind": "contain",
+      "line": 28,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/fleet/graph/engine.py",
+      "target": "src/fleet/graph/engine.py::_text",
+      "kind": "contain",
+      "line": 59,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/fleet/graph/engine.py",
+      "target": "src/fleet/graph/engine.py::_unquote",
+      "kind": "contain",
+      "line": 63,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/fleet/graph/engine.py",
+      "target": "src/fleet/graph/engine.py::_body_node",
+      "kind": "contain",
+      "line": 71,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/fleet/graph/engine.py",
+      "target": "src/fleet/graph/engine.py::_has_keyword",
+      "kind": "contain",
+      "line": 83,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/fleet/graph/engine.py",
+      "target": "src/fleet/graph/engine.py::_is_generator",
+      "kind": "contain",
+      "line": 90,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/fleet/graph/engine.py",
+      "target": "src/fleet/graph/engine.py::_key",
+      "kind": "contain",
+      "line": 94,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/fleet/graph/engine.py",
+      "target": "src/fleet/graph/engine.py::_split_patterns",
+      "kind": "contain",
+      "line": 105,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/fleet/graph/engine.py",
+      "target": "src/fleet/graph/engine.py::_compile",
+      "kind": "contain",
+      "line": 146,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/fleet/graph/engine.py",
+      "target": "src/fleet/graph/engine.py::dropped_patterns",
+      "kind": "contain",
+      "line": 188,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/fleet/graph/engine.py",
+      "target": "src/fleet/graph/engine.py::_kind_of",
+      "kind": "contain",
+      "line": 195,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/fleet/graph/engine.py",
+      "target": "src/fleet/graph/engine.py::_Container",
+      "kind": "contain",
+      "line": 199,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/fleet/graph/engine.py::_Container",
+      "target": "src/fleet/graph/engine.py::_Container.__init__",
+      "kind": "contain",
+      "line": 204,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/fleet/graph/engine.py",
+      "target": "src/fleet/graph/engine.py::extract",
+      "kind": "contain",
+      "line": 210,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/fleet/graph/engine.py",
+      "target": "src/fleet/graph/engine.py::_anchor_of",
+      "kind": "contain",
+      "line": 292,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/fleet/graph/engine.py",
+      "target": "src/fleet/graph/engine.py::_merge_matches",
+      "kind": "contain",
+      "line": 302,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/fleet/graph/engine.py",
+      "target": "src/fleet/graph/engine.py::_definition_kind",
+      "kind": "contain",
+      "line": 346,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/fleet/graph/engine.py",
+      "target": "src/fleet/graph/engine.py::_container_of",
+      "kind": "contain",
+      "line": 354,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/fleet/graph/engine.py",
+      "target": "src/fleet/graph/engine.py::_enclosing",
+      "kind": "contain",
+      "line": 368,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/fleet/graph/engine.py",
+      "target": "src/fleet/graph/engine.py::_enclosing_name",
+      "kind": "contain",
+      "line": 386,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/fleet/graph/engine.py",
+      "target": "src/fleet/graph/engine.py::_symbol_of",
+      "kind": "contain",
+      "line": 391,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/fleet/graph/engine.py",
+      "target": "src/fleet/graph/engine.py::_annotations_of",
+      "kind": "contain",
+      "line": 474,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/fleet/graph/engine.py",
+      "target": "src/fleet/graph/engine.py::_import_of",
+      "kind": "contain",
+      "line": 497,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/fleet/graph/ignore.py",
+      "target": "src/fleet/graph/ignore.py::_Pattern",
+      "kind": "contain",
+      "line": 78,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/fleet/graph/ignore.py",
+      "target": "src/fleet/graph/ignore.py::_compile",
+      "kind": "contain",
+      "line": 84,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/fleet/graph/ignore.py",
+      "target": "src/fleet/graph/ignore.py::IgnoreRules",
+      "kind": "contain",
+      "line": 95,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/fleet/graph/ignore.py::IgnoreRules",
+      "target": "src/fleet/graph/ignore.py::IgnoreRules.matches",
+      "kind": "contain",
+      "line": 98,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/fleet/graph/ignore.py",
+      "target": "src/fleet/graph/ignore.py::load_ignore_rules",
+      "kind": "contain",
+      "line": 110,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/fleet/graph/models.py",
+      "target": "src/fleet/graph/models.py::ExtractedImport",
+      "kind": "contain",
+      "line": 18,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/fleet/graph/models.py",
+      "target": "src/fleet/graph/models.py::ExtractedSymbol",
+      "kind": "contain",
+      "line": 26,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/fleet/graph/models.py::ExtractedSymbol",
+      "target": "src/fleet/graph/models.py::ExtractedSymbol.id",
+      "kind": "contain",
+      "line": 65,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/fleet/graph/models.py::ExtractedSymbol",
+      "target": "src/fleet/graph/models.py::ExtractedSymbol.to_dict",
+      "kind": "contain",
+      "line": 69,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/fleet/graph/models.py",
+      "target": "src/fleet/graph/models.py::ExtractedCall",
+      "kind": "contain",
+      "line": 90,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/fleet/graph/models.py",
+      "target": "src/fleet/graph/models.py::ParsedFile",
+      "kind": "contain",
+      "line": 106,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/fleet/graph/models.py::ParsedFile",
+      "target": "src/fleet/graph/models.py::ParsedFile.tests",
+      "kind": "contain",
+      "line": 124,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/fleet/graph/models.py::ParsedFile",
+      "target": "src/fleet/graph/models.py::ParsedFile.to_dict",
+      "kind": "contain",
+      "line": 127,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/fleet/graph/models.py",
+      "target": "src/fleet/graph/models.py::Edge",
+      "kind": "contain",
+      "line": 150,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/fleet/graph/models.py::Edge",
+      "target": "src/fleet/graph/models.py::Edge.to_dict",
+      "kind": "contain",
+      "line": 161,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/fleet/graph/parser.py",
+      "target": "src/fleet/graph/parser.py::parse_source",
+      "kind": "contain",
+      "line": 25,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/fleet/graph/parser.py",
+      "target": "src/fleet/graph/parser.py::_disambiguate_ids",
+      "kind": "contain",
+      "line": 49,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/fleet/graph/pyast.py",
+      "target": "src/fleet/graph/pyast.py::extract",
+      "kind": "contain",
+      "line": 20,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/fleet/graph/pyast.py",
+      "target": "src/fleet/graph/pyast.py::_decorators",
+      "kind": "contain",
+      "line": 69,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/fleet/graph/pyast.py",
+      "target": "src/fleet/graph/pyast.py::_function",
+      "kind": "contain",
+      "line": 73,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/fleet/graph/pyast.py",
+      "target": "src/fleet/graph/pyast.py::_class",
+      "kind": "contain",
+      "line": 95,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/fleet/graph/pyast.py",
+      "target": "src/fleet/graph/pyast.py::_calls",
+      "kind": "contain",
+      "line": 116,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/fleet/graph/resolve.py",
+      "target": "src/fleet/graph/resolve.py::_split_source_root",
+      "kind": "contain",
+      "line": 39,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/fleet/graph/resolve.py",
+      "target": "src/fleet/graph/resolve.py::_module_parts",
+      "kind": "contain",
+      "line": 69,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/fleet/graph/resolve.py",
+      "target": "src/fleet/graph/resolve.py::_dotted_name",
+      "kind": "contain",
+      "line": 84,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/fleet/graph/resolve.py",
+      "target": "src/fleet/graph/resolve.py::_resolve_markers",
+      "kind": "contain",
+      "line": 97,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/fleet/graph/resolve.py",
+      "target": "src/fleet/graph/resolve.py::_relative_dotted",
+      "kind": "contain",
+      "line": 123,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/fleet/graph/resolve.py",
+      "target": "src/fleet/graph/resolve.py::resolve_dotted",
+      "kind": "contain",
+      "line": 141,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/fleet/graph/resolve.py",
+      "target": "src/fleet/graph/resolve.py::resolve_relative",
+      "kind": "contain",
+      "line": 208,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/fleet/graph/resolve.py",
+      "target": "src/fleet/graph/resolve.py::contain_edges",
+      "kind": "contain",
+      "line": 262,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/fleet/graph/resolve.py",
+      "target": "src/fleet/graph/resolve.py::inherit_edges",
+      "kind": "contain",
+      "line": 285,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/fleet/graph/resolve.py",
+      "target": "src/fleet/graph/resolve.py::resolve_edges",
+      "kind": "contain",
+      "line": 325,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/fleet/graph/scan.py",
+      "target": "src/fleet/graph/scan.py::iter_source_files",
+      "kind": "contain",
+      "line": 21,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/fleet/graph/scan.py",
+      "target": "src/fleet/graph/scan.py::RepoGraph",
+      "kind": "contain",
+      "line": 34,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/fleet/graph/scan.py::RepoGraph",
+      "target": "src/fleet/graph/scan.py::RepoGraph.statistics",
+      "kind": "contain",
+      "line": 39,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/fleet/graph/scan.py::RepoGraph",
+      "target": "src/fleet/graph/scan.py::RepoGraph.to_dict",
+      "kind": "contain",
+      "line": 74,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/fleet/graph/scan.py",
+      "target": "src/fleet/graph/scan.py::scan_repo",
+      "kind": "contain",
+      "line": 84,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/fleet/graph/scan.py",
+      "target": "src/fleet/graph/scan.py::write_graph",
+      "kind": "contain",
+      "line": 108,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/fleet/graph/spec.py",
+      "target": "src/fleet/graph/spec.py::TestRules",
+      "kind": "contain",
+      "line": 25,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/fleet/graph/spec.py::TestRules",
+      "target": "src/fleet/graph/spec.py::TestRules.matches",
+      "kind": "contain",
+      "line": 39,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/fleet/graph/spec.py",
+      "target": "src/fleet/graph/spec.py::LanguageSpec",
+      "kind": "contain",
+      "line": 46,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/fleet/graph/spec.py::LanguageSpec",
+      "target": "src/fleet/graph/spec.py::LanguageSpec.__post_init__",
+      "kind": "contain",
+      "line": 101,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/fleet/graph/spec.py::LanguageSpec",
+      "target": "src/fleet/graph/spec.py::LanguageSpec.query_source",
+      "kind": "contain",
+      "line": 110,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/fleet/graph/spec.py",
+      "target": "src/fleet/graph/spec.py::register",
+      "kind": "contain",
+      "line": 120,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/fleet/graph/spec.py",
+      "target": "src/fleet/graph/spec.py::detect_language",
+      "kind": "contain",
+      "line": 127,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/fleet/graph/spec.py",
+      "target": "src/fleet/graph/spec.py::spec_for",
+      "kind": "contain",
+      "line": 133,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/fleet/graph/spec.py",
+      "target": "src/fleet/graph/spec.py::specs_in_family",
+      "kind": "contain",
+      "line": 137,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/fleet/graph/spec.py",
+      "target": "src/fleet/graph/spec.py::supported_extensions",
+      "kind": "contain",
+      "line": 141,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/fleet/graph/spec.py",
+      "target": "src/fleet/graph/spec.py::supported_languages",
+      "kind": "contain",
+      "line": 145,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/fleet/graph/spec.py",
+      "target": "src/fleet/graph/spec.py::all_specs",
+      "kind": "contain",
+      "line": 149,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/fleet/pipelines/base.py",
+      "target": "src/fleet/pipelines/base.py::PipelineResult",
+      "kind": "contain",
+      "line": 18,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/fleet/pipelines/base.py",
+      "target": "src/fleet/pipelines/base.py::Pipeline",
+      "kind": "contain",
+      "line": 27,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/fleet/pipelines/base.py::Pipeline",
+      "target": "src/fleet/pipelines/base.py::Pipeline.__init__",
+      "kind": "contain",
+      "line": 38,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/fleet/pipelines/base.py::Pipeline",
+      "target": "src/fleet/pipelines/base.py::Pipeline.run",
+      "kind": "contain",
+      "line": 40,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "tests/test_graph.py",
+      "target": "tests/test_graph.py::test_detect_language",
+      "kind": "contain",
+      "line": 11,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "tests/test_graph.py",
+      "target": "tests/test_graph.py::test_python_symbols_and_imports",
+      "kind": "contain",
+      "line": 19,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "tests/test_graph.py",
+      "target": "tests/test_graph.py::test_python_class_bases_are_captured",
+      "kind": "contain",
+      "line": 51,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "tests/test_graph.py",
+      "target": "tests/test_graph.py::test_python_syntax_error_is_reported_not_swallowed",
+      "kind": "contain",
+      "line": 67,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "tests/test_graph.py",
+      "target": "tests/test_graph.py::test_unknown_extension_is_unparsed_not_guessed",
+      "kind": "contain",
+      "line": 73,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "tests/test_graph.py",
+      "target": "tests/test_graph.py::test_go_symbols_via_tree_sitter",
+      "kind": "contain",
+      "line": 79,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "tests/test_graph.py",
+      "target": "tests/test_graph.py::test_go_method_receiver_and_grouped_imports",
+      "kind": "contain",
+      "line": 107,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "tests/test_graph.py",
+      "target": "tests/test_graph.py::test_rust_impl_and_trait_impl_qualify_methods_by_self_type",
+      "kind": "contain",
+      "line": 146,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "tests/test_graph.py",
+      "target": "tests/test_graph.py::test_js_arrow_and_function_expression_consts_are_captured",
+      "kind": "contain",
+      "line": 194,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "tests/test_graph.py",
+      "target": "tests/test_graph.py::test_js_class_method_qualified_name_and_async_flag",
+      "kind": "contain",
+      "line": 220,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "tests/test_graph.py",
+      "target": "tests/test_graph.py::test_js_class_extends_is_captured",
+      "kind": "contain",
+      "line": 252,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "tests/test_graph.py",
+      "target": "tests/test_graph.py::test_ts_specific_syntax_uses_the_real_typescript_grammar",
+      "kind": "contain",
+      "line": 273,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "tests/test_graph.py",
+      "target": "tests/test_graph.py::test_tsx_uses_its_own_grammar_not_plain_typescript_or_javascript",
+      "kind": "contain",
+      "line": 291,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "tests/test_graph.py",
+      "target": "tests/test_graph.py::test_js_import_module_is_the_specifier_not_the_whole_statement",
+      "kind": "contain",
+      "line": 314,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "tests/test_graph.py",
+      "target": "tests/test_graph.py::test_js_import_symbols_cover_named_type_default_and_namespace",
+      "kind": "contain",
+      "line": 326,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "tests/test_graph.py",
+      "target": "tests/test_graph.py::test_js_edges_resolve_relative_imports_with_and_without_extension",
+      "kind": "contain",
+      "line": 344,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "tests/test_graph.py",
+      "target": "tests/test_graph.py::test_python_edges_resolve_absolute_relative_and_from_submodule",
+      "kind": "contain",
+      "line": 372,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "tests/test_graph.py",
+      "target": "tests/test_graph.py::test_scan_repo_end_to_end",
+      "kind": "contain",
+      "line": 393,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "tests/test_graph.py",
+      "target": "tests/test_graph.py::test_fleetignore_defaults_cover_python_js_ts_go",
+      "kind": "contain",
+      "line": 414,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "tests/test_graph.py",
+      "target": "tests/test_graph.py::test_fleetignore_file_adds_project_specific_excludes",
+      "kind": "contain",
+      "line": 433,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "tests/test_languages.py",
+      "target": "tests/test_languages.py::test_every_registered_language_ships_the_query_it_names",
+      "kind": "contain",
+      "line": 27,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "tests/test_languages.py",
+      "target": "tests/test_languages.py::test_only_expected_dialect_patterns_are_dropped",
+      "kind": "contain",
+      "line": 35,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "tests/test_languages.py",
+      "target": "tests/test_languages.py::test_no_query_uses_an_optional_field_pattern",
+      "kind": "contain",
+      "line": 56,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "tests/test_languages.py",
+      "target": "tests/test_languages.py::test_rust_trait_impl_capture_survives_field_order",
+      "kind": "contain",
+      "line": 82,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "tests/test_languages.py",
+      "target": "tests/test_languages.py::test_java_works_without_touching_the_engine",
+      "kind": "contain",
+      "line": 97,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "tests/test_languages.py",
+      "target": "tests/test_languages.py::test_java_imports_resolve_through_the_shared_dotted_strategy",
+      "kind": "contain",
+      "line": 126,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "tests/test_languages.py",
+      "target": "tests/test_languages.py::test_rust_imports_resolve_through_the_shared_dotted_strategy",
+      "kind": "contain",
+      "line": 145,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "tests/test_languages.py",
+      "target": "tests/test_languages.py::test_a_crate_rooted_import_beats_the_bare_crate_root",
+      "kind": "contain",
+      "line": 164,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "tests/test_languages.py",
+      "target": "tests/test_languages.py::test_a_nested_crate_root_is_found_and_scoped_to_its_own_crate",
+      "kind": "contain",
+      "line": 179,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "tests/test_languages.py",
+      "target": "tests/test_languages.py::test_rust_super_and_self_relative_imports_resolve",
+      "kind": "contain",
+      "line": 197,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "tests/test_languages.py",
+      "target": "tests/test_languages.py::test_go_type_declarations_are_captured_at_all",
+      "kind": "contain",
+      "line": 206,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "tests/test_languages.py",
+      "target": "tests/test_languages.py::test_class_bases_do_not_leak_onto_its_methods",
+      "kind": "contain",
+      "line": 219,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "tests/test_languages.py",
+      "target": "tests/test_languages.py::test_rust_impl_still_hands_its_trait_to_the_methods_inside_it",
+      "kind": "contain",
+      "line": 232,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "tests/test_languages.py",
+      "target": "tests/test_languages.py::test_js_iterator_named_functions_are_not_reported_as_tests",
+      "kind": "contain",
+      "line": 244,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "tests/test_languages.py",
+      "target": "tests/test_languages.py::test_two_impls_of_the_same_trait_method_stay_two_nodes",
+      "kind": "contain",
+      "line": 260,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "tests/test_languages.py",
+      "target": "tests/test_languages.py::test_contain_edges_run_file_to_class_to_method",
+      "kind": "contain",
+      "line": 279,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "tests/test_languages.py",
+      "target": "tests/test_languages.py::test_inherit_edges_connect_a_base_name_to_its_definition",
+      "kind": "contain",
+      "line": 286,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "tests/test_languages.py",
+      "target": "tests/test_languages.py::test_ambiguous_base_names_are_dropped_not_guessed",
+      "kind": "contain",
+      "line": 295,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "tests/test_languages.py",
+      "target": "tests/test_languages.py::test_a_base_defined_in_the_same_file_wins_over_a_remote_one",
+      "kind": "contain",
+      "line": 307,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "tests/test_languages.py",
+      "target": "tests/test_languages.py::test_unresolved_bases_are_not_an_error",
+      "kind": "contain",
+      "line": 317,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "tests/test_languages.py",
+      "target": "tests/test_languages.py::test_calls_are_recorded_but_not_yet_turned_into_edges",
+      "kind": "contain",
+      "line": 324,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "tests/test_languages.py",
+      "target": "tests/test_languages.py::test_a_typescript_file_resolves_an_import_onto_a_tsx_file",
+      "kind": "contain",
+      "line": 338,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "tests/test_languages.py",
+      "target": "tests/test_languages.py::test_scan_reports_edges_broken_down_by_kind",
+      "kind": "contain",
+      "line": 350,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "tests/test_pipeline_contract.py",
+      "target": "tests/test_pipeline_contract.py::test_every_pipeline_satisfies_the_protocol",
+      "kind": "contain",
+      "line": 13,
+      "raw": "",
+      "symbols": []
+    }
+  ]
+}

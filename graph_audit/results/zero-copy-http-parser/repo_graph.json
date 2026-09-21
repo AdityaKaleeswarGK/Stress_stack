@@ -1,0 +1,586 @@
+{
+  "schema_version": "0.2.0",
+  "root": "/Users/adityagk/Desktop/projects/zero-copy-http-parser",
+  "statistics": {
+    "files_total": 5,
+    "files_by_language": {
+      "rust": 5
+    },
+    "symbols_total": 16,
+    "tests_total": 5,
+    "calls_total": 42,
+    "syntax_errors": 0,
+    "unparsed_known_language": 0,
+    "edges_total": 21,
+    "edges_by_kind": {
+      "contain": 16,
+      "import": 5
+    }
+  },
+  "files": [
+    {
+      "path": "src/error.rs",
+      "language": "rust",
+      "parser": "tree_sitter",
+      "has_syntax_error": false,
+      "imports": [
+        {
+          "raw": "use std::fmt;",
+          "module": "std",
+          "symbols": [
+            "fmt"
+          ],
+          "line": 1
+        }
+      ],
+      "symbols": [
+        {
+          "name": "ParseError",
+          "qualified_name": "ParseError",
+          "kind": "enum",
+          "start_line": 4,
+          "end_line": 10,
+          "first_body_line": 4,
+          "last_body_line": 10,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 80,
+          "body_end_byte": 176,
+          "bases": [],
+          "parent": "",
+          "id": "src/error.rs::ParseError"
+        },
+        {
+          "name": "fmt",
+          "qualified_name": "ParseError.fmt",
+          "kind": "method",
+          "start_line": 13,
+          "end_line": 21,
+          "first_body_line": 13,
+          "last_body_line": 21,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 274,
+          "body_end_byte": 707,
+          "bases": [],
+          "parent": "ParseError",
+          "id": "src/error.rs::ParseError.fmt"
+        }
+      ]
+    },
+    {
+      "path": "src/lib.rs",
+      "language": "rust",
+      "parser": "tree_sitter",
+      "has_syntax_error": false,
+      "imports": [
+        {
+          "raw": "pub use crate::error::ParseError;",
+          "module": "crate::error",
+          "symbols": [
+            "ParseError"
+          ],
+          "line": 5
+        },
+        {
+          "raw": "pub use crate::parser::HttpParser;",
+          "module": "crate::parser",
+          "symbols": [
+            "HttpParser"
+          ],
+          "line": 6
+        },
+        {
+          "raw": "pub use crate::types::{Request, Method, Header};",
+          "module": "crate::types",
+          "symbols": [
+            "Request",
+            "Method",
+            "Header"
+          ],
+          "line": 7
+        }
+      ],
+      "symbols": []
+    },
+    {
+      "path": "src/parser.rs",
+      "language": "rust",
+      "parser": "tree_sitter",
+      "has_syntax_error": false,
+      "imports": [
+        {
+          "raw": "use crate::error::ParseError;",
+          "module": "crate::error",
+          "symbols": [
+            "ParseError"
+          ],
+          "line": 1
+        },
+        {
+          "raw": "use crate::types::{Header, Method, Request};",
+          "module": "crate::types",
+          "symbols": [
+            "Header",
+            "Method",
+            "Request"
+          ],
+          "line": 2
+        }
+      ],
+      "symbols": [
+        {
+          "name": "State",
+          "qualified_name": "State",
+          "kind": "enum",
+          "start_line": 5,
+          "end_line": 17,
+          "first_body_line": 5,
+          "last_body_line": 17,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 108,
+          "body_end_byte": 344,
+          "bases": [],
+          "parent": "",
+          "id": "src/parser.rs::State"
+        },
+        {
+          "name": "RequestMetadata",
+          "qualified_name": "RequestMetadata",
+          "kind": "struct",
+          "start_line": 20,
+          "end_line": 25,
+          "first_body_line": 20,
+          "last_body_line": 25,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 390,
+          "body_end_byte": 486,
+          "bases": [],
+          "parent": "",
+          "id": "src/parser.rs::RequestMetadata"
+        },
+        {
+          "name": "HttpParser",
+          "qualified_name": "HttpParser",
+          "kind": "struct",
+          "start_line": 27,
+          "end_line": 29,
+          "first_body_line": 27,
+          "last_body_line": 29,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 514,
+          "body_end_byte": 539,
+          "bases": [],
+          "parent": "",
+          "id": "src/parser.rs::HttpParser"
+        },
+        {
+          "name": "new",
+          "qualified_name": "HttpParser.new",
+          "kind": "method",
+          "start_line": 32,
+          "end_line": 36,
+          "first_body_line": 32,
+          "last_body_line": 36,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 592,
+          "body_end_byte": 663,
+          "bases": [],
+          "parent": "HttpParser",
+          "id": "src/parser.rs::HttpParser.new"
+        },
+        {
+          "name": "feed",
+          "qualified_name": "HttpParser.feed",
+          "kind": "method",
+          "start_line": 38,
+          "end_line": 81,
+          "first_body_line": 38,
+          "last_body_line": 81,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 752,
+          "body_end_byte": 2262,
+          "bases": [],
+          "parent": "HttpParser",
+          "id": "src/parser.rs::HttpParser.feed"
+        }
+      ]
+    },
+    {
+      "path": "src/types.rs",
+      "language": "rust",
+      "parser": "tree_sitter",
+      "has_syntax_error": false,
+      "imports": [],
+      "symbols": [
+        {
+          "name": "Method",
+          "qualified_name": "Method",
+          "kind": "enum",
+          "start_line": 2,
+          "end_line": 7,
+          "first_body_line": 2,
+          "last_body_line": 7,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 48,
+          "body_end_byte": 91,
+          "bases": [],
+          "parent": "",
+          "id": "src/types.rs::Method"
+        },
+        {
+          "name": "from_bytes",
+          "qualified_name": "Method.from_bytes",
+          "kind": "method",
+          "start_line": 10,
+          "end_line": 18,
+          "first_body_line": 10,
+          "last_body_line": 18,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 185,
+          "body_end_byte": 451,
+          "bases": [],
+          "parent": "Method",
+          "id": "src/types.rs::Method.from_bytes"
+        },
+        {
+          "name": "Header",
+          "qualified_name": "Header",
+          "kind": "struct",
+          "start_line": 22,
+          "end_line": 25,
+          "first_body_line": 22,
+          "last_body_line": 25,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 494,
+          "body_end_byte": 545,
+          "bases": [],
+          "parent": "",
+          "id": "src/types.rs::Header"
+        },
+        {
+          "name": "Request",
+          "qualified_name": "Request",
+          "kind": "struct",
+          "start_line": 28,
+          "end_line": 34,
+          "first_body_line": 28,
+          "last_body_line": 34,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 587,
+          "body_end_byte": 723,
+          "bases": [],
+          "parent": "",
+          "id": "src/types.rs::Request"
+        }
+      ]
+    },
+    {
+      "path": "tests/integration_tests.rs",
+      "language": "rust",
+      "parser": "tree_sitter",
+      "has_syntax_error": false,
+      "imports": [
+        {
+          "raw": "use zero_copy_http_parser::{HttpParser};",
+          "module": "zero_copy_http_parser",
+          "symbols": [
+            "HttpParser"
+          ],
+          "line": 1
+        }
+      ],
+      "symbols": [
+        {
+          "name": "test_single_byte_streaming",
+          "qualified_name": "test_single_byte_streaming",
+          "kind": "function",
+          "start_line": 4,
+          "end_line": 12,
+          "first_body_line": 4,
+          "last_body_line": 12,
+          "is_test": true,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 82,
+          "body_end_byte": 299,
+          "bases": [],
+          "parent": "",
+          "id": "tests/integration_tests.rs::test_single_byte_streaming"
+        },
+        {
+          "name": "test_zero_allocation",
+          "qualified_name": "test_zero_allocation",
+          "kind": "function",
+          "start_line": 15,
+          "end_line": 21,
+          "first_body_line": 15,
+          "last_body_line": 21,
+          "is_test": true,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 335,
+          "body_end_byte": 484,
+          "bases": [],
+          "parent": "",
+          "id": "tests/integration_tests.rs::test_zero_allocation"
+        },
+        {
+          "name": "test_body_capture",
+          "qualified_name": "test_body_capture",
+          "kind": "function",
+          "start_line": 24,
+          "end_line": 30,
+          "first_body_line": 24,
+          "last_body_line": 30,
+          "is_test": true,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 517,
+          "body_end_byte": 695,
+          "bases": [],
+          "parent": "",
+          "id": "tests/integration_tests.rs::test_body_capture"
+        },
+        {
+          "name": "test_post_complete_failure",
+          "qualified_name": "test_post_complete_failure",
+          "kind": "function",
+          "start_line": 33,
+          "end_line": 36,
+          "first_body_line": 33,
+          "last_body_line": 36,
+          "is_test": true,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 737,
+          "body_end_byte": 832,
+          "bases": [],
+          "parent": "",
+          "id": "tests/integration_tests.rs::test_post_complete_failure"
+        },
+        {
+          "name": "test_invalid_header_format",
+          "qualified_name": "test_invalid_header_format",
+          "kind": "function",
+          "start_line": 39,
+          "end_line": 45,
+          "first_body_line": 39,
+          "last_body_line": 45,
+          "is_test": true,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 874,
+          "body_end_byte": 1040,
+          "bases": [],
+          "parent": "",
+          "id": "tests/integration_tests.rs::test_invalid_header_format"
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "src/lib.rs",
+      "target": "src/error.rs",
+      "kind": "import",
+      "line": 5,
+      "raw": "pub use crate::error::ParseError;",
+      "symbols": [
+        "ParseError"
+      ]
+    },
+    {
+      "source": "src/lib.rs",
+      "target": "src/parser.rs",
+      "kind": "import",
+      "line": 6,
+      "raw": "pub use crate::parser::HttpParser;",
+      "symbols": [
+        "HttpParser"
+      ]
+    },
+    {
+      "source": "src/lib.rs",
+      "target": "src/types.rs",
+      "kind": "import",
+      "line": 7,
+      "raw": "pub use crate::types::{Request, Method, Header};",
+      "symbols": [
+        "Request",
+        "Method",
+        "Header"
+      ]
+    },
+    {
+      "source": "src/parser.rs",
+      "target": "src/error.rs",
+      "kind": "import",
+      "line": 1,
+      "raw": "use crate::error::ParseError;",
+      "symbols": [
+        "ParseError"
+      ]
+    },
+    {
+      "source": "src/parser.rs",
+      "target": "src/types.rs",
+      "kind": "import",
+      "line": 2,
+      "raw": "use crate::types::{Header, Method, Request};",
+      "symbols": [
+        "Header",
+        "Method",
+        "Request"
+      ]
+    },
+    {
+      "source": "src/error.rs",
+      "target": "src/error.rs::ParseError",
+      "kind": "contain",
+      "line": 4,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/error.rs::ParseError",
+      "target": "src/error.rs::ParseError.fmt",
+      "kind": "contain",
+      "line": 13,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/parser.rs",
+      "target": "src/parser.rs::State",
+      "kind": "contain",
+      "line": 5,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/parser.rs",
+      "target": "src/parser.rs::RequestMetadata",
+      "kind": "contain",
+      "line": 20,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/parser.rs",
+      "target": "src/parser.rs::HttpParser",
+      "kind": "contain",
+      "line": 27,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/parser.rs::HttpParser",
+      "target": "src/parser.rs::HttpParser.new",
+      "kind": "contain",
+      "line": 32,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/parser.rs::HttpParser",
+      "target": "src/parser.rs::HttpParser.feed",
+      "kind": "contain",
+      "line": 38,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/types.rs",
+      "target": "src/types.rs::Method",
+      "kind": "contain",
+      "line": 2,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/types.rs::Method",
+      "target": "src/types.rs::Method.from_bytes",
+      "kind": "contain",
+      "line": 10,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/types.rs",
+      "target": "src/types.rs::Header",
+      "kind": "contain",
+      "line": 22,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "src/types.rs",
+      "target": "src/types.rs::Request",
+      "kind": "contain",
+      "line": 28,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "tests/integration_tests.rs",
+      "target": "tests/integration_tests.rs::test_single_byte_streaming",
+      "kind": "contain",
+      "line": 4,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "tests/integration_tests.rs",
+      "target": "tests/integration_tests.rs::test_zero_allocation",
+      "kind": "contain",
+      "line": 15,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "tests/integration_tests.rs",
+      "target": "tests/integration_tests.rs::test_body_capture",
+      "kind": "contain",
+      "line": 24,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "tests/integration_tests.rs",
+      "target": "tests/integration_tests.rs::test_post_complete_failure",
+      "kind": "contain",
+      "line": 33,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "tests/integration_tests.rs",
+      "target": "tests/integration_tests.rs::test_invalid_header_format",
+      "kind": "contain",
+      "line": 39,
+      "raw": "",
+      "symbols": []
+    }
+  ]
+}

@@ -1,0 +1,3518 @@
+{
+  "schema_version": "0.4.0",
+  "root": "/Users/adityagk/Desktop/projects/task_repo/fleet/tests/sample_repository",
+  "snapshot": {
+    "content_hashes": {
+      "python/pyproject.toml": "54ad0f3addc6150c0e36c37d7809e4a41eab132209ae7a5561783343977708ff",
+      "python/runtime_check.py": "1a08d11880e976d13440faa02897bc0b62ead15f06c919daebe86f7badb12e95",
+      "python/src/orchard/__init__.py": "661e5d01b7e6d0e135671f6b43eaffe2cd3d5c0eb1f262bee4059bf1f104ffeb",
+      "python/src/orchard/model.py": "64edd9323a874bad9d30733559c8a9b362da876e38cae3a8a388341b51e84be1",
+      "python/src/orchard/service.py": "9e9b451548e02aaed3666ee815aca73dca057dc345a93cf7ad0089862ca767ee",
+      "rust/Cargo.toml": "f6a9bc3cad8e401aeba89347a011d38c6892439cc60baa87f9ffebf715c7a67d",
+      "rust/src/lib.rs": "94457ccf85caa0c7dba3c2796d6051ce39ca71792ccc1f3b166bbe56ff35ced0",
+      "rust/src/model.rs": "66cfe5675ce9b751dd19cb95e92653a4901ce4e85567c107cbd329f28a8c452a",
+      "rust/src/service.rs": "64488dcc4a260df6de2c827be35c900c14df682919d3fab353b3b71ae228e966",
+      "rust/tests/integration.rs": "eaf0d77d67ad351f9b16463d54dd07222e5c9aed5cce8a881fb5dc41f335b2e2",
+      "typescript/package.json": "ebb1cb5e0a0408df6ce0d8aa145e344f934665665c905a6ab750af419405fee0",
+      "typescript/runtime_check.ts": "122e0c73c4b285fa33ab6c013720af375496e9be1d86d87000530da24cf4ca1a",
+      "typescript/src/index.ts": "d8cdc97f29124a84a9f765fed507f35b44ba1e3bcd5d514611a5814795bd6387",
+      "typescript/src/model.ts": "928795a7c80671dc6d4841995bb79fa9904b201813da3be732b60bec8638e495",
+      "typescript/src/service.ts": "9a5bce2ce2ead6dbb29ad8753a7f66ae974f5ebe4a854deff177be7719ab878a"
+    },
+    "languages": [
+      "javascript",
+      "python",
+      "rust",
+      "tsx",
+      "typescript"
+    ],
+    "versions": {
+      "tree-sitter": "0.26.0",
+      "tree-sitter-language-pack": "1.16.2",
+      "pathspec": "1.1.1"
+    },
+    "extractor_hash": "44ccfe7586b5f3eff43f966f46c823a6c1e2039679d38965961dfbd515fa3b6b",
+    "git_commit": null,
+    "id": "ad4082afe0aa0d08ec807537f0f6d34416cab2ed5ee1f8c96b0e7f4acf1e1673"
+  },
+  "diagnostics": [
+    {
+      "language": "typescript",
+      "reason": "query_pattern_dropped",
+      "pattern": "(class_declaration (class_heritage (identifier) @base)) @definition.class",
+      "message": "Impossible pattern at row 0, column 35"
+    }
+  ],
+  "statistics": {
+    "files_total": 12,
+    "files_by_language": {
+      "python": 4,
+      "rust": 4,
+      "typescript": 4
+    },
+    "symbols_total": 28,
+    "tests_total": 3,
+    "calls_total": 39,
+    "syntax_errors": 0,
+    "unparsed_known_language": 0,
+    "edges_total": 87,
+    "edges_by_kind": {
+      "contain": 28,
+      "import": 32,
+      "inherit": 1,
+      "invoke": 22,
+      "reference": 4
+    },
+    "import_bindings": 33,
+    "import_uses": 36,
+    "binding_status": {
+      "internal": 27,
+      "conditional": 0,
+      "external": 6,
+      "unresolved": 0,
+      "ambiguous": 0,
+      "unsupported": 0
+    }
+  },
+  "files": [
+    {
+      "path": "python/runtime_check.py",
+      "language": "python",
+      "parser": "ast",
+      "has_syntax_error": false,
+      "is_empty": false,
+      "source_hash": "1a08d11880e976d13440faa02897bc0b62ead15f06c919daebe86f7badb12e95",
+      "bound_names": [
+        "ExampleTests"
+      ],
+      "bindings": [
+        {
+          "id": "python/runtime_check.py@0:0",
+          "module": "unittest",
+          "name": "",
+          "local": "unittest",
+          "scope": "",
+          "line": 1,
+          "raw": "import unittest",
+          "kind": "module",
+          "reexport": true,
+          "conditional": false,
+          "uses": [
+            {
+              "owner": "ExampleTests",
+              "expression": "unittest.TestCase",
+              "kind": "base",
+              "source_text": "unittest.TestCase",
+              "line": 5,
+              "start_byte": 97,
+              "end_byte": 114,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "external",
+              "binding_target_file": null,
+              "binding_target_symbol": null
+            }
+          ],
+          "status": "external",
+          "reason": "stdlib_or_declared_dependency",
+          "target_file": null,
+          "target_symbol": null,
+          "bound_module": "unittest",
+          "module_scope": "",
+          "start_byte": 0
+        },
+        {
+          "id": "python/runtime_check.py@16:1",
+          "module": "orchard.service",
+          "name": "build",
+          "local": "build",
+          "scope": "",
+          "line": 2,
+          "raw": "from orchard.service import build, describe, nested, shadow",
+          "kind": "from",
+          "reexport": true,
+          "conditional": false,
+          "uses": [
+            {
+              "owner": "ExampleTests.test_imports_really_work",
+              "expression": "build",
+              "kind": "call",
+              "source_text": "build",
+              "line": 7,
+              "start_byte": 182,
+              "end_byte": 187,
+              "target_file": "python/src/orchard/service.py",
+              "target_symbol": "python/src/orchard/service.py::build",
+              "status": "internal",
+              "binding_target_file": "python/src/orchard/service.py",
+              "binding_target_symbol": "python/src/orchard/service.py::build"
+            }
+          ],
+          "status": "internal",
+          "reason": "module_and_binding_resolved",
+          "target_file": "python/src/orchard/service.py",
+          "target_symbol": "python/src/orchard/service.py::build",
+          "bound_module": "",
+          "module_scope": "",
+          "start_byte": 16
+        },
+        {
+          "id": "python/runtime_check.py@16:2",
+          "module": "orchard.service",
+          "name": "describe",
+          "local": "describe",
+          "scope": "",
+          "line": 2,
+          "raw": "from orchard.service import build, describe, nested, shadow",
+          "kind": "from",
+          "reexport": true,
+          "conditional": false,
+          "uses": [
+            {
+              "owner": "ExampleTests.test_imports_really_work",
+              "expression": "describe",
+              "kind": "call",
+              "source_text": "describe",
+              "line": 8,
+              "start_byte": 226,
+              "end_byte": 234,
+              "target_file": "python/src/orchard/service.py",
+              "target_symbol": "python/src/orchard/service.py::describe",
+              "status": "internal",
+              "binding_target_file": "python/src/orchard/service.py",
+              "binding_target_symbol": "python/src/orchard/service.py::describe"
+            }
+          ],
+          "status": "internal",
+          "reason": "module_and_binding_resolved",
+          "target_file": "python/src/orchard/service.py",
+          "target_symbol": "python/src/orchard/service.py::describe",
+          "bound_module": "",
+          "module_scope": "",
+          "start_byte": 16
+        },
+        {
+          "id": "python/runtime_check.py@16:3",
+          "module": "orchard.service",
+          "name": "nested",
+          "local": "nested",
+          "scope": "",
+          "line": 2,
+          "raw": "from orchard.service import build, describe, nested, shadow",
+          "kind": "from",
+          "reexport": true,
+          "conditional": false,
+          "uses": [
+            {
+              "owner": "ExampleTests.test_imports_really_work",
+              "expression": "nested",
+              "kind": "call",
+              "source_text": "nested",
+              "line": 9,
+              "start_byte": 280,
+              "end_byte": 286,
+              "target_file": "python/src/orchard/service.py",
+              "target_symbol": "python/src/orchard/service.py::nested",
+              "status": "internal",
+              "binding_target_file": "python/src/orchard/service.py",
+              "binding_target_symbol": "python/src/orchard/service.py::nested"
+            }
+          ],
+          "status": "internal",
+          "reason": "module_and_binding_resolved",
+          "target_file": "python/src/orchard/service.py",
+          "target_symbol": "python/src/orchard/service.py::nested",
+          "bound_module": "",
+          "module_scope": "",
+          "start_byte": 16
+        },
+        {
+          "id": "python/runtime_check.py@16:4",
+          "module": "orchard.service",
+          "name": "shadow",
+          "local": "shadow",
+          "scope": "",
+          "line": 2,
+          "raw": "from orchard.service import build, describe, nested, shadow",
+          "kind": "from",
+          "reexport": true,
+          "conditional": false,
+          "uses": [
+            {
+              "owner": "ExampleTests.test_imports_really_work",
+              "expression": "shadow",
+              "kind": "call",
+              "source_text": "shadow",
+              "line": 10,
+              "start_byte": 318,
+              "end_byte": 324,
+              "target_file": "python/src/orchard/service.py",
+              "target_symbol": "python/src/orchard/service.py::shadow",
+              "status": "internal",
+              "binding_target_file": "python/src/orchard/service.py",
+              "binding_target_symbol": "python/src/orchard/service.py::shadow"
+            }
+          ],
+          "status": "internal",
+          "reason": "module_and_binding_resolved",
+          "target_file": "python/src/orchard/service.py",
+          "target_symbol": "python/src/orchard/service.py::shadow",
+          "bound_module": "",
+          "module_scope": "",
+          "start_byte": 16
+        }
+      ],
+      "calls": [
+        {
+          "name": "assertEqual",
+          "line": 7,
+          "caller": "ExampleTests.test_imports_really_work",
+          "expression": "self.assertEqual"
+        },
+        {
+          "name": "build",
+          "line": 7,
+          "caller": "ExampleTests.test_imports_really_work",
+          "expression": "build"
+        },
+        {
+          "name": "assertEqual",
+          "line": 8,
+          "caller": "ExampleTests.test_imports_really_work",
+          "expression": "self.assertEqual"
+        },
+        {
+          "name": "describe",
+          "line": 8,
+          "caller": "ExampleTests.test_imports_really_work",
+          "expression": "describe"
+        },
+        {
+          "name": "assertEqual",
+          "line": 9,
+          "caller": "ExampleTests.test_imports_really_work",
+          "expression": "self.assertEqual"
+        },
+        {
+          "name": "nested",
+          "line": 9,
+          "caller": "ExampleTests.test_imports_really_work",
+          "expression": "nested"
+        },
+        {
+          "name": "assertEqual",
+          "line": 10,
+          "caller": "ExampleTests.test_imports_really_work",
+          "expression": "self.assertEqual"
+        },
+        {
+          "name": "shadow",
+          "line": 10,
+          "caller": "ExampleTests.test_imports_really_work",
+          "expression": "shadow"
+        }
+      ],
+      "diagnostics": [],
+      "modules": [],
+      "exports": [],
+      "imports": [
+        {
+          "raw": "import unittest",
+          "module": "unittest",
+          "symbols": [],
+          "line": 1
+        },
+        {
+          "raw": "from orchard.service import build, describe, nested, shadow",
+          "module": "orchard.service",
+          "symbols": [
+            "build",
+            "describe",
+            "nested",
+            "shadow"
+          ],
+          "line": 2
+        }
+      ],
+      "symbols": [
+        {
+          "name": "ExampleTests",
+          "qualified_name": "ExampleTests",
+          "kind": "class",
+          "start_line": 5,
+          "end_line": 10,
+          "first_body_line": 6,
+          "last_body_line": 10,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 121,
+          "body_end_byte": 345,
+          "bases": [
+            "unittest.TestCase"
+          ],
+          "parent": "",
+          "id": "python/runtime_check.py::ExampleTests",
+          "docstring": "",
+          "start_byte": 78,
+          "end_byte": 345,
+          "signature": "class ExampleTests"
+        },
+        {
+          "name": "test_imports_really_work",
+          "qualified_name": "ExampleTests.test_imports_really_work",
+          "kind": "method",
+          "start_line": 6,
+          "end_line": 10,
+          "first_body_line": 7,
+          "last_body_line": 10,
+          "is_test": true,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 165,
+          "body_end_byte": 345,
+          "bases": [],
+          "parent": "ExampleTests",
+          "id": "python/runtime_check.py::ExampleTests.test_imports_really_work",
+          "docstring": "",
+          "start_byte": 121,
+          "end_byte": 345,
+          "signature": "def test_imports_really_work(self)"
+        }
+      ]
+    },
+    {
+      "path": "python/src/orchard/__init__.py",
+      "language": "python",
+      "parser": "ast",
+      "has_syntax_error": false,
+      "is_empty": false,
+      "source_hash": "661e5d01b7e6d0e135671f6b43eaffe2cd3d5c0eb1f262bee4059bf1f104ffeb",
+      "bound_names": [],
+      "bindings": [
+        {
+          "id": "python/src/orchard/__init__.py@0:0",
+          "module": ".model",
+          "name": "Basket",
+          "local": "Basket",
+          "scope": "",
+          "line": 1,
+          "raw": "from .model import Basket",
+          "kind": "from",
+          "reexport": true,
+          "conditional": false,
+          "uses": [],
+          "status": "internal",
+          "reason": "module_and_binding_resolved",
+          "target_file": "python/src/orchard/model.py",
+          "target_symbol": "python/src/orchard/model.py::Basket",
+          "bound_module": "",
+          "module_scope": "",
+          "start_byte": 0
+        }
+      ],
+      "calls": [],
+      "diagnostics": [],
+      "modules": [],
+      "exports": [],
+      "imports": [
+        {
+          "raw": "from .model import Basket",
+          "module": ".model",
+          "symbols": [
+            "Basket"
+          ],
+          "line": 1
+        }
+      ],
+      "symbols": []
+    },
+    {
+      "path": "python/src/orchard/model.py",
+      "language": "python",
+      "parser": "ast",
+      "has_syntax_error": false,
+      "is_empty": false,
+      "source_hash": "64edd9323a874bad9d30733559c8a9b362da876e38cae3a8a388341b51e84be1",
+      "bound_names": [
+        "Basket",
+        "double"
+      ],
+      "bindings": [],
+      "calls": [],
+      "diagnostics": [],
+      "modules": [],
+      "exports": [],
+      "imports": [],
+      "symbols": [
+        {
+          "name": "Basket",
+          "qualified_name": "Basket",
+          "kind": "class",
+          "start_line": 1,
+          "end_line": 4,
+          "first_body_line": 2,
+          "last_body_line": 4,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 18,
+          "body_end_byte": 108,
+          "bases": [],
+          "parent": "",
+          "id": "python/src/orchard/model.py::Basket",
+          "docstring": "Count fruit in one basket.",
+          "start_byte": 0,
+          "end_byte": 108,
+          "signature": "class Basket"
+        },
+        {
+          "name": "__init__",
+          "qualified_name": "Basket.__init__",
+          "kind": "method",
+          "start_line": 3,
+          "end_line": 4,
+          "first_body_line": 4,
+          "last_body_line": 4,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 90,
+          "body_end_byte": 108,
+          "bases": [],
+          "parent": "Basket",
+          "id": "python/src/orchard/model.py::Basket.__init__",
+          "docstring": "",
+          "start_byte": 55,
+          "end_byte": 108,
+          "signature": "def __init__(self, count)"
+        },
+        {
+          "name": "double",
+          "qualified_name": "double",
+          "kind": "function",
+          "start_line": 7,
+          "end_line": 8,
+          "first_body_line": 8,
+          "last_body_line": 8,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 134,
+          "body_end_byte": 150,
+          "bases": [],
+          "parent": "",
+          "id": "python/src/orchard/model.py::double",
+          "docstring": "",
+          "start_byte": 111,
+          "end_byte": 150,
+          "signature": "def double(value)"
+        }
+      ]
+    },
+    {
+      "path": "python/src/orchard/service.py",
+      "language": "python",
+      "parser": "ast",
+      "has_syntax_error": false,
+      "is_empty": false,
+      "source_hash": "9e9b451548e02aaed3666ee815aca73dca057dc345a93cf7ad0089862ca767ee",
+      "bound_names": [
+        "build",
+        "describe",
+        "nested",
+        "shadow"
+      ],
+      "bindings": [
+        {
+          "id": "python/src/orchard/service.py@0:0",
+          "module": "json",
+          "name": "",
+          "local": "json",
+          "scope": "",
+          "line": 1,
+          "raw": "import json",
+          "kind": "module",
+          "reexport": true,
+          "conditional": false,
+          "uses": [
+            {
+              "owner": "describe",
+              "expression": "json.dumps",
+              "kind": "call",
+              "source_text": "json.dumps",
+              "line": 13,
+              "start_byte": 257,
+              "end_byte": 267,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "external",
+              "binding_target_file": null,
+              "binding_target_symbol": null
+            }
+          ],
+          "status": "external",
+          "reason": "stdlib_or_declared_dependency",
+          "target_file": null,
+          "target_symbol": null,
+          "bound_module": "json",
+          "module_scope": "",
+          "start_byte": 0
+        },
+        {
+          "id": "python/src/orchard/service.py@12:1",
+          "module": "orchard",
+          "name": "Basket",
+          "local": "Box",
+          "scope": "",
+          "line": 2,
+          "raw": "from orchard import Basket as Box",
+          "kind": "from",
+          "reexport": true,
+          "conditional": false,
+          "uses": [
+            {
+              "owner": "build",
+              "expression": "Box",
+              "kind": "call",
+              "source_text": "Box",
+              "line": 9,
+              "start_byte": 205,
+              "end_byte": 208,
+              "target_file": "python/src/orchard/model.py",
+              "target_symbol": "python/src/orchard/model.py::Basket",
+              "status": "internal",
+              "binding_target_file": "python/src/orchard/model.py",
+              "binding_target_symbol": "python/src/orchard/model.py::Basket"
+            }
+          ],
+          "status": "internal",
+          "reason": "module_and_binding_resolved",
+          "target_file": "python/src/orchard/model.py",
+          "target_symbol": "python/src/orchard/model.py::Basket",
+          "bound_module": "",
+          "module_scope": "",
+          "start_byte": 12
+        },
+        {
+          "id": "python/src/orchard/service.py@46:2",
+          "module": ".model",
+          "name": "double",
+          "local": "twice",
+          "scope": "",
+          "line": 3,
+          "raw": "from .model import double as twice",
+          "kind": "from",
+          "reexport": true,
+          "conditional": false,
+          "uses": [
+            {
+              "owner": "build",
+              "expression": "twice",
+              "kind": "call",
+              "source_text": "twice",
+              "line": 9,
+              "start_byte": 209,
+              "end_byte": 214,
+              "target_file": "python/src/orchard/model.py",
+              "target_symbol": "python/src/orchard/model.py::double",
+              "status": "internal",
+              "binding_target_file": "python/src/orchard/model.py",
+              "binding_target_symbol": "python/src/orchard/model.py::double"
+            }
+          ],
+          "status": "internal",
+          "reason": "module_and_binding_resolved",
+          "target_file": "python/src/orchard/model.py",
+          "target_symbol": "python/src/orchard/model.py::double",
+          "bound_module": "",
+          "module_scope": "",
+          "start_byte": 46
+        },
+        {
+          "id": "python/src/orchard/service.py@81:3",
+          "module": ".",
+          "name": "model",
+          "local": "model",
+          "scope": "",
+          "line": 4,
+          "raw": "from . import model",
+          "kind": "from",
+          "reexport": true,
+          "conditional": false,
+          "uses": [
+            {
+              "owner": "describe",
+              "expression": "model.double",
+              "kind": "call",
+              "source_text": "model.double",
+              "line": 13,
+              "start_byte": 278,
+              "end_byte": 290,
+              "target_file": "python/src/orchard/model.py",
+              "target_symbol": "python/src/orchard/model.py::double",
+              "status": "internal",
+              "binding_target_file": "python/src/orchard/model.py",
+              "binding_target_symbol": null
+            }
+          ],
+          "status": "internal",
+          "reason": "module_and_binding_resolved",
+          "target_file": "python/src/orchard/model.py",
+          "target_symbol": null,
+          "bound_module": "",
+          "module_scope": "",
+          "start_byte": 81
+        },
+        {
+          "id": "python/src/orchard/service.py@361:4",
+          "module": ".model",
+          "name": "double",
+          "local": "local_double",
+          "scope": "nested",
+          "line": 21,
+          "raw": "from .model import double as local_double",
+          "kind": "from",
+          "reexport": false,
+          "conditional": false,
+          "uses": [
+            {
+              "owner": "nested.run",
+              "expression": "local_double",
+              "kind": "call",
+              "source_text": "local_double",
+              "line": 24,
+              "start_byte": 434,
+              "end_byte": 446,
+              "target_file": "python/src/orchard/model.py",
+              "target_symbol": "python/src/orchard/model.py::double",
+              "status": "internal",
+              "binding_target_file": "python/src/orchard/model.py",
+              "binding_target_symbol": "python/src/orchard/model.py::double"
+            }
+          ],
+          "status": "internal",
+          "reason": "module_and_binding_resolved",
+          "target_file": "python/src/orchard/model.py",
+          "target_symbol": "python/src/orchard/model.py::double",
+          "bound_module": "",
+          "module_scope": "",
+          "start_byte": 361
+        }
+      ],
+      "calls": [
+        {
+          "name": "Box",
+          "line": 9,
+          "caller": "build",
+          "expression": "Box"
+        },
+        {
+          "name": "twice",
+          "line": 9,
+          "caller": "build",
+          "expression": "twice"
+        },
+        {
+          "name": "dumps",
+          "line": 13,
+          "caller": "describe",
+          "expression": "json.dumps"
+        },
+        {
+          "name": "double",
+          "line": 13,
+          "caller": "describe",
+          "expression": "model.double"
+        },
+        {
+          "name": "twice",
+          "line": 17,
+          "caller": "shadow",
+          "expression": "twice"
+        },
+        {
+          "name": "local_double",
+          "line": 24,
+          "caller": "nested.run",
+          "expression": "local_double"
+        },
+        {
+          "name": "run",
+          "line": 26,
+          "caller": "nested",
+          "expression": "run"
+        }
+      ],
+      "diagnostics": [],
+      "modules": [],
+      "exports": [],
+      "imports": [
+        {
+          "raw": "import json",
+          "module": "json",
+          "symbols": [],
+          "line": 1
+        },
+        {
+          "raw": "from orchard import Basket as Box",
+          "module": "orchard",
+          "symbols": [
+            "Basket"
+          ],
+          "line": 2
+        },
+        {
+          "raw": "from .model import double as twice",
+          "module": ".model",
+          "symbols": [
+            "double"
+          ],
+          "line": 3
+        },
+        {
+          "raw": "from . import model",
+          "module": ".",
+          "symbols": [
+            "model"
+          ],
+          "line": 4
+        },
+        {
+          "raw": "from .model import double as local_double",
+          "module": ".model",
+          "symbols": [
+            "double"
+          ],
+          "line": 21
+        }
+      ],
+      "symbols": [
+        {
+          "name": "build",
+          "qualified_name": "build",
+          "kind": "function",
+          "start_line": 7,
+          "end_line": 9,
+          "first_body_line": 8,
+          "last_body_line": 9,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 125,
+          "body_end_byte": 222,
+          "bases": [],
+          "parent": "",
+          "id": "python/src/orchard/service.py::build",
+          "docstring": "Build a basket, exercising a class alias and a function alias.",
+          "start_byte": 103,
+          "end_byte": 222,
+          "signature": "def build(count)"
+        },
+        {
+          "name": "describe",
+          "qualified_name": "describe",
+          "kind": "function",
+          "start_line": 12,
+          "end_line": 13,
+          "first_body_line": 13,
+          "last_body_line": 13,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 250,
+          "body_end_byte": 299,
+          "bases": [],
+          "parent": "",
+          "id": "python/src/orchard/service.py::describe",
+          "docstring": "",
+          "start_byte": 225,
+          "end_byte": 299,
+          "signature": "def describe(count)"
+        },
+        {
+          "name": "shadow",
+          "qualified_name": "shadow",
+          "kind": "function",
+          "start_line": 16,
+          "end_line": 17,
+          "first_body_line": 17,
+          "last_body_line": 17,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 325,
+          "body_end_byte": 340,
+          "bases": [],
+          "parent": "",
+          "id": "python/src/orchard/service.py::shadow",
+          "docstring": "",
+          "start_byte": 302,
+          "end_byte": 340,
+          "signature": "def shadow(twice)"
+        },
+        {
+          "name": "nested",
+          "qualified_name": "nested",
+          "kind": "function",
+          "start_line": 20,
+          "end_line": 26,
+          "first_body_line": 21,
+          "last_body_line": 26,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 361,
+          "body_end_byte": 467,
+          "bases": [],
+          "parent": "",
+          "id": "python/src/orchard/service.py::nested",
+          "docstring": "",
+          "start_byte": 343,
+          "end_byte": 467,
+          "signature": "def nested()"
+        },
+        {
+          "name": "run",
+          "qualified_name": "nested.run",
+          "kind": "function",
+          "start_line": 23,
+          "end_line": 24,
+          "first_body_line": 24,
+          "last_body_line": 24,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 427,
+          "body_end_byte": 449,
+          "bases": [],
+          "parent": "nested",
+          "id": "python/src/orchard/service.py::nested.run",
+          "docstring": "",
+          "start_byte": 408,
+          "end_byte": 449,
+          "signature": "def run()"
+        }
+      ]
+    },
+    {
+      "path": "rust/src/lib.rs",
+      "language": "rust",
+      "parser": "tree_sitter",
+      "has_syntax_error": false,
+      "is_empty": false,
+      "source_hash": "94457ccf85caa0c7dba3c2796d6051ce39ca71792ccc1f3b166bbe56ff35ced0",
+      "bound_names": [],
+      "bindings": [
+        {
+          "id": "rust/src/lib.rs@32:0",
+          "module": "model",
+          "name": "Basket",
+          "local": "Basket",
+          "scope": "",
+          "line": 3,
+          "raw": "pub use model::Basket;",
+          "kind": "use",
+          "reexport": true,
+          "conditional": false,
+          "uses": [],
+          "status": "internal",
+          "reason": "module_and_binding_resolved",
+          "target_file": "rust/src/model.rs",
+          "target_symbol": "rust/src/model.rs::Basket",
+          "bound_module": "",
+          "module_scope": "",
+          "start_byte": 32
+        }
+      ],
+      "calls": [],
+      "diagnostics": [],
+      "modules": [
+        {
+          "name": "model",
+          "parent": "",
+          "inline": false,
+          "line": 1,
+          "attributes": []
+        },
+        {
+          "name": "service",
+          "parent": "",
+          "inline": false,
+          "line": 2,
+          "attributes": []
+        }
+      ],
+      "exports": [],
+      "imports": [
+        {
+          "raw": "pub use model::Basket;",
+          "module": "model",
+          "symbols": [
+            "Basket"
+          ],
+          "line": 3
+        }
+      ],
+      "symbols": []
+    },
+    {
+      "path": "rust/src/model.rs",
+      "language": "rust",
+      "parser": "tree_sitter",
+      "has_syntax_error": false,
+      "is_empty": false,
+      "source_hash": "66cfe5675ce9b751dd19cb95e92653a4901ce4e85567c107cbd329f28a8c452a",
+      "bound_names": [],
+      "bindings": [],
+      "calls": [],
+      "diagnostics": [],
+      "modules": [],
+      "exports": [],
+      "imports": [],
+      "symbols": [
+        {
+          "name": "Basket",
+          "qualified_name": "Basket",
+          "kind": "struct",
+          "start_line": 1,
+          "end_line": 3,
+          "first_body_line": 1,
+          "last_body_line": 3,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 18,
+          "body_end_byte": 41,
+          "bases": [],
+          "parent": "",
+          "id": "rust/src/model.rs::Basket",
+          "docstring": "",
+          "start_byte": 0,
+          "end_byte": 41,
+          "signature": "pub struct Basket"
+        },
+        {
+          "name": "new",
+          "qualified_name": "Basket.new",
+          "kind": "method",
+          "start_line": 6,
+          "end_line": 6,
+          "first_body_line": 6,
+          "last_body_line": 6,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 92,
+          "body_end_byte": 110,
+          "bases": [],
+          "parent": "Basket",
+          "id": "rust/src/model.rs::Basket.new",
+          "docstring": "",
+          "start_byte": 61,
+          "end_byte": 110,
+          "signature": "pub fn new(count: u32) -> Self"
+        },
+        {
+          "name": "double",
+          "qualified_name": "double",
+          "kind": "function",
+          "start_line": 9,
+          "end_line": 9,
+          "first_body_line": 9,
+          "last_body_line": 9,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 147,
+          "body_end_byte": 160,
+          "bases": [],
+          "parent": "",
+          "id": "rust/src/model.rs::double",
+          "docstring": "",
+          "start_byte": 114,
+          "end_byte": 160,
+          "signature": "pub fn double(value: u32) -> u32"
+        }
+      ]
+    },
+    {
+      "path": "rust/src/service.rs",
+      "language": "rust",
+      "parser": "tree_sitter",
+      "has_syntax_error": false,
+      "is_empty": false,
+      "source_hash": "64488dcc4a260df6de2c827be35c900c14df682919d3fab353b3b71ae228e966",
+      "bound_names": [],
+      "bindings": [
+        {
+          "id": "rust/src/service.rs@0:0",
+          "module": "crate::model",
+          "name": "Basket",
+          "local": "Box",
+          "scope": "",
+          "line": 1,
+          "raw": "use crate::model::{Basket as Box, double as twice};",
+          "kind": "use",
+          "reexport": false,
+          "conditional": false,
+          "uses": [
+            {
+              "owner": "build",
+              "expression": "Box",
+              "kind": "reference",
+              "source_text": "Box",
+              "line": 4,
+              "start_byte": 100,
+              "end_byte": 103,
+              "target_file": "rust/src/model.rs",
+              "target_symbol": "rust/src/model.rs::Basket",
+              "status": "internal",
+              "binding_target_file": "rust/src/model.rs",
+              "binding_target_symbol": "rust/src/model.rs::Basket"
+            },
+            {
+              "owner": "build",
+              "expression": "Box::new",
+              "kind": "call",
+              "source_text": "Box::new",
+              "line": 5,
+              "start_byte": 110,
+              "end_byte": 118,
+              "target_file": "rust/src/model.rs",
+              "target_symbol": "rust/src/model.rs::Basket.new",
+              "status": "internal",
+              "binding_target_file": "rust/src/model.rs",
+              "binding_target_symbol": "rust/src/model.rs::Basket"
+            }
+          ],
+          "status": "internal",
+          "reason": "module_and_binding_resolved",
+          "target_file": "rust/src/model.rs",
+          "target_symbol": "rust/src/model.rs::Basket",
+          "bound_module": "",
+          "module_scope": "",
+          "start_byte": 0
+        },
+        {
+          "id": "rust/src/service.rs@0:1",
+          "module": "crate::model",
+          "name": "double",
+          "local": "twice",
+          "scope": "",
+          "line": 1,
+          "raw": "use crate::model::{Basket as Box, double as twice};",
+          "kind": "use",
+          "reexport": false,
+          "conditional": false,
+          "uses": [
+            {
+              "owner": "build",
+              "expression": "twice",
+              "kind": "call",
+              "source_text": "twice",
+              "line": 5,
+              "start_byte": 119,
+              "end_byte": 124,
+              "target_file": "rust/src/model.rs",
+              "target_symbol": "rust/src/model.rs::double",
+              "status": "internal",
+              "binding_target_file": "rust/src/model.rs",
+              "binding_target_symbol": "rust/src/model.rs::double"
+            }
+          ],
+          "status": "internal",
+          "reason": "module_and_binding_resolved",
+          "target_file": "rust/src/model.rs",
+          "target_symbol": "rust/src/model.rs::double",
+          "bound_module": "",
+          "module_scope": "",
+          "start_byte": 0
+        },
+        {
+          "id": "rust/src/service.rs@52:2",
+          "module": "std::cmp",
+          "name": "max",
+          "local": "max",
+          "scope": "",
+          "line": 2,
+          "raw": "use std::cmp::max;",
+          "kind": "use",
+          "reexport": false,
+          "conditional": false,
+          "uses": [
+            {
+              "owner": "build",
+              "expression": "max",
+              "kind": "call",
+              "source_text": "max",
+              "line": 5,
+              "start_byte": 125,
+              "end_byte": 128,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "external",
+              "binding_target_file": null,
+              "binding_target_symbol": null
+            }
+          ],
+          "status": "external",
+          "reason": "stdlib_or_declared_dependency",
+          "target_file": null,
+          "target_symbol": null,
+          "bound_module": "",
+          "module_scope": "",
+          "start_byte": 52
+        },
+        {
+          "id": "rust/src/service.rs@165:3",
+          "module": "super::super::model",
+          "name": "double",
+          "local": "twice",
+          "scope": "nested",
+          "line": 9,
+          "raw": "use super::super::model::double as twice;",
+          "kind": "use",
+          "reexport": false,
+          "conditional": false,
+          "uses": [
+            {
+              "owner": "nested.run",
+              "expression": "twice",
+              "kind": "call",
+              "source_text": "twice",
+              "line": 10,
+              "start_byte": 233,
+              "end_byte": 238,
+              "target_file": "rust/src/model.rs",
+              "target_symbol": "rust/src/model.rs::double",
+              "status": "internal",
+              "binding_target_file": "rust/src/model.rs",
+              "binding_target_symbol": "rust/src/model.rs::double"
+            }
+          ],
+          "status": "internal",
+          "reason": "module_and_binding_resolved",
+          "target_file": "rust/src/model.rs",
+          "target_symbol": "rust/src/model.rs::double",
+          "bound_module": "",
+          "module_scope": "nested",
+          "start_byte": 165
+        }
+      ],
+      "calls": [
+        {
+          "name": "new",
+          "line": 5,
+          "caller": "build",
+          "expression": ""
+        },
+        {
+          "name": "twice",
+          "line": 5,
+          "caller": "build",
+          "expression": ""
+        },
+        {
+          "name": "max",
+          "line": 5,
+          "caller": "build",
+          "expression": ""
+        },
+        {
+          "name": "twice",
+          "line": 10,
+          "caller": "nested.run",
+          "expression": ""
+        }
+      ],
+      "diagnostics": [],
+      "modules": [
+        {
+          "name": "nested",
+          "parent": "",
+          "inline": true,
+          "line": 8,
+          "attributes": []
+        }
+      ],
+      "exports": [],
+      "imports": [
+        {
+          "raw": "use crate::model::{Basket as Box, double as twice};",
+          "module": "crate::model",
+          "symbols": [
+            "Basket",
+            "double"
+          ],
+          "line": 1
+        },
+        {
+          "raw": "use std::cmp::max;",
+          "module": "std::cmp",
+          "symbols": [
+            "max"
+          ],
+          "line": 2
+        },
+        {
+          "raw": "use super::super::model::double as twice;",
+          "module": "super::super::model",
+          "symbols": [
+            "double"
+          ],
+          "line": 9
+        }
+      ],
+      "symbols": [
+        {
+          "name": "build",
+          "qualified_name": "build",
+          "kind": "function",
+          "start_line": 4,
+          "end_line": 6,
+          "first_body_line": 4,
+          "last_body_line": 6,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 104,
+          "body_end_byte": 142,
+          "bases": [],
+          "parent": "",
+          "id": "rust/src/service.rs::build",
+          "docstring": "",
+          "start_byte": 72,
+          "end_byte": 142,
+          "signature": "pub fn build(count: u32) -> Box"
+        },
+        {
+          "name": "nested",
+          "qualified_name": "nested",
+          "kind": "module",
+          "start_line": 8,
+          "end_line": 11,
+          "first_body_line": 8,
+          "last_body_line": 11,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 159,
+          "body_end_byte": 245,
+          "bases": [],
+          "parent": "",
+          "id": "rust/src/service.rs::nested",
+          "docstring": "",
+          "start_byte": 144,
+          "end_byte": 245,
+          "signature": "pub mod nested"
+        },
+        {
+          "name": "run",
+          "qualified_name": "nested.run",
+          "kind": "function",
+          "start_line": 10,
+          "end_line": 10,
+          "first_body_line": 10,
+          "last_body_line": 10,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 231,
+          "body_end_byte": 243,
+          "bases": [],
+          "parent": "nested",
+          "id": "rust/src/service.rs::nested.run",
+          "docstring": "",
+          "start_byte": 211,
+          "end_byte": 243,
+          "signature": "pub fn run() -> u32"
+        }
+      ]
+    },
+    {
+      "path": "rust/tests/integration.rs",
+      "language": "rust",
+      "parser": "tree_sitter",
+      "has_syntax_error": false,
+      "is_empty": false,
+      "source_hash": "eaf0d77d67ad351f9b16463d54dd07222e5c9aed5cce8a881fb5dc41f335b2e2",
+      "bound_names": [],
+      "bindings": [
+        {
+          "id": "rust/tests/integration.rs@0:0",
+          "module": "orchard_map::service",
+          "name": "build",
+          "local": "build",
+          "scope": "",
+          "line": 1,
+          "raw": "use orchard_map::service::{build, nested};",
+          "kind": "use",
+          "reexport": false,
+          "conditional": false,
+          "uses": [
+            {
+              "owner": "imported_paths_work",
+              "expression": "build",
+              "kind": "call",
+              "source_text": "build",
+              "line": 6,
+              "start_byte": 129,
+              "end_byte": 134,
+              "target_file": "rust/src/service.rs",
+              "target_symbol": "rust/src/service.rs::build",
+              "status": "internal",
+              "binding_target_file": "rust/src/service.rs",
+              "binding_target_symbol": "rust/src/service.rs::build"
+            }
+          ],
+          "status": "internal",
+          "reason": "module_and_binding_resolved",
+          "target_file": "rust/src/service.rs",
+          "target_symbol": "rust/src/service.rs::build",
+          "bound_module": "",
+          "module_scope": "",
+          "start_byte": 0
+        },
+        {
+          "id": "rust/tests/integration.rs@0:1",
+          "module": "orchard_map::service",
+          "name": "nested",
+          "local": "nested",
+          "scope": "",
+          "line": 1,
+          "raw": "use orchard_map::service::{build, nested};",
+          "kind": "use",
+          "reexport": false,
+          "conditional": false,
+          "uses": [],
+          "status": "internal",
+          "reason": "module_and_binding_resolved",
+          "target_file": "rust/src/service.rs",
+          "target_symbol": "rust/src/service.rs::nested",
+          "bound_module": "",
+          "module_scope": "",
+          "start_byte": 0
+        },
+        {
+          "id": "rust/tests/integration.rs@43:2",
+          "module": "orchard_map",
+          "name": "Basket",
+          "local": "Basket",
+          "scope": "",
+          "line": 2,
+          "raw": "use orchard_map::Basket;",
+          "kind": "use",
+          "reexport": false,
+          "conditional": false,
+          "uses": [
+            {
+              "owner": "imported_paths_work",
+              "expression": "Basket",
+              "kind": "reference",
+              "source_text": "Basket",
+              "line": 6,
+              "start_byte": 120,
+              "end_byte": 126,
+              "target_file": "rust/src/model.rs",
+              "target_symbol": "rust/src/model.rs::Basket",
+              "status": "internal",
+              "binding_target_file": "rust/src/model.rs",
+              "binding_target_symbol": "rust/src/model.rs::Basket"
+            }
+          ],
+          "status": "internal",
+          "reason": "module_and_binding_resolved",
+          "target_file": "rust/src/model.rs",
+          "target_symbol": "rust/src/model.rs::Basket",
+          "bound_module": "",
+          "module_scope": "",
+          "start_byte": 43
+        }
+      ],
+      "calls": [
+        {
+          "name": "build",
+          "line": 6,
+          "caller": "imported_paths_work",
+          "expression": ""
+        },
+        {
+          "name": "assert_eq",
+          "line": 7,
+          "caller": "imported_paths_work",
+          "expression": ""
+        },
+        {
+          "name": "assert_eq",
+          "line": 8,
+          "caller": "imported_paths_work",
+          "expression": ""
+        }
+      ],
+      "diagnostics": [
+        {
+          "line": 7,
+          "reason": "macro_tokens_not_resolved"
+        },
+        {
+          "line": 8,
+          "reason": "macro_tokens_not_resolved"
+        }
+      ],
+      "modules": [],
+      "exports": [],
+      "imports": [
+        {
+          "raw": "use orchard_map::service::{build, nested};",
+          "module": "orchard_map::service",
+          "symbols": [
+            "build",
+            "nested"
+          ],
+          "line": 1
+        },
+        {
+          "raw": "use orchard_map::Basket;",
+          "module": "orchard_map",
+          "symbols": [
+            "Basket"
+          ],
+          "line": 2
+        }
+      ],
+      "symbols": [
+        {
+          "name": "imported_paths_work",
+          "qualified_name": "imported_paths_work",
+          "kind": "function",
+          "start_line": 5,
+          "end_line": 9,
+          "first_body_line": 5,
+          "last_body_line": 9,
+          "is_test": true,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 102,
+          "body_end_byte": 207,
+          "bases": [],
+          "parent": "",
+          "id": "rust/tests/integration.rs::imported_paths_work",
+          "docstring": "",
+          "start_byte": 77,
+          "end_byte": 207,
+          "signature": "fn imported_paths_work()"
+        }
+      ]
+    },
+    {
+      "path": "typescript/runtime_check.ts",
+      "language": "typescript",
+      "parser": "tree_sitter",
+      "has_syntax_error": false,
+      "is_empty": false,
+      "source_hash": "122e0c73c4b285fa33ab6c013720af375496e9be1d86d87000530da24cf4ca1a",
+      "bound_names": [
+        "imports really work"
+      ],
+      "bindings": [
+        {
+          "id": "typescript/runtime_check.ts@0:0",
+          "module": "node:test",
+          "name": "default",
+          "local": "test",
+          "scope": "",
+          "line": 1,
+          "raw": "import test from \"node:test\";",
+          "kind": "default",
+          "reexport": false,
+          "conditional": false,
+          "uses": [
+            {
+              "owner": "imports really work",
+              "expression": "test",
+              "kind": "call",
+              "source_text": "test",
+              "line": 5,
+              "start_byte": 147,
+              "end_byte": 151,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "external",
+              "binding_target_file": null,
+              "binding_target_symbol": null
+            }
+          ],
+          "status": "external",
+          "reason": "builtin_module",
+          "target_file": null,
+          "target_symbol": null,
+          "bound_module": "",
+          "module_scope": "",
+          "start_byte": 0
+        },
+        {
+          "id": "typescript/runtime_check.ts@30:1",
+          "module": "node:assert/strict",
+          "name": "default",
+          "local": "assert",
+          "scope": "",
+          "line": 2,
+          "raw": "import assert from \"node:assert/strict\";",
+          "kind": "default",
+          "reexport": false,
+          "conditional": false,
+          "uses": [
+            {
+              "owner": "imports really work",
+              "expression": "assert.equal",
+              "kind": "call",
+              "source_text": "assert.equal",
+              "line": 6,
+              "start_byte": 185,
+              "end_byte": 197,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "external",
+              "binding_target_file": null,
+              "binding_target_symbol": null
+            },
+            {
+              "owner": "imports really work",
+              "expression": "assert.equal",
+              "kind": "call",
+              "source_text": "assert.equal",
+              "line": 7,
+              "start_byte": 220,
+              "end_byte": 232,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "external",
+              "binding_target_file": null,
+              "binding_target_symbol": null
+            },
+            {
+              "owner": "imports really work",
+              "expression": "assert.equal",
+              "kind": "call",
+              "source_text": "assert.equal",
+              "line": 8,
+              "start_byte": 265,
+              "end_byte": 277,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "external",
+              "binding_target_file": null,
+              "binding_target_symbol": null
+            },
+            {
+              "owner": "imports really work",
+              "expression": "assert.equal",
+              "kind": "call",
+              "source_text": "assert.equal",
+              "line": 9,
+              "start_byte": 294,
+              "end_byte": 306,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "external",
+              "binding_target_file": null,
+              "binding_target_symbol": null
+            },
+            {
+              "owner": "imports really work",
+              "expression": "assert.equal",
+              "kind": "call",
+              "source_text": "assert.equal",
+              "line": 10,
+              "start_byte": 351,
+              "end_byte": 363,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "external",
+              "binding_target_file": null,
+              "binding_target_symbol": null
+            }
+          ],
+          "status": "external",
+          "reason": "builtin_module",
+          "target_file": null,
+          "target_symbol": null,
+          "bound_module": "",
+          "module_scope": "",
+          "start_byte": 30
+        },
+        {
+          "id": "typescript/runtime_check.ts@71:2",
+          "module": "./src/service.ts",
+          "name": "build",
+          "local": "build",
+          "scope": "",
+          "line": 3,
+          "raw": "import { build, describe, nested, shadow, total } from \"./src/service.ts\";",
+          "kind": "named",
+          "reexport": false,
+          "conditional": false,
+          "uses": [
+            {
+              "owner": "imports really work",
+              "expression": "build",
+              "kind": "call",
+              "source_text": "build",
+              "line": 6,
+              "start_byte": 198,
+              "end_byte": 203,
+              "target_file": "typescript/src/service.ts",
+              "target_symbol": "typescript/src/service.ts::build",
+              "status": "internal",
+              "binding_target_file": "typescript/src/service.ts",
+              "binding_target_symbol": "typescript/src/service.ts::build"
+            },
+            {
+              "owner": "imports really work",
+              "expression": "build",
+              "kind": "call",
+              "source_text": "build",
+              "line": 10,
+              "start_byte": 370,
+              "end_byte": 375,
+              "target_file": "typescript/src/service.ts",
+              "target_symbol": "typescript/src/service.ts::build",
+              "status": "internal",
+              "binding_target_file": "typescript/src/service.ts",
+              "binding_target_symbol": "typescript/src/service.ts::build"
+            }
+          ],
+          "status": "internal",
+          "reason": "module_and_binding_resolved",
+          "target_file": "typescript/src/service.ts",
+          "target_symbol": "typescript/src/service.ts::build",
+          "bound_module": "",
+          "module_scope": "",
+          "start_byte": 71
+        },
+        {
+          "id": "typescript/runtime_check.ts@71:3",
+          "module": "./src/service.ts",
+          "name": "describe",
+          "local": "describe",
+          "scope": "",
+          "line": 3,
+          "raw": "import { build, describe, nested, shadow, total } from \"./src/service.ts\";",
+          "kind": "named",
+          "reexport": false,
+          "conditional": false,
+          "uses": [
+            {
+              "owner": "imports really work",
+              "expression": "describe",
+              "kind": "call",
+              "source_text": "describe",
+              "line": 7,
+              "start_byte": 233,
+              "end_byte": 241,
+              "target_file": "typescript/src/service.ts",
+              "target_symbol": "typescript/src/service.ts::describe",
+              "status": "internal",
+              "binding_target_file": "typescript/src/service.ts",
+              "binding_target_symbol": "typescript/src/service.ts::describe"
+            }
+          ],
+          "status": "internal",
+          "reason": "module_and_binding_resolved",
+          "target_file": "typescript/src/service.ts",
+          "target_symbol": "typescript/src/service.ts::describe",
+          "bound_module": "",
+          "module_scope": "",
+          "start_byte": 71
+        },
+        {
+          "id": "typescript/runtime_check.ts@71:4",
+          "module": "./src/service.ts",
+          "name": "nested",
+          "local": "nested",
+          "scope": "",
+          "line": 3,
+          "raw": "import { build, describe, nested, shadow, total } from \"./src/service.ts\";",
+          "kind": "named",
+          "reexport": false,
+          "conditional": false,
+          "uses": [
+            {
+              "owner": "imports really work",
+              "expression": "nested",
+              "kind": "call",
+              "source_text": "nested",
+              "line": 8,
+              "start_byte": 278,
+              "end_byte": 284,
+              "target_file": "typescript/src/service.ts",
+              "target_symbol": "typescript/src/service.ts::nested",
+              "status": "internal",
+              "binding_target_file": "typescript/src/service.ts",
+              "binding_target_symbol": "typescript/src/service.ts::nested"
+            }
+          ],
+          "status": "internal",
+          "reason": "module_and_binding_resolved",
+          "target_file": "typescript/src/service.ts",
+          "target_symbol": "typescript/src/service.ts::nested",
+          "bound_module": "",
+          "module_scope": "",
+          "start_byte": 71
+        },
+        {
+          "id": "typescript/runtime_check.ts@71:5",
+          "module": "./src/service.ts",
+          "name": "shadow",
+          "local": "shadow",
+          "scope": "",
+          "line": 3,
+          "raw": "import { build, describe, nested, shadow, total } from \"./src/service.ts\";",
+          "kind": "named",
+          "reexport": false,
+          "conditional": false,
+          "uses": [
+            {
+              "owner": "imports really work",
+              "expression": "shadow",
+              "kind": "call",
+              "source_text": "shadow",
+              "line": 9,
+              "start_byte": 307,
+              "end_byte": 313,
+              "target_file": "typescript/src/service.ts",
+              "target_symbol": "typescript/src/service.ts::shadow",
+              "status": "internal",
+              "binding_target_file": "typescript/src/service.ts",
+              "binding_target_symbol": "typescript/src/service.ts::shadow"
+            }
+          ],
+          "status": "internal",
+          "reason": "module_and_binding_resolved",
+          "target_file": "typescript/src/service.ts",
+          "target_symbol": "typescript/src/service.ts::shadow",
+          "bound_module": "",
+          "module_scope": "",
+          "start_byte": 71
+        },
+        {
+          "id": "typescript/runtime_check.ts@71:6",
+          "module": "./src/service.ts",
+          "name": "total",
+          "local": "total",
+          "scope": "",
+          "line": 3,
+          "raw": "import { build, describe, nested, shadow, total } from \"./src/service.ts\";",
+          "kind": "named",
+          "reexport": false,
+          "conditional": false,
+          "uses": [
+            {
+              "owner": "imports really work",
+              "expression": "total",
+              "kind": "call",
+              "source_text": "total",
+              "line": 10,
+              "start_byte": 364,
+              "end_byte": 369,
+              "target_file": "typescript/src/service.ts",
+              "target_symbol": "typescript/src/service.ts::total",
+              "status": "internal",
+              "binding_target_file": "typescript/src/service.ts",
+              "binding_target_symbol": "typescript/src/service.ts::total"
+            }
+          ],
+          "status": "internal",
+          "reason": "module_and_binding_resolved",
+          "target_file": "typescript/src/service.ts",
+          "target_symbol": "typescript/src/service.ts::total",
+          "bound_module": "",
+          "module_scope": "",
+          "start_byte": 71
+        }
+      ],
+      "calls": [
+        {
+          "name": "equal",
+          "line": 6,
+          "caller": "",
+          "expression": ""
+        },
+        {
+          "name": "build",
+          "line": 6,
+          "caller": "",
+          "expression": ""
+        },
+        {
+          "name": "equal",
+          "line": 7,
+          "caller": "",
+          "expression": ""
+        },
+        {
+          "name": "describe",
+          "line": 7,
+          "caller": "",
+          "expression": ""
+        },
+        {
+          "name": "equal",
+          "line": 8,
+          "caller": "",
+          "expression": ""
+        },
+        {
+          "name": "nested",
+          "line": 8,
+          "caller": "",
+          "expression": ""
+        },
+        {
+          "name": "equal",
+          "line": 9,
+          "caller": "",
+          "expression": ""
+        },
+        {
+          "name": "shadow",
+          "line": 9,
+          "caller": "",
+          "expression": ""
+        },
+        {
+          "name": "equal",
+          "line": 10,
+          "caller": "",
+          "expression": ""
+        },
+        {
+          "name": "total",
+          "line": 10,
+          "caller": "",
+          "expression": ""
+        },
+        {
+          "name": "build",
+          "line": 10,
+          "caller": "",
+          "expression": ""
+        }
+      ],
+      "diagnostics": [],
+      "modules": [],
+      "exports": [],
+      "imports": [
+        {
+          "raw": "import test from \"node:test\";",
+          "module": "node:test",
+          "symbols": [
+            "test"
+          ],
+          "line": 1
+        },
+        {
+          "raw": "import assert from \"node:assert/strict\";",
+          "module": "node:assert/strict",
+          "symbols": [
+            "assert"
+          ],
+          "line": 2
+        },
+        {
+          "raw": "import { build, describe, nested, shadow, total } from \"./src/service.ts\";",
+          "module": "./src/service.ts",
+          "symbols": [
+            "build",
+            "describe",
+            "nested",
+            "shadow",
+            "total"
+          ],
+          "line": 3
+        }
+      ],
+      "symbols": [
+        {
+          "name": "imports really work",
+          "qualified_name": "imports really work",
+          "kind": "test",
+          "start_line": 5,
+          "end_line": 11,
+          "first_body_line": 5,
+          "last_body_line": 11,
+          "is_test": true,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "typescript/runtime_check.ts::imports really work",
+          "docstring": "",
+          "start_byte": 147,
+          "end_byte": 387,
+          "signature": "test(\"imports really work\", () =>"
+        }
+      ]
+    },
+    {
+      "path": "typescript/src/index.ts",
+      "language": "typescript",
+      "parser": "tree_sitter",
+      "has_syntax_error": false,
+      "is_empty": false,
+      "source_hash": "d8cdc97f29124a84a9f765fed507f35b44ba1e3bcd5d514611a5814795bd6387",
+      "bound_names": [],
+      "bindings": [
+        {
+          "id": "typescript/src/index.ts@220:0",
+          "module": "./model.ts",
+          "name": "",
+          "local": "",
+          "scope": "",
+          "line": 4,
+          "raw": "export { Basket } from \"./model.ts\";",
+          "kind": "reexport",
+          "reexport": true,
+          "conditional": false,
+          "uses": [],
+          "status": "internal",
+          "reason": "module_and_binding_resolved",
+          "target_file": "typescript/src/model.ts",
+          "target_symbol": null,
+          "bound_module": "",
+          "module_scope": "",
+          "start_byte": 220
+        },
+        {
+          "id": "typescript/src/index.ts@257:1",
+          "module": "./model.ts",
+          "name": "",
+          "local": "",
+          "scope": "",
+          "line": 5,
+          "raw": "export type { Countable } from \"./model.ts\";",
+          "kind": "reexport",
+          "reexport": true,
+          "conditional": false,
+          "uses": [],
+          "status": "internal",
+          "reason": "module_and_binding_resolved",
+          "target_file": "typescript/src/model.ts",
+          "target_symbol": null,
+          "bound_module": "",
+          "module_scope": "",
+          "start_byte": 257
+        }
+      ],
+      "calls": [],
+      "diagnostics": [],
+      "modules": [],
+      "exports": [
+        {
+          "exported": "Basket",
+          "local": "Basket",
+          "module": "./model.ts",
+          "line": 4
+        },
+        {
+          "exported": "Countable",
+          "local": "Countable",
+          "module": "./model.ts",
+          "line": 5
+        }
+      ],
+      "imports": [],
+      "symbols": []
+    },
+    {
+      "path": "typescript/src/model.ts",
+      "language": "typescript",
+      "parser": "tree_sitter",
+      "has_syntax_error": false,
+      "is_empty": false,
+      "source_hash": "928795a7c80671dc6d4841995bb79fa9904b201813da3be732b60bec8638e495",
+      "bound_names": [
+        "Basket",
+        "Countable",
+        "double"
+      ],
+      "bindings": [],
+      "calls": [],
+      "diagnostics": [],
+      "modules": [],
+      "exports": [
+        {
+          "exported": "Countable",
+          "local": "Countable",
+          "module": "",
+          "line": 1
+        },
+        {
+          "exported": "Basket",
+          "local": "Basket",
+          "module": "",
+          "line": 6
+        },
+        {
+          "exported": "double",
+          "local": "double",
+          "module": "",
+          "line": 14
+        }
+      ],
+      "imports": [],
+      "symbols": [
+        {
+          "name": "Countable",
+          "qualified_name": "Countable",
+          "kind": "interface",
+          "start_line": 1,
+          "end_line": 3,
+          "first_body_line": 1,
+          "last_body_line": 3,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 27,
+          "body_end_byte": 56,
+          "bases": [],
+          "parent": "",
+          "id": "typescript/src/model.ts::Countable",
+          "docstring": "",
+          "start_byte": 7,
+          "end_byte": 56,
+          "signature": "interface Countable"
+        },
+        {
+          "name": "Basket",
+          "qualified_name": "Basket",
+          "kind": "class",
+          "start_line": 6,
+          "end_line": 12,
+          "first_body_line": 6,
+          "last_body_line": 12,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 133,
+          "body_end_byte": 222,
+          "bases": [
+            "Countable"
+          ],
+          "parent": "",
+          "id": "typescript/src/model.ts::Basket",
+          "docstring": "",
+          "start_byte": 99,
+          "end_byte": 222,
+          "signature": "class Basket implements Countable"
+        },
+        {
+          "name": "constructor",
+          "qualified_name": "Basket.constructor",
+          "kind": "method",
+          "start_line": 9,
+          "end_line": 11,
+          "first_body_line": 9,
+          "last_body_line": 11,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 191,
+          "body_end_byte": 220,
+          "bases": [],
+          "parent": "Basket",
+          "id": "typescript/src/model.ts::Basket.constructor",
+          "docstring": "",
+          "start_byte": 164,
+          "end_byte": 220,
+          "signature": "constructor(count: number)"
+        },
+        {
+          "name": "double",
+          "qualified_name": "double",
+          "kind": "function",
+          "start_line": 14,
+          "end_line": 16,
+          "first_body_line": 14,
+          "last_body_line": 16,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 270,
+          "body_end_byte": 293,
+          "bases": [],
+          "parent": "",
+          "id": "typescript/src/model.ts::double",
+          "docstring": "",
+          "start_byte": 231,
+          "end_byte": 293,
+          "signature": "function double(value: number): number"
+        }
+      ]
+    },
+    {
+      "path": "typescript/src/service.ts",
+      "language": "typescript",
+      "parser": "tree_sitter",
+      "has_syntax_error": false,
+      "is_empty": false,
+      "source_hash": "9a5bce2ce2ead6dbb29ad8753a7f66ae974f5ebe4a854deff177be7719ab878a",
+      "bound_names": [
+        "build",
+        "describe",
+        "nested",
+        "shadow",
+        "total"
+      ],
+      "bindings": [
+        {
+          "id": "typescript/src/service.ts@0:0",
+          "module": "node:util",
+          "name": "inspect",
+          "local": "inspect",
+          "scope": "",
+          "line": 1,
+          "raw": "import { inspect } from \"node:util\";",
+          "kind": "named",
+          "reexport": false,
+          "conditional": false,
+          "uses": [
+            {
+              "owner": "describe",
+              "expression": "inspect",
+              "kind": "call",
+              "source_text": "inspect",
+              "line": 13,
+              "start_byte": 419,
+              "end_byte": 426,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "external",
+              "binding_target_file": null,
+              "binding_target_symbol": null
+            }
+          ],
+          "status": "external",
+          "reason": "builtin_module",
+          "target_file": null,
+          "target_symbol": null,
+          "bound_module": "",
+          "module_scope": "",
+          "start_byte": 0
+        },
+        {
+          "id": "typescript/src/service.ts@37:1",
+          "module": "./index.ts",
+          "name": "Basket",
+          "local": "Box",
+          "scope": "",
+          "line": 2,
+          "raw": "import { Basket as Box } from \"./index.ts\";",
+          "kind": "named",
+          "reexport": false,
+          "conditional": false,
+          "uses": [
+            {
+              "owner": "build",
+              "expression": "Box",
+              "kind": "reference",
+              "source_text": "Box",
+              "line": 8,
+              "start_byte": 319,
+              "end_byte": 322,
+              "target_file": "typescript/src/model.ts",
+              "target_symbol": "typescript/src/model.ts::Basket",
+              "status": "internal",
+              "binding_target_file": "typescript/src/model.ts",
+              "binding_target_symbol": "typescript/src/model.ts::Basket"
+            },
+            {
+              "owner": "build",
+              "expression": "Box",
+              "kind": "call",
+              "source_text": "Box",
+              "line": 9,
+              "start_byte": 338,
+              "end_byte": 341,
+              "target_file": "typescript/src/model.ts",
+              "target_symbol": "typescript/src/model.ts::Basket",
+              "status": "internal",
+              "binding_target_file": "typescript/src/model.ts",
+              "binding_target_symbol": "typescript/src/model.ts::Basket"
+            }
+          ],
+          "status": "internal",
+          "reason": "module_and_binding_resolved",
+          "target_file": "typescript/src/model.ts",
+          "target_symbol": "typescript/src/model.ts::Basket",
+          "bound_module": "",
+          "module_scope": "",
+          "start_byte": 37
+        },
+        {
+          "id": "typescript/src/service.ts@81:2",
+          "module": "./model.ts",
+          "name": "double",
+          "local": "twice",
+          "scope": "",
+          "line": 3,
+          "raw": "import { double as twice } from \"./model.ts\";",
+          "kind": "named",
+          "reexport": false,
+          "conditional": false,
+          "uses": [
+            {
+              "owner": "build",
+              "expression": "twice",
+              "kind": "call",
+              "source_text": "twice",
+              "line": 9,
+              "start_byte": 342,
+              "end_byte": 347,
+              "target_file": "typescript/src/model.ts",
+              "target_symbol": "typescript/src/model.ts::double",
+              "status": "internal",
+              "binding_target_file": "typescript/src/model.ts",
+              "binding_target_symbol": "typescript/src/model.ts::double"
+            },
+            {
+              "owner": "nested.run",
+              "expression": "twice",
+              "kind": "call",
+              "source_text": "twice",
+              "line": 24,
+              "start_byte": 728,
+              "end_byte": 733,
+              "target_file": "typescript/src/model.ts",
+              "target_symbol": "typescript/src/model.ts::double",
+              "status": "internal",
+              "binding_target_file": "typescript/src/model.ts",
+              "binding_target_symbol": "typescript/src/model.ts::double"
+            }
+          ],
+          "status": "internal",
+          "reason": "module_and_binding_resolved",
+          "target_file": "typescript/src/model.ts",
+          "target_symbol": "typescript/src/model.ts::double",
+          "bound_module": "",
+          "module_scope": "",
+          "start_byte": 81
+        },
+        {
+          "id": "typescript/src/service.ts@127:3",
+          "module": "./model.ts",
+          "name": "",
+          "local": "model",
+          "scope": "",
+          "line": 4,
+          "raw": "import * as model from \"./model.ts\";",
+          "kind": "namespace",
+          "reexport": false,
+          "conditional": false,
+          "uses": [
+            {
+              "owner": "describe",
+              "expression": "model.double",
+              "kind": "call",
+              "source_text": "model.double",
+              "line": 13,
+              "start_byte": 436,
+              "end_byte": 448,
+              "target_file": "typescript/src/model.ts",
+              "target_symbol": "typescript/src/model.ts::double",
+              "status": "internal",
+              "binding_target_file": "typescript/src/model.ts",
+              "binding_target_symbol": null
+            }
+          ],
+          "status": "internal",
+          "reason": "module_and_binding_resolved",
+          "target_file": "typescript/src/model.ts",
+          "target_symbol": null,
+          "bound_module": "",
+          "module_scope": "",
+          "start_byte": 127
+        },
+        {
+          "id": "typescript/src/service.ts@164:4",
+          "module": "./model.ts",
+          "name": "Countable",
+          "local": "Countable",
+          "scope": "",
+          "line": 5,
+          "raw": "import type { Countable } from \"./model.ts\";",
+          "kind": "named",
+          "reexport": false,
+          "conditional": false,
+          "uses": [
+            {
+              "owner": "total",
+              "expression": "Countable",
+              "kind": "reference",
+              "source_text": "Countable",
+              "line": 30,
+              "start_byte": 792,
+              "end_byte": 801,
+              "target_file": "typescript/src/model.ts",
+              "target_symbol": "typescript/src/model.ts::Countable",
+              "status": "internal",
+              "binding_target_file": "typescript/src/model.ts",
+              "binding_target_symbol": "typescript/src/model.ts::Countable"
+            }
+          ],
+          "status": "internal",
+          "reason": "module_and_binding_resolved",
+          "target_file": "typescript/src/model.ts",
+          "target_symbol": "typescript/src/model.ts::Countable",
+          "bound_module": "",
+          "module_scope": "",
+          "start_byte": 164
+        }
+      ],
+      "calls": [
+        {
+          "name": "twice",
+          "line": 9,
+          "caller": "build",
+          "expression": ""
+        },
+        {
+          "name": "inspect",
+          "line": 13,
+          "caller": "describe",
+          "expression": ""
+        },
+        {
+          "name": "double",
+          "line": 13,
+          "caller": "describe",
+          "expression": ""
+        },
+        {
+          "name": "twice",
+          "line": 19,
+          "caller": "shadow",
+          "expression": ""
+        },
+        {
+          "name": "twice",
+          "line": 24,
+          "caller": "nested.run",
+          "expression": ""
+        },
+        {
+          "name": "run",
+          "line": 27,
+          "caller": "nested",
+          "expression": ""
+        }
+      ],
+      "diagnostics": [],
+      "modules": [],
+      "exports": [
+        {
+          "exported": "build",
+          "local": "build",
+          "module": "",
+          "line": 8
+        },
+        {
+          "exported": "describe",
+          "local": "describe",
+          "module": "",
+          "line": 12
+        },
+        {
+          "exported": "shadow",
+          "local": "shadow",
+          "module": "",
+          "line": 18
+        },
+        {
+          "exported": "nested",
+          "local": "nested",
+          "module": "",
+          "line": 22
+        },
+        {
+          "exported": "total",
+          "local": "total",
+          "module": "",
+          "line": 30
+        }
+      ],
+      "imports": [
+        {
+          "raw": "import { inspect } from \"node:util\";",
+          "module": "node:util",
+          "symbols": [
+            "inspect"
+          ],
+          "line": 1
+        },
+        {
+          "raw": "import { Basket as Box } from \"./index.ts\";",
+          "module": "./index.ts",
+          "symbols": [
+            "Basket",
+            "Box"
+          ],
+          "line": 2
+        },
+        {
+          "raw": "import { double as twice } from \"./model.ts\";",
+          "module": "./model.ts",
+          "symbols": [
+            "double",
+            "twice"
+          ],
+          "line": 3
+        },
+        {
+          "raw": "import * as model from \"./model.ts\";",
+          "module": "./model.ts",
+          "symbols": [
+            "model"
+          ],
+          "line": 4
+        },
+        {
+          "raw": "import type { Countable } from \"./model.ts\";",
+          "module": "./model.ts",
+          "symbols": [
+            "Countable"
+          ],
+          "line": 5
+        }
+      ],
+      "symbols": [
+        {
+          "name": "build",
+          "qualified_name": "build",
+          "kind": "function",
+          "start_line": 8,
+          "end_line": 10,
+          "first_body_line": 8,
+          "last_body_line": 10,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 323,
+          "body_end_byte": 358,
+          "bases": [],
+          "parent": "",
+          "id": "typescript/src/service.ts::build",
+          "docstring": "",
+          "start_byte": 288,
+          "end_byte": 358,
+          "signature": "function build(count: number): Box"
+        },
+        {
+          "name": "describe",
+          "qualified_name": "describe",
+          "kind": "function",
+          "start_line": 12,
+          "end_line": 14,
+          "first_body_line": 12,
+          "last_body_line": 14,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 408,
+          "body_end_byte": 461,
+          "bases": [],
+          "parent": "",
+          "id": "typescript/src/service.ts::describe",
+          "docstring": "",
+          "start_byte": 367,
+          "end_byte": 461,
+          "signature": "function describe(count: number): string"
+        },
+        {
+          "name": "shadow",
+          "qualified_name": "shadow",
+          "kind": "function",
+          "start_line": 18,
+          "end_line": 20,
+          "first_body_line": 18,
+          "last_body_line": 20,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 631,
+          "body_end_byte": 653,
+          "bases": [],
+          "parent": "",
+          "id": "typescript/src/service.ts::shadow",
+          "docstring": "",
+          "start_byte": 573,
+          "end_byte": 653,
+          "signature": "function shadow(twice: (value: number) => number): number"
+        },
+        {
+          "name": "nested",
+          "qualified_name": "nested",
+          "kind": "function",
+          "start_line": 22,
+          "end_line": 28,
+          "first_body_line": 22,
+          "last_body_line": 28,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 688,
+          "body_end_byte": 760,
+          "bases": [],
+          "parent": "",
+          "id": "typescript/src/service.ts::nested",
+          "docstring": "",
+          "start_byte": 662,
+          "end_byte": 760,
+          "signature": "function nested(): number"
+        },
+        {
+          "name": "run",
+          "qualified_name": "nested.run",
+          "kind": "function",
+          "start_line": 23,
+          "end_line": 25,
+          "first_body_line": 23,
+          "last_body_line": 25,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 715,
+          "body_end_byte": 741,
+          "bases": [],
+          "parent": "nested",
+          "id": "typescript/src/service.ts::nested.run",
+          "docstring": "",
+          "start_byte": 692,
+          "end_byte": 741,
+          "signature": "function run(): number"
+        },
+        {
+          "name": "total",
+          "qualified_name": "total",
+          "kind": "function",
+          "start_line": 30,
+          "end_line": 32,
+          "first_body_line": 30,
+          "last_body_line": 32,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 811,
+          "body_end_byte": 837,
+          "bases": [],
+          "parent": "",
+          "id": "typescript/src/service.ts::total",
+          "docstring": "",
+          "start_byte": 769,
+          "end_byte": 837,
+          "signature": "function total(basket: Countable): number"
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "python/runtime_check.py",
+      "target": "python/src/orchard/service.py",
+      "kind": "import",
+      "line": 2,
+      "raw": "from orchard.service import build, describe, nested, shadow",
+      "symbols": [
+        "build"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "python/runtime_check.py::ExampleTests.test_imports_really_work",
+      "target": "python/src/orchard/service.py::build",
+      "kind": "invoke",
+      "line": 7,
+      "raw": "build",
+      "symbols": [
+        "build"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "python/runtime_check.py",
+      "target": "python/src/orchard/service.py",
+      "kind": "import",
+      "line": 2,
+      "raw": "from orchard.service import build, describe, nested, shadow",
+      "symbols": [
+        "describe"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "python/runtime_check.py::ExampleTests.test_imports_really_work",
+      "target": "python/src/orchard/service.py::describe",
+      "kind": "invoke",
+      "line": 8,
+      "raw": "describe",
+      "symbols": [
+        "describe"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "python/runtime_check.py",
+      "target": "python/src/orchard/service.py",
+      "kind": "import",
+      "line": 2,
+      "raw": "from orchard.service import build, describe, nested, shadow",
+      "symbols": [
+        "nested"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "python/runtime_check.py::ExampleTests.test_imports_really_work",
+      "target": "python/src/orchard/service.py::nested",
+      "kind": "invoke",
+      "line": 9,
+      "raw": "nested",
+      "symbols": [
+        "nested"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "python/runtime_check.py",
+      "target": "python/src/orchard/service.py",
+      "kind": "import",
+      "line": 2,
+      "raw": "from orchard.service import build, describe, nested, shadow",
+      "symbols": [
+        "shadow"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "python/runtime_check.py::ExampleTests.test_imports_really_work",
+      "target": "python/src/orchard/service.py::shadow",
+      "kind": "invoke",
+      "line": 10,
+      "raw": "shadow",
+      "symbols": [
+        "shadow"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "python/src/orchard/__init__.py",
+      "target": "python/src/orchard/model.py",
+      "kind": "import",
+      "line": 1,
+      "raw": "from .model import Basket",
+      "symbols": [
+        "Basket"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "python/src/orchard/service.py",
+      "target": "python/src/orchard/__init__.py",
+      "kind": "import",
+      "line": 2,
+      "raw": "from orchard import Basket as Box",
+      "symbols": [
+        "Box"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "python/src/orchard/service.py",
+      "target": "python/src/orchard/model.py",
+      "kind": "import",
+      "line": 2,
+      "raw": "from orchard import Basket as Box",
+      "symbols": [
+        "Box"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "python/src/orchard/service.py::build",
+      "target": "python/src/orchard/model.py::Basket",
+      "kind": "invoke",
+      "line": 9,
+      "raw": "Box",
+      "symbols": [
+        "Box"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "python/src/orchard/service.py",
+      "target": "python/src/orchard/model.py",
+      "kind": "import",
+      "line": 3,
+      "raw": "from .model import double as twice",
+      "symbols": [
+        "twice"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "python/src/orchard/service.py::build",
+      "target": "python/src/orchard/model.py::double",
+      "kind": "invoke",
+      "line": 9,
+      "raw": "twice",
+      "symbols": [
+        "twice"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "python/src/orchard/service.py",
+      "target": "python/src/orchard/__init__.py",
+      "kind": "import",
+      "line": 4,
+      "raw": "from . import model",
+      "symbols": [
+        "model"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "python/src/orchard/service.py",
+      "target": "python/src/orchard/model.py",
+      "kind": "import",
+      "line": 4,
+      "raw": "from . import model",
+      "symbols": [
+        "model"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "python/src/orchard/service.py::describe",
+      "target": "python/src/orchard/model.py::double",
+      "kind": "invoke",
+      "line": 13,
+      "raw": "model.double",
+      "symbols": [
+        "model"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "python/src/orchard/service.py",
+      "target": "python/src/orchard/model.py",
+      "kind": "import",
+      "line": 21,
+      "raw": "from .model import double as local_double",
+      "symbols": [
+        "local_double"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "python/src/orchard/service.py::nested.run",
+      "target": "python/src/orchard/model.py::double",
+      "kind": "invoke",
+      "line": 24,
+      "raw": "local_double",
+      "symbols": [
+        "local_double"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "rust/src/lib.rs",
+      "target": "rust/src/model.rs",
+      "kind": "import",
+      "line": 3,
+      "raw": "pub use model::Basket;",
+      "symbols": [
+        "Basket"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "rust/src/service.rs",
+      "target": "rust/src/model.rs",
+      "kind": "import",
+      "line": 1,
+      "raw": "use crate::model::{Basket as Box, double as twice};",
+      "symbols": [
+        "Box"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "rust/src/service.rs::build",
+      "target": "rust/src/model.rs::Basket",
+      "kind": "reference",
+      "line": 4,
+      "raw": "Box",
+      "symbols": [
+        "Box"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "rust/src/service.rs::build",
+      "target": "rust/src/model.rs::Basket.new",
+      "kind": "invoke",
+      "line": 5,
+      "raw": "Box::new",
+      "symbols": [
+        "Box"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "rust/src/service.rs",
+      "target": "rust/src/model.rs",
+      "kind": "import",
+      "line": 1,
+      "raw": "use crate::model::{Basket as Box, double as twice};",
+      "symbols": [
+        "twice"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "rust/src/service.rs::build",
+      "target": "rust/src/model.rs::double",
+      "kind": "invoke",
+      "line": 5,
+      "raw": "twice",
+      "symbols": [
+        "twice"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "rust/src/service.rs",
+      "target": "rust/src/model.rs",
+      "kind": "import",
+      "line": 9,
+      "raw": "use super::super::model::double as twice;",
+      "symbols": [
+        "twice"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "rust/src/service.rs::nested.run",
+      "target": "rust/src/model.rs::double",
+      "kind": "invoke",
+      "line": 10,
+      "raw": "twice",
+      "symbols": [
+        "twice"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "rust/tests/integration.rs",
+      "target": "rust/src/service.rs",
+      "kind": "import",
+      "line": 1,
+      "raw": "use orchard_map::service::{build, nested};",
+      "symbols": [
+        "build"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "rust/tests/integration.rs::imported_paths_work",
+      "target": "rust/src/service.rs::build",
+      "kind": "invoke",
+      "line": 6,
+      "raw": "build",
+      "symbols": [
+        "build"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "rust/tests/integration.rs",
+      "target": "rust/src/service.rs",
+      "kind": "import",
+      "line": 1,
+      "raw": "use orchard_map::service::{build, nested};",
+      "symbols": [
+        "nested"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "rust/tests/integration.rs",
+      "target": "rust/src/model.rs",
+      "kind": "import",
+      "line": 2,
+      "raw": "use orchard_map::Basket;",
+      "symbols": [
+        "Basket"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "rust/tests/integration.rs::imported_paths_work",
+      "target": "rust/src/model.rs::Basket",
+      "kind": "reference",
+      "line": 6,
+      "raw": "Basket",
+      "symbols": [
+        "Basket"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "typescript/runtime_check.ts",
+      "target": "typescript/src/service.ts",
+      "kind": "import",
+      "line": 3,
+      "raw": "import { build, describe, nested, shadow, total } from \"./src/service.ts\";",
+      "symbols": [
+        "build"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "typescript/runtime_check.ts::imports really work",
+      "target": "typescript/src/service.ts::build",
+      "kind": "invoke",
+      "line": 6,
+      "raw": "build",
+      "symbols": [
+        "build"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "typescript/runtime_check.ts::imports really work",
+      "target": "typescript/src/service.ts::build",
+      "kind": "invoke",
+      "line": 10,
+      "raw": "build",
+      "symbols": [
+        "build"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "typescript/runtime_check.ts",
+      "target": "typescript/src/service.ts",
+      "kind": "import",
+      "line": 3,
+      "raw": "import { build, describe, nested, shadow, total } from \"./src/service.ts\";",
+      "symbols": [
+        "describe"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "typescript/runtime_check.ts::imports really work",
+      "target": "typescript/src/service.ts::describe",
+      "kind": "invoke",
+      "line": 7,
+      "raw": "describe",
+      "symbols": [
+        "describe"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "typescript/runtime_check.ts",
+      "target": "typescript/src/service.ts",
+      "kind": "import",
+      "line": 3,
+      "raw": "import { build, describe, nested, shadow, total } from \"./src/service.ts\";",
+      "symbols": [
+        "nested"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "typescript/runtime_check.ts::imports really work",
+      "target": "typescript/src/service.ts::nested",
+      "kind": "invoke",
+      "line": 8,
+      "raw": "nested",
+      "symbols": [
+        "nested"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "typescript/runtime_check.ts",
+      "target": "typescript/src/service.ts",
+      "kind": "import",
+      "line": 3,
+      "raw": "import { build, describe, nested, shadow, total } from \"./src/service.ts\";",
+      "symbols": [
+        "shadow"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "typescript/runtime_check.ts::imports really work",
+      "target": "typescript/src/service.ts::shadow",
+      "kind": "invoke",
+      "line": 9,
+      "raw": "shadow",
+      "symbols": [
+        "shadow"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "typescript/runtime_check.ts",
+      "target": "typescript/src/service.ts",
+      "kind": "import",
+      "line": 3,
+      "raw": "import { build, describe, nested, shadow, total } from \"./src/service.ts\";",
+      "symbols": [
+        "total"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "typescript/runtime_check.ts::imports really work",
+      "target": "typescript/src/service.ts::total",
+      "kind": "invoke",
+      "line": 10,
+      "raw": "total",
+      "symbols": [
+        "total"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "typescript/src/index.ts",
+      "target": "typescript/src/model.ts",
+      "kind": "import",
+      "line": 4,
+      "raw": "export { Basket } from \"./model.ts\";",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "typescript/src/index.ts",
+      "target": "typescript/src/model.ts",
+      "kind": "import",
+      "line": 5,
+      "raw": "export type { Countable } from \"./model.ts\";",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "typescript/src/service.ts",
+      "target": "typescript/src/index.ts",
+      "kind": "import",
+      "line": 2,
+      "raw": "import { Basket as Box } from \"./index.ts\";",
+      "symbols": [
+        "Box"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "typescript/src/service.ts",
+      "target": "typescript/src/model.ts",
+      "kind": "import",
+      "line": 2,
+      "raw": "import { Basket as Box } from \"./index.ts\";",
+      "symbols": [
+        "Box"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "typescript/src/service.ts::build",
+      "target": "typescript/src/model.ts::Basket",
+      "kind": "reference",
+      "line": 8,
+      "raw": "Box",
+      "symbols": [
+        "Box"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "typescript/src/service.ts::build",
+      "target": "typescript/src/model.ts::Basket",
+      "kind": "invoke",
+      "line": 9,
+      "raw": "Box",
+      "symbols": [
+        "Box"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "typescript/src/service.ts",
+      "target": "typescript/src/model.ts",
+      "kind": "import",
+      "line": 3,
+      "raw": "import { double as twice } from \"./model.ts\";",
+      "symbols": [
+        "twice"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "typescript/src/service.ts::build",
+      "target": "typescript/src/model.ts::double",
+      "kind": "invoke",
+      "line": 9,
+      "raw": "twice",
+      "symbols": [
+        "twice"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "typescript/src/service.ts::nested.run",
+      "target": "typescript/src/model.ts::double",
+      "kind": "invoke",
+      "line": 24,
+      "raw": "twice",
+      "symbols": [
+        "twice"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "typescript/src/service.ts",
+      "target": "typescript/src/model.ts",
+      "kind": "import",
+      "line": 4,
+      "raw": "import * as model from \"./model.ts\";",
+      "symbols": [
+        "model"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "typescript/src/service.ts::describe",
+      "target": "typescript/src/model.ts::double",
+      "kind": "invoke",
+      "line": 13,
+      "raw": "model.double",
+      "symbols": [
+        "model"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "typescript/src/service.ts",
+      "target": "typescript/src/model.ts",
+      "kind": "import",
+      "line": 5,
+      "raw": "import type { Countable } from \"./model.ts\";",
+      "symbols": [
+        "Countable"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "typescript/src/service.ts::total",
+      "target": "typescript/src/model.ts::Countable",
+      "kind": "reference",
+      "line": 30,
+      "raw": "Countable",
+      "symbols": [
+        "Countable"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "rust/src/lib.rs",
+      "target": "rust/src/model.rs",
+      "kind": "import",
+      "line": 1,
+      "raw": "mod model",
+      "symbols": [
+        "model"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "rust/src/lib.rs",
+      "target": "rust/src/service.rs",
+      "kind": "import",
+      "line": 2,
+      "raw": "mod service",
+      "symbols": [
+        "service"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "python/runtime_check.py",
+      "target": "python/runtime_check.py::ExampleTests",
+      "kind": "contain",
+      "line": 5,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "python/runtime_check.py::ExampleTests",
+      "target": "python/runtime_check.py::ExampleTests.test_imports_really_work",
+      "kind": "contain",
+      "line": 6,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "python/src/orchard/model.py",
+      "target": "python/src/orchard/model.py::Basket",
+      "kind": "contain",
+      "line": 1,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "python/src/orchard/model.py::Basket",
+      "target": "python/src/orchard/model.py::Basket.__init__",
+      "kind": "contain",
+      "line": 3,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "python/src/orchard/model.py",
+      "target": "python/src/orchard/model.py::double",
+      "kind": "contain",
+      "line": 7,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "python/src/orchard/service.py",
+      "target": "python/src/orchard/service.py::build",
+      "kind": "contain",
+      "line": 7,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "python/src/orchard/service.py",
+      "target": "python/src/orchard/service.py::describe",
+      "kind": "contain",
+      "line": 12,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "python/src/orchard/service.py",
+      "target": "python/src/orchard/service.py::shadow",
+      "kind": "contain",
+      "line": 16,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "python/src/orchard/service.py",
+      "target": "python/src/orchard/service.py::nested",
+      "kind": "contain",
+      "line": 20,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "python/src/orchard/service.py::nested",
+      "target": "python/src/orchard/service.py::nested.run",
+      "kind": "contain",
+      "line": 23,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "rust/src/model.rs",
+      "target": "rust/src/model.rs::Basket",
+      "kind": "contain",
+      "line": 1,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "rust/src/model.rs::Basket",
+      "target": "rust/src/model.rs::Basket.new",
+      "kind": "contain",
+      "line": 6,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "rust/src/model.rs",
+      "target": "rust/src/model.rs::double",
+      "kind": "contain",
+      "line": 9,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "rust/src/service.rs",
+      "target": "rust/src/service.rs::build",
+      "kind": "contain",
+      "line": 4,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "rust/src/service.rs",
+      "target": "rust/src/service.rs::nested",
+      "kind": "contain",
+      "line": 8,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "rust/src/service.rs::nested",
+      "target": "rust/src/service.rs::nested.run",
+      "kind": "contain",
+      "line": 10,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "rust/tests/integration.rs",
+      "target": "rust/tests/integration.rs::imported_paths_work",
+      "kind": "contain",
+      "line": 5,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "typescript/runtime_check.ts",
+      "target": "typescript/runtime_check.ts::imports really work",
+      "kind": "contain",
+      "line": 5,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "typescript/src/model.ts",
+      "target": "typescript/src/model.ts::Countable",
+      "kind": "contain",
+      "line": 1,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "typescript/src/model.ts",
+      "target": "typescript/src/model.ts::Basket",
+      "kind": "contain",
+      "line": 6,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "typescript/src/model.ts::Basket",
+      "target": "typescript/src/model.ts::Basket.constructor",
+      "kind": "contain",
+      "line": 9,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "typescript/src/model.ts",
+      "target": "typescript/src/model.ts::double",
+      "kind": "contain",
+      "line": 14,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "typescript/src/service.ts",
+      "target": "typescript/src/service.ts::build",
+      "kind": "contain",
+      "line": 8,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "typescript/src/service.ts",
+      "target": "typescript/src/service.ts::describe",
+      "kind": "contain",
+      "line": 12,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "typescript/src/service.ts",
+      "target": "typescript/src/service.ts::shadow",
+      "kind": "contain",
+      "line": 18,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "typescript/src/service.ts",
+      "target": "typescript/src/service.ts::nested",
+      "kind": "contain",
+      "line": 22,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "typescript/src/service.ts::nested",
+      "target": "typescript/src/service.ts::nested.run",
+      "kind": "contain",
+      "line": 23,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "typescript/src/service.ts",
+      "target": "typescript/src/service.ts::total",
+      "kind": "contain",
+      "line": 30,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "typescript/src/model.ts::Basket",
+      "target": "typescript/src/model.ts::Countable",
+      "kind": "inherit",
+      "line": 6,
+      "raw": "Countable",
+      "symbols": [],
+      "conditional": false
+    }
+  ]
+}

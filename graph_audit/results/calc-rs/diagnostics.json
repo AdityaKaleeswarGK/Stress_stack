@@ -1,0 +1,353 @@
+{
+  "summary": {
+    "label": "calc-rs",
+    "root": "/Users/adityagk/Desktop/projects/calc-rs",
+    "files_total": 8,
+    "files_by_language": {
+      "rust": 8
+    },
+    "symbols_total": 55,
+    "tests_total": 4,
+    "calls_total": 305,
+    "syntax_errors": 0,
+    "unparsed_known_language": 0,
+    "edges_total": 69,
+    "edges_by_kind": {
+      "contain": 55,
+      "import": 14
+    },
+    "scan_seconds": 0.022,
+    "import_records": 31,
+    "import_records_with_any_edge_on_line": 14,
+    "import_count_caveat": "Records without edges include external imports and unsupported resolution; this is not recall. Multiple bindings on a line can be only partly resolved.",
+    "files_with_incoming_edges": 6,
+    "most_imported_files": [
+      [
+        "src/models.rs",
+        7
+      ],
+      [
+        "src/history.rs",
+        3
+      ],
+      [
+        "src/engine.rs",
+        1
+      ],
+      [
+        "src/parser.rs",
+        1
+      ],
+      [
+        "src/app.rs",
+        1
+      ]
+    ],
+    "docstrings_in_memory": 0,
+    "docstrings_saved": 0,
+    "calls_saved": 0,
+    "issues": {
+      "duplicate_symbol_ids": {},
+      "dangling_edges": [],
+      "symbol_parents_missing_in_file": [],
+      "python_definitions_not_indexed": []
+    },
+    "previous": {
+      "path": "/Users/adityagk/Desktop/projects/calc-rs/repo_graph.json",
+      "sha256": "128d8a67cb70636c6e4198930f7a82c7d89fa29ac255d9a877a3da919b590732",
+      "schema": "0.2.0",
+      "statistics": {
+        "files_total": 8,
+        "files_by_language": {
+          "rust": 8
+        },
+        "symbols_total": 55,
+        "tests_total": 4,
+        "calls_total": 305,
+        "syntax_errors": 0,
+        "unparsed_known_language": 0,
+        "edges_total": 55,
+        "edges_by_kind": {
+          "contain": 55
+        }
+      },
+      "import_edges": 0,
+      "comparison_caveat": "Old artifacts do not establish identical source, query, or configuration versions."
+    }
+  },
+  "files": [
+    {
+      "path": "src/app.rs",
+      "language": "rust",
+      "parser": "tree_sitter",
+      "syntax_error": false,
+      "symbols": 9,
+      "calls_in_memory": 18,
+      "calls_with_declared_symbol_owner": 18,
+      "docstrings_in_memory": 0,
+      "incoming_edge_count": 1,
+      "incoming_files": [
+        "src/main.rs"
+      ],
+      "imports_without_resolved_edge_on_line": []
+    },
+    {
+      "path": "src/engine.rs",
+      "language": "rust",
+      "parser": "tree_sitter",
+      "syntax_error": false,
+      "symbols": 5,
+      "calls_in_memory": 37,
+      "calls_with_declared_symbol_owner": 36,
+      "docstrings_in_memory": 0,
+      "incoming_edge_count": 1,
+      "incoming_files": [
+        "src/app.rs"
+      ],
+      "imports_without_resolved_edge_on_line": [
+        {
+          "raw": "use rust_decimal_macros::dec;",
+          "module": "rust_decimal_macros",
+          "symbols": [
+            "dec"
+          ],
+          "line": 4
+        }
+      ]
+    },
+    {
+      "path": "src/history.rs",
+      "language": "rust",
+      "parser": "tree_sitter",
+      "syntax_error": false,
+      "symbols": 9,
+      "calls_in_memory": 48,
+      "calls_with_declared_symbol_owner": 19,
+      "docstrings_in_memory": 0,
+      "incoming_edge_count": 3,
+      "incoming_files": [
+        "src/app.rs",
+        "src/persistence.rs"
+      ],
+      "imports_without_resolved_edge_on_line": [
+        {
+          "raw": "use std::sync::{Arc, Mutex};",
+          "module": "std::sync",
+          "symbols": [
+            "Arc",
+            "Mutex"
+          ],
+          "line": 1
+        },
+        {
+          "raw": "use serde::{Deserialize, Serialize, Serializer, Deserializer};",
+          "module": "serde",
+          "symbols": [
+            "Deserialize",
+            "Serialize",
+            "Serializer",
+            "Deserializer"
+          ],
+          "line": 3
+        },
+        {
+          "raw": "use std::thread;",
+          "module": "std",
+          "symbols": [
+            "thread"
+          ],
+          "line": 67
+        }
+      ]
+    },
+    {
+      "path": "src/main.rs",
+      "language": "rust",
+      "parser": "tree_sitter",
+      "syntax_error": false,
+      "symbols": 1,
+      "calls_in_memory": 32,
+      "calls_with_declared_symbol_owner": 0,
+      "docstrings_in_memory": 0,
+      "incoming_edge_count": 0,
+      "incoming_files": [],
+      "imports_without_resolved_edge_on_line": [
+        {
+          "raw": "use crossterm::{\n    event::{self, DisableMouseCapture, EnableMouseCapture, Event, KeyCode, KeyModifiers},\n    execute,\n    terminal::{disable_raw_mode, enable_raw_mode, EnterAlternateScreen, LeaveAlternateScreen},\n};",
+          "module": "crossterm",
+          "symbols": [
+            "execute"
+          ],
+          "line": 1
+        },
+        {
+          "raw": "use std::{error::Error, io, time::{Duration, Instant}};",
+          "module": "std",
+          "symbols": [
+            "io"
+          ],
+          "line": 6
+        },
+        {
+          "raw": "use ratatui::{backend::CrosstermBackend, Terminal};",
+          "module": "ratatui",
+          "symbols": [
+            "Terminal"
+          ],
+          "line": 7
+        }
+      ]
+    },
+    {
+      "path": "src/models.rs",
+      "language": "rust",
+      "parser": "tree_sitter",
+      "syntax_error": false,
+      "symbols": 9,
+      "calls_in_memory": 6,
+      "calls_with_declared_symbol_owner": 6,
+      "docstrings_in_memory": 0,
+      "incoming_edge_count": 7,
+      "incoming_files": [
+        "src/app.rs",
+        "src/engine.rs",
+        "src/history.rs",
+        "src/parser.rs",
+        "src/persistence.rs",
+        "src/ui.rs"
+      ],
+      "imports_without_resolved_edge_on_line": [
+        {
+          "raw": "use serde::{Deserialize, Serialize};",
+          "module": "serde",
+          "symbols": [
+            "Deserialize",
+            "Serialize"
+          ],
+          "line": 1
+        },
+        {
+          "raw": "use rust_decimal::Decimal;",
+          "module": "rust_decimal",
+          "symbols": [
+            "Decimal"
+          ],
+          "line": 2
+        },
+        {
+          "raw": "use std::time::{SystemTime, UNIX_EPOCH};",
+          "module": "std::time",
+          "symbols": [
+            "SystemTime",
+            "UNIX_EPOCH"
+          ],
+          "line": 3
+        }
+      ]
+    },
+    {
+      "path": "src/parser.rs",
+      "language": "rust",
+      "parser": "tree_sitter",
+      "syntax_error": false,
+      "symbols": 9,
+      "calls_in_memory": 85,
+      "calls_with_declared_symbol_owner": 36,
+      "docstrings_in_memory": 0,
+      "incoming_edge_count": 1,
+      "incoming_files": [
+        "src/app.rs"
+      ],
+      "imports_without_resolved_edge_on_line": [
+        {
+          "raw": "use rust_decimal::Decimal;",
+          "module": "rust_decimal",
+          "symbols": [
+            "Decimal"
+          ],
+          "line": 2
+        },
+        {
+          "raw": "use std::str::FromStr;",
+          "module": "std::str",
+          "symbols": [
+            "FromStr"
+          ],
+          "line": 3
+        }
+      ]
+    },
+    {
+      "path": "src/persistence.rs",
+      "language": "rust",
+      "parser": "tree_sitter",
+      "syntax_error": false,
+      "symbols": 7,
+      "calls_in_memory": 31,
+      "calls_with_declared_symbol_owner": 2,
+      "docstrings_in_memory": 0,
+      "incoming_edge_count": 0,
+      "incoming_files": [],
+      "imports_without_resolved_edge_on_line": [
+        {
+          "raw": "use serde::{Deserialize, Serialize};",
+          "module": "serde",
+          "symbols": [
+            "Deserialize",
+            "Serialize"
+          ],
+          "line": 1
+        },
+        {
+          "raw": "use std::fs::{self, File};",
+          "module": "std::fs",
+          "symbols": [
+            "File"
+          ],
+          "line": 2
+        },
+        {
+          "raw": "use std::io::{BufReader, Write};",
+          "module": "std::io",
+          "symbols": [
+            "BufReader",
+            "Write"
+          ],
+          "line": 3
+        },
+        {
+          "raw": "use std::path::{Path};",
+          "module": "std::path",
+          "symbols": [
+            "Path"
+          ],
+          "line": 4
+        }
+      ]
+    },
+    {
+      "path": "src/ui.rs",
+      "language": "rust",
+      "parser": "tree_sitter",
+      "syntax_error": false,
+      "symbols": 6,
+      "calls_in_memory": 48,
+      "calls_with_declared_symbol_owner": 48,
+      "docstrings_in_memory": 0,
+      "incoming_edge_count": 1,
+      "incoming_files": [
+        "src/main.rs"
+      ],
+      "imports_without_resolved_edge_on_line": [
+        {
+          "raw": "use ratatui::{\n    layout::{Constraint, Direction, Layout, Rect},\n    style::Style,\n    widgets::{Block, Borders, List, ListItem, Paragraph},\n    Frame,\n};",
+          "module": "ratatui",
+          "symbols": [
+            "Frame"
+          ],
+          "line": 1
+        }
+      ]
+    }
+  ]
+}

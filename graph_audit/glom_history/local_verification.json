@@ -1,0 +1,372 @@
+{
+  "repo": "mahmoud/glom",
+  "head_sha": "fd70d3051a6a1bcb5152ec2d8e2cdc8e852f95e6",
+  "recorded_at": "2026-09-12T11:26:45.462826+00:00",
+  "total_reachable_commits": 1050,
+  "first_parent_commits": 424,
+  "database_summary": {
+    "kept": 58,
+    "dropped": 182,
+    "needs_enrichment": 184,
+    "by_style": {
+      "squash": 17,
+      "merge_commit": 41
+    },
+    "mainline_points": 424,
+    "commits_measured": 423,
+    "walk_since": null,
+    "walk_until": null
+  },
+  "accounting_matches": true,
+  "records_checked": 242,
+  "record_failures": [],
+  "patch_replays": [
+    {
+      "sha": "e515fb33c7af491c6a20b2618591736361bb1d08",
+      "base_sha": "64141ba4794eaadf63242aa76191448159306251",
+      "subject": "Keep PathAccessError printable for Scope/S paths (#249) (#298)",
+      "tree_matches": true,
+      "patch_sha256": "6bbb47c9913c003a948d44ca8ce12df63e6605c5633a695be690f7fbfbf819fb"
+    },
+    {
+      "sha": "9716620ce5e4de73c07b3083634bb3abb58b657f",
+      "base_sha": "533a1025b670351b66406efb1f6f1bc8cc839d8b",
+      "subject": "Add Python 3.13 and 3.14 tests and fixes (#296)",
+      "tree_matches": true,
+      "patch_sha256": "9e45a6fe3c57f2b26895f25e128019a1e0a5366895118caa4ce1a5171e5161f9"
+    },
+    {
+      "sha": "bc653da9afec59bbb9c57230ffa2a12374f0346c",
+      "base_sha": "24c21dcc44cc81abc193aa3bfa2f66304470d205",
+      "subject": "Add Python 3.12 (#285)",
+      "tree_matches": true,
+      "patch_sha256": "061d9d61b9b0ed3f2997e373bbae341d01554a5db13569ad98b3f2b460f495dd"
+    },
+    {
+      "sha": "24c21dcc44cc81abc193aa3bfa2f66304470d205",
+      "base_sha": "5cef40707d8b4765c621d7a09ad5f35f96bf7d1a",
+      "subject": "Add --scalar flag to CLI (#280)",
+      "tree_matches": true,
+      "patch_sha256": "137ca36ce8bb4bb3399f3562898b486160849f3cd2a1af9752aa150ce3c7c5d2"
+    },
+    {
+      "sha": "d582d52fe448a1ba3c236cc59f956cf1aeb5efc3",
+      "base_sha": "1e284ee97b2cf2081cb230f5a94e4f7b77dbce40",
+      "subject": "Merge branch 'master' of github.com:mahmoud/glom",
+      "tree_matches": true,
+      "patch_sha256": "c4aee3d7390f60d470d3792a0a1c7a1a1521d6e37639319a85b73113a2126d31"
+    },
+    {
+      "sha": "39aa4fa126373e8faedd6a27b21afaf5e23b5a30",
+      "base_sha": "51d715de5bba7fa57cd38ab35ea0d6a642494407",
+      "subject": "Merge pull request #2 from mahmoud/call-and-target",
+      "tree_matches": true,
+      "patch_sha256": "dc8a3c823629f7ccce296d5afd1ac09ab4962368d07935878303b03aafd8b399"
+    },
+    {
+      "sha": "6439640b5bd568191ec50ee3cd1ceece09752bc4",
+      "base_sha": "cebecbc9fd7dbc29e55776e4c4cd46cd8439fe90",
+      "subject": "Merge pull request #1 from mahmoud/objectify",
+      "tree_matches": true,
+      "patch_sha256": "e167badf6f4add1b0e790f9333325a2f49dc68d4c66cfcd1859e67bc63a412b2"
+    },
+    {
+      "sha": "94b63752c686a42bf71baeec15e250257aee167d",
+      "base_sha": "599496d9f55f86f19402c692627ea51671c4e9f2",
+      "subject": "Merge pull request #196 from mahmoud/arg-mode",
+      "tree_matches": true,
+      "patch_sha256": "1529b7f86e313d637cbb2e6cc90a788f78d8abd52c54407ae984801ab6f80580"
+    },
+    {
+      "sha": "032f25287331f86835ca91edd068aab5aaefdbef",
+      "base_sha": "6071cfebd178722a5e7f2e1dd7480402cc5896b5",
+      "subject": "Merge pull request #144 from mahmoud/path-star",
+      "tree_matches": true,
+      "patch_sha256": "2ad4cd2a75c9b91cdab4ce4879800281ad7b90d0f4af79d95f43b5995cda57a3"
+    },
+    {
+      "sha": "16a239726409b177d3b9111120131eb324089a1c",
+      "base_sha": "67cd5a4ed7b21607dfefbafb86d9f93314afd6e1",
+      "subject": "Merge pull request #232 from mahmoud/ghactions",
+      "tree_matches": true,
+      "patch_sha256": "c15ad5c36eed0519571a6f7e77dd299d2776e155c4cae95da83ca013a3ab2018"
+    },
+    {
+      "sha": "573cb911aee0af7149ea8376a05f61b3435b23e7",
+      "base_sha": "c8502f22e46bd58c97ad8c9abab1c8ae90ed892a",
+      "subject": "Fix typo in `core.py` (#275)",
+      "tree_matches": true,
+      "patch_sha256": "ef4f22cfcf3ff3e838bf41ae393fc16387e8c56243655e2b8f40b95062345bec"
+    },
+    {
+      "sha": "6fd41340f30519ddc64a546ad2703dfe53f12356",
+      "base_sha": "e515fb33c7af491c6a20b2618591736361bb1d08",
+      "subject": "fix Path.__getitem__ off-by-one (GH-299), add test extra to setup.py",
+      "tree_matches": true,
+      "patch_sha256": "6d257b76c7c3f7eb5591ca3a941ea961288fb1bf49381e890b3d86710ec55e1a"
+    },
+    {
+      "sha": "64141ba4794eaadf63242aa76191448159306251",
+      "base_sha": "c1b2d387548fd3bb736453a6dbd6f749cf329faa",
+      "subject": "Docs refresh: fix dead embeds, stale content, add glompad links, remove backward-compat exports",
+      "tree_matches": true,
+      "patch_sha256": "56300e4416518461cab11e4089fe3297b58097ed161c5326828b5bbe5cdad560"
+    },
+    {
+      "sha": "c1b2d387548fd3bb736453a6dbd6f749cf329faa",
+      "base_sha": "811eadeec404bd99ee5a43ca551e8fb220b999f3",
+      "subject": "bumping version for v25.12.1dev",
+      "tree_matches": true,
+      "patch_sha256": "93941fe7dc114b4a85e3518dbe1ee6e6354c5ae8c4681037d709fca1a4355a5a"
+    }
+  ],
+  "missing_standard_merge_pr_numbers": [
+    {
+      "sha": "94b63752c686a42bf71baeec15e250257aee167d",
+      "expected_pr": 196,
+      "subject": "Merge pull request #196 from mahmoud/arg-mode"
+    },
+    {
+      "sha": "032f25287331f86835ca91edd068aab5aaefdbef",
+      "expected_pr": 144,
+      "subject": "Merge pull request #144 from mahmoud/path-star"
+    },
+    {
+      "sha": "16a239726409b177d3b9111120131eb324089a1c",
+      "expected_pr": 232,
+      "subject": "Merge pull request #232 from mahmoud/ghactions"
+    },
+    {
+      "sha": "c31c91e96c14ee58a92bce82d199ae6ac8cbbd05",
+      "expected_pr": 206,
+      "subject": "Merge pull request #206 from mahmoud/omni-t"
+    },
+    {
+      "sha": "55bbcd5d8ff4d07a133048a806604d3c290ac8d7",
+      "expected_pr": 198,
+      "subject": "Merge pull request #198 from mahmoud/perf"
+    },
+    {
+      "sha": "3cdf4e77c9172c55ae17163b4f899f3db51f52cf",
+      "expected_pr": 191,
+      "subject": "Merge pull request #191 from mahmoud/pipe-spec"
+    },
+    {
+      "sha": "e8cd3b8f2eca12a84a952ff80ae09ca00e055184",
+      "expected_pr": 190,
+      "subject": "Merge pull request #190 from mahmoud/glomit-spec-instances-only"
+    },
+    {
+      "sha": "94dcd799ad3f381d12692c7d73029107f30a392e",
+      "expected_pr": 174,
+      "subject": "Merge pull request #174 from mahmoud/s-scope-assignment"
+    },
+    {
+      "sha": "8289b946ba6a996b58904b5175fccddc0b106c4f",
+      "expected_pr": 170,
+      "subject": "Merge pull request #170 from mahmoud/error-branches"
+    },
+    {
+      "sha": "784afb59d976d119146c54530e9c5dd9050eeda6",
+      "expected_pr": 140,
+      "subject": "Merge pull request #140 from P-Alban/add-version-attribute"
+    },
+    {
+      "sha": "b609f91302ef4f35b4d5a0132a0d735248e4ea99",
+      "expected_pr": 171,
+      "subject": "Merge pull request #171 from mahmoud/t-dunder"
+    },
+    {
+      "sha": "5806a8abe5321ad403b3455fa3e2158b11a115be",
+      "expected_pr": 150,
+      "subject": "Merge pull request #150 from mahmoud/let-var"
+    },
+    {
+      "sha": "00293b2d8c1d9e084148b15f17f2c7338fc0e740",
+      "expected_pr": 163,
+      "subject": "Merge pull request #163 from mahmoud/switch"
+    },
+    {
+      "sha": "8927c775167f395b8b43d9ba0149a9ea5c87aa9d",
+      "expected_pr": 153,
+      "subject": "Merge pull request #153 from bryanoltman/patch-2"
+    },
+    {
+      "sha": "9943c611596d509148791a406bff2f35b7c549a1",
+      "expected_pr": 112,
+      "subject": "Merge pull request #112 from mahmoud/new-error-discipline"
+    },
+    {
+      "sha": "eabece66b5f4712cc8fbae2a823d288b1056b9f3",
+      "expected_pr": 137,
+      "subject": "Merge pull request #137 from mborus/update_docs"
+    },
+    {
+      "sha": "0b2612b9f120d7fd02e0cb5532f525308e3c8cc2",
+      "expected_pr": 135,
+      "subject": "Merge pull request #135 from bhrutledge/patch-1"
+    },
+    {
+      "sha": "4ae1cb73822a97a755283d1fad535faa93f75611",
+      "expected_pr": 132,
+      "subject": "Merge pull request #132 from mahmoud/group-mode"
+    },
+    {
+      "sha": "27fabad30e81e870ff42a77857c1c46fbecf1f5b",
+      "expected_pr": 76,
+      "subject": "Merge pull request #76 from mahmoud/sum"
+    },
+    {
+      "sha": "2c434eee74705f9a614912733e4a40df0a902efd",
+      "expected_pr": 75,
+      "subject": "Merge pull request #75 from mahmoud/target-handler-raise-on-unreg"
+    },
+    {
+      "sha": "6af88818e2eeb1e36d8202e44d8c73fd372b6a28",
+      "expected_pr": 74,
+      "subject": "Merge pull request #74 from antoine-gallix/assign_doc"
+    },
+    {
+      "sha": "946d480b2ea6f8cb23a4dcd4328ad0e2a4492536",
+      "expected_pr": 69,
+      "subject": "Merge pull request #69 from mahmoud/assign-missing"
+    },
+    {
+      "sha": "ab822e39ca897f687bd84b620896bd9097de119f",
+      "expected_pr": 56,
+      "subject": "Merge pull request #56 from hinnefe2/add-nested-list-docs"
+    },
+    {
+      "sha": "c3aa7baa520bdd7a4e6c5ccad95ea2228c435707",
+      "expected_pr": 55,
+      "subject": "Merge pull request #55 from mahmoud/stop-and-omit"
+    },
+    {
+      "sha": "0b7f25032a9a97d810b3b6ced7b8c6178b6f407b",
+      "expected_pr": 52,
+      "subject": "Merge pull request #52 from mahmoud/assign_error"
+    },
+    {
+      "sha": "00398ebeb8bbb926ebc58b74d2341e59b874a927",
+      "expected_pr": 51,
+      "subject": "Merge pull request #51 from mahmoud/path-api-enhancements"
+    },
+    {
+      "sha": "d8c516e415a1ad96e5386f48ae0924d795f6c2c7",
+      "expected_pr": 50,
+      "subject": "Merge pull request #50 from mahmoud/remove-specregistry"
+    },
+    {
+      "sha": "85864f9bfaf4bce87930de082dac1ce3ac74bffa",
+      "expected_pr": 44,
+      "subject": "Merge pull request #44 from mahmoud/assign"
+    },
+    {
+      "sha": "d1062844c5caf9851c8b7d58c857db0132aebc07",
+      "expected_pr": 49,
+      "subject": "Merge pull request #49 from mahmoud/picklability"
+    },
+    {
+      "sha": "917343ee7d3576a7497ec348f6fb2e94d239acb0",
+      "expected_pr": 47,
+      "subject": "Merge pull request #47 from mahmoud/extension_friendly_target_registry"
+    },
+    {
+      "sha": "0e13acdc12dcfd7d1e60e9376a4d61d0a2cc359f",
+      "expected_pr": 41,
+      "subject": "Merge pull request #41 from mahmoud/more-spec"
+    },
+    {
+      "sha": "8960c328d6ec6371701a535d017f50f985c3ce3e",
+      "expected_pr": 25,
+      "subject": "Merge pull request #25 from mahmoud/check"
+    },
+    {
+      "sha": "d411cc83abdeea08b515ea3496b80a88860ddb8e",
+      "expected_pr": 26,
+      "subject": "Merge pull request #26 from dfezzie/master"
+    },
+    {
+      "sha": "9bd67fed01de2d32c5ebd8733a3f4afd66c927dd",
+      "expected_pr": 33,
+      "subject": "Merge pull request #33 from cfbolz/patch-1"
+    },
+    {
+      "sha": "d06e3d199efa10c1e0634f99dc41fed401a6e5a4",
+      "expected_pr": 21,
+      "subject": "Merge pull request #21 from mborus/fix-doc-typo"
+    },
+    {
+      "sha": "cdbf313da61f6e7eb98fed7afe646eb1f34acca0",
+      "expected_pr": 23,
+      "subject": "Merge pull request #23 from dfezzie/master"
+    },
+    {
+      "sha": "39aa4fa126373e8faedd6a27b21afaf5e23b5a30",
+      "expected_pr": 2,
+      "subject": "Merge pull request #2 from mahmoud/call-and-target"
+    },
+    {
+      "sha": "6439640b5bd568191ec50ee3cd1ceece09752bc4",
+      "expected_pr": 1,
+      "subject": "Merge pull request #1 from mahmoud/objectify"
+    }
+  ],
+  "tiny_kept": [
+    {
+      "sha": "9716620ce5e4de73c07b3083634bb3abb58b657f",
+      "pr": 296,
+      "source_loc": 1
+    },
+    {
+      "sha": "573cb911aee0af7149ea8376a05f61b3435b23e7",
+      "pr": 275,
+      "source_loc": 2
+    },
+    {
+      "sha": "34315014fe16b4c1e144a1acdf480699bf2303fb",
+      "pr": 262,
+      "source_loc": 2
+    },
+    {
+      "sha": "f3b407186ab0e6d091a0e3b557f2205557b09563",
+      "pr": 258,
+      "source_loc": 2
+    },
+    {
+      "sha": "784afb59d976d119146c54530e9c5dd9050eeda6",
+      "pr": null,
+      "source_loc": 2
+    },
+    {
+      "sha": "0b2612b9f120d7fd02e0cb5532f525308e3c8cc2",
+      "pr": null,
+      "source_loc": 2
+    },
+    {
+      "sha": "9bd67fed01de2d32c5ebd8733a3f4afd66c927dd",
+      "pr": null,
+      "source_loc": 2
+    },
+    {
+      "sha": "d06e3d199efa10c1e0634f99dc41fed401a6e5a4",
+      "pr": null,
+      "source_loc": 2
+    }
+  ],
+  "test_change_counts": {
+    "commits": 38,
+    "needs_enrichment": 55
+  },
+  "production_sha256": {
+    "fleet/src/fleet/history/patch.py": "547d842bbd2c776ec0b9f7a775cff0d3fe4dcc3bb8d7d7757d1889a0865bad75",
+    "fleet/src/fleet/history/models.py": "be30ddc82dfded20afca378c0dbd77977f631f20ff367b63a49f48742712c52c",
+    "fleet/src/fleet/history/linkage.py": "22eabbea8bd8c91ce7f4095e1a352f7c479fd3a1beac5eac1149c24144b33f87",
+    "fleet/src/fleet/history/window.py": "162c710f6259ef093c6fcd7e55f9ca792e30b4add23fdc924eafe92dee87cfa5",
+    "fleet/src/fleet/history/commits.py": "6cbae58a58577c19881d49da0feed7fd817cb261317320da96dd7685a676dd2c",
+    "fleet/src/fleet/history/discover.py": "114e9e1761f07473c3c03a1262b3eebffca25a7f8dc896261d7b05601848381d",
+    "fleet/src/fleet/history/client.py": "0ededf821511456851df610b57e506845a1dd12844d5be292a71ce6e2c0c6616",
+    "fleet/src/fleet/history/__init__.py": "e10b1398178dd8ad4a28036f4693618efcc44942dc300eada9d205dc8727f0fc",
+    "fleet/src/fleet/history/merge_style.py": "a7f3b1c74ca96bf79809a9897c9f254f34d9a3fce70825842a9745e9d2f715f7"
+  }
+}

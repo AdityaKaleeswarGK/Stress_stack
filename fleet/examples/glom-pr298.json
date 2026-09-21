@@ -1,0 +1,5 @@
+{
+  "image": "python:3.12.9-slim",
+  "install_command": "python -m pip install -r requirements.txt && python -m pip install --no-deps -e .",
+  "test_paths": ["glom/test/test_error.py"]
+}

@@ -1,0 +1,1276 @@
+{
+  "summary": {
+    "label": "fleet",
+    "root": "/Users/adityagk/Desktop/projects/task_repo/fleet",
+    "files_total": 24,
+    "files_by_language": {
+      "python": 24
+    },
+    "symbols_total": 124,
+    "tests_total": 45,
+    "calls_total": 493,
+    "syntax_errors": 0,
+    "unparsed_known_language": 0,
+    "edges_total": 124,
+    "edges_by_kind": {
+      "contain": 124
+    },
+    "scan_seconds": 0.091,
+    "import_records": 107,
+    "import_records_with_any_edge_on_line": 0,
+    "import_count_caveat": "Records without edges include external imports and unsupported resolution; this is not recall. Multiple bindings on a line can be only partly resolved.",
+    "files_with_incoming_edges": 0,
+    "most_imported_files": [],
+    "docstrings_in_memory": 55,
+    "docstrings_saved": 0,
+    "calls_saved": 0,
+    "issues": {
+      "duplicate_symbol_ids": {},
+      "dangling_edges": [],
+      "symbol_parents_missing_in_file": [],
+      "python_definitions_not_indexed": []
+    },
+    "previous": null
+  },
+  "files": [
+    {
+      "path": "src/fleet/__init__.py",
+      "language": "python",
+      "parser": "ast",
+      "syntax_error": false,
+      "symbols": 0,
+      "calls_in_memory": 0,
+      "calls_with_declared_symbol_owner": 0,
+      "docstrings_in_memory": 0,
+      "incoming_edge_count": 0,
+      "incoming_files": [],
+      "imports_without_resolved_edge_on_line": [
+        {
+          "raw": "from __future__ import annotations",
+          "module": "__future__",
+          "symbols": [
+            "annotations"
+          ],
+          "line": 6
+        }
+      ]
+    },
+    {
+      "path": "src/fleet/cli.py",
+      "language": "python",
+      "parser": "ast",
+      "syntax_error": false,
+      "symbols": 2,
+      "calls_in_memory": 36,
+      "calls_with_declared_symbol_owner": 36,
+      "docstrings_in_memory": 2,
+      "incoming_edge_count": 0,
+      "incoming_files": [],
+      "imports_without_resolved_edge_on_line": [
+        {
+          "raw": "from __future__ import annotations",
+          "module": "__future__",
+          "symbols": [
+            "annotations"
+          ],
+          "line": 9
+        },
+        {
+          "raw": "import sys",
+          "module": "sys",
+          "symbols": [],
+          "line": 11
+        },
+        {
+          "raw": "from pathlib import Path",
+          "module": "pathlib",
+          "symbols": [
+            "Path"
+          ],
+          "line": 12
+        },
+        {
+          "raw": "import click",
+          "module": "click",
+          "symbols": [],
+          "line": 14
+        },
+        {
+          "raw": "from rich.console import Console",
+          "module": "rich.console",
+          "symbols": [
+            "Console"
+          ],
+          "line": 15
+        },
+        {
+          "raw": "from rich.table import Table",
+          "module": "rich.table",
+          "symbols": [
+            "Table"
+          ],
+          "line": 16
+        },
+        {
+          "raw": "from fleet import __version__",
+          "module": "fleet",
+          "symbols": [
+            "__version__"
+          ],
+          "line": 18
+        },
+        {
+          "raw": "from fleet.graph.scan import scan_repo, write_graph",
+          "module": "fleet.graph.scan",
+          "symbols": [
+            "scan_repo",
+            "write_graph"
+          ],
+          "line": 19
+        }
+      ]
+    },
+    {
+      "path": "src/fleet/emitter/__init__.py",
+      "language": "python",
+      "parser": "none",
+      "syntax_error": false,
+      "symbols": 0,
+      "calls_in_memory": 0,
+      "calls_with_declared_symbol_owner": 0,
+      "docstrings_in_memory": 0,
+      "incoming_edge_count": 0,
+      "incoming_files": [],
+      "imports_without_resolved_edge_on_line": []
+    },
+    {
+      "path": "src/fleet/emitter/harbor.py",
+      "language": "python",
+      "parser": "ast",
+      "syntax_error": false,
+      "symbols": 2,
+      "calls_in_memory": 1,
+      "calls_with_declared_symbol_owner": 1,
+      "docstrings_in_memory": 0,
+      "incoming_edge_count": 0,
+      "incoming_files": [],
+      "imports_without_resolved_edge_on_line": [
+        {
+          "raw": "from __future__ import annotations",
+          "module": "__future__",
+          "symbols": [
+            "annotations"
+          ],
+          "line": 12
+        },
+        {
+          "raw": "from dataclasses import dataclass, field",
+          "module": "dataclasses",
+          "symbols": [
+            "dataclass",
+            "field"
+          ],
+          "line": 14
+        },
+        {
+          "raw": "from pathlib import Path",
+          "module": "pathlib",
+          "symbols": [
+            "Path"
+          ],
+          "line": 15
+        },
+        {
+          "raw": "from typing import Any",
+          "module": "typing",
+          "symbols": [
+            "Any"
+          ],
+          "line": 16
+        }
+      ]
+    },
+    {
+      "path": "src/fleet/graph/__init__.py",
+      "language": "python",
+      "parser": "ast",
+      "syntax_error": false,
+      "symbols": 0,
+      "calls_in_memory": 0,
+      "calls_with_declared_symbol_owner": 0,
+      "docstrings_in_memory": 0,
+      "incoming_edge_count": 0,
+      "incoming_files": [],
+      "imports_without_resolved_edge_on_line": [
+        {
+          "raw": "from __future__ import annotations",
+          "module": "__future__",
+          "symbols": [
+            "annotations"
+          ],
+          "line": 23
+        },
+        {
+          "raw": "from fleet.graph.models import CONTAIN, IMPORT, INHERIT, INVOKE, SCHEMA_VERSION, Edge, ExtractedCall, ExtractedImport, ExtractedSymbol, ParsedFile",
+          "module": "fleet.graph.models",
+          "symbols": [
+            "CONTAIN",
+            "IMPORT",
+            "INHERIT",
+            "INVOKE",
+            "SCHEMA_VERSION",
+            "Edge",
+            "ExtractedCall",
+            "ExtractedImport",
+            "ExtractedSymbol",
+            "ParsedFile"
+          ],
+          "line": 25
+        },
+        {
+          "raw": "from fleet.graph.parser import parse_source",
+          "module": "fleet.graph.parser",
+          "symbols": [
+            "parse_source"
+          ],
+          "line": 37
+        },
+        {
+          "raw": "from fleet.graph.scan import RepoGraph, scan_repo, write_graph",
+          "module": "fleet.graph.scan",
+          "symbols": [
+            "RepoGraph",
+            "scan_repo",
+            "write_graph"
+          ],
+          "line": 38
+        },
+        {
+          "raw": "from fleet.graph.spec import LanguageSpec, TestRules, detect_language, register, supported_extensions, supported_languages",
+          "module": "fleet.graph.spec",
+          "symbols": [
+            "LanguageSpec",
+            "TestRules",
+            "detect_language",
+            "register",
+            "supported_extensions",
+            "supported_languages"
+          ],
+          "line": 39
+        }
+      ]
+    },
+    {
+      "path": "src/fleet/graph/engine.py",
+      "language": "python",
+      "parser": "ast",
+      "syntax_error": false,
+      "symbols": 22,
+      "calls_in_memory": 126,
+      "calls_with_declared_symbol_owner": 126,
+      "docstrings_in_memory": 12,
+      "incoming_edge_count": 0,
+      "incoming_files": [],
+      "imports_without_resolved_edge_on_line": [
+        {
+          "raw": "from __future__ import annotations",
+          "module": "__future__",
+          "symbols": [
+            "annotations"
+          ],
+          "line": 29
+        },
+        {
+          "raw": "from typing import Any",
+          "module": "typing",
+          "symbols": [
+            "Any"
+          ],
+          "line": 31
+        },
+        {
+          "raw": "from fleet.graph.models import ExtractedCall, ExtractedImport, ExtractedSymbol, ParsedFile",
+          "module": "fleet.graph.models",
+          "symbols": [
+            "ExtractedCall",
+            "ExtractedImport",
+            "ExtractedSymbol",
+            "ParsedFile"
+          ],
+          "line": 33
+        },
+        {
+          "raw": "from fleet.graph.spec import LanguageSpec",
+          "module": "fleet.graph.spec",
+          "symbols": [
+            "LanguageSpec"
+          ],
+          "line": 34
+        },
+        {
+          "raw": "import tree_sitter",
+          "module": "tree_sitter",
+          "symbols": [],
+          "line": 37
+        },
+        {
+          "raw": "from tree_sitter_language_pack import get_parser",
+          "module": "tree_sitter_language_pack",
+          "symbols": [
+            "get_parser"
+          ],
+          "line": 38
+        },
+        {
+          "raw": "from tree_sitter_language_pack import get_language",
+          "module": "tree_sitter_language_pack",
+          "symbols": [
+            "get_language"
+          ],
+          "line": 164
+        }
+      ]
+    },
+    {
+      "path": "src/fleet/graph/ignore.py",
+      "language": "python",
+      "parser": "ast",
+      "syntax_error": false,
+      "symbols": 5,
+      "calls_in_memory": 12,
+      "calls_with_declared_symbol_owner": 11,
+      "docstrings_in_memory": 1,
+      "incoming_edge_count": 0,
+      "incoming_files": [],
+      "imports_without_resolved_edge_on_line": [
+        {
+          "raw": "from __future__ import annotations",
+          "module": "__future__",
+          "symbols": [
+            "annotations"
+          ],
+          "line": 25
+        },
+        {
+          "raw": "import fnmatch",
+          "module": "fnmatch",
+          "symbols": [],
+          "line": 27
+        },
+        {
+          "raw": "from dataclasses import dataclass, field",
+          "module": "dataclasses",
+          "symbols": [
+            "dataclass",
+            "field"
+          ],
+          "line": 28
+        },
+        {
+          "raw": "from pathlib import Path",
+          "module": "pathlib",
+          "symbols": [
+            "Path"
+          ],
+          "line": 29
+        }
+      ]
+    },
+    {
+      "path": "src/fleet/graph/models.py",
+      "language": "python",
+      "parser": "ast",
+      "syntax_error": false,
+      "symbols": 10,
+      "calls_in_memory": 3,
+      "calls_with_declared_symbol_owner": 0,
+      "docstrings_in_memory": 1,
+      "incoming_edge_count": 0,
+      "incoming_files": [],
+      "imports_without_resolved_edge_on_line": [
+        {
+          "raw": "from __future__ import annotations",
+          "module": "__future__",
+          "symbols": [
+            "annotations"
+          ],
+          "line": 9
+        },
+        {
+          "raw": "from dataclasses import dataclass, field",
+          "module": "dataclasses",
+          "symbols": [
+            "dataclass",
+            "field"
+          ],
+          "line": 11
+        },
+        {
+          "raw": "from typing import Any",
+          "module": "typing",
+          "symbols": [
+            "Any"
+          ],
+          "line": 12
+        }
+      ]
+    },
+    {
+      "path": "src/fleet/graph/parser.py",
+      "language": "python",
+      "parser": "ast",
+      "syntax_error": false,
+      "symbols": 2,
+      "calls_in_memory": 14,
+      "calls_with_declared_symbol_owner": 14,
+      "docstrings_in_memory": 2,
+      "incoming_edge_count": 0,
+      "incoming_files": [],
+      "imports_without_resolved_edge_on_line": [
+        {
+          "raw": "from __future__ import annotations",
+          "module": "__future__",
+          "symbols": [
+            "annotations"
+          ],
+          "line": 9
+        },
+        {
+          "raw": "from dataclasses import replace",
+          "module": "dataclasses",
+          "symbols": [
+            "replace"
+          ],
+          "line": 11
+        },
+        {
+          "raw": "from typing import Callable",
+          "module": "typing",
+          "symbols": [
+            "Callable"
+          ],
+          "line": 12
+        },
+        {
+          "raw": "from fleet.graph import engine, pyast",
+          "module": "fleet.graph",
+          "symbols": [
+            "engine",
+            "pyast"
+          ],
+          "line": 14
+        },
+        {
+          "raw": "from fleet.graph import languages",
+          "module": "fleet.graph",
+          "symbols": [
+            "languages"
+          ],
+          "line": 15
+        },
+        {
+          "raw": "from fleet.graph.models import ParsedFile",
+          "module": "fleet.graph.models",
+          "symbols": [
+            "ParsedFile"
+          ],
+          "line": 16
+        },
+        {
+          "raw": "from fleet.graph.spec import LanguageSpec, detect_language, spec_for",
+          "module": "fleet.graph.spec",
+          "symbols": [
+            "LanguageSpec",
+            "detect_language",
+            "spec_for"
+          ],
+          "line": 17
+        }
+      ]
+    },
+    {
+      "path": "src/fleet/graph/pyast.py",
+      "language": "python",
+      "parser": "ast",
+      "syntax_error": false,
+      "symbols": 5,
+      "calls_in_memory": 50,
+      "calls_with_declared_symbol_owner": 50,
+      "docstrings_in_memory": 1,
+      "incoming_edge_count": 0,
+      "incoming_files": [],
+      "imports_without_resolved_edge_on_line": [
+        {
+          "raw": "from __future__ import annotations",
+          "module": "__future__",
+          "symbols": [
+            "annotations"
+          ],
+          "line": 11
+        },
+        {
+          "raw": "import ast",
+          "module": "ast",
+          "symbols": [],
+          "line": 13
+        },
+        {
+          "raw": "from typing import Any",
+          "module": "typing",
+          "symbols": [
+            "Any"
+          ],
+          "line": 14
+        },
+        {
+          "raw": "from fleet.graph.models import ExtractedCall, ExtractedImport, ExtractedSymbol, ParsedFile",
+          "module": "fleet.graph.models",
+          "symbols": [
+            "ExtractedCall",
+            "ExtractedImport",
+            "ExtractedSymbol",
+            "ParsedFile"
+          ],
+          "line": 16
+        },
+        {
+          "raw": "from fleet.graph.spec import LanguageSpec",
+          "module": "fleet.graph.spec",
+          "symbols": [
+            "LanguageSpec"
+          ],
+          "line": 17
+        }
+      ]
+    },
+    {
+      "path": "src/fleet/graph/resolve.py",
+      "language": "python",
+      "parser": "ast",
+      "syntax_error": false,
+      "symbols": 10,
+      "calls_in_memory": 74,
+      "calls_with_declared_symbol_owner": 74,
+      "docstrings_in_memory": 8,
+      "incoming_edge_count": 0,
+      "incoming_files": [],
+      "imports_without_resolved_edge_on_line": [
+        {
+          "raw": "from __future__ import annotations",
+          "module": "__future__",
+          "symbols": [
+            "annotations"
+          ],
+          "line": 22
+        },
+        {
+          "raw": "import posixpath",
+          "module": "posixpath",
+          "symbols": [],
+          "line": 24
+        },
+        {
+          "raw": "from typing import Callable",
+          "module": "typing",
+          "symbols": [
+            "Callable"
+          ],
+          "line": 25
+        },
+        {
+          "raw": "from fleet.graph.models import CONTAIN, IMPORT, INHERIT, Edge, ParsedFile",
+          "module": "fleet.graph.models",
+          "symbols": [
+            "CONTAIN",
+            "IMPORT",
+            "INHERIT",
+            "Edge",
+            "ParsedFile"
+          ],
+          "line": 27
+        },
+        {
+          "raw": "from fleet.graph.spec import LanguageSpec, spec_for, specs_in_family",
+          "module": "fleet.graph.spec",
+          "symbols": [
+            "LanguageSpec",
+            "spec_for",
+            "specs_in_family"
+          ],
+          "line": 28
+        }
+      ]
+    },
+    {
+      "path": "src/fleet/graph/scan.py",
+      "language": "python",
+      "parser": "ast",
+      "syntax_error": false,
+      "symbols": 6,
+      "calls_in_memory": 35,
+      "calls_with_declared_symbol_owner": 19,
+      "docstrings_in_memory": 2,
+      "incoming_edge_count": 0,
+      "incoming_files": [],
+      "imports_without_resolved_edge_on_line": [
+        {
+          "raw": "from __future__ import annotations",
+          "module": "__future__",
+          "symbols": [
+            "annotations"
+          ],
+          "line": 7
+        },
+        {
+          "raw": "import json",
+          "module": "json",
+          "symbols": [],
+          "line": 9
+        },
+        {
+          "raw": "import os",
+          "module": "os",
+          "symbols": [],
+          "line": 10
+        },
+        {
+          "raw": "from dataclasses import dataclass, field",
+          "module": "dataclasses",
+          "symbols": [
+            "dataclass",
+            "field"
+          ],
+          "line": 11
+        },
+        {
+          "raw": "from pathlib import Path",
+          "module": "pathlib",
+          "symbols": [
+            "Path"
+          ],
+          "line": 12
+        },
+        {
+          "raw": "from typing import Any, Iterator",
+          "module": "typing",
+          "symbols": [
+            "Any",
+            "Iterator"
+          ],
+          "line": 13
+        },
+        {
+          "raw": "from fleet.graph.ignore import IgnoreRules, load_ignore_rules",
+          "module": "fleet.graph.ignore",
+          "symbols": [
+            "IgnoreRules",
+            "load_ignore_rules"
+          ],
+          "line": 15
+        },
+        {
+          "raw": "from fleet.graph.models import SCHEMA_VERSION, Edge, ParsedFile",
+          "module": "fleet.graph.models",
+          "symbols": [
+            "SCHEMA_VERSION",
+            "Edge",
+            "ParsedFile"
+          ],
+          "line": 16
+        },
+        {
+          "raw": "from fleet.graph.parser import parse_source",
+          "module": "fleet.graph.parser",
+          "symbols": [
+            "parse_source"
+          ],
+          "line": 17
+        },
+        {
+          "raw": "from fleet.graph.resolve import resolve_edges",
+          "module": "fleet.graph.resolve",
+          "symbols": [
+            "resolve_edges"
+          ],
+          "line": 18
+        }
+      ]
+    },
+    {
+      "path": "src/fleet/graph/spec.py",
+      "language": "python",
+      "parser": "ast",
+      "syntax_error": false,
+      "symbols": 12,
+      "calls_in_memory": 16,
+      "calls_with_declared_symbol_owner": 9,
+      "docstrings_in_memory": 3,
+      "incoming_edge_count": 0,
+      "incoming_files": [],
+      "imports_without_resolved_edge_on_line": [
+        {
+          "raw": "from __future__ import annotations",
+          "module": "__future__",
+          "symbols": [
+            "annotations"
+          ],
+          "line": 16
+        },
+        {
+          "raw": "from dataclasses import dataclass, field",
+          "module": "dataclasses",
+          "symbols": [
+            "dataclass",
+            "field"
+          ],
+          "line": 18
+        },
+        {
+          "raw": "from pathlib import Path",
+          "module": "pathlib",
+          "symbols": [
+            "Path"
+          ],
+          "line": 19
+        }
+      ]
+    },
+    {
+      "path": "src/fleet/graph/languages/__init__.py",
+      "language": "python",
+      "parser": "ast",
+      "syntax_error": false,
+      "symbols": 0,
+      "calls_in_memory": 0,
+      "calls_with_declared_symbol_owner": 0,
+      "docstrings_in_memory": 0,
+      "incoming_edge_count": 0,
+      "incoming_files": [],
+      "imports_without_resolved_edge_on_line": [
+        {
+          "raw": "from __future__ import annotations",
+          "module": "__future__",
+          "symbols": [
+            "annotations"
+          ],
+          "line": 10
+        },
+        {
+          "raw": "from fleet.graph.languages import go, java, javascript, python, rust",
+          "module": "fleet.graph.languages",
+          "symbols": [
+            "go",
+            "java",
+            "javascript",
+            "python",
+            "rust"
+          ],
+          "line": 12
+        }
+      ]
+    },
+    {
+      "path": "src/fleet/graph/languages/go.py",
+      "language": "python",
+      "parser": "ast",
+      "syntax_error": false,
+      "symbols": 0,
+      "calls_in_memory": 0,
+      "calls_with_declared_symbol_owner": 0,
+      "docstrings_in_memory": 0,
+      "incoming_edge_count": 0,
+      "incoming_files": [],
+      "imports_without_resolved_edge_on_line": [
+        {
+          "raw": "from __future__ import annotations",
+          "module": "__future__",
+          "symbols": [
+            "annotations"
+          ],
+          "line": 10
+        },
+        {
+          "raw": "from fleet.graph.spec import LanguageSpec, TestRules, register",
+          "module": "fleet.graph.spec",
+          "symbols": [
+            "LanguageSpec",
+            "TestRules",
+            "register"
+          ],
+          "line": 12
+        }
+      ]
+    },
+    {
+      "path": "src/fleet/graph/languages/java.py",
+      "language": "python",
+      "parser": "ast",
+      "syntax_error": false,
+      "symbols": 0,
+      "calls_in_memory": 0,
+      "calls_with_declared_symbol_owner": 0,
+      "docstrings_in_memory": 0,
+      "incoming_edge_count": 0,
+      "incoming_files": [],
+      "imports_without_resolved_edge_on_line": [
+        {
+          "raw": "from __future__ import annotations",
+          "module": "__future__",
+          "symbols": [
+            "annotations"
+          ],
+          "line": 14
+        },
+        {
+          "raw": "from fleet.graph.spec import LanguageSpec, TestRules, register",
+          "module": "fleet.graph.spec",
+          "symbols": [
+            "LanguageSpec",
+            "TestRules",
+            "register"
+          ],
+          "line": 16
+        }
+      ]
+    },
+    {
+      "path": "src/fleet/graph/languages/javascript.py",
+      "language": "python",
+      "parser": "ast",
+      "syntax_error": false,
+      "symbols": 0,
+      "calls_in_memory": 0,
+      "calls_with_declared_symbol_owner": 0,
+      "docstrings_in_memory": 0,
+      "incoming_edge_count": 0,
+      "incoming_files": [],
+      "imports_without_resolved_edge_on_line": [
+        {
+          "raw": "from __future__ import annotations",
+          "module": "__future__",
+          "symbols": [
+            "annotations"
+          ],
+          "line": 14
+        },
+        {
+          "raw": "from fleet.graph.spec import LanguageSpec, TestRules, register",
+          "module": "fleet.graph.spec",
+          "symbols": [
+            "LanguageSpec",
+            "TestRules",
+            "register"
+          ],
+          "line": 16
+        }
+      ]
+    },
+    {
+      "path": "src/fleet/graph/languages/python.py",
+      "language": "python",
+      "parser": "ast",
+      "syntax_error": false,
+      "symbols": 0,
+      "calls_in_memory": 0,
+      "calls_with_declared_symbol_owner": 0,
+      "docstrings_in_memory": 0,
+      "incoming_edge_count": 0,
+      "incoming_files": [],
+      "imports_without_resolved_edge_on_line": [
+        {
+          "raw": "from __future__ import annotations",
+          "module": "__future__",
+          "symbols": [
+            "annotations"
+          ],
+          "line": 3
+        },
+        {
+          "raw": "from fleet.graph.spec import LanguageSpec, TestRules, register",
+          "module": "fleet.graph.spec",
+          "symbols": [
+            "LanguageSpec",
+            "TestRules",
+            "register"
+          ],
+          "line": 5
+        }
+      ]
+    },
+    {
+      "path": "src/fleet/graph/languages/rust.py",
+      "language": "python",
+      "parser": "ast",
+      "syntax_error": false,
+      "symbols": 0,
+      "calls_in_memory": 0,
+      "calls_with_declared_symbol_owner": 0,
+      "docstrings_in_memory": 0,
+      "incoming_edge_count": 0,
+      "incoming_files": [],
+      "imports_without_resolved_edge_on_line": [
+        {
+          "raw": "from __future__ import annotations",
+          "module": "__future__",
+          "symbols": [
+            "annotations"
+          ],
+          "line": 8
+        },
+        {
+          "raw": "from fleet.graph.spec import LanguageSpec, TestRules, register",
+          "module": "fleet.graph.spec",
+          "symbols": [
+            "LanguageSpec",
+            "TestRules",
+            "register"
+          ],
+          "line": 10
+        }
+      ]
+    },
+    {
+      "path": "src/fleet/pipelines/__init__.py",
+      "language": "python",
+      "parser": "ast",
+      "syntax_error": false,
+      "symbols": 0,
+      "calls_in_memory": 0,
+      "calls_with_declared_symbol_owner": 0,
+      "docstrings_in_memory": 0,
+      "incoming_edge_count": 0,
+      "incoming_files": [],
+      "imports_without_resolved_edge_on_line": [
+        {
+          "raw": "from __future__ import annotations",
+          "module": "__future__",
+          "symbols": [
+            "annotations"
+          ],
+          "line": 8
+        },
+        {
+          "raw": "from fleet.pipelines.base import Pipeline",
+          "module": "fleet.pipelines.base",
+          "symbols": [
+            "Pipeline"
+          ],
+          "line": 10
+        }
+      ]
+    },
+    {
+      "path": "src/fleet/pipelines/base.py",
+      "language": "python",
+      "parser": "ast",
+      "syntax_error": false,
+      "symbols": 4,
+      "calls_in_memory": 0,
+      "calls_with_declared_symbol_owner": 0,
+      "docstrings_in_memory": 3,
+      "incoming_edge_count": 0,
+      "incoming_files": [],
+      "imports_without_resolved_edge_on_line": [
+        {
+          "raw": "from __future__ import annotations",
+          "module": "__future__",
+          "symbols": [
+            "annotations"
+          ],
+          "line": 10
+        },
+        {
+          "raw": "from dataclasses import dataclass, field",
+          "module": "dataclasses",
+          "symbols": [
+            "dataclass",
+            "field"
+          ],
+          "line": 12
+        },
+        {
+          "raw": "from pathlib import Path",
+          "module": "pathlib",
+          "symbols": [
+            "Path"
+          ],
+          "line": 13
+        },
+        {
+          "raw": "from typing import Any, ClassVar, Protocol",
+          "module": "typing",
+          "symbols": [
+            "Any",
+            "ClassVar",
+            "Protocol"
+          ],
+          "line": 14
+        }
+      ]
+    },
+    {
+      "path": "tests/test_graph.py",
+      "language": "python",
+      "parser": "ast",
+      "syntax_error": false,
+      "symbols": 20,
+      "calls_in_memory": 54,
+      "calls_with_declared_symbol_owner": 54,
+      "docstrings_in_memory": 2,
+      "incoming_edge_count": 0,
+      "incoming_files": [],
+      "imports_without_resolved_edge_on_line": [
+        {
+          "raw": "from __future__ import annotations",
+          "module": "__future__",
+          "symbols": [
+            "annotations"
+          ],
+          "line": 1
+        },
+        {
+          "raw": "from pathlib import Path",
+          "module": "pathlib",
+          "symbols": [
+            "Path"
+          ],
+          "line": 3
+        },
+        {
+          "raw": "from fleet.graph.resolve import resolve_edges",
+          "module": "fleet.graph.resolve",
+          "symbols": [
+            "resolve_edges"
+          ],
+          "line": 5
+        },
+        {
+          "raw": "from fleet.graph.spec import detect_language",
+          "module": "fleet.graph.spec",
+          "symbols": [
+            "detect_language"
+          ],
+          "line": 6
+        },
+        {
+          "raw": "from fleet.graph.parser import parse_source",
+          "module": "fleet.graph.parser",
+          "symbols": [
+            "parse_source"
+          ],
+          "line": 7
+        },
+        {
+          "raw": "from fleet.graph.scan import scan_repo, write_graph",
+          "module": "fleet.graph.scan",
+          "symbols": [
+            "scan_repo",
+            "write_graph"
+          ],
+          "line": 8
+        },
+        {
+          "raw": "from fleet.graph.engine import TREE_SITTER_AVAILABLE",
+          "module": "fleet.graph.engine",
+          "symbols": [
+            "TREE_SITTER_AVAILABLE"
+          ],
+          "line": 80
+        },
+        {
+          "raw": "from fleet.graph.engine import TREE_SITTER_AVAILABLE",
+          "module": "fleet.graph.engine",
+          "symbols": [
+            "TREE_SITTER_AVAILABLE"
+          ],
+          "line": 108
+        },
+        {
+          "raw": "from fleet.graph.engine import TREE_SITTER_AVAILABLE",
+          "module": "fleet.graph.engine",
+          "symbols": [
+            "TREE_SITTER_AVAILABLE"
+          ],
+          "line": 147
+        },
+        {
+          "raw": "from fleet.graph.engine import TREE_SITTER_AVAILABLE",
+          "module": "fleet.graph.engine",
+          "symbols": [
+            "TREE_SITTER_AVAILABLE"
+          ],
+          "line": 195
+        },
+        {
+          "raw": "from fleet.graph.engine import TREE_SITTER_AVAILABLE",
+          "module": "fleet.graph.engine",
+          "symbols": [
+            "TREE_SITTER_AVAILABLE"
+          ],
+          "line": 221
+        },
+        {
+          "raw": "from fleet.graph.engine import TREE_SITTER_AVAILABLE",
+          "module": "fleet.graph.engine",
+          "symbols": [
+            "TREE_SITTER_AVAILABLE"
+          ],
+          "line": 253
+        },
+        {
+          "raw": "from fleet.graph.engine import TREE_SITTER_AVAILABLE",
+          "module": "fleet.graph.engine",
+          "symbols": [
+            "TREE_SITTER_AVAILABLE"
+          ],
+          "line": 280
+        },
+        {
+          "raw": "from fleet.graph.engine import TREE_SITTER_AVAILABLE",
+          "module": "fleet.graph.engine",
+          "symbols": [
+            "TREE_SITTER_AVAILABLE"
+          ],
+          "line": 297
+        },
+        {
+          "raw": "from fleet.graph.engine import TREE_SITTER_AVAILABLE",
+          "module": "fleet.graph.engine",
+          "symbols": [
+            "TREE_SITTER_AVAILABLE"
+          ],
+          "line": 315
+        },
+        {
+          "raw": "from fleet.graph.engine import TREE_SITTER_AVAILABLE",
+          "module": "fleet.graph.engine",
+          "symbols": [
+            "TREE_SITTER_AVAILABLE"
+          ],
+          "line": 327
+        },
+        {
+          "raw": "from fleet.graph.engine import TREE_SITTER_AVAILABLE",
+          "module": "fleet.graph.engine",
+          "symbols": [
+            "TREE_SITTER_AVAILABLE"
+          ],
+          "line": 345
+        }
+      ]
+    },
+    {
+      "path": "tests/test_languages.py",
+      "language": "python",
+      "parser": "ast",
+      "syntax_error": false,
+      "symbols": 23,
+      "calls_in_memory": 69,
+      "calls_with_declared_symbol_owner": 69,
+      "docstrings_in_memory": 18,
+      "incoming_edge_count": 0,
+      "incoming_files": [],
+      "imports_without_resolved_edge_on_line": [
+        {
+          "raw": "from __future__ import annotations",
+          "module": "__future__",
+          "symbols": [
+            "annotations"
+          ],
+          "line": 8
+        },
+        {
+          "raw": "from pathlib import Path",
+          "module": "pathlib",
+          "symbols": [
+            "Path"
+          ],
+          "line": 10
+        },
+        {
+          "raw": "import pytest",
+          "module": "pytest",
+          "symbols": [],
+          "line": 12
+        },
+        {
+          "raw": "from fleet.graph import CONTAIN, INHERIT, parse_source",
+          "module": "fleet.graph",
+          "symbols": [
+            "CONTAIN",
+            "INHERIT",
+            "parse_source"
+          ],
+          "line": 14
+        },
+        {
+          "raw": "from fleet.graph.engine import TREE_SITTER_AVAILABLE, dropped_patterns",
+          "module": "fleet.graph.engine",
+          "symbols": [
+            "TREE_SITTER_AVAILABLE",
+            "dropped_patterns"
+          ],
+          "line": 15
+        },
+        {
+          "raw": "from fleet.graph.resolve import contain_edges, inherit_edges, resolve_edges",
+          "module": "fleet.graph.resolve",
+          "symbols": [
+            "contain_edges",
+            "inherit_edges",
+            "resolve_edges"
+          ],
+          "line": 16
+        },
+        {
+          "raw": "from fleet.graph.spec import all_specs, spec_for, supported_languages",
+          "module": "fleet.graph.spec",
+          "symbols": [
+            "all_specs",
+            "spec_for",
+            "supported_languages"
+          ],
+          "line": 17
+        },
+        {
+          "raw": "from fleet.graph import scan_repo",
+          "module": "fleet.graph",
+          "symbols": [
+            "scan_repo"
+          ],
+          "line": 354
+        }
+      ]
+    },
+    {
+      "path": "tests/test_pipeline_contract.py",
+      "language": "python",
+      "parser": "ast",
+      "syntax_error": false,
+      "symbols": 1,
+      "calls_in_memory": 3,
+      "calls_with_declared_symbol_owner": 3,
+      "docstrings_in_memory": 0,
+      "incoming_edge_count": 0,
+      "incoming_files": [],
+      "imports_without_resolved_edge_on_line": [
+        {
+          "raw": "from __future__ import annotations",
+          "module": "__future__",
+          "symbols": [
+            "annotations"
+          ],
+          "line": 8
+        },
+        {
+          "raw": "from fleet.pipelines import PIPELINES",
+          "module": "fleet.pipelines",
+          "symbols": [
+            "PIPELINES"
+          ],
+          "line": 10
+        }
+      ]
+    }
+  ]
+}

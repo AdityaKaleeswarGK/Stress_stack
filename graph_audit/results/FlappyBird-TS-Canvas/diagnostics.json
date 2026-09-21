@@ -1,0 +1,230 @@
+{
+  "summary": {
+    "label": "FlappyBird-TS-Canvas",
+    "root": "/Users/adityagk/Desktop/projects/FlappyBird-TS-Canvas",
+    "files_total": 9,
+    "files_by_language": {
+      "typescript": 9
+    },
+    "symbols_total": 46,
+    "tests_total": 8,
+    "calls_total": 120,
+    "syntax_errors": 0,
+    "unparsed_known_language": 0,
+    "edges_total": 60,
+    "edges_by_kind": {
+      "contain": 46,
+      "import": 14
+    },
+    "scan_seconds": 0.017,
+    "import_records": 17,
+    "import_records_with_any_edge_on_line": 14,
+    "import_count_caveat": "Records without edges include external imports and unsupported resolution; this is not recall. Multiple bindings on a line can be only partly resolved.",
+    "files_with_incoming_edges": 5,
+    "most_imported_files": [
+      [
+        "types/game.ts",
+        6
+      ],
+      [
+        "core/state.ts",
+        3
+      ],
+      [
+        "engine/physics.ts",
+        3
+      ],
+      [
+        "core/input.ts",
+        1
+      ],
+      [
+        "engine/renderer.ts",
+        1
+      ]
+    ],
+    "docstrings_in_memory": 0,
+    "docstrings_saved": 0,
+    "calls_saved": 0,
+    "issues": {
+      "duplicate_symbol_ids": {},
+      "dangling_edges": [],
+      "symbol_parents_missing_in_file": [],
+      "python_definitions_not_indexed": []
+    },
+    "previous": null
+  },
+  "files": [
+    {
+      "path": "main.ts",
+      "language": "typescript",
+      "parser": "tree_sitter",
+      "syntax_error": false,
+      "symbols": 2,
+      "calls_in_memory": 31,
+      "calls_with_declared_symbol_owner": 0,
+      "docstrings_in_memory": 0,
+      "incoming_edge_count": 0,
+      "incoming_files": [],
+      "imports_without_resolved_edge_on_line": []
+    },
+    {
+      "path": "vite.config.ts",
+      "language": "typescript",
+      "parser": "tree_sitter",
+      "syntax_error": false,
+      "symbols": 0,
+      "calls_in_memory": 1,
+      "calls_with_declared_symbol_owner": 0,
+      "docstrings_in_memory": 0,
+      "incoming_edge_count": 0,
+      "incoming_files": [],
+      "imports_without_resolved_edge_on_line": [
+        {
+          "raw": "import { defineConfig } from 'vite';",
+          "module": "vite",
+          "symbols": [
+            "defineConfig"
+          ],
+          "line": 1
+        }
+      ]
+    },
+    {
+      "path": "core/input.ts",
+      "language": "typescript",
+      "parser": "tree_sitter",
+      "syntax_error": false,
+      "symbols": 8,
+      "calls_in_memory": 16,
+      "calls_with_declared_symbol_owner": 16,
+      "docstrings_in_memory": 0,
+      "incoming_edge_count": 1,
+      "incoming_files": [
+        "main.ts"
+      ],
+      "imports_without_resolved_edge_on_line": []
+    },
+    {
+      "path": "core/state.ts",
+      "language": "typescript",
+      "parser": "tree_sitter",
+      "syntax_error": false,
+      "symbols": 8,
+      "calls_in_memory": 2,
+      "calls_with_declared_symbol_owner": 2,
+      "docstrings_in_memory": 0,
+      "incoming_edge_count": 3,
+      "incoming_files": [
+        "main.ts",
+        "tests/integration.test.ts",
+        "tests/performance.test.ts"
+      ],
+      "imports_without_resolved_edge_on_line": []
+    },
+    {
+      "path": "engine/physics.ts",
+      "language": "typescript",
+      "parser": "tree_sitter",
+      "syntax_error": false,
+      "symbols": 4,
+      "calls_in_memory": 0,
+      "calls_with_declared_symbol_owner": 0,
+      "docstrings_in_memory": 0,
+      "incoming_edge_count": 3,
+      "incoming_files": [
+        "main.ts",
+        "tests/integration.test.ts",
+        "tests/performance.test.ts"
+      ],
+      "imports_without_resolved_edge_on_line": []
+    },
+    {
+      "path": "engine/renderer.ts",
+      "language": "typescript",
+      "parser": "tree_sitter",
+      "syntax_error": false,
+      "symbols": 9,
+      "calls_in_memory": 22,
+      "calls_with_declared_symbol_owner": 22,
+      "docstrings_in_memory": 0,
+      "incoming_edge_count": 1,
+      "incoming_files": [
+        "main.ts"
+      ],
+      "imports_without_resolved_edge_on_line": []
+    },
+    {
+      "path": "tests/integration.test.ts",
+      "language": "typescript",
+      "parser": "tree_sitter",
+      "syntax_error": false,
+      "symbols": 11,
+      "calls_in_memory": 29,
+      "calls_with_declared_symbol_owner": 7,
+      "docstrings_in_memory": 0,
+      "incoming_edge_count": 0,
+      "incoming_files": [],
+      "imports_without_resolved_edge_on_line": [
+        {
+          "raw": "import { describe, it, expect, beforeEach, vi } from 'vitest';",
+          "module": "vitest",
+          "symbols": [
+            "describe",
+            "it",
+            "expect",
+            "beforeEach",
+            "vi"
+          ],
+          "line": 1
+        }
+      ]
+    },
+    {
+      "path": "tests/performance.test.ts",
+      "language": "typescript",
+      "parser": "tree_sitter",
+      "syntax_error": false,
+      "symbols": 4,
+      "calls_in_memory": 19,
+      "calls_with_declared_symbol_owner": 0,
+      "docstrings_in_memory": 0,
+      "incoming_edge_count": 0,
+      "incoming_files": [],
+      "imports_without_resolved_edge_on_line": [
+        {
+          "raw": "import { describe, it, expect, beforeEach, vi } from 'vitest';",
+          "module": "vitest",
+          "symbols": [
+            "describe",
+            "it",
+            "expect",
+            "beforeEach",
+            "vi"
+          ],
+          "line": 3
+        }
+      ]
+    },
+    {
+      "path": "types/game.ts",
+      "language": "typescript",
+      "parser": "tree_sitter",
+      "syntax_error": false,
+      "symbols": 0,
+      "calls_in_memory": 0,
+      "calls_with_declared_symbol_owner": 0,
+      "docstrings_in_memory": 0,
+      "incoming_edge_count": 6,
+      "incoming_files": [
+        "core/input.ts",
+        "core/state.ts",
+        "engine/physics.ts",
+        "engine/renderer.ts",
+        "main.ts",
+        "tests/integration.test.ts"
+      ],
+      "imports_without_resolved_edge_on_line": []
+    }
+  ]
+}

@@ -1,0 +1,6435 @@
+{
+  "schema_version": "0.4.0",
+  "root": "/Users/adityagk/Desktop/projects/agustus",
+  "snapshot": {
+    "content_hashes": {
+      "package.json": "8adabfd1c09e066e4993a5c01e9fc31a8b9d895dea487a6713b53ec8c7d9469e",
+      "src/auth.ts": "2f1ee748437c9a6ab66f5974dc439c134467142477a81e33488fd6075f0df810",
+      "src/index.ts": "42336a9f2fe6bc4624213711dc6c9ad08dea72b5f3ca6c3fc7a7298d1dda7eed",
+      "src/mcp.ts": "7067faeacea171a2abfcdef489463b82bbbbd08e333f2f11e911e9d199a3c820",
+      "src/time-groups.ts": "f7cca2568350907a1b8bab7cd31109b82ea0df38c8ecddbd3d5503b4f3c36a0c",
+      "tests/time-groups.test.ts": "e71125ffd8d9ef3e840997428e6b8ae97c379dc66d4a0f047d1af14d0c3b1561"
+    },
+    "languages": [
+      "javascript",
+      "python",
+      "rust",
+      "tsx",
+      "typescript"
+    ],
+    "versions": {
+      "tree-sitter": "0.26.0",
+      "tree-sitter-language-pack": "1.16.2",
+      "pathspec": "1.1.1"
+    },
+    "extractor_hash": "44ccfe7586b5f3eff43f966f46c823a6c1e2039679d38965961dfbd515fa3b6b",
+    "git_commit": "1b590d38084379cc15d8465dcfe66c6e7c7223fe",
+    "id": "b99a94689eae893106cbc665ac2909d6e5930e34b671fa8d156d639f7665f2d9"
+  },
+  "diagnostics": [
+    {
+      "language": "typescript",
+      "reason": "query_pattern_dropped",
+      "pattern": "(class_declaration (class_heritage (identifier) @base)) @definition.class",
+      "message": "Impossible pattern at row 0, column 35"
+    }
+  ],
+  "statistics": {
+    "files_total": 5,
+    "files_by_language": {
+      "typescript": 5
+    },
+    "symbols_total": 56,
+    "tests_total": 7,
+    "calls_total": 352,
+    "syntax_errors": 0,
+    "unparsed_known_language": 0,
+    "edges_total": 85,
+    "edges_by_kind": {
+      "contain": 56,
+      "import": 10,
+      "invoke": 15,
+      "reference": 4
+    },
+    "import_bindings": 19,
+    "import_uses": 107,
+    "binding_status": {
+      "internal": 10,
+      "conditional": 0,
+      "external": 9,
+      "unresolved": 0,
+      "ambiguous": 0,
+      "unsupported": 0
+    }
+  },
+  "files": [
+    {
+      "path": "src/auth.ts",
+      "language": "typescript",
+      "parser": "tree_sitter",
+      "has_syntax_error": false,
+      "is_empty": false,
+      "source_hash": "2f1ee748437c9a6ab66f5974dc439c134467142477a81e33488fd6075f0df810",
+      "bound_names": [
+        "AppEnv",
+        "AuthProps",
+        "GOOGLE_AUTHORIZATION_URL",
+        "GOOGLE_TOKEN_URL",
+        "GOOGLE_USERINFO_URL",
+        "GoogleTokenResponse",
+        "GoogleUserInfo",
+        "PENDING_LOGIN_PREFIX",
+        "PENDING_LOGIN_TTL_SECONDS",
+        "PendingGoogleLogin",
+        "authHandler",
+        "authorizationErrorResponse",
+        "consentPage",
+        "createState",
+        "errorRedirect",
+        "escapeHtml",
+        "fetch",
+        "handleAuthorize",
+        "handleGoogleCallback",
+        "handleGoogleStart",
+        "pendingLoginKey"
+      ],
+      "bindings": [
+        {
+          "id": "src/auth.ts@0:0",
+          "module": "@cloudflare/workers-oauth-provider",
+          "name": "AuthorizationError",
+          "local": "AuthorizationError",
+          "scope": "",
+          "line": 1,
+          "raw": "import {\n  AuthorizationError,\n  type AuthRequest,\n  type OAuthHelpers,\n} from \"@cloudflare/workers-oauth-provider\";",
+          "kind": "named",
+          "reexport": false,
+          "conditional": false,
+          "uses": [
+            {
+              "owner": "authorizationErrorResponse",
+              "expression": "AuthorizationError",
+              "kind": "reference",
+              "source_text": "AuthorizationError",
+              "line": 77,
+              "start_byte": 1980,
+              "end_byte": 1998,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "external",
+              "binding_target_file": null,
+              "binding_target_symbol": null
+            },
+            {
+              "owner": "handleAuthorize",
+              "expression": "AuthorizationError",
+              "kind": "reference",
+              "source_text": "AuthorizationError",
+              "line": 142,
+              "start_byte": 4941,
+              "end_byte": 4959,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "external",
+              "binding_target_file": null,
+              "binding_target_symbol": null
+            }
+          ],
+          "status": "external",
+          "reason": "stdlib_or_declared_dependency",
+          "target_file": null,
+          "target_symbol": null,
+          "bound_module": "",
+          "module_scope": "",
+          "start_byte": 0
+        },
+        {
+          "id": "src/auth.ts@0:1",
+          "module": "@cloudflare/workers-oauth-provider",
+          "name": "AuthRequest",
+          "local": "AuthRequest",
+          "scope": "",
+          "line": 1,
+          "raw": "import {\n  AuthorizationError,\n  type AuthRequest,\n  type OAuthHelpers,\n} from \"@cloudflare/workers-oauth-provider\";",
+          "kind": "named",
+          "reexport": false,
+          "conditional": false,
+          "uses": [
+            {
+              "owner": "PendingGoogleLogin",
+              "expression": "AuthRequest",
+              "kind": "reference",
+              "source_text": "AuthRequest",
+              "line": 20,
+              "start_byte": 384,
+              "end_byte": 395,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "external",
+              "binding_target_file": null,
+              "binding_target_symbol": null
+            },
+            {
+              "owner": "errorRedirect",
+              "expression": "AuthRequest",
+              "kind": "reference",
+              "source_text": "AuthRequest",
+              "line": 63,
+              "start_byte": 1488,
+              "end_byte": 1499,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "external",
+              "binding_target_file": null,
+              "binding_target_symbol": null
+            },
+            {
+              "owner": "handleAuthorize",
+              "expression": "AuthRequest",
+              "kind": "reference",
+              "source_text": "AuthRequest",
+              "line": 138,
+              "start_byte": 4804,
+              "end_byte": 4815,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "external",
+              "binding_target_file": null,
+              "binding_target_symbol": null
+            }
+          ],
+          "status": "external",
+          "reason": "stdlib_or_declared_dependency",
+          "target_file": null,
+          "target_symbol": null,
+          "bound_module": "",
+          "module_scope": "",
+          "start_byte": 0
+        },
+        {
+          "id": "src/auth.ts@0:2",
+          "module": "@cloudflare/workers-oauth-provider",
+          "name": "OAuthHelpers",
+          "local": "OAuthHelpers",
+          "scope": "",
+          "line": 1,
+          "raw": "import {\n  AuthorizationError,\n  type AuthRequest,\n  type OAuthHelpers,\n} from \"@cloudflare/workers-oauth-provider\";",
+          "kind": "named",
+          "reexport": false,
+          "conditional": false,
+          "uses": [
+            {
+              "owner": "AppEnv",
+              "expression": "OAuthHelpers",
+              "kind": "reference",
+              "source_text": "OAuthHelpers",
+              "line": 13,
+              "start_byte": 237,
+              "end_byte": 249,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "external",
+              "binding_target_file": null,
+              "binding_target_symbol": null
+            }
+          ],
+          "status": "external",
+          "reason": "stdlib_or_declared_dependency",
+          "target_file": null,
+          "target_symbol": null,
+          "bound_module": "",
+          "module_scope": "",
+          "start_byte": 0
+        }
+      ],
+      "calls": [
+        {
+          "name": "replaceAll",
+          "line": 42,
+          "caller": "escapeHtml",
+          "expression": ""
+        },
+        {
+          "name": "replaceAll",
+          "line": 42,
+          "caller": "escapeHtml",
+          "expression": ""
+        },
+        {
+          "name": "replaceAll",
+          "line": 42,
+          "caller": "escapeHtml",
+          "expression": ""
+        },
+        {
+          "name": "replaceAll",
+          "line": 42,
+          "caller": "escapeHtml",
+          "expression": ""
+        },
+        {
+          "name": "replaceAll",
+          "line": 42,
+          "caller": "escapeHtml",
+          "expression": ""
+        },
+        {
+          "name": "getRandomValues",
+          "line": 51,
+          "caller": "createState",
+          "expression": ""
+        },
+        {
+          "name": "btoa",
+          "line": 52,
+          "caller": "createState",
+          "expression": ""
+        },
+        {
+          "name": "replaceAll",
+          "line": 52,
+          "caller": "createState",
+          "expression": ""
+        },
+        {
+          "name": "replaceAll",
+          "line": 52,
+          "caller": "createState",
+          "expression": ""
+        },
+        {
+          "name": "replaceAll",
+          "line": 52,
+          "caller": "createState",
+          "expression": ""
+        },
+        {
+          "name": "fromCharCode",
+          "line": 52,
+          "caller": "createState",
+          "expression": ""
+        },
+        {
+          "name": "set",
+          "line": 68,
+          "caller": "errorRedirect",
+          "expression": ""
+        },
+        {
+          "name": "set",
+          "line": 69,
+          "caller": "errorRedirect",
+          "expression": ""
+        },
+        {
+          "name": "set",
+          "line": 70,
+          "caller": "errorRedirect",
+          "expression": ""
+        },
+        {
+          "name": "set",
+          "line": 72,
+          "caller": "errorRedirect",
+          "expression": ""
+        },
+        {
+          "name": "redirect",
+          "line": 74,
+          "caller": "errorRedirect",
+          "expression": ""
+        },
+        {
+          "name": "set",
+          "line": 83,
+          "caller": "authorizationErrorResponse",
+          "expression": ""
+        },
+        {
+          "name": "set",
+          "line": 84,
+          "caller": "authorizationErrorResponse",
+          "expression": ""
+        },
+        {
+          "name": "set",
+          "line": 85,
+          "caller": "authorizationErrorResponse",
+          "expression": ""
+        },
+        {
+          "name": "set",
+          "line": 86,
+          "caller": "authorizationErrorResponse",
+          "expression": ""
+        },
+        {
+          "name": "redirect",
+          "line": 87,
+          "caller": "authorizationErrorResponse",
+          "expression": ""
+        },
+        {
+          "name": "escapeHtml",
+          "line": 91,
+          "caller": "consentPage",
+          "expression": ""
+        },
+        {
+          "name": "escapeHtml",
+          "line": 92,
+          "caller": "consentPage",
+          "expression": ""
+        },
+        {
+          "name": "parseAuthRequest",
+          "line": 140,
+          "caller": "handleAuthorize",
+          "expression": ""
+        },
+        {
+          "name": "authorizationErrorResponse",
+          "line": 143,
+          "caller": "handleAuthorize",
+          "expression": ""
+        },
+        {
+          "name": "lookupClient",
+          "line": 148,
+          "caller": "handleAuthorize",
+          "expression": ""
+        },
+        {
+          "name": "createState",
+          "line": 153,
+          "caller": "handleAuthorize",
+          "expression": ""
+        },
+        {
+          "name": "put",
+          "line": 159,
+          "caller": "handleAuthorize",
+          "expression": ""
+        },
+        {
+          "name": "pendingLoginKey",
+          "line": 159,
+          "caller": "handleAuthorize",
+          "expression": ""
+        },
+        {
+          "name": "stringify",
+          "line": 159,
+          "caller": "handleAuthorize",
+          "expression": ""
+        },
+        {
+          "name": "consentPage",
+          "line": 163,
+          "caller": "handleAuthorize",
+          "expression": ""
+        },
+        {
+          "name": "get",
+          "line": 167,
+          "caller": "handleGoogleStart",
+          "expression": ""
+        },
+        {
+          "name": "get",
+          "line": 172,
+          "caller": "handleGoogleStart",
+          "expression": ""
+        },
+        {
+          "name": "pendingLoginKey",
+          "line": 172,
+          "caller": "handleGoogleStart",
+          "expression": ""
+        },
+        {
+          "name": "set",
+          "line": 181,
+          "caller": "handleGoogleStart",
+          "expression": ""
+        },
+        {
+          "name": "set",
+          "line": 182,
+          "caller": "handleGoogleStart",
+          "expression": ""
+        },
+        {
+          "name": "toString",
+          "line": 182,
+          "caller": "handleGoogleStart",
+          "expression": ""
+        },
+        {
+          "name": "set",
+          "line": 183,
+          "caller": "handleGoogleStart",
+          "expression": ""
+        },
+        {
+          "name": "set",
+          "line": 184,
+          "caller": "handleGoogleStart",
+          "expression": ""
+        },
+        {
+          "name": "set",
+          "line": 185,
+          "caller": "handleGoogleStart",
+          "expression": ""
+        },
+        {
+          "name": "set",
+          "line": 186,
+          "caller": "handleGoogleStart",
+          "expression": ""
+        },
+        {
+          "name": "set",
+          "line": 187,
+          "caller": "handleGoogleStart",
+          "expression": ""
+        },
+        {
+          "name": "set",
+          "line": 188,
+          "caller": "handleGoogleStart",
+          "expression": ""
+        },
+        {
+          "name": "redirect",
+          "line": 190,
+          "caller": "handleGoogleStart",
+          "expression": ""
+        },
+        {
+          "name": "get",
+          "line": 195,
+          "caller": "handleGoogleCallback",
+          "expression": ""
+        },
+        {
+          "name": "pendingLoginKey",
+          "line": 200,
+          "caller": "handleGoogleCallback",
+          "expression": ""
+        },
+        {
+          "name": "delete",
+          "line": 208,
+          "caller": "handleGoogleCallback",
+          "expression": ""
+        },
+        {
+          "name": "get",
+          "line": 210,
+          "caller": "handleGoogleCallback",
+          "expression": ""
+        },
+        {
+          "name": "errorRedirect",
+          "line": 212,
+          "caller": "handleGoogleCallback",
+          "expression": ""
+        },
+        {
+          "name": "get",
+          "line": 219,
+          "caller": "handleGoogleCallback",
+          "expression": ""
+        },
+        {
+          "name": "errorRedirect",
+          "line": 221,
+          "caller": "handleGoogleCallback",
+          "expression": ""
+        },
+        {
+          "name": "fetch",
+          "line": 228,
+          "caller": "handleGoogleCallback",
+          "expression": ""
+        },
+        {
+          "name": "toString",
+          "line": 236,
+          "caller": "handleGoogleCallback",
+          "expression": ""
+        },
+        {
+          "name": "errorRedirect",
+          "line": 241,
+          "caller": "handleGoogleCallback",
+          "expression": ""
+        },
+        {
+          "name": "fetch",
+          "line": 248,
+          "caller": "handleGoogleCallback",
+          "expression": ""
+        },
+        {
+          "name": "errorRedirect",
+          "line": 253,
+          "caller": "handleGoogleCallback",
+          "expression": ""
+        },
+        {
+          "name": "trim",
+          "line": 260,
+          "caller": "handleGoogleCallback",
+          "expression": ""
+        },
+        {
+          "name": "toLowerCase",
+          "line": 260,
+          "caller": "handleGoogleCallback",
+          "expression": ""
+        },
+        {
+          "name": "trim",
+          "line": 261,
+          "caller": "handleGoogleCallback",
+          "expression": ""
+        },
+        {
+          "name": "toLowerCase",
+          "line": 261,
+          "caller": "handleGoogleCallback",
+          "expression": ""
+        },
+        {
+          "name": "errorRedirect",
+          "line": 263,
+          "caller": "handleGoogleCallback",
+          "expression": ""
+        },
+        {
+          "name": "filter",
+          "line": 270,
+          "caller": "handleGoogleCallback",
+          "expression": ""
+        },
+        {
+          "name": "completeAuthorization",
+          "line": 273,
+          "caller": "handleGoogleCallback",
+          "expression": ""
+        },
+        {
+          "name": "redirect",
+          "line": 281,
+          "caller": "handleGoogleCallback",
+          "expression": ""
+        },
+        {
+          "name": "json",
+          "line": 289,
+          "caller": "fetch",
+          "expression": ""
+        },
+        {
+          "name": "handleAuthorize",
+          "line": 297,
+          "caller": "fetch",
+          "expression": ""
+        },
+        {
+          "name": "handleGoogleStart",
+          "line": 301,
+          "caller": "fetch",
+          "expression": ""
+        },
+        {
+          "name": "handleGoogleCallback",
+          "line": 305,
+          "caller": "fetch",
+          "expression": ""
+        }
+      ],
+      "diagnostics": [],
+      "modules": [],
+      "exports": [
+        {
+          "exported": "AuthProps",
+          "local": "AuthProps",
+          "module": "",
+          "line": 7
+        },
+        {
+          "exported": "AppEnv",
+          "local": "AppEnv",
+          "module": "",
+          "line": 11
+        },
+        {
+          "exported": "authHandler",
+          "local": "authHandler",
+          "module": "",
+          "line": 284
+        }
+      ],
+      "imports": [
+        {
+          "raw": "import {\n  AuthorizationError,\n  type AuthRequest,\n  type OAuthHelpers,\n} from \"@cloudflare/workers-oauth-provider\";",
+          "module": "@cloudflare/workers-oauth-provider",
+          "symbols": [
+            "AuthorizationError",
+            "AuthRequest",
+            "OAuthHelpers"
+          ],
+          "line": 1
+        }
+      ],
+      "symbols": [
+        {
+          "name": "AuthProps",
+          "qualified_name": "AuthProps",
+          "kind": "type",
+          "start_line": 7,
+          "end_line": 9,
+          "first_body_line": 7,
+          "last_body_line": 9,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "src/auth.ts::AuthProps",
+          "docstring": "",
+          "start_byte": 125,
+          "end_byte": 163,
+          "signature": "type AuthProps ="
+        },
+        {
+          "name": "AppEnv",
+          "qualified_name": "AppEnv",
+          "kind": "type",
+          "start_line": 11,
+          "end_line": 17,
+          "first_body_line": 11,
+          "last_body_line": 17,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "src/auth.ts::AppEnv",
+          "docstring": "",
+          "start_byte": 172,
+          "end_byte": 338,
+          "signature": "type AppEnv = Env &"
+        },
+        {
+          "name": "PendingGoogleLogin",
+          "qualified_name": "PendingGoogleLogin",
+          "kind": "type",
+          "start_line": 19,
+          "end_line": 22,
+          "first_body_line": 19,
+          "last_body_line": 22,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "src/auth.ts::PendingGoogleLogin",
+          "docstring": "",
+          "start_byte": 340,
+          "end_byte": 421,
+          "signature": "type PendingGoogleLogin ="
+        },
+        {
+          "name": "GoogleTokenResponse",
+          "qualified_name": "GoogleTokenResponse",
+          "kind": "type",
+          "start_line": 24,
+          "end_line": 28,
+          "first_body_line": 24,
+          "last_body_line": 28,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "src/auth.ts::GoogleTokenResponse",
+          "docstring": "",
+          "start_byte": 423,
+          "end_byte": 527,
+          "signature": "type GoogleTokenResponse ="
+        },
+        {
+          "name": "GoogleUserInfo",
+          "qualified_name": "GoogleUserInfo",
+          "kind": "type",
+          "start_line": 30,
+          "end_line": 33,
+          "first_body_line": 30,
+          "last_body_line": 33,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "src/auth.ts::GoogleUserInfo",
+          "docstring": "",
+          "start_byte": 529,
+          "end_byte": 601,
+          "signature": "type GoogleUserInfo ="
+        },
+        {
+          "name": "escapeHtml",
+          "qualified_name": "escapeHtml",
+          "kind": "function",
+          "start_line": 41,
+          "end_line": 48,
+          "first_body_line": 41,
+          "last_body_line": 48,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 961,
+          "body_end_byte": 1130,
+          "bases": [],
+          "parent": "",
+          "id": "src/auth.ts::escapeHtml",
+          "docstring": "",
+          "start_byte": 918,
+          "end_byte": 1130,
+          "signature": "function escapeHtml(value: string): string"
+        },
+        {
+          "name": "createState",
+          "qualified_name": "createState",
+          "kind": "function",
+          "start_line": 50,
+          "end_line": 56,
+          "first_body_line": 50,
+          "last_body_line": 56,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 1163,
+          "body_end_byte": 1349,
+          "bases": [],
+          "parent": "",
+          "id": "src/auth.ts::createState",
+          "docstring": "",
+          "start_byte": 1132,
+          "end_byte": 1349,
+          "signature": "function createState(): string"
+        },
+        {
+          "name": "pendingLoginKey",
+          "qualified_name": "pendingLoginKey",
+          "kind": "function",
+          "start_line": 58,
+          "end_line": 60,
+          "first_body_line": 58,
+          "last_body_line": 60,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 1399,
+          "body_end_byte": 1446,
+          "bases": [],
+          "parent": "",
+          "id": "src/auth.ts::pendingLoginKey",
+          "docstring": "",
+          "start_byte": 1351,
+          "end_byte": 1446,
+          "signature": "function pendingLoginKey(state: string): string"
+        },
+        {
+          "name": "errorRedirect",
+          "qualified_name": "errorRedirect",
+          "kind": "function",
+          "start_line": 62,
+          "end_line": 75,
+          "first_body_line": 66,
+          "last_body_line": 75,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 1578,
+          "body_end_byte": 1935,
+          "bases": [],
+          "parent": "",
+          "id": "src/auth.ts::errorRedirect",
+          "docstring": "",
+          "start_byte": 1448,
+          "end_byte": 1935,
+          "signature": "function errorRedirect(\n  oauthRequest: AuthRequest,\n  code: \"access_denied\" | \"server_error\",\n  description: string,\n): Response"
+        },
+        {
+          "name": "authorizationErrorResponse",
+          "qualified_name": "authorizationErrorResponse",
+          "kind": "function",
+          "start_line": 77,
+          "end_line": 88,
+          "first_body_line": 77,
+          "last_body_line": 88,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 2010,
+          "body_end_byte": 2452,
+          "bases": [],
+          "parent": "",
+          "id": "src/auth.ts::authorizationErrorResponse",
+          "docstring": "",
+          "start_byte": 1937,
+          "end_byte": 2452,
+          "signature": "function authorizationErrorResponse(error: AuthorizationError): Response"
+        },
+        {
+          "name": "consentPage",
+          "qualified_name": "consentPage",
+          "kind": "function",
+          "start_line": 90,
+          "end_line": 135,
+          "first_body_line": 90,
+          "last_body_line": 135,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 2520,
+          "body_end_byte": 4699,
+          "bases": [],
+          "parent": "",
+          "id": "src/auth.ts::consentPage",
+          "docstring": "",
+          "start_byte": 2454,
+          "end_byte": 4699,
+          "signature": "function consentPage(state: string, clientName: string): Response"
+        },
+        {
+          "name": "handleAuthorize",
+          "qualified_name": "handleAuthorize",
+          "kind": "function",
+          "start_line": 137,
+          "end_line": 164,
+          "first_body_line": 137,
+          "last_body_line": 164,
+          "is_test": false,
+          "is_async": true,
+          "is_generator": false,
+          "body_start_byte": 4782,
+          "body_end_byte": 5549,
+          "bases": [],
+          "parent": "",
+          "id": "src/auth.ts::handleAuthorize",
+          "docstring": "",
+          "start_byte": 4701,
+          "end_byte": 5549,
+          "signature": "async function handleAuthorize(request: Request, env: AppEnv): Promise<Response>"
+        },
+        {
+          "name": "handleGoogleStart",
+          "qualified_name": "handleGoogleStart",
+          "kind": "function",
+          "start_line": 166,
+          "end_line": 191,
+          "first_body_line": 166,
+          "last_body_line": 191,
+          "is_test": false,
+          "is_async": true,
+          "is_generator": false,
+          "body_start_byte": 5634,
+          "body_end_byte": 6626,
+          "bases": [],
+          "parent": "",
+          "id": "src/auth.ts::handleGoogleStart",
+          "docstring": "",
+          "start_byte": 5551,
+          "end_byte": 6626,
+          "signature": "async function handleGoogleStart(request: Request, env: AppEnv): Promise<Response>"
+        },
+        {
+          "name": "handleGoogleCallback",
+          "qualified_name": "handleGoogleCallback",
+          "kind": "function",
+          "start_line": 193,
+          "end_line": 282,
+          "first_body_line": 193,
+          "last_body_line": 282,
+          "is_test": false,
+          "is_async": true,
+          "is_generator": false,
+          "body_start_byte": 6714,
+          "body_end_byte": 9362,
+          "bases": [],
+          "parent": "",
+          "id": "src/auth.ts::handleGoogleCallback",
+          "docstring": "",
+          "start_byte": 6628,
+          "end_byte": 9362,
+          "signature": "async function handleGoogleCallback(request: Request, env: AppEnv): Promise<Response>"
+        },
+        {
+          "name": "fetch",
+          "qualified_name": "fetch",
+          "kind": "method",
+          "start_line": 285,
+          "end_line": 309,
+          "first_body_line": 285,
+          "last_body_line": 309,
+          "is_test": false,
+          "is_async": true,
+          "is_generator": false,
+          "body_start_byte": 9457,
+          "body_end_byte": 10041,
+          "bases": [],
+          "parent": "",
+          "id": "src/auth.ts::fetch",
+          "docstring": "",
+          "start_byte": 9395,
+          "end_byte": 10041,
+          "signature": "async fetch(request: Request, env: AppEnv): Promise<Response>"
+        }
+      ]
+    },
+    {
+      "path": "src/index.ts",
+      "language": "typescript",
+      "parser": "tree_sitter",
+      "has_syntax_error": false,
+      "is_empty": false,
+      "source_hash": "42336a9f2fe6bc4624213711dc6c9ad08dea72b5f3ca6c3fc7a7298d1dda7eed",
+      "bound_names": [
+        "fetch",
+        "mcpHandler"
+      ],
+      "bindings": [
+        {
+          "id": "src/index.ts@0:0",
+          "module": "@cloudflare/workers-oauth-provider",
+          "name": "default",
+          "local": "OAuthProvider",
+          "scope": "",
+          "line": 1,
+          "raw": "import OAuthProvider from \"@cloudflare/workers-oauth-provider\";",
+          "kind": "default",
+          "reexport": false,
+          "conditional": false,
+          "uses": [
+            {
+              "owner": "",
+              "expression": "OAuthProvider",
+              "kind": "call",
+              "source_text": "OAuthProvider",
+              "line": 11,
+              "start_byte": 372,
+              "end_byte": 385,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "external",
+              "binding_target_file": null,
+              "binding_target_symbol": null
+            }
+          ],
+          "status": "external",
+          "reason": "stdlib_or_declared_dependency",
+          "target_file": null,
+          "target_symbol": null,
+          "bound_module": "",
+          "module_scope": "",
+          "start_byte": 0
+        },
+        {
+          "id": "src/index.ts@64:1",
+          "module": "./auth",
+          "name": "authHandler",
+          "local": "authHandler",
+          "scope": "",
+          "line": 2,
+          "raw": "import { authHandler, type AppEnv } from \"./auth\";",
+          "kind": "named",
+          "reexport": false,
+          "conditional": false,
+          "uses": [
+            {
+              "owner": "",
+              "expression": "authHandler",
+              "kind": "reference",
+              "source_text": "authHandler",
+              "line": 14,
+              "start_byte": 460,
+              "end_byte": 471,
+              "target_file": "src/auth.ts",
+              "target_symbol": null,
+              "status": "internal",
+              "binding_target_file": "src/auth.ts",
+              "binding_target_symbol": null
+            }
+          ],
+          "status": "internal",
+          "reason": "module_and_binding_resolved",
+          "target_file": "src/auth.ts",
+          "target_symbol": null,
+          "bound_module": "",
+          "module_scope": "",
+          "start_byte": 64
+        },
+        {
+          "id": "src/index.ts@64:2",
+          "module": "./auth",
+          "name": "AppEnv",
+          "local": "AppEnv",
+          "scope": "",
+          "line": 2,
+          "raw": "import { authHandler, type AppEnv } from \"./auth\";",
+          "kind": "named",
+          "reexport": false,
+          "conditional": false,
+          "uses": [
+            {
+              "owner": "fetch",
+              "expression": "AppEnv",
+              "kind": "reference",
+              "source_text": "AppEnv",
+              "line": 6,
+              "start_byte": 210,
+              "end_byte": 216,
+              "target_file": "src/auth.ts",
+              "target_symbol": "src/auth.ts::AppEnv",
+              "status": "internal",
+              "binding_target_file": "src/auth.ts",
+              "binding_target_symbol": "src/auth.ts::AppEnv"
+            },
+            {
+              "owner": "",
+              "expression": "AppEnv",
+              "kind": "reference",
+              "source_text": "AppEnv",
+              "line": 9,
+              "start_byte": 343,
+              "end_byte": 349,
+              "target_file": "src/auth.ts",
+              "target_symbol": "src/auth.ts::AppEnv",
+              "status": "internal",
+              "binding_target_file": "src/auth.ts",
+              "binding_target_symbol": "src/auth.ts::AppEnv"
+            },
+            {
+              "owner": "",
+              "expression": "AppEnv",
+              "kind": "reference",
+              "source_text": "AppEnv",
+              "line": 11,
+              "start_byte": 386,
+              "end_byte": 392,
+              "target_file": "src/auth.ts",
+              "target_symbol": "src/auth.ts::AppEnv",
+              "status": "internal",
+              "binding_target_file": "src/auth.ts",
+              "binding_target_symbol": "src/auth.ts::AppEnv"
+            }
+          ],
+          "status": "internal",
+          "reason": "module_and_binding_resolved",
+          "target_file": "src/auth.ts",
+          "target_symbol": "src/auth.ts::AppEnv",
+          "bound_module": "",
+          "module_scope": "",
+          "start_byte": 64
+        },
+        {
+          "id": "src/index.ts@115:3",
+          "module": "./mcp",
+          "name": "handleMcpRequest",
+          "local": "handleMcpRequest",
+          "scope": "",
+          "line": 3,
+          "raw": "import { handleMcpRequest } from \"./mcp\";",
+          "kind": "named",
+          "reexport": false,
+          "conditional": false,
+          "uses": [
+            {
+              "owner": "fetch",
+              "expression": "handleMcpRequest",
+              "kind": "call",
+              "source_text": "handleMcpRequest",
+              "line": 7,
+              "start_byte": 273,
+              "end_byte": 289,
+              "target_file": "src/mcp.ts",
+              "target_symbol": "src/mcp.ts::handleMcpRequest",
+              "status": "internal",
+              "binding_target_file": "src/mcp.ts",
+              "binding_target_symbol": "src/mcp.ts::handleMcpRequest"
+            }
+          ],
+          "status": "internal",
+          "reason": "module_and_binding_resolved",
+          "target_file": "src/mcp.ts",
+          "target_symbol": "src/mcp.ts::handleMcpRequest",
+          "bound_module": "",
+          "module_scope": "",
+          "start_byte": 115
+        }
+      ],
+      "calls": [
+        {
+          "name": "handleMcpRequest",
+          "line": 7,
+          "caller": "fetch",
+          "expression": ""
+        }
+      ],
+      "diagnostics": [],
+      "modules": [],
+      "exports": [
+        {
+          "exported": "default",
+          "local": "",
+          "module": "",
+          "line": 11
+        }
+      ],
+      "imports": [
+        {
+          "raw": "import OAuthProvider from \"@cloudflare/workers-oauth-provider\";",
+          "module": "@cloudflare/workers-oauth-provider",
+          "symbols": [
+            "OAuthProvider"
+          ],
+          "line": 1
+        },
+        {
+          "raw": "import { authHandler, type AppEnv } from \"./auth\";",
+          "module": "./auth",
+          "symbols": [
+            "authHandler",
+            "AppEnv"
+          ],
+          "line": 2
+        },
+        {
+          "raw": "import { handleMcpRequest } from \"./mcp\";",
+          "module": "./mcp",
+          "symbols": [
+            "handleMcpRequest"
+          ],
+          "line": 3
+        }
+      ],
+      "symbols": [
+        {
+          "name": "fetch",
+          "qualified_name": "fetch",
+          "kind": "method",
+          "start_line": 6,
+          "end_line": 8,
+          "first_body_line": 6,
+          "last_body_line": 8,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 260,
+          "body_end_byte": 313,
+          "bases": [],
+          "parent": "",
+          "id": "src/index.ts::fetch",
+          "docstring": "",
+          "start_byte": 181,
+          "end_byte": 313,
+          "signature": "fetch(request: Request, env: AppEnv, ctx: ExecutionContext): Promise<Response>"
+        }
+      ]
+    },
+    {
+      "path": "src/mcp.ts",
+      "language": "typescript",
+      "parser": "tree_sitter",
+      "has_syntax_error": false,
+      "is_empty": false,
+      "source_hash": "7067faeacea171a2abfcdef489463b82bbbbd08e333f2f11e911e9d199a3c820",
+      "bound_names": [
+        "MeaningRow",
+        "VocabularyWord",
+        "WordListRow",
+        "WordRow",
+        "WordSummary",
+        "createServer",
+        "findWord",
+        "handleMcpRequest",
+        "languageSchema",
+        "listVocabularyWords",
+        "meaningOutputSchema",
+        "normalizeTerm",
+        "savedPeriodSchema",
+        "timeGroupPeriodSchema",
+        "wordOutputSchema",
+        "wordSummaryOutputSchema"
+      ],
+      "bindings": [
+        {
+          "id": "src/mcp.ts@0:0",
+          "module": "@modelcontextprotocol/server",
+          "name": "McpServer",
+          "local": "McpServer",
+          "scope": "",
+          "line": 1,
+          "raw": "import { McpServer } from \"@modelcontextprotocol/server\";",
+          "kind": "named",
+          "reexport": false,
+          "conditional": false,
+          "uses": [
+            {
+              "owner": "createServer",
+              "expression": "McpServer",
+              "kind": "reference",
+              "source_text": "McpServer",
+              "line": 216,
+              "start_byte": 4912,
+              "end_byte": 4921,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "external",
+              "binding_target_file": null,
+              "binding_target_symbol": null
+            },
+            {
+              "owner": "createServer",
+              "expression": "McpServer",
+              "kind": "call",
+              "source_text": "McpServer",
+              "line": 217,
+              "start_byte": 4945,
+              "end_byte": 4954,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "external",
+              "binding_target_file": null,
+              "binding_target_symbol": null
+            }
+          ],
+          "status": "external",
+          "reason": "stdlib_or_declared_dependency",
+          "target_file": null,
+          "target_symbol": null,
+          "bound_module": "",
+          "module_scope": "",
+          "start_byte": 0
+        },
+        {
+          "id": "src/mcp.ts@58:1",
+          "module": "agents/mcp/server",
+          "name": "createMcpHandler",
+          "local": "createMcpHandler",
+          "scope": "",
+          "line": 2,
+          "raw": "import { createMcpHandler } from \"agents/mcp/server\";",
+          "kind": "named",
+          "reexport": false,
+          "conditional": false,
+          "uses": [
+            {
+              "owner": "handleMcpRequest",
+              "expression": "createMcpHandler",
+              "kind": "call",
+              "source_text": "createMcpHandler",
+              "line": 529,
+              "start_byte": 15139,
+              "end_byte": 15155,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "external",
+              "binding_target_file": null,
+              "binding_target_symbol": null
+            }
+          ],
+          "status": "external",
+          "reason": "stdlib_or_declared_dependency",
+          "target_file": null,
+          "target_symbol": null,
+          "bound_module": "",
+          "module_scope": "",
+          "start_byte": 58
+        },
+        {
+          "id": "src/mcp.ts@112:2",
+          "module": "zod",
+          "name": "z",
+          "local": "z",
+          "scope": "",
+          "line": 3,
+          "raw": "import { z } from \"zod\";",
+          "kind": "named",
+          "reexport": false,
+          "conditional": false,
+          "uses": [
+            {
+              "owner": "",
+              "expression": "z.string",
+              "kind": "call",
+              "source_text": "z\n  .string",
+              "line": 55,
+              "start_byte": 1076,
+              "end_byte": 1087,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "external",
+              "binding_target_file": null,
+              "binding_target_symbol": null
+            },
+            {
+              "owner": "",
+              "expression": "z.object",
+              "kind": "call",
+              "source_text": "z.object",
+              "line": 63,
+              "start_byte": 1234,
+              "end_byte": 1242,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "external",
+              "binding_target_file": null,
+              "binding_target_symbol": null
+            },
+            {
+              "owner": "",
+              "expression": "z.string",
+              "kind": "call",
+              "source_text": "z.string",
+              "line": 64,
+              "start_byte": 1251,
+              "end_byte": 1259,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "external",
+              "binding_target_file": null,
+              "binding_target_symbol": null
+            },
+            {
+              "owner": "",
+              "expression": "z.string",
+              "kind": "call",
+              "source_text": "z.string",
+              "line": 65,
+              "start_byte": 1277,
+              "end_byte": 1285,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "external",
+              "binding_target_file": null,
+              "binding_target_symbol": null
+            },
+            {
+              "owner": "",
+              "expression": "z.string",
+              "kind": "call",
+              "source_text": "z.string",
+              "line": 66,
+              "start_byte": 1308,
+              "end_byte": 1316,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "external",
+              "binding_target_file": null,
+              "binding_target_symbol": null
+            },
+            {
+              "owner": "",
+              "expression": "z.string",
+              "kind": "call",
+              "source_text": "z.string",
+              "line": 67,
+              "start_byte": 1347,
+              "end_byte": 1355,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "external",
+              "binding_target_file": null,
+              "binding_target_symbol": null
+            },
+            {
+              "owner": "",
+              "expression": "z.string",
+              "kind": "call",
+              "source_text": "z.string",
+              "line": 68,
+              "start_byte": 1383,
+              "end_byte": 1391,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "external",
+              "binding_target_file": null,
+              "binding_target_symbol": null
+            },
+            {
+              "owner": "",
+              "expression": "z.string",
+              "kind": "call",
+              "source_text": "z.string",
+              "line": 69,
+              "start_byte": 1408,
+              "end_byte": 1416,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "external",
+              "binding_target_file": null,
+              "binding_target_symbol": null
+            },
+            {
+              "owner": "",
+              "expression": "z.object",
+              "kind": "call",
+              "source_text": "z.object",
+              "line": 72,
+              "start_byte": 1450,
+              "end_byte": 1458,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "external",
+              "binding_target_file": null,
+              "binding_target_symbol": null
+            },
+            {
+              "owner": "",
+              "expression": "z.string",
+              "kind": "call",
+              "source_text": "z.string",
+              "line": 73,
+              "start_byte": 1467,
+              "end_byte": 1475,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "external",
+              "binding_target_file": null,
+              "binding_target_symbol": null
+            },
+            {
+              "owner": "",
+              "expression": "z.string",
+              "kind": "call",
+              "source_text": "z.string",
+              "line": 74,
+              "start_byte": 1487,
+              "end_byte": 1495,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "external",
+              "binding_target_file": null,
+              "binding_target_symbol": null
+            },
+            {
+              "owner": "",
+              "expression": "z.string",
+              "kind": "call",
+              "source_text": "z.string",
+              "line": 75,
+              "start_byte": 1511,
+              "end_byte": 1519,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "external",
+              "binding_target_file": null,
+              "binding_target_symbol": null
+            },
+            {
+              "owner": "",
+              "expression": "z.string",
+              "kind": "call",
+              "source_text": "z.string",
+              "line": 76,
+              "start_byte": 1536,
+              "end_byte": 1544,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "external",
+              "binding_target_file": null,
+              "binding_target_symbol": null
+            },
+            {
+              "owner": "",
+              "expression": "z.string",
+              "kind": "call",
+              "source_text": "z.string",
+              "line": 77,
+              "start_byte": 1561,
+              "end_byte": 1569,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "external",
+              "binding_target_file": null,
+              "binding_target_symbol": null
+            },
+            {
+              "owner": "",
+              "expression": "z.array",
+              "kind": "call",
+              "source_text": "z.array",
+              "line": 78,
+              "start_byte": 1585,
+              "end_byte": 1592,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "external",
+              "binding_target_file": null,
+              "binding_target_symbol": null
+            },
+            {
+              "owner": "",
+              "expression": "z.object",
+              "kind": "call",
+              "source_text": "z.object",
+              "line": 81,
+              "start_byte": 1652,
+              "end_byte": 1660,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "external",
+              "binding_target_file": null,
+              "binding_target_symbol": null
+            },
+            {
+              "owner": "",
+              "expression": "z.string",
+              "kind": "call",
+              "source_text": "z.string",
+              "line": 82,
+              "start_byte": 1669,
+              "end_byte": 1677,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "external",
+              "binding_target_file": null,
+              "binding_target_symbol": null
+            },
+            {
+              "owner": "",
+              "expression": "z.string",
+              "kind": "call",
+              "source_text": "z.string",
+              "line": 83,
+              "start_byte": 1689,
+              "end_byte": 1697,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "external",
+              "binding_target_file": null,
+              "binding_target_symbol": null
+            },
+            {
+              "owner": "",
+              "expression": "z.string",
+              "kind": "call",
+              "source_text": "z.string",
+              "line": 84,
+              "start_byte": 1713,
+              "end_byte": 1721,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "external",
+              "binding_target_file": null,
+              "binding_target_symbol": null
+            },
+            {
+              "owner": "",
+              "expression": "z.string",
+              "kind": "call",
+              "source_text": "z.string",
+              "line": 85,
+              "start_byte": 1745,
+              "end_byte": 1753,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "external",
+              "binding_target_file": null,
+              "binding_target_symbol": null
+            },
+            {
+              "owner": "",
+              "expression": "z.number",
+              "kind": "call",
+              "source_text": "z.number",
+              "line": 86,
+              "start_byte": 1773,
+              "end_byte": 1781,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "external",
+              "binding_target_file": null,
+              "binding_target_symbol": null
+            },
+            {
+              "owner": "",
+              "expression": "z.string",
+              "kind": "call",
+              "source_text": "z.string",
+              "line": 87,
+              "start_byte": 1798,
+              "end_byte": 1806,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "external",
+              "binding_target_file": null,
+              "binding_target_symbol": null
+            },
+            {
+              "owner": "",
+              "expression": "z.string",
+              "kind": "call",
+              "source_text": "z.string",
+              "line": 88,
+              "start_byte": 1823,
+              "end_byte": 1831,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "external",
+              "binding_target_file": null,
+              "binding_target_symbol": null
+            },
+            {
+              "owner": "WordSummary",
+              "expression": "z",
+              "kind": "reference",
+              "source_text": "z",
+              "line": 91,
+              "start_byte": 1859,
+              "end_byte": 1860,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "external",
+              "binding_target_file": null,
+              "binding_target_symbol": null
+            },
+            {
+              "owner": "",
+              "expression": "z.enum",
+              "kind": "call",
+              "source_text": "z.enum",
+              "line": 93,
+              "start_byte": 1927,
+              "end_byte": 1933,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "external",
+              "binding_target_file": null,
+              "binding_target_symbol": null
+            },
+            {
+              "owner": "",
+              "expression": "z.enum",
+              "kind": "call",
+              "source_text": "z.enum",
+              "line": 105,
+              "start_byte": 2100,
+              "end_byte": 2106,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "external",
+              "binding_target_file": null,
+              "binding_target_symbol": null
+            },
+            {
+              "owner": "createServer",
+              "expression": "z.object",
+              "kind": "call",
+              "source_text": "z.object",
+              "line": 228,
+              "start_byte": 5372,
+              "end_byte": 5380,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "external",
+              "binding_target_file": null,
+              "binding_target_symbol": null
+            },
+            {
+              "owner": "createServer",
+              "expression": "z.string",
+              "kind": "call",
+              "source_text": "z.string",
+              "line": 229,
+              "start_byte": 5397,
+              "end_byte": 5405,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "external",
+              "binding_target_file": null,
+              "binding_target_symbol": null
+            },
+            {
+              "owner": "createServer",
+              "expression": "z.string",
+              "kind": "call",
+              "source_text": "z.string",
+              "line": 230,
+              "start_byte": 5452,
+              "end_byte": 5460,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "external",
+              "binding_target_file": null,
+              "binding_target_symbol": null
+            },
+            {
+              "owner": "createServer",
+              "expression": "z.string",
+              "kind": "call",
+              "source_text": "z.string",
+              "line": 231,
+              "start_byte": 5513,
+              "end_byte": 5521,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "external",
+              "binding_target_file": null,
+              "binding_target_symbol": null
+            },
+            {
+              "owner": "createServer",
+              "expression": "z.string",
+              "kind": "call",
+              "source_text": "z.string",
+              "line": 232,
+              "start_byte": 5582,
+              "end_byte": 5590,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "external",
+              "binding_target_file": null,
+              "binding_target_symbol": null
+            },
+            {
+              "owner": "createServer",
+              "expression": "z.object",
+              "kind": "call",
+              "source_text": "z.object",
+              "line": 235,
+              "start_byte": 5692,
+              "end_byte": 5700,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "external",
+              "binding_target_file": null,
+              "binding_target_symbol": null
+            },
+            {
+              "owner": "createServer",
+              "expression": "z.boolean",
+              "kind": "call",
+              "source_text": "z.boolean",
+              "line": 236,
+              "start_byte": 5718,
+              "end_byte": 5727,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "external",
+              "binding_target_file": null,
+              "binding_target_symbol": null
+            },
+            {
+              "owner": "createServer",
+              "expression": "z.object",
+              "kind": "call",
+              "source_text": "z.object",
+              "line": 313,
+              "start_byte": 8159,
+              "end_byte": 8167,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "external",
+              "binding_target_file": null,
+              "binding_target_symbol": null
+            },
+            {
+              "owner": "createServer",
+              "expression": "z.string",
+              "kind": "call",
+              "source_text": "z.string",
+              "line": 314,
+              "start_byte": 8184,
+              "end_byte": 8192,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "external",
+              "binding_target_file": null,
+              "binding_target_symbol": null
+            },
+            {
+              "owner": "createServer",
+              "expression": "z.object",
+              "kind": "call",
+              "source_text": "z.object",
+              "line": 317,
+              "start_byte": 8283,
+              "end_byte": 8291,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "external",
+              "binding_target_file": null,
+              "binding_target_symbol": null
+            },
+            {
+              "owner": "createServer",
+              "expression": "z.boolean",
+              "kind": "call",
+              "source_text": "z.boolean",
+              "line": 318,
+              "start_byte": 8309,
+              "end_byte": 8318,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "external",
+              "binding_target_file": null,
+              "binding_target_symbol": null
+            },
+            {
+              "owner": "createServer",
+              "expression": "z.object",
+              "kind": "call",
+              "source_text": "z.object",
+              "line": 355,
+              "start_byte": 9243,
+              "end_byte": 9251,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "external",
+              "binding_target_file": null,
+              "binding_target_symbol": null
+            },
+            {
+              "owner": "createServer",
+              "expression": "z.number",
+              "kind": "call",
+              "source_text": "z.number",
+              "line": 356,
+              "start_byte": 9269,
+              "end_byte": 9277,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "external",
+              "binding_target_file": null,
+              "binding_target_symbol": null
+            },
+            {
+              "owner": "createServer",
+              "expression": "z.object",
+              "kind": "call",
+              "source_text": "z.object",
+              "line": 358,
+              "start_byte": 9345,
+              "end_byte": 9353,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "external",
+              "binding_target_file": null,
+              "binding_target_symbol": null
+            },
+            {
+              "owner": "createServer",
+              "expression": "z.array",
+              "kind": "call",
+              "source_text": "z.array",
+              "line": 359,
+              "start_byte": 9371,
+              "end_byte": 9378,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "external",
+              "binding_target_file": null,
+              "binding_target_symbol": null
+            },
+            {
+              "owner": "createServer",
+              "expression": "z.object",
+              "kind": "call",
+              "source_text": "z.object",
+              "line": 394,
+              "start_byte": 10503,
+              "end_byte": 10511,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "external",
+              "binding_target_file": null,
+              "binding_target_symbol": null
+            },
+            {
+              "owner": "createServer",
+              "expression": "z.number",
+              "kind": "call",
+              "source_text": "z.number",
+              "line": 400,
+              "start_byte": 10756,
+              "end_byte": 10764,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "external",
+              "binding_target_file": null,
+              "binding_target_symbol": null
+            },
+            {
+              "owner": "createServer",
+              "expression": "z.string",
+              "kind": "call",
+              "source_text": "z\n          .string",
+              "line": 401,
+              "start_byte": 10821,
+              "end_byte": 10840,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "external",
+              "binding_target_file": null,
+              "binding_target_symbol": null
+            },
+            {
+              "owner": "createServer",
+              "expression": "z.object",
+              "kind": "call",
+              "source_text": "z.object",
+              "line": 409,
+              "start_byte": 11029,
+              "end_byte": 11037,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "external",
+              "binding_target_file": null,
+              "binding_target_symbol": null
+            },
+            {
+              "owner": "createServer",
+              "expression": "z.string",
+              "kind": "call",
+              "source_text": "z.string",
+              "line": 410,
+              "start_byte": 11058,
+              "end_byte": 11066,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "external",
+              "binding_target_file": null,
+              "binding_target_symbol": null
+            },
+            {
+              "owner": "createServer",
+              "expression": "z.array",
+              "kind": "call",
+              "source_text": "z.array",
+              "line": 412,
+              "start_byte": 11130,
+              "end_byte": 11137,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "external",
+              "binding_target_file": null,
+              "binding_target_symbol": null
+            },
+            {
+              "owner": "createServer",
+              "expression": "z.object",
+              "kind": "call",
+              "source_text": "z.object",
+              "line": 413,
+              "start_byte": 11149,
+              "end_byte": 11157,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "external",
+              "binding_target_file": null,
+              "binding_target_symbol": null
+            },
+            {
+              "owner": "createServer",
+              "expression": "z.string",
+              "kind": "call",
+              "source_text": "z.string",
+              "line": 414,
+              "start_byte": 11177,
+              "end_byte": 11185,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "external",
+              "binding_target_file": null,
+              "binding_target_symbol": null
+            },
+            {
+              "owner": "createServer",
+              "expression": "z.string",
+              "kind": "call",
+              "source_text": "z.string",
+              "line": 415,
+              "start_byte": 11208,
+              "end_byte": 11216,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "external",
+              "binding_target_file": null,
+              "binding_target_symbol": null
+            },
+            {
+              "owner": "createServer",
+              "expression": "z.array",
+              "kind": "call",
+              "source_text": "z.array",
+              "line": 417,
+              "start_byte": 11282,
+              "end_byte": 11289,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "external",
+              "binding_target_file": null,
+              "binding_target_symbol": null
+            },
+            {
+              "owner": "createServer",
+              "expression": "z.object",
+              "kind": "call",
+              "source_text": "z.object",
+              "line": 470,
+              "start_byte": 13442,
+              "end_byte": 13450,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "external",
+              "binding_target_file": null,
+              "binding_target_symbol": null
+            },
+            {
+              "owner": "createServer",
+              "expression": "z.string",
+              "kind": "call",
+              "source_text": "z\n          .string",
+              "line": 471,
+              "start_byte": 13472,
+              "end_byte": 13491,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "external",
+              "binding_target_file": null,
+              "binding_target_symbol": null
+            },
+            {
+              "owner": "createServer",
+              "expression": "z.string",
+              "kind": "call",
+              "source_text": "z\n          .string",
+              "line": 475,
+              "start_byte": 13624,
+              "end_byte": 13643,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "external",
+              "binding_target_file": null,
+              "binding_target_symbol": null
+            },
+            {
+              "owner": "createServer",
+              "expression": "z.string",
+              "kind": "call",
+              "source_text": "z\n          .string",
+              "line": 479,
+              "start_byte": 13775,
+              "end_byte": 13794,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "external",
+              "binding_target_file": null,
+              "binding_target_symbol": null
+            },
+            {
+              "owner": "createServer",
+              "expression": "z.number",
+              "kind": "call",
+              "source_text": "z.number",
+              "line": 486,
+              "start_byte": 13972,
+              "end_byte": 13980,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "external",
+              "binding_target_file": null,
+              "binding_target_symbol": null
+            },
+            {
+              "owner": "createServer",
+              "expression": "z.object",
+              "kind": "call",
+              "source_text": "z.object",
+              "line": 488,
+              "start_byte": 14049,
+              "end_byte": 14057,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "external",
+              "binding_target_file": null,
+              "binding_target_symbol": null
+            },
+            {
+              "owner": "createServer",
+              "expression": "z.string",
+              "kind": "call",
+              "source_text": "z.string",
+              "line": 489,
+              "start_byte": 14079,
+              "end_byte": 14087,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "external",
+              "binding_target_file": null,
+              "binding_target_symbol": null
+            },
+            {
+              "owner": "createServer",
+              "expression": "z.string",
+              "kind": "call",
+              "source_text": "z.string",
+              "line": 490,
+              "start_byte": 14108,
+              "end_byte": 14116,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "external",
+              "binding_target_file": null,
+              "binding_target_symbol": null
+            },
+            {
+              "owner": "createServer",
+              "expression": "z.string",
+              "kind": "call",
+              "source_text": "z.string",
+              "line": 491,
+              "start_byte": 14138,
+              "end_byte": 14146,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "external",
+              "binding_target_file": null,
+              "binding_target_symbol": null
+            },
+            {
+              "owner": "createServer",
+              "expression": "z.array",
+              "kind": "call",
+              "source_text": "z.array",
+              "line": 492,
+              "start_byte": 14165,
+              "end_byte": 14172,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "external",
+              "binding_target_file": null,
+              "binding_target_symbol": null
+            }
+          ],
+          "status": "external",
+          "reason": "stdlib_or_declared_dependency",
+          "target_file": null,
+          "target_symbol": null,
+          "bound_module": "",
+          "module_scope": "",
+          "start_byte": 112
+        },
+        {
+          "id": "src/mcp.ts@137:3",
+          "module": "./time-groups",
+          "name": "filterBySavedPeriod",
+          "local": "filterBySavedPeriod",
+          "scope": "",
+          "line": 4,
+          "raw": "import {\n  filterBySavedPeriod,\n  groupBySavedPeriod,\n  localDateRangeToUtcBounds,\n  savedPeriodLabel,\n} from \"./time-groups\";",
+          "kind": "named",
+          "reexport": false,
+          "conditional": false,
+          "uses": [
+            {
+              "owner": "createServer",
+              "expression": "filterBySavedPeriod",
+              "kind": "call",
+              "source_text": "filterBySavedPeriod",
+              "line": 443,
+              "start_byte": 12053,
+              "end_byte": 12072,
+              "target_file": "src/time-groups.ts",
+              "target_symbol": "src/time-groups.ts::filterBySavedPeriod",
+              "status": "internal",
+              "binding_target_file": "src/time-groups.ts",
+              "binding_target_symbol": "src/time-groups.ts::filterBySavedPeriod"
+            }
+          ],
+          "status": "internal",
+          "reason": "module_and_binding_resolved",
+          "target_file": "src/time-groups.ts",
+          "target_symbol": "src/time-groups.ts::filterBySavedPeriod",
+          "bound_module": "",
+          "module_scope": "",
+          "start_byte": 137
+        },
+        {
+          "id": "src/mcp.ts@137:4",
+          "module": "./time-groups",
+          "name": "groupBySavedPeriod",
+          "local": "groupBySavedPeriod",
+          "scope": "",
+          "line": 4,
+          "raw": "import {\n  filterBySavedPeriod,\n  groupBySavedPeriod,\n  localDateRangeToUtcBounds,\n  savedPeriodLabel,\n} from \"./time-groups\";",
+          "kind": "named",
+          "reexport": false,
+          "conditional": false,
+          "uses": [
+            {
+              "owner": "createServer",
+              "expression": "groupBySavedPeriod",
+              "kind": "call",
+              "source_text": "groupBySavedPeriod",
+              "line": 432,
+              "start_byte": 11669,
+              "end_byte": 11687,
+              "target_file": "src/time-groups.ts",
+              "target_symbol": "src/time-groups.ts::groupBySavedPeriod",
+              "status": "internal",
+              "binding_target_file": "src/time-groups.ts",
+              "binding_target_symbol": "src/time-groups.ts::groupBySavedPeriod"
+            }
+          ],
+          "status": "internal",
+          "reason": "module_and_binding_resolved",
+          "target_file": "src/time-groups.ts",
+          "target_symbol": "src/time-groups.ts::groupBySavedPeriod",
+          "bound_module": "",
+          "module_scope": "",
+          "start_byte": 137
+        },
+        {
+          "id": "src/mcp.ts@137:5",
+          "module": "./time-groups",
+          "name": "localDateRangeToUtcBounds",
+          "local": "localDateRangeToUtcBounds",
+          "scope": "",
+          "line": 4,
+          "raw": "import {\n  filterBySavedPeriod,\n  groupBySavedPeriod,\n  localDateRangeToUtcBounds,\n  savedPeriodLabel,\n} from \"./time-groups\";",
+          "kind": "named",
+          "reexport": false,
+          "conditional": false,
+          "uses": [
+            {
+              "owner": "createServer",
+              "expression": "localDateRangeToUtcBounds",
+              "kind": "call",
+              "source_text": "localDateRangeToUtcBounds",
+              "line": 502,
+              "start_byte": 14443,
+              "end_byte": 14468,
+              "target_file": "src/time-groups.ts",
+              "target_symbol": "src/time-groups.ts::localDateRangeToUtcBounds",
+              "status": "internal",
+              "binding_target_file": "src/time-groups.ts",
+              "binding_target_symbol": "src/time-groups.ts::localDateRangeToUtcBounds"
+            }
+          ],
+          "status": "internal",
+          "reason": "module_and_binding_resolved",
+          "target_file": "src/time-groups.ts",
+          "target_symbol": "src/time-groups.ts::localDateRangeToUtcBounds",
+          "bound_module": "",
+          "module_scope": "",
+          "start_byte": 137
+        },
+        {
+          "id": "src/mcp.ts@137:6",
+          "module": "./time-groups",
+          "name": "savedPeriodLabel",
+          "local": "savedPeriodLabel",
+          "scope": "",
+          "line": 4,
+          "raw": "import {\n  filterBySavedPeriod,\n  groupBySavedPeriod,\n  localDateRangeToUtcBounds,\n  savedPeriodLabel,\n} from \"./time-groups\";",
+          "kind": "named",
+          "reexport": false,
+          "conditional": false,
+          "uses": [
+            {
+              "owner": "createServer",
+              "expression": "savedPeriodLabel",
+              "kind": "call",
+              "source_text": "savedPeriodLabel",
+              "line": 441,
+              "start_byte": 11980,
+              "end_byte": 11996,
+              "target_file": "src/time-groups.ts",
+              "target_symbol": "src/time-groups.ts::savedPeriodLabel",
+              "status": "internal",
+              "binding_target_file": "src/time-groups.ts",
+              "binding_target_symbol": "src/time-groups.ts::savedPeriodLabel"
+            },
+            {
+              "owner": "createServer",
+              "expression": "savedPeriodLabel",
+              "kind": "call",
+              "source_text": "savedPeriodLabel",
+              "line": 456,
+              "start_byte": 12517,
+              "end_byte": 12533,
+              "target_file": "src/time-groups.ts",
+              "target_symbol": "src/time-groups.ts::savedPeriodLabel",
+              "status": "internal",
+              "binding_target_file": "src/time-groups.ts",
+              "binding_target_symbol": "src/time-groups.ts::savedPeriodLabel"
+            }
+          ],
+          "status": "internal",
+          "reason": "module_and_binding_resolved",
+          "target_file": "src/time-groups.ts",
+          "target_symbol": "src/time-groups.ts::savedPeriodLabel",
+          "bound_module": "",
+          "module_scope": "",
+          "start_byte": 137
+        }
+      ],
+      "calls": [
+        {
+          "name": "string",
+          "line": 55,
+          "caller": "",
+          "expression": ""
+        },
+        {
+          "name": "trim",
+          "line": 55,
+          "caller": "",
+          "expression": ""
+        },
+        {
+          "name": "min",
+          "line": 55,
+          "caller": "",
+          "expression": ""
+        },
+        {
+          "name": "max",
+          "line": 55,
+          "caller": "",
+          "expression": ""
+        },
+        {
+          "name": "default",
+          "line": 55,
+          "caller": "",
+          "expression": ""
+        },
+        {
+          "name": "describe",
+          "line": 55,
+          "caller": "",
+          "expression": ""
+        },
+        {
+          "name": "object",
+          "line": 63,
+          "caller": "",
+          "expression": ""
+        },
+        {
+          "name": "string",
+          "line": 64,
+          "caller": "",
+          "expression": ""
+        },
+        {
+          "name": "string",
+          "line": 65,
+          "caller": "",
+          "expression": ""
+        },
+        {
+          "name": "string",
+          "line": 66,
+          "caller": "",
+          "expression": ""
+        },
+        {
+          "name": "nullable",
+          "line": 66,
+          "caller": "",
+          "expression": ""
+        },
+        {
+          "name": "string",
+          "line": 67,
+          "caller": "",
+          "expression": ""
+        },
+        {
+          "name": "nullable",
+          "line": 67,
+          "caller": "",
+          "expression": ""
+        },
+        {
+          "name": "string",
+          "line": 68,
+          "caller": "",
+          "expression": ""
+        },
+        {
+          "name": "string",
+          "line": 69,
+          "caller": "",
+          "expression": ""
+        },
+        {
+          "name": "object",
+          "line": 72,
+          "caller": "",
+          "expression": ""
+        },
+        {
+          "name": "string",
+          "line": 73,
+          "caller": "",
+          "expression": ""
+        },
+        {
+          "name": "string",
+          "line": 74,
+          "caller": "",
+          "expression": ""
+        },
+        {
+          "name": "string",
+          "line": 75,
+          "caller": "",
+          "expression": ""
+        },
+        {
+          "name": "string",
+          "line": 76,
+          "caller": "",
+          "expression": ""
+        },
+        {
+          "name": "string",
+          "line": 77,
+          "caller": "",
+          "expression": ""
+        },
+        {
+          "name": "array",
+          "line": 78,
+          "caller": "",
+          "expression": ""
+        },
+        {
+          "name": "object",
+          "line": 81,
+          "caller": "",
+          "expression": ""
+        },
+        {
+          "name": "string",
+          "line": 82,
+          "caller": "",
+          "expression": ""
+        },
+        {
+          "name": "string",
+          "line": 83,
+          "caller": "",
+          "expression": ""
+        },
+        {
+          "name": "string",
+          "line": 84,
+          "caller": "",
+          "expression": ""
+        },
+        {
+          "name": "string",
+          "line": 85,
+          "caller": "",
+          "expression": ""
+        },
+        {
+          "name": "number",
+          "line": 86,
+          "caller": "",
+          "expression": ""
+        },
+        {
+          "name": "string",
+          "line": 87,
+          "caller": "",
+          "expression": ""
+        },
+        {
+          "name": "string",
+          "line": 88,
+          "caller": "",
+          "expression": ""
+        },
+        {
+          "name": "enum",
+          "line": 93,
+          "caller": "",
+          "expression": ""
+        },
+        {
+          "name": "enum",
+          "line": 105,
+          "caller": "",
+          "expression": ""
+        },
+        {
+          "name": "trim",
+          "line": 119,
+          "caller": "normalizeTerm",
+          "expression": ""
+        },
+        {
+          "name": "toLowerCase",
+          "line": 119,
+          "caller": "normalizeTerm",
+          "expression": ""
+        },
+        {
+          "name": "prepare",
+          "line": 127,
+          "caller": "findWord",
+          "expression": ""
+        },
+        {
+          "name": "bind",
+          "line": 127,
+          "caller": "findWord",
+          "expression": ""
+        },
+        {
+          "name": "normalizeTerm",
+          "line": 133,
+          "caller": "findWord",
+          "expression": ""
+        },
+        {
+          "name": "prepare",
+          "line": 140,
+          "caller": "findWord",
+          "expression": ""
+        },
+        {
+          "name": "bind",
+          "line": 140,
+          "caller": "findWord",
+          "expression": ""
+        },
+        {
+          "name": "map",
+          "line": 156,
+          "caller": "findWord",
+          "expression": ""
+        },
+        {
+          "name": "prepare",
+          "line": 176,
+          "caller": "listVocabularyWords",
+          "expression": ""
+        },
+        {
+          "name": "bind",
+          "line": 176,
+          "caller": "listVocabularyWords",
+          "expression": ""
+        },
+        {
+          "name": "map",
+          "line": 205,
+          "caller": "listVocabularyWords",
+          "expression": ""
+        },
+        {
+          "name": "registerTool",
+          "line": 222,
+          "caller": "createServer",
+          "expression": ""
+        },
+        {
+          "name": "object",
+          "line": 228,
+          "caller": "createServer",
+          "expression": ""
+        },
+        {
+          "name": "string",
+          "line": 229,
+          "caller": "createServer",
+          "expression": ""
+        },
+        {
+          "name": "trim",
+          "line": 229,
+          "caller": "createServer",
+          "expression": ""
+        },
+        {
+          "name": "min",
+          "line": 229,
+          "caller": "createServer",
+          "expression": ""
+        },
+        {
+          "name": "max",
+          "line": 229,
+          "caller": "createServer",
+          "expression": ""
+        },
+        {
+          "name": "string",
+          "line": 230,
+          "caller": "createServer",
+          "expression": ""
+        },
+        {
+          "name": "trim",
+          "line": 230,
+          "caller": "createServer",
+          "expression": ""
+        },
+        {
+          "name": "min",
+          "line": 230,
+          "caller": "createServer",
+          "expression": ""
+        },
+        {
+          "name": "max",
+          "line": 230,
+          "caller": "createServer",
+          "expression": ""
+        },
+        {
+          "name": "string",
+          "line": 231,
+          "caller": "createServer",
+          "expression": ""
+        },
+        {
+          "name": "trim",
+          "line": 231,
+          "caller": "createServer",
+          "expression": ""
+        },
+        {
+          "name": "min",
+          "line": 231,
+          "caller": "createServer",
+          "expression": ""
+        },
+        {
+          "name": "max",
+          "line": 231,
+          "caller": "createServer",
+          "expression": ""
+        },
+        {
+          "name": "optional",
+          "line": 231,
+          "caller": "createServer",
+          "expression": ""
+        },
+        {
+          "name": "string",
+          "line": 232,
+          "caller": "createServer",
+          "expression": ""
+        },
+        {
+          "name": "trim",
+          "line": 232,
+          "caller": "createServer",
+          "expression": ""
+        },
+        {
+          "name": "min",
+          "line": 232,
+          "caller": "createServer",
+          "expression": ""
+        },
+        {
+          "name": "max",
+          "line": 232,
+          "caller": "createServer",
+          "expression": ""
+        },
+        {
+          "name": "optional",
+          "line": 232,
+          "caller": "createServer",
+          "expression": ""
+        },
+        {
+          "name": "object",
+          "line": 235,
+          "caller": "createServer",
+          "expression": ""
+        },
+        {
+          "name": "boolean",
+          "line": 236,
+          "caller": "createServer",
+          "expression": ""
+        },
+        {
+          "name": "normalizeTerm",
+          "line": 247,
+          "caller": "createServer",
+          "expression": ""
+        },
+        {
+          "name": "randomUUID",
+          "line": 248,
+          "caller": "createServer",
+          "expression": ""
+        },
+        {
+          "name": "randomUUID",
+          "line": 249,
+          "caller": "createServer",
+          "expression": ""
+        },
+        {
+          "name": "batch",
+          "line": 251,
+          "caller": "createServer",
+          "expression": ""
+        },
+        {
+          "name": "prepare",
+          "line": 252,
+          "caller": "createServer",
+          "expression": ""
+        },
+        {
+          "name": "bind",
+          "line": 252,
+          "caller": "createServer",
+          "expression": ""
+        },
+        {
+          "name": "trim",
+          "line": 260,
+          "caller": "createServer",
+          "expression": ""
+        },
+        {
+          "name": "prepare",
+          "line": 261,
+          "caller": "createServer",
+          "expression": ""
+        },
+        {
+          "name": "bind",
+          "line": 261,
+          "caller": "createServer",
+          "expression": ""
+        },
+        {
+          "name": "trim",
+          "line": 278,
+          "caller": "createServer",
+          "expression": ""
+        },
+        {
+          "name": "trim",
+          "line": 279,
+          "caller": "createServer",
+          "expression": ""
+        },
+        {
+          "name": "trim",
+          "line": 280,
+          "caller": "createServer",
+          "expression": ""
+        },
+        {
+          "name": "findWord",
+          "line": 284,
+          "caller": "createServer",
+          "expression": ""
+        },
+        {
+          "name": "registerTool",
+          "line": 307,
+          "caller": "createServer",
+          "expression": ""
+        },
+        {
+          "name": "object",
+          "line": 313,
+          "caller": "createServer",
+          "expression": ""
+        },
+        {
+          "name": "string",
+          "line": 314,
+          "caller": "createServer",
+          "expression": ""
+        },
+        {
+          "name": "trim",
+          "line": 314,
+          "caller": "createServer",
+          "expression": ""
+        },
+        {
+          "name": "min",
+          "line": 314,
+          "caller": "createServer",
+          "expression": ""
+        },
+        {
+          "name": "max",
+          "line": 314,
+          "caller": "createServer",
+          "expression": ""
+        },
+        {
+          "name": "object",
+          "line": 317,
+          "caller": "createServer",
+          "expression": ""
+        },
+        {
+          "name": "boolean",
+          "line": 318,
+          "caller": "createServer",
+          "expression": ""
+        },
+        {
+          "name": "nullable",
+          "line": 319,
+          "caller": "createServer",
+          "expression": ""
+        },
+        {
+          "name": "findWord",
+          "line": 329,
+          "caller": "createServer",
+          "expression": ""
+        },
+        {
+          "name": "stringify",
+          "line": 341,
+          "caller": "createServer",
+          "expression": ""
+        },
+        {
+          "name": "registerTool",
+          "line": 349,
+          "caller": "createServer",
+          "expression": ""
+        },
+        {
+          "name": "object",
+          "line": 355,
+          "caller": "createServer",
+          "expression": ""
+        },
+        {
+          "name": "number",
+          "line": 356,
+          "caller": "createServer",
+          "expression": ""
+        },
+        {
+          "name": "int",
+          "line": 356,
+          "caller": "createServer",
+          "expression": ""
+        },
+        {
+          "name": "min",
+          "line": 356,
+          "caller": "createServer",
+          "expression": ""
+        },
+        {
+          "name": "max",
+          "line": 356,
+          "caller": "createServer",
+          "expression": ""
+        },
+        {
+          "name": "default",
+          "line": 356,
+          "caller": "createServer",
+          "expression": ""
+        },
+        {
+          "name": "object",
+          "line": 358,
+          "caller": "createServer",
+          "expression": ""
+        },
+        {
+          "name": "array",
+          "line": 359,
+          "caller": "createServer",
+          "expression": ""
+        },
+        {
+          "name": "listVocabularyWords",
+          "line": 370,
+          "caller": "createServer",
+          "expression": ""
+        },
+        {
+          "name": "stringify",
+          "line": 381,
+          "caller": "createServer",
+          "expression": ""
+        },
+        {
+          "name": "registerTool",
+          "line": 388,
+          "caller": "createServer",
+          "expression": ""
+        },
+        {
+          "name": "object",
+          "line": 394,
+          "caller": "createServer",
+          "expression": ""
+        },
+        {
+          "name": "default",
+          "line": 395,
+          "caller": "createServer",
+          "expression": ""
+        },
+        {
+          "name": "describe",
+          "line": 395,
+          "caller": "createServer",
+          "expression": ""
+        },
+        {
+          "name": "number",
+          "line": 400,
+          "caller": "createServer",
+          "expression": ""
+        },
+        {
+          "name": "int",
+          "line": 400,
+          "caller": "createServer",
+          "expression": ""
+        },
+        {
+          "name": "min",
+          "line": 400,
+          "caller": "createServer",
+          "expression": ""
+        },
+        {
+          "name": "max",
+          "line": 400,
+          "caller": "createServer",
+          "expression": ""
+        },
+        {
+          "name": "default",
+          "line": 400,
+          "caller": "createServer",
+          "expression": ""
+        },
+        {
+          "name": "string",
+          "line": 401,
+          "caller": "createServer",
+          "expression": ""
+        },
+        {
+          "name": "trim",
+          "line": 401,
+          "caller": "createServer",
+          "expression": ""
+        },
+        {
+          "name": "min",
+          "line": 401,
+          "caller": "createServer",
+          "expression": ""
+        },
+        {
+          "name": "max",
+          "line": 401,
+          "caller": "createServer",
+          "expression": ""
+        },
+        {
+          "name": "default",
+          "line": 401,
+          "caller": "createServer",
+          "expression": ""
+        },
+        {
+          "name": "describe",
+          "line": 401,
+          "caller": "createServer",
+          "expression": ""
+        },
+        {
+          "name": "object",
+          "line": 409,
+          "caller": "createServer",
+          "expression": ""
+        },
+        {
+          "name": "string",
+          "line": 410,
+          "caller": "createServer",
+          "expression": ""
+        },
+        {
+          "name": "array",
+          "line": 412,
+          "caller": "createServer",
+          "expression": ""
+        },
+        {
+          "name": "object",
+          "line": 413,
+          "caller": "createServer",
+          "expression": ""
+        },
+        {
+          "name": "string",
+          "line": 414,
+          "caller": "createServer",
+          "expression": ""
+        },
+        {
+          "name": "string",
+          "line": 415,
+          "caller": "createServer",
+          "expression": ""
+        },
+        {
+          "name": "array",
+          "line": 417,
+          "caller": "createServer",
+          "expression": ""
+        },
+        {
+          "name": "listVocabularyWords",
+          "line": 429,
+          "caller": "createServer",
+          "expression": ""
+        },
+        {
+          "name": "groupBySavedPeriod",
+          "line": 432,
+          "caller": "createServer",
+          "expression": ""
+        },
+        {
+          "name": "map",
+          "line": 432,
+          "caller": "createServer",
+          "expression": ""
+        },
+        {
+          "name": "replaceAll",
+          "line": 440,
+          "caller": "createServer",
+          "expression": ""
+        },
+        {
+          "name": "savedPeriodLabel",
+          "line": 441,
+          "caller": "createServer",
+          "expression": ""
+        },
+        {
+          "name": "filterBySavedPeriod",
+          "line": 443,
+          "caller": "createServer",
+          "expression": ""
+        },
+        {
+          "name": "some",
+          "line": 447,
+          "caller": "createServer",
+          "expression": ""
+        },
+        {
+          "name": "savedPeriodLabel",
+          "line": 456,
+          "caller": "createServer",
+          "expression": ""
+        },
+        {
+          "name": "toLowerCase",
+          "line": 456,
+          "caller": "createServer",
+          "expression": ""
+        },
+        {
+          "name": "stringify",
+          "line": 457,
+          "caller": "createServer",
+          "expression": ""
+        },
+        {
+          "name": "registerTool",
+          "line": 464,
+          "caller": "createServer",
+          "expression": ""
+        },
+        {
+          "name": "object",
+          "line": 470,
+          "caller": "createServer",
+          "expression": ""
+        },
+        {
+          "name": "string",
+          "line": 471,
+          "caller": "createServer",
+          "expression": ""
+        },
+        {
+          "name": "regex",
+          "line": 471,
+          "caller": "createServer",
+          "expression": ""
+        },
+        {
+          "name": "describe",
+          "line": 471,
+          "caller": "createServer",
+          "expression": ""
+        },
+        {
+          "name": "string",
+          "line": 475,
+          "caller": "createServer",
+          "expression": ""
+        },
+        {
+          "name": "regex",
+          "line": 475,
+          "caller": "createServer",
+          "expression": ""
+        },
+        {
+          "name": "describe",
+          "line": 475,
+          "caller": "createServer",
+          "expression": ""
+        },
+        {
+          "name": "string",
+          "line": 479,
+          "caller": "createServer",
+          "expression": ""
+        },
+        {
+          "name": "trim",
+          "line": 479,
+          "caller": "createServer",
+          "expression": ""
+        },
+        {
+          "name": "min",
+          "line": 479,
+          "caller": "createServer",
+          "expression": ""
+        },
+        {
+          "name": "max",
+          "line": 479,
+          "caller": "createServer",
+          "expression": ""
+        },
+        {
+          "name": "default",
+          "line": 479,
+          "caller": "createServer",
+          "expression": ""
+        },
+        {
+          "name": "describe",
+          "line": 479,
+          "caller": "createServer",
+          "expression": ""
+        },
+        {
+          "name": "number",
+          "line": 486,
+          "caller": "createServer",
+          "expression": ""
+        },
+        {
+          "name": "int",
+          "line": 486,
+          "caller": "createServer",
+          "expression": ""
+        },
+        {
+          "name": "min",
+          "line": 486,
+          "caller": "createServer",
+          "expression": ""
+        },
+        {
+          "name": "max",
+          "line": 486,
+          "caller": "createServer",
+          "expression": ""
+        },
+        {
+          "name": "default",
+          "line": 486,
+          "caller": "createServer",
+          "expression": ""
+        },
+        {
+          "name": "object",
+          "line": 488,
+          "caller": "createServer",
+          "expression": ""
+        },
+        {
+          "name": "string",
+          "line": 489,
+          "caller": "createServer",
+          "expression": ""
+        },
+        {
+          "name": "string",
+          "line": 490,
+          "caller": "createServer",
+          "expression": ""
+        },
+        {
+          "name": "string",
+          "line": 491,
+          "caller": "createServer",
+          "expression": ""
+        },
+        {
+          "name": "array",
+          "line": 492,
+          "caller": "createServer",
+          "expression": ""
+        },
+        {
+          "name": "localDateRangeToUtcBounds",
+          "line": 502,
+          "caller": "createServer",
+          "expression": ""
+        },
+        {
+          "name": "listVocabularyWords",
+          "line": 503,
+          "caller": "createServer",
+          "expression": ""
+        },
+        {
+          "name": "stringify",
+          "line": 514,
+          "caller": "createServer",
+          "expression": ""
+        },
+        {
+          "name": "createMcpHandler",
+          "line": 529,
+          "caller": "handleMcpRequest",
+          "expression": ""
+        },
+        {
+          "name": "createServer",
+          "line": 529,
+          "caller": "handleMcpRequest",
+          "expression": ""
+        },
+        {
+          "name": "error",
+          "line": 532,
+          "caller": "handleMcpRequest.onerror",
+          "expression": ""
+        },
+        {
+          "name": "stringify",
+          "line": 533,
+          "caller": "handleMcpRequest.onerror",
+          "expression": ""
+        },
+        {
+          "name": "handler",
+          "line": 541,
+          "caller": "handleMcpRequest",
+          "expression": ""
+        }
+      ],
+      "diagnostics": [],
+      "modules": [],
+      "exports": [
+        {
+          "exported": "handleMcpRequest",
+          "local": "handleMcpRequest",
+          "module": "",
+          "line": 524
+        }
+      ],
+      "imports": [
+        {
+          "raw": "import { McpServer } from \"@modelcontextprotocol/server\";",
+          "module": "@modelcontextprotocol/server",
+          "symbols": [
+            "McpServer"
+          ],
+          "line": 1
+        },
+        {
+          "raw": "import { createMcpHandler } from \"agents/mcp/server\";",
+          "module": "agents/mcp/server",
+          "symbols": [
+            "createMcpHandler"
+          ],
+          "line": 2
+        },
+        {
+          "raw": "import { z } from \"zod\";",
+          "module": "zod",
+          "symbols": [
+            "z"
+          ],
+          "line": 3
+        },
+        {
+          "raw": "import {\n  filterBySavedPeriod,\n  groupBySavedPeriod,\n  localDateRangeToUtcBounds,\n  savedPeriodLabel,\n} from \"./time-groups\";",
+          "module": "./time-groups",
+          "symbols": [
+            "filterBySavedPeriod",
+            "groupBySavedPeriod",
+            "localDateRangeToUtcBounds",
+            "savedPeriodLabel"
+          ],
+          "line": 4
+        }
+      ],
+      "symbols": [
+        {
+          "name": "WordRow",
+          "qualified_name": "WordRow",
+          "kind": "type",
+          "start_line": 11,
+          "end_line": 18,
+          "first_body_line": 11,
+          "last_body_line": 18,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "src/mcp.ts::WordRow",
+          "docstring": "",
+          "start_byte": 265,
+          "end_byte": 405,
+          "signature": "type WordRow ="
+        },
+        {
+          "name": "MeaningRow",
+          "qualified_name": "MeaningRow",
+          "kind": "type",
+          "start_line": 20,
+          "end_line": 27,
+          "first_body_line": 20,
+          "last_body_line": 27,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "src/mcp.ts::MeaningRow",
+          "docstring": "",
+          "start_byte": 407,
+          "end_byte": 577,
+          "signature": "type MeaningRow ="
+        },
+        {
+          "name": "WordListRow",
+          "qualified_name": "WordListRow",
+          "kind": "type",
+          "start_line": 29,
+          "end_line": 37,
+          "first_body_line": 29,
+          "last_body_line": 37,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "src/mcp.ts::WordListRow",
+          "docstring": "",
+          "start_byte": 579,
+          "end_byte": 750,
+          "signature": "type WordListRow ="
+        },
+        {
+          "name": "VocabularyWord",
+          "qualified_name": "VocabularyWord",
+          "kind": "type",
+          "start_line": 39,
+          "end_line": 53,
+          "first_body_line": 39,
+          "last_body_line": 53,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "src/mcp.ts::VocabularyWord",
+          "docstring": "",
+          "start_byte": 752,
+          "end_byte": 1051,
+          "signature": "type VocabularyWord ="
+        },
+        {
+          "name": "WordSummary",
+          "qualified_name": "WordSummary",
+          "kind": "type",
+          "start_line": 91,
+          "end_line": 91,
+          "first_body_line": 91,
+          "last_body_line": 91,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "src/mcp.ts::WordSummary",
+          "docstring": "",
+          "start_byte": 1840,
+          "end_byte": 1899,
+          "signature": "type WordSummary = z.infer<typeof wordSummaryOutputSchema>;"
+        },
+        {
+          "name": "normalizeTerm",
+          "qualified_name": "normalizeTerm",
+          "kind": "function",
+          "start_line": 118,
+          "end_line": 120,
+          "first_body_line": 118,
+          "last_body_line": 120,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 2300,
+          "body_end_byte": 2339,
+          "bases": [],
+          "parent": "",
+          "id": "src/mcp.ts::normalizeTerm",
+          "docstring": "",
+          "start_byte": 2255,
+          "end_byte": 2339,
+          "signature": "function normalizeTerm(term: string): string"
+        },
+        {
+          "name": "findWord",
+          "qualified_name": "findWord",
+          "kind": "function",
+          "start_line": 122,
+          "end_line": 165,
+          "first_body_line": 126,
+          "last_body_line": 165,
+          "is_test": false,
+          "is_async": true,
+          "is_generator": false,
+          "body_start_byte": 2454,
+          "body_end_byte": 3447,
+          "bases": [],
+          "parent": "",
+          "id": "src/mcp.ts::findWord",
+          "docstring": "",
+          "start_byte": 2341,
+          "end_byte": 3447,
+          "signature": "async function findWord(\n  db: D1Database,\n  term: string,\n  language: string,\n): Promise<VocabularyWord | null>"
+        },
+        {
+          "name": "listVocabularyWords",
+          "qualified_name": "listVocabularyWords",
+          "kind": "function",
+          "start_line": 167,
+          "end_line": 214,
+          "first_body_line": 171,
+          "last_body_line": 214,
+          "is_test": false,
+          "is_async": true,
+          "is_generator": false,
+          "body_start_byte": 3603,
+          "body_end_byte": 4871,
+          "bases": [],
+          "parent": "",
+          "id": "src/mcp.ts::listVocabularyWords",
+          "docstring": "",
+          "start_byte": 3449,
+          "end_byte": 4871,
+          "signature": "async function listVocabularyWords(\n  db: D1Database,\n  limit: number,\n  range?:"
+        },
+        {
+          "name": "createServer",
+          "qualified_name": "createServer",
+          "kind": "function",
+          "start_line": 216,
+          "end_line": 522,
+          "first_body_line": 216,
+          "last_body_line": 522,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 4922,
+          "body_end_byte": 15005,
+          "bases": [],
+          "parent": "",
+          "id": "src/mcp.ts::createServer",
+          "docstring": "",
+          "start_byte": 4873,
+          "end_byte": 15005,
+          "signature": "function createServer(db: D1Database): McpServer"
+        },
+        {
+          "name": "handleMcpRequest",
+          "qualified_name": "handleMcpRequest",
+          "kind": "function",
+          "start_line": 524,
+          "end_line": 542,
+          "first_body_line": 528,
+          "last_body_line": 542,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 15119,
+          "body_end_byte": 15418,
+          "bases": [],
+          "parent": "",
+          "id": "src/mcp.ts::handleMcpRequest",
+          "docstring": "",
+          "start_byte": 15014,
+          "end_byte": 15418,
+          "signature": "function handleMcpRequest(\n  request: Request,\n  env: Env,\n  ctx: ExecutionContext,\n): Promise<Response>"
+        },
+        {
+          "name": "onerror",
+          "qualified_name": "handleMcpRequest.onerror",
+          "kind": "method",
+          "start_line": 531,
+          "end_line": 538,
+          "first_body_line": 531,
+          "last_body_line": 538,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 15224,
+          "body_end_byte": 15371,
+          "bases": [],
+          "parent": "handleMcpRequest",
+          "id": "src/mcp.ts::handleMcpRequest.onerror",
+          "docstring": "",
+          "start_byte": 15209,
+          "end_byte": 15371,
+          "signature": "onerror(error)"
+        }
+      ]
+    },
+    {
+      "path": "src/time-groups.ts",
+      "language": "typescript",
+      "parser": "tree_sitter",
+      "has_syntax_error": false,
+      "is_empty": false,
+      "source_hash": "f7cca2568350907a1b8bab7cd31109b82ea0df38c8ecddbd3d5503b4f3c36a0c",
+      "bound_names": [
+        "CalendarDate",
+        "DAY_IN_MILLISECONDS",
+        "SAVED_PERIOD_LABELS",
+        "SavedPeriodFilter",
+        "TimeGroup",
+        "TimeGroupPeriod",
+        "UtcQueryBounds",
+        "addCalendarDays",
+        "assertValidTimeZone",
+        "calendarDate",
+        "dayNumber",
+        "filterBySavedPeriod",
+        "formatD1UtcTimestamp",
+        "groupBySavedPeriod",
+        "groupIdentity",
+        "isInSavedPeriod",
+        "localDateRangeToUtcBounds",
+        "localMidnightAsUtc",
+        "mondayOfWeek",
+        "monthLabel",
+        "parseD1Timestamp",
+        "parseLocalDate",
+        "savedPeriodLabel",
+        "timeZoneOffsetMilliseconds"
+      ],
+      "bindings": [],
+      "calls": [
+        {
+          "name": "test",
+          "line": 59,
+          "caller": "parseD1Timestamp",
+          "expression": ""
+        },
+        {
+          "name": "replace",
+          "line": 60,
+          "caller": "parseD1Timestamp",
+          "expression": ""
+        },
+        {
+          "name": "isNaN",
+          "line": 64,
+          "caller": "parseD1Timestamp",
+          "expression": ""
+        },
+        {
+          "name": "getTime",
+          "line": 64,
+          "caller": "parseD1Timestamp",
+          "expression": ""
+        },
+        {
+          "name": "formatToParts",
+          "line": 72,
+          "caller": "calendarDate",
+          "expression": ""
+        },
+        {
+          "name": "map",
+          "line": 78,
+          "caller": "calendarDate",
+          "expression": ""
+        },
+        {
+          "name": "Number",
+          "line": 81,
+          "caller": "calendarDate",
+          "expression": ""
+        },
+        {
+          "name": "get",
+          "line": 81,
+          "caller": "calendarDate",
+          "expression": ""
+        },
+        {
+          "name": "Number",
+          "line": 82,
+          "caller": "calendarDate",
+          "expression": ""
+        },
+        {
+          "name": "get",
+          "line": 82,
+          "caller": "calendarDate",
+          "expression": ""
+        },
+        {
+          "name": "Number",
+          "line": 83,
+          "caller": "calendarDate",
+          "expression": ""
+        },
+        {
+          "name": "get",
+          "line": 83,
+          "caller": "calendarDate",
+          "expression": ""
+        },
+        {
+          "name": "exec",
+          "line": 88,
+          "caller": "parseLocalDate",
+          "expression": ""
+        },
+        {
+          "name": "Number",
+          "line": 94,
+          "caller": "parseLocalDate",
+          "expression": ""
+        },
+        {
+          "name": "Number",
+          "line": 95,
+          "caller": "parseLocalDate",
+          "expression": ""
+        },
+        {
+          "name": "Number",
+          "line": 96,
+          "caller": "parseLocalDate",
+          "expression": ""
+        },
+        {
+          "name": "UTC",
+          "line": 99,
+          "caller": "parseLocalDate",
+          "expression": ""
+        },
+        {
+          "name": "getUTCFullYear",
+          "line": 103,
+          "caller": "parseLocalDate",
+          "expression": ""
+        },
+        {
+          "name": "getUTCMonth",
+          "line": 104,
+          "caller": "parseLocalDate",
+          "expression": ""
+        },
+        {
+          "name": "getUTCDate",
+          "line": 105,
+          "caller": "parseLocalDate",
+          "expression": ""
+        },
+        {
+          "name": "UTC",
+          "line": 115,
+          "caller": "addCalendarDays",
+          "expression": ""
+        },
+        {
+          "name": "getUTCFullYear",
+          "line": 119,
+          "caller": "addCalendarDays",
+          "expression": ""
+        },
+        {
+          "name": "getUTCMonth",
+          "line": 120,
+          "caller": "addCalendarDays",
+          "expression": ""
+        },
+        {
+          "name": "getUTCDate",
+          "line": 121,
+          "caller": "addCalendarDays",
+          "expression": ""
+        },
+        {
+          "name": "formatToParts",
+          "line": 126,
+          "caller": "timeZoneOffsetMilliseconds",
+          "expression": ""
+        },
+        {
+          "name": "map",
+          "line": 136,
+          "caller": "timeZoneOffsetMilliseconds",
+          "expression": ""
+        },
+        {
+          "name": "UTC",
+          "line": 137,
+          "caller": "timeZoneOffsetMilliseconds",
+          "expression": ""
+        },
+        {
+          "name": "Number",
+          "line": 138,
+          "caller": "timeZoneOffsetMilliseconds",
+          "expression": ""
+        },
+        {
+          "name": "get",
+          "line": 138,
+          "caller": "timeZoneOffsetMilliseconds",
+          "expression": ""
+        },
+        {
+          "name": "Number",
+          "line": 139,
+          "caller": "timeZoneOffsetMilliseconds",
+          "expression": ""
+        },
+        {
+          "name": "get",
+          "line": 139,
+          "caller": "timeZoneOffsetMilliseconds",
+          "expression": ""
+        },
+        {
+          "name": "Number",
+          "line": 140,
+          "caller": "timeZoneOffsetMilliseconds",
+          "expression": ""
+        },
+        {
+          "name": "get",
+          "line": 140,
+          "caller": "timeZoneOffsetMilliseconds",
+          "expression": ""
+        },
+        {
+          "name": "Number",
+          "line": 141,
+          "caller": "timeZoneOffsetMilliseconds",
+          "expression": ""
+        },
+        {
+          "name": "get",
+          "line": 141,
+          "caller": "timeZoneOffsetMilliseconds",
+          "expression": ""
+        },
+        {
+          "name": "Number",
+          "line": 142,
+          "caller": "timeZoneOffsetMilliseconds",
+          "expression": ""
+        },
+        {
+          "name": "get",
+          "line": 142,
+          "caller": "timeZoneOffsetMilliseconds",
+          "expression": ""
+        },
+        {
+          "name": "Number",
+          "line": 143,
+          "caller": "timeZoneOffsetMilliseconds",
+          "expression": ""
+        },
+        {
+          "name": "get",
+          "line": 143,
+          "caller": "timeZoneOffsetMilliseconds",
+          "expression": ""
+        },
+        {
+          "name": "floor",
+          "line": 145,
+          "caller": "timeZoneOffsetMilliseconds",
+          "expression": ""
+        },
+        {
+          "name": "getTime",
+          "line": 145,
+          "caller": "timeZoneOffsetMilliseconds",
+          "expression": ""
+        },
+        {
+          "name": "UTC",
+          "line": 151,
+          "caller": "localMidnightAsUtc",
+          "expression": ""
+        },
+        {
+          "name": "timeZoneOffsetMilliseconds",
+          "line": 157,
+          "caller": "localMidnightAsUtc",
+          "expression": ""
+        },
+        {
+          "name": "getTime",
+          "line": 159,
+          "caller": "localMidnightAsUtc",
+          "expression": ""
+        },
+        {
+          "name": "getTime",
+          "line": 159,
+          "caller": "localMidnightAsUtc",
+          "expression": ""
+        },
+        {
+          "name": "toISOString",
+          "line": 167,
+          "caller": "formatD1UtcTimestamp",
+          "expression": ""
+        },
+        {
+          "name": "slice",
+          "line": 167,
+          "caller": "formatD1UtcTimestamp",
+          "expression": ""
+        },
+        {
+          "name": "replace",
+          "line": 167,
+          "caller": "formatD1UtcTimestamp",
+          "expression": ""
+        },
+        {
+          "name": "UTC",
+          "line": 171,
+          "caller": "dayNumber",
+          "expression": ""
+        },
+        {
+          "name": "getUTCDay",
+          "line": 175,
+          "caller": "mondayOfWeek",
+          "expression": ""
+        },
+        {
+          "name": "UTC",
+          "line": 176,
+          "caller": "mondayOfWeek",
+          "expression": ""
+        },
+        {
+          "name": "dayNumber",
+          "line": 179,
+          "caller": "mondayOfWeek",
+          "expression": ""
+        },
+        {
+          "name": "format",
+          "line": 183,
+          "caller": "monthLabel",
+          "expression": ""
+        },
+        {
+          "name": "UTC",
+          "line": 187,
+          "caller": "monthLabel",
+          "expression": ""
+        },
+        {
+          "name": "dayNumber",
+          "line": 195,
+          "caller": "groupIdentity",
+          "expression": ""
+        },
+        {
+          "name": "dayNumber",
+          "line": 196,
+          "caller": "groupIdentity",
+          "expression": ""
+        },
+        {
+          "name": "mondayOfWeek",
+          "line": 197,
+          "caller": "groupIdentity",
+          "expression": ""
+        },
+        {
+          "name": "mondayOfWeek",
+          "line": 198,
+          "caller": "groupIdentity",
+          "expression": ""
+        },
+        {
+          "name": "String",
+          "line": 213,
+          "caller": "groupIdentity",
+          "expression": ""
+        },
+        {
+          "name": "padStart",
+          "line": 213,
+          "caller": "groupIdentity",
+          "expression": ""
+        },
+        {
+          "name": "monthLabel",
+          "line": 216,
+          "caller": "groupIdentity",
+          "expression": ""
+        },
+        {
+          "name": "String",
+          "line": 223,
+          "caller": "groupIdentity",
+          "expression": ""
+        },
+        {
+          "name": "format",
+          "line": 230,
+          "caller": "assertValidTimeZone",
+          "expression": ""
+        },
+        {
+          "name": "assertValidTimeZone",
+          "line": 241,
+          "caller": "localDateRangeToUtcBounds",
+          "expression": ""
+        },
+        {
+          "name": "parseLocalDate",
+          "line": 243,
+          "caller": "localDateRangeToUtcBounds",
+          "expression": ""
+        },
+        {
+          "name": "parseLocalDate",
+          "line": 244,
+          "caller": "localDateRangeToUtcBounds",
+          "expression": ""
+        },
+        {
+          "name": "dayNumber",
+          "line": 245,
+          "caller": "localDateRangeToUtcBounds",
+          "expression": ""
+        },
+        {
+          "name": "dayNumber",
+          "line": 245,
+          "caller": "localDateRangeToUtcBounds",
+          "expression": ""
+        },
+        {
+          "name": "formatD1UtcTimestamp",
+          "line": 250,
+          "caller": "localDateRangeToUtcBounds",
+          "expression": ""
+        },
+        {
+          "name": "localMidnightAsUtc",
+          "line": 250,
+          "caller": "localDateRangeToUtcBounds",
+          "expression": ""
+        },
+        {
+          "name": "formatD1UtcTimestamp",
+          "line": 251,
+          "caller": "localDateRangeToUtcBounds",
+          "expression": ""
+        },
+        {
+          "name": "localMidnightAsUtc",
+          "line": 252,
+          "caller": "localDateRangeToUtcBounds",
+          "expression": ""
+        },
+        {
+          "name": "addCalendarDays",
+          "line": 252,
+          "caller": "localDateRangeToUtcBounds",
+          "expression": ""
+        },
+        {
+          "name": "dayNumber",
+          "line": 268,
+          "caller": "isInSavedPeriod",
+          "expression": ""
+        },
+        {
+          "name": "dayNumber",
+          "line": 269,
+          "caller": "isInSavedPeriod",
+          "expression": ""
+        },
+        {
+          "name": "mondayOfWeek",
+          "line": 282,
+          "caller": "isInSavedPeriod",
+          "expression": ""
+        },
+        {
+          "name": "mondayOfWeek",
+          "line": 282,
+          "caller": "isInSavedPeriod",
+          "expression": ""
+        },
+        {
+          "name": "mondayOfWeek",
+          "line": 286,
+          "caller": "isInSavedPeriod",
+          "expression": ""
+        },
+        {
+          "name": "mondayOfWeek",
+          "line": 286,
+          "caller": "isInSavedPeriod",
+          "expression": ""
+        },
+        {
+          "name": "assertValidTimeZone",
+          "line": 304,
+          "caller": "filterBySavedPeriod",
+          "expression": ""
+        },
+        {
+          "name": "calendarDate",
+          "line": 306,
+          "caller": "filterBySavedPeriod",
+          "expression": ""
+        },
+        {
+          "name": "filter",
+          "line": 308,
+          "caller": "filterBySavedPeriod",
+          "expression": ""
+        },
+        {
+          "name": "isInSavedPeriod",
+          "line": 309,
+          "caller": "filterBySavedPeriod",
+          "expression": ""
+        },
+        {
+          "name": "calendarDate",
+          "line": 310,
+          "caller": "filterBySavedPeriod",
+          "expression": ""
+        },
+        {
+          "name": "parseD1Timestamp",
+          "line": 310,
+          "caller": "filterBySavedPeriod",
+          "expression": ""
+        },
+        {
+          "name": "assertValidTimeZone",
+          "line": 321,
+          "caller": "groupBySavedPeriod",
+          "expression": ""
+        },
+        {
+          "name": "calendarDate",
+          "line": 323,
+          "caller": "groupBySavedPeriod",
+          "expression": ""
+        },
+        {
+          "name": "calendarDate",
+          "line": 327,
+          "caller": "groupBySavedPeriod",
+          "expression": ""
+        },
+        {
+          "name": "parseD1Timestamp",
+          "line": 328,
+          "caller": "groupBySavedPeriod",
+          "expression": ""
+        },
+        {
+          "name": "groupIdentity",
+          "line": 331,
+          "caller": "groupBySavedPeriod",
+          "expression": ""
+        },
+        {
+          "name": "get",
+          "line": 332,
+          "caller": "groupBySavedPeriod",
+          "expression": ""
+        },
+        {
+          "name": "push",
+          "line": 335,
+          "caller": "groupBySavedPeriod",
+          "expression": ""
+        },
+        {
+          "name": "set",
+          "line": 337,
+          "caller": "groupBySavedPeriod",
+          "expression": ""
+        },
+        {
+          "name": "values",
+          "line": 341,
+          "caller": "groupBySavedPeriod",
+          "expression": ""
+        }
+      ],
+      "diagnostics": [],
+      "modules": [],
+      "exports": [
+        {
+          "exported": "TimeGroupPeriod",
+          "local": "TimeGroupPeriod",
+          "module": "",
+          "line": 1
+        },
+        {
+          "exported": "SavedPeriodFilter",
+          "local": "SavedPeriodFilter",
+          "module": "",
+          "line": 13
+        },
+        {
+          "exported": "TimeGroup",
+          "local": "TimeGroup",
+          "module": "",
+          "line": 24
+        },
+        {
+          "exported": "UtcQueryBounds",
+          "local": "UtcQueryBounds",
+          "module": "",
+          "line": 37
+        },
+        {
+          "exported": "assertValidTimeZone",
+          "local": "assertValidTimeZone",
+          "module": "",
+          "line": 228
+        },
+        {
+          "exported": "localDateRangeToUtcBounds",
+          "local": "localDateRangeToUtcBounds",
+          "module": "",
+          "line": 236
+        },
+        {
+          "exported": "savedPeriodLabel",
+          "local": "savedPeriodLabel",
+          "module": "",
+          "line": 257
+        },
+        {
+          "exported": "filterBySavedPeriod",
+          "local": "filterBySavedPeriod",
+          "module": "",
+          "line": 296
+        },
+        {
+          "exported": "groupBySavedPeriod",
+          "local": "groupBySavedPeriod",
+          "module": "",
+          "line": 317
+        }
+      ],
+      "imports": [],
+      "symbols": [
+        {
+          "name": "TimeGroupPeriod",
+          "qualified_name": "TimeGroupPeriod",
+          "kind": "type",
+          "start_line": 1,
+          "end_line": 11,
+          "first_body_line": 1,
+          "last_body_line": 11,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "src/time-groups.ts::TimeGroupPeriod",
+          "docstring": "",
+          "start_byte": 7,
+          "end_byte": 181,
+          "signature": "type TimeGroupPeriod =\n  | \"today\"\n  | \"yesterday\"\n  | \"past_7_days\"\n  | \"this_week\"\n  | \"last_week\"\n  | \"this_month\"\n  | \"last_month\"\n  | \"this_year\"\n  | \"month\"\n  | \"year\";"
+        },
+        {
+          "name": "SavedPeriodFilter",
+          "qualified_name": "SavedPeriodFilter",
+          "kind": "type",
+          "start_line": 13,
+          "end_line": 22,
+          "first_body_line": 13,
+          "last_body_line": 22,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "src/time-groups.ts::SavedPeriodFilter",
+          "docstring": "",
+          "start_byte": 190,
+          "end_byte": 353,
+          "signature": "type SavedPeriodFilter =\n  | \"all\"\n  | \"today\"\n  | \"yesterday\"\n  | \"past_7_days\"\n  | \"this_week\"\n  | \"last_week\"\n  | \"this_month\"\n  | \"last_month\"\n  | \"this_year\";"
+        },
+        {
+          "name": "TimeGroup",
+          "qualified_name": "TimeGroup",
+          "kind": "type",
+          "start_line": 24,
+          "end_line": 29,
+          "first_body_line": 24,
+          "last_body_line": 29,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "src/time-groups.ts::TimeGroup",
+          "docstring": "",
+          "start_byte": 362,
+          "end_byte": 459,
+          "signature": "type TimeGroup<T> ="
+        },
+        {
+          "name": "CalendarDate",
+          "qualified_name": "CalendarDate",
+          "kind": "type",
+          "start_line": 31,
+          "end_line": 35,
+          "first_body_line": 31,
+          "last_body_line": 35,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "src/time-groups.ts::CalendarDate",
+          "docstring": "",
+          "start_byte": 461,
+          "end_byte": 533,
+          "signature": "type CalendarDate ="
+        },
+        {
+          "name": "UtcQueryBounds",
+          "qualified_name": "UtcQueryBounds",
+          "kind": "type",
+          "start_line": 37,
+          "end_line": 40,
+          "first_body_line": 37,
+          "last_body_line": 40,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "src/time-groups.ts::UtcQueryBounds",
+          "docstring": "",
+          "start_byte": 542,
+          "end_byte": 615,
+          "signature": "type UtcQueryBounds ="
+        },
+        {
+          "name": "parseD1Timestamp",
+          "qualified_name": "parseD1Timestamp",
+          "kind": "function",
+          "start_line": 58,
+          "end_line": 69,
+          "first_body_line": 58,
+          "last_body_line": 69,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 1017,
+          "body_end_byte": 1321,
+          "bases": [],
+          "parent": "",
+          "id": "src/time-groups.ts::parseD1Timestamp",
+          "docstring": "",
+          "start_byte": 966,
+          "end_byte": 1321,
+          "signature": "function parseD1Timestamp(timestamp: string): Date"
+        },
+        {
+          "name": "calendarDate",
+          "qualified_name": "calendarDate",
+          "kind": "function",
+          "start_line": 71,
+          "end_line": 85,
+          "first_body_line": 71,
+          "last_body_line": 85,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 1389,
+          "body_end_byte": 1749,
+          "bases": [],
+          "parent": "",
+          "id": "src/time-groups.ts::calendarDate",
+          "docstring": "",
+          "start_byte": 1323,
+          "end_byte": 1749,
+          "signature": "function calendarDate(date: Date, timeZone: string): CalendarDate"
+        },
+        {
+          "name": "parseLocalDate",
+          "qualified_name": "parseLocalDate",
+          "kind": "function",
+          "start_line": 87,
+          "end_line": 111,
+          "first_body_line": 87,
+          "last_body_line": 111,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 1804,
+          "body_end_byte": 2400,
+          "bases": [],
+          "parent": "",
+          "id": "src/time-groups.ts::parseLocalDate",
+          "docstring": "",
+          "start_byte": 1751,
+          "end_byte": 2400,
+          "signature": "function parseLocalDate(value: string): CalendarDate"
+        },
+        {
+          "name": "addCalendarDays",
+          "qualified_name": "addCalendarDays",
+          "kind": "function",
+          "start_line": 113,
+          "end_line": 123,
+          "first_body_line": 113,
+          "last_body_line": 123,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 2475,
+          "body_end_byte": 2687,
+          "bases": [],
+          "parent": "",
+          "id": "src/time-groups.ts::addCalendarDays",
+          "docstring": "",
+          "start_byte": 2402,
+          "end_byte": 2687,
+          "signature": "function addCalendarDays(date: CalendarDate, days: number): CalendarDate"
+        },
+        {
+          "name": "timeZoneOffsetMilliseconds",
+          "qualified_name": "timeZoneOffsetMilliseconds",
+          "kind": "function",
+          "start_line": 125,
+          "end_line": 148,
+          "first_body_line": 125,
+          "last_body_line": 148,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 2763,
+          "body_end_byte": 3435,
+          "bases": [],
+          "parent": "",
+          "id": "src/time-groups.ts::timeZoneOffsetMilliseconds",
+          "docstring": "",
+          "start_byte": 2689,
+          "end_byte": 3435,
+          "signature": "function timeZoneOffsetMilliseconds(date: Date, timeZone: string): number"
+        },
+        {
+          "name": "localMidnightAsUtc",
+          "qualified_name": "localMidnightAsUtc",
+          "kind": "function",
+          "start_line": 150,
+          "end_line": 164,
+          "first_body_line": 150,
+          "last_body_line": 164,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 3509,
+          "body_end_byte": 4035,
+          "bases": [],
+          "parent": "",
+          "id": "src/time-groups.ts::localMidnightAsUtc",
+          "docstring": "",
+          "start_byte": 3437,
+          "end_byte": 4035,
+          "signature": "function localMidnightAsUtc(date: CalendarDate, timeZone: string): Date"
+        },
+        {
+          "name": "formatD1UtcTimestamp",
+          "qualified_name": "formatD1UtcTimestamp",
+          "kind": "function",
+          "start_line": 166,
+          "end_line": 168,
+          "first_body_line": 166,
+          "last_body_line": 168,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 4087,
+          "body_end_byte": 4150,
+          "bases": [],
+          "parent": "",
+          "id": "src/time-groups.ts::formatD1UtcTimestamp",
+          "docstring": "",
+          "start_byte": 4037,
+          "end_byte": 4150,
+          "signature": "function formatD1UtcTimestamp(date: Date): string"
+        },
+        {
+          "name": "dayNumber",
+          "qualified_name": "dayNumber",
+          "kind": "function",
+          "start_line": 170,
+          "end_line": 172,
+          "first_body_line": 170,
+          "last_body_line": 172,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 4199,
+          "body_end_byte": 4280,
+          "bases": [],
+          "parent": "",
+          "id": "src/time-groups.ts::dayNumber",
+          "docstring": "",
+          "start_byte": 4152,
+          "end_byte": 4280,
+          "signature": "function dayNumber(date: CalendarDate): number"
+        },
+        {
+          "name": "mondayOfWeek",
+          "qualified_name": "mondayOfWeek",
+          "kind": "function",
+          "start_line": 174,
+          "end_line": 180,
+          "first_body_line": 174,
+          "last_body_line": 180,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 4332,
+          "body_end_byte": 4520,
+          "bases": [],
+          "parent": "",
+          "id": "src/time-groups.ts::mondayOfWeek",
+          "docstring": "",
+          "start_byte": 4282,
+          "end_byte": 4520,
+          "signature": "function mondayOfWeek(date: CalendarDate): number"
+        },
+        {
+          "name": "monthLabel",
+          "qualified_name": "monthLabel",
+          "kind": "function",
+          "start_line": 182,
+          "end_line": 188,
+          "first_body_line": 182,
+          "last_body_line": 188,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 4588,
+          "body_end_byte": 4754,
+          "bases": [],
+          "parent": "",
+          "id": "src/time-groups.ts::monthLabel",
+          "docstring": "",
+          "start_byte": 4522,
+          "end_byte": 4754,
+          "signature": "function monthLabel(date: CalendarDate, timeZone: string): string"
+        },
+        {
+          "name": "groupIdentity",
+          "qualified_name": "groupIdentity",
+          "kind": "function",
+          "start_line": 190,
+          "end_line": 226,
+          "first_body_line": 194,
+          "last_body_line": 226,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 4890,
+          "body_end_byte": 5745,
+          "bases": [],
+          "parent": "",
+          "id": "src/time-groups.ts::groupIdentity",
+          "docstring": "",
+          "start_byte": 4756,
+          "end_byte": 5745,
+          "signature": "function groupIdentity(\n  itemDate: CalendarDate,\n  currentDate: CalendarDate,\n  timeZone: string,\n): Omit<TimeGroup<never>, \"items\">"
+        },
+        {
+          "name": "assertValidTimeZone",
+          "qualified_name": "assertValidTimeZone",
+          "kind": "function",
+          "start_line": 228,
+          "end_line": 234,
+          "first_body_line": 228,
+          "last_body_line": 234,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 5807,
+          "body_end_byte": 5952,
+          "bases": [],
+          "parent": "",
+          "id": "src/time-groups.ts::assertValidTimeZone",
+          "docstring": "",
+          "start_byte": 5754,
+          "end_byte": 5952,
+          "signature": "function assertValidTimeZone(timeZone: string): void"
+        },
+        {
+          "name": "localDateRangeToUtcBounds",
+          "qualified_name": "localDateRangeToUtcBounds",
+          "kind": "function",
+          "start_line": 236,
+          "end_line": 255,
+          "first_body_line": 240,
+          "last_body_line": 255,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 6075,
+          "body_end_byte": 6516,
+          "bases": [],
+          "parent": "",
+          "id": "src/time-groups.ts::localDateRangeToUtcBounds",
+          "docstring": "",
+          "start_byte": 5961,
+          "end_byte": 6516,
+          "signature": "function localDateRangeToUtcBounds(\n  startDate: string,\n  endDate: string,\n  timeZone: string,\n): UtcQueryBounds"
+        },
+        {
+          "name": "savedPeriodLabel",
+          "qualified_name": "savedPeriodLabel",
+          "kind": "function",
+          "start_line": 257,
+          "end_line": 261,
+          "first_body_line": 259,
+          "last_body_line": 261,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 6607,
+          "body_end_byte": 6648,
+          "bases": [],
+          "parent": "",
+          "id": "src/time-groups.ts::savedPeriodLabel",
+          "docstring": "",
+          "start_byte": 6525,
+          "end_byte": 6648,
+          "signature": "function savedPeriodLabel(\n  period: Exclude<SavedPeriodFilter, \"all\">,\n): string"
+        },
+        {
+          "name": "isInSavedPeriod",
+          "qualified_name": "isInSavedPeriod",
+          "kind": "function",
+          "start_line": 263,
+          "end_line": 294,
+          "first_body_line": 267,
+          "last_body_line": 294,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 6787,
+          "body_end_byte": 7723,
+          "bases": [],
+          "parent": "",
+          "id": "src/time-groups.ts::isInSavedPeriod",
+          "docstring": "",
+          "start_byte": 6650,
+          "end_byte": 7723,
+          "signature": "function isInSavedPeriod(\n  itemDate: CalendarDate,\n  currentDate: CalendarDate,\n  period: Exclude<SavedPeriodFilter, \"all\">,\n): boolean"
+        },
+        {
+          "name": "filterBySavedPeriod",
+          "qualified_name": "filterBySavedPeriod",
+          "kind": "function",
+          "start_line": 296,
+          "end_line": 315,
+          "first_body_line": 303,
+          "last_body_line": 315,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 7919,
+          "body_end_byte": 8224,
+          "bases": [],
+          "parent": "",
+          "id": "src/time-groups.ts::filterBySavedPeriod",
+          "docstring": "",
+          "start_byte": 7732,
+          "end_byte": 8224,
+          "signature": "function filterBySavedPeriod<T extends"
+        },
+        {
+          "name": "groupBySavedPeriod",
+          "qualified_name": "groupBySavedPeriod",
+          "kind": "function",
+          "start_line": 317,
+          "end_line": 342,
+          "first_body_line": 320,
+          "last_body_line": 342,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 8372,
+          "body_end_byte": 8997,
+          "bases": [],
+          "parent": "",
+          "id": "src/time-groups.ts::groupBySavedPeriod",
+          "docstring": "",
+          "start_byte": 8233,
+          "end_byte": 8997,
+          "signature": "function groupBySavedPeriod<T extends"
+        }
+      ]
+    },
+    {
+      "path": "tests/time-groups.test.ts",
+      "language": "typescript",
+      "parser": "tree_sitter",
+      "has_syntax_error": false,
+      "is_empty": false,
+      "source_hash": "e71125ffd8d9ef3e840997428e6b8ae97c379dc66d4a0f047d1af14d0c3b1561",
+      "bound_names": [
+        "converts an inclusive India date range into UTC query boundaries",
+        "filters yesterday separately from this week",
+        "groups saved words without duplicating them",
+        "handles daylight-saving offsets at each range boundary",
+        "now",
+        "rejects invalid or reversed local date ranges",
+        "treats past 7 days as a rolling window and weeks as Monday-based",
+        "uses the selected time zone when deciding what counts as today"
+      ],
+      "bindings": [
+        {
+          "id": "tests/time-groups.test.ts@0:0",
+          "module": "node:assert/strict",
+          "name": "default",
+          "local": "assert",
+          "scope": "",
+          "line": 1,
+          "raw": "import assert from \"node:assert/strict\";",
+          "kind": "default",
+          "reexport": false,
+          "conditional": false,
+          "uses": [
+            {
+              "owner": "groups saved words without duplicating them",
+              "expression": "assert.deepEqual",
+              "kind": "call",
+              "source_text": "assert.deepEqual",
+              "line": 26,
+              "start_byte": 790,
+              "end_byte": 806,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "external",
+              "binding_target_file": null,
+              "binding_target_symbol": null
+            },
+            {
+              "owner": "groups saved words without duplicating them",
+              "expression": "assert.equal",
+              "kind": "call",
+              "source_text": "assert.equal",
+              "line": 41,
+              "start_byte": 1146,
+              "end_byte": 1158,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "external",
+              "binding_target_file": null,
+              "binding_target_symbol": null
+            },
+            {
+              "owner": "uses the selected time zone when deciding what counts as today",
+              "expression": "assert.equal",
+              "kind": "call",
+              "source_text": "assert.equal",
+              "line": 56,
+              "start_byte": 1520,
+              "end_byte": 1532,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "external",
+              "binding_target_file": null,
+              "binding_target_symbol": null
+            },
+            {
+              "owner": "filters yesterday separately from this week",
+              "expression": "assert.deepEqual",
+              "kind": "call",
+              "source_text": "assert.deepEqual",
+              "line": 72,
+              "start_byte": 1956,
+              "end_byte": 1972,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "external",
+              "binding_target_file": null,
+              "binding_target_symbol": null
+            },
+            {
+              "owner": "treats past 7 days as a rolling window and weeks as Monday-based",
+              "expression": "assert.deepEqual",
+              "kind": "call",
+              "source_text": "assert.deepEqual",
+              "line": 93,
+              "start_byte": 2565,
+              "end_byte": 2581,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "external",
+              "binding_target_file": null,
+              "binding_target_symbol": null
+            },
+            {
+              "owner": "treats past 7 days as a rolling window and weeks as Monday-based",
+              "expression": "assert.deepEqual",
+              "kind": "call",
+              "source_text": "assert.deepEqual",
+              "line": 97,
+              "start_byte": 2665,
+              "end_byte": 2681,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "external",
+              "binding_target_file": null,
+              "binding_target_symbol": null
+            },
+            {
+              "owner": "converts an inclusive India date range into UTC query boundaries",
+              "expression": "assert.deepEqual",
+              "kind": "call",
+              "source_text": "assert.deepEqual",
+              "line": 104,
+              "start_byte": 2855,
+              "end_byte": 2871,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "external",
+              "binding_target_file": null,
+              "binding_target_symbol": null
+            },
+            {
+              "owner": "handles daylight-saving offsets at each range boundary",
+              "expression": "assert.deepEqual",
+              "kind": "call",
+              "source_text": "assert.deepEqual",
+              "line": 118,
+              "start_byte": 3154,
+              "end_byte": 3170,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "external",
+              "binding_target_file": null,
+              "binding_target_symbol": null
+            },
+            {
+              "owner": "rejects invalid or reversed local date ranges",
+              "expression": "assert.throws",
+              "kind": "call",
+              "source_text": "assert.throws",
+              "line": 132,
+              "start_byte": 3448,
+              "end_byte": 3461,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "external",
+              "binding_target_file": null,
+              "binding_target_symbol": null
+            },
+            {
+              "owner": "rejects invalid or reversed local date ranges",
+              "expression": "assert.throws",
+              "kind": "call",
+              "source_text": "assert.throws",
+              "line": 136,
+              "start_byte": 3571,
+              "end_byte": 3584,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "external",
+              "binding_target_file": null,
+              "binding_target_symbol": null
+            }
+          ],
+          "status": "external",
+          "reason": "builtin_module",
+          "target_file": null,
+          "target_symbol": null,
+          "bound_module": "",
+          "module_scope": "",
+          "start_byte": 0
+        },
+        {
+          "id": "tests/time-groups.test.ts@41:1",
+          "module": "node:test",
+          "name": "test",
+          "local": "test",
+          "scope": "",
+          "line": 2,
+          "raw": "import { test } from \"node:test\";",
+          "kind": "named",
+          "reexport": false,
+          "conditional": false,
+          "uses": [
+            {
+              "owner": "groups saved words without duplicating them",
+              "expression": "test",
+              "kind": "call",
+              "source_text": "test",
+              "line": 11,
+              "start_byte": 238,
+              "end_byte": 242,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "external",
+              "binding_target_file": null,
+              "binding_target_symbol": null
+            },
+            {
+              "owner": "uses the selected time zone when deciding what counts as today",
+              "expression": "test",
+              "kind": "call",
+              "source_text": "test",
+              "line": 47,
+              "start_byte": 1239,
+              "end_byte": 1243,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "external",
+              "binding_target_file": null,
+              "binding_target_symbol": null
+            },
+            {
+              "owner": "filters yesterday separately from this week",
+              "expression": "test",
+              "kind": "call",
+              "source_text": "test",
+              "line": 59,
+              "start_byte": 1566,
+              "end_byte": 1570,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "external",
+              "binding_target_file": null,
+              "binding_target_symbol": null
+            },
+            {
+              "owner": "treats past 7 days as a rolling window and weeks as Monday-based",
+              "expression": "test",
+              "kind": "call",
+              "source_text": "test",
+              "line": 75,
+              "start_byte": 2027,
+              "end_byte": 2031,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "external",
+              "binding_target_file": null,
+              "binding_target_symbol": null
+            },
+            {
+              "owner": "converts an inclusive India date range into UTC query boundaries",
+              "expression": "test",
+              "kind": "call",
+              "source_text": "test",
+              "line": 103,
+              "start_byte": 2772,
+              "end_byte": 2776,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "external",
+              "binding_target_file": null,
+              "binding_target_symbol": null
+            },
+            {
+              "owner": "handles daylight-saving offsets at each range boundary",
+              "expression": "test",
+              "kind": "call",
+              "source_text": "test",
+              "line": 117,
+              "start_byte": 3081,
+              "end_byte": 3085,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "external",
+              "binding_target_file": null,
+              "binding_target_symbol": null
+            },
+            {
+              "owner": "rejects invalid or reversed local date ranges",
+              "expression": "test",
+              "kind": "call",
+              "source_text": "test",
+              "line": 131,
+              "start_byte": 3384,
+              "end_byte": 3388,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "external",
+              "binding_target_file": null,
+              "binding_target_symbol": null
+            }
+          ],
+          "status": "external",
+          "reason": "builtin_module",
+          "target_file": null,
+          "target_symbol": null,
+          "bound_module": "",
+          "module_scope": "",
+          "start_byte": 41
+        },
+        {
+          "id": "tests/time-groups.test.ts@75:2",
+          "module": "../src/time-groups.ts",
+          "name": "filterBySavedPeriod",
+          "local": "filterBySavedPeriod",
+          "scope": "",
+          "line": 3,
+          "raw": "import {\n  filterBySavedPeriod,\n  groupBySavedPeriod,\n  localDateRangeToUtcBounds,\n} from \"../src/time-groups.ts\";",
+          "kind": "named",
+          "reexport": false,
+          "conditional": false,
+          "uses": [
+            {
+              "owner": "filters yesterday separately from this week",
+              "expression": "filterBySavedPeriod",
+              "kind": "call",
+              "source_text": "filterBySavedPeriod",
+              "line": 66,
+              "start_byte": 1854,
+              "end_byte": 1873,
+              "target_file": "src/time-groups.ts",
+              "target_symbol": "src/time-groups.ts::filterBySavedPeriod",
+              "status": "internal",
+              "binding_target_file": "src/time-groups.ts",
+              "binding_target_symbol": "src/time-groups.ts::filterBySavedPeriod"
+            },
+            {
+              "owner": "treats past 7 days as a rolling window and weeks as Monday-based",
+              "expression": "filterBySavedPeriod",
+              "kind": "call",
+              "source_text": "filterBySavedPeriod",
+              "line": 82,
+              "start_byte": 2343,
+              "end_byte": 2362,
+              "target_file": "src/time-groups.ts",
+              "target_symbol": "src/time-groups.ts::filterBySavedPeriod",
+              "status": "internal",
+              "binding_target_file": "src/time-groups.ts",
+              "binding_target_symbol": "src/time-groups.ts::filterBySavedPeriod"
+            },
+            {
+              "owner": "treats past 7 days as a rolling window and weeks as Monday-based",
+              "expression": "filterBySavedPeriod",
+              "kind": "call",
+              "source_text": "filterBySavedPeriod",
+              "line": 87,
+              "start_byte": 2463,
+              "end_byte": 2482,
+              "target_file": "src/time-groups.ts",
+              "target_symbol": "src/time-groups.ts::filterBySavedPeriod",
+              "status": "internal",
+              "binding_target_file": "src/time-groups.ts",
+              "binding_target_symbol": "src/time-groups.ts::filterBySavedPeriod"
+            }
+          ],
+          "status": "internal",
+          "reason": "module_and_binding_resolved",
+          "target_file": "src/time-groups.ts",
+          "target_symbol": "src/time-groups.ts::filterBySavedPeriod",
+          "bound_module": "",
+          "module_scope": "",
+          "start_byte": 75
+        },
+        {
+          "id": "tests/time-groups.test.ts@75:3",
+          "module": "../src/time-groups.ts",
+          "name": "groupBySavedPeriod",
+          "local": "groupBySavedPeriod",
+          "scope": "",
+          "line": 3,
+          "raw": "import {\n  filterBySavedPeriod,\n  groupBySavedPeriod,\n  localDateRangeToUtcBounds,\n} from \"../src/time-groups.ts\";",
+          "kind": "named",
+          "reexport": false,
+          "conditional": false,
+          "uses": [
+            {
+              "owner": "groups saved words without duplicating them",
+              "expression": "groupBySavedPeriod",
+              "kind": "call",
+              "source_text": "groupBySavedPeriod",
+              "line": 21,
+              "start_byte": 714,
+              "end_byte": 732,
+              "target_file": "src/time-groups.ts",
+              "target_symbol": "src/time-groups.ts::groupBySavedPeriod",
+              "status": "internal",
+              "binding_target_file": "src/time-groups.ts",
+              "binding_target_symbol": "src/time-groups.ts::groupBySavedPeriod"
+            },
+            {
+              "owner": "uses the selected time zone when deciding what counts as today",
+              "expression": "groupBySavedPeriod",
+              "kind": "call",
+              "source_text": "groupBySavedPeriod",
+              "line": 48,
+              "start_byte": 1335,
+              "end_byte": 1353,
+              "target_file": "src/time-groups.ts",
+              "target_symbol": "src/time-groups.ts::groupBySavedPeriod",
+              "status": "internal",
+              "binding_target_file": "src/time-groups.ts",
+              "binding_target_symbol": "src/time-groups.ts::groupBySavedPeriod"
+            }
+          ],
+          "status": "internal",
+          "reason": "module_and_binding_resolved",
+          "target_file": "src/time-groups.ts",
+          "target_symbol": "src/time-groups.ts::groupBySavedPeriod",
+          "bound_module": "",
+          "module_scope": "",
+          "start_byte": 75
+        },
+        {
+          "id": "tests/time-groups.test.ts@75:4",
+          "module": "../src/time-groups.ts",
+          "name": "localDateRangeToUtcBounds",
+          "local": "localDateRangeToUtcBounds",
+          "scope": "",
+          "line": 3,
+          "raw": "import {\n  filterBySavedPeriod,\n  groupBySavedPeriod,\n  localDateRangeToUtcBounds,\n} from \"../src/time-groups.ts\";",
+          "kind": "named",
+          "reexport": false,
+          "conditional": false,
+          "uses": [
+            {
+              "owner": "converts an inclusive India date range into UTC query boundaries",
+              "expression": "localDateRangeToUtcBounds",
+              "kind": "call",
+              "source_text": "localDateRangeToUtcBounds",
+              "line": 105,
+              "start_byte": 2877,
+              "end_byte": 2902,
+              "target_file": "src/time-groups.ts",
+              "target_symbol": "src/time-groups.ts::localDateRangeToUtcBounds",
+              "status": "internal",
+              "binding_target_file": "src/time-groups.ts",
+              "binding_target_symbol": "src/time-groups.ts::localDateRangeToUtcBounds"
+            },
+            {
+              "owner": "handles daylight-saving offsets at each range boundary",
+              "expression": "localDateRangeToUtcBounds",
+              "kind": "call",
+              "source_text": "localDateRangeToUtcBounds",
+              "line": 119,
+              "start_byte": 3176,
+              "end_byte": 3201,
+              "target_file": "src/time-groups.ts",
+              "target_symbol": "src/time-groups.ts::localDateRangeToUtcBounds",
+              "status": "internal",
+              "binding_target_file": "src/time-groups.ts",
+              "binding_target_symbol": "src/time-groups.ts::localDateRangeToUtcBounds"
+            },
+            {
+              "owner": "rejects invalid or reversed local date ranges",
+              "expression": "localDateRangeToUtcBounds",
+              "kind": "call",
+              "source_text": "localDateRangeToUtcBounds",
+              "line": 133,
+              "start_byte": 3473,
+              "end_byte": 3498,
+              "target_file": "src/time-groups.ts",
+              "target_symbol": "src/time-groups.ts::localDateRangeToUtcBounds",
+              "status": "internal",
+              "binding_target_file": "src/time-groups.ts",
+              "binding_target_symbol": "src/time-groups.ts::localDateRangeToUtcBounds"
+            },
+            {
+              "owner": "rejects invalid or reversed local date ranges",
+              "expression": "localDateRangeToUtcBounds",
+              "kind": "call",
+              "source_text": "localDateRangeToUtcBounds",
+              "line": 137,
+              "start_byte": 3596,
+              "end_byte": 3621,
+              "target_file": "src/time-groups.ts",
+              "target_symbol": "src/time-groups.ts::localDateRangeToUtcBounds",
+              "status": "internal",
+              "binding_target_file": "src/time-groups.ts",
+              "binding_target_symbol": "src/time-groups.ts::localDateRangeToUtcBounds"
+            }
+          ],
+          "status": "internal",
+          "reason": "module_and_binding_resolved",
+          "target_file": "src/time-groups.ts",
+          "target_symbol": "src/time-groups.ts::localDateRangeToUtcBounds",
+          "bound_module": "",
+          "module_scope": "",
+          "start_byte": 75
+        }
+      ],
+      "calls": [
+        {
+          "name": "groupBySavedPeriod",
+          "line": 21,
+          "caller": "",
+          "expression": ""
+        },
+        {
+          "name": "deepEqual",
+          "line": 26,
+          "caller": "",
+          "expression": ""
+        },
+        {
+          "name": "map",
+          "line": 27,
+          "caller": "",
+          "expression": ""
+        },
+        {
+          "name": "map",
+          "line": 29,
+          "caller": "",
+          "expression": ""
+        },
+        {
+          "name": "equal",
+          "line": 41,
+          "caller": "",
+          "expression": ""
+        },
+        {
+          "name": "flatMap",
+          "line": 42,
+          "caller": "",
+          "expression": ""
+        },
+        {
+          "name": "groupBySavedPeriod",
+          "line": 48,
+          "caller": "",
+          "expression": ""
+        },
+        {
+          "name": "equal",
+          "line": 56,
+          "caller": "",
+          "expression": ""
+        },
+        {
+          "name": "filterBySavedPeriod",
+          "line": 66,
+          "caller": "",
+          "expression": ""
+        },
+        {
+          "name": "deepEqual",
+          "line": 72,
+          "caller": "",
+          "expression": ""
+        },
+        {
+          "name": "map",
+          "line": 72,
+          "caller": "",
+          "expression": ""
+        },
+        {
+          "name": "filterBySavedPeriod",
+          "line": 82,
+          "caller": "",
+          "expression": ""
+        },
+        {
+          "name": "filterBySavedPeriod",
+          "line": 87,
+          "caller": "",
+          "expression": ""
+        },
+        {
+          "name": "deepEqual",
+          "line": 93,
+          "caller": "",
+          "expression": ""
+        },
+        {
+          "name": "map",
+          "line": 94,
+          "caller": "",
+          "expression": ""
+        },
+        {
+          "name": "deepEqual",
+          "line": 97,
+          "caller": "",
+          "expression": ""
+        },
+        {
+          "name": "map",
+          "line": 98,
+          "caller": "",
+          "expression": ""
+        },
+        {
+          "name": "deepEqual",
+          "line": 104,
+          "caller": "",
+          "expression": ""
+        },
+        {
+          "name": "localDateRangeToUtcBounds",
+          "line": 105,
+          "caller": "",
+          "expression": ""
+        },
+        {
+          "name": "deepEqual",
+          "line": 118,
+          "caller": "",
+          "expression": ""
+        },
+        {
+          "name": "localDateRangeToUtcBounds",
+          "line": 119,
+          "caller": "",
+          "expression": ""
+        },
+        {
+          "name": "throws",
+          "line": 132,
+          "caller": "",
+          "expression": ""
+        },
+        {
+          "name": "localDateRangeToUtcBounds",
+          "line": 133,
+          "caller": "",
+          "expression": ""
+        },
+        {
+          "name": "throws",
+          "line": 136,
+          "caller": "",
+          "expression": ""
+        },
+        {
+          "name": "localDateRangeToUtcBounds",
+          "line": 137,
+          "caller": "",
+          "expression": ""
+        }
+      ],
+      "diagnostics": [],
+      "modules": [],
+      "exports": [],
+      "imports": [
+        {
+          "raw": "import assert from \"node:assert/strict\";",
+          "module": "node:assert/strict",
+          "symbols": [
+            "assert"
+          ],
+          "line": 1
+        },
+        {
+          "raw": "import { test } from \"node:test\";",
+          "module": "node:test",
+          "symbols": [
+            "test"
+          ],
+          "line": 2
+        },
+        {
+          "raw": "import {\n  filterBySavedPeriod,\n  groupBySavedPeriod,\n  localDateRangeToUtcBounds,\n} from \"../src/time-groups.ts\";",
+          "module": "../src/time-groups.ts",
+          "symbols": [
+            "filterBySavedPeriod",
+            "groupBySavedPeriod",
+            "localDateRangeToUtcBounds"
+          ],
+          "line": 3
+        }
+      ],
+      "symbols": [
+        {
+          "name": "groups saved words without duplicating them",
+          "qualified_name": "groups saved words without duplicating them",
+          "kind": "test",
+          "start_line": 11,
+          "end_line": 45,
+          "first_body_line": 11,
+          "last_body_line": 45,
+          "is_test": true,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "tests/time-groups.test.ts::groups saved words without duplicating them",
+          "docstring": "",
+          "start_byte": 238,
+          "end_byte": 1236,
+          "signature": "test(\"groups saved words without duplicating them\", () =>"
+        },
+        {
+          "name": "uses the selected time zone when deciding what counts as today",
+          "qualified_name": "uses the selected time zone when deciding what counts as today",
+          "kind": "test",
+          "start_line": 47,
+          "end_line": 57,
+          "first_body_line": 47,
+          "last_body_line": 57,
+          "is_test": true,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "tests/time-groups.test.ts::uses the selected time zone when deciding what counts as today",
+          "docstring": "",
+          "start_byte": 1239,
+          "end_byte": 1563,
+          "signature": "test(\"uses the selected time zone when deciding what counts as today\", () =>"
+        },
+        {
+          "name": "filters yesterday separately from this week",
+          "qualified_name": "filters yesterday separately from this week",
+          "kind": "test",
+          "start_line": 59,
+          "end_line": 73,
+          "first_body_line": 59,
+          "last_body_line": 73,
+          "is_test": true,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "tests/time-groups.test.ts::filters yesterday separately from this week",
+          "docstring": "",
+          "start_byte": 1566,
+          "end_byte": 2024,
+          "signature": "test(\"filters yesterday separately from this week\", () =>"
+        },
+        {
+          "name": "treats past 7 days as a rolling window and weeks as Monday-based",
+          "qualified_name": "treats past 7 days as a rolling window and weeks as Monday-based",
+          "kind": "test",
+          "start_line": 75,
+          "end_line": 101,
+          "first_body_line": 75,
+          "last_body_line": 101,
+          "is_test": true,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "tests/time-groups.test.ts::treats past 7 days as a rolling window and weeks as Monday-based",
+          "docstring": "",
+          "start_byte": 2027,
+          "end_byte": 2769,
+          "signature": "test(\"treats past 7 days as a rolling window and weeks as Monday-based\", () =>"
+        },
+        {
+          "name": "converts an inclusive India date range into UTC query boundaries",
+          "qualified_name": "converts an inclusive India date range into UTC query boundaries",
+          "kind": "test",
+          "start_line": 103,
+          "end_line": 115,
+          "first_body_line": 103,
+          "last_body_line": 115,
+          "is_test": true,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "tests/time-groups.test.ts::converts an inclusive India date range into UTC query boundaries",
+          "docstring": "",
+          "start_byte": 2772,
+          "end_byte": 3078,
+          "signature": "test(\"converts an inclusive India date range into UTC query boundaries\", () =>"
+        },
+        {
+          "name": "handles daylight-saving offsets at each range boundary",
+          "qualified_name": "handles daylight-saving offsets at each range boundary",
+          "kind": "test",
+          "start_line": 117,
+          "end_line": 129,
+          "first_body_line": 117,
+          "last_body_line": 129,
+          "is_test": true,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "tests/time-groups.test.ts::handles daylight-saving offsets at each range boundary",
+          "docstring": "",
+          "start_byte": 3081,
+          "end_byte": 3381,
+          "signature": "test(\"handles daylight-saving offsets at each range boundary\", () =>"
+        },
+        {
+          "name": "rejects invalid or reversed local date ranges",
+          "qualified_name": "rejects invalid or reversed local date ranges",
+          "kind": "test",
+          "start_line": 131,
+          "end_line": 140,
+          "first_body_line": 131,
+          "last_body_line": 140,
+          "is_test": true,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "tests/time-groups.test.ts::rejects invalid or reversed local date ranges",
+          "docstring": "",
+          "start_byte": 3384,
+          "end_byte": 3704,
+          "signature": "test(\"rejects invalid or reversed local date ranges\", () =>"
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "src/index.ts",
+      "target": "src/auth.ts",
+      "kind": "import",
+      "line": 2,
+      "raw": "import { authHandler, type AppEnv } from \"./auth\";",
+      "symbols": [
+        "authHandler"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "src/index.ts",
+      "target": "src/auth.ts",
+      "kind": "reference",
+      "line": 14,
+      "raw": "authHandler",
+      "symbols": [
+        "authHandler"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "src/index.ts",
+      "target": "src/auth.ts",
+      "kind": "import",
+      "line": 2,
+      "raw": "import { authHandler, type AppEnv } from \"./auth\";",
+      "symbols": [
+        "AppEnv"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "src/index.ts::fetch",
+      "target": "src/auth.ts::AppEnv",
+      "kind": "reference",
+      "line": 6,
+      "raw": "AppEnv",
+      "symbols": [
+        "AppEnv"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "src/index.ts",
+      "target": "src/auth.ts::AppEnv",
+      "kind": "reference",
+      "line": 9,
+      "raw": "AppEnv",
+      "symbols": [
+        "AppEnv"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "src/index.ts",
+      "target": "src/auth.ts::AppEnv",
+      "kind": "reference",
+      "line": 11,
+      "raw": "AppEnv",
+      "symbols": [
+        "AppEnv"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "src/index.ts",
+      "target": "src/mcp.ts",
+      "kind": "import",
+      "line": 3,
+      "raw": "import { handleMcpRequest } from \"./mcp\";",
+      "symbols": [
+        "handleMcpRequest"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "src/index.ts::fetch",
+      "target": "src/mcp.ts::handleMcpRequest",
+      "kind": "invoke",
+      "line": 7,
+      "raw": "handleMcpRequest",
+      "symbols": [
+        "handleMcpRequest"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "src/mcp.ts",
+      "target": "src/time-groups.ts",
+      "kind": "import",
+      "line": 4,
+      "raw": "import {\n  filterBySavedPeriod,\n  groupBySavedPeriod,\n  localDateRangeToUtcBounds,\n  savedPeriodLabel,\n} from \"./time-groups\";",
+      "symbols": [
+        "filterBySavedPeriod"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "src/mcp.ts::createServer",
+      "target": "src/time-groups.ts::filterBySavedPeriod",
+      "kind": "invoke",
+      "line": 443,
+      "raw": "filterBySavedPeriod",
+      "symbols": [
+        "filterBySavedPeriod"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "src/mcp.ts",
+      "target": "src/time-groups.ts",
+      "kind": "import",
+      "line": 4,
+      "raw": "import {\n  filterBySavedPeriod,\n  groupBySavedPeriod,\n  localDateRangeToUtcBounds,\n  savedPeriodLabel,\n} from \"./time-groups\";",
+      "symbols": [
+        "groupBySavedPeriod"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "src/mcp.ts::createServer",
+      "target": "src/time-groups.ts::groupBySavedPeriod",
+      "kind": "invoke",
+      "line": 432,
+      "raw": "groupBySavedPeriod",
+      "symbols": [
+        "groupBySavedPeriod"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "src/mcp.ts",
+      "target": "src/time-groups.ts",
+      "kind": "import",
+      "line": 4,
+      "raw": "import {\n  filterBySavedPeriod,\n  groupBySavedPeriod,\n  localDateRangeToUtcBounds,\n  savedPeriodLabel,\n} from \"./time-groups\";",
+      "symbols": [
+        "localDateRangeToUtcBounds"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "src/mcp.ts::createServer",
+      "target": "src/time-groups.ts::localDateRangeToUtcBounds",
+      "kind": "invoke",
+      "line": 502,
+      "raw": "localDateRangeToUtcBounds",
+      "symbols": [
+        "localDateRangeToUtcBounds"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "src/mcp.ts",
+      "target": "src/time-groups.ts",
+      "kind": "import",
+      "line": 4,
+      "raw": "import {\n  filterBySavedPeriod,\n  groupBySavedPeriod,\n  localDateRangeToUtcBounds,\n  savedPeriodLabel,\n} from \"./time-groups\";",
+      "symbols": [
+        "savedPeriodLabel"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "src/mcp.ts::createServer",
+      "target": "src/time-groups.ts::savedPeriodLabel",
+      "kind": "invoke",
+      "line": 441,
+      "raw": "savedPeriodLabel",
+      "symbols": [
+        "savedPeriodLabel"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "src/mcp.ts::createServer",
+      "target": "src/time-groups.ts::savedPeriodLabel",
+      "kind": "invoke",
+      "line": 456,
+      "raw": "savedPeriodLabel",
+      "symbols": [
+        "savedPeriodLabel"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "tests/time-groups.test.ts",
+      "target": "src/time-groups.ts",
+      "kind": "import",
+      "line": 3,
+      "raw": "import {\n  filterBySavedPeriod,\n  groupBySavedPeriod,\n  localDateRangeToUtcBounds,\n} from \"../src/time-groups.ts\";",
+      "symbols": [
+        "filterBySavedPeriod"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "tests/time-groups.test.ts::filters yesterday separately from this week",
+      "target": "src/time-groups.ts::filterBySavedPeriod",
+      "kind": "invoke",
+      "line": 66,
+      "raw": "filterBySavedPeriod",
+      "symbols": [
+        "filterBySavedPeriod"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "tests/time-groups.test.ts::treats past 7 days as a rolling window and weeks as Monday-based",
+      "target": "src/time-groups.ts::filterBySavedPeriod",
+      "kind": "invoke",
+      "line": 82,
+      "raw": "filterBySavedPeriod",
+      "symbols": [
+        "filterBySavedPeriod"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "tests/time-groups.test.ts::treats past 7 days as a rolling window and weeks as Monday-based",
+      "target": "src/time-groups.ts::filterBySavedPeriod",
+      "kind": "invoke",
+      "line": 87,
+      "raw": "filterBySavedPeriod",
+      "symbols": [
+        "filterBySavedPeriod"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "tests/time-groups.test.ts",
+      "target": "src/time-groups.ts",
+      "kind": "import",
+      "line": 3,
+      "raw": "import {\n  filterBySavedPeriod,\n  groupBySavedPeriod,\n  localDateRangeToUtcBounds,\n} from \"../src/time-groups.ts\";",
+      "symbols": [
+        "groupBySavedPeriod"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "tests/time-groups.test.ts::groups saved words without duplicating them",
+      "target": "src/time-groups.ts::groupBySavedPeriod",
+      "kind": "invoke",
+      "line": 21,
+      "raw": "groupBySavedPeriod",
+      "symbols": [
+        "groupBySavedPeriod"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "tests/time-groups.test.ts::uses the selected time zone when deciding what counts as today",
+      "target": "src/time-groups.ts::groupBySavedPeriod",
+      "kind": "invoke",
+      "line": 48,
+      "raw": "groupBySavedPeriod",
+      "symbols": [
+        "groupBySavedPeriod"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "tests/time-groups.test.ts",
+      "target": "src/time-groups.ts",
+      "kind": "import",
+      "line": 3,
+      "raw": "import {\n  filterBySavedPeriod,\n  groupBySavedPeriod,\n  localDateRangeToUtcBounds,\n} from \"../src/time-groups.ts\";",
+      "symbols": [
+        "localDateRangeToUtcBounds"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "tests/time-groups.test.ts::converts an inclusive India date range into UTC query boundaries",
+      "target": "src/time-groups.ts::localDateRangeToUtcBounds",
+      "kind": "invoke",
+      "line": 105,
+      "raw": "localDateRangeToUtcBounds",
+      "symbols": [
+        "localDateRangeToUtcBounds"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "tests/time-groups.test.ts::handles daylight-saving offsets at each range boundary",
+      "target": "src/time-groups.ts::localDateRangeToUtcBounds",
+      "kind": "invoke",
+      "line": 119,
+      "raw": "localDateRangeToUtcBounds",
+      "symbols": [
+        "localDateRangeToUtcBounds"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "tests/time-groups.test.ts::rejects invalid or reversed local date ranges",
+      "target": "src/time-groups.ts::localDateRangeToUtcBounds",
+      "kind": "invoke",
+      "line": 133,
+      "raw": "localDateRangeToUtcBounds",
+      "symbols": [
+        "localDateRangeToUtcBounds"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "tests/time-groups.test.ts::rejects invalid or reversed local date ranges",
+      "target": "src/time-groups.ts::localDateRangeToUtcBounds",
+      "kind": "invoke",
+      "line": 137,
+      "raw": "localDateRangeToUtcBounds",
+      "symbols": [
+        "localDateRangeToUtcBounds"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "src/auth.ts",
+      "target": "src/auth.ts::AuthProps",
+      "kind": "contain",
+      "line": 7,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "src/auth.ts",
+      "target": "src/auth.ts::AppEnv",
+      "kind": "contain",
+      "line": 11,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "src/auth.ts",
+      "target": "src/auth.ts::PendingGoogleLogin",
+      "kind": "contain",
+      "line": 19,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "src/auth.ts",
+      "target": "src/auth.ts::GoogleTokenResponse",
+      "kind": "contain",
+      "line": 24,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "src/auth.ts",
+      "target": "src/auth.ts::GoogleUserInfo",
+      "kind": "contain",
+      "line": 30,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "src/auth.ts",
+      "target": "src/auth.ts::escapeHtml",
+      "kind": "contain",
+      "line": 41,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "src/auth.ts",
+      "target": "src/auth.ts::createState",
+      "kind": "contain",
+      "line": 50,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "src/auth.ts",
+      "target": "src/auth.ts::pendingLoginKey",
+      "kind": "contain",
+      "line": 58,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "src/auth.ts",
+      "target": "src/auth.ts::errorRedirect",
+      "kind": "contain",
+      "line": 62,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "src/auth.ts",
+      "target": "src/auth.ts::authorizationErrorResponse",
+      "kind": "contain",
+      "line": 77,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "src/auth.ts",
+      "target": "src/auth.ts::consentPage",
+      "kind": "contain",
+      "line": 90,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "src/auth.ts",
+      "target": "src/auth.ts::handleAuthorize",
+      "kind": "contain",
+      "line": 137,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "src/auth.ts",
+      "target": "src/auth.ts::handleGoogleStart",
+      "kind": "contain",
+      "line": 166,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "src/auth.ts",
+      "target": "src/auth.ts::handleGoogleCallback",
+      "kind": "contain",
+      "line": 193,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "src/auth.ts",
+      "target": "src/auth.ts::fetch",
+      "kind": "contain",
+      "line": 285,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "src/index.ts",
+      "target": "src/index.ts::fetch",
+      "kind": "contain",
+      "line": 6,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "src/mcp.ts",
+      "target": "src/mcp.ts::WordRow",
+      "kind": "contain",
+      "line": 11,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "src/mcp.ts",
+      "target": "src/mcp.ts::MeaningRow",
+      "kind": "contain",
+      "line": 20,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "src/mcp.ts",
+      "target": "src/mcp.ts::WordListRow",
+      "kind": "contain",
+      "line": 29,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "src/mcp.ts",
+      "target": "src/mcp.ts::VocabularyWord",
+      "kind": "contain",
+      "line": 39,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "src/mcp.ts",
+      "target": "src/mcp.ts::WordSummary",
+      "kind": "contain",
+      "line": 91,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "src/mcp.ts",
+      "target": "src/mcp.ts::normalizeTerm",
+      "kind": "contain",
+      "line": 118,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "src/mcp.ts",
+      "target": "src/mcp.ts::findWord",
+      "kind": "contain",
+      "line": 122,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "src/mcp.ts",
+      "target": "src/mcp.ts::listVocabularyWords",
+      "kind": "contain",
+      "line": 167,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "src/mcp.ts",
+      "target": "src/mcp.ts::createServer",
+      "kind": "contain",
+      "line": 216,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "src/mcp.ts",
+      "target": "src/mcp.ts::handleMcpRequest",
+      "kind": "contain",
+      "line": 524,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "src/mcp.ts::handleMcpRequest",
+      "target": "src/mcp.ts::handleMcpRequest.onerror",
+      "kind": "contain",
+      "line": 531,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "src/time-groups.ts",
+      "target": "src/time-groups.ts::TimeGroupPeriod",
+      "kind": "contain",
+      "line": 1,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "src/time-groups.ts",
+      "target": "src/time-groups.ts::SavedPeriodFilter",
+      "kind": "contain",
+      "line": 13,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "src/time-groups.ts",
+      "target": "src/time-groups.ts::TimeGroup",
+      "kind": "contain",
+      "line": 24,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "src/time-groups.ts",
+      "target": "src/time-groups.ts::CalendarDate",
+      "kind": "contain",
+      "line": 31,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "src/time-groups.ts",
+      "target": "src/time-groups.ts::UtcQueryBounds",
+      "kind": "contain",
+      "line": 37,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "src/time-groups.ts",
+      "target": "src/time-groups.ts::parseD1Timestamp",
+      "kind": "contain",
+      "line": 58,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "src/time-groups.ts",
+      "target": "src/time-groups.ts::calendarDate",
+      "kind": "contain",
+      "line": 71,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "src/time-groups.ts",
+      "target": "src/time-groups.ts::parseLocalDate",
+      "kind": "contain",
+      "line": 87,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "src/time-groups.ts",
+      "target": "src/time-groups.ts::addCalendarDays",
+      "kind": "contain",
+      "line": 113,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "src/time-groups.ts",
+      "target": "src/time-groups.ts::timeZoneOffsetMilliseconds",
+      "kind": "contain",
+      "line": 125,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "src/time-groups.ts",
+      "target": "src/time-groups.ts::localMidnightAsUtc",
+      "kind": "contain",
+      "line": 150,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "src/time-groups.ts",
+      "target": "src/time-groups.ts::formatD1UtcTimestamp",
+      "kind": "contain",
+      "line": 166,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "src/time-groups.ts",
+      "target": "src/time-groups.ts::dayNumber",
+      "kind": "contain",
+      "line": 170,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "src/time-groups.ts",
+      "target": "src/time-groups.ts::mondayOfWeek",
+      "kind": "contain",
+      "line": 174,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "src/time-groups.ts",
+      "target": "src/time-groups.ts::monthLabel",
+      "kind": "contain",
+      "line": 182,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "src/time-groups.ts",
+      "target": "src/time-groups.ts::groupIdentity",
+      "kind": "contain",
+      "line": 190,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "src/time-groups.ts",
+      "target": "src/time-groups.ts::assertValidTimeZone",
+      "kind": "contain",
+      "line": 228,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "src/time-groups.ts",
+      "target": "src/time-groups.ts::localDateRangeToUtcBounds",
+      "kind": "contain",
+      "line": 236,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "src/time-groups.ts",
+      "target": "src/time-groups.ts::savedPeriodLabel",
+      "kind": "contain",
+      "line": 257,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "src/time-groups.ts",
+      "target": "src/time-groups.ts::isInSavedPeriod",
+      "kind": "contain",
+      "line": 263,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "src/time-groups.ts",
+      "target": "src/time-groups.ts::filterBySavedPeriod",
+      "kind": "contain",
+      "line": 296,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "src/time-groups.ts",
+      "target": "src/time-groups.ts::groupBySavedPeriod",
+      "kind": "contain",
+      "line": 317,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "tests/time-groups.test.ts",
+      "target": "tests/time-groups.test.ts::groups saved words without duplicating them",
+      "kind": "contain",
+      "line": 11,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "tests/time-groups.test.ts",
+      "target": "tests/time-groups.test.ts::uses the selected time zone when deciding what counts as today",
+      "kind": "contain",
+      "line": 47,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "tests/time-groups.test.ts",
+      "target": "tests/time-groups.test.ts::filters yesterday separately from this week",
+      "kind": "contain",
+      "line": 59,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "tests/time-groups.test.ts",
+      "target": "tests/time-groups.test.ts::treats past 7 days as a rolling window and weeks as Monday-based",
+      "kind": "contain",
+      "line": 75,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "tests/time-groups.test.ts",
+      "target": "tests/time-groups.test.ts::converts an inclusive India date range into UTC query boundaries",
+      "kind": "contain",
+      "line": 103,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "tests/time-groups.test.ts",
+      "target": "tests/time-groups.test.ts::handles daylight-saving offsets at each range boundary",
+      "kind": "contain",
+      "line": 117,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "tests/time-groups.test.ts",
+      "target": "tests/time-groups.test.ts::rejects invalid or reversed local date ranges",
+      "kind": "contain",
+      "line": 131,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    }
+  ]
+}

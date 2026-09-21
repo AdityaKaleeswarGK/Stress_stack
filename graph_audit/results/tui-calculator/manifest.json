@@ -1,0 +1,21 @@
+{
+  "git": {
+    "head": null,
+    "status_porcelain": null
+  },
+  "source_sha256": {
+    "main.py": "940af3d54ba39bb9cd51cad1ccd975da08bcb42a7266f6723ef5701116ed94b8",
+    "src/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/constants.py": "4d4b298685ccbd2f13b55be38a9c07d2599ec5e81181d9610dabbff23b210df4",
+    "src/engine.py": "5384d6913d99c0f93e84dea8b7d17c58cf3c6dce35035fa6ec443dd955472400",
+    "src/ui.py": "faf4257553c2bde9d51752121052877ecb31797c8c2739125d26c8feb3d8d05c",
+    "tests/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "tests/test_constants.py": "f7d6b61d43467dbc9ba2237f67cdf7e30403033870a81be31b05a298dc67638d",
+    "tests/test_engine.py": "30d848d933c765f4a3b40eca959cd73de52083a2a9aa49c7070373ad8bbd56bc",
+    "tests/test_ui.py": "dcfaa42878f388f14151f2e1b7743d33f627ed18a2c519cccd85146ce0fb8bea"
+  },
+  "root_config_sha256": {
+    "pyproject.toml": "1b68d3fb9ef85494289ff87c16373a6bba3d8daab68e15c286285bf8864d12f1"
+  },
+  "scanned_sources_digest": "1fac5ae99508ac132c234cd9e7abd4533ec6431fd8092e3eb8bd863815f9508c"
+}

@@ -1,0 +1,10 @@
+{
+  "name": "orchard-map-ts",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Sample TypeScript package: the same fixtures the Python and Rust samples use, in JS/TS shapes.",
+  "scripts": {
+    "test": "node --test runtime_check.ts"
+  }
+}

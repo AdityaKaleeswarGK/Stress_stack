@@ -1,0 +1,5242 @@
+{
+  "schema_version": "0.4.0",
+  "root": "/Users/adityagk/Desktop/projects/FlappyBird-TS-Canvas",
+  "snapshot": {
+    "content_hashes": {
+      "main.ts": "8d8407782edc35296d2c49d0eacf7c24e2a5418565a5a56fec2da98d5e19230b",
+      "package.json": "31f61df29ba6da3f33d98d7cb5353646c723475e8160a6b58a1b3354a36b251a",
+      "vite.config.ts": "5a4781e0762b45ca85cccaa9dba10f345917949e88785884f0a3aba611244ba8",
+      "core/input.ts": "81eeda872e1beee4c59c78280fff1ca6ab599be6dfa429f9917b87a5c271edff",
+      "core/state.ts": "b5575c550d459252e56363dd901d640ed93393fb1a438e61756117a746349fc2",
+      "engine/physics.ts": "ccdbb8806160edc64b212c406c64195fe3d626e67fd2daa60c3c5ee3429b51ee",
+      "engine/renderer.ts": "aca254cad90a3b2e97786c8b3ae283f7bfe702574daebb85bba578b50753d4b0",
+      "tests/integration.test.ts": "436dd64ac3a74bc0d48f9c63dcedc19615e26422f4328c4f87845a373b7d3613",
+      "tests/performance.test.ts": "c4fd6b983190daa7b421c702fb5ac0bb8bc0e2f925459d4a07e177eb7a6d4c5b",
+      "types/game.ts": "61d49c945aaa0813bef7bf88909197f104e2709075d7781dc91379d1bb866d3c"
+    },
+    "languages": [
+      "javascript",
+      "python",
+      "rust",
+      "tsx",
+      "typescript"
+    ],
+    "versions": {
+      "tree-sitter": "0.26.0",
+      "tree-sitter-language-pack": "1.16.2",
+      "pathspec": "1.1.1"
+    },
+    "extractor_hash": "44ccfe7586b5f3eff43f966f46c823a6c1e2039679d38965961dfbd515fa3b6b",
+    "git_commit": null,
+    "id": "80468fc8dc569e09b9fd451726d1052a9ef393d5b13054d18a94723647d5af05"
+  },
+  "diagnostics": [
+    {
+      "language": "typescript",
+      "reason": "query_pattern_dropped",
+      "pattern": "(class_declaration (class_heritage (identifier) @base)) @definition.class",
+      "message": "Impossible pattern at row 0, column 35"
+    }
+  ],
+  "statistics": {
+    "files_total": 9,
+    "files_by_language": {
+      "typescript": 9
+    },
+    "symbols_total": 54,
+    "tests_total": 8,
+    "calls_total": 120,
+    "syntax_errors": 0,
+    "unparsed_known_language": 0,
+    "edges_total": 124,
+    "edges_by_kind": {
+      "contain": 54,
+      "import": 21,
+      "invoke": 8,
+      "reference": 41
+    },
+    "import_bindings": 32,
+    "import_uses": 69,
+    "binding_status": {
+      "internal": 21,
+      "conditional": 0,
+      "external": 11,
+      "unresolved": 0,
+      "ambiguous": 0,
+      "unsupported": 0
+    }
+  },
+  "files": [
+    {
+      "path": "main.ts",
+      "language": "typescript",
+      "parser": "tree_sitter",
+      "has_syntax_error": false,
+      "is_empty": false,
+      "source_hash": "8d8407782edc35296d2c49d0eacf7c24e2a5418565a5a56fec2da98d5e19230b",
+      "bound_names": [
+        "CANVAS_HEIGHT",
+        "CANVAS_WIDTH",
+        "PIPE_GAP",
+        "PIPE_INTERVAL",
+        "PIPE_SPEED",
+        "PIPE_WIDTH",
+        "canvas",
+        "controller",
+        "gameLoop",
+        "input",
+        "lastTime",
+        "physics",
+        "pipeIdCounter",
+        "pipeTimer",
+        "renderer",
+        "spawnPipe"
+      ],
+      "bindings": [
+        {
+          "id": "main.ts@0:0",
+          "module": "./core/state",
+          "name": "GameController",
+          "local": "GameController",
+          "scope": "",
+          "line": 1,
+          "raw": "import { GameController } from './core/state';",
+          "kind": "named",
+          "reexport": false,
+          "conditional": false,
+          "uses": [
+            {
+              "owner": "",
+              "expression": "GameController",
+              "kind": "call",
+              "source_text": "GameController",
+              "line": 18,
+              "start_byte": 563,
+              "end_byte": 577,
+              "target_file": "core/state.ts",
+              "target_symbol": "core/state.ts::GameController",
+              "status": "internal",
+              "binding_target_file": "core/state.ts",
+              "binding_target_symbol": "core/state.ts::GameController"
+            }
+          ],
+          "status": "internal",
+          "reason": "module_and_binding_resolved",
+          "target_file": "core/state.ts",
+          "target_symbol": "core/state.ts::GameController",
+          "bound_module": "",
+          "module_scope": "",
+          "start_byte": 0
+        },
+        {
+          "id": "main.ts@47:1",
+          "module": "./core/input",
+          "name": "InputHandler",
+          "local": "InputHandler",
+          "scope": "",
+          "line": 2,
+          "raw": "import { InputHandler } from './core/input';",
+          "kind": "named",
+          "reexport": false,
+          "conditional": false,
+          "uses": [
+            {
+              "owner": "",
+              "expression": "InputHandler",
+              "kind": "call",
+              "source_text": "InputHandler",
+              "line": 26,
+              "start_byte": 741,
+              "end_byte": 753,
+              "target_file": "core/input.ts",
+              "target_symbol": "core/input.ts::InputHandler",
+              "status": "internal",
+              "binding_target_file": "core/input.ts",
+              "binding_target_symbol": "core/input.ts::InputHandler"
+            }
+          ],
+          "status": "internal",
+          "reason": "module_and_binding_resolved",
+          "target_file": "core/input.ts",
+          "target_symbol": "core/input.ts::InputHandler",
+          "bound_module": "",
+          "module_scope": "",
+          "start_byte": 47
+        },
+        {
+          "id": "main.ts@92:2",
+          "module": "./engine/physics",
+          "name": "PhysicsController",
+          "local": "PhysicsController",
+          "scope": "",
+          "line": 3,
+          "raw": "import { PhysicsController } from './engine/physics';",
+          "kind": "named",
+          "reexport": false,
+          "conditional": false,
+          "uses": [
+            {
+              "owner": "",
+              "expression": "PhysicsController",
+              "kind": "call",
+              "source_text": "PhysicsController",
+              "line": 19,
+              "start_byte": 601,
+              "end_byte": 618,
+              "target_file": "engine/physics.ts",
+              "target_symbol": "engine/physics.ts::PhysicsController",
+              "status": "internal",
+              "binding_target_file": "engine/physics.ts",
+              "binding_target_symbol": "engine/physics.ts::PhysicsController"
+            }
+          ],
+          "status": "internal",
+          "reason": "module_and_binding_resolved",
+          "target_file": "engine/physics.ts",
+          "target_symbol": "engine/physics.ts::PhysicsController",
+          "bound_module": "",
+          "module_scope": "",
+          "start_byte": 92
+        },
+        {
+          "id": "main.ts@146:3",
+          "module": "./engine/renderer",
+          "name": "Renderer",
+          "local": "Renderer",
+          "scope": "",
+          "line": 4,
+          "raw": "import { Renderer } from './engine/renderer';",
+          "kind": "named",
+          "reexport": false,
+          "conditional": false,
+          "uses": [
+            {
+              "owner": "",
+              "expression": "Renderer",
+              "kind": "call",
+              "source_text": "Renderer",
+              "line": 20,
+              "start_byte": 643,
+              "end_byte": 651,
+              "target_file": "engine/renderer.ts",
+              "target_symbol": "engine/renderer.ts::Renderer",
+              "status": "internal",
+              "binding_target_file": "engine/renderer.ts",
+              "binding_target_symbol": "engine/renderer.ts::Renderer"
+            }
+          ],
+          "status": "internal",
+          "reason": "module_and_binding_resolved",
+          "target_file": "engine/renderer.ts",
+          "target_symbol": "engine/renderer.ts::Renderer",
+          "bound_module": "",
+          "module_scope": "",
+          "start_byte": 146
+        },
+        {
+          "id": "main.ts@192:4",
+          "module": "./types/game",
+          "name": "GamePhase",
+          "local": "GamePhase",
+          "scope": "",
+          "line": 5,
+          "raw": "import { GamePhase } from './types/game';",
+          "kind": "named",
+          "reexport": false,
+          "conditional": false,
+          "uses": [
+            {
+              "owner": "",
+              "expression": "GamePhase.Menu",
+              "kind": "reference",
+              "source_text": "GamePhase.Menu",
+              "line": 29,
+              "start_byte": 859,
+              "end_byte": 873,
+              "target_file": "types/game.ts",
+              "target_symbol": "types/game.ts::GamePhase.Menu",
+              "status": "internal",
+              "binding_target_file": "types/game.ts",
+              "binding_target_symbol": "types/game.ts::GamePhase"
+            },
+            {
+              "owner": "",
+              "expression": "GamePhase.GameOver",
+              "kind": "reference",
+              "source_text": "GamePhase.GameOver",
+              "line": 29,
+              "start_byte": 887,
+              "end_byte": 905,
+              "target_file": "types/game.ts",
+              "target_symbol": "types/game.ts::GamePhase.GameOver",
+              "status": "internal",
+              "binding_target_file": "types/game.ts",
+              "binding_target_symbol": "types/game.ts::GamePhase"
+            },
+            {
+              "owner": "",
+              "expression": "GamePhase.Active",
+              "kind": "reference",
+              "source_text": "GamePhase.Active",
+              "line": 31,
+              "start_byte": 957,
+              "end_byte": 973,
+              "target_file": "types/game.ts",
+              "target_symbol": "types/game.ts::GamePhase.Active",
+              "status": "internal",
+              "binding_target_file": "types/game.ts",
+              "binding_target_symbol": "types/game.ts::GamePhase"
+            },
+            {
+              "owner": "",
+              "expression": "GamePhase.Active",
+              "kind": "reference",
+              "source_text": "GamePhase.Active",
+              "line": 34,
+              "start_byte": 1090,
+              "end_byte": 1106,
+              "target_file": "types/game.ts",
+              "target_symbol": "types/game.ts::GamePhase.Active",
+              "status": "internal",
+              "binding_target_file": "types/game.ts",
+              "binding_target_symbol": "types/game.ts::GamePhase"
+            },
+            {
+              "owner": "gameLoop",
+              "expression": "GamePhase.Active",
+              "kind": "reference",
+              "source_text": "GamePhase.Active",
+              "line": 61,
+              "start_byte": 1723,
+              "end_byte": 1739,
+              "target_file": "types/game.ts",
+              "target_symbol": "types/game.ts::GamePhase.Active",
+              "status": "internal",
+              "binding_target_file": "types/game.ts",
+              "binding_target_symbol": "types/game.ts::GamePhase"
+            }
+          ],
+          "status": "internal",
+          "reason": "module_and_binding_resolved",
+          "target_file": "types/game.ts",
+          "target_symbol": "types/game.ts::GamePhase",
+          "bound_module": "",
+          "module_scope": "",
+          "start_byte": 192
+        }
+      ],
+      "calls": [
+        {
+          "name": "getElementById",
+          "line": 14,
+          "caller": "",
+          "expression": ""
+        },
+        {
+          "name": "getSnapshot",
+          "line": 28,
+          "caller": "",
+          "expression": ""
+        },
+        {
+          "name": "reset",
+          "line": 30,
+          "caller": "",
+          "expression": ""
+        },
+        {
+          "name": "setPhase",
+          "line": 31,
+          "caller": "",
+          "expression": ""
+        },
+        {
+          "name": "updateBird",
+          "line": 32,
+          "caller": "",
+          "expression": ""
+        },
+        {
+          "name": "jump",
+          "line": 32,
+          "caller": "",
+          "expression": ""
+        },
+        {
+          "name": "getSnapshot",
+          "line": 32,
+          "caller": "",
+          "expression": ""
+        },
+        {
+          "name": "updateBird",
+          "line": 35,
+          "caller": "",
+          "expression": ""
+        },
+        {
+          "name": "jump",
+          "line": 35,
+          "caller": "",
+          "expression": ""
+        },
+        {
+          "name": "getSnapshot",
+          "line": 35,
+          "caller": "",
+          "expression": ""
+        },
+        {
+          "name": "random",
+          "line": 40,
+          "caller": "spawnPipe",
+          "expression": ""
+        },
+        {
+          "name": "getSnapshot",
+          "line": 41,
+          "caller": "spawnPipe",
+          "expression": ""
+        },
+        {
+          "name": "setPipes",
+          "line": 42,
+          "caller": "spawnPipe",
+          "expression": ""
+        },
+        {
+          "name": "getSnapshot",
+          "line": 58,
+          "caller": "gameLoop",
+          "expression": ""
+        },
+        {
+          "name": "setPhase",
+          "line": 59,
+          "caller": "gameLoop",
+          "expression": ""
+        },
+        {
+          "name": "update",
+          "line": 63,
+          "caller": "gameLoop",
+          "expression": ""
+        },
+        {
+          "name": "updateBird",
+          "line": 64,
+          "caller": "gameLoop",
+          "expression": ""
+        },
+        {
+          "name": "map",
+          "line": 67,
+          "caller": "gameLoop",
+          "expression": ""
+        },
+        {
+          "name": "filter",
+          "line": 67,
+          "caller": "gameLoop",
+          "expression": ""
+        },
+        {
+          "name": "setPipes",
+          "line": 70,
+          "caller": "gameLoop",
+          "expression": ""
+        },
+        {
+          "name": "forEach",
+          "line": 73,
+          "caller": "gameLoop",
+          "expression": ""
+        },
+        {
+          "name": "incrementScore",
+          "line": 75,
+          "caller": "gameLoop",
+          "expression": ""
+        },
+        {
+          "name": "spawnPipe",
+          "line": 82,
+          "caller": "gameLoop",
+          "expression": ""
+        },
+        {
+          "name": "getSnapshot",
+          "line": 87,
+          "caller": "gameLoop",
+          "expression": ""
+        },
+        {
+          "name": "checkCollision",
+          "line": 88,
+          "caller": "gameLoop",
+          "expression": ""
+        },
+        {
+          "name": "gameOver",
+          "line": 89,
+          "caller": "gameLoop",
+          "expression": ""
+        },
+        {
+          "name": "render",
+          "line": 93,
+          "caller": "gameLoop",
+          "expression": ""
+        },
+        {
+          "name": "getSnapshot",
+          "line": 93,
+          "caller": "gameLoop",
+          "expression": ""
+        },
+        {
+          "name": "requestAnimationFrame",
+          "line": 94,
+          "caller": "gameLoop",
+          "expression": ""
+        },
+        {
+          "name": "requestAnimationFrame",
+          "line": 97,
+          "caller": "",
+          "expression": ""
+        },
+        {
+          "name": "gameLoop",
+          "line": 99,
+          "caller": "",
+          "expression": ""
+        }
+      ],
+      "diagnostics": [],
+      "modules": [],
+      "exports": [],
+      "imports": [
+        {
+          "raw": "import { GameController } from './core/state';",
+          "module": "./core/state",
+          "symbols": [
+            "GameController"
+          ],
+          "line": 1
+        },
+        {
+          "raw": "import { InputHandler } from './core/input';",
+          "module": "./core/input",
+          "symbols": [
+            "InputHandler"
+          ],
+          "line": 2
+        },
+        {
+          "raw": "import { PhysicsController } from './engine/physics';",
+          "module": "./engine/physics",
+          "symbols": [
+            "PhysicsController"
+          ],
+          "line": 3
+        },
+        {
+          "raw": "import { Renderer } from './engine/renderer';",
+          "module": "./engine/renderer",
+          "symbols": [
+            "Renderer"
+          ],
+          "line": 4
+        },
+        {
+          "raw": "import { GamePhase } from './types/game';",
+          "module": "./types/game",
+          "symbols": [
+            "GamePhase"
+          ],
+          "line": 5
+        }
+      ],
+      "symbols": [
+        {
+          "name": "spawnPipe",
+          "qualified_name": "spawnPipe",
+          "kind": "function",
+          "start_line": 39,
+          "end_line": 52,
+          "first_body_line": 39,
+          "last_body_line": 52,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 1212,
+          "body_end_byte": 1514,
+          "bases": [],
+          "parent": "",
+          "id": "main.ts::spawnPipe",
+          "docstring": "",
+          "start_byte": 1191,
+          "end_byte": 1514,
+          "signature": "function spawnPipe()"
+        },
+        {
+          "name": "gameLoop",
+          "qualified_name": "gameLoop",
+          "kind": "function",
+          "start_line": 54,
+          "end_line": 95,
+          "first_body_line": 54,
+          "last_body_line": 95,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 1553,
+          "body_end_byte": 2704,
+          "bases": [],
+          "parent": "",
+          "id": "main.ts::gameLoop",
+          "docstring": "",
+          "start_byte": 1516,
+          "end_byte": 2704,
+          "signature": "function gameLoop(timestamp: number)"
+        }
+      ]
+    },
+    {
+      "path": "vite.config.ts",
+      "language": "typescript",
+      "parser": "tree_sitter",
+      "has_syntax_error": false,
+      "is_empty": false,
+      "source_hash": "5a4781e0762b45ca85cccaa9dba10f345917949e88785884f0a3aba611244ba8",
+      "bound_names": [],
+      "bindings": [
+        {
+          "id": "vite.config.ts@0:0",
+          "module": "vite",
+          "name": "defineConfig",
+          "local": "defineConfig",
+          "scope": "",
+          "line": 1,
+          "raw": "import { defineConfig } from 'vite';",
+          "kind": "named",
+          "reexport": false,
+          "conditional": false,
+          "uses": [
+            {
+              "owner": "",
+              "expression": "defineConfig",
+              "kind": "call",
+              "source_text": "defineConfig",
+              "line": 3,
+              "start_byte": 53,
+              "end_byte": 65,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "external",
+              "binding_target_file": null,
+              "binding_target_symbol": null
+            }
+          ],
+          "status": "external",
+          "reason": "stdlib_or_declared_dependency",
+          "target_file": null,
+          "target_symbol": null,
+          "bound_module": "",
+          "module_scope": "",
+          "start_byte": 0
+        }
+      ],
+      "calls": [
+        {
+          "name": "defineConfig",
+          "line": 3,
+          "caller": "",
+          "expression": ""
+        }
+      ],
+      "diagnostics": [],
+      "modules": [],
+      "exports": [
+        {
+          "exported": "default",
+          "local": "",
+          "module": "",
+          "line": 3
+        }
+      ],
+      "imports": [
+        {
+          "raw": "import { defineConfig } from 'vite';",
+          "module": "vite",
+          "symbols": [
+            "defineConfig"
+          ],
+          "line": 1
+        }
+      ],
+      "symbols": []
+    },
+    {
+      "path": "core/input.ts",
+      "language": "typescript",
+      "parser": "tree_sitter",
+      "has_syntax_error": false,
+      "is_empty": false,
+      "source_hash": "81eeda872e1beee4c59c78280fff1ca6ab599be6dfa429f9917b87a5c271edff",
+      "bound_names": [
+        "InputCallback",
+        "InputHandler"
+      ],
+      "bindings": [
+        {
+          "id": "core/input.ts@0:0",
+          "module": "../types/game",
+          "name": "GamePhase",
+          "local": "GamePhase",
+          "scope": "",
+          "line": 1,
+          "raw": "import { GamePhase } from '../types/game';",
+          "kind": "named",
+          "reexport": false,
+          "conditional": false,
+          "uses": [
+            {
+              "owner": "InputHandler",
+              "expression": "GamePhase",
+              "kind": "reference",
+              "source_text": "GamePhase",
+              "line": 8,
+              "start_byte": 206,
+              "end_byte": 215,
+              "target_file": "types/game.ts",
+              "target_symbol": "types/game.ts::GamePhase",
+              "status": "internal",
+              "binding_target_file": "types/game.ts",
+              "binding_target_symbol": "types/game.ts::GamePhase"
+            },
+            {
+              "owner": "InputHandler",
+              "expression": "GamePhase.Menu",
+              "kind": "reference",
+              "source_text": "GamePhase.Menu",
+              "line": 8,
+              "start_byte": 218,
+              "end_byte": 232,
+              "target_file": "types/game.ts",
+              "target_symbol": "types/game.ts::GamePhase.Menu",
+              "status": "internal",
+              "binding_target_file": "types/game.ts",
+              "binding_target_symbol": "types/game.ts::GamePhase"
+            },
+            {
+              "owner": "InputHandler.setPhase",
+              "expression": "GamePhase",
+              "kind": "reference",
+              "source_text": "GamePhase",
+              "line": 17,
+              "start_byte": 550,
+              "end_byte": 559,
+              "target_file": "types/game.ts",
+              "target_symbol": "types/game.ts::GamePhase",
+              "status": "internal",
+              "binding_target_file": "types/game.ts",
+              "binding_target_symbol": "types/game.ts::GamePhase"
+            },
+            {
+              "owner": "InputHandler._handleKeyDown",
+              "expression": "GamePhase.GameOver",
+              "kind": "reference",
+              "source_text": "GamePhase.GameOver",
+              "line": 22,
+              "start_byte": 662,
+              "end_byte": 680,
+              "target_file": "types/game.ts",
+              "target_symbol": "types/game.ts::GamePhase.GameOver",
+              "status": "internal",
+              "binding_target_file": "types/game.ts",
+              "binding_target_symbol": "types/game.ts::GamePhase"
+            },
+            {
+              "owner": "InputHandler._handleTouch",
+              "expression": "GamePhase.GameOver",
+              "kind": "reference",
+              "source_text": "GamePhase.GameOver",
+              "line": 36,
+              "start_byte": 1012,
+              "end_byte": 1030,
+              "target_file": "types/game.ts",
+              "target_symbol": "types/game.ts::GamePhase.GameOver",
+              "status": "internal",
+              "binding_target_file": "types/game.ts",
+              "binding_target_symbol": "types/game.ts::GamePhase"
+            }
+          ],
+          "status": "internal",
+          "reason": "module_and_binding_resolved",
+          "target_file": "types/game.ts",
+          "target_symbol": "types/game.ts::GamePhase",
+          "bound_module": "",
+          "module_scope": "",
+          "start_byte": 0
+        }
+      ],
+      "calls": [
+        {
+          "name": "addEventListener",
+          "line": 12,
+          "caller": "InputHandler.constructor",
+          "expression": ""
+        },
+        {
+          "name": "bind",
+          "line": 12,
+          "caller": "InputHandler.constructor",
+          "expression": ""
+        },
+        {
+          "name": "addEventListener",
+          "line": 13,
+          "caller": "InputHandler.constructor",
+          "expression": ""
+        },
+        {
+          "name": "bind",
+          "line": 13,
+          "caller": "InputHandler.constructor",
+          "expression": ""
+        },
+        {
+          "name": "addEventListener",
+          "line": 14,
+          "caller": "InputHandler.constructor",
+          "expression": ""
+        },
+        {
+          "name": "bind",
+          "line": 14,
+          "caller": "InputHandler.constructor",
+          "expression": ""
+        },
+        {
+          "name": "_emitJump",
+          "line": 25,
+          "caller": "InputHandler._handleKeyDown",
+          "expression": ""
+        },
+        {
+          "name": "preventDefault",
+          "line": 37,
+          "caller": "InputHandler._handleTouch",
+          "expression": ""
+        },
+        {
+          "name": "_emitJump",
+          "line": 38,
+          "caller": "InputHandler._handleTouch",
+          "expression": ""
+        },
+        {
+          "name": "_callback",
+          "line": 44,
+          "caller": "InputHandler._emitJump",
+          "expression": ""
+        },
+        {
+          "name": "removeEventListener",
+          "line": 49,
+          "caller": "InputHandler.dispose",
+          "expression": ""
+        },
+        {
+          "name": "bind",
+          "line": 49,
+          "caller": "InputHandler.dispose",
+          "expression": ""
+        },
+        {
+          "name": "removeEventListener",
+          "line": 50,
+          "caller": "InputHandler.dispose",
+          "expression": ""
+        },
+        {
+          "name": "bind",
+          "line": 50,
+          "caller": "InputHandler.dispose",
+          "expression": ""
+        },
+        {
+          "name": "removeEventListener",
+          "line": 51,
+          "caller": "InputHandler.dispose",
+          "expression": ""
+        },
+        {
+          "name": "bind",
+          "line": 51,
+          "caller": "InputHandler.dispose",
+          "expression": ""
+        }
+      ],
+      "diagnostics": [],
+      "modules": [],
+      "exports": [
+        {
+          "exported": "InputHandler",
+          "local": "InputHandler",
+          "module": "",
+          "line": 5
+        }
+      ],
+      "imports": [
+        {
+          "raw": "import { GamePhase } from '../types/game';",
+          "module": "../types/game",
+          "symbols": [
+            "GamePhase"
+          ],
+          "line": 1
+        }
+      ],
+      "symbols": [
+        {
+          "name": "InputCallback",
+          "qualified_name": "InputCallback",
+          "kind": "type",
+          "start_line": 3,
+          "end_line": 3,
+          "first_body_line": 3,
+          "last_body_line": 3,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "core/input.ts::InputCallback",
+          "docstring": "",
+          "start_byte": 44,
+          "end_byte": 88,
+          "signature": "type InputCallback = (type: 'JUMP') => void;"
+        },
+        {
+          "name": "InputHandler",
+          "qualified_name": "InputHandler",
+          "kind": "class",
+          "start_line": 5,
+          "end_line": 53,
+          "first_body_line": 5,
+          "last_body_line": 53,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 116,
+          "body_end_byte": 1470,
+          "bases": [],
+          "parent": "",
+          "id": "core/input.ts::InputHandler",
+          "docstring": "",
+          "start_byte": 97,
+          "end_byte": 1470,
+          "signature": "class InputHandler"
+        },
+        {
+          "name": "constructor",
+          "qualified_name": "InputHandler.constructor",
+          "kind": "method",
+          "start_line": 10,
+          "end_line": 15,
+          "first_body_line": 10,
+          "last_body_line": 15,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 274,
+          "body_end_byte": 523,
+          "bases": [],
+          "parent": "InputHandler",
+          "id": "core/input.ts::InputHandler.constructor",
+          "docstring": "",
+          "start_byte": 237,
+          "end_byte": 523,
+          "signature": "constructor(callback: InputCallback)"
+        },
+        {
+          "name": "setPhase",
+          "qualified_name": "InputHandler.setPhase",
+          "kind": "method",
+          "start_line": 17,
+          "end_line": 19,
+          "first_body_line": 17,
+          "last_body_line": 19,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 561,
+          "body_end_byte": 591,
+          "bases": [],
+          "parent": "InputHandler",
+          "id": "core/input.ts::InputHandler.setPhase",
+          "docstring": "",
+          "start_byte": 527,
+          "end_byte": 591,
+          "signature": "public setPhase(phase: GamePhase)"
+        },
+        {
+          "name": "_handleKeyDown",
+          "qualified_name": "InputHandler._handleKeyDown",
+          "kind": "method",
+          "start_line": 21,
+          "end_line": 27,
+          "first_body_line": 21,
+          "last_body_line": 27,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 636,
+          "body_end_byte": 803,
+          "bases": [],
+          "parent": "InputHandler",
+          "id": "core/input.ts::InputHandler._handleKeyDown",
+          "docstring": "",
+          "start_byte": 595,
+          "end_byte": 803,
+          "signature": "private _handleKeyDown(e: KeyboardEvent)"
+        },
+        {
+          "name": "_handleKeyUp",
+          "qualified_name": "InputHandler._handleKeyUp",
+          "kind": "method",
+          "start_line": 29,
+          "end_line": 33,
+          "first_body_line": 29,
+          "last_body_line": 33,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 846,
+          "body_end_byte": 946,
+          "bases": [],
+          "parent": "InputHandler",
+          "id": "core/input.ts::InputHandler._handleKeyUp",
+          "docstring": "",
+          "start_byte": 807,
+          "end_byte": 946,
+          "signature": "private _handleKeyUp(e: KeyboardEvent)"
+        },
+        {
+          "name": "_handleTouch",
+          "qualified_name": "InputHandler._handleTouch",
+          "kind": "method",
+          "start_line": 35,
+          "end_line": 39,
+          "first_body_line": 35,
+          "last_body_line": 39,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 986,
+          "body_end_byte": 1089,
+          "bases": [],
+          "parent": "InputHandler",
+          "id": "core/input.ts::InputHandler._handleTouch",
+          "docstring": "",
+          "start_byte": 950,
+          "end_byte": 1089,
+          "signature": "private _handleTouch(e: TouchEvent)"
+        },
+        {
+          "name": "_emitJump",
+          "qualified_name": "InputHandler._emitJump",
+          "kind": "method",
+          "start_line": 41,
+          "end_line": 46,
+          "first_body_line": 41,
+          "last_body_line": 46,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 1113,
+          "body_end_byte": 1220,
+          "bases": [],
+          "parent": "InputHandler",
+          "id": "core/input.ts::InputHandler._emitJump",
+          "docstring": "",
+          "start_byte": 1093,
+          "end_byte": 1220,
+          "signature": "private _emitJump()"
+        },
+        {
+          "name": "dispose",
+          "qualified_name": "InputHandler.dispose",
+          "kind": "method",
+          "start_line": 48,
+          "end_line": 52,
+          "first_body_line": 48,
+          "last_body_line": 52,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 1241,
+          "body_end_byte": 1468,
+          "bases": [],
+          "parent": "InputHandler",
+          "id": "core/input.ts::InputHandler.dispose",
+          "docstring": "",
+          "start_byte": 1224,
+          "end_byte": 1468,
+          "signature": "public dispose()"
+        }
+      ]
+    },
+    {
+      "path": "core/state.ts",
+      "language": "typescript",
+      "parser": "tree_sitter",
+      "has_syntax_error": false,
+      "is_empty": false,
+      "source_hash": "b5575c550d459252e56363dd901d640ed93393fb1a438e61756117a746349fc2",
+      "bound_names": [
+        "GameController"
+      ],
+      "bindings": [
+        {
+          "id": "core/state.ts@0:0",
+          "module": "../types/game",
+          "name": "GamePhase",
+          "local": "GamePhase",
+          "scope": "",
+          "line": 1,
+          "raw": "import { GamePhase, Bird, Pipe, GameSnapshot } from '../types/game';",
+          "kind": "named",
+          "reexport": false,
+          "conditional": false,
+          "uses": [
+            {
+              "owner": "GameController",
+              "expression": "GamePhase",
+              "kind": "reference",
+              "source_text": "GamePhase",
+              "line": 4,
+              "start_byte": 117,
+              "end_byte": 126,
+              "target_file": "types/game.ts",
+              "target_symbol": "types/game.ts::GamePhase",
+              "status": "internal",
+              "binding_target_file": "types/game.ts",
+              "binding_target_symbol": "types/game.ts::GamePhase"
+            },
+            {
+              "owner": "GameController",
+              "expression": "GamePhase.Menu",
+              "kind": "reference",
+              "source_text": "GamePhase.Menu",
+              "line": 4,
+              "start_byte": 129,
+              "end_byte": 143,
+              "target_file": "types/game.ts",
+              "target_symbol": "types/game.ts::GamePhase.Menu",
+              "status": "internal",
+              "binding_target_file": "types/game.ts",
+              "binding_target_symbol": "types/game.ts::GamePhase"
+            },
+            {
+              "owner": "GameController.setPhase",
+              "expression": "GamePhase",
+              "kind": "reference",
+              "source_text": "GamePhase",
+              "line": 18,
+              "start_byte": 488,
+              "end_byte": 497,
+              "target_file": "types/game.ts",
+              "target_symbol": "types/game.ts::GamePhase",
+              "status": "internal",
+              "binding_target_file": "types/game.ts",
+              "binding_target_symbol": "types/game.ts::GamePhase"
+            },
+            {
+              "owner": "GameController.gameOver",
+              "expression": "GamePhase.GameOver",
+              "kind": "reference",
+              "source_text": "GamePhase.GameOver",
+              "line": 39,
+              "start_byte": 1015,
+              "end_byte": 1033,
+              "target_file": "types/game.ts",
+              "target_symbol": "types/game.ts::GamePhase.GameOver",
+              "status": "internal",
+              "binding_target_file": "types/game.ts",
+              "binding_target_symbol": "types/game.ts::GamePhase"
+            },
+            {
+              "owner": "GameController.reset",
+              "expression": "GamePhase.Menu",
+              "kind": "reference",
+              "source_text": "GamePhase.Menu",
+              "line": 43,
+              "start_byte": 1082,
+              "end_byte": 1096,
+              "target_file": "types/game.ts",
+              "target_symbol": "types/game.ts::GamePhase.Menu",
+              "status": "internal",
+              "binding_target_file": "types/game.ts",
+              "binding_target_symbol": "types/game.ts::GamePhase"
+            }
+          ],
+          "status": "internal",
+          "reason": "module_and_binding_resolved",
+          "target_file": "types/game.ts",
+          "target_symbol": "types/game.ts::GamePhase",
+          "bound_module": "",
+          "module_scope": "",
+          "start_byte": 0
+        },
+        {
+          "id": "core/state.ts@0:1",
+          "module": "../types/game",
+          "name": "Bird",
+          "local": "Bird",
+          "scope": "",
+          "line": 1,
+          "raw": "import { GamePhase, Bird, Pipe, GameSnapshot } from '../types/game';",
+          "kind": "named",
+          "reexport": false,
+          "conditional": false,
+          "uses": [
+            {
+              "owner": "GameController",
+              "expression": "Bird",
+              "kind": "reference",
+              "source_text": "Bird",
+              "line": 6,
+              "start_byte": 190,
+              "end_byte": 194,
+              "target_file": "types/game.ts",
+              "target_symbol": "types/game.ts::Bird",
+              "status": "internal",
+              "binding_target_file": "types/game.ts",
+              "binding_target_symbol": "types/game.ts::Bird"
+            },
+            {
+              "owner": "GameController.updateBird",
+              "expression": "Bird",
+              "kind": "reference",
+              "source_text": "Bird",
+              "line": 22,
+              "start_byte": 576,
+              "end_byte": 580,
+              "target_file": "types/game.ts",
+              "target_symbol": "types/game.ts::Bird",
+              "status": "internal",
+              "binding_target_file": "types/game.ts",
+              "binding_target_symbol": "types/game.ts::Bird"
+            }
+          ],
+          "status": "internal",
+          "reason": "module_and_binding_resolved",
+          "target_file": "types/game.ts",
+          "target_symbol": "types/game.ts::Bird",
+          "bound_module": "",
+          "module_scope": "",
+          "start_byte": 0
+        },
+        {
+          "id": "core/state.ts@0:2",
+          "module": "../types/game",
+          "name": "Pipe",
+          "local": "Pipe",
+          "scope": "",
+          "line": 1,
+          "raw": "import { GamePhase, Bird, Pipe, GameSnapshot } from '../types/game';",
+          "kind": "named",
+          "reexport": false,
+          "conditional": false,
+          "uses": [
+            {
+              "owner": "GameController",
+              "expression": "Pipe",
+              "kind": "reference",
+              "source_text": "Pipe",
+              "line": 7,
+              "start_byte": 259,
+              "end_byte": 263,
+              "target_file": "types/game.ts",
+              "target_symbol": "types/game.ts::Pipe",
+              "status": "internal",
+              "binding_target_file": "types/game.ts",
+              "binding_target_symbol": "types/game.ts::Pipe"
+            },
+            {
+              "owner": "GameController.setPipes",
+              "expression": "Pipe",
+              "kind": "reference",
+              "source_text": "Pipe",
+              "line": 26,
+              "start_byte": 670,
+              "end_byte": 674,
+              "target_file": "types/game.ts",
+              "target_symbol": "types/game.ts::Pipe",
+              "status": "internal",
+              "binding_target_file": "types/game.ts",
+              "binding_target_symbol": "types/game.ts::Pipe"
+            }
+          ],
+          "status": "internal",
+          "reason": "module_and_binding_resolved",
+          "target_file": "types/game.ts",
+          "target_symbol": "types/game.ts::Pipe",
+          "bound_module": "",
+          "module_scope": "",
+          "start_byte": 0
+        },
+        {
+          "id": "core/state.ts@0:3",
+          "module": "../types/game",
+          "name": "GameSnapshot",
+          "local": "GameSnapshot",
+          "scope": "",
+          "line": 1,
+          "raw": "import { GamePhase, Bird, Pipe, GameSnapshot } from '../types/game';",
+          "kind": "named",
+          "reexport": false,
+          "conditional": false,
+          "uses": [
+            {
+              "owner": "GameController.getSnapshot",
+              "expression": "GameSnapshot",
+              "kind": "reference",
+              "source_text": "GameSnapshot",
+              "line": 9,
+              "start_byte": 297,
+              "end_byte": 309,
+              "target_file": "types/game.ts",
+              "target_symbol": "types/game.ts::GameSnapshot",
+              "status": "internal",
+              "binding_target_file": "types/game.ts",
+              "binding_target_symbol": "types/game.ts::GameSnapshot"
+            }
+          ],
+          "status": "internal",
+          "reason": "module_and_binding_resolved",
+          "target_file": "types/game.ts",
+          "target_symbol": "types/game.ts::GameSnapshot",
+          "bound_module": "",
+          "module_scope": "",
+          "start_byte": 0
+        }
+      ],
+      "calls": [
+        {
+          "name": "map",
+          "line": 14,
+          "caller": "GameController.getSnapshot",
+          "expression": ""
+        },
+        {
+          "name": "findIndex",
+          "line": 31,
+          "caller": "GameController.incrementScore",
+          "expression": ""
+        }
+      ],
+      "diagnostics": [],
+      "modules": [],
+      "exports": [
+        {
+          "exported": "GameController",
+          "local": "GameController",
+          "module": "",
+          "line": 3
+        }
+      ],
+      "imports": [
+        {
+          "raw": "import { GamePhase, Bird, Pipe, GameSnapshot } from '../types/game';",
+          "module": "../types/game",
+          "symbols": [
+            "GamePhase",
+            "Bird",
+            "Pipe",
+            "GameSnapshot"
+          ],
+          "line": 1
+        }
+      ],
+      "symbols": [
+        {
+          "name": "GameController",
+          "qualified_name": "GameController",
+          "kind": "class",
+          "start_line": 3,
+          "end_line": 48,
+          "first_body_line": 3,
+          "last_body_line": 48,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 98,
+          "body_end_byte": 1205,
+          "bases": [],
+          "parent": "",
+          "id": "core/state.ts::GameController",
+          "docstring": "",
+          "start_byte": 77,
+          "end_byte": 1205,
+          "signature": "class GameController"
+        },
+        {
+          "name": "getSnapshot",
+          "qualified_name": "GameController.getSnapshot",
+          "kind": "method",
+          "start_line": 9,
+          "end_line": 16,
+          "first_body_line": 9,
+          "last_body_line": 16,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 310,
+          "body_end_byte": 461,
+          "bases": [],
+          "parent": "GameController",
+          "id": "core/state.ts::GameController.getSnapshot",
+          "docstring": "",
+          "start_byte": 275,
+          "end_byte": 461,
+          "signature": "public getSnapshot(): GameSnapshot"
+        },
+        {
+          "name": "setPhase",
+          "qualified_name": "GameController.setPhase",
+          "kind": "method",
+          "start_line": 18,
+          "end_line": 20,
+          "first_body_line": 18,
+          "last_body_line": 20,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 505,
+          "body_end_byte": 534,
+          "bases": [],
+          "parent": "GameController",
+          "id": "core/state.ts::GameController.setPhase",
+          "docstring": "",
+          "start_byte": 465,
+          "end_byte": 534,
+          "signature": "public setPhase(phase: GamePhase): void"
+        },
+        {
+          "name": "updateBird",
+          "qualified_name": "GameController.updateBird",
+          "kind": "method",
+          "start_line": 22,
+          "end_line": 24,
+          "first_body_line": 22,
+          "last_body_line": 24,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 589,
+          "body_end_byte": 643,
+          "bases": [],
+          "parent": "GameController",
+          "id": "core/state.ts::GameController.updateBird",
+          "docstring": "",
+          "start_byte": 538,
+          "end_byte": 643,
+          "signature": "public updateBird(birdUpdate: Partial<Bird>): void"
+        },
+        {
+          "name": "setPipes",
+          "qualified_name": "GameController.setPipes",
+          "kind": "method",
+          "start_line": 26,
+          "end_line": 28,
+          "first_body_line": 26,
+          "last_body_line": 28,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 684,
+          "body_end_byte": 713,
+          "bases": [],
+          "parent": "GameController",
+          "id": "core/state.ts::GameController.setPipes",
+          "docstring": "",
+          "start_byte": 647,
+          "end_byte": 713,
+          "signature": "public setPipes(pipes: Pipe[]): void"
+        },
+        {
+          "name": "incrementScore",
+          "qualified_name": "GameController.incrementScore",
+          "kind": "method",
+          "start_line": 30,
+          "end_line": 36,
+          "first_body_line": 30,
+          "last_body_line": 36,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 761,
+          "body_end_byte": 968,
+          "bases": [],
+          "parent": "GameController",
+          "id": "core/state.ts::GameController.incrementScore",
+          "docstring": "",
+          "start_byte": 717,
+          "end_byte": 968,
+          "signature": "public incrementScore(pipeId: string): void"
+        },
+        {
+          "name": "gameOver",
+          "qualified_name": "GameController.gameOver",
+          "kind": "method",
+          "start_line": 38,
+          "end_line": 40,
+          "first_body_line": 38,
+          "last_body_line": 40,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 996,
+          "body_end_byte": 1038,
+          "bases": [],
+          "parent": "GameController",
+          "id": "core/state.ts::GameController.gameOver",
+          "docstring": "",
+          "start_byte": 972,
+          "end_byte": 1038,
+          "signature": "public gameOver(): void"
+        },
+        {
+          "name": "reset",
+          "qualified_name": "GameController.reset",
+          "kind": "method",
+          "start_line": 42,
+          "end_line": 47,
+          "first_body_line": 42,
+          "last_body_line": 47,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 1063,
+          "body_end_byte": 1203,
+          "bases": [],
+          "parent": "GameController",
+          "id": "core/state.ts::GameController.reset",
+          "docstring": "",
+          "start_byte": 1042,
+          "end_byte": 1203,
+          "signature": "public reset(): void"
+        }
+      ]
+    },
+    {
+      "path": "engine/physics.ts",
+      "language": "typescript",
+      "parser": "tree_sitter",
+      "has_syntax_error": false,
+      "is_empty": false,
+      "source_hash": "ccdbb8806160edc64b212c406c64195fe3d626e67fd2daa60c3c5ee3429b51ee",
+      "bound_names": [
+        "PhysicsController"
+      ],
+      "bindings": [
+        {
+          "id": "engine/physics.ts@0:0",
+          "module": "../types/game",
+          "name": "Bird",
+          "local": "Bird",
+          "scope": "",
+          "line": 1,
+          "raw": "import { Bird, Pipe } from '../types/game';",
+          "kind": "named",
+          "reexport": false,
+          "conditional": false,
+          "uses": [
+            {
+              "owner": "PhysicsController.update",
+              "expression": "Bird",
+              "kind": "reference",
+              "source_text": "Bird",
+              "line": 9,
+              "start_byte": 268,
+              "end_byte": 272,
+              "target_file": "types/game.ts",
+              "target_symbol": "types/game.ts::Bird",
+              "status": "internal",
+              "binding_target_file": "types/game.ts",
+              "binding_target_symbol": "types/game.ts::Bird"
+            },
+            {
+              "owner": "PhysicsController.update",
+              "expression": "Bird",
+              "kind": "reference",
+              "source_text": "Bird",
+              "line": 9,
+              "start_byte": 294,
+              "end_byte": 298,
+              "target_file": "types/game.ts",
+              "target_symbol": "types/game.ts::Bird",
+              "status": "internal",
+              "binding_target_file": "types/game.ts",
+              "binding_target_symbol": "types/game.ts::Bird"
+            },
+            {
+              "owner": "PhysicsController.jump",
+              "expression": "Bird",
+              "kind": "reference",
+              "source_text": "Bird",
+              "line": 21,
+              "start_byte": 531,
+              "end_byte": 535,
+              "target_file": "types/game.ts",
+              "target_symbol": "types/game.ts::Bird",
+              "status": "internal",
+              "binding_target_file": "types/game.ts",
+              "binding_target_symbol": "types/game.ts::Bird"
+            },
+            {
+              "owner": "PhysicsController.jump",
+              "expression": "Bird",
+              "kind": "reference",
+              "source_text": "Bird",
+              "line": 21,
+              "start_byte": 538,
+              "end_byte": 542,
+              "target_file": "types/game.ts",
+              "target_symbol": "types/game.ts::Bird",
+              "status": "internal",
+              "binding_target_file": "types/game.ts",
+              "binding_target_symbol": "types/game.ts::Bird"
+            },
+            {
+              "owner": "PhysicsController.checkCollision",
+              "expression": "Bird",
+              "kind": "reference",
+              "source_text": "Bird",
+              "line": 28,
+              "start_byte": 646,
+              "end_byte": 650,
+              "target_file": "types/game.ts",
+              "target_symbol": "types/game.ts::Bird",
+              "status": "internal",
+              "binding_target_file": "types/game.ts",
+              "binding_target_symbol": "types/game.ts::Bird"
+            }
+          ],
+          "status": "internal",
+          "reason": "module_and_binding_resolved",
+          "target_file": "types/game.ts",
+          "target_symbol": "types/game.ts::Bird",
+          "bound_module": "",
+          "module_scope": "",
+          "start_byte": 0
+        },
+        {
+          "id": "engine/physics.ts@0:1",
+          "module": "../types/game",
+          "name": "Pipe",
+          "local": "Pipe",
+          "scope": "",
+          "line": 1,
+          "raw": "import { Bird, Pipe } from '../types/game';",
+          "kind": "named",
+          "reexport": false,
+          "conditional": false,
+          "uses": [
+            {
+              "owner": "PhysicsController.checkCollision",
+              "expression": "Pipe",
+              "kind": "reference",
+              "source_text": "Pipe",
+              "line": 28,
+              "start_byte": 668,
+              "end_byte": 672,
+              "target_file": "types/game.ts",
+              "target_symbol": "types/game.ts::Pipe",
+              "status": "internal",
+              "binding_target_file": "types/game.ts",
+              "binding_target_symbol": "types/game.ts::Pipe"
+            }
+          ],
+          "status": "internal",
+          "reason": "module_and_binding_resolved",
+          "target_file": "types/game.ts",
+          "target_symbol": "types/game.ts::Pipe",
+          "bound_module": "",
+          "module_scope": "",
+          "start_byte": 0
+        }
+      ],
+      "calls": [],
+      "diagnostics": [],
+      "modules": [],
+      "exports": [
+        {
+          "exported": "PhysicsController",
+          "local": "PhysicsController",
+          "module": "",
+          "line": 3
+        }
+      ],
+      "imports": [
+        {
+          "raw": "import { Bird, Pipe } from '../types/game';",
+          "module": "../types/game",
+          "symbols": [
+            "Bird",
+            "Pipe"
+          ],
+          "line": 1
+        }
+      ],
+      "symbols": [
+        {
+          "name": "PhysicsController",
+          "qualified_name": "PhysicsController",
+          "kind": "class",
+          "start_line": 3,
+          "end_line": 53,
+          "first_body_line": 3,
+          "last_body_line": 53,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 76,
+          "body_end_byte": 1442,
+          "bases": [],
+          "parent": "",
+          "id": "engine/physics.ts::PhysicsController",
+          "docstring": "",
+          "start_byte": 52,
+          "end_byte": 1442,
+          "signature": "class PhysicsController"
+        },
+        {
+          "name": "update",
+          "qualified_name": "PhysicsController.update",
+          "kind": "method",
+          "start_line": 9,
+          "end_line": 19,
+          "first_body_line": 9,
+          "last_body_line": 19,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 299,
+          "body_end_byte": 509,
+          "bases": [],
+          "parent": "PhysicsController",
+          "id": "engine/physics.ts::PhysicsController.update",
+          "docstring": "",
+          "start_byte": 248,
+          "end_byte": 509,
+          "signature": "public update(bird: Bird, deltaTime: number): Bird"
+        },
+        {
+          "name": "jump",
+          "qualified_name": "PhysicsController.jump",
+          "kind": "method",
+          "start_line": 21,
+          "end_line": 26,
+          "first_body_line": 21,
+          "last_body_line": 26,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 543,
+          "body_end_byte": 614,
+          "bases": [],
+          "parent": "PhysicsController",
+          "id": "engine/physics.ts::PhysicsController.jump",
+          "docstring": "",
+          "start_byte": 513,
+          "end_byte": 614,
+          "signature": "public jump(bird: Bird): Bird"
+        },
+        {
+          "name": "checkCollision",
+          "qualified_name": "PhysicsController.checkCollision",
+          "kind": "method",
+          "start_line": 28,
+          "end_line": 52,
+          "first_body_line": 28,
+          "last_body_line": 52,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 685,
+          "body_end_byte": 1440,
+          "bases": [],
+          "parent": "PhysicsController",
+          "id": "engine/physics.ts::PhysicsController.checkCollision",
+          "docstring": "",
+          "start_byte": 618,
+          "end_byte": 1440,
+          "signature": "public checkCollision(bird: Bird, pipes: readonly Pipe[]): boolean"
+        }
+      ]
+    },
+    {
+      "path": "engine/renderer.ts",
+      "language": "typescript",
+      "parser": "tree_sitter",
+      "has_syntax_error": false,
+      "is_empty": false,
+      "source_hash": "aca254cad90a3b2e97786c8b3ae283f7bfe702574daebb85bba578b50753d4b0",
+      "bound_names": [
+        "Renderer"
+      ],
+      "bindings": [
+        {
+          "id": "engine/renderer.ts@0:0",
+          "module": "../types/game",
+          "name": "GameSnapshot",
+          "local": "GameSnapshot",
+          "scope": "",
+          "line": 1,
+          "raw": "import { GameSnapshot, Bird, Pipe, GamePhase } from '../types/game';",
+          "kind": "named",
+          "reexport": false,
+          "conditional": false,
+          "uses": [
+            {
+              "owner": "Renderer.render",
+              "expression": "GameSnapshot",
+              "kind": "reference",
+              "source_text": "GameSnapshot",
+              "line": 14,
+              "start_byte": 366,
+              "end_byte": 378,
+              "target_file": "types/game.ts",
+              "target_symbol": "types/game.ts::GameSnapshot",
+              "status": "internal",
+              "binding_target_file": "types/game.ts",
+              "binding_target_symbol": "types/game.ts::GameSnapshot"
+            }
+          ],
+          "status": "internal",
+          "reason": "module_and_binding_resolved",
+          "target_file": "types/game.ts",
+          "target_symbol": "types/game.ts::GameSnapshot",
+          "bound_module": "",
+          "module_scope": "",
+          "start_byte": 0
+        },
+        {
+          "id": "engine/renderer.ts@0:1",
+          "module": "../types/game",
+          "name": "Bird",
+          "local": "Bird",
+          "scope": "",
+          "line": 1,
+          "raw": "import { GameSnapshot, Bird, Pipe, GamePhase } from '../types/game';",
+          "kind": "named",
+          "reexport": false,
+          "conditional": false,
+          "uses": [
+            {
+              "owner": "Renderer.drawBird",
+              "expression": "Bird",
+              "kind": "reference",
+              "source_text": "Bird",
+              "line": 42,
+              "start_byte": 1372,
+              "end_byte": 1376,
+              "target_file": "types/game.ts",
+              "target_symbol": "types/game.ts::Bird",
+              "status": "internal",
+              "binding_target_file": "types/game.ts",
+              "binding_target_symbol": "types/game.ts::Bird"
+            }
+          ],
+          "status": "internal",
+          "reason": "module_and_binding_resolved",
+          "target_file": "types/game.ts",
+          "target_symbol": "types/game.ts::Bird",
+          "bound_module": "",
+          "module_scope": "",
+          "start_byte": 0
+        },
+        {
+          "id": "engine/renderer.ts@0:2",
+          "module": "../types/game",
+          "name": "Pipe",
+          "local": "Pipe",
+          "scope": "",
+          "line": 1,
+          "raw": "import { GameSnapshot, Bird, Pipe, GamePhase } from '../types/game';",
+          "kind": "named",
+          "reexport": false,
+          "conditional": false,
+          "uses": [
+            {
+              "owner": "Renderer.drawPipes",
+              "expression": "Pipe",
+              "kind": "reference",
+              "source_text": "Pipe",
+              "line": 33,
+              "start_byte": 1049,
+              "end_byte": 1053,
+              "target_file": "types/game.ts",
+              "target_symbol": "types/game.ts::Pipe",
+              "status": "internal",
+              "binding_target_file": "types/game.ts",
+              "binding_target_symbol": "types/game.ts::Pipe"
+            }
+          ],
+          "status": "internal",
+          "reason": "module_and_binding_resolved",
+          "target_file": "types/game.ts",
+          "target_symbol": "types/game.ts::Pipe",
+          "bound_module": "",
+          "module_scope": "",
+          "start_byte": 0
+        },
+        {
+          "id": "engine/renderer.ts@0:3",
+          "module": "../types/game",
+          "name": "GamePhase",
+          "local": "GamePhase",
+          "scope": "",
+          "line": 1,
+          "raw": "import { GameSnapshot, Bird, Pipe, GamePhase } from '../types/game';",
+          "kind": "named",
+          "reexport": false,
+          "conditional": false,
+          "uses": [
+            {
+              "owner": "Renderer.render",
+              "expression": "GamePhase.Menu",
+              "kind": "reference",
+              "source_text": "GamePhase.Menu",
+              "line": 20,
+              "start_byte": 569,
+              "end_byte": 583,
+              "target_file": "types/game.ts",
+              "target_symbol": "types/game.ts::GamePhase.Menu",
+              "status": "internal",
+              "binding_target_file": "types/game.ts",
+              "binding_target_symbol": "types/game.ts::GamePhase"
+            },
+            {
+              "owner": "Renderer.render",
+              "expression": "GamePhase.GameOver",
+              "kind": "reference",
+              "source_text": "GamePhase.GameOver",
+              "line": 21,
+              "start_byte": 676,
+              "end_byte": 694,
+              "target_file": "types/game.ts",
+              "target_symbol": "types/game.ts::GamePhase.GameOver",
+              "status": "internal",
+              "binding_target_file": "types/game.ts",
+              "binding_target_symbol": "types/game.ts::GamePhase"
+            }
+          ],
+          "status": "internal",
+          "reason": "module_and_binding_resolved",
+          "target_file": "types/game.ts",
+          "target_symbol": "types/game.ts::GamePhase",
+          "bound_module": "",
+          "module_scope": "",
+          "start_byte": 0
+        }
+      ],
+      "calls": [
+        {
+          "name": "getContext",
+          "line": 9,
+          "caller": "Renderer.constructor",
+          "expression": ""
+        },
+        {
+          "name": "clearCanvas",
+          "line": 15,
+          "caller": "Renderer.render",
+          "expression": ""
+        },
+        {
+          "name": "drawBackground",
+          "line": 16,
+          "caller": "Renderer.render",
+          "expression": ""
+        },
+        {
+          "name": "drawPipes",
+          "line": 17,
+          "caller": "Renderer.render",
+          "expression": ""
+        },
+        {
+          "name": "drawBird",
+          "line": 18,
+          "caller": "Renderer.render",
+          "expression": ""
+        },
+        {
+          "name": "drawUI",
+          "line": 19,
+          "caller": "Renderer.render",
+          "expression": ""
+        },
+        {
+          "name": "drawOverlay",
+          "line": 20,
+          "caller": "Renderer.render",
+          "expression": ""
+        },
+        {
+          "name": "drawOverlay",
+          "line": 21,
+          "caller": "Renderer.render",
+          "expression": ""
+        },
+        {
+          "name": "clearRect",
+          "line": 25,
+          "caller": "Renderer.clearCanvas",
+          "expression": ""
+        },
+        {
+          "name": "fillRect",
+          "line": 30,
+          "caller": "Renderer.drawBackground",
+          "expression": ""
+        },
+        {
+          "name": "forEach",
+          "line": 35,
+          "caller": "Renderer.drawPipes",
+          "expression": ""
+        },
+        {
+          "name": "fillRect",
+          "line": 37,
+          "caller": "Renderer.drawPipes",
+          "expression": ""
+        },
+        {
+          "name": "fillRect",
+          "line": 38,
+          "caller": "Renderer.drawPipes",
+          "expression": ""
+        },
+        {
+          "name": "save",
+          "line": 43,
+          "caller": "Renderer.drawBird",
+          "expression": ""
+        },
+        {
+          "name": "translate",
+          "line": 44,
+          "caller": "Renderer.drawBird",
+          "expression": ""
+        },
+        {
+          "name": "rotate",
+          "line": 45,
+          "caller": "Renderer.drawBird",
+          "expression": ""
+        },
+        {
+          "name": "fillRect",
+          "line": 48,
+          "caller": "Renderer.drawBird",
+          "expression": ""
+        },
+        {
+          "name": "restore",
+          "line": 50,
+          "caller": "Renderer.drawBird",
+          "expression": ""
+        },
+        {
+          "name": "fillText",
+          "line": 56,
+          "caller": "Renderer.drawUI",
+          "expression": ""
+        },
+        {
+          "name": "fillRect",
+          "line": 61,
+          "caller": "Renderer.drawOverlay",
+          "expression": ""
+        },
+        {
+          "name": "fillText",
+          "line": 65,
+          "caller": "Renderer.drawOverlay",
+          "expression": ""
+        },
+        {
+          "name": "fillText",
+          "line": 67,
+          "caller": "Renderer.drawOverlay",
+          "expression": ""
+        }
+      ],
+      "diagnostics": [],
+      "modules": [],
+      "exports": [
+        {
+          "exported": "Renderer",
+          "local": "Renderer",
+          "module": "",
+          "line": 3
+        }
+      ],
+      "imports": [
+        {
+          "raw": "import { GameSnapshot, Bird, Pipe, GamePhase } from '../types/game';",
+          "module": "../types/game",
+          "symbols": [
+            "GameSnapshot",
+            "Bird",
+            "Pipe",
+            "GamePhase"
+          ],
+          "line": 1
+        }
+      ],
+      "symbols": [
+        {
+          "name": "Renderer",
+          "qualified_name": "Renderer",
+          "kind": "class",
+          "start_line": 3,
+          "end_line": 70,
+          "first_body_line": 3,
+          "last_body_line": 70,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 92,
+          "body_end_byte": 2296,
+          "bases": [],
+          "parent": "",
+          "id": "engine/renderer.ts::Renderer",
+          "docstring": "",
+          "start_byte": 77,
+          "end_byte": 2296,
+          "signature": "class Renderer"
+        },
+        {
+          "name": "constructor",
+          "qualified_name": "Renderer.constructor",
+          "kind": "method",
+          "start_line": 8,
+          "end_line": 12,
+          "first_body_line": 8,
+          "last_body_line": 12,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 228,
+          "body_end_byte": 338,
+          "bases": [],
+          "parent": "Renderer",
+          "id": "engine/renderer.ts::Renderer.constructor",
+          "docstring": "",
+          "start_byte": 189,
+          "end_byte": 338,
+          "signature": "constructor(canvas: HTMLCanvasElement)"
+        },
+        {
+          "name": "render",
+          "qualified_name": "Renderer.render",
+          "kind": "method",
+          "start_line": 14,
+          "end_line": 22,
+          "first_body_line": 14,
+          "last_body_line": 22,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 386,
+          "body_end_byte": 789,
+          "bases": [],
+          "parent": "Renderer",
+          "id": "engine/renderer.ts::Renderer.render",
+          "docstring": "",
+          "start_byte": 342,
+          "end_byte": 789,
+          "signature": "public render(snapshot: GameSnapshot): void"
+        },
+        {
+          "name": "clearCanvas",
+          "qualified_name": "Renderer.clearCanvas",
+          "kind": "method",
+          "start_line": 24,
+          "end_line": 26,
+          "first_body_line": 24,
+          "last_body_line": 26,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 821,
+          "body_end_byte": 881,
+          "bases": [],
+          "parent": "Renderer",
+          "id": "engine/renderer.ts::Renderer.clearCanvas",
+          "docstring": "",
+          "start_byte": 793,
+          "end_byte": 881,
+          "signature": "private clearCanvas(): void"
+        },
+        {
+          "name": "drawBackground",
+          "qualified_name": "Renderer.drawBackground",
+          "kind": "method",
+          "start_line": 28,
+          "end_line": 31,
+          "first_body_line": 28,
+          "last_body_line": 31,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 916,
+          "body_end_byte": 1011,
+          "bases": [],
+          "parent": "Renderer",
+          "id": "engine/renderer.ts::Renderer.drawBackground",
+          "docstring": "",
+          "start_byte": 885,
+          "end_byte": 1011,
+          "signature": "private drawBackground(): void"
+        },
+        {
+          "name": "drawPipes",
+          "qualified_name": "Renderer.drawPipes",
+          "kind": "method",
+          "start_line": 33,
+          "end_line": 40,
+          "first_body_line": 33,
+          "last_body_line": 40,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 1063,
+          "body_end_byte": 1345,
+          "bases": [],
+          "parent": "Renderer",
+          "id": "engine/renderer.ts::Renderer.drawPipes",
+          "docstring": "",
+          "start_byte": 1015,
+          "end_byte": 1345,
+          "signature": "private drawPipes(pipes: readonly Pipe[]): void"
+        },
+        {
+          "name": "drawBird",
+          "qualified_name": "Renderer.drawBird",
+          "kind": "method",
+          "start_line": 42,
+          "end_line": 51,
+          "first_body_line": 42,
+          "last_body_line": 51,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 1384,
+          "body_end_byte": 1631,
+          "bases": [],
+          "parent": "Renderer",
+          "id": "engine/renderer.ts::Renderer.drawBird",
+          "docstring": "",
+          "start_byte": 1349,
+          "end_byte": 1631,
+          "signature": "private drawBird(bird: Bird): void"
+        },
+        {
+          "name": "drawUI",
+          "qualified_name": "Renderer.drawUI",
+          "kind": "method",
+          "start_line": 53,
+          "end_line": 57,
+          "first_body_line": 53,
+          "last_body_line": 57,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 1671,
+          "body_end_byte": 1811,
+          "bases": [],
+          "parent": "Renderer",
+          "id": "engine/renderer.ts::Renderer.drawUI",
+          "docstring": "",
+          "start_byte": 1635,
+          "end_byte": 1811,
+          "signature": "private drawUI(score: number): void"
+        },
+        {
+          "name": "drawOverlay",
+          "qualified_name": "Renderer.drawOverlay",
+          "kind": "method",
+          "start_line": 59,
+          "end_line": 69,
+          "first_body_line": 59,
+          "last_body_line": 69,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 1874,
+          "body_end_byte": 2294,
+          "bases": [],
+          "parent": "Renderer",
+          "id": "engine/renderer.ts::Renderer.drawOverlay",
+          "docstring": "",
+          "start_byte": 1815,
+          "end_byte": 2294,
+          "signature": "private drawOverlay(title: string, subtitle: string): void"
+        }
+      ]
+    },
+    {
+      "path": "tests/integration.test.ts",
+      "language": "typescript",
+      "parser": "tree_sitter",
+      "has_syntax_error": false,
+      "is_empty": false,
+      "source_hash": "436dd64ac3a74bc0d48f9c63dcedc19615e26422f4328c4f87845a373b7d3613",
+      "bound_names": [
+        "AssetRegistry",
+        "EngineManager",
+        "EngineManager Integration Tests"
+      ],
+      "bindings": [
+        {
+          "id": "tests/integration.test.ts@0:0",
+          "module": "vitest",
+          "name": "describe",
+          "local": "describe",
+          "scope": "",
+          "line": 1,
+          "raw": "import { describe, it, expect, beforeEach, vi } from 'vitest';",
+          "kind": "named",
+          "reexport": false,
+          "conditional": false,
+          "uses": [
+            {
+              "owner": "EngineManager Integration Tests",
+              "expression": "describe",
+              "kind": "call",
+              "source_text": "describe",
+              "line": 41,
+              "start_byte": 1127,
+              "end_byte": 1135,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "external",
+              "binding_target_file": null,
+              "binding_target_symbol": null
+            }
+          ],
+          "status": "external",
+          "reason": "no_matching_local_package",
+          "target_file": null,
+          "target_symbol": null,
+          "bound_module": "",
+          "module_scope": "",
+          "start_byte": 0
+        },
+        {
+          "id": "tests/integration.test.ts@0:1",
+          "module": "vitest",
+          "name": "it",
+          "local": "it",
+          "scope": "",
+          "line": 1,
+          "raw": "import { describe, it, expect, beforeEach, vi } from 'vitest';",
+          "kind": "named",
+          "reexport": false,
+          "conditional": false,
+          "uses": [
+            {
+              "owner": "testGameOverTransition",
+              "expression": "it",
+              "kind": "call",
+              "source_text": "it",
+              "line": 53,
+              "start_byte": 1465,
+              "end_byte": 1467,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "external",
+              "binding_target_file": null,
+              "binding_target_symbol": null
+            },
+            {
+              "owner": "testScoreIncrementOnPipePass",
+              "expression": "it",
+              "kind": "call",
+              "source_text": "it",
+              "line": 62,
+              "start_byte": 1818,
+              "end_byte": 1820,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "external",
+              "binding_target_file": null,
+              "binding_target_symbol": null
+            },
+            {
+              "owner": "testAssetFailureState",
+              "expression": "it",
+              "kind": "call",
+              "source_text": "it",
+              "line": 73,
+              "start_byte": 2211,
+              "end_byte": 2213,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "external",
+              "binding_target_file": null,
+              "binding_target_symbol": null
+            }
+          ],
+          "status": "external",
+          "reason": "no_matching_local_package",
+          "target_file": null,
+          "target_symbol": null,
+          "bound_module": "",
+          "module_scope": "",
+          "start_byte": 0
+        },
+        {
+          "id": "tests/integration.test.ts@0:2",
+          "module": "vitest",
+          "name": "expect",
+          "local": "expect",
+          "scope": "",
+          "line": 1,
+          "raw": "import { describe, it, expect, beforeEach, vi } from 'vitest';",
+          "kind": "named",
+          "reexport": false,
+          "conditional": false,
+          "uses": [
+            {
+              "owner": "testGameOverTransition",
+              "expression": "expect",
+              "kind": "call",
+              "source_text": "expect",
+              "line": 59,
+              "start_byte": 1744,
+              "end_byte": 1750,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "external",
+              "binding_target_file": null,
+              "binding_target_symbol": null
+            },
+            {
+              "owner": "testScoreIncrementOnPipePass",
+              "expression": "expect",
+              "kind": "call",
+              "source_text": "expect",
+              "line": 67,
+              "start_byte": 2036,
+              "end_byte": 2042,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "external",
+              "binding_target_file": null,
+              "binding_target_symbol": null
+            },
+            {
+              "owner": "testScoreIncrementOnPipePass",
+              "expression": "expect",
+              "kind": "call",
+              "source_text": "expect",
+              "line": 70,
+              "start_byte": 2127,
+              "end_byte": 2133,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "external",
+              "binding_target_file": null,
+              "binding_target_symbol": null
+            },
+            {
+              "owner": "testAssetFailureState",
+              "expression": "expect",
+              "kind": "call",
+              "source_text": "expect",
+              "line": 74,
+              "start_byte": 2263,
+              "end_byte": 2269,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "external",
+              "binding_target_file": null,
+              "binding_target_symbol": null
+            }
+          ],
+          "status": "external",
+          "reason": "no_matching_local_package",
+          "target_file": null,
+          "target_symbol": null,
+          "bound_module": "",
+          "module_scope": "",
+          "start_byte": 0
+        },
+        {
+          "id": "tests/integration.test.ts@0:3",
+          "module": "vitest",
+          "name": "beforeEach",
+          "local": "beforeEach",
+          "scope": "",
+          "line": 1,
+          "raw": "import { describe, it, expect, beforeEach, vi } from 'vitest';",
+          "kind": "named",
+          "reexport": false,
+          "conditional": false,
+          "uses": [
+            {
+              "owner": "EngineManager Integration Tests",
+              "expression": "beforeEach",
+              "kind": "call",
+              "source_text": "beforeEach",
+              "line": 46,
+              "start_byte": 1279,
+              "end_byte": 1289,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "external",
+              "binding_target_file": null,
+              "binding_target_symbol": null
+            }
+          ],
+          "status": "external",
+          "reason": "no_matching_local_package",
+          "target_file": null,
+          "target_symbol": null,
+          "bound_module": "",
+          "module_scope": "",
+          "start_byte": 0
+        },
+        {
+          "id": "tests/integration.test.ts@0:4",
+          "module": "vitest",
+          "name": "vi",
+          "local": "vi",
+          "scope": "",
+          "line": 1,
+          "raw": "import { describe, it, expect, beforeEach, vi } from 'vitest';",
+          "kind": "named",
+          "reexport": false,
+          "conditional": false,
+          "uses": [],
+          "status": "external",
+          "reason": "no_matching_local_package",
+          "target_file": null,
+          "target_symbol": null,
+          "bound_module": "",
+          "module_scope": "",
+          "start_byte": 0
+        },
+        {
+          "id": "tests/integration.test.ts@63:5",
+          "module": "../core/state",
+          "name": "GameController",
+          "local": "GameController",
+          "scope": "",
+          "line": 2,
+          "raw": "import { GameController } from '../core/state';",
+          "kind": "named",
+          "reexport": false,
+          "conditional": false,
+          "uses": [
+            {
+              "owner": "EngineManager",
+              "expression": "GameController",
+              "kind": "reference",
+              "source_text": "GameController",
+              "line": 16,
+              "start_byte": 511,
+              "end_byte": 525,
+              "target_file": "core/state.ts",
+              "target_symbol": "core/state.ts::GameController",
+              "status": "internal",
+              "binding_target_file": "core/state.ts",
+              "binding_target_symbol": "core/state.ts::GameController"
+            },
+            {
+              "owner": "EngineManager.constructor",
+              "expression": "GameController",
+              "kind": "reference",
+              "source_text": "GameController",
+              "line": 19,
+              "start_byte": 592,
+              "end_byte": 606,
+              "target_file": "core/state.ts",
+              "target_symbol": "core/state.ts::GameController",
+              "status": "internal",
+              "binding_target_file": "core/state.ts",
+              "binding_target_symbol": "core/state.ts::GameController"
+            },
+            {
+              "owner": "EngineManager Integration Tests",
+              "expression": "GameController",
+              "kind": "reference",
+              "source_text": "GameController",
+              "line": 42,
+              "start_byte": 1197,
+              "end_byte": 1211,
+              "target_file": "core/state.ts",
+              "target_symbol": "core/state.ts::GameController",
+              "status": "internal",
+              "binding_target_file": "core/state.ts",
+              "binding_target_symbol": "core/state.ts::GameController"
+            },
+            {
+              "owner": "EngineManager Integration Tests",
+              "expression": "GameController",
+              "kind": "call",
+              "source_text": "GameController",
+              "line": 47,
+              "start_byte": 1319,
+              "end_byte": 1333,
+              "target_file": "core/state.ts",
+              "target_symbol": "core/state.ts::GameController",
+              "status": "internal",
+              "binding_target_file": "core/state.ts",
+              "binding_target_symbol": "core/state.ts::GameController"
+            }
+          ],
+          "status": "internal",
+          "reason": "module_and_binding_resolved",
+          "target_file": "core/state.ts",
+          "target_symbol": "core/state.ts::GameController",
+          "bound_module": "",
+          "module_scope": "",
+          "start_byte": 63
+        },
+        {
+          "id": "tests/integration.test.ts@111:6",
+          "module": "../engine/physics",
+          "name": "PhysicsController",
+          "local": "PhysicsController",
+          "scope": "",
+          "line": 3,
+          "raw": "import { PhysicsController } from '../engine/physics';",
+          "kind": "named",
+          "reexport": false,
+          "conditional": false,
+          "uses": [
+            {
+              "owner": "EngineManager",
+              "expression": "PhysicsController",
+              "kind": "reference",
+              "source_text": "PhysicsController",
+              "line": 17,
+              "start_byte": 546,
+              "end_byte": 563,
+              "target_file": "engine/physics.ts",
+              "target_symbol": "engine/physics.ts::PhysicsController",
+              "status": "internal",
+              "binding_target_file": "engine/physics.ts",
+              "binding_target_symbol": "engine/physics.ts::PhysicsController"
+            },
+            {
+              "owner": "EngineManager.constructor",
+              "expression": "PhysicsController",
+              "kind": "reference",
+              "source_text": "PhysicsController",
+              "line": 19,
+              "start_byte": 617,
+              "end_byte": 634,
+              "target_file": "engine/physics.ts",
+              "target_symbol": "engine/physics.ts::PhysicsController",
+              "status": "internal",
+              "binding_target_file": "engine/physics.ts",
+              "binding_target_symbol": "engine/physics.ts::PhysicsController"
+            },
+            {
+              "owner": "EngineManager Integration Tests",
+              "expression": "PhysicsController",
+              "kind": "reference",
+              "source_text": "PhysicsController",
+              "line": 43,
+              "start_byte": 1228,
+              "end_byte": 1245,
+              "target_file": "engine/physics.ts",
+              "target_symbol": "engine/physics.ts::PhysicsController",
+              "status": "internal",
+              "binding_target_file": "engine/physics.ts",
+              "binding_target_symbol": "engine/physics.ts::PhysicsController"
+            },
+            {
+              "owner": "EngineManager Integration Tests",
+              "expression": "PhysicsController",
+              "kind": "call",
+              "source_text": "PhysicsController",
+              "line": 48,
+              "start_byte": 1355,
+              "end_byte": 1372,
+              "target_file": "engine/physics.ts",
+              "target_symbol": "engine/physics.ts::PhysicsController",
+              "status": "internal",
+              "binding_target_file": "engine/physics.ts",
+              "binding_target_symbol": "engine/physics.ts::PhysicsController"
+            }
+          ],
+          "status": "internal",
+          "reason": "module_and_binding_resolved",
+          "target_file": "engine/physics.ts",
+          "target_symbol": "engine/physics.ts::PhysicsController",
+          "bound_module": "",
+          "module_scope": "",
+          "start_byte": 111
+        },
+        {
+          "id": "tests/integration.test.ts@166:7",
+          "module": "../types/game",
+          "name": "GamePhase",
+          "local": "GamePhase",
+          "scope": "",
+          "line": 4,
+          "raw": "import { GamePhase } from '../types/game';",
+          "kind": "named",
+          "reexport": false,
+          "conditional": false,
+          "uses": [
+            {
+              "owner": "EngineManager.update",
+              "expression": "GamePhase.Active",
+              "kind": "reference",
+              "source_text": "GamePhase.Active",
+              "line": 26,
+              "start_byte": 798,
+              "end_byte": 814,
+              "target_file": "types/game.ts",
+              "target_symbol": "types/game.ts::GamePhase.Active",
+              "status": "internal",
+              "binding_target_file": "types/game.ts",
+              "binding_target_symbol": "types/game.ts::GamePhase"
+            },
+            {
+              "owner": "testGameOverTransition",
+              "expression": "GamePhase.Active",
+              "kind": "reference",
+              "source_text": "GamePhase.Active",
+              "line": 54,
+              "start_byte": 1526,
+              "end_byte": 1542,
+              "target_file": "types/game.ts",
+              "target_symbol": "types/game.ts::GamePhase.Active",
+              "status": "internal",
+              "binding_target_file": "types/game.ts",
+              "binding_target_symbol": "types/game.ts::GamePhase"
+            },
+            {
+              "owner": "testGameOverTransition",
+              "expression": "GamePhase.GameOver",
+              "kind": "reference",
+              "source_text": "GamePhase.GameOver",
+              "line": 59,
+              "start_byte": 1788,
+              "end_byte": 1806,
+              "target_file": "types/game.ts",
+              "target_symbol": "types/game.ts::GamePhase.GameOver",
+              "status": "internal",
+              "binding_target_file": "types/game.ts",
+              "binding_target_symbol": "types/game.ts::GamePhase"
+            },
+            {
+              "owner": "testScoreIncrementOnPipePass",
+              "expression": "GamePhase.Active",
+              "kind": "reference",
+              "source_text": "GamePhase.Active",
+              "line": 63,
+              "start_byte": 1885,
+              "end_byte": 1901,
+              "target_file": "types/game.ts",
+              "target_symbol": "types/game.ts::GamePhase.Active",
+              "status": "internal",
+              "binding_target_file": "types/game.ts",
+              "binding_target_symbol": "types/game.ts::GamePhase"
+            }
+          ],
+          "status": "internal",
+          "reason": "module_and_binding_resolved",
+          "target_file": "types/game.ts",
+          "target_symbol": "types/game.ts::GamePhase",
+          "bound_module": "",
+          "module_scope": "",
+          "start_byte": 166
+        }
+      ],
+      "calls": [
+        {
+          "name": "clear",
+          "line": 8,
+          "caller": "AssetRegistry.clear",
+          "expression": ""
+        },
+        {
+          "name": "getSnapshot",
+          "line": 25,
+          "caller": "EngineManager.update",
+          "expression": ""
+        },
+        {
+          "name": "update",
+          "line": 28,
+          "caller": "EngineManager.update",
+          "expression": ""
+        },
+        {
+          "name": "updateBird",
+          "line": 29,
+          "caller": "EngineManager.update",
+          "expression": ""
+        },
+        {
+          "name": "checkCollision",
+          "line": 31,
+          "caller": "EngineManager.update",
+          "expression": ""
+        },
+        {
+          "name": "gameOver",
+          "line": 32,
+          "caller": "EngineManager.update",
+          "expression": ""
+        },
+        {
+          "name": "incrementScore",
+          "line": 37,
+          "caller": "EngineManager.processPipePass",
+          "expression": ""
+        },
+        {
+          "name": "beforeEach",
+          "line": 46,
+          "caller": "",
+          "expression": ""
+        },
+        {
+          "name": "clear",
+          "line": 50,
+          "caller": "",
+          "expression": ""
+        },
+        {
+          "name": "setPhase",
+          "line": 54,
+          "caller": "",
+          "expression": ""
+        },
+        {
+          "name": "setPipes",
+          "line": 55,
+          "caller": "",
+          "expression": ""
+        },
+        {
+          "name": "updateBird",
+          "line": 56,
+          "caller": "",
+          "expression": ""
+        },
+        {
+          "name": "update",
+          "line": 58,
+          "caller": "",
+          "expression": ""
+        },
+        {
+          "name": "expect",
+          "line": 59,
+          "caller": "",
+          "expression": ""
+        },
+        {
+          "name": "toBe",
+          "line": 59,
+          "caller": "",
+          "expression": ""
+        },
+        {
+          "name": "getSnapshot",
+          "line": 59,
+          "caller": "",
+          "expression": ""
+        },
+        {
+          "name": "setPhase",
+          "line": 63,
+          "caller": "",
+          "expression": ""
+        },
+        {
+          "name": "setPipes",
+          "line": 64,
+          "caller": "",
+          "expression": ""
+        },
+        {
+          "name": "processPipePass",
+          "line": 66,
+          "caller": "",
+          "expression": ""
+        },
+        {
+          "name": "expect",
+          "line": 67,
+          "caller": "",
+          "expression": ""
+        },
+        {
+          "name": "toBe",
+          "line": 67,
+          "caller": "",
+          "expression": ""
+        },
+        {
+          "name": "getSnapshot",
+          "line": 67,
+          "caller": "",
+          "expression": ""
+        },
+        {
+          "name": "processPipePass",
+          "line": 69,
+          "caller": "",
+          "expression": ""
+        },
+        {
+          "name": "expect",
+          "line": 70,
+          "caller": "",
+          "expression": ""
+        },
+        {
+          "name": "toBe",
+          "line": 70,
+          "caller": "",
+          "expression": ""
+        },
+        {
+          "name": "getSnapshot",
+          "line": 70,
+          "caller": "",
+          "expression": ""
+        },
+        {
+          "name": "expect",
+          "line": 74,
+          "caller": "",
+          "expression": ""
+        },
+        {
+          "name": "toThrow",
+          "line": 74,
+          "caller": "",
+          "expression": ""
+        },
+        {
+          "name": "load",
+          "line": 74,
+          "caller": "",
+          "expression": ""
+        }
+      ],
+      "diagnostics": [],
+      "modules": [],
+      "exports": [],
+      "imports": [
+        {
+          "raw": "import { describe, it, expect, beforeEach, vi } from 'vitest';",
+          "module": "vitest",
+          "symbols": [
+            "describe",
+            "it",
+            "expect",
+            "beforeEach",
+            "vi"
+          ],
+          "line": 1
+        },
+        {
+          "raw": "import { GameController } from '../core/state';",
+          "module": "../core/state",
+          "symbols": [
+            "GameController"
+          ],
+          "line": 2
+        },
+        {
+          "raw": "import { PhysicsController } from '../engine/physics';",
+          "module": "../engine/physics",
+          "symbols": [
+            "PhysicsController"
+          ],
+          "line": 3
+        },
+        {
+          "raw": "import { GamePhase } from '../types/game';",
+          "module": "../types/game",
+          "symbols": [
+            "GamePhase"
+          ],
+          "line": 4
+        }
+      ],
+      "symbols": [
+        {
+          "name": "AssetRegistry",
+          "qualified_name": "AssetRegistry",
+          "kind": "class",
+          "start_line": 6,
+          "end_line": 13,
+          "first_body_line": 6,
+          "last_body_line": 13,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 230,
+          "body_end_byte": 465,
+          "bases": [],
+          "parent": "",
+          "id": "tests/integration.test.ts::AssetRegistry",
+          "docstring": "",
+          "start_byte": 210,
+          "end_byte": 465,
+          "signature": "class AssetRegistry"
+        },
+        {
+          "name": "clear",
+          "qualified_name": "AssetRegistry.clear",
+          "kind": "method",
+          "start_line": 8,
+          "end_line": 8,
+          "first_body_line": 8,
+          "last_body_line": 8,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 311,
+          "body_end_byte": 335,
+          "bases": [],
+          "parent": "AssetRegistry",
+          "id": "tests/integration.test.ts::AssetRegistry.clear",
+          "docstring": "",
+          "start_byte": 289,
+          "end_byte": 335,
+          "signature": "public static clear()"
+        },
+        {
+          "name": "load",
+          "qualified_name": "AssetRegistry.load",
+          "kind": "method",
+          "start_line": 9,
+          "end_line": 12,
+          "first_body_line": 9,
+          "last_body_line": 12,
+          "is_test": false,
+          "is_async": true,
+          "is_generator": false,
+          "body_start_byte": 389,
+          "body_end_byte": 463,
+          "bases": [],
+          "parent": "AssetRegistry",
+          "id": "tests/integration.test.ts::AssetRegistry.load",
+          "docstring": "",
+          "start_byte": 338,
+          "end_byte": 463,
+          "signature": "public static async load(id: string): Promise<any>"
+        },
+        {
+          "name": "EngineManager",
+          "qualified_name": "EngineManager",
+          "kind": "class",
+          "start_line": 15,
+          "end_line": 39,
+          "first_body_line": 15,
+          "last_body_line": 39,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 487,
+          "body_end_byte": 1125,
+          "bases": [],
+          "parent": "",
+          "id": "tests/integration.test.ts::EngineManager",
+          "docstring": "",
+          "start_byte": 467,
+          "end_byte": 1125,
+          "signature": "class EngineManager"
+        },
+        {
+          "name": "constructor",
+          "qualified_name": "EngineManager.constructor",
+          "kind": "method",
+          "start_line": 19,
+          "end_line": 22,
+          "first_body_line": 19,
+          "last_body_line": 22,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 636,
+          "body_end_byte": 703,
+          "bases": [],
+          "parent": "EngineManager",
+          "id": "tests/integration.test.ts::EngineManager.constructor",
+          "docstring": "",
+          "start_byte": 568,
+          "end_byte": 703,
+          "signature": "constructor(controller: GameController, physics: PhysicsController)"
+        },
+        {
+          "name": "update",
+          "qualified_name": "EngineManager.update",
+          "kind": "method",
+          "start_line": 24,
+          "end_line": 34,
+          "first_body_line": 24,
+          "last_body_line": 34,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 723,
+          "body_end_byte": 1031,
+          "bases": [],
+          "parent": "EngineManager",
+          "id": "tests/integration.test.ts::EngineManager.update",
+          "docstring": "",
+          "start_byte": 707,
+          "end_byte": 1031,
+          "signature": "public update()"
+        },
+        {
+          "name": "processPipePass",
+          "qualified_name": "EngineManager.processPipePass",
+          "kind": "method",
+          "start_line": 36,
+          "end_line": 38,
+          "first_body_line": 36,
+          "last_body_line": 38,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 1074,
+          "body_end_byte": 1123,
+          "bases": [],
+          "parent": "EngineManager",
+          "id": "tests/integration.test.ts::EngineManager.processPipePass",
+          "docstring": "",
+          "start_byte": 1035,
+          "end_byte": 1123,
+          "signature": "public processPipePass(pipeId: string)"
+        },
+        {
+          "name": "EngineManager Integration Tests",
+          "qualified_name": "EngineManager Integration Tests",
+          "kind": "test",
+          "start_line": 41,
+          "end_line": 76,
+          "first_body_line": 41,
+          "last_body_line": 76,
+          "is_test": true,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "tests/integration.test.ts::EngineManager Integration Tests",
+          "docstring": "",
+          "start_byte": 1127,
+          "end_byte": 2333,
+          "signature": "describe('EngineManager Integration Tests', () =>"
+        },
+        {
+          "name": "testGameOverTransition",
+          "qualified_name": "testGameOverTransition",
+          "kind": "test",
+          "start_line": 53,
+          "end_line": 60,
+          "first_body_line": 53,
+          "last_body_line": 60,
+          "is_test": true,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "tests/integration.test.ts::testGameOverTransition",
+          "docstring": "",
+          "start_byte": 1465,
+          "end_byte": 1813,
+          "signature": "it('testGameOverTransition', () =>"
+        },
+        {
+          "name": "testScoreIncrementOnPipePass",
+          "qualified_name": "testScoreIncrementOnPipePass",
+          "kind": "test",
+          "start_line": 62,
+          "end_line": 71,
+          "first_body_line": 62,
+          "last_body_line": 71,
+          "is_test": true,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "tests/integration.test.ts::testScoreIncrementOnPipePass",
+          "docstring": "",
+          "start_byte": 1818,
+          "end_byte": 2206,
+          "signature": "it('testScoreIncrementOnPipePass', () =>"
+        },
+        {
+          "name": "testAssetFailureState",
+          "qualified_name": "testAssetFailureState",
+          "kind": "test",
+          "start_line": 73,
+          "end_line": 75,
+          "first_body_line": 73,
+          "last_body_line": 75,
+          "is_test": true,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "tests/integration.test.ts::testAssetFailureState",
+          "docstring": "",
+          "start_byte": 2211,
+          "end_byte": 2329,
+          "signature": "it('testAssetFailureState', async () =>"
+        }
+      ]
+    },
+    {
+      "path": "tests/performance.test.ts",
+      "language": "typescript",
+      "parser": "tree_sitter",
+      "has_syntax_error": false,
+      "is_empty": false,
+      "source_hash": "c4fd6b983190daa7b421c702fb5ac0bb8bc0e2f925459d4a07e177eb7a6d4c5b",
+      "bound_names": [
+        "Performance Tests"
+      ],
+      "bindings": [
+        {
+          "id": "tests/performance.test.ts@0:0",
+          "module": "../engine/physics",
+          "name": "PhysicsController",
+          "local": "PhysicsController",
+          "scope": "",
+          "line": 1,
+          "raw": "import { PhysicsController } from '../engine/physics';",
+          "kind": "named",
+          "reexport": false,
+          "conditional": false,
+          "uses": [
+            {
+              "owner": "Performance Tests",
+              "expression": "PhysicsController",
+              "kind": "reference",
+              "source_text": "PhysicsController",
+              "line": 6,
+              "start_byte": 220,
+              "end_byte": 237,
+              "target_file": "engine/physics.ts",
+              "target_symbol": "engine/physics.ts::PhysicsController",
+              "status": "internal",
+              "binding_target_file": "engine/physics.ts",
+              "binding_target_symbol": "engine/physics.ts::PhysicsController"
+            },
+            {
+              "owner": "Performance Tests",
+              "expression": "PhysicsController",
+              "kind": "call",
+              "source_text": "PhysicsController",
+              "line": 10,
+              "start_byte": 313,
+              "end_byte": 330,
+              "target_file": "engine/physics.ts",
+              "target_symbol": "engine/physics.ts::PhysicsController",
+              "status": "internal",
+              "binding_target_file": "engine/physics.ts",
+              "binding_target_symbol": "engine/physics.ts::PhysicsController"
+            }
+          ],
+          "status": "internal",
+          "reason": "module_and_binding_resolved",
+          "target_file": "engine/physics.ts",
+          "target_symbol": "engine/physics.ts::PhysicsController",
+          "bound_module": "",
+          "module_scope": "",
+          "start_byte": 0
+        },
+        {
+          "id": "tests/performance.test.ts@55:1",
+          "module": "../core/state",
+          "name": "GameController",
+          "local": "GameController",
+          "scope": "",
+          "line": 2,
+          "raw": "import { GameController } from '../core/state';",
+          "kind": "named",
+          "reexport": false,
+          "conditional": false,
+          "uses": [
+            {
+              "owner": "Performance Tests",
+              "expression": "GameController",
+              "kind": "reference",
+              "source_text": "GameController",
+              "line": 7,
+              "start_byte": 257,
+              "end_byte": 271,
+              "target_file": "core/state.ts",
+              "target_symbol": "core/state.ts::GameController",
+              "status": "internal",
+              "binding_target_file": "core/state.ts",
+              "binding_target_symbol": "core/state.ts::GameController"
+            },
+            {
+              "owner": "Performance Tests",
+              "expression": "GameController",
+              "kind": "call",
+              "source_text": "GameController",
+              "line": 11,
+              "start_byte": 355,
+              "end_byte": 369,
+              "target_file": "core/state.ts",
+              "target_symbol": "core/state.ts::GameController",
+              "status": "internal",
+              "binding_target_file": "core/state.ts",
+              "binding_target_symbol": "core/state.ts::GameController"
+            }
+          ],
+          "status": "internal",
+          "reason": "module_and_binding_resolved",
+          "target_file": "core/state.ts",
+          "target_symbol": "core/state.ts::GameController",
+          "bound_module": "",
+          "module_scope": "",
+          "start_byte": 55
+        },
+        {
+          "id": "tests/performance.test.ts@103:2",
+          "module": "vitest",
+          "name": "describe",
+          "local": "describe",
+          "scope": "",
+          "line": 3,
+          "raw": "import { describe, it, expect, beforeEach, vi } from 'vitest';",
+          "kind": "named",
+          "reexport": false,
+          "conditional": false,
+          "uses": [
+            {
+              "owner": "Performance Tests",
+              "expression": "describe",
+              "kind": "call",
+              "source_text": "describe",
+              "line": 5,
+              "start_byte": 167,
+              "end_byte": 175,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "external",
+              "binding_target_file": null,
+              "binding_target_symbol": null
+            }
+          ],
+          "status": "external",
+          "reason": "no_matching_local_package",
+          "target_file": null,
+          "target_symbol": null,
+          "bound_module": "",
+          "module_scope": "",
+          "start_byte": 103
+        },
+        {
+          "id": "tests/performance.test.ts@103:3",
+          "module": "vitest",
+          "name": "it",
+          "local": "it",
+          "scope": "",
+          "line": 3,
+          "raw": "import { describe, it, expect, beforeEach, vi } from 'vitest';",
+          "kind": "named",
+          "reexport": false,
+          "conditional": false,
+          "uses": [
+            {
+              "owner": "maintains frame budget < 16.7ms",
+              "expression": "it",
+              "kind": "call",
+              "source_text": "it",
+              "line": 14,
+              "start_byte": 382,
+              "end_byte": 384,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "external",
+              "binding_target_file": null,
+              "binding_target_symbol": null
+            },
+            {
+              "owner": "maintains stable object pool for pipes",
+              "expression": "it",
+              "kind": "call",
+              "source_text": "it",
+              "line": 32,
+              "start_byte": 914,
+              "end_byte": 916,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "external",
+              "binding_target_file": null,
+              "binding_target_symbol": null
+            },
+            {
+              "owner": "handles physics calculation without excessive latency",
+              "expression": "it",
+              "kind": "call",
+              "source_text": "it",
+              "line": 42,
+              "start_byte": 1272,
+              "end_byte": 1274,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "external",
+              "binding_target_file": null,
+              "binding_target_symbol": null
+            }
+          ],
+          "status": "external",
+          "reason": "no_matching_local_package",
+          "target_file": null,
+          "target_symbol": null,
+          "bound_module": "",
+          "module_scope": "",
+          "start_byte": 103
+        },
+        {
+          "id": "tests/performance.test.ts@103:4",
+          "module": "vitest",
+          "name": "expect",
+          "local": "expect",
+          "scope": "",
+          "line": 3,
+          "raw": "import { describe, it, expect, beforeEach, vi } from 'vitest';",
+          "kind": "named",
+          "reexport": false,
+          "conditional": false,
+          "uses": [
+            {
+              "owner": "maintains frame budget < 16.7ms",
+              "expression": "expect",
+              "kind": "call",
+              "source_text": "expect",
+              "line": 29,
+              "start_byte": 860,
+              "end_byte": 866,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "external",
+              "binding_target_file": null,
+              "binding_target_symbol": null
+            },
+            {
+              "owner": "maintains stable object pool for pipes",
+              "expression": "expect",
+              "kind": "call",
+              "source_text": "expect",
+              "line": 39,
+              "start_byte": 1220,
+              "end_byte": 1226,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "external",
+              "binding_target_file": null,
+              "binding_target_symbol": null
+            },
+            {
+              "owner": "handles physics calculation without excessive latency",
+              "expression": "expect",
+              "kind": "call",
+              "source_text": "expect",
+              "line": 52,
+              "start_byte": 1580,
+              "end_byte": 1586,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "external",
+              "binding_target_file": null,
+              "binding_target_symbol": null
+            }
+          ],
+          "status": "external",
+          "reason": "no_matching_local_package",
+          "target_file": null,
+          "target_symbol": null,
+          "bound_module": "",
+          "module_scope": "",
+          "start_byte": 103
+        },
+        {
+          "id": "tests/performance.test.ts@103:5",
+          "module": "vitest",
+          "name": "beforeEach",
+          "local": "beforeEach",
+          "scope": "",
+          "line": 3,
+          "raw": "import { describe, it, expect, beforeEach, vi } from 'vitest';",
+          "kind": "named",
+          "reexport": false,
+          "conditional": false,
+          "uses": [
+            {
+              "owner": "Performance Tests",
+              "expression": "beforeEach",
+              "kind": "call",
+              "source_text": "beforeEach",
+              "line": 9,
+              "start_byte": 276,
+              "end_byte": 286,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "external",
+              "binding_target_file": null,
+              "binding_target_symbol": null
+            }
+          ],
+          "status": "external",
+          "reason": "no_matching_local_package",
+          "target_file": null,
+          "target_symbol": null,
+          "bound_module": "",
+          "module_scope": "",
+          "start_byte": 103
+        },
+        {
+          "id": "tests/performance.test.ts@103:6",
+          "module": "vitest",
+          "name": "vi",
+          "local": "vi",
+          "scope": "",
+          "line": 3,
+          "raw": "import { describe, it, expect, beforeEach, vi } from 'vitest';",
+          "kind": "named",
+          "reexport": false,
+          "conditional": false,
+          "uses": [],
+          "status": "external",
+          "reason": "no_matching_local_package",
+          "target_file": null,
+          "target_symbol": null,
+          "bound_module": "",
+          "module_scope": "",
+          "start_byte": 103
+        }
+      ],
+      "calls": [
+        {
+          "name": "beforeEach",
+          "line": 9,
+          "caller": "",
+          "expression": ""
+        },
+        {
+          "name": "now",
+          "line": 19,
+          "caller": "",
+          "expression": ""
+        },
+        {
+          "name": "getSnapshot",
+          "line": 21,
+          "caller": "",
+          "expression": ""
+        },
+        {
+          "name": "update",
+          "line": 22,
+          "caller": "",
+          "expression": ""
+        },
+        {
+          "name": "now",
+          "line": 24,
+          "caller": "",
+          "expression": ""
+        },
+        {
+          "name": "push",
+          "line": 25,
+          "caller": "",
+          "expression": ""
+        },
+        {
+          "name": "reduce",
+          "line": 28,
+          "caller": "",
+          "expression": ""
+        },
+        {
+          "name": "expect",
+          "line": 29,
+          "caller": "",
+          "expression": ""
+        },
+        {
+          "name": "toBeLessThan",
+          "line": 29,
+          "caller": "",
+          "expression": ""
+        },
+        {
+          "name": "getSnapshot",
+          "line": 33,
+          "caller": "",
+          "expression": ""
+        },
+        {
+          "name": "setPipes",
+          "line": 36,
+          "caller": "",
+          "expression": ""
+        },
+        {
+          "name": "getSnapshot",
+          "line": 38,
+          "caller": "",
+          "expression": ""
+        },
+        {
+          "name": "expect",
+          "line": 39,
+          "caller": "",
+          "expression": ""
+        },
+        {
+          "name": "toBe",
+          "line": 39,
+          "caller": "",
+          "expression": ""
+        },
+        {
+          "name": "now",
+          "line": 43,
+          "caller": "",
+          "expression": ""
+        },
+        {
+          "name": "update",
+          "line": 46,
+          "caller": "",
+          "expression": ""
+        },
+        {
+          "name": "now",
+          "line": 49,
+          "caller": "",
+          "expression": ""
+        },
+        {
+          "name": "expect",
+          "line": 52,
+          "caller": "",
+          "expression": ""
+        },
+        {
+          "name": "toBeLessThan",
+          "line": 52,
+          "caller": "",
+          "expression": ""
+        }
+      ],
+      "diagnostics": [],
+      "modules": [],
+      "exports": [],
+      "imports": [
+        {
+          "raw": "import { PhysicsController } from '../engine/physics';",
+          "module": "../engine/physics",
+          "symbols": [
+            "PhysicsController"
+          ],
+          "line": 1
+        },
+        {
+          "raw": "import { GameController } from '../core/state';",
+          "module": "../core/state",
+          "symbols": [
+            "GameController"
+          ],
+          "line": 2
+        },
+        {
+          "raw": "import { describe, it, expect, beforeEach, vi } from 'vitest';",
+          "module": "vitest",
+          "symbols": [
+            "describe",
+            "it",
+            "expect",
+            "beforeEach",
+            "vi"
+          ],
+          "line": 3
+        }
+      ],
+      "symbols": [
+        {
+          "name": "Performance Tests",
+          "qualified_name": "Performance Tests",
+          "kind": "test",
+          "start_line": 5,
+          "end_line": 54,
+          "first_body_line": 5,
+          "last_body_line": 54,
+          "is_test": true,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "tests/performance.test.ts::Performance Tests",
+          "docstring": "",
+          "start_byte": 167,
+          "end_byte": 1622,
+          "signature": "describe('Performance Tests', () =>"
+        },
+        {
+          "name": "maintains frame budget < 16.7ms",
+          "qualified_name": "maintains frame budget < 16.7ms",
+          "kind": "test",
+          "start_line": 14,
+          "end_line": 30,
+          "first_body_line": 14,
+          "last_body_line": 30,
+          "is_test": true,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "tests/performance.test.ts::maintains frame budget < 16.7ms",
+          "docstring": "",
+          "start_byte": 382,
+          "end_byte": 909,
+          "signature": "it('maintains frame budget < 16.7ms', () =>"
+        },
+        {
+          "name": "maintains stable object pool for pipes",
+          "qualified_name": "maintains stable object pool for pipes",
+          "kind": "test",
+          "start_line": 32,
+          "end_line": 40,
+          "first_body_line": 32,
+          "last_body_line": 40,
+          "is_test": true,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "tests/performance.test.ts::maintains stable object pool for pipes",
+          "docstring": "",
+          "start_byte": 914,
+          "end_byte": 1267,
+          "signature": "it('maintains stable object pool for pipes', () =>"
+        },
+        {
+          "name": "handles physics calculation without excessive latency",
+          "qualified_name": "handles physics calculation without excessive latency",
+          "kind": "test",
+          "start_line": 42,
+          "end_line": 53,
+          "first_body_line": 42,
+          "last_body_line": 53,
+          "is_test": true,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "tests/performance.test.ts::handles physics calculation without excessive latency",
+          "docstring": "",
+          "start_byte": 1272,
+          "end_byte": 1618,
+          "signature": "it('handles physics calculation without excessive latency', () =>"
+        }
+      ]
+    },
+    {
+      "path": "types/game.ts",
+      "language": "typescript",
+      "parser": "tree_sitter",
+      "has_syntax_error": false,
+      "is_empty": false,
+      "source_hash": "61d49c945aaa0813bef7bf88909197f104e2709075d7781dc91379d1bb866d3c",
+      "bound_names": [
+        "Bird",
+        "GamePhase",
+        "GameSnapshot",
+        "Pipe"
+      ],
+      "bindings": [],
+      "calls": [],
+      "diagnostics": [],
+      "modules": [],
+      "exports": [
+        {
+          "exported": "GamePhase",
+          "local": "GamePhase",
+          "module": "",
+          "line": 1
+        },
+        {
+          "exported": "Bird",
+          "local": "Bird",
+          "module": "",
+          "line": 7
+        },
+        {
+          "exported": "Pipe",
+          "local": "Pipe",
+          "module": "",
+          "line": 14
+        },
+        {
+          "exported": "GameSnapshot",
+          "local": "GameSnapshot",
+          "module": "",
+          "line": 22
+        }
+      ],
+      "imports": [],
+      "symbols": [
+        {
+          "name": "GamePhase",
+          "qualified_name": "GamePhase",
+          "kind": "enum",
+          "start_line": 1,
+          "end_line": 5,
+          "first_body_line": 1,
+          "last_body_line": 5,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 22,
+          "body_end_byte": 89,
+          "bases": [],
+          "parent": "",
+          "id": "types/game.ts::GamePhase",
+          "docstring": "",
+          "start_byte": 7,
+          "end_byte": 89,
+          "signature": "enum GamePhase"
+        },
+        {
+          "name": "Menu",
+          "qualified_name": "GamePhase.Menu",
+          "kind": "member",
+          "start_line": 2,
+          "end_line": 2,
+          "first_body_line": 2,
+          "last_body_line": 2,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "GamePhase",
+          "id": "types/game.ts::GamePhase.Menu",
+          "docstring": "",
+          "start_byte": 26,
+          "end_byte": 39,
+          "signature": "Menu = 'MENU'"
+        },
+        {
+          "name": "Active",
+          "qualified_name": "GamePhase.Active",
+          "kind": "member",
+          "start_line": 3,
+          "end_line": 3,
+          "first_body_line": 3,
+          "last_body_line": 3,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "GamePhase",
+          "id": "types/game.ts::GamePhase.Active",
+          "docstring": "",
+          "start_byte": 43,
+          "end_byte": 60,
+          "signature": "Active = 'ACTIVE'"
+        },
+        {
+          "name": "GameOver",
+          "qualified_name": "GamePhase.GameOver",
+          "kind": "member",
+          "start_line": 4,
+          "end_line": 4,
+          "first_body_line": 4,
+          "last_body_line": 4,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "GamePhase",
+          "id": "types/game.ts::GamePhase.GameOver",
+          "docstring": "",
+          "start_byte": 64,
+          "end_byte": 86,
+          "signature": "GameOver = 'GAME_OVER'"
+        },
+        {
+          "name": "Bird",
+          "qualified_name": "Bird",
+          "kind": "interface",
+          "start_line": 7,
+          "end_line": 12,
+          "first_body_line": 7,
+          "last_body_line": 12,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 113,
+          "body_end_byte": 218,
+          "bases": [],
+          "parent": "",
+          "id": "types/game.ts::Bird",
+          "docstring": "",
+          "start_byte": 98,
+          "end_byte": 218,
+          "signature": "interface Bird"
+        },
+        {
+          "name": "Pipe",
+          "qualified_name": "Pipe",
+          "kind": "interface",
+          "start_line": 14,
+          "end_line": 20,
+          "first_body_line": 14,
+          "last_body_line": 20,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 242,
+          "body_end_byte": 372,
+          "bases": [],
+          "parent": "",
+          "id": "types/game.ts::Pipe",
+          "docstring": "",
+          "start_byte": 227,
+          "end_byte": 372,
+          "signature": "interface Pipe"
+        },
+        {
+          "name": "GameSnapshot",
+          "qualified_name": "GameSnapshot",
+          "kind": "interface",
+          "start_line": 22,
+          "end_line": 27,
+          "first_body_line": 22,
+          "last_body_line": 27,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 404,
+          "body_end_byte": 520,
+          "bases": [],
+          "parent": "",
+          "id": "types/game.ts::GameSnapshot",
+          "docstring": "",
+          "start_byte": 381,
+          "end_byte": 520,
+          "signature": "interface GameSnapshot"
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "main.ts",
+      "target": "core/state.ts",
+      "kind": "import",
+      "line": 1,
+      "raw": "import { GameController } from './core/state';",
+      "symbols": [
+        "GameController"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "main.ts",
+      "target": "core/state.ts::GameController",
+      "kind": "invoke",
+      "line": 18,
+      "raw": "GameController",
+      "symbols": [
+        "GameController"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "main.ts",
+      "target": "core/input.ts",
+      "kind": "import",
+      "line": 2,
+      "raw": "import { InputHandler } from './core/input';",
+      "symbols": [
+        "InputHandler"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "main.ts",
+      "target": "core/input.ts::InputHandler",
+      "kind": "invoke",
+      "line": 26,
+      "raw": "InputHandler",
+      "symbols": [
+        "InputHandler"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "main.ts",
+      "target": "engine/physics.ts",
+      "kind": "import",
+      "line": 3,
+      "raw": "import { PhysicsController } from './engine/physics';",
+      "symbols": [
+        "PhysicsController"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "main.ts",
+      "target": "engine/physics.ts::PhysicsController",
+      "kind": "invoke",
+      "line": 19,
+      "raw": "PhysicsController",
+      "symbols": [
+        "PhysicsController"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "main.ts",
+      "target": "engine/renderer.ts",
+      "kind": "import",
+      "line": 4,
+      "raw": "import { Renderer } from './engine/renderer';",
+      "symbols": [
+        "Renderer"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "main.ts",
+      "target": "engine/renderer.ts::Renderer",
+      "kind": "invoke",
+      "line": 20,
+      "raw": "Renderer",
+      "symbols": [
+        "Renderer"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "main.ts",
+      "target": "types/game.ts",
+      "kind": "import",
+      "line": 5,
+      "raw": "import { GamePhase } from './types/game';",
+      "symbols": [
+        "GamePhase"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "main.ts",
+      "target": "types/game.ts::GamePhase.Menu",
+      "kind": "reference",
+      "line": 29,
+      "raw": "GamePhase.Menu",
+      "symbols": [
+        "GamePhase"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "main.ts",
+      "target": "types/game.ts::GamePhase.GameOver",
+      "kind": "reference",
+      "line": 29,
+      "raw": "GamePhase.GameOver",
+      "symbols": [
+        "GamePhase"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "main.ts",
+      "target": "types/game.ts::GamePhase.Active",
+      "kind": "reference",
+      "line": 31,
+      "raw": "GamePhase.Active",
+      "symbols": [
+        "GamePhase"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "main.ts",
+      "target": "types/game.ts::GamePhase.Active",
+      "kind": "reference",
+      "line": 34,
+      "raw": "GamePhase.Active",
+      "symbols": [
+        "GamePhase"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "main.ts::gameLoop",
+      "target": "types/game.ts::GamePhase.Active",
+      "kind": "reference",
+      "line": 61,
+      "raw": "GamePhase.Active",
+      "symbols": [
+        "GamePhase"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "core/input.ts",
+      "target": "types/game.ts",
+      "kind": "import",
+      "line": 1,
+      "raw": "import { GamePhase } from '../types/game';",
+      "symbols": [
+        "GamePhase"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "core/input.ts::InputHandler",
+      "target": "types/game.ts::GamePhase",
+      "kind": "reference",
+      "line": 8,
+      "raw": "GamePhase",
+      "symbols": [
+        "GamePhase"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "core/input.ts::InputHandler",
+      "target": "types/game.ts::GamePhase.Menu",
+      "kind": "reference",
+      "line": 8,
+      "raw": "GamePhase.Menu",
+      "symbols": [
+        "GamePhase"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "core/input.ts::InputHandler.setPhase",
+      "target": "types/game.ts::GamePhase",
+      "kind": "reference",
+      "line": 17,
+      "raw": "GamePhase",
+      "symbols": [
+        "GamePhase"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "core/input.ts::InputHandler._handleKeyDown",
+      "target": "types/game.ts::GamePhase.GameOver",
+      "kind": "reference",
+      "line": 22,
+      "raw": "GamePhase.GameOver",
+      "symbols": [
+        "GamePhase"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "core/input.ts::InputHandler._handleTouch",
+      "target": "types/game.ts::GamePhase.GameOver",
+      "kind": "reference",
+      "line": 36,
+      "raw": "GamePhase.GameOver",
+      "symbols": [
+        "GamePhase"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "core/state.ts",
+      "target": "types/game.ts",
+      "kind": "import",
+      "line": 1,
+      "raw": "import { GamePhase, Bird, Pipe, GameSnapshot } from '../types/game';",
+      "symbols": [
+        "GamePhase"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "core/state.ts::GameController",
+      "target": "types/game.ts::GamePhase",
+      "kind": "reference",
+      "line": 4,
+      "raw": "GamePhase",
+      "symbols": [
+        "GamePhase"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "core/state.ts::GameController",
+      "target": "types/game.ts::GamePhase.Menu",
+      "kind": "reference",
+      "line": 4,
+      "raw": "GamePhase.Menu",
+      "symbols": [
+        "GamePhase"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "core/state.ts::GameController.setPhase",
+      "target": "types/game.ts::GamePhase",
+      "kind": "reference",
+      "line": 18,
+      "raw": "GamePhase",
+      "symbols": [
+        "GamePhase"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "core/state.ts::GameController.gameOver",
+      "target": "types/game.ts::GamePhase.GameOver",
+      "kind": "reference",
+      "line": 39,
+      "raw": "GamePhase.GameOver",
+      "symbols": [
+        "GamePhase"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "core/state.ts::GameController.reset",
+      "target": "types/game.ts::GamePhase.Menu",
+      "kind": "reference",
+      "line": 43,
+      "raw": "GamePhase.Menu",
+      "symbols": [
+        "GamePhase"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "core/state.ts",
+      "target": "types/game.ts",
+      "kind": "import",
+      "line": 1,
+      "raw": "import { GamePhase, Bird, Pipe, GameSnapshot } from '../types/game';",
+      "symbols": [
+        "Bird"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "core/state.ts::GameController",
+      "target": "types/game.ts::Bird",
+      "kind": "reference",
+      "line": 6,
+      "raw": "Bird",
+      "symbols": [
+        "Bird"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "core/state.ts::GameController.updateBird",
+      "target": "types/game.ts::Bird",
+      "kind": "reference",
+      "line": 22,
+      "raw": "Bird",
+      "symbols": [
+        "Bird"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "core/state.ts",
+      "target": "types/game.ts",
+      "kind": "import",
+      "line": 1,
+      "raw": "import { GamePhase, Bird, Pipe, GameSnapshot } from '../types/game';",
+      "symbols": [
+        "Pipe"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "core/state.ts::GameController",
+      "target": "types/game.ts::Pipe",
+      "kind": "reference",
+      "line": 7,
+      "raw": "Pipe",
+      "symbols": [
+        "Pipe"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "core/state.ts::GameController.setPipes",
+      "target": "types/game.ts::Pipe",
+      "kind": "reference",
+      "line": 26,
+      "raw": "Pipe",
+      "symbols": [
+        "Pipe"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "core/state.ts",
+      "target": "types/game.ts",
+      "kind": "import",
+      "line": 1,
+      "raw": "import { GamePhase, Bird, Pipe, GameSnapshot } from '../types/game';",
+      "symbols": [
+        "GameSnapshot"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "core/state.ts::GameController.getSnapshot",
+      "target": "types/game.ts::GameSnapshot",
+      "kind": "reference",
+      "line": 9,
+      "raw": "GameSnapshot",
+      "symbols": [
+        "GameSnapshot"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "engine/physics.ts",
+      "target": "types/game.ts",
+      "kind": "import",
+      "line": 1,
+      "raw": "import { Bird, Pipe } from '../types/game';",
+      "symbols": [
+        "Bird"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "engine/physics.ts::PhysicsController.update",
+      "target": "types/game.ts::Bird",
+      "kind": "reference",
+      "line": 9,
+      "raw": "Bird",
+      "symbols": [
+        "Bird"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "engine/physics.ts::PhysicsController.jump",
+      "target": "types/game.ts::Bird",
+      "kind": "reference",
+      "line": 21,
+      "raw": "Bird",
+      "symbols": [
+        "Bird"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "engine/physics.ts::PhysicsController.checkCollision",
+      "target": "types/game.ts::Bird",
+      "kind": "reference",
+      "line": 28,
+      "raw": "Bird",
+      "symbols": [
+        "Bird"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "engine/physics.ts",
+      "target": "types/game.ts",
+      "kind": "import",
+      "line": 1,
+      "raw": "import { Bird, Pipe } from '../types/game';",
+      "symbols": [
+        "Pipe"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "engine/physics.ts::PhysicsController.checkCollision",
+      "target": "types/game.ts::Pipe",
+      "kind": "reference",
+      "line": 28,
+      "raw": "Pipe",
+      "symbols": [
+        "Pipe"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "engine/renderer.ts",
+      "target": "types/game.ts",
+      "kind": "import",
+      "line": 1,
+      "raw": "import { GameSnapshot, Bird, Pipe, GamePhase } from '../types/game';",
+      "symbols": [
+        "GameSnapshot"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "engine/renderer.ts::Renderer.render",
+      "target": "types/game.ts::GameSnapshot",
+      "kind": "reference",
+      "line": 14,
+      "raw": "GameSnapshot",
+      "symbols": [
+        "GameSnapshot"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "engine/renderer.ts",
+      "target": "types/game.ts",
+      "kind": "import",
+      "line": 1,
+      "raw": "import { GameSnapshot, Bird, Pipe, GamePhase } from '../types/game';",
+      "symbols": [
+        "Bird"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "engine/renderer.ts::Renderer.drawBird",
+      "target": "types/game.ts::Bird",
+      "kind": "reference",
+      "line": 42,
+      "raw": "Bird",
+      "symbols": [
+        "Bird"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "engine/renderer.ts",
+      "target": "types/game.ts",
+      "kind": "import",
+      "line": 1,
+      "raw": "import { GameSnapshot, Bird, Pipe, GamePhase } from '../types/game';",
+      "symbols": [
+        "Pipe"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "engine/renderer.ts::Renderer.drawPipes",
+      "target": "types/game.ts::Pipe",
+      "kind": "reference",
+      "line": 33,
+      "raw": "Pipe",
+      "symbols": [
+        "Pipe"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "engine/renderer.ts",
+      "target": "types/game.ts",
+      "kind": "import",
+      "line": 1,
+      "raw": "import { GameSnapshot, Bird, Pipe, GamePhase } from '../types/game';",
+      "symbols": [
+        "GamePhase"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "engine/renderer.ts::Renderer.render",
+      "target": "types/game.ts::GamePhase.Menu",
+      "kind": "reference",
+      "line": 20,
+      "raw": "GamePhase.Menu",
+      "symbols": [
+        "GamePhase"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "engine/renderer.ts::Renderer.render",
+      "target": "types/game.ts::GamePhase.GameOver",
+      "kind": "reference",
+      "line": 21,
+      "raw": "GamePhase.GameOver",
+      "symbols": [
+        "GamePhase"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "tests/integration.test.ts",
+      "target": "core/state.ts",
+      "kind": "import",
+      "line": 2,
+      "raw": "import { GameController } from '../core/state';",
+      "symbols": [
+        "GameController"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "tests/integration.test.ts::EngineManager",
+      "target": "core/state.ts::GameController",
+      "kind": "reference",
+      "line": 16,
+      "raw": "GameController",
+      "symbols": [
+        "GameController"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "tests/integration.test.ts::EngineManager.constructor",
+      "target": "core/state.ts::GameController",
+      "kind": "reference",
+      "line": 19,
+      "raw": "GameController",
+      "symbols": [
+        "GameController"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "tests/integration.test.ts::EngineManager Integration Tests",
+      "target": "core/state.ts::GameController",
+      "kind": "reference",
+      "line": 42,
+      "raw": "GameController",
+      "symbols": [
+        "GameController"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "tests/integration.test.ts::EngineManager Integration Tests",
+      "target": "core/state.ts::GameController",
+      "kind": "invoke",
+      "line": 47,
+      "raw": "GameController",
+      "symbols": [
+        "GameController"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "tests/integration.test.ts",
+      "target": "engine/physics.ts",
+      "kind": "import",
+      "line": 3,
+      "raw": "import { PhysicsController } from '../engine/physics';",
+      "symbols": [
+        "PhysicsController"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "tests/integration.test.ts::EngineManager",
+      "target": "engine/physics.ts::PhysicsController",
+      "kind": "reference",
+      "line": 17,
+      "raw": "PhysicsController",
+      "symbols": [
+        "PhysicsController"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "tests/integration.test.ts::EngineManager.constructor",
+      "target": "engine/physics.ts::PhysicsController",
+      "kind": "reference",
+      "line": 19,
+      "raw": "PhysicsController",
+      "symbols": [
+        "PhysicsController"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "tests/integration.test.ts::EngineManager Integration Tests",
+      "target": "engine/physics.ts::PhysicsController",
+      "kind": "reference",
+      "line": 43,
+      "raw": "PhysicsController",
+      "symbols": [
+        "PhysicsController"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "tests/integration.test.ts::EngineManager Integration Tests",
+      "target": "engine/physics.ts::PhysicsController",
+      "kind": "invoke",
+      "line": 48,
+      "raw": "PhysicsController",
+      "symbols": [
+        "PhysicsController"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "tests/integration.test.ts",
+      "target": "types/game.ts",
+      "kind": "import",
+      "line": 4,
+      "raw": "import { GamePhase } from '../types/game';",
+      "symbols": [
+        "GamePhase"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "tests/integration.test.ts::EngineManager.update",
+      "target": "types/game.ts::GamePhase.Active",
+      "kind": "reference",
+      "line": 26,
+      "raw": "GamePhase.Active",
+      "symbols": [
+        "GamePhase"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "tests/integration.test.ts::testGameOverTransition",
+      "target": "types/game.ts::GamePhase.Active",
+      "kind": "reference",
+      "line": 54,
+      "raw": "GamePhase.Active",
+      "symbols": [
+        "GamePhase"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "tests/integration.test.ts::testGameOverTransition",
+      "target": "types/game.ts::GamePhase.GameOver",
+      "kind": "reference",
+      "line": 59,
+      "raw": "GamePhase.GameOver",
+      "symbols": [
+        "GamePhase"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "tests/integration.test.ts::testScoreIncrementOnPipePass",
+      "target": "types/game.ts::GamePhase.Active",
+      "kind": "reference",
+      "line": 63,
+      "raw": "GamePhase.Active",
+      "symbols": [
+        "GamePhase"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "tests/performance.test.ts",
+      "target": "engine/physics.ts",
+      "kind": "import",
+      "line": 1,
+      "raw": "import { PhysicsController } from '../engine/physics';",
+      "symbols": [
+        "PhysicsController"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "tests/performance.test.ts::Performance Tests",
+      "target": "engine/physics.ts::PhysicsController",
+      "kind": "reference",
+      "line": 6,
+      "raw": "PhysicsController",
+      "symbols": [
+        "PhysicsController"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "tests/performance.test.ts::Performance Tests",
+      "target": "engine/physics.ts::PhysicsController",
+      "kind": "invoke",
+      "line": 10,
+      "raw": "PhysicsController",
+      "symbols": [
+        "PhysicsController"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "tests/performance.test.ts",
+      "target": "core/state.ts",
+      "kind": "import",
+      "line": 2,
+      "raw": "import { GameController } from '../core/state';",
+      "symbols": [
+        "GameController"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "tests/performance.test.ts::Performance Tests",
+      "target": "core/state.ts::GameController",
+      "kind": "reference",
+      "line": 7,
+      "raw": "GameController",
+      "symbols": [
+        "GameController"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "tests/performance.test.ts::Performance Tests",
+      "target": "core/state.ts::GameController",
+      "kind": "invoke",
+      "line": 11,
+      "raw": "GameController",
+      "symbols": [
+        "GameController"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "main.ts",
+      "target": "main.ts::spawnPipe",
+      "kind": "contain",
+      "line": 39,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "main.ts",
+      "target": "main.ts::gameLoop",
+      "kind": "contain",
+      "line": 54,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "core/input.ts",
+      "target": "core/input.ts::InputCallback",
+      "kind": "contain",
+      "line": 3,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "core/input.ts",
+      "target": "core/input.ts::InputHandler",
+      "kind": "contain",
+      "line": 5,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "core/input.ts::InputHandler",
+      "target": "core/input.ts::InputHandler.constructor",
+      "kind": "contain",
+      "line": 10,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "core/input.ts::InputHandler",
+      "target": "core/input.ts::InputHandler.setPhase",
+      "kind": "contain",
+      "line": 17,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "core/input.ts::InputHandler",
+      "target": "core/input.ts::InputHandler._handleKeyDown",
+      "kind": "contain",
+      "line": 21,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "core/input.ts::InputHandler",
+      "target": "core/input.ts::InputHandler._handleKeyUp",
+      "kind": "contain",
+      "line": 29,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "core/input.ts::InputHandler",
+      "target": "core/input.ts::InputHandler._handleTouch",
+      "kind": "contain",
+      "line": 35,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "core/input.ts::InputHandler",
+      "target": "core/input.ts::InputHandler._emitJump",
+      "kind": "contain",
+      "line": 41,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "core/input.ts::InputHandler",
+      "target": "core/input.ts::InputHandler.dispose",
+      "kind": "contain",
+      "line": 48,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "core/state.ts",
+      "target": "core/state.ts::GameController",
+      "kind": "contain",
+      "line": 3,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "core/state.ts::GameController",
+      "target": "core/state.ts::GameController.getSnapshot",
+      "kind": "contain",
+      "line": 9,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "core/state.ts::GameController",
+      "target": "core/state.ts::GameController.setPhase",
+      "kind": "contain",
+      "line": 18,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "core/state.ts::GameController",
+      "target": "core/state.ts::GameController.updateBird",
+      "kind": "contain",
+      "line": 22,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "core/state.ts::GameController",
+      "target": "core/state.ts::GameController.setPipes",
+      "kind": "contain",
+      "line": 26,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "core/state.ts::GameController",
+      "target": "core/state.ts::GameController.incrementScore",
+      "kind": "contain",
+      "line": 30,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "core/state.ts::GameController",
+      "target": "core/state.ts::GameController.gameOver",
+      "kind": "contain",
+      "line": 38,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "core/state.ts::GameController",
+      "target": "core/state.ts::GameController.reset",
+      "kind": "contain",
+      "line": 42,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "engine/physics.ts",
+      "target": "engine/physics.ts::PhysicsController",
+      "kind": "contain",
+      "line": 3,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "engine/physics.ts::PhysicsController",
+      "target": "engine/physics.ts::PhysicsController.update",
+      "kind": "contain",
+      "line": 9,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "engine/physics.ts::PhysicsController",
+      "target": "engine/physics.ts::PhysicsController.jump",
+      "kind": "contain",
+      "line": 21,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "engine/physics.ts::PhysicsController",
+      "target": "engine/physics.ts::PhysicsController.checkCollision",
+      "kind": "contain",
+      "line": 28,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "engine/renderer.ts",
+      "target": "engine/renderer.ts::Renderer",
+      "kind": "contain",
+      "line": 3,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "engine/renderer.ts::Renderer",
+      "target": "engine/renderer.ts::Renderer.constructor",
+      "kind": "contain",
+      "line": 8,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "engine/renderer.ts::Renderer",
+      "target": "engine/renderer.ts::Renderer.render",
+      "kind": "contain",
+      "line": 14,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "engine/renderer.ts::Renderer",
+      "target": "engine/renderer.ts::Renderer.clearCanvas",
+      "kind": "contain",
+      "line": 24,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "engine/renderer.ts::Renderer",
+      "target": "engine/renderer.ts::Renderer.drawBackground",
+      "kind": "contain",
+      "line": 28,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "engine/renderer.ts::Renderer",
+      "target": "engine/renderer.ts::Renderer.drawPipes",
+      "kind": "contain",
+      "line": 33,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "engine/renderer.ts::Renderer",
+      "target": "engine/renderer.ts::Renderer.drawBird",
+      "kind": "contain",
+      "line": 42,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "engine/renderer.ts::Renderer",
+      "target": "engine/renderer.ts::Renderer.drawUI",
+      "kind": "contain",
+      "line": 53,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "engine/renderer.ts::Renderer",
+      "target": "engine/renderer.ts::Renderer.drawOverlay",
+      "kind": "contain",
+      "line": 59,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "tests/integration.test.ts",
+      "target": "tests/integration.test.ts::AssetRegistry",
+      "kind": "contain",
+      "line": 6,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "tests/integration.test.ts::AssetRegistry",
+      "target": "tests/integration.test.ts::AssetRegistry.clear",
+      "kind": "contain",
+      "line": 8,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "tests/integration.test.ts::AssetRegistry",
+      "target": "tests/integration.test.ts::AssetRegistry.load",
+      "kind": "contain",
+      "line": 9,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "tests/integration.test.ts",
+      "target": "tests/integration.test.ts::EngineManager",
+      "kind": "contain",
+      "line": 15,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "tests/integration.test.ts::EngineManager",
+      "target": "tests/integration.test.ts::EngineManager.constructor",
+      "kind": "contain",
+      "line": 19,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "tests/integration.test.ts::EngineManager",
+      "target": "tests/integration.test.ts::EngineManager.update",
+      "kind": "contain",
+      "line": 24,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "tests/integration.test.ts::EngineManager",
+      "target": "tests/integration.test.ts::EngineManager.processPipePass",
+      "kind": "contain",
+      "line": 36,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "tests/integration.test.ts",
+      "target": "tests/integration.test.ts::EngineManager Integration Tests",
+      "kind": "contain",
+      "line": 41,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "tests/integration.test.ts",
+      "target": "tests/integration.test.ts::testGameOverTransition",
+      "kind": "contain",
+      "line": 53,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "tests/integration.test.ts",
+      "target": "tests/integration.test.ts::testScoreIncrementOnPipePass",
+      "kind": "contain",
+      "line": 62,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "tests/integration.test.ts",
+      "target": "tests/integration.test.ts::testAssetFailureState",
+      "kind": "contain",
+      "line": 73,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "tests/performance.test.ts",
+      "target": "tests/performance.test.ts::Performance Tests",
+      "kind": "contain",
+      "line": 5,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "tests/performance.test.ts",
+      "target": "tests/performance.test.ts::maintains frame budget < 16.7ms",
+      "kind": "contain",
+      "line": 14,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "tests/performance.test.ts",
+      "target": "tests/performance.test.ts::maintains stable object pool for pipes",
+      "kind": "contain",
+      "line": 32,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "tests/performance.test.ts",
+      "target": "tests/performance.test.ts::handles physics calculation without excessive latency",
+      "kind": "contain",
+      "line": 42,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "types/game.ts",
+      "target": "types/game.ts::GamePhase",
+      "kind": "contain",
+      "line": 1,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "types/game.ts::GamePhase",
+      "target": "types/game.ts::GamePhase.Menu",
+      "kind": "contain",
+      "line": 2,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "types/game.ts::GamePhase",
+      "target": "types/game.ts::GamePhase.Active",
+      "kind": "contain",
+      "line": 3,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "types/game.ts::GamePhase",
+      "target": "types/game.ts::GamePhase.GameOver",
+      "kind": "contain",
+      "line": 4,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "types/game.ts",
+      "target": "types/game.ts::Bird",
+      "kind": "contain",
+      "line": 7,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "types/game.ts",
+      "target": "types/game.ts::Pipe",
+      "kind": "contain",
+      "line": 14,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "types/game.ts",
+      "target": "types/game.ts::GameSnapshot",
+      "kind": "contain",
+      "line": 22,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    }
+  ]
+}

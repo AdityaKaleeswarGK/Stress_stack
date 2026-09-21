@@ -1,0 +1,1559 @@
+{
+  "schema_version": "0.2.0",
+  "root": "/Users/adityagk/Desktop/projects/FlappyBird-TS-Canvas",
+  "statistics": {
+    "files_total": 9,
+    "files_by_language": {
+      "typescript": 9
+    },
+    "symbols_total": 46,
+    "tests_total": 8,
+    "calls_total": 120,
+    "syntax_errors": 0,
+    "unparsed_known_language": 0,
+    "edges_total": 60,
+    "edges_by_kind": {
+      "contain": 46,
+      "import": 14
+    }
+  },
+  "files": [
+    {
+      "path": "main.ts",
+      "language": "typescript",
+      "parser": "tree_sitter",
+      "has_syntax_error": false,
+      "imports": [
+        {
+          "raw": "import { GameController } from './core/state';",
+          "module": "./core/state",
+          "symbols": [
+            "GameController"
+          ],
+          "line": 1
+        },
+        {
+          "raw": "import { InputHandler } from './core/input';",
+          "module": "./core/input",
+          "symbols": [
+            "InputHandler"
+          ],
+          "line": 2
+        },
+        {
+          "raw": "import { PhysicsController } from './engine/physics';",
+          "module": "./engine/physics",
+          "symbols": [
+            "PhysicsController"
+          ],
+          "line": 3
+        },
+        {
+          "raw": "import { Renderer } from './engine/renderer';",
+          "module": "./engine/renderer",
+          "symbols": [
+            "Renderer"
+          ],
+          "line": 4
+        },
+        {
+          "raw": "import { GamePhase } from './types/game';",
+          "module": "./types/game",
+          "symbols": [
+            "GamePhase"
+          ],
+          "line": 5
+        }
+      ],
+      "symbols": [
+        {
+          "name": "spawnPipe",
+          "qualified_name": "spawnPipe",
+          "kind": "function",
+          "start_line": 39,
+          "end_line": 52,
+          "first_body_line": 39,
+          "last_body_line": 52,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 1212,
+          "body_end_byte": 1514,
+          "bases": [],
+          "parent": "",
+          "id": "main.ts::spawnPipe"
+        },
+        {
+          "name": "gameLoop",
+          "qualified_name": "gameLoop",
+          "kind": "function",
+          "start_line": 54,
+          "end_line": 95,
+          "first_body_line": 54,
+          "last_body_line": 95,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 1553,
+          "body_end_byte": 2704,
+          "bases": [],
+          "parent": "",
+          "id": "main.ts::gameLoop"
+        }
+      ]
+    },
+    {
+      "path": "vite.config.ts",
+      "language": "typescript",
+      "parser": "tree_sitter",
+      "has_syntax_error": false,
+      "imports": [
+        {
+          "raw": "import { defineConfig } from 'vite';",
+          "module": "vite",
+          "symbols": [
+            "defineConfig"
+          ],
+          "line": 1
+        }
+      ],
+      "symbols": []
+    },
+    {
+      "path": "core/input.ts",
+      "language": "typescript",
+      "parser": "tree_sitter",
+      "has_syntax_error": false,
+      "imports": [
+        {
+          "raw": "import { GamePhase } from '../types/game';",
+          "module": "../types/game",
+          "symbols": [
+            "GamePhase"
+          ],
+          "line": 1
+        }
+      ],
+      "symbols": [
+        {
+          "name": "InputHandler",
+          "qualified_name": "InputHandler",
+          "kind": "class",
+          "start_line": 5,
+          "end_line": 53,
+          "first_body_line": 5,
+          "last_body_line": 53,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 116,
+          "body_end_byte": 1470,
+          "bases": [],
+          "parent": "",
+          "id": "core/input.ts::InputHandler"
+        },
+        {
+          "name": "constructor",
+          "qualified_name": "InputHandler.constructor",
+          "kind": "method",
+          "start_line": 10,
+          "end_line": 15,
+          "first_body_line": 10,
+          "last_body_line": 15,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 274,
+          "body_end_byte": 523,
+          "bases": [],
+          "parent": "InputHandler",
+          "id": "core/input.ts::InputHandler.constructor"
+        },
+        {
+          "name": "setPhase",
+          "qualified_name": "InputHandler.setPhase",
+          "kind": "method",
+          "start_line": 17,
+          "end_line": 19,
+          "first_body_line": 17,
+          "last_body_line": 19,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 561,
+          "body_end_byte": 591,
+          "bases": [],
+          "parent": "InputHandler",
+          "id": "core/input.ts::InputHandler.setPhase"
+        },
+        {
+          "name": "_handleKeyDown",
+          "qualified_name": "InputHandler._handleKeyDown",
+          "kind": "method",
+          "start_line": 21,
+          "end_line": 27,
+          "first_body_line": 21,
+          "last_body_line": 27,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 636,
+          "body_end_byte": 803,
+          "bases": [],
+          "parent": "InputHandler",
+          "id": "core/input.ts::InputHandler._handleKeyDown"
+        },
+        {
+          "name": "_handleKeyUp",
+          "qualified_name": "InputHandler._handleKeyUp",
+          "kind": "method",
+          "start_line": 29,
+          "end_line": 33,
+          "first_body_line": 29,
+          "last_body_line": 33,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 846,
+          "body_end_byte": 946,
+          "bases": [],
+          "parent": "InputHandler",
+          "id": "core/input.ts::InputHandler._handleKeyUp"
+        },
+        {
+          "name": "_handleTouch",
+          "qualified_name": "InputHandler._handleTouch",
+          "kind": "method",
+          "start_line": 35,
+          "end_line": 39,
+          "first_body_line": 35,
+          "last_body_line": 39,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 986,
+          "body_end_byte": 1089,
+          "bases": [],
+          "parent": "InputHandler",
+          "id": "core/input.ts::InputHandler._handleTouch"
+        },
+        {
+          "name": "_emitJump",
+          "qualified_name": "InputHandler._emitJump",
+          "kind": "method",
+          "start_line": 41,
+          "end_line": 46,
+          "first_body_line": 41,
+          "last_body_line": 46,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 1113,
+          "body_end_byte": 1220,
+          "bases": [],
+          "parent": "InputHandler",
+          "id": "core/input.ts::InputHandler._emitJump"
+        },
+        {
+          "name": "dispose",
+          "qualified_name": "InputHandler.dispose",
+          "kind": "method",
+          "start_line": 48,
+          "end_line": 52,
+          "first_body_line": 48,
+          "last_body_line": 52,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 1241,
+          "body_end_byte": 1468,
+          "bases": [],
+          "parent": "InputHandler",
+          "id": "core/input.ts::InputHandler.dispose"
+        }
+      ]
+    },
+    {
+      "path": "core/state.ts",
+      "language": "typescript",
+      "parser": "tree_sitter",
+      "has_syntax_error": false,
+      "imports": [
+        {
+          "raw": "import { GamePhase, Bird, Pipe, GameSnapshot } from '../types/game';",
+          "module": "../types/game",
+          "symbols": [
+            "GamePhase",
+            "Bird",
+            "Pipe",
+            "GameSnapshot"
+          ],
+          "line": 1
+        }
+      ],
+      "symbols": [
+        {
+          "name": "GameController",
+          "qualified_name": "GameController",
+          "kind": "class",
+          "start_line": 3,
+          "end_line": 48,
+          "first_body_line": 3,
+          "last_body_line": 48,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 98,
+          "body_end_byte": 1205,
+          "bases": [],
+          "parent": "",
+          "id": "core/state.ts::GameController"
+        },
+        {
+          "name": "getSnapshot",
+          "qualified_name": "GameController.getSnapshot",
+          "kind": "method",
+          "start_line": 9,
+          "end_line": 16,
+          "first_body_line": 9,
+          "last_body_line": 16,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 310,
+          "body_end_byte": 461,
+          "bases": [],
+          "parent": "GameController",
+          "id": "core/state.ts::GameController.getSnapshot"
+        },
+        {
+          "name": "setPhase",
+          "qualified_name": "GameController.setPhase",
+          "kind": "method",
+          "start_line": 18,
+          "end_line": 20,
+          "first_body_line": 18,
+          "last_body_line": 20,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 505,
+          "body_end_byte": 534,
+          "bases": [],
+          "parent": "GameController",
+          "id": "core/state.ts::GameController.setPhase"
+        },
+        {
+          "name": "updateBird",
+          "qualified_name": "GameController.updateBird",
+          "kind": "method",
+          "start_line": 22,
+          "end_line": 24,
+          "first_body_line": 22,
+          "last_body_line": 24,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 589,
+          "body_end_byte": 643,
+          "bases": [],
+          "parent": "GameController",
+          "id": "core/state.ts::GameController.updateBird"
+        },
+        {
+          "name": "setPipes",
+          "qualified_name": "GameController.setPipes",
+          "kind": "method",
+          "start_line": 26,
+          "end_line": 28,
+          "first_body_line": 26,
+          "last_body_line": 28,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 684,
+          "body_end_byte": 713,
+          "bases": [],
+          "parent": "GameController",
+          "id": "core/state.ts::GameController.setPipes"
+        },
+        {
+          "name": "incrementScore",
+          "qualified_name": "GameController.incrementScore",
+          "kind": "method",
+          "start_line": 30,
+          "end_line": 36,
+          "first_body_line": 30,
+          "last_body_line": 36,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 761,
+          "body_end_byte": 968,
+          "bases": [],
+          "parent": "GameController",
+          "id": "core/state.ts::GameController.incrementScore"
+        },
+        {
+          "name": "gameOver",
+          "qualified_name": "GameController.gameOver",
+          "kind": "method",
+          "start_line": 38,
+          "end_line": 40,
+          "first_body_line": 38,
+          "last_body_line": 40,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 996,
+          "body_end_byte": 1038,
+          "bases": [],
+          "parent": "GameController",
+          "id": "core/state.ts::GameController.gameOver"
+        },
+        {
+          "name": "reset",
+          "qualified_name": "GameController.reset",
+          "kind": "method",
+          "start_line": 42,
+          "end_line": 47,
+          "first_body_line": 42,
+          "last_body_line": 47,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 1063,
+          "body_end_byte": 1203,
+          "bases": [],
+          "parent": "GameController",
+          "id": "core/state.ts::GameController.reset"
+        }
+      ]
+    },
+    {
+      "path": "engine/physics.ts",
+      "language": "typescript",
+      "parser": "tree_sitter",
+      "has_syntax_error": false,
+      "imports": [
+        {
+          "raw": "import { Bird, Pipe } from '../types/game';",
+          "module": "../types/game",
+          "symbols": [
+            "Bird",
+            "Pipe"
+          ],
+          "line": 1
+        }
+      ],
+      "symbols": [
+        {
+          "name": "PhysicsController",
+          "qualified_name": "PhysicsController",
+          "kind": "class",
+          "start_line": 3,
+          "end_line": 53,
+          "first_body_line": 3,
+          "last_body_line": 53,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 76,
+          "body_end_byte": 1442,
+          "bases": [],
+          "parent": "",
+          "id": "engine/physics.ts::PhysicsController"
+        },
+        {
+          "name": "update",
+          "qualified_name": "PhysicsController.update",
+          "kind": "method",
+          "start_line": 9,
+          "end_line": 19,
+          "first_body_line": 9,
+          "last_body_line": 19,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 299,
+          "body_end_byte": 509,
+          "bases": [],
+          "parent": "PhysicsController",
+          "id": "engine/physics.ts::PhysicsController.update"
+        },
+        {
+          "name": "jump",
+          "qualified_name": "PhysicsController.jump",
+          "kind": "method",
+          "start_line": 21,
+          "end_line": 26,
+          "first_body_line": 21,
+          "last_body_line": 26,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 543,
+          "body_end_byte": 614,
+          "bases": [],
+          "parent": "PhysicsController",
+          "id": "engine/physics.ts::PhysicsController.jump"
+        },
+        {
+          "name": "checkCollision",
+          "qualified_name": "PhysicsController.checkCollision",
+          "kind": "method",
+          "start_line": 28,
+          "end_line": 52,
+          "first_body_line": 28,
+          "last_body_line": 52,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 685,
+          "body_end_byte": 1440,
+          "bases": [],
+          "parent": "PhysicsController",
+          "id": "engine/physics.ts::PhysicsController.checkCollision"
+        }
+      ]
+    },
+    {
+      "path": "engine/renderer.ts",
+      "language": "typescript",
+      "parser": "tree_sitter",
+      "has_syntax_error": false,
+      "imports": [
+        {
+          "raw": "import { GameSnapshot, Bird, Pipe, GamePhase } from '../types/game';",
+          "module": "../types/game",
+          "symbols": [
+            "GameSnapshot",
+            "Bird",
+            "Pipe",
+            "GamePhase"
+          ],
+          "line": 1
+        }
+      ],
+      "symbols": [
+        {
+          "name": "Renderer",
+          "qualified_name": "Renderer",
+          "kind": "class",
+          "start_line": 3,
+          "end_line": 70,
+          "first_body_line": 3,
+          "last_body_line": 70,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 92,
+          "body_end_byte": 2296,
+          "bases": [],
+          "parent": "",
+          "id": "engine/renderer.ts::Renderer"
+        },
+        {
+          "name": "constructor",
+          "qualified_name": "Renderer.constructor",
+          "kind": "method",
+          "start_line": 8,
+          "end_line": 12,
+          "first_body_line": 8,
+          "last_body_line": 12,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 228,
+          "body_end_byte": 338,
+          "bases": [],
+          "parent": "Renderer",
+          "id": "engine/renderer.ts::Renderer.constructor"
+        },
+        {
+          "name": "render",
+          "qualified_name": "Renderer.render",
+          "kind": "method",
+          "start_line": 14,
+          "end_line": 22,
+          "first_body_line": 14,
+          "last_body_line": 22,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 386,
+          "body_end_byte": 789,
+          "bases": [],
+          "parent": "Renderer",
+          "id": "engine/renderer.ts::Renderer.render"
+        },
+        {
+          "name": "clearCanvas",
+          "qualified_name": "Renderer.clearCanvas",
+          "kind": "method",
+          "start_line": 24,
+          "end_line": 26,
+          "first_body_line": 24,
+          "last_body_line": 26,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 821,
+          "body_end_byte": 881,
+          "bases": [],
+          "parent": "Renderer",
+          "id": "engine/renderer.ts::Renderer.clearCanvas"
+        },
+        {
+          "name": "drawBackground",
+          "qualified_name": "Renderer.drawBackground",
+          "kind": "method",
+          "start_line": 28,
+          "end_line": 31,
+          "first_body_line": 28,
+          "last_body_line": 31,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 916,
+          "body_end_byte": 1011,
+          "bases": [],
+          "parent": "Renderer",
+          "id": "engine/renderer.ts::Renderer.drawBackground"
+        },
+        {
+          "name": "drawPipes",
+          "qualified_name": "Renderer.drawPipes",
+          "kind": "method",
+          "start_line": 33,
+          "end_line": 40,
+          "first_body_line": 33,
+          "last_body_line": 40,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 1063,
+          "body_end_byte": 1345,
+          "bases": [],
+          "parent": "Renderer",
+          "id": "engine/renderer.ts::Renderer.drawPipes"
+        },
+        {
+          "name": "drawBird",
+          "qualified_name": "Renderer.drawBird",
+          "kind": "method",
+          "start_line": 42,
+          "end_line": 51,
+          "first_body_line": 42,
+          "last_body_line": 51,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 1384,
+          "body_end_byte": 1631,
+          "bases": [],
+          "parent": "Renderer",
+          "id": "engine/renderer.ts::Renderer.drawBird"
+        },
+        {
+          "name": "drawUI",
+          "qualified_name": "Renderer.drawUI",
+          "kind": "method",
+          "start_line": 53,
+          "end_line": 57,
+          "first_body_line": 53,
+          "last_body_line": 57,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 1671,
+          "body_end_byte": 1811,
+          "bases": [],
+          "parent": "Renderer",
+          "id": "engine/renderer.ts::Renderer.drawUI"
+        },
+        {
+          "name": "drawOverlay",
+          "qualified_name": "Renderer.drawOverlay",
+          "kind": "method",
+          "start_line": 59,
+          "end_line": 69,
+          "first_body_line": 59,
+          "last_body_line": 69,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 1874,
+          "body_end_byte": 2294,
+          "bases": [],
+          "parent": "Renderer",
+          "id": "engine/renderer.ts::Renderer.drawOverlay"
+        }
+      ]
+    },
+    {
+      "path": "tests/integration.test.ts",
+      "language": "typescript",
+      "parser": "tree_sitter",
+      "has_syntax_error": false,
+      "imports": [
+        {
+          "raw": "import { describe, it, expect, beforeEach, vi } from 'vitest';",
+          "module": "vitest",
+          "symbols": [
+            "describe",
+            "it",
+            "expect",
+            "beforeEach",
+            "vi"
+          ],
+          "line": 1
+        },
+        {
+          "raw": "import { GameController } from '../core/state';",
+          "module": "../core/state",
+          "symbols": [
+            "GameController"
+          ],
+          "line": 2
+        },
+        {
+          "raw": "import { PhysicsController } from '../engine/physics';",
+          "module": "../engine/physics",
+          "symbols": [
+            "PhysicsController"
+          ],
+          "line": 3
+        },
+        {
+          "raw": "import { GamePhase } from '../types/game';",
+          "module": "../types/game",
+          "symbols": [
+            "GamePhase"
+          ],
+          "line": 4
+        }
+      ],
+      "symbols": [
+        {
+          "name": "AssetRegistry",
+          "qualified_name": "AssetRegistry",
+          "kind": "class",
+          "start_line": 6,
+          "end_line": 13,
+          "first_body_line": 6,
+          "last_body_line": 13,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 230,
+          "body_end_byte": 465,
+          "bases": [],
+          "parent": "",
+          "id": "tests/integration.test.ts::AssetRegistry"
+        },
+        {
+          "name": "clear",
+          "qualified_name": "AssetRegistry.clear",
+          "kind": "method",
+          "start_line": 8,
+          "end_line": 8,
+          "first_body_line": 8,
+          "last_body_line": 8,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 311,
+          "body_end_byte": 335,
+          "bases": [],
+          "parent": "AssetRegistry",
+          "id": "tests/integration.test.ts::AssetRegistry.clear"
+        },
+        {
+          "name": "load",
+          "qualified_name": "AssetRegistry.load",
+          "kind": "method",
+          "start_line": 9,
+          "end_line": 12,
+          "first_body_line": 9,
+          "last_body_line": 12,
+          "is_test": false,
+          "is_async": true,
+          "is_generator": false,
+          "body_start_byte": 389,
+          "body_end_byte": 463,
+          "bases": [],
+          "parent": "AssetRegistry",
+          "id": "tests/integration.test.ts::AssetRegistry.load"
+        },
+        {
+          "name": "EngineManager",
+          "qualified_name": "EngineManager",
+          "kind": "class",
+          "start_line": 15,
+          "end_line": 39,
+          "first_body_line": 15,
+          "last_body_line": 39,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 487,
+          "body_end_byte": 1125,
+          "bases": [],
+          "parent": "",
+          "id": "tests/integration.test.ts::EngineManager"
+        },
+        {
+          "name": "constructor",
+          "qualified_name": "EngineManager.constructor",
+          "kind": "method",
+          "start_line": 19,
+          "end_line": 22,
+          "first_body_line": 19,
+          "last_body_line": 22,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 636,
+          "body_end_byte": 703,
+          "bases": [],
+          "parent": "EngineManager",
+          "id": "tests/integration.test.ts::EngineManager.constructor"
+        },
+        {
+          "name": "update",
+          "qualified_name": "EngineManager.update",
+          "kind": "method",
+          "start_line": 24,
+          "end_line": 34,
+          "first_body_line": 24,
+          "last_body_line": 34,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 723,
+          "body_end_byte": 1031,
+          "bases": [],
+          "parent": "EngineManager",
+          "id": "tests/integration.test.ts::EngineManager.update"
+        },
+        {
+          "name": "processPipePass",
+          "qualified_name": "EngineManager.processPipePass",
+          "kind": "method",
+          "start_line": 36,
+          "end_line": 38,
+          "first_body_line": 36,
+          "last_body_line": 38,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 1074,
+          "body_end_byte": 1123,
+          "bases": [],
+          "parent": "EngineManager",
+          "id": "tests/integration.test.ts::EngineManager.processPipePass"
+        },
+        {
+          "name": "EngineManager Integration Tests",
+          "qualified_name": "EngineManager Integration Tests",
+          "kind": "test",
+          "start_line": 41,
+          "end_line": 76,
+          "first_body_line": 41,
+          "last_body_line": 76,
+          "is_test": true,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "tests/integration.test.ts::EngineManager Integration Tests"
+        },
+        {
+          "name": "testGameOverTransition",
+          "qualified_name": "testGameOverTransition",
+          "kind": "test",
+          "start_line": 53,
+          "end_line": 60,
+          "first_body_line": 53,
+          "last_body_line": 60,
+          "is_test": true,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "tests/integration.test.ts::testGameOverTransition"
+        },
+        {
+          "name": "testScoreIncrementOnPipePass",
+          "qualified_name": "testScoreIncrementOnPipePass",
+          "kind": "test",
+          "start_line": 62,
+          "end_line": 71,
+          "first_body_line": 62,
+          "last_body_line": 71,
+          "is_test": true,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "tests/integration.test.ts::testScoreIncrementOnPipePass"
+        },
+        {
+          "name": "testAssetFailureState",
+          "qualified_name": "testAssetFailureState",
+          "kind": "test",
+          "start_line": 73,
+          "end_line": 75,
+          "first_body_line": 73,
+          "last_body_line": 75,
+          "is_test": true,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "tests/integration.test.ts::testAssetFailureState"
+        }
+      ]
+    },
+    {
+      "path": "tests/performance.test.ts",
+      "language": "typescript",
+      "parser": "tree_sitter",
+      "has_syntax_error": false,
+      "imports": [
+        {
+          "raw": "import { PhysicsController } from '../engine/physics';",
+          "module": "../engine/physics",
+          "symbols": [
+            "PhysicsController"
+          ],
+          "line": 1
+        },
+        {
+          "raw": "import { GameController } from '../core/state';",
+          "module": "../core/state",
+          "symbols": [
+            "GameController"
+          ],
+          "line": 2
+        },
+        {
+          "raw": "import { describe, it, expect, beforeEach, vi } from 'vitest';",
+          "module": "vitest",
+          "symbols": [
+            "describe",
+            "it",
+            "expect",
+            "beforeEach",
+            "vi"
+          ],
+          "line": 3
+        }
+      ],
+      "symbols": [
+        {
+          "name": "Performance Tests",
+          "qualified_name": "Performance Tests",
+          "kind": "test",
+          "start_line": 5,
+          "end_line": 54,
+          "first_body_line": 5,
+          "last_body_line": 54,
+          "is_test": true,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "tests/performance.test.ts::Performance Tests"
+        },
+        {
+          "name": "maintains frame budget < 16.7ms",
+          "qualified_name": "maintains frame budget < 16.7ms",
+          "kind": "test",
+          "start_line": 14,
+          "end_line": 30,
+          "first_body_line": 14,
+          "last_body_line": 30,
+          "is_test": true,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "tests/performance.test.ts::maintains frame budget < 16.7ms"
+        },
+        {
+          "name": "maintains stable object pool for pipes",
+          "qualified_name": "maintains stable object pool for pipes",
+          "kind": "test",
+          "start_line": 32,
+          "end_line": 40,
+          "first_body_line": 32,
+          "last_body_line": 40,
+          "is_test": true,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "tests/performance.test.ts::maintains stable object pool for pipes"
+        },
+        {
+          "name": "handles physics calculation without excessive latency",
+          "qualified_name": "handles physics calculation without excessive latency",
+          "kind": "test",
+          "start_line": 42,
+          "end_line": 53,
+          "first_body_line": 42,
+          "last_body_line": 53,
+          "is_test": true,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "tests/performance.test.ts::handles physics calculation without excessive latency"
+        }
+      ]
+    },
+    {
+      "path": "types/game.ts",
+      "language": "typescript",
+      "parser": "tree_sitter",
+      "has_syntax_error": false,
+      "imports": [],
+      "symbols": []
+    }
+  ],
+  "edges": [
+    {
+      "source": "main.ts",
+      "target": "core/state.ts",
+      "kind": "import",
+      "line": 1,
+      "raw": "import { GameController } from './core/state';",
+      "symbols": [
+        "GameController"
+      ]
+    },
+    {
+      "source": "main.ts",
+      "target": "core/input.ts",
+      "kind": "import",
+      "line": 2,
+      "raw": "import { InputHandler } from './core/input';",
+      "symbols": [
+        "InputHandler"
+      ]
+    },
+    {
+      "source": "main.ts",
+      "target": "engine/physics.ts",
+      "kind": "import",
+      "line": 3,
+      "raw": "import { PhysicsController } from './engine/physics';",
+      "symbols": [
+        "PhysicsController"
+      ]
+    },
+    {
+      "source": "main.ts",
+      "target": "engine/renderer.ts",
+      "kind": "import",
+      "line": 4,
+      "raw": "import { Renderer } from './engine/renderer';",
+      "symbols": [
+        "Renderer"
+      ]
+    },
+    {
+      "source": "main.ts",
+      "target": "types/game.ts",
+      "kind": "import",
+      "line": 5,
+      "raw": "import { GamePhase } from './types/game';",
+      "symbols": [
+        "GamePhase"
+      ]
+    },
+    {
+      "source": "core/input.ts",
+      "target": "types/game.ts",
+      "kind": "import",
+      "line": 1,
+      "raw": "import { GamePhase } from '../types/game';",
+      "symbols": [
+        "GamePhase"
+      ]
+    },
+    {
+      "source": "core/state.ts",
+      "target": "types/game.ts",
+      "kind": "import",
+      "line": 1,
+      "raw": "import { GamePhase, Bird, Pipe, GameSnapshot } from '../types/game';",
+      "symbols": [
+        "GamePhase",
+        "Bird",
+        "Pipe",
+        "GameSnapshot"
+      ]
+    },
+    {
+      "source": "engine/physics.ts",
+      "target": "types/game.ts",
+      "kind": "import",
+      "line": 1,
+      "raw": "import { Bird, Pipe } from '../types/game';",
+      "symbols": [
+        "Bird",
+        "Pipe"
+      ]
+    },
+    {
+      "source": "engine/renderer.ts",
+      "target": "types/game.ts",
+      "kind": "import",
+      "line": 1,
+      "raw": "import { GameSnapshot, Bird, Pipe, GamePhase } from '../types/game';",
+      "symbols": [
+        "GameSnapshot",
+        "Bird",
+        "Pipe",
+        "GamePhase"
+      ]
+    },
+    {
+      "source": "tests/integration.test.ts",
+      "target": "core/state.ts",
+      "kind": "import",
+      "line": 2,
+      "raw": "import { GameController } from '../core/state';",
+      "symbols": [
+        "GameController"
+      ]
+    },
+    {
+      "source": "tests/integration.test.ts",
+      "target": "engine/physics.ts",
+      "kind": "import",
+      "line": 3,
+      "raw": "import { PhysicsController } from '../engine/physics';",
+      "symbols": [
+        "PhysicsController"
+      ]
+    },
+    {
+      "source": "tests/integration.test.ts",
+      "target": "types/game.ts",
+      "kind": "import",
+      "line": 4,
+      "raw": "import { GamePhase } from '../types/game';",
+      "symbols": [
+        "GamePhase"
+      ]
+    },
+    {
+      "source": "tests/performance.test.ts",
+      "target": "engine/physics.ts",
+      "kind": "import",
+      "line": 1,
+      "raw": "import { PhysicsController } from '../engine/physics';",
+      "symbols": [
+        "PhysicsController"
+      ]
+    },
+    {
+      "source": "tests/performance.test.ts",
+      "target": "core/state.ts",
+      "kind": "import",
+      "line": 2,
+      "raw": "import { GameController } from '../core/state';",
+      "symbols": [
+        "GameController"
+      ]
+    },
+    {
+      "source": "main.ts",
+      "target": "main.ts::spawnPipe",
+      "kind": "contain",
+      "line": 39,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "main.ts",
+      "target": "main.ts::gameLoop",
+      "kind": "contain",
+      "line": 54,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "core/input.ts",
+      "target": "core/input.ts::InputHandler",
+      "kind": "contain",
+      "line": 5,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "core/input.ts::InputHandler",
+      "target": "core/input.ts::InputHandler.constructor",
+      "kind": "contain",
+      "line": 10,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "core/input.ts::InputHandler",
+      "target": "core/input.ts::InputHandler.setPhase",
+      "kind": "contain",
+      "line": 17,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "core/input.ts::InputHandler",
+      "target": "core/input.ts::InputHandler._handleKeyDown",
+      "kind": "contain",
+      "line": 21,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "core/input.ts::InputHandler",
+      "target": "core/input.ts::InputHandler._handleKeyUp",
+      "kind": "contain",
+      "line": 29,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "core/input.ts::InputHandler",
+      "target": "core/input.ts::InputHandler._handleTouch",
+      "kind": "contain",
+      "line": 35,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "core/input.ts::InputHandler",
+      "target": "core/input.ts::InputHandler._emitJump",
+      "kind": "contain",
+      "line": 41,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "core/input.ts::InputHandler",
+      "target": "core/input.ts::InputHandler.dispose",
+      "kind": "contain",
+      "line": 48,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "core/state.ts",
+      "target": "core/state.ts::GameController",
+      "kind": "contain",
+      "line": 3,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "core/state.ts::GameController",
+      "target": "core/state.ts::GameController.getSnapshot",
+      "kind": "contain",
+      "line": 9,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "core/state.ts::GameController",
+      "target": "core/state.ts::GameController.setPhase",
+      "kind": "contain",
+      "line": 18,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "core/state.ts::GameController",
+      "target": "core/state.ts::GameController.updateBird",
+      "kind": "contain",
+      "line": 22,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "core/state.ts::GameController",
+      "target": "core/state.ts::GameController.setPipes",
+      "kind": "contain",
+      "line": 26,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "core/state.ts::GameController",
+      "target": "core/state.ts::GameController.incrementScore",
+      "kind": "contain",
+      "line": 30,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "core/state.ts::GameController",
+      "target": "core/state.ts::GameController.gameOver",
+      "kind": "contain",
+      "line": 38,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "core/state.ts::GameController",
+      "target": "core/state.ts::GameController.reset",
+      "kind": "contain",
+      "line": 42,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "engine/physics.ts",
+      "target": "engine/physics.ts::PhysicsController",
+      "kind": "contain",
+      "line": 3,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "engine/physics.ts::PhysicsController",
+      "target": "engine/physics.ts::PhysicsController.update",
+      "kind": "contain",
+      "line": 9,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "engine/physics.ts::PhysicsController",
+      "target": "engine/physics.ts::PhysicsController.jump",
+      "kind": "contain",
+      "line": 21,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "engine/physics.ts::PhysicsController",
+      "target": "engine/physics.ts::PhysicsController.checkCollision",
+      "kind": "contain",
+      "line": 28,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "engine/renderer.ts",
+      "target": "engine/renderer.ts::Renderer",
+      "kind": "contain",
+      "line": 3,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "engine/renderer.ts::Renderer",
+      "target": "engine/renderer.ts::Renderer.constructor",
+      "kind": "contain",
+      "line": 8,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "engine/renderer.ts::Renderer",
+      "target": "engine/renderer.ts::Renderer.render",
+      "kind": "contain",
+      "line": 14,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "engine/renderer.ts::Renderer",
+      "target": "engine/renderer.ts::Renderer.clearCanvas",
+      "kind": "contain",
+      "line": 24,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "engine/renderer.ts::Renderer",
+      "target": "engine/renderer.ts::Renderer.drawBackground",
+      "kind": "contain",
+      "line": 28,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "engine/renderer.ts::Renderer",
+      "target": "engine/renderer.ts::Renderer.drawPipes",
+      "kind": "contain",
+      "line": 33,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "engine/renderer.ts::Renderer",
+      "target": "engine/renderer.ts::Renderer.drawBird",
+      "kind": "contain",
+      "line": 42,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "engine/renderer.ts::Renderer",
+      "target": "engine/renderer.ts::Renderer.drawUI",
+      "kind": "contain",
+      "line": 53,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "engine/renderer.ts::Renderer",
+      "target": "engine/renderer.ts::Renderer.drawOverlay",
+      "kind": "contain",
+      "line": 59,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "tests/integration.test.ts",
+      "target": "tests/integration.test.ts::AssetRegistry",
+      "kind": "contain",
+      "line": 6,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "tests/integration.test.ts::AssetRegistry",
+      "target": "tests/integration.test.ts::AssetRegistry.clear",
+      "kind": "contain",
+      "line": 8,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "tests/integration.test.ts::AssetRegistry",
+      "target": "tests/integration.test.ts::AssetRegistry.load",
+      "kind": "contain",
+      "line": 9,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "tests/integration.test.ts",
+      "target": "tests/integration.test.ts::EngineManager",
+      "kind": "contain",
+      "line": 15,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "tests/integration.test.ts::EngineManager",
+      "target": "tests/integration.test.ts::EngineManager.constructor",
+      "kind": "contain",
+      "line": 19,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "tests/integration.test.ts::EngineManager",
+      "target": "tests/integration.test.ts::EngineManager.update",
+      "kind": "contain",
+      "line": 24,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "tests/integration.test.ts::EngineManager",
+      "target": "tests/integration.test.ts::EngineManager.processPipePass",
+      "kind": "contain",
+      "line": 36,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "tests/integration.test.ts",
+      "target": "tests/integration.test.ts::EngineManager Integration Tests",
+      "kind": "contain",
+      "line": 41,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "tests/integration.test.ts",
+      "target": "tests/integration.test.ts::testGameOverTransition",
+      "kind": "contain",
+      "line": 53,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "tests/integration.test.ts",
+      "target": "tests/integration.test.ts::testScoreIncrementOnPipePass",
+      "kind": "contain",
+      "line": 62,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "tests/integration.test.ts",
+      "target": "tests/integration.test.ts::testAssetFailureState",
+      "kind": "contain",
+      "line": 73,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "tests/performance.test.ts",
+      "target": "tests/performance.test.ts::Performance Tests",
+      "kind": "contain",
+      "line": 5,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "tests/performance.test.ts",
+      "target": "tests/performance.test.ts::maintains frame budget < 16.7ms",
+      "kind": "contain",
+      "line": 14,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "tests/performance.test.ts",
+      "target": "tests/performance.test.ts::maintains stable object pool for pipes",
+      "kind": "contain",
+      "line": 32,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "tests/performance.test.ts",
+      "target": "tests/performance.test.ts::handles physics calculation without excessive latency",
+      "kind": "contain",
+      "line": 42,
+      "raw": "",
+      "symbols": []
+    }
+  ]
+}

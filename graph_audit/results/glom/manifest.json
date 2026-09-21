@@ -1,0 +1,45 @@
+{
+  "git": {
+    "head": "30b477ab65560914a38f331614947d0894701044",
+    "status_porcelain": "M docs/conf.py\n M glom/__init__.py\n M glom/__main__.py\n M glom/_version.py\n M glom/cli.py\n M glom/core.py\n M glom/grouping.py\n M glom/matching.py\n M glom/mutation.py\n M glom/reduction.py\n M glom/streaming.py\n M glom/test/conftest.py\n M glom/test/perf_report.py\n M glom/test/test_basic.py\n M glom/test/test_check.py\n M glom/test/test_cli.py\n M glom/test/test_error.py\n M glom/test/test_fill.py\n M glom/test/test_grouping.py\n M glom/test/test_match.py\n M glom/test/test_mutation.py\n M glom/test/test_path_and_t.py\n M glom/test/test_reduction.py\n M glom/test/test_scope_vars.py\n M glom/test/test_snippets.py\n M glom/test/test_spec.py\n M glom/test/test_streaming.py\n M glom/test/test_target_types.py\n M glom/test/test_tutorial.py\n M glom/tutorial.py\n M setup.py"
+  },
+  "source_sha256": {
+    "setup.py": "7137f01d1d84c191432cb9f7a2589d16607cdd4dab677eb0ac5de3cf32648568",
+    "docs/conf.py": "34d858787257ba94608bb849283011a383e994a11425387879c346e273f876d2",
+    "glom/__init__.py": "66aad97f8f43dc87507cf69c01d20c28f869674b2b62241f2dffb3a77d6af2f4",
+    "glom/__main__.py": "b41349665ed27b927a733ab2973e603306f184f67002f11cb1fd6fa833aba173",
+    "glom/_version.py": "014baaa4535115eae7b59a0f3246899d4e42978cae3d526e638301c92e6e9a5f",
+    "glom/cli.py": "f1183b4e38d3df35dba5c684f4fc162b224bc26ddf59423b2568341f8d6f475c",
+    "glom/core.py": "d6dcf85d9ca58df38df7925090643e8525364a3521fa6a8190de4be86754fdac",
+    "glom/grouping.py": "d79ace9deb8f75522bcc70fc5ad3c235e5b00537d9d61bad3e8f0c1c15abd78b",
+    "glom/matching.py": "996a841cd3d1b88341be41e854a4d9174f4f8d8e546f53703a2de353a7be5e61",
+    "glom/mutation.py": "4286f9e1003fcbc1b16fd4bdd6122f6597405b71e29e8008c7d7abfcd08daaba",
+    "glom/reduction.py": "c206973ab33b47157029df5b8a9aff4d10aba3b9ee2843b59aececd3718871f7",
+    "glom/streaming.py": "a12f684eccd45d2a941e74ee8f0a0f81a856c5a1b17ec22d7f7b3d17e6fc947d",
+    "glom/tutorial.py": "c81e0443987fa1dafa77d40ff36e8bbc023fae51ced82b17db2dda10ccb5404d",
+    "glom/test/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "glom/test/conftest.py": "6fd9bc579762e6d1a6cf42acedf67ee273081c2d7ec90ac72dab92d2d6dcf0c0",
+    "glom/test/perf_report.py": "820b65d1ed4b5e3ada374b583ae7d0c77c3ea6acec7b6a554b16fff6725ae99a",
+    "glom/test/test_basic.py": "e060498b314c5ee16bab4583fd6d80f47259a8703a6891c57d3c13f36b35e91c",
+    "glom/test/test_check.py": "15b82013f851931d214753272a834368ef3157dc3638b6d3b9d308b9ca2affa0",
+    "glom/test/test_cli.py": "8e6b874acd00596f1a0b288baa01d99b6a4810face4f51acd515fe3d9cfc2415",
+    "glom/test/test_error.py": "a2f2c28a9dd26721fde9d5d6740d13c12ef3b42d5caf114f4fdae8444fe1de03",
+    "glom/test/test_fill.py": "ddf2c9a8e1e273e0370615e8443d180a881f8e37b6710298a5cfce0b5dad3476",
+    "glom/test/test_grouping.py": "714b96d8ef14caa0c77cdfd9547be42fa3b8f527169c8b45d7295b5466f17ae8",
+    "glom/test/test_match.py": "2a1efd96f64a1942684796b6ac1e98a1acc9faef226c565bbdb1fba5236a9f05",
+    "glom/test/test_mutation.py": "56a2c1f068229d4750a1cdc0cc3773362a9bd0222aea62a4e4e5c0daf3f84929",
+    "glom/test/test_path_and_t.py": "356a051818f003b184d46d37ad25da8e91dd83c311338b3cf67d4ef39cd4b540",
+    "glom/test/test_reduction.py": "2c0724939d141e80e6ceb4ce6b23955743fd39eef59f917769164fee2c752a87",
+    "glom/test/test_scope_vars.py": "d8117a8aae839976193f9ae8235b15cb2e2407c41f0672337d7418febc55134a",
+    "glom/test/test_snippets.py": "f34c1db8e1703d3d0ce780383fb0ffb8800c08fdf774dc351876b6ad9db9fdb4",
+    "glom/test/test_spec.py": "3f9c8aa3d0cd9960ebedce3e37123194fa1d4f26d14b121b7719f930c0e1d746",
+    "glom/test/test_streaming.py": "c95e0bd2251a811d36cd37ea2a40b27a230a306d079a20ddab0e1a6fdfa92bd2",
+    "glom/test/test_target_types.py": "189927e774528e20bdba9f4f05258db65fcbb2b86f3cb8a7aea0a30357725962",
+    "glom/test/test_tutorial.py": "998d669f9c74023ef47d97192c9c41d3b7f9f37194c244cab96778e037674e9b",
+    "tests/stress_stack_generated/test_generated_2.py": "b0d57e4a6f4facee11d3128825ad4f36b9d917b7b49ec377f6ad42707b17dcac"
+  },
+  "root_config_sha256": {
+    "setup.py": "7137f01d1d84c191432cb9f7a2589d16607cdd4dab677eb0ac5de3cf32648568"
+  },
+  "scanned_sources_digest": "88ede8ceb418c587eccad985decab48cfca14f5bb82d2024d57adc5b85470a04"
+}

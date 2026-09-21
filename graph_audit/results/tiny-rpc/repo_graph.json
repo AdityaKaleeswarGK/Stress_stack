@@ -1,0 +1,1110 @@
+{
+  "schema_version": "0.2.0",
+  "root": "/Users/adityagk/Desktop/projects/tiny-rpc",
+  "statistics": {
+    "files_total": 7,
+    "files_by_language": {
+      "go": 7
+    },
+    "symbols_total": 33,
+    "tests_total": 8,
+    "calls_total": 201,
+    "syntax_errors": 0,
+    "unparsed_known_language": 0,
+    "edges_total": 33,
+    "edges_by_kind": {
+      "contain": 33
+    }
+  },
+  "files": [
+    {
+      "path": "client.go",
+      "language": "go",
+      "parser": "tree_sitter",
+      "has_syntax_error": false,
+      "imports": [
+        {
+          "raw": "\"context\"",
+          "module": "context",
+          "symbols": [],
+          "line": 4
+        },
+        {
+          "raw": "\"encoding/json\"",
+          "module": "encoding/json",
+          "symbols": [],
+          "line": 5
+        },
+        {
+          "raw": "\"fmt\"",
+          "module": "fmt",
+          "symbols": [],
+          "line": 6
+        },
+        {
+          "raw": "\"io\"",
+          "module": "io",
+          "symbols": [],
+          "line": 7
+        },
+        {
+          "raw": "\"net\"",
+          "module": "net",
+          "symbols": [],
+          "line": 8
+        },
+        {
+          "raw": "\"sync\"",
+          "module": "sync",
+          "symbols": [],
+          "line": 9
+        },
+        {
+          "raw": "\"sync/atomic\"",
+          "module": "sync/atomic",
+          "symbols": [],
+          "line": 10
+        }
+      ],
+      "symbols": [
+        {
+          "name": "EncodeRequest",
+          "qualified_name": "EncodeRequest",
+          "kind": "function",
+          "start_line": 13,
+          "end_line": 21,
+          "first_body_line": 13,
+          "last_body_line": 21,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 148,
+          "body_end_byte": 287,
+          "bases": [],
+          "parent": "",
+          "id": "client.go::EncodeRequest"
+        },
+        {
+          "name": "DecodeResponse",
+          "qualified_name": "DecodeResponse",
+          "kind": "function",
+          "start_line": 23,
+          "end_line": 39,
+          "first_body_line": 23,
+          "last_body_line": 39,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 340,
+          "body_end_byte": 716,
+          "bases": [],
+          "parent": "",
+          "id": "client.go::DecodeResponse"
+        },
+        {
+          "name": "Client",
+          "qualified_name": "Client",
+          "kind": "struct",
+          "start_line": 41,
+          "end_line": 46,
+          "first_body_line": 41,
+          "last_body_line": 46,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "client.go::Client"
+        },
+        {
+          "name": "NewClient",
+          "qualified_name": "NewClient",
+          "kind": "function",
+          "start_line": 48,
+          "end_line": 55,
+          "first_body_line": 48,
+          "last_body_line": 55,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 868,
+          "body_end_byte": 961,
+          "bases": [],
+          "parent": "",
+          "id": "client.go::NewClient"
+        },
+        {
+          "name": "readLoop",
+          "qualified_name": "Client.readLoop",
+          "kind": "method",
+          "start_line": 57,
+          "end_line": 68,
+          "first_body_line": 57,
+          "last_body_line": 68,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 991,
+          "body_end_byte": 1183,
+          "bases": [],
+          "parent": "Client",
+          "id": "client.go::Client.readLoop"
+        },
+        {
+          "name": "Call",
+          "qualified_name": "Client.Call",
+          "kind": "method",
+          "start_line": 70,
+          "end_line": 103,
+          "first_body_line": 70,
+          "last_body_line": 103,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 1274,
+          "body_end_byte": 1828,
+          "bases": [],
+          "parent": "Client",
+          "id": "client.go::Client.Call"
+        },
+        {
+          "name": "Close",
+          "qualified_name": "Client.Close",
+          "kind": "method",
+          "start_line": 105,
+          "end_line": 107,
+          "first_body_line": 105,
+          "last_body_line": 107,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 1861,
+          "body_end_byte": 1887,
+          "bases": [],
+          "parent": "Client",
+          "id": "client.go::Client.Close"
+        }
+      ]
+    },
+    {
+      "path": "client_test.go",
+      "language": "go",
+      "parser": "tree_sitter",
+      "has_syntax_error": false,
+      "imports": [
+        {
+          "raw": "\"context\"",
+          "module": "context",
+          "symbols": [],
+          "line": 4
+        },
+        {
+          "raw": "\"encoding/json\"",
+          "module": "encoding/json",
+          "symbols": [],
+          "line": 5
+        },
+        {
+          "raw": "\"io\"",
+          "module": "io",
+          "symbols": [],
+          "line": 6
+        },
+        {
+          "raw": "\"net\"",
+          "module": "net",
+          "symbols": [],
+          "line": 7
+        },
+        {
+          "raw": "\"sync\"",
+          "module": "sync",
+          "symbols": [],
+          "line": 8
+        },
+        {
+          "raw": "\"testing\"",
+          "module": "testing",
+          "symbols": [],
+          "line": 9
+        },
+        {
+          "raw": "\"time\"",
+          "module": "time",
+          "symbols": [],
+          "line": 10
+        }
+      ],
+      "symbols": [
+        {
+          "name": "TestConcurrentCalls",
+          "qualified_name": "TestConcurrentCalls",
+          "kind": "function",
+          "start_line": 13,
+          "end_line": 55,
+          "first_body_line": 13,
+          "last_body_line": 55,
+          "is_test": true,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 133,
+          "body_end_byte": 1063,
+          "bases": [],
+          "parent": "",
+          "id": "client_test.go::TestConcurrentCalls"
+        },
+        {
+          "name": "TestTimeout",
+          "qualified_name": "TestTimeout",
+          "kind": "function",
+          "start_line": 57,
+          "end_line": 77,
+          "first_body_line": 57,
+          "last_body_line": 77,
+          "is_test": true,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 1096,
+          "body_end_byte": 1527,
+          "bases": [],
+          "parent": "",
+          "id": "client_test.go::TestTimeout"
+        },
+        {
+          "name": "TestAtomicIDSequence",
+          "qualified_name": "TestAtomicIDSequence",
+          "kind": "function",
+          "start_line": 79,
+          "end_line": 118,
+          "first_body_line": 79,
+          "last_body_line": 118,
+          "is_test": true,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 1569,
+          "body_end_byte": 2435,
+          "bases": [],
+          "parent": "",
+          "id": "client_test.go::TestAtomicIDSequence"
+        },
+        {
+          "name": "TestInterleavedTraffic",
+          "qualified_name": "TestInterleavedTraffic",
+          "kind": "function",
+          "start_line": 120,
+          "end_line": 161,
+          "first_body_line": 120,
+          "last_body_line": 161,
+          "is_test": true,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 2479,
+          "body_end_byte": 3388,
+          "bases": [],
+          "parent": "",
+          "id": "client_test.go::TestInterleavedTraffic"
+        }
+      ]
+    },
+    {
+      "path": "main.go",
+      "language": "go",
+      "parser": "tree_sitter",
+      "has_syntax_error": false,
+      "imports": [
+        {
+          "raw": "\"context\"",
+          "module": "context",
+          "symbols": [],
+          "line": 4
+        },
+        {
+          "raw": "\"encoding/json\"",
+          "module": "encoding/json",
+          "symbols": [],
+          "line": 5
+        },
+        {
+          "raw": "\"fmt\"",
+          "module": "fmt",
+          "symbols": [],
+          "line": 6
+        },
+        {
+          "raw": "\"net\"",
+          "module": "net",
+          "symbols": [],
+          "line": 7
+        },
+        {
+          "raw": "\"time\"",
+          "module": "time",
+          "symbols": [],
+          "line": 8
+        }
+      ],
+      "symbols": [
+        {
+          "name": "main",
+          "qualified_name": "main",
+          "kind": "function",
+          "start_line": 11,
+          "end_line": 56,
+          "first_body_line": 11,
+          "last_body_line": 56,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 88,
+          "body_end_byte": 1162,
+          "bases": [],
+          "parent": "",
+          "id": "main.go::main"
+        }
+      ]
+    },
+    {
+      "path": "models.go",
+      "language": "go",
+      "parser": "tree_sitter",
+      "has_syntax_error": false,
+      "imports": [
+        {
+          "raw": "\"encoding/binary\"",
+          "module": "encoding/binary",
+          "symbols": [],
+          "line": 4
+        },
+        {
+          "raw": "\"encoding/json\"",
+          "module": "encoding/json",
+          "symbols": [],
+          "line": 5
+        }
+      ],
+      "symbols": [
+        {
+          "name": "Request",
+          "qualified_name": "Request",
+          "kind": "struct",
+          "start_line": 8,
+          "end_line": 12,
+          "first_body_line": 8,
+          "last_body_line": 12,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "models.go::Request"
+        },
+        {
+          "name": "Response",
+          "qualified_name": "Response",
+          "kind": "struct",
+          "start_line": 14,
+          "end_line": 18,
+          "first_body_line": 14,
+          "last_body_line": 18,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "models.go::Response"
+        },
+        {
+          "name": "EncodeFrame",
+          "qualified_name": "EncodeFrame",
+          "kind": "function",
+          "start_line": 20,
+          "end_line": 26,
+          "first_body_line": 20,
+          "last_body_line": 26,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 408,
+          "body_end_byte": 564,
+          "bases": [],
+          "parent": "",
+          "id": "models.go::EncodeFrame"
+        },
+        {
+          "name": "DecodeLength",
+          "qualified_name": "DecodeLength",
+          "kind": "function",
+          "start_line": 28,
+          "end_line": 30,
+          "first_body_line": 28,
+          "last_body_line": 30,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 606,
+          "body_end_byte": 649,
+          "bases": [],
+          "parent": "",
+          "id": "models.go::DecodeLength"
+        }
+      ]
+    },
+    {
+      "path": "registry.go",
+      "language": "go",
+      "parser": "tree_sitter",
+      "has_syntax_error": false,
+      "imports": [
+        {
+          "raw": "\"sync\"",
+          "module": "sync",
+          "symbols": [],
+          "line": 4
+        }
+      ],
+      "symbols": [
+        {
+          "name": "Registry",
+          "qualified_name": "Registry",
+          "kind": "struct",
+          "start_line": 8,
+          "end_line": 11,
+          "first_body_line": 8,
+          "last_body_line": 11,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "registry.go::Registry"
+        },
+        {
+          "name": "NewRegistry",
+          "qualified_name": "NewRegistry",
+          "kind": "function",
+          "start_line": 14,
+          "end_line": 18,
+          "first_body_line": 14,
+          "last_body_line": 18,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 243,
+          "body_end_byte": 309,
+          "bases": [],
+          "parent": "",
+          "id": "registry.go::NewRegistry"
+        },
+        {
+          "name": "Register",
+          "qualified_name": "Registry.Register",
+          "kind": "method",
+          "start_line": 21,
+          "end_line": 27,
+          "first_body_line": 21,
+          "last_body_line": 27,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 412,
+          "body_end_byte": 508,
+          "bases": [],
+          "parent": "Registry",
+          "id": "registry.go::Registry.Register"
+        },
+        {
+          "name": "Unregister",
+          "qualified_name": "Registry.Unregister",
+          "kind": "method",
+          "start_line": 30,
+          "end_line": 34,
+          "first_body_line": 30,
+          "last_body_line": 34,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 608,
+          "body_end_byte": 666,
+          "bases": [],
+          "parent": "Registry",
+          "id": "registry.go::Registry.Unregister"
+        },
+        {
+          "name": "Complete",
+          "qualified_name": "Registry.Complete",
+          "kind": "method",
+          "start_line": 37,
+          "end_line": 49,
+          "first_body_line": 37,
+          "last_body_line": 49,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 792,
+          "body_end_byte": 929,
+          "bases": [],
+          "parent": "Registry",
+          "id": "registry.go::Registry.Complete"
+        }
+      ]
+    },
+    {
+      "path": "server.go",
+      "language": "go",
+      "parser": "tree_sitter",
+      "has_syntax_error": false,
+      "imports": [
+        {
+          "raw": "\"encoding/binary\"",
+          "module": "encoding/binary",
+          "symbols": [],
+          "line": 4
+        },
+        {
+          "raw": "\"encoding/json\"",
+          "module": "encoding/json",
+          "symbols": [],
+          "line": 5
+        },
+        {
+          "raw": "\"fmt\"",
+          "module": "fmt",
+          "symbols": [],
+          "line": 6
+        },
+        {
+          "raw": "\"io\"",
+          "module": "io",
+          "symbols": [],
+          "line": 7
+        },
+        {
+          "raw": "\"net\"",
+          "module": "net",
+          "symbols": [],
+          "line": 8
+        },
+        {
+          "raw": "\"sync\"",
+          "module": "sync",
+          "symbols": [],
+          "line": 9
+        }
+      ],
+      "symbols": [
+        {
+          "name": "HandlerFunc",
+          "qualified_name": "HandlerFunc",
+          "kind": "type",
+          "start_line": 12,
+          "end_line": 12,
+          "first_body_line": 12,
+          "last_body_line": 12,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "server.go::HandlerFunc"
+        },
+        {
+          "name": "Server",
+          "qualified_name": "Server",
+          "kind": "struct",
+          "start_line": 14,
+          "end_line": 17,
+          "first_body_line": 14,
+          "last_body_line": 17,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "server.go::Server"
+        },
+        {
+          "name": "NewServer",
+          "qualified_name": "NewServer",
+          "kind": "function",
+          "start_line": 19,
+          "end_line": 23,
+          "first_body_line": 19,
+          "last_body_line": 23,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 250,
+          "body_end_byte": 315,
+          "bases": [],
+          "parent": "",
+          "id": "server.go::NewServer"
+        },
+        {
+          "name": "Handle",
+          "qualified_name": "Server.Handle",
+          "kind": "method",
+          "start_line": 25,
+          "end_line": 29,
+          "first_body_line": 25,
+          "last_body_line": 29,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 375,
+          "body_end_byte": 440,
+          "bases": [],
+          "parent": "Server",
+          "id": "server.go::Server.Handle"
+        },
+        {
+          "name": "Listen",
+          "qualified_name": "Server.Listen",
+          "kind": "method",
+          "start_line": 31,
+          "end_line": 45,
+          "first_body_line": 31,
+          "last_body_line": 45,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 485,
+          "body_end_byte": 695,
+          "bases": [],
+          "parent": "Server",
+          "id": "server.go::Server.Listen"
+        },
+        {
+          "name": "handleConnection",
+          "qualified_name": "Server.handleConnection",
+          "kind": "method",
+          "start_line": 47,
+          "end_line": 65,
+          "first_body_line": 47,
+          "last_body_line": 65,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 746,
+          "body_end_byte": 1064,
+          "bases": [],
+          "parent": "Server",
+          "id": "server.go::Server.handleConnection"
+        },
+        {
+          "name": "processRequest",
+          "qualified_name": "Server.processRequest",
+          "kind": "method",
+          "start_line": 67,
+          "end_line": 91,
+          "first_body_line": 67,
+          "last_body_line": 91,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 1126,
+          "body_end_byte": 1616,
+          "bases": [],
+          "parent": "Server",
+          "id": "server.go::Server.processRequest"
+        },
+        {
+          "name": "sendResponse",
+          "qualified_name": "Server.sendResponse",
+          "kind": "method",
+          "start_line": 93,
+          "end_line": 107,
+          "first_body_line": 93,
+          "last_body_line": 107,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 1689,
+          "body_end_byte": 1887,
+          "bases": [],
+          "parent": "Server",
+          "id": "server.go::Server.sendResponse"
+        }
+      ]
+    },
+    {
+      "path": "server_test.go",
+      "language": "go",
+      "parser": "tree_sitter",
+      "has_syntax_error": false,
+      "imports": [
+        {
+          "raw": "\"encoding/json\"",
+          "module": "encoding/json",
+          "symbols": [],
+          "line": 4
+        },
+        {
+          "raw": "\"net\"",
+          "module": "net",
+          "symbols": [],
+          "line": 5
+        },
+        {
+          "raw": "\"testing\"",
+          "module": "testing",
+          "symbols": [],
+          "line": 6
+        },
+        {
+          "raw": "\"time\"",
+          "module": "time",
+          "symbols": [],
+          "line": 7
+        }
+      ],
+      "symbols": [
+        {
+          "name": "TestHandlerRegistration",
+          "qualified_name": "TestHandlerRegistration",
+          "kind": "function",
+          "start_line": 10,
+          "end_line": 20,
+          "first_body_line": 10,
+          "last_body_line": 20,
+          "is_test": true,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 112,
+          "body_end_byte": 327,
+          "bases": [],
+          "parent": "",
+          "id": "server_test.go::TestHandlerRegistration"
+        },
+        {
+          "name": "TestPanicRecovery",
+          "qualified_name": "TestPanicRecovery",
+          "kind": "function",
+          "start_line": 22,
+          "end_line": 41,
+          "first_body_line": 22,
+          "last_body_line": 41,
+          "is_test": true,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 366,
+          "body_end_byte": 916,
+          "bases": [],
+          "parent": "",
+          "id": "server_test.go::TestPanicRecovery"
+        },
+        {
+          "name": "TestMalformedFrame",
+          "qualified_name": "TestMalformedFrame",
+          "kind": "function",
+          "start_line": 43,
+          "end_line": 58,
+          "first_body_line": 43,
+          "last_body_line": 58,
+          "is_test": true,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 956,
+          "body_end_byte": 1290,
+          "bases": [],
+          "parent": "",
+          "id": "server_test.go::TestMalformedFrame"
+        },
+        {
+          "name": "TestGoroutineDistribution",
+          "qualified_name": "TestGoroutineDistribution",
+          "kind": "function",
+          "start_line": 60,
+          "end_line": 82,
+          "first_body_line": 60,
+          "last_body_line": 82,
+          "is_test": true,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 1337,
+          "body_end_byte": 1806,
+          "bases": [],
+          "parent": "",
+          "id": "server_test.go::TestGoroutineDistribution"
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "client.go",
+      "target": "client.go::EncodeRequest",
+      "kind": "contain",
+      "line": 13,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "client.go",
+      "target": "client.go::DecodeResponse",
+      "kind": "contain",
+      "line": 23,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "client.go",
+      "target": "client.go::Client",
+      "kind": "contain",
+      "line": 41,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "client.go",
+      "target": "client.go::NewClient",
+      "kind": "contain",
+      "line": 48,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "client.go::Client",
+      "target": "client.go::Client.readLoop",
+      "kind": "contain",
+      "line": 57,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "client.go::Client",
+      "target": "client.go::Client.Call",
+      "kind": "contain",
+      "line": 70,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "client.go::Client",
+      "target": "client.go::Client.Close",
+      "kind": "contain",
+      "line": 105,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "client_test.go",
+      "target": "client_test.go::TestConcurrentCalls",
+      "kind": "contain",
+      "line": 13,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "client_test.go",
+      "target": "client_test.go::TestTimeout",
+      "kind": "contain",
+      "line": 57,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "client_test.go",
+      "target": "client_test.go::TestAtomicIDSequence",
+      "kind": "contain",
+      "line": 79,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "client_test.go",
+      "target": "client_test.go::TestInterleavedTraffic",
+      "kind": "contain",
+      "line": 120,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "main.go",
+      "target": "main.go::main",
+      "kind": "contain",
+      "line": 11,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "models.go",
+      "target": "models.go::Request",
+      "kind": "contain",
+      "line": 8,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "models.go",
+      "target": "models.go::Response",
+      "kind": "contain",
+      "line": 14,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "models.go",
+      "target": "models.go::EncodeFrame",
+      "kind": "contain",
+      "line": 20,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "models.go",
+      "target": "models.go::DecodeLength",
+      "kind": "contain",
+      "line": 28,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "registry.go",
+      "target": "registry.go::Registry",
+      "kind": "contain",
+      "line": 8,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "registry.go",
+      "target": "registry.go::NewRegistry",
+      "kind": "contain",
+      "line": 14,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "registry.go::Registry",
+      "target": "registry.go::Registry.Register",
+      "kind": "contain",
+      "line": 21,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "registry.go::Registry",
+      "target": "registry.go::Registry.Unregister",
+      "kind": "contain",
+      "line": 30,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "registry.go::Registry",
+      "target": "registry.go::Registry.Complete",
+      "kind": "contain",
+      "line": 37,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "server.go",
+      "target": "server.go::HandlerFunc",
+      "kind": "contain",
+      "line": 12,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "server.go",
+      "target": "server.go::Server",
+      "kind": "contain",
+      "line": 14,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "server.go",
+      "target": "server.go::NewServer",
+      "kind": "contain",
+      "line": 19,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "server.go::Server",
+      "target": "server.go::Server.Handle",
+      "kind": "contain",
+      "line": 25,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "server.go::Server",
+      "target": "server.go::Server.Listen",
+      "kind": "contain",
+      "line": 31,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "server.go::Server",
+      "target": "server.go::Server.handleConnection",
+      "kind": "contain",
+      "line": 47,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "server.go::Server",
+      "target": "server.go::Server.processRequest",
+      "kind": "contain",
+      "line": 67,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "server.go::Server",
+      "target": "server.go::Server.sendResponse",
+      "kind": "contain",
+      "line": 93,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "server_test.go",
+      "target": "server_test.go::TestHandlerRegistration",
+      "kind": "contain",
+      "line": 10,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "server_test.go",
+      "target": "server_test.go::TestPanicRecovery",
+      "kind": "contain",
+      "line": 22,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "server_test.go",
+      "target": "server_test.go::TestMalformedFrame",
+      "kind": "contain",
+      "line": 43,
+      "raw": "",
+      "symbols": []
+    },
+    {
+      "source": "server_test.go",
+      "target": "server_test.go::TestGoroutineDistribution",
+      "kind": "contain",
+      "line": 60,
+      "raw": "",
+      "symbols": []
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "git": {
+    "head": "d23f110b240d67ee503eba0082f30cae73f3e1e3",
+    "status_porcelain": ""
+  },
+  "source_sha256": {
+    "docs/conf.py": "273935160b9212ceb7ba7361bcf5525710019e9076fce6dc18f5cc1d40bf35ef",
+    "docs/examples/toy-example.py": "d2732359729271a50c6ce6504af1f73195d8439120265538d38b40b2761024d3",
+    "docs/examples/eggsample/setup.py": "a87fb9c73c4159916b16647caa71abdd6dde0add76f0c4052c25a7cf925c6fc0",
+    "docs/examples/eggsample/eggsample/__init__.py": "0ebc89e9ed78be9e1a2f0085f3fe6e4e232b2b55908ec5bf907a8662c7cb0eed",
+    "docs/examples/eggsample/eggsample/hookspecs.py": "0704b9eff67565a202216848899d77a7d59aed4386c29e6b81585c8a9bb23f71",
+    "docs/examples/eggsample/eggsample/host.py": "db8bfc75ad5f68242dc8d97c98f9e2fce9da1f53a16e332ed538003f7afdc45d",
+    "docs/examples/eggsample/eggsample/lib.py": "5cc64d19e4730c9d20b7396380a832b54444bc34e6453bb9d930ef7d286555d0",
+    "docs/examples/eggsample-spam/eggsample_spam.py": "2d8f7477e2874a785a6bbc9f1884c4995f95ee6bc08368d969701bae4ac09e5a",
+    "docs/examples/eggsample-spam/setup.py": "a4965ad61d2e71a707394a922094a4929022f6b344c67bb5fec5d9ebbbc3cb2e",
+    "downstream/run_downstream.py": "33bde65e829e83b4fad9cdfd3b9683b18f7b61bc8a0c3a7d08b1b73efc247679",
+    "scripts/release.py": "5b351c5a80a67c99e003e2ec6562fa5c93567ec968e773a0859f90fda34248a4",
+    "scripts/towncrier-draft-to-file.py": "a6f6821cfaa039ccdf4cf0b440b3d628e6dbf83581c1d12e1172f68181f6a56b",
+    "src/pluggy/__init__.py": "f94737c0d72ae5af0bb2f2602a231b4e61adfab5567d16e4746141a4badd1465",
+    "src/pluggy/_callers.py": "bcc9618b647069ed52a04b318bbaa93e4daef96e1fad746beb122e7fd95b3846",
+    "src/pluggy/_compat.py": "64a136b0ff61ae478b1662e5b898838f38ebe1ead41bd513f98938d912a0c153",
+    "src/pluggy/_hooks.py": "a5c93af80ca482f10660a2c4c8368b73fb7a4a4307d1f9176f3e63b903d7188a",
+    "src/pluggy/_manager.py": "f8c36f016ee4a55102c3083b154cd8d3a2dc5310051992e15f4a36609b8a16ed",
+    "src/pluggy/_result.py": "f2668b485954c9e3f74a995bc4710d9f0390d012ac48a889a266864151aa5d4c",
+    "src/pluggy/_tracing.py": "499081bfd619d3c5a3acd0a650379e3d727f4cdf1e6cd266cf398707f7b61683",
+    "src/pluggy/_warnings.py": "b5dd00bd90697da9ab8820b73aab0bc31321f92cc03237e399ce7c4f9bcfde5c",
+    "testing/benchmark.py": "9ab7596d77504eccf075ed526dc949b35d0f7a71debf0e34fb11367cc67b5d38",
+    "testing/conftest.py": "5ef97949398e572ec5dcc0f22e14fd485c23e3a8d7db1efa8a83bcf9c869a859",
+    "testing/test_details.py": "df9e3bd18e41bf1fd41b353a56647b355d0cd445fe3a2db246813e7af99e6c15",
+    "testing/test_helpers.py": "414810b7e72a9d0dbe32ca6239d72bf8b065cfeb4b1b9c7e7eb3247d2cab68b3",
+    "testing/test_hookcaller.py": "8d5eab213d8236b72179c2d3b035481ff66c894a530f05c1860e9d6850e7910c",
+    "testing/test_invocations.py": "9edc373fe32534b2ed0a49114594b2cd18315dfaa887166b3ce7e7a66fa93082",
+    "testing/test_multicall.py": "0a17d5dc27ccd00baf2963584c1e06b453cf9151332d294773262953711e84d2",
+    "testing/test_pluginmanager.py": "6deff5163b547079ffab4b226cb28a04d5d04c32ef5204ed4ca1e4e59bcab423",
+    "testing/test_result.py": "4be53ed8a87b816f122a18d6ae1a1d07fccc3844cb3094d1f469a97e746b427a",
+    "testing/test_tracer.py": "04ba67d89fd5c2b66f4d6ca4f796ffdd275c9033d77ab0135d0e6a0870b87c91",
+    "testing/test_warnings.py": "1e83918457071b807ccfa7ed183901b56f5d9649e771aa82128031cc86f82fcb"
+  },
+  "root_config_sha256": {
+    "pyproject.toml": "edc0b72534145e21dc647aa4c0bb63d2da8ccff05b6b88087b16dad99aa2f9d6"
+  },
+  "scanned_sources_digest": "a6a2f424ce164ef107c1fefc5048d331b5262604219840f2faee108b7925233c"
+}

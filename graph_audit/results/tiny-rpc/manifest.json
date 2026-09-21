@@ -1,0 +1,19 @@
+{
+  "git": {
+    "head": null,
+    "status_porcelain": null
+  },
+  "source_sha256": {
+    "client.go": "7d7b1f66a4bce69e33e74c9445b4e9145ebf6eb26f31e06012e7e736dff4e28c",
+    "client_test.go": "a298045ae637ab63abf1a629c1c0941b8502537625c8020f3d0922d34055c751",
+    "main.go": "1a33703869577434a4d19566697e3a66c5ae3bc05494940dcf19ed72cb6451f5",
+    "models.go": "d82b30be6b38a584c3e6616231e1673bc5166f5215bb20449b5a9a505bc64f6f",
+    "registry.go": "8210757ed6a5d33ee40a4658ff1c33997c4a5192f18a5c1a7da3c32a7bb77c78",
+    "server.go": "c34d9aa6150b962e472ad8944bcac36cd5eca587fd12c22cccdbc2b53ac6fdfc",
+    "server_test.go": "be4a4e819959824d3cdcf48d9662932e1ff9118b176af27beef48f54f55b085c"
+  },
+  "root_config_sha256": {
+    "go.mod": "79e8cd8ced58afada9fcfab56eadd8ee3f730e4bf3cfb887733fa094de193e73"
+  },
+  "scanned_sources_digest": "fed51657da1beddb3c0dc8ef45b36328ac73904f12332733a0358b6754557e05"
+}

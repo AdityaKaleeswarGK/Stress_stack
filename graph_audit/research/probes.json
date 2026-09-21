@@ -1,0 +1,171 @@
+{
+  "go_grouped_types": {
+    "fleet": [
+      "A"
+    ],
+    "entity_anchored_query": [
+      {
+        "definition.type": [
+          "A struct {}"
+        ],
+        "name": [
+          "A"
+        ]
+      },
+      {
+        "definition.type": [
+          "B interface {}"
+        ],
+        "name": [
+          "B"
+        ]
+      }
+    ]
+  },
+  "typescript_definitions": {
+    "fleet": [],
+    "dialect_query": [
+      {
+        "definition.interface": [
+          "interface Shape {}"
+        ],
+        "name": [
+          "Shape"
+        ]
+      },
+      {
+        "definition.type": [
+          "type Id = string;"
+        ],
+        "name": [
+          "Id"
+        ]
+      },
+      {
+        "definition.enum": [
+          "enum Color {Red}"
+        ],
+        "name": [
+          "Color"
+        ]
+      }
+    ]
+  },
+  "optional_alias_capture": [
+    {
+      "binding": [
+        "foo"
+      ],
+      "name": [
+        "foo"
+      ]
+    },
+    {
+      "binding": [
+        "bar as baz"
+      ],
+      "name": [
+        "bar"
+      ],
+      "alias": [
+        "baz"
+      ]
+    }
+  ],
+  "rust_function_body_field": "block",
+  "alpha_source_sha256": "f005ff10e11e38d4a0bf3e3a737abaec33a80f7a7d3e99a439255a0915b16b64",
+  "alpha_supplemental_resolver": [
+    {
+      "source": "pkg/a.py",
+      "module": ".b",
+      "expected": "pkg/b.py",
+      "observed": "pkg/b.py",
+      "matches_expected": true,
+      "assumption": null
+    },
+    {
+      "source": "pkg/a.py",
+      "module": "pkg.b",
+      "expected": "pkg/b.py",
+      "observed": "pkg/b.py",
+      "matches_expected": true,
+      "assumption": null
+    },
+    {
+      "source": "pkg/a.py",
+      "module": ".",
+      "expected": "pkg/__init__.py",
+      "observed": null,
+      "matches_expected": false,
+      "assumption": null
+    },
+    {
+      "source": "pkg/a.py",
+      "module": "spkg.b",
+      "expected": "src/spkg/b.py",
+      "observed": null,
+      "matches_expected": false,
+      "assumption": "src is a configured package root"
+    },
+    {
+      "source": "web/a.ts",
+      "module": "./b",
+      "expected": "web/b.ts",
+      "observed": null,
+      "matches_expected": false,
+      "assumption": null
+    }
+  ],
+  "fleet_ignore": [
+    {
+      "patterns": [
+        "/root.py"
+      ],
+      "path": "root.py",
+      "git_style_expected": true,
+      "observed": false,
+      "matches_expected": false
+    },
+    {
+      "patterns": [
+        "/root.py"
+      ],
+      "path": "nested/root.py",
+      "git_style_expected": false,
+      "observed": false,
+      "matches_expected": true
+    },
+    {
+      "patterns": [
+        "nested/skip.py"
+      ],
+      "path": "nested/skip.py",
+      "git_style_expected": true,
+      "observed": false,
+      "matches_expected": false
+    },
+    {
+      "patterns": [
+        "**/skip.py"
+      ],
+      "path": "nested/skip.py",
+      "git_style_expected": true,
+      "observed": false,
+      "matches_expected": false
+    },
+    {
+      "patterns": [
+        "*.py",
+        "!keep.py"
+      ],
+      "path": "keep.py",
+      "git_style_expected": false,
+      "observed": true,
+      "matches_expected": false
+    }
+  ],
+  "versions": {
+    "tree-sitter": "0.26.0",
+    "tree-sitter-language-pack": "1.16.2"
+  }
+}

@@ -1,0 +1,327 @@
+{
+  "summary": {
+    "label": "tiny-rpc",
+    "root": "/Users/adityagk/Desktop/projects/tiny-rpc",
+    "files_total": 7,
+    "files_by_language": {
+      "go": 7
+    },
+    "symbols_total": 33,
+    "tests_total": 8,
+    "calls_total": 201,
+    "syntax_errors": 0,
+    "unparsed_known_language": 0,
+    "edges_total": 33,
+    "edges_by_kind": {
+      "contain": 33
+    },
+    "scan_seconds": 0.02,
+    "import_records": 32,
+    "import_records_with_any_edge_on_line": 0,
+    "import_count_caveat": "Records without edges include external imports and unsupported resolution; this is not recall. Multiple bindings on a line can be only partly resolved.",
+    "files_with_incoming_edges": 0,
+    "most_imported_files": [],
+    "docstrings_in_memory": 0,
+    "docstrings_saved": 0,
+    "calls_saved": 0,
+    "issues": {
+      "duplicate_symbol_ids": {},
+      "dangling_edges": [],
+      "symbol_parents_missing_in_file": [],
+      "python_definitions_not_indexed": []
+    },
+    "previous": null
+  },
+  "files": [
+    {
+      "path": "client.go",
+      "language": "go",
+      "parser": "tree_sitter",
+      "syntax_error": false,
+      "symbols": 7,
+      "calls_in_memory": 26,
+      "calls_with_declared_symbol_owner": 0,
+      "docstrings_in_memory": 0,
+      "incoming_edge_count": 0,
+      "incoming_files": [],
+      "imports_without_resolved_edge_on_line": [
+        {
+          "raw": "\"context\"",
+          "module": "context",
+          "symbols": [],
+          "line": 4
+        },
+        {
+          "raw": "\"encoding/json\"",
+          "module": "encoding/json",
+          "symbols": [],
+          "line": 5
+        },
+        {
+          "raw": "\"fmt\"",
+          "module": "fmt",
+          "symbols": [],
+          "line": 6
+        },
+        {
+          "raw": "\"io\"",
+          "module": "io",
+          "symbols": [],
+          "line": 7
+        },
+        {
+          "raw": "\"net\"",
+          "module": "net",
+          "symbols": [],
+          "line": 8
+        },
+        {
+          "raw": "\"sync\"",
+          "module": "sync",
+          "symbols": [],
+          "line": 9
+        },
+        {
+          "raw": "\"sync/atomic\"",
+          "module": "sync/atomic",
+          "symbols": [],
+          "line": 10
+        }
+      ]
+    },
+    {
+      "path": "client_test.go",
+      "language": "go",
+      "parser": "tree_sitter",
+      "syntax_error": false,
+      "symbols": 4,
+      "calls_in_memory": 77,
+      "calls_with_declared_symbol_owner": 0,
+      "docstrings_in_memory": 0,
+      "incoming_edge_count": 0,
+      "incoming_files": [],
+      "imports_without_resolved_edge_on_line": [
+        {
+          "raw": "\"context\"",
+          "module": "context",
+          "symbols": [],
+          "line": 4
+        },
+        {
+          "raw": "\"encoding/json\"",
+          "module": "encoding/json",
+          "symbols": [],
+          "line": 5
+        },
+        {
+          "raw": "\"io\"",
+          "module": "io",
+          "symbols": [],
+          "line": 6
+        },
+        {
+          "raw": "\"net\"",
+          "module": "net",
+          "symbols": [],
+          "line": 7
+        },
+        {
+          "raw": "\"sync\"",
+          "module": "sync",
+          "symbols": [],
+          "line": 8
+        },
+        {
+          "raw": "\"testing\"",
+          "module": "testing",
+          "symbols": [],
+          "line": 9
+        },
+        {
+          "raw": "\"time\"",
+          "module": "time",
+          "symbols": [],
+          "line": 10
+        }
+      ]
+    },
+    {
+      "path": "main.go",
+      "language": "go",
+      "parser": "tree_sitter",
+      "syntax_error": false,
+      "symbols": 1,
+      "calls_in_memory": 18,
+      "calls_with_declared_symbol_owner": 0,
+      "docstrings_in_memory": 0,
+      "incoming_edge_count": 0,
+      "incoming_files": [],
+      "imports_without_resolved_edge_on_line": [
+        {
+          "raw": "\"context\"",
+          "module": "context",
+          "symbols": [],
+          "line": 4
+        },
+        {
+          "raw": "\"encoding/json\"",
+          "module": "encoding/json",
+          "symbols": [],
+          "line": 5
+        },
+        {
+          "raw": "\"fmt\"",
+          "module": "fmt",
+          "symbols": [],
+          "line": 6
+        },
+        {
+          "raw": "\"net\"",
+          "module": "net",
+          "symbols": [],
+          "line": 7
+        },
+        {
+          "raw": "\"time\"",
+          "module": "time",
+          "symbols": [],
+          "line": 8
+        }
+      ]
+    },
+    {
+      "path": "models.go",
+      "language": "go",
+      "parser": "tree_sitter",
+      "syntax_error": false,
+      "symbols": 4,
+      "calls_in_memory": 6,
+      "calls_with_declared_symbol_owner": 0,
+      "docstrings_in_memory": 0,
+      "incoming_edge_count": 0,
+      "incoming_files": [],
+      "imports_without_resolved_edge_on_line": [
+        {
+          "raw": "\"encoding/binary\"",
+          "module": "encoding/binary",
+          "symbols": [],
+          "line": 4
+        },
+        {
+          "raw": "\"encoding/json\"",
+          "module": "encoding/json",
+          "symbols": [],
+          "line": 5
+        }
+      ]
+    },
+    {
+      "path": "registry.go",
+      "language": "go",
+      "parser": "tree_sitter",
+      "syntax_error": false,
+      "symbols": 5,
+      "calls_in_memory": 12,
+      "calls_with_declared_symbol_owner": 0,
+      "docstrings_in_memory": 0,
+      "incoming_edge_count": 0,
+      "incoming_files": [],
+      "imports_without_resolved_edge_on_line": [
+        {
+          "raw": "\"sync\"",
+          "module": "sync",
+          "symbols": [],
+          "line": 4
+        }
+      ]
+    },
+    {
+      "path": "server.go",
+      "language": "go",
+      "parser": "tree_sitter",
+      "syntax_error": false,
+      "symbols": 8,
+      "calls_in_memory": 29,
+      "calls_with_declared_symbol_owner": 0,
+      "docstrings_in_memory": 0,
+      "incoming_edge_count": 0,
+      "incoming_files": [],
+      "imports_without_resolved_edge_on_line": [
+        {
+          "raw": "\"encoding/binary\"",
+          "module": "encoding/binary",
+          "symbols": [],
+          "line": 4
+        },
+        {
+          "raw": "\"encoding/json\"",
+          "module": "encoding/json",
+          "symbols": [],
+          "line": 5
+        },
+        {
+          "raw": "\"fmt\"",
+          "module": "fmt",
+          "symbols": [],
+          "line": 6
+        },
+        {
+          "raw": "\"io\"",
+          "module": "io",
+          "symbols": [],
+          "line": 7
+        },
+        {
+          "raw": "\"net\"",
+          "module": "net",
+          "symbols": [],
+          "line": 8
+        },
+        {
+          "raw": "\"sync\"",
+          "module": "sync",
+          "symbols": [],
+          "line": 9
+        }
+      ]
+    },
+    {
+      "path": "server_test.go",
+      "language": "go",
+      "parser": "tree_sitter",
+      "syntax_error": false,
+      "symbols": 4,
+      "calls_in_memory": 33,
+      "calls_with_declared_symbol_owner": 0,
+      "docstrings_in_memory": 0,
+      "incoming_edge_count": 0,
+      "incoming_files": [],
+      "imports_without_resolved_edge_on_line": [
+        {
+          "raw": "\"encoding/json\"",
+          "module": "encoding/json",
+          "symbols": [],
+          "line": 4
+        },
+        {
+          "raw": "\"net\"",
+          "module": "net",
+          "symbols": [],
+          "line": 5
+        },
+        {
+          "raw": "\"testing\"",
+          "module": "testing",
+          "symbols": [],
+          "line": 6
+        },
+        {
+          "raw": "\"time\"",
+          "module": "time",
+          "symbols": [],
+          "line": 7
+        }
+      ]
+    }
+  ]
+}

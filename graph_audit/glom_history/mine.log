@@ -1,0 +1,108 @@
+Fleet v0.0.0 commit database
+Repo: mahmoud/glom   ref: HEAD
+✓ 424 integration point(s) on the mainline
+✓ 58 kept, 182 dropped (423 diffs measured)
+! 184 commit(s) need enrichment — no PR number in the subject, so a rebase-merge
+and a direct push are indistinguishable here. Deferred, not dropped.
+By merge style: 17 squash, 41 merge_commit
+           Dropped           
+┏━━━━━━━━━━━━━━━━━━━┳━━━━━━━┓
+┃ Reason            ┃ Count ┃
+┡━━━━━━━━━━━━━━━━━━━╇━━━━━━━┩
+│ no_source_change  │   175 │
+│ diff_too_large    │     4 │
+│ diff_too_small    │     1 │
+│ diff_unavailable  │     1 │
+│ base_before_graft │     1 │
+└───────────────────┴───────┘
+                             Commits (newest first)                             
+┏━━━━━━┳━━━━━━━━━━━━┳━━━━━━━━━━━━┳━━━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━┳━━━━━━━━━━━━━┓
+┃   PR ┃ Commit     ┃ Base       ┃ Style       ┃       +/- ┃ src ┃ Subject     ┃
+┡━━━━━━╇━━━━━━━━━━━━╇━━━━━━━━━━━━╇━━━━━━━━━━━━━╇━━━━━━━━━━━╇━━━━━╇━━━━━━━━━━━━━┩
+│ #298 │ e515fb33c7 │ 64141ba479 │ squash      │   +46/-12 │  14 │ Keep        │
+│      │            │            │             │           │     │ PathAccess… │
+│      │            │            │             │           │     │ printable   │
+│      │            │            │             │           │     │ for Scope/S │
+│      │            │            │             │           │     │ p           │
+│ #296 │ 9716620ce5 │ 533a1025b6 │ squash      │    +25/-9 │   1 │ Add Python  │
+│      │            │            │             │           │     │ 3.13 and    │
+│      │            │            │             │           │     │ 3.14 tests  │
+│      │            │            │             │           │     │ and fixes   │
+│      │            │            │             │           │     │ (#2         │
+│ #285 │ bc653da9af │ 24c21dcc44 │ squash      │ +260/-227 │ 242 │ Add Python  │
+│      │            │            │             │           │     │ 3.12 (#285) │
+│ #280 │ 24c21dcc44 │ 5cef40707d │ squash      │    +20/-5 │  17 │ Add         │
+│      │            │            │             │           │     │ --scalar    │
+│      │            │            │             │           │     │ flag to CLI │
+│      │            │            │             │           │     │ (#280)      │
+│ #281 │ 3cd57b6a6e │ 2e0c552078 │ squash      │   +11/-10 │  21 │ Format BSD  │
+│      │            │            │             │           │     │ license to  │
+│      │            │            │             │           │     │ be          │
+│      │            │            │             │           │     │ recognizab… │
+│      │            │            │             │           │     │ by Git      │
+│ #279 │ 2e0c552078 │ f9a68b0022 │ squash      │   +41/-13 │  10 │ Upgrade     │
+│      │            │            │             │           │     │ requiremen… │
+│      │            │            │             │           │     │ (#279)      │
+│ #277 │ 9082ab6f98 │ 573cb911ae │ squash      │    +43/-6 │  19 │ Add support │
+│      │            │            │             │           │     │ for TOML    │
+│      │            │            │             │           │     │ files to    │
+│      │            │            │             │           │     │ the CLI.    │
+│      │            │            │             │           │     │ (#277       │
+│ #275 │ 573cb911ae │ c8502f22e4 │ squash      │     +1/-1 │   2 │ Fix typo in │
+│      │            │            │             │           │     │ `core.py`   │
+│      │            │            │             │           │     │ (#275)      │
+│ #271 │ d285e7399c │ b56250387e │ squash      │    +55/-5 │  33 │ Handle      │
+│      │            │            │             │           │     │ Python 3.11 │
+│      │            │            │             │           │     │ (#271)      │
+│ #262 │ 34315014fe │ c97b71a1e4 │ squash      │     +2/-2 │   2 │ bump yaml   │
+│      │            │            │             │           │     │ and switch  │
+│      │            │            │             │           │     │ to safe     │
+│      │            │            │             │           │     │ load (#262) │
+│ #235 │ c97b71a1e4 │ e677614386 │ squash      │   +27/-30 │  57 │ conservati… │
+│      │            │            │             │           │     │ removal of  │
+│      │            │            │             │           │     │ weakrefs    │
+│      │            │            │             │           │     │ fromT (#235 │
+│ #258 │ f3b407186a │ e34304301c │ squash      │     +1/-1 │   2 │ Fix invalid │
+│      │            │            │             │           │     │ escape      │
+│      │            │            │             │           │     │ sequence '\ │
+│      │            │            │             │           │     │ ' warning   │
+│      │            │            │             │           │     │ (#2         │
+│ #255 │ ec19f8b29e │ a8de39dda6 │ squash      │  +28/-282 │ 235 │ Only        │
+│      │            │            │             │           │     │ supporting  │
+│      │            │            │             │           │     │ Python 3.7+ │
+│      │            │            │             │           │     │ (including  │
+│      │            │            │             │           │     │ dropp       │
+│ #251 │ 547698323a │ 13432c2c03 │ squash      │     +8/-8 │   6 │ cleaned up  │
+│      │            │            │             │           │     │ grouping    │
+│      │            │            │             │           │     │ tests to    │
+│      │            │            │             │           │     │ take        │
+│      │            │            │             │           │     │ advantage   │
+│ #250 │ 85a7a3a4a8 │ eea1510767 │ squash      │     +9/-7 │   3 │ ** now      │
+│      │            │            │             │           │     │ considers   │
+│      │            │            │             │           │     │ root        │
+│      │            │            │             │           │     │ element     │
+│      │            │            │             │           │     │ part of     │
+│      │            │            │             │           │     │ iterat      │
+│    — │ 94b63752c6 │ 599496d9f5 │ merge_comm… │  +168/-61 │ 153 │ Merge pull  │
+│      │            │            │             │           │     │ request     │
+│      │            │            │             │           │     │ #196 from   │
+│      │            │            │             │           │     │ mahmoud/ar… │
+│    — │ 032f252873 │ 6071cfebd1 │ merge_comm… │  +232/-54 │ 209 │ Merge pull  │
+│      │            │            │             │           │     │ request     │
+│      │            │            │             │           │     │ #144 from   │
+│      │            │            │             │           │     │ mahmoud/pa… │
+│    — │ 16a2397264 │ 67cd5a4ed7 │ merge_comm… │   +62/-51 │  51 │ Merge pull  │
+│      │            │            │             │           │     │ request     │
+│      │            │            │             │           │     │ #232 from   │
+│      │            │            │             │           │     │ mahmoud/gh… │
+│    — │ c31c91e96c │ 55bbcd5d8f │ merge_comm… │   +110/-0 │  78 │ Merge pull  │
+│      │            │            │             │           │     │ request     │
+│      │            │            │             │           │     │ #206 from   │
+│      │            │            │             │           │     │ mahmoud/om… │
+│    — │ 55bbcd5d8f │ d99ccaa48b │ merge_comm… │  +137/-23 │  62 │ Merge pull  │
+│      │            │            │             │           │     │ request     │
+│      │            │            │             │           │     │ #198 from   │
+│      │            │            │             │           │     │ mahmoud/pe… │
+└──────┴────────────┴────────────┴─────────────┴───────────┴─────┴─────────────┘
+…and 38 more in the database
+Wrote graph_audit/glom_history/commits.json

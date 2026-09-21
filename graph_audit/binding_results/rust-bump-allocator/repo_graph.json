@@ -1,0 +1,2169 @@
+{
+  "schema_version": "0.4.0",
+  "root": "/Users/adityagk/Desktop/projects/rust-bump-allocator",
+  "snapshot": {
+    "content_hashes": {
+      "Cargo.toml": "9e0045c68deecbdbf0c19cac03f3a22257643a766d1b11400c0d777c81b2494c",
+      "src/allocator.rs": "9990a7e9d5d0799cdcb8a081ab1a8470d670a721dc6faa1153f4ebc228257bd8",
+      "src/lib.rs": "10adc4fceba587b2bbe41feae830bb5ed08369e9b8be3020d89151d87dd51910",
+      "src/main.rs": "d3711d9e77f0f1ce38c7c6a74720135800817c21c02cd23262c676f13e02f70e",
+      "src/state.rs": "8baf977b48af9a5e1a078a1c7cf57cc286d231a22481c2248298cce581de06f6",
+      "tests/integration_tests.rs": "3338b8789cb7d19d00494ae0ff3985944062ca842e5f1a3c275fbc74ede91340",
+      "tests/test_state.rs": "85ce7cca0620c463025eef99eada0be9e82289e44dd3fdcb35030fcd5fbc74d9"
+    },
+    "languages": [
+      "javascript",
+      "python",
+      "rust",
+      "tsx",
+      "typescript"
+    ],
+    "versions": {
+      "tree-sitter": "0.26.0",
+      "tree-sitter-language-pack": "1.16.2",
+      "pathspec": "1.1.1"
+    },
+    "extractor_hash": "44ccfe7586b5f3eff43f966f46c823a6c1e2039679d38965961dfbd515fa3b6b",
+    "git_commit": null,
+    "id": "5e5dbf27a4292218a04004386912161bde41a9fdc2cd0f49ac48e4dc7b53a629"
+  },
+  "diagnostics": [],
+  "statistics": {
+    "files_total": 6,
+    "files_by_language": {
+      "rust": 6
+    },
+    "symbols_total": 19,
+    "tests_total": 10,
+    "calls_total": 68,
+    "syntax_errors": 0,
+    "unparsed_known_language": 0,
+    "edges_total": 36,
+    "edges_by_kind": {
+      "contain": 19,
+      "import": 10,
+      "invoke": 6,
+      "reference": 1
+    },
+    "import_bindings": 16,
+    "import_uses": 18,
+    "binding_status": {
+      "internal": 5,
+      "conditional": 3,
+      "external": 8,
+      "unresolved": 0,
+      "ambiguous": 0,
+      "unsupported": 0
+    }
+  },
+  "files": [
+    {
+      "path": "src/allocator.rs",
+      "language": "rust",
+      "parser": "tree_sitter",
+      "has_syntax_error": false,
+      "is_empty": false,
+      "source_hash": "9990a7e9d5d0799cdcb8a081ab1a8470d670a721dc6faa1153f4ebc228257bd8",
+      "bound_names": [],
+      "bindings": [
+        {
+          "id": "src/allocator.rs@0:0",
+          "module": "core::alloc",
+          "name": "GlobalAlloc",
+          "local": "GlobalAlloc",
+          "scope": "",
+          "line": 1,
+          "raw": "use core::alloc::{GlobalAlloc, Layout};",
+          "kind": "use",
+          "reexport": false,
+          "conditional": false,
+          "uses": [
+            {
+              "owner": "",
+              "expression": "GlobalAlloc",
+              "kind": "reference",
+              "source_text": "GlobalAlloc",
+              "line": 6,
+              "start_byte": 113,
+              "end_byte": 124,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "external",
+              "binding_target_file": null,
+              "binding_target_symbol": null
+            }
+          ],
+          "status": "external",
+          "reason": "stdlib_or_declared_dependency",
+          "target_file": null,
+          "target_symbol": null,
+          "bound_module": "",
+          "module_scope": "",
+          "start_byte": 0
+        },
+        {
+          "id": "src/allocator.rs@0:1",
+          "module": "core::alloc",
+          "name": "Layout",
+          "local": "Layout",
+          "scope": "",
+          "line": 1,
+          "raw": "use core::alloc::{GlobalAlloc, Layout};",
+          "kind": "use",
+          "reexport": false,
+          "conditional": false,
+          "uses": [
+            {
+              "owner": "BumpAllocator.alloc",
+              "expression": "Layout",
+              "kind": "reference",
+              "source_text": "Layout",
+              "line": 7,
+              "start_byte": 180,
+              "end_byte": 186,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "external",
+              "binding_target_file": null,
+              "binding_target_symbol": null
+            },
+            {
+              "owner": "BumpAllocator.dealloc",
+              "expression": "Layout",
+              "kind": "reference",
+              "source_text": "Layout",
+              "line": 11,
+              "start_byte": 291,
+              "end_byte": 297,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "external",
+              "binding_target_file": null,
+              "binding_target_symbol": null
+            }
+          ],
+          "status": "external",
+          "reason": "stdlib_or_declared_dependency",
+          "target_file": null,
+          "target_symbol": null,
+          "bound_module": "",
+          "module_scope": "",
+          "start_byte": 0
+        },
+        {
+          "id": "src/allocator.rs@40:2",
+          "module": "crate::state",
+          "name": "reserve_space",
+          "local": "reserve_space",
+          "scope": "",
+          "line": 2,
+          "raw": "use crate::state::reserve_space;",
+          "kind": "use",
+          "reexport": false,
+          "conditional": false,
+          "uses": [
+            {
+              "owner": "BumpAllocator.alloc",
+              "expression": "reserve_space",
+              "kind": "call",
+              "source_text": "reserve_space",
+              "line": 8,
+              "start_byte": 209,
+              "end_byte": 222,
+              "target_file": "src/state.rs",
+              "target_symbol": "src/state.rs::reserve_space",
+              "status": "internal",
+              "binding_target_file": "src/state.rs",
+              "binding_target_symbol": "src/state.rs::reserve_space"
+            }
+          ],
+          "status": "internal",
+          "reason": "module_and_binding_resolved",
+          "target_file": "src/state.rs",
+          "target_symbol": "src/state.rs::reserve_space",
+          "bound_module": "",
+          "module_scope": "",
+          "start_byte": 40
+        }
+      ],
+      "calls": [
+        {
+          "name": "reserve_space",
+          "line": 8,
+          "caller": "BumpAllocator.alloc",
+          "expression": ""
+        }
+      ],
+      "diagnostics": [],
+      "modules": [],
+      "exports": [],
+      "imports": [
+        {
+          "raw": "use core::alloc::{GlobalAlloc, Layout};",
+          "module": "core::alloc",
+          "symbols": [
+            "GlobalAlloc",
+            "Layout"
+          ],
+          "line": 1
+        },
+        {
+          "raw": "use crate::state::reserve_space;",
+          "module": "crate::state",
+          "symbols": [
+            "reserve_space"
+          ],
+          "line": 2
+        }
+      ],
+      "symbols": [
+        {
+          "name": "BumpAllocator",
+          "qualified_name": "BumpAllocator",
+          "kind": "struct",
+          "start_line": 4,
+          "end_line": 4,
+          "first_body_line": 4,
+          "last_body_line": 4,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": null,
+          "body_end_byte": null,
+          "bases": [],
+          "parent": "",
+          "id": "src/allocator.rs::BumpAllocator",
+          "docstring": "",
+          "start_byte": 74,
+          "end_byte": 99,
+          "signature": "pub struct BumpAllocator;"
+        },
+        {
+          "name": "alloc",
+          "qualified_name": "BumpAllocator.alloc",
+          "kind": "method",
+          "start_line": 7,
+          "end_line": 9,
+          "first_body_line": 7,
+          "last_body_line": 9,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 199,
+          "body_end_byte": 236,
+          "bases": [
+            "GlobalAlloc"
+          ],
+          "parent": "BumpAllocator",
+          "id": "src/allocator.rs::BumpAllocator.alloc",
+          "docstring": "",
+          "start_byte": 149,
+          "end_byte": 236,
+          "signature": "unsafe fn alloc(&self, layout: Layout) -> *mut u8"
+        },
+        {
+          "name": "dealloc",
+          "qualified_name": "BumpAllocator.dealloc",
+          "kind": "method",
+          "start_line": 11,
+          "end_line": 13,
+          "first_body_line": 11,
+          "last_body_line": 13,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 299,
+          "body_end_byte": 388,
+          "bases": [
+            "GlobalAlloc"
+          ],
+          "parent": "BumpAllocator",
+          "id": "src/allocator.rs::BumpAllocator.dealloc",
+          "docstring": "",
+          "start_byte": 242,
+          "end_byte": 388,
+          "signature": "unsafe fn dealloc(&self, _ptr: *mut u8, _layout: Layout)"
+        }
+      ]
+    },
+    {
+      "path": "src/lib.rs",
+      "language": "rust",
+      "parser": "tree_sitter",
+      "has_syntax_error": false,
+      "is_empty": false,
+      "source_hash": "10adc4fceba587b2bbe41feae830bb5ed08369e9b8be3020d89151d87dd51910",
+      "bound_names": [],
+      "bindings": [
+        {
+          "id": "src/lib.rs@31:0",
+          "module": "crate::allocator",
+          "name": "BumpAllocator",
+          "local": "BumpAllocator",
+          "scope": "",
+          "line": 4,
+          "raw": "use crate::allocator::BumpAllocator;",
+          "kind": "use",
+          "reexport": false,
+          "conditional": false,
+          "uses": [
+            {
+              "owner": "",
+              "expression": "BumpAllocator",
+              "kind": "reference",
+              "source_text": "BumpAllocator",
+              "line": 8,
+              "start_byte": 158,
+              "end_byte": 171,
+              "target_file": "src/allocator.rs",
+              "target_symbol": "src/allocator.rs::BumpAllocator",
+              "status": "internal",
+              "binding_target_file": "src/allocator.rs",
+              "binding_target_symbol": "src/allocator.rs::BumpAllocator"
+            },
+            {
+              "owner": "",
+              "expression": "BumpAllocator",
+              "kind": "reference",
+              "source_text": "BumpAllocator",
+              "line": 8,
+              "start_byte": 174,
+              "end_byte": 187,
+              "target_file": "src/allocator.rs",
+              "target_symbol": "src/allocator.rs::BumpAllocator",
+              "status": "internal",
+              "binding_target_file": "src/allocator.rs",
+              "binding_target_symbol": "src/allocator.rs::BumpAllocator"
+            }
+          ],
+          "status": "internal",
+          "reason": "module_and_binding_resolved",
+          "target_file": "src/allocator.rs",
+          "target_symbol": "src/allocator.rs::BumpAllocator",
+          "bound_module": "",
+          "module_scope": "",
+          "start_byte": 31
+        },
+        {
+          "id": "src/lib.rs@68:1",
+          "module": "crate::state",
+          "name": "get_stats",
+          "local": "get_stats",
+          "scope": "",
+          "line": 5,
+          "raw": "pub use crate::state::{get_stats, ArenaStats};",
+          "kind": "use",
+          "reexport": true,
+          "conditional": false,
+          "uses": [],
+          "status": "internal",
+          "reason": "module_and_binding_resolved",
+          "target_file": "src/state.rs",
+          "target_symbol": "src/state.rs::get_stats",
+          "bound_module": "",
+          "module_scope": "",
+          "start_byte": 68
+        },
+        {
+          "id": "src/lib.rs@68:2",
+          "module": "crate::state",
+          "name": "ArenaStats",
+          "local": "ArenaStats",
+          "scope": "",
+          "line": 5,
+          "raw": "pub use crate::state::{get_stats, ArenaStats};",
+          "kind": "use",
+          "reexport": true,
+          "conditional": false,
+          "uses": [],
+          "status": "internal",
+          "reason": "module_and_binding_resolved",
+          "target_file": "src/state.rs",
+          "target_symbol": "src/state.rs::ArenaStats",
+          "bound_module": "",
+          "module_scope": "",
+          "start_byte": 68
+        }
+      ],
+      "calls": [],
+      "diagnostics": [],
+      "modules": [
+        {
+          "name": "allocator",
+          "parent": "",
+          "inline": false,
+          "line": 1,
+          "attributes": []
+        },
+        {
+          "name": "state",
+          "parent": "",
+          "inline": false,
+          "line": 2,
+          "attributes": []
+        }
+      ],
+      "exports": [],
+      "imports": [
+        {
+          "raw": "use crate::allocator::BumpAllocator;",
+          "module": "crate::allocator",
+          "symbols": [
+            "BumpAllocator"
+          ],
+          "line": 4
+        },
+        {
+          "raw": "pub use crate::state::{get_stats, ArenaStats};",
+          "module": "crate::state",
+          "symbols": [
+            "get_stats",
+            "ArenaStats"
+          ],
+          "line": 5
+        }
+      ],
+      "symbols": []
+    },
+    {
+      "path": "src/main.rs",
+      "language": "rust",
+      "parser": "tree_sitter",
+      "has_syntax_error": false,
+      "is_empty": false,
+      "source_hash": "d3711d9e77f0f1ce38c7c6a74720135800817c21c02cd23262c676f13e02f70e",
+      "bound_names": [],
+      "bindings": [
+        {
+          "id": "src/main.rs@0:0",
+          "module": "memory_allocator",
+          "name": "get_stats",
+          "local": "get_stats",
+          "scope": "",
+          "line": 1,
+          "raw": "use memory_allocator::get_stats;",
+          "kind": "use",
+          "reexport": false,
+          "conditional": false,
+          "uses": [
+            {
+              "owner": "main",
+              "expression": "get_stats",
+              "kind": "call",
+              "source_text": "get_stats",
+              "line": 17,
+              "start_byte": 362,
+              "end_byte": 371,
+              "target_file": "src/state.rs",
+              "target_symbol": "src/state.rs::get_stats",
+              "status": "internal",
+              "binding_target_file": "src/state.rs",
+              "binding_target_symbol": "src/state.rs::get_stats"
+            }
+          ],
+          "status": "internal",
+          "reason": "module_and_binding_resolved",
+          "target_file": "src/state.rs",
+          "target_symbol": "src/state.rs::get_stats",
+          "bound_module": "",
+          "module_scope": "",
+          "start_byte": 0
+        }
+      ],
+      "calls": [
+        {
+          "name": "println",
+          "line": 4,
+          "caller": "main",
+          "expression": ""
+        },
+        {
+          "name": "new",
+          "line": 7,
+          "caller": "main",
+          "expression": ""
+        },
+        {
+          "name": "push",
+          "line": 9,
+          "caller": "main",
+          "expression": ""
+        },
+        {
+          "name": "println",
+          "line": 11,
+          "caller": "main",
+          "expression": ""
+        },
+        {
+          "name": "format",
+          "line": 13,
+          "caller": "main",
+          "expression": ""
+        },
+        {
+          "name": "println",
+          "line": 14,
+          "caller": "main",
+          "expression": ""
+        },
+        {
+          "name": "get_stats",
+          "line": 17,
+          "caller": "main",
+          "expression": ""
+        },
+        {
+          "name": "println",
+          "line": 18,
+          "caller": "main",
+          "expression": ""
+        },
+        {
+          "name": "println",
+          "line": 19,
+          "caller": "main",
+          "expression": ""
+        },
+        {
+          "name": "println",
+          "line": 20,
+          "caller": "main",
+          "expression": ""
+        },
+        {
+          "name": "println",
+          "line": 21,
+          "caller": "main",
+          "expression": ""
+        }
+      ],
+      "diagnostics": [
+        {
+          "line": 4,
+          "reason": "macro_tokens_not_resolved"
+        },
+        {
+          "line": 11,
+          "reason": "macro_tokens_not_resolved"
+        },
+        {
+          "line": 13,
+          "reason": "macro_tokens_not_resolved"
+        },
+        {
+          "line": 14,
+          "reason": "macro_tokens_not_resolved"
+        },
+        {
+          "line": 18,
+          "reason": "macro_tokens_not_resolved"
+        },
+        {
+          "line": 19,
+          "reason": "macro_tokens_not_resolved"
+        },
+        {
+          "line": 20,
+          "reason": "macro_tokens_not_resolved"
+        },
+        {
+          "line": 21,
+          "reason": "macro_tokens_not_resolved"
+        }
+      ],
+      "modules": [],
+      "exports": [],
+      "imports": [
+        {
+          "raw": "use memory_allocator::get_stats;",
+          "module": "memory_allocator",
+          "symbols": [
+            "get_stats"
+          ],
+          "line": 1
+        }
+      ],
+      "symbols": [
+        {
+          "name": "main",
+          "qualified_name": "main",
+          "kind": "function",
+          "start_line": 3,
+          "end_line": 22,
+          "first_body_line": 3,
+          "last_body_line": 22,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 44,
+          "body_end_byte": 570,
+          "bases": [],
+          "parent": "",
+          "id": "src/main.rs::main",
+          "docstring": "",
+          "start_byte": 34,
+          "end_byte": 570,
+          "signature": "fn main()"
+        }
+      ]
+    },
+    {
+      "path": "src/state.rs",
+      "language": "rust",
+      "parser": "tree_sitter",
+      "has_syntax_error": false,
+      "is_empty": false,
+      "source_hash": "8baf977b48af9a5e1a078a1c7cf57cc286d231a22481c2248298cce581de06f6",
+      "bound_names": [],
+      "bindings": [
+        {
+          "id": "src/state.rs@0:0",
+          "module": "spin",
+          "name": "Mutex",
+          "local": "Mutex",
+          "scope": "",
+          "line": 1,
+          "raw": "use spin::Mutex;",
+          "kind": "use",
+          "reexport": false,
+          "conditional": false,
+          "uses": [
+            {
+              "owner": "",
+              "expression": "Mutex",
+              "kind": "reference",
+              "source_text": "Mutex",
+              "line": 17,
+              "start_byte": 306,
+              "end_byte": 311,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "external",
+              "binding_target_file": null,
+              "binding_target_symbol": null
+            },
+            {
+              "owner": "",
+              "expression": "Mutex::new",
+              "kind": "call",
+              "source_text": "Mutex::new",
+              "line": 17,
+              "start_byte": 326,
+              "end_byte": 336,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "external",
+              "binding_target_file": null,
+              "binding_target_symbol": null
+            }
+          ],
+          "status": "external",
+          "reason": "stdlib_or_declared_dependency",
+          "target_file": null,
+          "target_symbol": null,
+          "bound_module": "",
+          "module_scope": "",
+          "start_byte": 0
+        },
+        {
+          "id": "src/state.rs@17:1",
+          "module": "core::alloc",
+          "name": "Layout",
+          "local": "Layout",
+          "scope": "",
+          "line": 2,
+          "raw": "use core::alloc::Layout;",
+          "kind": "use",
+          "reexport": false,
+          "conditional": false,
+          "uses": [
+            {
+              "owner": "reserve_space",
+              "expression": "Layout",
+              "kind": "reference",
+              "source_text": "Layout",
+              "line": 26,
+              "start_byte": 518,
+              "end_byte": 524,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "external",
+              "binding_target_file": null,
+              "binding_target_symbol": null
+            }
+          ],
+          "status": "external",
+          "reason": "stdlib_or_declared_dependency",
+          "target_file": null,
+          "target_symbol": null,
+          "bound_module": "",
+          "module_scope": "",
+          "start_byte": 17
+        }
+      ],
+      "calls": [
+        {
+          "name": "new",
+          "line": 17,
+          "caller": "",
+          "expression": ""
+        },
+        {
+          "name": "lock",
+          "line": 27,
+          "caller": "reserve_space",
+          "expression": ""
+        },
+        {
+          "name": "align_up",
+          "line": 30,
+          "caller": "reserve_space",
+          "expression": ""
+        },
+        {
+          "name": "align",
+          "line": 30,
+          "caller": "reserve_space",
+          "expression": ""
+        },
+        {
+          "name": "size",
+          "line": 31,
+          "caller": "reserve_space",
+          "expression": ""
+        },
+        {
+          "name": "panic",
+          "line": 34,
+          "caller": "reserve_space",
+          "expression": ""
+        },
+        {
+          "name": "as_mut_ptr",
+          "line": 40,
+          "caller": "reserve_space",
+          "expression": ""
+        },
+        {
+          "name": "add",
+          "line": 40,
+          "caller": "reserve_space",
+          "expression": ""
+        },
+        {
+          "name": "lock",
+          "line": 45,
+          "caller": "get_stats",
+          "expression": ""
+        }
+      ],
+      "diagnostics": [
+        {
+          "line": 34,
+          "reason": "macro_tokens_not_resolved"
+        }
+      ],
+      "modules": [],
+      "exports": [],
+      "imports": [
+        {
+          "raw": "use spin::Mutex;",
+          "module": "spin",
+          "symbols": [
+            "Mutex"
+          ],
+          "line": 1
+        },
+        {
+          "raw": "use core::alloc::Layout;",
+          "module": "core::alloc",
+          "symbols": [
+            "Layout"
+          ],
+          "line": 2
+        }
+      ],
+      "symbols": [
+        {
+          "name": "ArenaStats",
+          "qualified_name": "ArenaStats",
+          "kind": "struct",
+          "start_line": 7,
+          "end_line": 10,
+          "first_body_line": 7,
+          "last_body_line": 10,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 172,
+          "body_end_byte": 221,
+          "bases": [],
+          "parent": "",
+          "id": "src/state.rs::ArenaStats",
+          "docstring": "",
+          "start_byte": 150,
+          "end_byte": 221,
+          "signature": "pub struct ArenaStats"
+        },
+        {
+          "name": "ArenaState",
+          "qualified_name": "ArenaState",
+          "kind": "struct",
+          "start_line": 12,
+          "end_line": 15,
+          "first_body_line": 12,
+          "last_body_line": 15,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 245,
+          "body_end_byte": 286,
+          "bases": [],
+          "parent": "",
+          "id": "src/state.rs::ArenaState",
+          "docstring": "",
+          "start_byte": 223,
+          "end_byte": 286,
+          "signature": "pub struct ArenaState"
+        },
+        {
+          "name": "align_up",
+          "qualified_name": "align_up",
+          "kind": "function",
+          "start_line": 22,
+          "end_line": 24,
+          "first_body_line": 22,
+          "last_body_line": 24,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 446,
+          "body_end_byte": 487,
+          "bases": [],
+          "parent": "",
+          "id": "src/state.rs::align_up",
+          "docstring": "",
+          "start_byte": 394,
+          "end_byte": 487,
+          "signature": "pub fn align_up(addr: usize, align: usize) -> usize"
+        },
+        {
+          "name": "reserve_space",
+          "qualified_name": "reserve_space",
+          "kind": "function",
+          "start_line": 26,
+          "end_line": 42,
+          "first_body_line": 26,
+          "last_body_line": 42,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 537,
+          "body_end_byte": 887,
+          "bases": [],
+          "parent": "",
+          "id": "src/state.rs::reserve_space",
+          "docstring": "",
+          "start_byte": 489,
+          "end_byte": 887,
+          "signature": "pub fn reserve_space(layout: Layout) -> *mut u8"
+        },
+        {
+          "name": "get_stats",
+          "qualified_name": "get_stats",
+          "kind": "function",
+          "start_line": 44,
+          "end_line": 50,
+          "first_body_line": 44,
+          "last_body_line": 50,
+          "is_test": false,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 922,
+          "body_end_byte": 1038,
+          "bases": [],
+          "parent": "",
+          "id": "src/state.rs::get_stats",
+          "docstring": "",
+          "start_byte": 889,
+          "end_byte": 1038,
+          "signature": "pub fn get_stats() -> ArenaStats"
+        }
+      ]
+    },
+    {
+      "path": "tests/integration_tests.rs",
+      "language": "rust",
+      "parser": "tree_sitter",
+      "has_syntax_error": false,
+      "is_empty": false,
+      "source_hash": "3338b8789cb7d19d00494ae0ff3985944062ca842e5f1a3c275fbc74ede91340",
+      "bound_names": [],
+      "bindings": [
+        {
+          "id": "tests/integration_tests.rs@29:0",
+          "module": "std",
+          "name": "thread",
+          "local": "thread",
+          "scope": "tests",
+          "line": 3,
+          "raw": "use std::thread;",
+          "kind": "use",
+          "reexport": false,
+          "conditional": true,
+          "uses": [
+            {
+              "owner": "tests.test_thread_contention",
+              "expression": "thread::spawn",
+              "kind": "call",
+              "source_text": "thread::spawn",
+              "line": 52,
+              "start_byte": 1733,
+              "end_byte": 1746,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "external",
+              "binding_target_file": null,
+              "binding_target_symbol": null
+            }
+          ],
+          "status": "external",
+          "reason": "stdlib_or_declared_dependency",
+          "target_file": null,
+          "target_symbol": null,
+          "bound_module": "",
+          "module_scope": "tests",
+          "start_byte": 29
+        },
+        {
+          "id": "tests/integration_tests.rs@50:1",
+          "module": "std::sync",
+          "name": "Arc",
+          "local": "Arc",
+          "scope": "tests",
+          "line": 4,
+          "raw": "use std::sync::Arc;",
+          "kind": "use",
+          "reexport": false,
+          "conditional": true,
+          "uses": [],
+          "status": "external",
+          "reason": "stdlib_or_declared_dependency",
+          "target_file": null,
+          "target_symbol": null,
+          "bound_module": "",
+          "module_scope": "tests",
+          "start_byte": 50
+        },
+        {
+          "id": "tests/integration_tests.rs@74:2",
+          "module": "std",
+          "name": "panic",
+          "local": "panic",
+          "scope": "tests",
+          "line": 5,
+          "raw": "use std::panic;",
+          "kind": "use",
+          "reexport": false,
+          "conditional": true,
+          "uses": [
+            {
+              "owner": "tests.test_oom_panic",
+              "expression": "panic::catch_unwind",
+              "kind": "call",
+              "source_text": "panic::catch_unwind",
+              "line": 41,
+              "start_byte": 1340,
+              "end_byte": 1359,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "external",
+              "binding_target_file": null,
+              "binding_target_symbol": null
+            }
+          ],
+          "status": "external",
+          "reason": "stdlib_or_declared_dependency",
+          "target_file": null,
+          "target_symbol": null,
+          "bound_module": "",
+          "module_scope": "tests",
+          "start_byte": 74
+        }
+      ],
+      "calls": [
+        {
+          "name": "from_size_align",
+          "line": 10,
+          "caller": "tests.test_alignment_properties",
+          "expression": ""
+        },
+        {
+          "name": "unwrap",
+          "line": 10,
+          "caller": "tests.test_alignment_properties",
+          "expression": ""
+        },
+        {
+          "name": "alloc",
+          "line": 11,
+          "caller": "tests.test_alignment_properties",
+          "expression": ""
+        },
+        {
+          "name": "assert",
+          "line": 12,
+          "caller": "tests.test_alignment_properties",
+          "expression": ""
+        },
+        {
+          "name": "assert_eq",
+          "line": 13,
+          "caller": "tests.test_alignment_properties",
+          "expression": ""
+        },
+        {
+          "name": "dealloc",
+          "line": 14,
+          "caller": "tests.test_alignment_properties",
+          "expression": ""
+        },
+        {
+          "name": "from_size_align",
+          "line": 19,
+          "caller": "tests.test_non_overlap",
+          "expression": ""
+        },
+        {
+          "name": "unwrap",
+          "line": 19,
+          "caller": "tests.test_non_overlap",
+          "expression": ""
+        },
+        {
+          "name": "alloc",
+          "line": 20,
+          "caller": "tests.test_non_overlap",
+          "expression": ""
+        },
+        {
+          "name": "alloc",
+          "line": 21,
+          "caller": "tests.test_non_overlap",
+          "expression": ""
+        },
+        {
+          "name": "assert",
+          "line": 23,
+          "caller": "tests.test_non_overlap",
+          "expression": ""
+        },
+        {
+          "name": "assert",
+          "line": 24,
+          "caller": "tests.test_non_overlap",
+          "expression": ""
+        },
+        {
+          "name": "assert",
+          "line": 29,
+          "caller": "tests.test_non_overlap",
+          "expression": ""
+        },
+        {
+          "name": "dealloc",
+          "line": 32,
+          "caller": "tests.test_non_overlap",
+          "expression": ""
+        },
+        {
+          "name": "dealloc",
+          "line": 33,
+          "caller": "tests.test_non_overlap",
+          "expression": ""
+        },
+        {
+          "name": "catch_unwind",
+          "line": 41,
+          "caller": "tests.test_oom_panic",
+          "expression": ""
+        },
+        {
+          "name": "from_size_align",
+          "line": 42,
+          "caller": "tests.test_oom_panic",
+          "expression": ""
+        },
+        {
+          "name": "unwrap",
+          "line": 42,
+          "caller": "tests.test_oom_panic",
+          "expression": ""
+        },
+        {
+          "name": "alloc",
+          "line": 43,
+          "caller": "tests.test_oom_panic",
+          "expression": ""
+        },
+        {
+          "name": "assert",
+          "line": 45,
+          "caller": "tests.test_oom_panic",
+          "expression": ""
+        },
+        {
+          "name": "new",
+          "line": 50,
+          "caller": "tests.test_thread_contention",
+          "expression": ""
+        },
+        {
+          "name": "push",
+          "line": 52,
+          "caller": "tests.test_thread_contention",
+          "expression": ""
+        },
+        {
+          "name": "spawn",
+          "line": 52,
+          "caller": "tests.test_thread_contention",
+          "expression": ""
+        },
+        {
+          "name": "from_size_align",
+          "line": 54,
+          "caller": "tests.test_thread_contention",
+          "expression": ""
+        },
+        {
+          "name": "unwrap",
+          "line": 54,
+          "caller": "tests.test_thread_contention",
+          "expression": ""
+        },
+        {
+          "name": "alloc",
+          "line": 55,
+          "caller": "tests.test_thread_contention",
+          "expression": ""
+        },
+        {
+          "name": "assert",
+          "line": 56,
+          "caller": "tests.test_thread_contention",
+          "expression": ""
+        },
+        {
+          "name": "join",
+          "line": 61,
+          "caller": "tests.test_thread_contention",
+          "expression": ""
+        },
+        {
+          "name": "unwrap",
+          "line": 61,
+          "caller": "tests.test_thread_contention",
+          "expression": ""
+        },
+        {
+          "name": "new",
+          "line": 67,
+          "caller": "tests.test_stdlib_collections",
+          "expression": ""
+        },
+        {
+          "name": "push",
+          "line": 69,
+          "caller": "tests.test_stdlib_collections",
+          "expression": ""
+        },
+        {
+          "name": "assert_eq",
+          "line": 71,
+          "caller": "tests.test_stdlib_collections",
+          "expression": ""
+        },
+        {
+          "name": "assert_eq",
+          "line": 72,
+          "caller": "tests.test_stdlib_collections",
+          "expression": ""
+        }
+      ],
+      "diagnostics": [
+        {
+          "line": 12,
+          "reason": "macro_tokens_not_resolved"
+        },
+        {
+          "line": 13,
+          "reason": "macro_tokens_not_resolved"
+        },
+        {
+          "line": 23,
+          "reason": "macro_tokens_not_resolved"
+        },
+        {
+          "line": 24,
+          "reason": "macro_tokens_not_resolved"
+        },
+        {
+          "line": 29,
+          "reason": "macro_tokens_not_resolved"
+        },
+        {
+          "line": 45,
+          "reason": "macro_tokens_not_resolved"
+        },
+        {
+          "line": 56,
+          "reason": "macro_tokens_not_resolved"
+        },
+        {
+          "line": 71,
+          "reason": "macro_tokens_not_resolved"
+        },
+        {
+          "line": 72,
+          "reason": "macro_tokens_not_resolved"
+        }
+      ],
+      "modules": [
+        {
+          "name": "tests",
+          "parent": "",
+          "inline": true,
+          "line": 2,
+          "attributes": [
+            "#[cfg(test)]"
+          ]
+        }
+      ],
+      "exports": [],
+      "imports": [
+        {
+          "raw": "use std::thread;",
+          "module": "std",
+          "symbols": [
+            "thread"
+          ],
+          "line": 3
+        },
+        {
+          "raw": "use std::sync::Arc;",
+          "module": "std::sync",
+          "symbols": [
+            "Arc"
+          ],
+          "line": 4
+        },
+        {
+          "raw": "use std::panic;",
+          "module": "std",
+          "symbols": [
+            "panic"
+          ],
+          "line": 5
+        }
+      ],
+      "symbols": [
+        {
+          "name": "tests",
+          "qualified_name": "tests",
+          "kind": "module",
+          "start_line": 2,
+          "end_line": 74,
+          "first_body_line": 2,
+          "last_body_line": 74,
+          "is_test": true,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 23,
+          "body_end_byte": 2327,
+          "bases": [],
+          "parent": "",
+          "id": "tests/integration_tests.rs::tests",
+          "docstring": "",
+          "start_byte": 13,
+          "end_byte": 2327,
+          "signature": "mod tests"
+        },
+        {
+          "name": "test_alignment_properties",
+          "qualified_name": "tests.test_alignment_properties",
+          "kind": "function",
+          "start_line": 8,
+          "end_line": 15,
+          "first_body_line": 8,
+          "last_body_line": 15,
+          "is_test": true,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 138,
+          "body_end_byte": 469,
+          "bases": [],
+          "parent": "tests",
+          "id": "tests/integration_tests.rs::tests.test_alignment_properties",
+          "docstring": "",
+          "start_byte": 107,
+          "end_byte": 469,
+          "signature": "fn test_alignment_properties()"
+        },
+        {
+          "name": "test_non_overlap",
+          "qualified_name": "tests.test_non_overlap",
+          "kind": "function",
+          "start_line": 18,
+          "end_line": 35,
+          "first_body_line": 18,
+          "last_body_line": 35,
+          "is_test": true,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 509,
+          "body_end_byte": 1125,
+          "bases": [],
+          "parent": "tests",
+          "id": "tests/integration_tests.rs::tests.test_non_overlap",
+          "docstring": "",
+          "start_byte": 487,
+          "end_byte": 1125,
+          "signature": "fn test_non_overlap()"
+        },
+        {
+          "name": "test_oom_panic",
+          "qualified_name": "tests.test_oom_panic",
+          "kind": "function",
+          "start_line": 38,
+          "end_line": 46,
+          "first_body_line": 38,
+          "last_body_line": 46,
+          "is_test": true,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 1163,
+          "body_end_byte": 1597,
+          "bases": [],
+          "parent": "tests",
+          "id": "tests/integration_tests.rs::tests.test_oom_panic",
+          "docstring": "",
+          "start_byte": 1143,
+          "end_byte": 1597,
+          "signature": "fn test_oom_panic()"
+        },
+        {
+          "name": "test_thread_contention",
+          "qualified_name": "tests.test_thread_contention",
+          "kind": "function",
+          "start_line": 49,
+          "end_line": 63,
+          "first_body_line": 49,
+          "last_body_line": 63,
+          "is_test": true,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 1643,
+          "body_end_byte": 2103,
+          "bases": [],
+          "parent": "tests",
+          "id": "tests/integration_tests.rs::tests.test_thread_contention",
+          "docstring": "",
+          "start_byte": 1615,
+          "end_byte": 2103,
+          "signature": "fn test_thread_contention()"
+        },
+        {
+          "name": "test_stdlib_collections",
+          "qualified_name": "tests.test_stdlib_collections",
+          "kind": "function",
+          "start_line": 66,
+          "end_line": 73,
+          "first_body_line": 66,
+          "last_body_line": 73,
+          "is_test": true,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 2150,
+          "body_end_byte": 2325,
+          "bases": [],
+          "parent": "tests",
+          "id": "tests/integration_tests.rs::tests.test_stdlib_collections",
+          "docstring": "",
+          "start_byte": 2121,
+          "end_byte": 2325,
+          "signature": "fn test_stdlib_collections()"
+        }
+      ]
+    },
+    {
+      "path": "tests/test_state.rs",
+      "language": "rust",
+      "parser": "tree_sitter",
+      "has_syntax_error": false,
+      "is_empty": false,
+      "source_hash": "85ce7cca0620c463025eef99eada0be9e82289e44dd3fdcb35030fcd5fbc74d9",
+      "bound_names": [],
+      "bindings": [
+        {
+          "id": "tests/test_state.rs@29:0",
+          "module": "memory_allocator::state",
+          "name": "align_up",
+          "local": "align_up",
+          "scope": "tests",
+          "line": 3,
+          "raw": "use memory_allocator::state::{align_up, reserve_space, get_stats};",
+          "kind": "use",
+          "reexport": false,
+          "conditional": true,
+          "uses": [],
+          "status": "conditional",
+          "reason": "target_resolved_import_condition_not_evaluated",
+          "target_file": "src/state.rs",
+          "target_symbol": "src/state.rs::align_up",
+          "bound_module": "",
+          "module_scope": "tests",
+          "start_byte": 29
+        },
+        {
+          "id": "tests/test_state.rs@29:1",
+          "module": "memory_allocator::state",
+          "name": "reserve_space",
+          "local": "reserve_space",
+          "scope": "tests",
+          "line": 3,
+          "raw": "use memory_allocator::state::{align_up, reserve_space, get_stats};",
+          "kind": "use",
+          "reexport": false,
+          "conditional": true,
+          "uses": [
+            {
+              "owner": "tests.test_state_mutation",
+              "expression": "reserve_space",
+              "kind": "call",
+              "source_text": "reserve_space",
+              "line": 19,
+              "start_byte": 500,
+              "end_byte": 513,
+              "target_file": "src/state.rs",
+              "target_symbol": "src/state.rs::reserve_space",
+              "status": "conditional",
+              "binding_target_file": "src/state.rs",
+              "binding_target_symbol": "src/state.rs::reserve_space"
+            },
+            {
+              "owner": "tests.test_bounds_detection",
+              "expression": "reserve_space",
+              "kind": "call",
+              "source_text": "reserve_space",
+              "line": 30,
+              "start_byte": 830,
+              "end_byte": 843,
+              "target_file": "src/state.rs",
+              "target_symbol": "src/state.rs::reserve_space",
+              "status": "conditional",
+              "binding_target_file": "src/state.rs",
+              "binding_target_symbol": "src/state.rs::reserve_space"
+            }
+          ],
+          "status": "conditional",
+          "reason": "target_resolved_import_condition_not_evaluated",
+          "target_file": "src/state.rs",
+          "target_symbol": "src/state.rs::reserve_space",
+          "bound_module": "",
+          "module_scope": "tests",
+          "start_byte": 29
+        },
+        {
+          "id": "tests/test_state.rs@29:2",
+          "module": "memory_allocator::state",
+          "name": "get_stats",
+          "local": "get_stats",
+          "scope": "tests",
+          "line": 3,
+          "raw": "use memory_allocator::state::{align_up, reserve_space, get_stats};",
+          "kind": "use",
+          "reexport": false,
+          "conditional": true,
+          "uses": [
+            {
+              "owner": "tests.test_state_mutation",
+              "expression": "get_stats",
+              "kind": "call",
+              "source_text": "get_stats",
+              "line": 16,
+              "start_byte": 393,
+              "end_byte": 402,
+              "target_file": "src/state.rs",
+              "target_symbol": "src/state.rs::get_stats",
+              "status": "conditional",
+              "binding_target_file": "src/state.rs",
+              "binding_target_symbol": "src/state.rs::get_stats"
+            },
+            {
+              "owner": "tests.test_state_mutation",
+              "expression": "get_stats",
+              "kind": "call",
+              "source_text": "get_stats",
+              "line": 22,
+              "start_byte": 585,
+              "end_byte": 594,
+              "target_file": "src/state.rs",
+              "target_symbol": "src/state.rs::get_stats",
+              "status": "conditional",
+              "binding_target_file": "src/state.rs",
+              "binding_target_symbol": "src/state.rs::get_stats"
+            }
+          ],
+          "status": "conditional",
+          "reason": "target_resolved_import_condition_not_evaluated",
+          "target_file": "src/state.rs",
+          "target_symbol": "src/state.rs::get_stats",
+          "bound_module": "",
+          "module_scope": "tests",
+          "start_byte": 29
+        },
+        {
+          "id": "tests/test_state.rs@100:3",
+          "module": "core::alloc",
+          "name": "Layout",
+          "local": "Layout",
+          "scope": "tests",
+          "line": 4,
+          "raw": "use core::alloc::Layout;",
+          "kind": "use",
+          "reexport": false,
+          "conditional": true,
+          "uses": [
+            {
+              "owner": "tests.test_state_mutation",
+              "expression": "Layout::from_size_align",
+              "kind": "call",
+              "source_text": "Layout::from_size_align",
+              "line": 17,
+              "start_byte": 432,
+              "end_byte": 455,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "external",
+              "binding_target_file": null,
+              "binding_target_symbol": null
+            },
+            {
+              "owner": "tests.test_bounds_detection",
+              "expression": "Layout::from_size_align",
+              "kind": "call",
+              "source_text": "Layout::from_size_align",
+              "line": 29,
+              "start_byte": 774,
+              "end_byte": 797,
+              "target_file": null,
+              "target_symbol": null,
+              "status": "external",
+              "binding_target_file": null,
+              "binding_target_symbol": null
+            }
+          ],
+          "status": "external",
+          "reason": "stdlib_or_declared_dependency",
+          "target_file": null,
+          "target_symbol": null,
+          "bound_module": "",
+          "module_scope": "tests",
+          "start_byte": 100
+        }
+      ],
+      "calls": [
+        {
+          "name": "assert_eq",
+          "line": 8,
+          "caller": "tests.test_align_math",
+          "expression": ""
+        },
+        {
+          "name": "assert_eq",
+          "line": 9,
+          "caller": "tests.test_align_math",
+          "expression": ""
+        },
+        {
+          "name": "assert_eq",
+          "line": 10,
+          "caller": "tests.test_align_math",
+          "expression": ""
+        },
+        {
+          "name": "assert_eq",
+          "line": 11,
+          "caller": "tests.test_align_math",
+          "expression": ""
+        },
+        {
+          "name": "get_stats",
+          "line": 16,
+          "caller": "tests.test_state_mutation",
+          "expression": ""
+        },
+        {
+          "name": "from_size_align",
+          "line": 17,
+          "caller": "tests.test_state_mutation",
+          "expression": ""
+        },
+        {
+          "name": "unwrap",
+          "line": 17,
+          "caller": "tests.test_state_mutation",
+          "expression": ""
+        },
+        {
+          "name": "reserve_space",
+          "line": 19,
+          "caller": "tests.test_state_mutation",
+          "expression": ""
+        },
+        {
+          "name": "assert",
+          "line": 20,
+          "caller": "tests.test_state_mutation",
+          "expression": ""
+        },
+        {
+          "name": "get_stats",
+          "line": 22,
+          "caller": "tests.test_state_mutation",
+          "expression": ""
+        },
+        {
+          "name": "assert",
+          "line": 23,
+          "caller": "tests.test_state_mutation",
+          "expression": ""
+        },
+        {
+          "name": "from_size_align",
+          "line": 29,
+          "caller": "tests.test_bounds_detection",
+          "expression": ""
+        },
+        {
+          "name": "unwrap",
+          "line": 29,
+          "caller": "tests.test_bounds_detection",
+          "expression": ""
+        },
+        {
+          "name": "reserve_space",
+          "line": 30,
+          "caller": "tests.test_bounds_detection",
+          "expression": ""
+        }
+      ],
+      "diagnostics": [
+        {
+          "line": 8,
+          "reason": "macro_tokens_not_resolved"
+        },
+        {
+          "line": 9,
+          "reason": "macro_tokens_not_resolved"
+        },
+        {
+          "line": 10,
+          "reason": "macro_tokens_not_resolved"
+        },
+        {
+          "line": 11,
+          "reason": "macro_tokens_not_resolved"
+        },
+        {
+          "line": 20,
+          "reason": "macro_tokens_not_resolved"
+        },
+        {
+          "line": 23,
+          "reason": "macro_tokens_not_resolved"
+        }
+      ],
+      "modules": [
+        {
+          "name": "tests",
+          "parent": "",
+          "inline": true,
+          "line": 2,
+          "attributes": [
+            "#[cfg(test)]"
+          ]
+        }
+      ],
+      "exports": [],
+      "imports": [
+        {
+          "raw": "use memory_allocator::state::{align_up, reserve_space, get_stats};",
+          "module": "memory_allocator::state",
+          "symbols": [
+            "align_up",
+            "reserve_space",
+            "get_stats"
+          ],
+          "line": 3
+        },
+        {
+          "raw": "use core::alloc::Layout;",
+          "module": "core::alloc",
+          "symbols": [
+            "Layout"
+          ],
+          "line": 4
+        }
+      ],
+      "symbols": [
+        {
+          "name": "tests",
+          "qualified_name": "tests",
+          "kind": "module",
+          "start_line": 2,
+          "end_line": 32,
+          "first_body_line": 2,
+          "last_body_line": 32,
+          "is_test": true,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 23,
+          "body_end_byte": 865,
+          "bases": [],
+          "parent": "",
+          "id": "tests/test_state.rs::tests",
+          "docstring": "",
+          "start_byte": 13,
+          "end_byte": 865,
+          "signature": "mod tests"
+        },
+        {
+          "name": "test_align_math",
+          "qualified_name": "tests.test_align_math",
+          "kind": "function",
+          "start_line": 7,
+          "end_line": 12,
+          "first_body_line": 7,
+          "last_body_line": 12,
+          "is_test": true,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 163,
+          "body_end_byte": 327,
+          "bases": [],
+          "parent": "tests",
+          "id": "tests/test_state.rs::tests.test_align_math",
+          "docstring": "",
+          "start_byte": 142,
+          "end_byte": 327,
+          "signature": "fn test_align_math()"
+        },
+        {
+          "name": "test_state_mutation",
+          "qualified_name": "tests.test_state_mutation",
+          "kind": "function",
+          "start_line": 15,
+          "end_line": 24,
+          "first_body_line": 15,
+          "last_body_line": 24,
+          "is_test": true,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 370,
+          "body_end_byte": 647,
+          "bases": [],
+          "parent": "tests",
+          "id": "tests/test_state.rs::tests.test_state_mutation",
+          "docstring": "",
+          "start_byte": 345,
+          "end_byte": 647,
+          "signature": "fn test_state_mutation()"
+        },
+        {
+          "name": "test_bounds_detection",
+          "qualified_name": "tests.test_bounds_detection",
+          "kind": "function",
+          "start_line": 28,
+          "end_line": 31,
+          "first_body_line": 28,
+          "last_body_line": 31,
+          "is_test": true,
+          "is_async": false,
+          "is_generator": false,
+          "body_start_byte": 746,
+          "body_end_byte": 863,
+          "bases": [],
+          "parent": "tests",
+          "id": "tests/test_state.rs::tests.test_bounds_detection",
+          "docstring": "",
+          "start_byte": 719,
+          "end_byte": 863,
+          "signature": "fn test_bounds_detection()"
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "src/allocator.rs",
+      "target": "src/state.rs",
+      "kind": "import",
+      "line": 2,
+      "raw": "use crate::state::reserve_space;",
+      "symbols": [
+        "reserve_space"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "src/allocator.rs::BumpAllocator.alloc",
+      "target": "src/state.rs::reserve_space",
+      "kind": "invoke",
+      "line": 8,
+      "raw": "reserve_space",
+      "symbols": [
+        "reserve_space"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "src/lib.rs",
+      "target": "src/allocator.rs",
+      "kind": "import",
+      "line": 4,
+      "raw": "use crate::allocator::BumpAllocator;",
+      "symbols": [
+        "BumpAllocator"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "src/lib.rs",
+      "target": "src/allocator.rs::BumpAllocator",
+      "kind": "reference",
+      "line": 8,
+      "raw": "BumpAllocator",
+      "symbols": [
+        "BumpAllocator"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "src/lib.rs",
+      "target": "src/state.rs",
+      "kind": "import",
+      "line": 5,
+      "raw": "pub use crate::state::{get_stats, ArenaStats};",
+      "symbols": [
+        "get_stats"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "src/lib.rs",
+      "target": "src/state.rs",
+      "kind": "import",
+      "line": 5,
+      "raw": "pub use crate::state::{get_stats, ArenaStats};",
+      "symbols": [
+        "ArenaStats"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "src/main.rs",
+      "target": "src/state.rs",
+      "kind": "import",
+      "line": 1,
+      "raw": "use memory_allocator::get_stats;",
+      "symbols": [
+        "get_stats"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "src/main.rs::main",
+      "target": "src/state.rs::get_stats",
+      "kind": "invoke",
+      "line": 17,
+      "raw": "get_stats",
+      "symbols": [
+        "get_stats"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "tests/test_state.rs",
+      "target": "src/state.rs",
+      "kind": "import",
+      "line": 3,
+      "raw": "use memory_allocator::state::{align_up, reserve_space, get_stats};",
+      "symbols": [
+        "align_up"
+      ],
+      "conditional": true
+    },
+    {
+      "source": "tests/test_state.rs",
+      "target": "src/state.rs",
+      "kind": "import",
+      "line": 3,
+      "raw": "use memory_allocator::state::{align_up, reserve_space, get_stats};",
+      "symbols": [
+        "reserve_space"
+      ],
+      "conditional": true
+    },
+    {
+      "source": "tests/test_state.rs::tests.test_state_mutation",
+      "target": "src/state.rs::reserve_space",
+      "kind": "invoke",
+      "line": 19,
+      "raw": "reserve_space",
+      "symbols": [
+        "reserve_space"
+      ],
+      "conditional": true
+    },
+    {
+      "source": "tests/test_state.rs::tests.test_bounds_detection",
+      "target": "src/state.rs::reserve_space",
+      "kind": "invoke",
+      "line": 30,
+      "raw": "reserve_space",
+      "symbols": [
+        "reserve_space"
+      ],
+      "conditional": true
+    },
+    {
+      "source": "tests/test_state.rs",
+      "target": "src/state.rs",
+      "kind": "import",
+      "line": 3,
+      "raw": "use memory_allocator::state::{align_up, reserve_space, get_stats};",
+      "symbols": [
+        "get_stats"
+      ],
+      "conditional": true
+    },
+    {
+      "source": "tests/test_state.rs::tests.test_state_mutation",
+      "target": "src/state.rs::get_stats",
+      "kind": "invoke",
+      "line": 16,
+      "raw": "get_stats",
+      "symbols": [
+        "get_stats"
+      ],
+      "conditional": true
+    },
+    {
+      "source": "tests/test_state.rs::tests.test_state_mutation",
+      "target": "src/state.rs::get_stats",
+      "kind": "invoke",
+      "line": 22,
+      "raw": "get_stats",
+      "symbols": [
+        "get_stats"
+      ],
+      "conditional": true
+    },
+    {
+      "source": "src/lib.rs",
+      "target": "src/allocator.rs",
+      "kind": "import",
+      "line": 1,
+      "raw": "mod allocator",
+      "symbols": [
+        "allocator"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "src/lib.rs",
+      "target": "src/state.rs",
+      "kind": "import",
+      "line": 2,
+      "raw": "mod state",
+      "symbols": [
+        "state"
+      ],
+      "conditional": false
+    },
+    {
+      "source": "src/allocator.rs",
+      "target": "src/allocator.rs::BumpAllocator",
+      "kind": "contain",
+      "line": 4,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "src/allocator.rs::BumpAllocator",
+      "target": "src/allocator.rs::BumpAllocator.alloc",
+      "kind": "contain",
+      "line": 7,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "src/allocator.rs::BumpAllocator",
+      "target": "src/allocator.rs::BumpAllocator.dealloc",
+      "kind": "contain",
+      "line": 11,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "src/main.rs",
+      "target": "src/main.rs::main",
+      "kind": "contain",
+      "line": 3,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "src/state.rs",
+      "target": "src/state.rs::ArenaStats",
+      "kind": "contain",
+      "line": 7,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "src/state.rs",
+      "target": "src/state.rs::ArenaState",
+      "kind": "contain",
+      "line": 12,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "src/state.rs",
+      "target": "src/state.rs::align_up",
+      "kind": "contain",
+      "line": 22,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "src/state.rs",
+      "target": "src/state.rs::reserve_space",
+      "kind": "contain",
+      "line": 26,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "src/state.rs",
+      "target": "src/state.rs::get_stats",
+      "kind": "contain",
+      "line": 44,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "tests/integration_tests.rs",
+      "target": "tests/integration_tests.rs::tests",
+      "kind": "contain",
+      "line": 2,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "tests/integration_tests.rs::tests",
+      "target": "tests/integration_tests.rs::tests.test_alignment_properties",
+      "kind": "contain",
+      "line": 8,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "tests/integration_tests.rs::tests",
+      "target": "tests/integration_tests.rs::tests.test_non_overlap",
+      "kind": "contain",
+      "line": 18,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "tests/integration_tests.rs::tests",
+      "target": "tests/integration_tests.rs::tests.test_oom_panic",
+      "kind": "contain",
+      "line": 38,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "tests/integration_tests.rs::tests",
+      "target": "tests/integration_tests.rs::tests.test_thread_contention",
+      "kind": "contain",
+      "line": 49,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "tests/integration_tests.rs::tests",
+      "target": "tests/integration_tests.rs::tests.test_stdlib_collections",
+      "kind": "contain",
+      "line": 66,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "tests/test_state.rs",
+      "target": "tests/test_state.rs::tests",
+      "kind": "contain",
+      "line": 2,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "tests/test_state.rs::tests",
+      "target": "tests/test_state.rs::tests.test_align_math",
+      "kind": "contain",
+      "line": 7,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "tests/test_state.rs::tests",
+      "target": "tests/test_state.rs::tests.test_state_mutation",
+      "kind": "contain",
+      "line": 15,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    },
+    {
+      "source": "tests/test_state.rs::tests",
+      "target": "tests/test_state.rs::tests.test_bounds_detection",
+      "kind": "contain",
+      "line": 28,
+      "raw": "",
+      "symbols": [],
+      "conditional": false
+    }
+  ]
+}

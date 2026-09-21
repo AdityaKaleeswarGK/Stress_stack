@@ -1,0 +1,207 @@
+[
+  {
+    "case": "require_use",
+    "source": {
+      "lib.cjs": "module.exports = {run() {}};",
+      "a.cjs": "const lib = require(\"./lib.cjs\"); function f() { lib.run(); }"
+    },
+    "expected": {
+      "uses": [
+        [
+          "f",
+          "lib.run"
+        ]
+      ]
+    },
+    "observed": {
+      "status": "internal",
+      "target_symbol": null,
+      "uses": [],
+      "use_targets": []
+    },
+    "passed": false
+  },
+  {
+    "case": "arrow_parameter",
+    "source": {
+      "lib.js": "export function run() {}",
+      "a.js": "import {run} from \"./lib\"; const f = run => run();"
+    },
+    "expected": {
+      "uses": []
+    },
+    "observed": {
+      "status": "internal",
+      "target_symbol": "lib.js::run",
+      "uses": [
+        [
+          "f",
+          "run"
+        ],
+        [
+          "f",
+          "run"
+        ]
+      ],
+      "use_targets": [
+        "lib.js::run",
+        "lib.js::run"
+      ]
+    },
+    "passed": false
+  },
+  {
+    "case": "var_scope",
+    "source": {
+      "lib.js": "export function run() {}",
+      "a.js": "import {run} from \"./lib\"; function f() { if (true) { var run = () => 1; } run(); }"
+    },
+    "expected": {
+      "uses": []
+    },
+    "observed": {
+      "status": "internal",
+      "target_symbol": "lib.js::run",
+      "uses": [
+        [
+          "f",
+          "run"
+        ]
+      ],
+      "use_targets": [
+        "lib.js::run"
+      ]
+    },
+    "passed": false
+  },
+  {
+    "case": "default_is_not_named",
+    "source": {
+      "lib.js": "export default function run() {}",
+      "a.js": "import {run} from \"./lib\"; run();"
+    },
+    "expected": {
+      "status": "unresolved",
+      "target_symbol": null
+    },
+    "observed": {
+      "status": "internal",
+      "target_symbol": "lib.js::run",
+      "uses": [
+        [
+          "",
+          "run"
+        ]
+      ],
+      "use_targets": [
+        "lib.js::run"
+      ]
+    },
+    "passed": false
+  },
+  {
+    "case": "star_excludes_default",
+    "source": {
+      "lib.js": "export default function run() {}",
+      "barrel.js": "export * from \"./lib\";",
+      "a.js": "import run from \"./barrel\"; run();"
+    },
+    "expected": {
+      "status": "unresolved",
+      "target_symbol": null
+    },
+    "observed": {
+      "status": "internal",
+      "target_symbol": "lib.js::run",
+      "uses": [
+        [
+          "",
+          "run"
+        ]
+      ],
+      "use_targets": [
+        "lib.js::run"
+      ]
+    },
+    "passed": false
+  },
+  {
+    "case": "explicit_overrides_star",
+    "source": {
+      "lib.js": "export function run() {}",
+      "barrel.js": "export * from \"./lib\"; export function run() {}",
+      "a.js": "import {run} from \"./barrel\"; run();"
+    },
+    "expected": {
+      "status": "internal",
+      "target_symbol": "barrel.js::run"
+    },
+    "observed": {
+      "status": "ambiguous",
+      "target_symbol": null,
+      "uses": [
+        [
+          "",
+          "run"
+        ]
+      ],
+      "use_targets": [
+        null
+      ]
+    },
+    "passed": false
+  },
+  {
+    "case": "namespace_reexport",
+    "source": {
+      "lib.js": "export function run() {}",
+      "barrel.js": "export * as tools from \"./lib\";",
+      "a.js": "import {tools} from \"./barrel\"; tools.run();"
+    },
+    "expected": {
+      "status": "internal",
+      "use_targets": [
+        "lib.js::run"
+      ]
+    },
+    "observed": {
+      "status": "unresolved",
+      "target_symbol": null,
+      "uses": [
+        [
+          "",
+          "tools.run"
+        ]
+      ],
+      "use_targets": [
+        null
+      ]
+    },
+    "passed": false
+  },
+  {
+    "case": "typescript_source_priority",
+    "source": {
+      "lib.js": "export function run() {}",
+      "lib.ts": "export function run() {}",
+      "a.ts": "import {run} from \"./lib.js\"; run();"
+    },
+    "expected": {
+      "target_symbol": "lib.ts::run"
+    },
+    "observed": {
+      "status": "internal",
+      "target_symbol": "lib.js::run",
+      "uses": [
+        [
+          "",
+          "run"
+        ]
+      ],
+      "use_targets": [
+        "lib.js::run"
+      ]
+    },
+    "passed": false
+  }
+]
