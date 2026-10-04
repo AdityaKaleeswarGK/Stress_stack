@@ -144,6 +144,26 @@ def test_empty_and_malformed_output_parse_to_nothing() -> None:
     assert parse_numstat("not a numstat line").files == ()
 
 
+def test_null_numstat_preserves_paths_and_rename_destinations() -> None:
+    stats = parse_numstat("1\t2\ttests/test_é\tcase.py\0"
+                          "3\t4\t\0src/old.py\0src/new\nname.py\0"
+                          "-\t-\tassets/blob.bin\0")
+    assert [f.path for f in stats.files] == ["tests/test_é\tcase.py", "src/new\nname.py", "assets/blob.bin"]
+    assert stats.test_loc == 3
+    assert stats.source_loc == 7
+    assert stats.touches_binary
+
+
+def test_test_paths_quoted_by_git_still_filter_as_tests(tmp_path: Path) -> None:
+    root = init_repo(tmp_path / "quoted")
+    base = commit(root, "src/app.py", "X = 1\n", "Initial", date="2026-01-01T00:00:00Z")
+    path = "tests/test_é\tcase.py"
+    head = commit(root, path, "assert True\n", "Tests", date="2026-01-02T00:00:00Z")
+    stats = GitRepo.at(root).diff_stats(base, head)
+    assert stats is not None and not stats.has_source_change
+    assert stats.test_files[0].path == path
+
+
 @pytest.mark.parametrize(
     ("source_loc", "expected"),
     [(1, "trivial"), (5, "trivial"), (6, "small"), (20, "small"), (21, "medium"), (80, "medium"), (81, "large")],
@@ -188,8 +208,9 @@ def test_the_floor_is_still_configurable_upward() -> None:
     assert strict.patch_rejection(PatchStats(files=(source(5),))) is None
 
 
-def test_a_huge_diff_is_rejected_as_too_large() -> None:
-    policy = SelectionPolicy()
+def test_source_line_cap_is_opt_in() -> None:
+    assert SelectionPolicy().patch_rejection(PatchStats(files=(source(401),))) is None
+    policy = SelectionPolicy(max_source_loc=400)
     assert policy.patch_rejection(PatchStats(files=(source(401),))) is Rejection.DIFF_TOO_LARGE
     assert policy.patch_rejection(PatchStats(files=(source(400),))) is None
 
@@ -299,3 +320,10 @@ def test_an_unresolvable_diff_returns_none_rather_than_empty(tmp_path: Path) -> 
     root = init_repo(tmp_path / "repo")
     commit(root, "src/app.py", "a = 1\n", "initial", date="2026-01-01T00:00:00Z")
     assert GitRepo.at(root).diff_stats("0" * 40, "HEAD") is None
+
+
+def test_agent_settings_are_configuration_without_hiding_tool_scripts():
+    from fleet.history.patch import classify_path, PathKind
+    assert classify_path(".claude/settings.json") == PathKind.CONFIG
+    assert classify_path(".claude/settings.local.json") == PathKind.CONFIG
+    assert classify_path(".claude/scripts/check.py") == PathKind.SOURCE

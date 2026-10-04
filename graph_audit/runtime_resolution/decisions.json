@@ -1,0 +1,1424 @@
+{
+  "glom": [
+    {
+      "candidate": "6fd41340f30519ddc64a546ad2703dfe53f12356",
+      "subject": "fix Path.__getitem__ off-by-one (GH-299), add test extra to setup.py",
+      "base": {
+        "sha": "e515fb33c7af491c6a20b2618591736361bb1d08",
+        "status": "resolved_from_declarations",
+        "selected_python": "3.14",
+        "declared_test_versions": [
+          "3.7",
+          "3.8",
+          "3.9",
+          "3.10",
+          "3.11",
+          "3.12",
+          "3.13",
+          "3.14"
+        ],
+        "eligible_versions": [
+          "3.7",
+          "3.8",
+          "3.9",
+          "3.10",
+          "3.11",
+          "3.12",
+          "3.13",
+          "3.14"
+        ],
+        "evidence": [
+          {
+            "path": "tox.ini",
+            "field": "tox environment list",
+            "value": "py37,py38,py39,py310,py311,py312,py313,py314,pypy3,coverage-report,packaging"
+          }
+        ],
+        "reasons": [],
+        "policy": "explicit_pin_else_newest_tox_v1",
+        "execution_verified": false
+      },
+      "fixed": {
+        "sha": "6fd41340f30519ddc64a546ad2703dfe53f12356",
+        "status": "resolved_from_declarations",
+        "selected_python": "3.14",
+        "declared_test_versions": [
+          "3.7",
+          "3.8",
+          "3.9",
+          "3.10",
+          "3.11",
+          "3.12",
+          "3.13",
+          "3.14"
+        ],
+        "eligible_versions": [
+          "3.7",
+          "3.8",
+          "3.9",
+          "3.10",
+          "3.11",
+          "3.12",
+          "3.13",
+          "3.14"
+        ],
+        "evidence": [
+          {
+            "path": "tox.ini",
+            "field": "tox environment list",
+            "value": "py37,py38,py39,py310,py311,py312,py313,py314,pypy3,coverage-report,packaging"
+          }
+        ],
+        "reasons": [],
+        "policy": "explicit_pin_else_newest_tox_v1",
+        "execution_verified": false
+      },
+      "common_python": "3.14",
+      "newly_declared_versions": [],
+      "runtime_change_needs_review": false,
+      "meaning": "Declarations select a candidate environment; installation and execution must still verify it."
+    },
+    {
+      "candidate": "e515fb33c7af491c6a20b2618591736361bb1d08",
+      "subject": "Keep PathAccessError printable for Scope/S paths (#249) (#298)",
+      "base": {
+        "sha": "64141ba4794eaadf63242aa76191448159306251",
+        "status": "resolved_from_declarations",
+        "selected_python": "3.14",
+        "declared_test_versions": [
+          "3.7",
+          "3.8",
+          "3.9",
+          "3.10",
+          "3.11",
+          "3.12",
+          "3.13",
+          "3.14"
+        ],
+        "eligible_versions": [
+          "3.7",
+          "3.8",
+          "3.9",
+          "3.10",
+          "3.11",
+          "3.12",
+          "3.13",
+          "3.14"
+        ],
+        "evidence": [
+          {
+            "path": "tox.ini",
+            "field": "tox environment list",
+            "value": "py37,py38,py39,py310,py311,py312,py313,py314,pypy3,coverage-report,packaging"
+          }
+        ],
+        "reasons": [],
+        "policy": "explicit_pin_else_newest_tox_v1",
+        "execution_verified": false
+      },
+      "fixed": {
+        "sha": "e515fb33c7af491c6a20b2618591736361bb1d08",
+        "status": "resolved_from_declarations",
+        "selected_python": "3.14",
+        "declared_test_versions": [
+          "3.7",
+          "3.8",
+          "3.9",
+          "3.10",
+          "3.11",
+          "3.12",
+          "3.13",
+          "3.14"
+        ],
+        "eligible_versions": [
+          "3.7",
+          "3.8",
+          "3.9",
+          "3.10",
+          "3.11",
+          "3.12",
+          "3.13",
+          "3.14"
+        ],
+        "evidence": [
+          {
+            "path": "tox.ini",
+            "field": "tox environment list",
+            "value": "py37,py38,py39,py310,py311,py312,py313,py314,pypy3,coverage-report,packaging"
+          }
+        ],
+        "reasons": [],
+        "policy": "explicit_pin_else_newest_tox_v1",
+        "execution_verified": false
+      },
+      "common_python": "3.14",
+      "newly_declared_versions": [],
+      "runtime_change_needs_review": false,
+      "meaning": "Declarations select a candidate environment; installation and execution must still verify it."
+    },
+    {
+      "candidate": "64141ba4794eaadf63242aa76191448159306251",
+      "subject": "Docs refresh: fix dead embeds, stale content, add glompad links, remove backward-compat exports",
+      "base": {
+        "sha": "c1b2d387548fd3bb736453a6dbd6f749cf329faa",
+        "status": "resolved_from_declarations",
+        "selected_python": "3.14",
+        "declared_test_versions": [
+          "3.7",
+          "3.8",
+          "3.9",
+          "3.10",
+          "3.11",
+          "3.12",
+          "3.13",
+          "3.14"
+        ],
+        "eligible_versions": [
+          "3.7",
+          "3.8",
+          "3.9",
+          "3.10",
+          "3.11",
+          "3.12",
+          "3.13",
+          "3.14"
+        ],
+        "evidence": [
+          {
+            "path": "tox.ini",
+            "field": "tox environment list",
+            "value": "py37,py38,py39,py310,py311,py312,py313,py314,pypy3,coverage-report,packaging"
+          }
+        ],
+        "reasons": [],
+        "policy": "explicit_pin_else_newest_tox_v1",
+        "execution_verified": false
+      },
+      "fixed": {
+        "sha": "64141ba4794eaadf63242aa76191448159306251",
+        "status": "resolved_from_declarations",
+        "selected_python": "3.14",
+        "declared_test_versions": [
+          "3.7",
+          "3.8",
+          "3.9",
+          "3.10",
+          "3.11",
+          "3.12",
+          "3.13",
+          "3.14"
+        ],
+        "eligible_versions": [
+          "3.7",
+          "3.8",
+          "3.9",
+          "3.10",
+          "3.11",
+          "3.12",
+          "3.13",
+          "3.14"
+        ],
+        "evidence": [
+          {
+            "path": "tox.ini",
+            "field": "tox environment list",
+            "value": "py37,py38,py39,py310,py311,py312,py313,py314,pypy3,coverage-report,packaging"
+          }
+        ],
+        "reasons": [],
+        "policy": "explicit_pin_else_newest_tox_v1",
+        "execution_verified": false
+      },
+      "common_python": "3.14",
+      "newly_declared_versions": [],
+      "runtime_change_needs_review": false,
+      "meaning": "Declarations select a candidate environment; installation and execution must still verify it."
+    },
+    {
+      "candidate": "bc653da9afec59bbb9c57230ffa2a12374f0346c",
+      "subject": "Add Python 3.12 (#285)",
+      "base": {
+        "sha": "24c21dcc44cc81abc193aa3bfa2f66304470d205",
+        "status": "resolved_from_declarations",
+        "selected_python": "3.11",
+        "declared_test_versions": [
+          "3.7",
+          "3.8",
+          "3.9",
+          "3.10",
+          "3.11"
+        ],
+        "eligible_versions": [
+          "3.7",
+          "3.8",
+          "3.9",
+          "3.10",
+          "3.11"
+        ],
+        "evidence": [
+          {
+            "path": "tox.ini",
+            "field": "tox environment list",
+            "value": "py37,py38,py39,py310,py311,pypy3,coverage-report,packaging"
+          }
+        ],
+        "reasons": [],
+        "policy": "explicit_pin_else_newest_tox_v1",
+        "execution_verified": false
+      },
+      "fixed": {
+        "sha": "bc653da9afec59bbb9c57230ffa2a12374f0346c",
+        "status": "resolved_from_declarations",
+        "selected_python": "3.12",
+        "declared_test_versions": [
+          "3.7",
+          "3.8",
+          "3.9",
+          "3.10",
+          "3.11",
+          "3.12"
+        ],
+        "eligible_versions": [
+          "3.7",
+          "3.8",
+          "3.9",
+          "3.10",
+          "3.11",
+          "3.12"
+        ],
+        "evidence": [
+          {
+            "path": "tox.ini",
+            "field": "tox environment list",
+            "value": "py37,py38,py39,py310,py311,py312,pypy3,coverage-report,packaging"
+          }
+        ],
+        "reasons": [],
+        "policy": "explicit_pin_else_newest_tox_v1",
+        "execution_verified": false
+      },
+      "common_python": "3.11",
+      "newly_declared_versions": [
+        "3.12"
+      ],
+      "runtime_change_needs_review": true,
+      "meaning": "Declarations select a candidate environment; installation and execution must still verify it."
+    },
+    {
+      "candidate": "24c21dcc44cc81abc193aa3bfa2f66304470d205",
+      "subject": "Add --scalar flag to CLI (#280)",
+      "base": {
+        "sha": "5cef40707d8b4765c621d7a09ad5f35f96bf7d1a",
+        "status": "resolved_from_declarations",
+        "selected_python": "3.11",
+        "declared_test_versions": [
+          "3.7",
+          "3.8",
+          "3.9",
+          "3.10",
+          "3.11"
+        ],
+        "eligible_versions": [
+          "3.7",
+          "3.8",
+          "3.9",
+          "3.10",
+          "3.11"
+        ],
+        "evidence": [
+          {
+            "path": "tox.ini",
+            "field": "tox environment list",
+            "value": "py37,py38,py39,py310,py311,pypy3,coverage-report,packaging"
+          }
+        ],
+        "reasons": [],
+        "policy": "explicit_pin_else_newest_tox_v1",
+        "execution_verified": false
+      },
+      "fixed": {
+        "sha": "24c21dcc44cc81abc193aa3bfa2f66304470d205",
+        "status": "resolved_from_declarations",
+        "selected_python": "3.11",
+        "declared_test_versions": [
+          "3.7",
+          "3.8",
+          "3.9",
+          "3.10",
+          "3.11"
+        ],
+        "eligible_versions": [
+          "3.7",
+          "3.8",
+          "3.9",
+          "3.10",
+          "3.11"
+        ],
+        "evidence": [
+          {
+            "path": "tox.ini",
+            "field": "tox environment list",
+            "value": "py37,py38,py39,py310,py311,pypy3,coverage-report,packaging"
+          }
+        ],
+        "reasons": [],
+        "policy": "explicit_pin_else_newest_tox_v1",
+        "execution_verified": false
+      },
+      "common_python": "3.11",
+      "newly_declared_versions": [],
+      "runtime_change_needs_review": false,
+      "meaning": "Declarations select a candidate environment; installation and execution must still verify it."
+    },
+    {
+      "candidate": "1336a7c6ba8071dccc3b334ffd5d0affee9e668e",
+      "subject": "a few cli docs and message updates",
+      "base": {
+        "sha": "9082ab6f98b018856fc9d37aec4077d27662f025",
+        "status": "resolved_from_declarations",
+        "selected_python": "3.11",
+        "declared_test_versions": [
+          "3.7",
+          "3.8",
+          "3.9",
+          "3.10",
+          "3.11"
+        ],
+        "eligible_versions": [
+          "3.7",
+          "3.8",
+          "3.9",
+          "3.10",
+          "3.11"
+        ],
+        "evidence": [
+          {
+            "path": "tox.ini",
+            "field": "tox environment list",
+            "value": "py37,py38,py39,py310,py311,pypy3,coverage-report,packaging"
+          }
+        ],
+        "reasons": [],
+        "policy": "explicit_pin_else_newest_tox_v1",
+        "execution_verified": false
+      },
+      "fixed": {
+        "sha": "1336a7c6ba8071dccc3b334ffd5d0affee9e668e",
+        "status": "resolved_from_declarations",
+        "selected_python": "3.11",
+        "declared_test_versions": [
+          "3.7",
+          "3.8",
+          "3.9",
+          "3.10",
+          "3.11"
+        ],
+        "eligible_versions": [
+          "3.7",
+          "3.8",
+          "3.9",
+          "3.10",
+          "3.11"
+        ],
+        "evidence": [
+          {
+            "path": "tox.ini",
+            "field": "tox environment list",
+            "value": "py37,py38,py39,py310,py311,pypy3,coverage-report,packaging"
+          }
+        ],
+        "reasons": [],
+        "policy": "explicit_pin_else_newest_tox_v1",
+        "execution_verified": false
+      },
+      "common_python": "3.11",
+      "newly_declared_versions": [],
+      "runtime_change_needs_review": false,
+      "meaning": "Declarations select a candidate environment; installation and execution must still verify it."
+    },
+    {
+      "candidate": "9082ab6f98b018856fc9d37aec4077d27662f025",
+      "subject": "Add support for TOML files to the CLI. (#277)",
+      "base": {
+        "sha": "573cb911aee0af7149ea8376a05f61b3435b23e7",
+        "status": "resolved_from_declarations",
+        "selected_python": "3.11",
+        "declared_test_versions": [
+          "3.7",
+          "3.8",
+          "3.9",
+          "3.10",
+          "3.11"
+        ],
+        "eligible_versions": [
+          "3.7",
+          "3.8",
+          "3.9",
+          "3.10",
+          "3.11"
+        ],
+        "evidence": [
+          {
+            "path": "tox.ini",
+            "field": "tox environment list",
+            "value": "py37,py38,py39,py310,py311,pypy3,coverage-report,packaging"
+          }
+        ],
+        "reasons": [],
+        "policy": "explicit_pin_else_newest_tox_v1",
+        "execution_verified": false
+      },
+      "fixed": {
+        "sha": "9082ab6f98b018856fc9d37aec4077d27662f025",
+        "status": "resolved_from_declarations",
+        "selected_python": "3.11",
+        "declared_test_versions": [
+          "3.7",
+          "3.8",
+          "3.9",
+          "3.10",
+          "3.11"
+        ],
+        "eligible_versions": [
+          "3.7",
+          "3.8",
+          "3.9",
+          "3.10",
+          "3.11"
+        ],
+        "evidence": [
+          {
+            "path": "tox.ini",
+            "field": "tox environment list",
+            "value": "py37,py38,py39,py310,py311,pypy3,coverage-report,packaging"
+          }
+        ],
+        "reasons": [],
+        "policy": "explicit_pin_else_newest_tox_v1",
+        "execution_verified": false
+      },
+      "common_python": "3.11",
+      "newly_declared_versions": [],
+      "runtime_change_needs_review": false,
+      "meaning": "Declarations select a candidate environment; installation and execution must still verify it."
+    },
+    {
+      "candidate": "d285e7399c4586486cfd1adb203163b5d5bb65e7",
+      "subject": "Handle Python 3.11 (#271)",
+      "base": {
+        "sha": "b56250387e7398b04457bb1e48edcce47f914998",
+        "status": "resolved_from_declarations",
+        "selected_python": "3.10",
+        "declared_test_versions": [
+          "3.7",
+          "3.8",
+          "3.9",
+          "3.10"
+        ],
+        "eligible_versions": [
+          "3.7",
+          "3.8",
+          "3.9",
+          "3.10"
+        ],
+        "evidence": [
+          {
+            "path": "tox.ini",
+            "field": "tox environment list",
+            "value": "py37,py38,py39,py310,pypy3,coverage-report,packaging"
+          }
+        ],
+        "reasons": [],
+        "policy": "explicit_pin_else_newest_tox_v1",
+        "execution_verified": false
+      },
+      "fixed": {
+        "sha": "d285e7399c4586486cfd1adb203163b5d5bb65e7",
+        "status": "resolved_from_declarations",
+        "selected_python": "3.11",
+        "declared_test_versions": [
+          "3.7",
+          "3.8",
+          "3.9",
+          "3.10",
+          "3.11"
+        ],
+        "eligible_versions": [
+          "3.7",
+          "3.8",
+          "3.9",
+          "3.10",
+          "3.11"
+        ],
+        "evidence": [
+          {
+            "path": "tox.ini",
+            "field": "tox environment list",
+            "value": "py37,py38,py39,py310,py311,pypy3,coverage-report,packaging"
+          }
+        ],
+        "reasons": [],
+        "policy": "explicit_pin_else_newest_tox_v1",
+        "execution_verified": false
+      },
+      "common_python": "3.10",
+      "newly_declared_versions": [
+        "3.11"
+      ],
+      "runtime_change_needs_review": true,
+      "meaning": "Declarations select a candidate environment; installation and execution must still verify it."
+    },
+    {
+      "candidate": "34315014fe16b4c1e144a1acdf480699bf2303fb",
+      "subject": "bump yaml and switch to safe load (#262)",
+      "base": {
+        "sha": "c97b71a1e4751d227898f2b31e885e001d4818cb",
+        "status": "resolved_from_declarations",
+        "selected_python": "3.10",
+        "declared_test_versions": [
+          "3.7",
+          "3.8",
+          "3.9",
+          "3.10"
+        ],
+        "eligible_versions": [
+          "3.7",
+          "3.8",
+          "3.9",
+          "3.10"
+        ],
+        "evidence": [
+          {
+            "path": "tox.ini",
+            "field": "tox environment list",
+            "value": "py37,py38,py39,py310,pypy3,coverage-report,packaging"
+          }
+        ],
+        "reasons": [],
+        "policy": "explicit_pin_else_newest_tox_v1",
+        "execution_verified": false
+      },
+      "fixed": {
+        "sha": "34315014fe16b4c1e144a1acdf480699bf2303fb",
+        "status": "resolved_from_declarations",
+        "selected_python": "3.10",
+        "declared_test_versions": [
+          "3.7",
+          "3.8",
+          "3.9",
+          "3.10"
+        ],
+        "eligible_versions": [
+          "3.7",
+          "3.8",
+          "3.9",
+          "3.10"
+        ],
+        "evidence": [
+          {
+            "path": "tox.ini",
+            "field": "tox environment list",
+            "value": "py37,py38,py39,py310,pypy3,coverage-report,packaging"
+          }
+        ],
+        "reasons": [],
+        "policy": "explicit_pin_else_newest_tox_v1",
+        "execution_verified": false
+      },
+      "common_python": "3.10",
+      "newly_declared_versions": [],
+      "runtime_change_needs_review": false,
+      "meaning": "Declarations select a candidate environment; installation and execution must still verify it."
+    },
+    {
+      "candidate": "c97b71a1e4751d227898f2b31e885e001d4818cb",
+      "subject": "conservative removal of weakrefs fromT (#235)",
+      "base": {
+        "sha": "e677614386116ceb5f018d47be9e3d2d907dbbce",
+        "status": "resolved_from_declarations",
+        "selected_python": "3.10",
+        "declared_test_versions": [
+          "3.7",
+          "3.8",
+          "3.9",
+          "3.10"
+        ],
+        "eligible_versions": [
+          "3.7",
+          "3.8",
+          "3.9",
+          "3.10"
+        ],
+        "evidence": [
+          {
+            "path": "tox.ini",
+            "field": "tox environment list",
+            "value": "py37,py38,py39,py310,pypy3,coverage-report,packaging"
+          }
+        ],
+        "reasons": [],
+        "policy": "explicit_pin_else_newest_tox_v1",
+        "execution_verified": false
+      },
+      "fixed": {
+        "sha": "c97b71a1e4751d227898f2b31e885e001d4818cb",
+        "status": "resolved_from_declarations",
+        "selected_python": "3.10",
+        "declared_test_versions": [
+          "3.7",
+          "3.8",
+          "3.9",
+          "3.10"
+        ],
+        "eligible_versions": [
+          "3.7",
+          "3.8",
+          "3.9",
+          "3.10"
+        ],
+        "evidence": [
+          {
+            "path": "tox.ini",
+            "field": "tox environment list",
+            "value": "py37,py38,py39,py310,pypy3,coverage-report,packaging"
+          }
+        ],
+        "reasons": [],
+        "policy": "explicit_pin_else_newest_tox_v1",
+        "execution_verified": false
+      },
+      "common_python": "3.10",
+      "newly_declared_versions": [],
+      "runtime_change_needs_review": false,
+      "meaning": "Declarations select a candidate environment; installation and execution must still verify it."
+    },
+    {
+      "candidate": "ec19f8b29e09408f946840e51d3fb4aeea0219e2",
+      "subject": "Only supporting Python 3.7+ (including dropping Python 2) (#255)",
+      "base": {
+        "sha": "a8de39dda6e10f161d08ecdf09c1b3938c1e1b00",
+        "status": "resolved_from_declarations",
+        "selected_python": "3.10",
+        "declared_test_versions": [
+          "3.7",
+          "3.8",
+          "3.9",
+          "3.10"
+        ],
+        "eligible_versions": [
+          "3.7",
+          "3.8",
+          "3.9",
+          "3.10"
+        ],
+        "evidence": [
+          {
+            "path": "tox.ini",
+            "field": "tox environment list",
+            "value": "py27,py37,py38,py39,py310,pypy3,coverage-report,packaging"
+          }
+        ],
+        "reasons": [],
+        "policy": "explicit_pin_else_newest_tox_v1",
+        "execution_verified": false
+      },
+      "fixed": {
+        "sha": "ec19f8b29e09408f946840e51d3fb4aeea0219e2",
+        "status": "resolved_from_declarations",
+        "selected_python": "3.10",
+        "declared_test_versions": [
+          "3.7",
+          "3.8",
+          "3.9",
+          "3.10"
+        ],
+        "eligible_versions": [
+          "3.7",
+          "3.8",
+          "3.9",
+          "3.10"
+        ],
+        "evidence": [
+          {
+            "path": "tox.ini",
+            "field": "tox environment list",
+            "value": "py37,py38,py39,py310,pypy3,coverage-report,packaging"
+          }
+        ],
+        "reasons": [],
+        "policy": "explicit_pin_else_newest_tox_v1",
+        "execution_verified": false
+      },
+      "common_python": "3.10",
+      "newly_declared_versions": [],
+      "runtime_change_needs_review": false,
+      "meaning": "Declarations select a candidate environment; installation and execution must still verify it."
+    },
+    {
+      "candidate": "13432c2c039e8a777d2fa9c1bb61b0220ca305a3",
+      "subject": "add * and ** to docs. expose register_op and docs",
+      "base": {
+        "sha": "de604f59bf8a447cf650c20b1af271016ed8847f",
+        "status": "resolved_from_declarations",
+        "selected_python": "3.10",
+        "declared_test_versions": [
+          "3.7",
+          "3.8",
+          "3.9",
+          "3.10"
+        ],
+        "eligible_versions": [
+          "3.7",
+          "3.8",
+          "3.9",
+          "3.10"
+        ],
+        "evidence": [
+          {
+            "path": "tox.ini",
+            "field": "tox environment list",
+            "value": "py27,py37,py38,py39,py310,pypy3,coverage-report,packaging"
+          }
+        ],
+        "reasons": [],
+        "policy": "explicit_pin_else_newest_tox_v1",
+        "execution_verified": false
+      },
+      "fixed": {
+        "sha": "13432c2c039e8a777d2fa9c1bb61b0220ca305a3",
+        "status": "resolved_from_declarations",
+        "selected_python": "3.10",
+        "declared_test_versions": [
+          "3.7",
+          "3.8",
+          "3.9",
+          "3.10"
+        ],
+        "eligible_versions": [
+          "3.7",
+          "3.8",
+          "3.9",
+          "3.10"
+        ],
+        "evidence": [
+          {
+            "path": "tox.ini",
+            "field": "tox environment list",
+            "value": "py27,py37,py38,py39,py310,pypy3,coverage-report,packaging"
+          }
+        ],
+        "reasons": [],
+        "policy": "explicit_pin_else_newest_tox_v1",
+        "execution_verified": false
+      },
+      "common_python": "3.10",
+      "newly_declared_versions": [],
+      "runtime_change_needs_review": false,
+      "meaning": "Declarations select a candidate environment; installation and execution must still verify it."
+    },
+    {
+      "candidate": "de604f59bf8a447cf650c20b1af271016ed8847f",
+      "subject": "make star paths the default in preparation for 23.1",
+      "base": {
+        "sha": "fe0a14889652167dfd9a6fb5b64152322a97030e",
+        "status": "resolved_from_declarations",
+        "selected_python": "3.10",
+        "declared_test_versions": [
+          "3.7",
+          "3.8",
+          "3.9",
+          "3.10"
+        ],
+        "eligible_versions": [
+          "3.7",
+          "3.8",
+          "3.9",
+          "3.10"
+        ],
+        "evidence": [
+          {
+            "path": "tox.ini",
+            "field": "tox environment list",
+            "value": "py27,py37,py38,py39,py310,pypy3,coverage-report,packaging"
+          }
+        ],
+        "reasons": [],
+        "policy": "explicit_pin_else_newest_tox_v1",
+        "execution_verified": false
+      },
+      "fixed": {
+        "sha": "de604f59bf8a447cf650c20b1af271016ed8847f",
+        "status": "resolved_from_declarations",
+        "selected_python": "3.10",
+        "declared_test_versions": [
+          "3.7",
+          "3.8",
+          "3.9",
+          "3.10"
+        ],
+        "eligible_versions": [
+          "3.7",
+          "3.8",
+          "3.9",
+          "3.10"
+        ],
+        "evidence": [
+          {
+            "path": "tox.ini",
+            "field": "tox environment list",
+            "value": "py27,py37,py38,py39,py310,pypy3,coverage-report,packaging"
+          }
+        ],
+        "reasons": [],
+        "policy": "explicit_pin_else_newest_tox_v1",
+        "execution_verified": false
+      },
+      "common_python": "3.10",
+      "newly_declared_versions": [],
+      "runtime_change_needs_review": false,
+      "meaning": "Declarations select a candidate environment; installation and execution must still verify it."
+    },
+    {
+      "candidate": "71a82580e9fc4ec81bfad410f4f2edaa0c19440c",
+      "subject": "quick patch for ordereddicts as reported in #246",
+      "base": {
+        "sha": "85a7a3a4a8c793df30fbad1eefaf53c4f5a91cdd",
+        "status": "resolved_from_declarations",
+        "selected_python": "3.10",
+        "declared_test_versions": [
+          "3.7",
+          "3.8",
+          "3.9",
+          "3.10"
+        ],
+        "eligible_versions": [
+          "3.7",
+          "3.8",
+          "3.9",
+          "3.10"
+        ],
+        "evidence": [
+          {
+            "path": "tox.ini",
+            "field": "tox environment list",
+            "value": "py27,py37,py38,py39,py310,pypy3,coverage-report,packaging"
+          }
+        ],
+        "reasons": [],
+        "policy": "explicit_pin_else_newest_tox_v1",
+        "execution_verified": false
+      },
+      "fixed": {
+        "sha": "71a82580e9fc4ec81bfad410f4f2edaa0c19440c",
+        "status": "resolved_from_declarations",
+        "selected_python": "3.10",
+        "declared_test_versions": [
+          "3.7",
+          "3.8",
+          "3.9",
+          "3.10"
+        ],
+        "eligible_versions": [
+          "3.7",
+          "3.8",
+          "3.9",
+          "3.10"
+        ],
+        "evidence": [
+          {
+            "path": "tox.ini",
+            "field": "tox environment list",
+            "value": "py27,py37,py38,py39,py310,pypy3,coverage-report,packaging"
+          }
+        ],
+        "reasons": [],
+        "policy": "explicit_pin_else_newest_tox_v1",
+        "execution_verified": false
+      },
+      "common_python": "3.10",
+      "newly_declared_versions": [],
+      "runtime_change_needs_review": false,
+      "meaning": "Declarations select a candidate environment; installation and execution must still verify it."
+    },
+    {
+      "candidate": "85a7a3a4a8c793df30fbad1eefaf53c4f5a91cdd",
+      "subject": "** now considers root element part of iteration (#250)",
+      "base": {
+        "sha": "eea15107675eff868c08e18454684faaefb358c9",
+        "status": "resolved_from_declarations",
+        "selected_python": "3.10",
+        "declared_test_versions": [
+          "3.7",
+          "3.8",
+          "3.9",
+          "3.10"
+        ],
+        "eligible_versions": [
+          "3.7",
+          "3.8",
+          "3.9",
+          "3.10"
+        ],
+        "evidence": [
+          {
+            "path": "tox.ini",
+            "field": "tox environment list",
+            "value": "py27,py37,py38,py39,py310,pypy3,coverage-report,packaging"
+          }
+        ],
+        "reasons": [],
+        "policy": "explicit_pin_else_newest_tox_v1",
+        "execution_verified": false
+      },
+      "fixed": {
+        "sha": "85a7a3a4a8c793df30fbad1eefaf53c4f5a91cdd",
+        "status": "resolved_from_declarations",
+        "selected_python": "3.10",
+        "declared_test_versions": [
+          "3.7",
+          "3.8",
+          "3.9",
+          "3.10"
+        ],
+        "eligible_versions": [
+          "3.7",
+          "3.8",
+          "3.9",
+          "3.10"
+        ],
+        "evidence": [
+          {
+            "path": "tox.ini",
+            "field": "tox environment list",
+            "value": "py27,py37,py38,py39,py310,pypy3,coverage-report,packaging"
+          }
+        ],
+        "reasons": [],
+        "policy": "explicit_pin_else_newest_tox_v1",
+        "execution_verified": false
+      },
+      "common_python": "3.10",
+      "newly_declared_versions": [],
+      "runtime_change_needs_review": false,
+      "meaning": "Declarations select a candidate environment; installation and execution must still verify it."
+    },
+    {
+      "candidate": "db6fee719cf4264048879de632f622d9ee073e8f",
+      "subject": "make Iter().all() roundtrip",
+      "base": {
+        "sha": "2a428ecee66137dfe4d45524316b3ce0e4abb5a7",
+        "status": "resolved_from_declarations",
+        "selected_python": "3.9",
+        "declared_test_versions": [
+          "3.6",
+          "3.7",
+          "3.8",
+          "3.9"
+        ],
+        "eligible_versions": [
+          "3.7",
+          "3.8",
+          "3.9"
+        ],
+        "evidence": [
+          {
+            "path": "tox.ini",
+            "field": "tox environment list",
+            "value": "py27,py36,py37,py38,py39,pypy,coverage-report,packaging"
+          }
+        ],
+        "reasons": [],
+        "policy": "explicit_pin_else_newest_tox_v1",
+        "execution_verified": false
+      },
+      "fixed": {
+        "sha": "db6fee719cf4264048879de632f622d9ee073e8f",
+        "status": "resolved_from_declarations",
+        "selected_python": "3.9",
+        "declared_test_versions": [
+          "3.6",
+          "3.7",
+          "3.8",
+          "3.9"
+        ],
+        "eligible_versions": [
+          "3.7",
+          "3.8",
+          "3.9"
+        ],
+        "evidence": [
+          {
+            "path": "tox.ini",
+            "field": "tox environment list",
+            "value": "py27,py36,py37,py38,py39,pypy,coverage-report,packaging"
+          }
+        ],
+        "reasons": [],
+        "policy": "explicit_pin_else_newest_tox_v1",
+        "execution_verified": false
+      },
+      "common_python": "3.9",
+      "newly_declared_versions": [],
+      "runtime_change_needs_review": false,
+      "meaning": "Declarations select a candidate environment; installation and execution must still verify it."
+    },
+    {
+      "candidate": "94b63752c686a42bf71baeec15e250257aee167d",
+      "subject": "Merge pull request #196 from mahmoud/arg-mode",
+      "base": {
+        "sha": "599496d9f55f86f19402c692627ea51671c4e9f2",
+        "status": "resolved_from_declarations",
+        "selected_python": "3.9",
+        "declared_test_versions": [
+          "3.6",
+          "3.7",
+          "3.8",
+          "3.9"
+        ],
+        "eligible_versions": [
+          "3.7",
+          "3.8",
+          "3.9"
+        ],
+        "evidence": [
+          {
+            "path": "tox.ini",
+            "field": "tox environment list",
+            "value": "py27,py36,py37,py38,py39,pypy,coverage-report,packaging"
+          }
+        ],
+        "reasons": [],
+        "policy": "explicit_pin_else_newest_tox_v1",
+        "execution_verified": false
+      },
+      "fixed": {
+        "sha": "94b63752c686a42bf71baeec15e250257aee167d",
+        "status": "resolved_from_declarations",
+        "selected_python": "3.9",
+        "declared_test_versions": [
+          "3.6",
+          "3.7",
+          "3.8",
+          "3.9"
+        ],
+        "eligible_versions": [
+          "3.7",
+          "3.8",
+          "3.9"
+        ],
+        "evidence": [
+          {
+            "path": "tox.ini",
+            "field": "tox environment list",
+            "value": "py27,py36,py37,py38,py39,pypy,coverage-report,packaging"
+          }
+        ],
+        "reasons": [],
+        "policy": "explicit_pin_else_newest_tox_v1",
+        "execution_verified": false
+      },
+      "common_python": "3.9",
+      "newly_declared_versions": [],
+      "runtime_change_needs_review": false,
+      "meaning": "Declarations select a candidate environment; installation and execution must still verify it."
+    },
+    {
+      "candidate": "24cc25ff95a597d7301777cf863d1e7b98183912",
+      "subject": "resolve ordering issue in star traversal",
+      "base": {
+        "sha": "032f25287331f86835ca91edd068aab5aaefdbef",
+        "status": "resolved_from_declarations",
+        "selected_python": "3.9",
+        "declared_test_versions": [
+          "3.6",
+          "3.7",
+          "3.8",
+          "3.9"
+        ],
+        "eligible_versions": [
+          "3.7",
+          "3.8",
+          "3.9"
+        ],
+        "evidence": [
+          {
+            "path": "tox.ini",
+            "field": "tox environment list",
+            "value": "py27,py36,py37,py38,py39,pypy,coverage-report,packaging"
+          }
+        ],
+        "reasons": [],
+        "policy": "explicit_pin_else_newest_tox_v1",
+        "execution_verified": false
+      },
+      "fixed": {
+        "sha": "24cc25ff95a597d7301777cf863d1e7b98183912",
+        "status": "resolved_from_declarations",
+        "selected_python": "3.9",
+        "declared_test_versions": [
+          "3.6",
+          "3.7",
+          "3.8",
+          "3.9"
+        ],
+        "eligible_versions": [
+          "3.7",
+          "3.8",
+          "3.9"
+        ],
+        "evidence": [
+          {
+            "path": "tox.ini",
+            "field": "tox environment list",
+            "value": "py27,py36,py37,py38,py39,pypy,coverage-report,packaging"
+          }
+        ],
+        "reasons": [],
+        "policy": "explicit_pin_else_newest_tox_v1",
+        "execution_verified": false
+      },
+      "common_python": "3.9",
+      "newly_declared_versions": [],
+      "runtime_change_needs_review": false,
+      "meaning": "Declarations select a candidate environment; installation and execution must still verify it."
+    },
+    {
+      "candidate": "032f25287331f86835ca91edd068aab5aaefdbef",
+      "subject": "Merge pull request #144 from mahmoud/path-star",
+      "base": {
+        "sha": "6071cfebd178722a5e7f2e1dd7480402cc5896b5",
+        "status": "resolved_from_declarations",
+        "selected_python": "3.9",
+        "declared_test_versions": [
+          "3.6",
+          "3.7",
+          "3.8",
+          "3.9"
+        ],
+        "eligible_versions": [
+          "3.7",
+          "3.8",
+          "3.9"
+        ],
+        "evidence": [
+          {
+            "path": "tox.ini",
+            "field": "tox environment list",
+            "value": "py27,py36,py37,py38,py39,pypy,coverage-report,packaging"
+          }
+        ],
+        "reasons": [],
+        "policy": "explicit_pin_else_newest_tox_v1",
+        "execution_verified": false
+      },
+      "fixed": {
+        "sha": "032f25287331f86835ca91edd068aab5aaefdbef",
+        "status": "resolved_from_declarations",
+        "selected_python": "3.9",
+        "declared_test_versions": [
+          "3.6",
+          "3.7",
+          "3.8",
+          "3.9"
+        ],
+        "eligible_versions": [
+          "3.7",
+          "3.8",
+          "3.9"
+        ],
+        "evidence": [
+          {
+            "path": "tox.ini",
+            "field": "tox environment list",
+            "value": "py27,py36,py37,py38,py39,pypy,coverage-report,packaging"
+          }
+        ],
+        "reasons": [],
+        "policy": "explicit_pin_else_newest_tox_v1",
+        "execution_verified": false
+      },
+      "common_python": "3.9",
+      "newly_declared_versions": [],
+      "runtime_change_needs_review": false,
+      "meaning": "Declarations select a candidate environment; installation and execution must still verify it."
+    },
+    {
+      "candidate": "c31c91e96c14ee58a92bce82d199ae6ac8cbbd05",
+      "subject": "Merge pull request #206 from mahmoud/omni-t",
+      "base": {
+        "sha": "55bbcd5d8ff4d07a133048a806604d3c290ac8d7",
+        "status": "resolved_from_declarations",
+        "selected_python": "3.7",
+        "declared_test_versions": [
+          "3.4",
+          "3.6",
+          "3.7"
+        ],
+        "eligible_versions": [
+          "3.7"
+        ],
+        "evidence": [
+          {
+            "path": "tox.ini",
+            "field": "tox environment list",
+            "value": "py27,py34,py36,py37,pypy,coverage-report,packaging"
+          }
+        ],
+        "reasons": [],
+        "policy": "explicit_pin_else_newest_tox_v1",
+        "execution_verified": false
+      },
+      "fixed": {
+        "sha": "c31c91e96c14ee58a92bce82d199ae6ac8cbbd05",
+        "status": "resolved_from_declarations",
+        "selected_python": "3.7",
+        "declared_test_versions": [
+          "3.4",
+          "3.6",
+          "3.7"
+        ],
+        "eligible_versions": [
+          "3.7"
+        ],
+        "evidence": [
+          {
+            "path": "tox.ini",
+            "field": "tox environment list",
+            "value": "py27,py34,py36,py37,pypy,coverage-report,packaging"
+          }
+        ],
+        "reasons": [],
+        "policy": "explicit_pin_else_newest_tox_v1",
+        "execution_verified": false
+      },
+      "common_python": "3.7",
+      "newly_declared_versions": [],
+      "runtime_change_needs_review": false,
+      "meaning": "Declarations select a candidate environment; installation and execution must still verify it."
+    },
+    {
+      "candidate": "55bbcd5d8ff4d07a133048a806604d3c290ac8d7",
+      "subject": "Merge pull request #198 from mahmoud/perf",
+      "base": {
+        "sha": "d99ccaa48b05fb1bd31a14cf35b25e9153ddc6eb",
+        "status": "resolved_from_declarations",
+        "selected_python": "3.7",
+        "declared_test_versions": [
+          "3.4",
+          "3.6",
+          "3.7"
+        ],
+        "eligible_versions": [
+          "3.7"
+        ],
+        "evidence": [
+          {
+            "path": "tox.ini",
+            "field": "tox environment list",
+            "value": "py27,py34,py36,py37,pypy,coverage-report,packaging"
+          }
+        ],
+        "reasons": [],
+        "policy": "explicit_pin_else_newest_tox_v1",
+        "execution_verified": false
+      },
+      "fixed": {
+        "sha": "55bbcd5d8ff4d07a133048a806604d3c290ac8d7",
+        "status": "resolved_from_declarations",
+        "selected_python": "3.7",
+        "declared_test_versions": [
+          "3.4",
+          "3.6",
+          "3.7"
+        ],
+        "eligible_versions": [
+          "3.7"
+        ],
+        "evidence": [
+          {
+            "path": "tox.ini",
+            "field": "tox environment list",
+            "value": "py27,py34,py36,py37,pypy,coverage-report,packaging"
+          }
+        ],
+        "reasons": [],
+        "policy": "explicit_pin_else_newest_tox_v1",
+        "execution_verified": false
+      },
+      "common_python": "3.7",
+      "newly_declared_versions": [],
+      "runtime_change_needs_review": false,
+      "meaning": "Declarations select a candidate environment; installation and execution must still verify it."
+    }
+  ],
+  "other_repositories": {
+    "click": {
+      "sha": "150d1071d69c5cdad7de78590013ffe56cf9e3bb",
+      "status": "resolved_from_declarations",
+      "selected_python": "3.14",
+      "declared_test_versions": [
+        "3.10",
+        "3.11",
+        "3.12",
+        "3.13",
+        "3.14"
+      ],
+      "eligible_versions": [
+        "3.10",
+        "3.11",
+        "3.12",
+        "3.13",
+        "3.14"
+      ],
+      "evidence": [
+        {
+          "path": "pyproject.toml",
+          "field": "requires-python",
+          "value": ">=3.10"
+        },
+        {
+          "path": "pyproject.toml",
+          "field": "tox environment list",
+          "value": "py3.14,py3.13,py3.12,py3.11,py3.10,py3.14t,pypy3.11,stress-py3.14,stress-py3.14t,style,typing,docs"
+        }
+      ],
+      "reasons": [],
+      "policy": "explicit_pin_else_newest_tox_v1",
+      "execution_verified": false
+    },
+    "pluggy": {
+      "sha": "d23f110b240d67ee503eba0082f30cae73f3e1e3",
+      "status": "resolved_from_declarations",
+      "selected_python": "3.14",
+      "declared_test_versions": [
+        "3.10",
+        "3.11",
+        "3.12",
+        "3.13",
+        "3.14"
+      ],
+      "eligible_versions": [
+        "3.10",
+        "3.11",
+        "3.12",
+        "3.13",
+        "3.14"
+      ],
+      "evidence": [
+        {
+          "path": "pyproject.toml",
+          "field": "requires-python",
+          "value": ">=3.10"
+        },
+        {
+          "path": "tox.ini",
+          "field": "tox environment list",
+          "value": "docs,py{310,311,312,313,314,py3},py{310}-pytestmain"
+        }
+      ],
+      "reasons": [],
+      "policy": "explicit_pin_else_newest_tox_v1",
+      "execution_verified": false
+    }
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "6fd413": "Preserve the small behavioral fix; request paired tests; do not certify F2P.",
+  "d285e7": "Recognize Python compatibility; request target-version paired tests, not reject for baseline failures.",
+  "573cb": "Exclude docstring typo as non-behavioral.",
+  "scope": "Three hand-selected cases, not an accuracy benchmark."
+}

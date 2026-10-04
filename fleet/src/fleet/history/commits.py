@@ -38,7 +38,7 @@ from fleet.history.window import GitRepo
 
 logger = logging.getLogger(__name__)
 
-SCHEMA_VERSION = "0.1.0"
+SCHEMA_VERSION = "0.2.0"
 
 # Styles that represent work landing from a branch. `UNKNOWN` is the
 # leftover: a single-parent commit with no `(#N)` suffix.
@@ -59,7 +59,7 @@ INTEGRATION_STYLES = frozenset({MergeStyle.MERGE_COMMIT, MergeStyle.SQUASH, Merg
 
 @dataclass(slots=True)
 class CommitFilter:
-    """The hard caps. Every one reads source lines, never the diff total."""
+    """Source-change eligibility and optional size limits; tests are optional."""
 
     # Nonempty, by default. A floor of 3 looked reasonable and was wrong:
     # a one-line replacement measures 2 (one added, one removed), so it
@@ -68,9 +68,9 @@ class CommitFilter:
     # Verified: that PR is absent from a real run under the old default.
     # Size is scope, not difficulty; record it and let ranking use it.
     min_source_loc: int = 1
-    # Above this it is a refactor or a feature, not a fix.
-    max_source_loc: int = 400
-    # A change spread this wide is a rename or a sweep.
+    # Measure large fixes without assuming that size determines relevance.
+    max_source_loc: int | None = None
+    # Keep the pilot's scope bounded by source file count.
     max_source_files: int = 10
     # A diff with no application code in it leaves nothing to fix: test-only,
     # docs-only, and CI-only changes all land here.
@@ -99,7 +99,7 @@ class CommitFilter:
             return Rejection.TOO_MANY_SOURCE_FILES
         if stats.source_loc < self.min_source_loc:
             return Rejection.DIFF_TOO_SMALL
-        if stats.source_loc > self.max_source_loc:
+        if self.max_source_loc is not None and stats.source_loc > self.max_source_loc:
             return Rejection.DIFF_TOO_LARGE
         return None
 
@@ -127,6 +127,8 @@ class CommitRecord:
     author_date: str = ""
     committer_date: str = ""
     patch: PatchStats = field(default_factory=PatchStats)
+    parents: tuple[str, ...] = ()
+    source_analysis: list[dict[str, str]] = field(default_factory=list)
 
     @property
     def added(self) -> int:
@@ -140,6 +142,7 @@ class CommitRecord:
         return {
             "sha": self.sha,
             "base_sha": self.base_sha,
+            "parents": list(self.parents),
             "subject": self.subject,
             "style": str(self.style),
             "style_evidence": self.style_evidence,
@@ -149,8 +152,15 @@ class CommitRecord:
             "committer_date": self.committer_date,
             "added": self.added,
             "deleted": self.deleted,
+            "loc_changed": self.patch.loc_changed,
+            "file_count": self.patch.file_count,
             "source_loc": self.patch.source_loc,
             "test_loc": self.patch.test_loc,
+            "source_file_count": len(self.patch.source_files),
+            "test_file_count": len(self.patch.test_files),
+            "has_test_change": self.patch.has_test_change,
+            "source_analysis": self.source_analysis,
+            "by_kind": self.patch.counts_by_kind(),
             "difficulty": difficulty_bucket(self.patch),
             "files": [
                 {
@@ -181,6 +191,7 @@ class CommitDatabase:
     # rebase-merged PR in repos that use that button.
     needs_enrichment: list[CommitRecord] = field(default_factory=list)
     detail: dict[str, Any] = field(default_factory=dict)
+    rejected: list[dict[str, Any]] = field(default_factory=list)
 
     def drop(self, reason: Rejection) -> None:
         key = str(reason)
@@ -213,6 +224,7 @@ class CommitDatabase:
             "dropped_reasons": dict(sorted(self.dropped.items(), key=lambda kv: -kv[1])),
             "commits": [record.to_dict() for record in self.records],
             "needs_enrichment": [record.to_dict() for record in self.needs_enrichment],
+            "rejected": self.rejected,
         }
 
 
@@ -225,6 +237,9 @@ def build_database(
     until: datetime | None = None,
     ref: str = "HEAD",
     max_points: int = 50_000,
+    max_changes: int | None = None,
+    candidate_limit: int | None = None,
+    screen_python_content: bool = False,
     progress: Any = None,
 ) -> CommitDatabase:
     """Walk the mainline and measure every integration point that survives.
@@ -238,6 +253,8 @@ def build_database(
     gates apply to it either way.
     """
     filters = filters or CommitFilter()
+    if max_points < 1 or any(value is not None and value < 1 for value in (max_changes, candidate_limit)):
+        raise ValueError("History and candidate limits must be positive")
     database = CommitDatabase(
         repo=repo_name, ref=ref, built_at=datetime.now(UTC).isoformat()
     )
@@ -246,7 +263,26 @@ def build_database(
     logger.info("%s: %d integration points on %s", repo_name, len(points), ref)
 
     measured = 0
+    visited = 0
+    stop_reason = "commit_limit" if len(points) == max_points else "history_exhausted"
+
+    def reject(point: MergePoint, reason: Rejection, stats: PatchStats | None = None, analysis=None) -> None:
+        database.drop(reason)
+        database.rejected.append({
+            "sha": point.sha, "base_sha": point.base_sha,
+            "subject": point.subject, "pr_number": point.pr_number,
+            "reason": str(reason), "patch": stats.to_dict() if stats is not None else None,
+            "source_analysis": analysis or [],
+        })
+
     for index, point in enumerate(points):
+        if candidate_limit is not None and len(database.records) + len(database.needs_enrichment) >= candidate_limit:
+            stop_reason = "candidate_limit"
+            break
+        if max_changes is not None and measured >= max_changes:
+            stop_reason = "change_limit"
+            break
+        visited += 1
         if progress is not None:
             progress(index, len(points))
 
@@ -254,21 +290,32 @@ def build_database(
         if not point.base_sha:
             # A root commit, or the graft boundary of a truncated clone.
             # Nothing beneath it to diff against or check out.
-            database.drop(Rejection.BASE_BEFORE_GRAFT)
+            reject(point, Rejection.BASE_BEFORE_GRAFT)
             continue
 
         stats = clone.diff_stats(point.base_sha, point.sha)
         measured += 1
         if stats is None or not stats.files:
-            database.drop(Rejection.DIFF_UNAVAILABLE)
+            reject(point, Rejection.DIFF_UNAVAILABLE, stats)
             continue
 
         # Size and shape still apply to unresolved commits: a docs-only
         # direct push is not worth enriching either.
         rejection = filters.rejection_for(point, stats, skip_integration_check=True)
         if rejection:
-            database.drop(rejection)
+            reject(point, rejection, stats)
             continue
+
+        source_analysis = []
+        if screen_python_content:
+            from fleet.history.content import inspect_source_changes
+
+            source_analysis = inspect_source_changes(clone, point.base_sha, point.sha, stats)
+            kinds = {finding["kind"] for finding in source_analysis}
+            if kinds and kinds <= {"comments_or_formatting_only", "docstrings_only", "version_values_only"}:
+                reason = Rejection.VERSION_ONLY_SOURCE_CHANGE if "version_values_only" in kinds else Rejection.NO_EXECUTABLE_SOURCE_CHANGE
+                reject(point, reason, stats, source_analysis)
+                continue
 
         record = CommitRecord(
             sha=point.sha,
@@ -281,15 +328,24 @@ def build_database(
             author_date=point.author_date,
             committer_date=point.committer_date,
             patch=stats,
+            parents=point.parents,
+            source_analysis=source_analysis,
         )
         if unresolved_provenance and filters.require_integration_point:
             database.needs_enrichment.append(record)
         else:
             database.records.append(record)
 
+    if candidate_limit is not None and len(database.records) + len(database.needs_enrichment) >= candidate_limit:
+        stop_reason = "candidate_limit"
+    elif max_changes is not None and measured >= max_changes:
+        stop_reason = "change_limit"
     database.detail.update(
         mainline_points=len(points),
+        commits_visited=visited,
         commits_measured=measured,
+        stop_reason=stop_reason,
+        remaining_in_window=len(points) - visited,
         needs_enrichment=len(database.needs_enrichment),
         walk_since=since.isoformat() if since else None,
         walk_until=until.isoformat() if until else None,

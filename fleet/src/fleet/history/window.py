@@ -284,7 +284,7 @@ class GitRepo:
         """
         try:
             output = _run(
-                ["git", "diff", "--numstat", "--no-color", base, head],
+                ["git", "diff", "--numstat", "-z", "--no-ext-diff", "--no-textconv", "--no-color", base, head, "--"],
                 cwd=self.path,
                 timeout=timeout,
             )

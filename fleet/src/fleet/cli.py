@@ -32,6 +32,7 @@ def app(ctx: click.Context) -> None:
 
     \b
         fleet scan .                # map the repo    -> repo_graph.json
+        fleet filter <github-url>  # initial diff shortlist only
         fleet mine <github-url>     # persistent .fleet workspace
         fleet agent <workspace>    # OpenRouter candidate review
 

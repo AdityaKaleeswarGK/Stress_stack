@@ -14,6 +14,7 @@ from fleet.agent import OpenRouter, review
 from fleet.history.catalog import build_catalog
 from fleet.history.client import GitHubClient, resolve_token
 from fleet.history.commits import CommitFilter, build_database
+from fleet.history.filtering import filter_history
 from fleet.history.window import GitRepo, parse_since
 from fleet.validation import validate
 from fleet.workspace import prepare, repository_name, resolve_ref, write_json
@@ -61,7 +62,7 @@ def run_review(directory: Path, model: str | None, steps: int, validation: bool,
 @click.option("--since", help="Optional history bound: 6mo, 90d or ISO date.")
 @click.option("--until", help="Optional upper history bound.")
 @click.option("--min-source-loc", type=click.IntRange(min=1), default=1, show_default=True)
-@click.option("--max-source-loc", type=click.IntRange(min=1), default=400, show_default=True)
+@click.option("--max-source-loc", type=click.IntRange(min=1), default=None, help="Optional source-line cap; unlimited by default.")
 @click.option("--max-source-files", type=click.IntRange(min=1), default=10, show_default=True)
 @click.option("--keep-direct-pushes", is_flag=True, help="Keep unknown single-parent changes in the main inventory.")
 @click.option("--limit", type=click.IntRange(1, 100), default=5, show_default=True, help="Candidate enrichment budget; remaining inventory is retained.")
@@ -77,7 +78,7 @@ def mine(repo, repo_path, work_dir, out, ref, refresh, since, until, min_source_
     """Mine a GitHub URL or owner/repo, writing evidence under the current folder."""
     try:
         repo = repository_name(repo)
-        if min_source_loc > max_source_loc:
+        if max_source_loc is not None and min_source_loc > max_source_loc:
             raise ValueError("Minimum source size exceeds maximum")
         if with_validation and not with_agent:
             raise ValueError("--validate requires --agent; or use fleet validate with an explicit recipe")
@@ -179,6 +180,46 @@ def doctor():
             progress("Docker daemon: unavailable")
 
 
+@click.command("filter")
+@click.argument("repo")
+@click.option("--repo-path", type=click.Path(exists=True, file_okay=False, path_type=Path), help="Reuse a matching local clone.")
+@click.option("--work-dir", type=click.Path(path_type=Path), help="Default: .fleet/OWNER--REPO in the current folder.")
+@click.option("--out", "-o", type=click.Path(path_type=Path), help="Also copy the filter report to this JSON path.")
+@click.option("--ref", default="HEAD", show_default=True)
+@click.option("--since", help="Optional history bound: 6mo, 90d or ISO date.")
+@click.option("--until", help="Optional upper history bound.")
+@click.option("--max-commits", type=click.IntRange(min=1), default=200, show_default=True)
+@click.option("--max-changes", type=click.IntRange(min=1), default=100, show_default=True)
+@click.option("--limit", type=click.IntRange(1, 100), default=25, show_default=True, help="Candidates retained after initial filtering.")
+@click.option("--max-source-files", type=click.IntRange(min=1), default=10, show_default=True)
+def filter_command(repo, repo_path, work_dir, out, ref, since, until,
+                   max_commits, max_changes, limit, max_source_files):
+    """Filter historical diffs into an unverified shortlist. No API, LLM or Docker."""
+    try:
+        repo = repository_name(repo)
+        directory = (work_dir or Path.cwd() / ".fleet" / repo.replace("/", "--")).resolve()
+        root = prepare(repo, directory, repo_path)
+        sha = resolve_ref(root, ref)
+        report = filter_history(repo, GitRepo.at(root), ref=sha,
+                    since=parse_since(since) if since else None,
+                    until=parse_since(until) if until else None,
+                    max_commits=max_commits, max_changes=max_changes,
+                    limit=limit, max_source_files=max_source_files)
+        destination = directory / "filtered_candidates.json"
+        write_json(destination, report)
+        if out:
+            write_json(out, report)
+        summary = report["summary"]
+        progress(f"Filter · {repo} @ {sha[:12]}")
+        progress(f"History: {summary['commits_visited']} commits inspected · {summary['commits_measured']} changes measured")
+        progress(f"Shortlist: {summary['selected']} candidates · {summary['dropped']} rejected · stopped: {summary['stop_reason']}")
+        for reason, count in report["rejection_reasons"].items():
+            progress(f"  {reason}: {count}")
+        progress(f"Initial filtering only; runtime validation not run.\nReport: {destination}")
+    except (ValueError, RuntimeError, OSError, subprocess.SubprocessError) as exc:
+        raise click.ClickException(str(exc)) from exc
+
+
 def register_commands(app):
-    for command in (mine, agent_command, validate_command, configure, doctor):
+    for command in (mine, filter_command, agent_command, validate_command, configure, doctor):
         app.add_command(command)

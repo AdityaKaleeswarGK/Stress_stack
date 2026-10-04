@@ -180,7 +180,7 @@ def test_a_floor_can_still_be_imposed(repo: Path) -> None:
     assert database.dropped[str(Rejection.DIFF_TOO_SMALL)] == 1
 
 
-def test_a_huge_change_is_dropped_as_too_large(repo: Path) -> None:
+def test_a_huge_change_is_measured_without_a_default_line_cap(repo: Path) -> None:
     commit(
         repo,
         "src/pkg/big.py",
@@ -191,8 +191,13 @@ def test_a_huge_change_is_dropped_as_too_large(repo: Path) -> None:
 
     database = build_database(REPO, GitRepo.at(repo))
 
-    assert database.records == []
-    assert database.dropped[str(Rejection.DIFF_TOO_LARGE)] == 1
+    assert len(database.records) == 1
+    assert database.records[0].patch.source_loc == 500
+    assert str(Rejection.DIFF_TOO_LARGE) not in database.dropped
+
+    capped = build_database(REPO, GitRepo.at(repo), filters=CommitFilter(max_source_loc=400))
+    assert capped.records == []
+    assert capped.dropped[str(Rejection.DIFF_TOO_LARGE)] == 1
 
 
 def test_the_caps_are_adjustable(repo: Path) -> None:

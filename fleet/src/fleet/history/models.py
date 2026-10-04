@@ -121,6 +121,8 @@ class Rejection(StrEnum):
     DIFF_TOO_LARGE = "diff_too_large"
     TOO_MANY_SOURCE_FILES = "too_many_source_files"
     NO_SOURCE_CHANGE = "no_source_change"
+    NO_EXECUTABLE_SOURCE_CHANGE = "no_executable_source_change"
+    VERSION_ONLY_SOURCE_CHANGE = "version_only_source_change"
     NO_TEST_CHANGE = "no_test_change"
     # --- not an integration point ---
     NOT_AN_INTEGRATION_POINT = "not_an_integration_point"

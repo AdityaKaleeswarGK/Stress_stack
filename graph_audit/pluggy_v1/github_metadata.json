@@ -1,0 +1,112 @@
+{
+  "590": {
+    "number": 590,
+    "title": "Remove version_file setting and migrate to lazy version loading",
+    "body": "Remove setuptools-scm version_file setting and replace static version import\nwith lazy loading via __getattr__ using importlib.metadata.version.\n\n",
+    "html_url": "https://github.com/pytest-dev/pluggy/pull/590",
+    "state": "closed",
+    "merged": true,
+    "merged_at": "2025-06-25T20:10:30Z",
+    "merge_commit_sha": "1672de415f164aca2b400b06245224718a0c46b1"
+  },
+  "615": {
+    "number": 615,
+    "title": "Add CLAUDE.md with development guidance",
+    "body": "Add development guidance documentation for Claude Code, including project overview, commands, and architecture.\n\nDepends on #614 - to be merged after.",
+    "html_url": "https://github.com/pytest-dev/pluggy/pull/615",
+    "state": "closed",
+    "merged": true,
+    "merged_at": "2025-11-28T13:11:24Z",
+    "merge_commit_sha": "0c501acaca42f444f79d8a30466c12ee17b7c908"
+  },
+  "616": {
+    "number": 616,
+    "title": "Require Python 3.10+ and modernize type annotations",
+    "body": "Require Python 3.10+ as minimum version and modernize type annotations using PEP 604 syntax and other Python 3.10+ features.\n\nDepends on #615 - to be merged after.",
+    "html_url": "https://github.com/pytest-dev/pluggy/pull/616",
+    "state": "closed",
+    "merged": true,
+    "merged_at": "2025-11-28T13:45:19Z",
+    "merge_commit_sha": "dbe21314fb947abb42da44953ae8d701a7ff4482"
+  },
+  "617": {
+    "number": 617,
+    "title": "Refactor setuptools compatibility and add plugin distribution tests",
+    "body": "Refactor legacy setuptools compatibility code into a dedicated _compat module and add comprehensive tests for the list_plugin_distributions() API.\n\nDepends on #616 - to be merged after.",
+    "html_url": "https://github.com/pytest-dev/pluggy/pull/617",
+    "state": "closed",
+    "merged": true,
+    "merged_at": "2026-07-22T08:59:01Z",
+    "merge_commit_sha": "735edb0ab69fdd6c4940606e693c098e93583afb"
+  },
+  "632": {
+    "number": 632,
+    "title": "[NO-SQUASH-MERGE] fix varnames on py3.14 deferred annotations",
+    "body": "closes #629\n\nusing direct attributes instead of signature to avoid the extra objects\n\n",
+    "html_url": "https://github.com/pytest-dev/pluggy/pull/632",
+    "state": "closed",
+    "merged": true,
+    "merged_at": "2026-05-27T08:00:08Z",
+    "merge_commit_sha": "5d7bd2cc083571466f44f9683136b7d8f62b88bf"
+  },
+  "639": {
+    "number": 639,
+    "title": "Add python-lsp-server to downstream tests",
+    "body": "This PR adds python-lsp-server as a downstream project to validate pluggy compatibility.\r\n\r\nThe downstream script installs the local pluggy worktree and runs the python-lsp-server test suite. Some plugin tests depend on optional third-party dependencies (for example, rope, flake8, pycodestyle) and may fail during collection. These failures are allowed to avoid gating CI, while still providing useful downstream signal.\r\n\r\nThis follows the existing downstream testing pattern used in the repository.\r\n\r\nCloses #465",
+    "html_url": "https://github.com/pytest-dev/pluggy/pull/639",
+    "state": "closed",
+    "merged": true,
+    "merged_at": "2026-02-09T10:37:31Z",
+    "merge_commit_sha": "108f2250fae741ad9e4b22c4770e02b7d0aa24ef"
+  },
+  "640": {
+    "number": 640,
+    "title": "A few small cleanups",
+    "body": "The first commit is a small simplification.\r\n\r\nThe second commit is a rehash of #277 which I still think we should do, it shouldn't disturb any refactoring, I think it's just useless.\r\n\r\nThe third commit is a slightly ugly micro-optimization but which has a nice impact on the benchmarks so I think we should do it.",
+    "html_url": "https://github.com/pytest-dev/pluggy/pull/640",
+    "state": "closed",
+    "merged": true,
+    "merged_at": "2026-01-12T12:10:12Z",
+    "merge_commit_sha": "584be1e372bab0f9db5a199652fc0c8a569db017"
+  },
+  "646": {
+    "number": 646,
+    "title": "Fix _remove_plugin and get_hookcallers for multi-impl plugins",
+    "body": "## Summary\n\nFixes #431\n\nWhen a plugin registers multiple hook implementations on the same hook (e.g. via `specname`), two related issues exist:\n\n- **`HookCaller._remove_plugin()`** only removes the **first** matching `HookImpl` for a plugin, then returns. This means it relies on being called multiple times to remove all implementations.\n- **`PluginManager.get_hookcallers()`** returns **duplicate** `HookCaller` entries \u2014 one per `HookImpl` rather than one per `HookCaller`. This happens to compensate for `_remove_plugin` only removing one impl per call, but it's incorrect behavior for users of the public API.\n\n### Changes\n\n- **`_remove_plugin`**: Remove all hookimpls for the given plugin in a single call using a list comprehension filter, instead of deleting only the first match and returning.\n- **`get_hookcallers`**: Break out of the inner loop after finding the first matching hookimpl for a hookcaller, so each `HookCaller` appears at most once in the result.\n- **Tests**: Two new tests verify correct multi-hookimpl unregister behavior and that `get_hookcallers` returns no duplicates.\n- **Changelog**: Added `431.bugfix.rst` towncrier fragment.\n\n## Test plan\n\n- [x] All 126 existing + new tests pass (`uv run pytest`)\n- [x] All pre-commit hooks pass (`uv run pre-commit run -a`)\n- [ ] CI passes on all Python versions (3.10-3.14, PyPy)\n\n\ud83e\udd16 Generated with [Claude Code](https://claude.com/claude-code)",
+    "html_url": "https://github.com/pytest-dev/pluggy/pull/646",
+    "state": "closed",
+    "merged": true,
+    "merged_at": "2026-02-25T09:33:37Z",
+    "merge_commit_sha": "20d8143f127a4d7526dbbea441857b4b80ec8bdd"
+  },
+  "669": {
+    "number": 669,
+    "title": "chore: fix coverage report paths",
+    "body": "Noticed when working on #668 that the coverage report shows missing coverage when it is indeed covered.\r\n\r\nDid some troubleshooting and found out that the files are shown inside `.tox` (see: https://github.com/pytest-dev/pluggy/actions/runs/25109365911/job/73578995307?pr=668#step:7:45).\r\n\r\n`coverage combine` is required to rewrite the paths.\r\n\r\nAs a result, there are probably a few `# pragma: no cover` that can be removed.\r\n\r\n",
+    "html_url": "https://github.com/pytest-dev/pluggy/pull/669",
+    "state": "closed",
+    "merged": true,
+    "merged_at": "2026-04-29T16:05:33Z",
+    "merge_commit_sha": "2c1fd62786aeb465bc17331ff5aee320cb58ad95"
+  },
+  "672": {
+    "number": 672,
+    "title": "rewired downstream test drivers",
+    "body": "there was bitrot in the shell scripts\r\ni added a python driver and a workflow to run them on github\r\n\r\ntesting them now - in particular conda and hatch may need some more details\r\n\r\npsa - im also working on actively removing pluggy from hatch as its used in a non-idiomatic way there that doesn\u2019t bring value",
+    "html_url": "https://github.com/pytest-dev/pluggy/pull/672",
+    "state": "closed",
+    "merged": true,
+    "merged_at": "2026-05-17T06:35:46Z",
+    "merge_commit_sha": "7a700d09072b621dc151324b1eb54b40c9680c01"
+  },
+  "714": {
+    "number": 714,
+    "title": "[pre-commit.ci] pre-commit autoupdate",
+    "body": "<!--pre-commit.ci start-->\nupdates:\n- [github.com/astral-sh/ruff-pre-commit: v0.15.22 \u2192 v0.16.2](https://github.com/astral-sh/ruff-pre-commit/compare/v0.15.22...v0.16.2)\n<!--pre-commit.ci end-->",
+    "html_url": "https://github.com/pytest-dev/pluggy/pull/714",
+    "state": "closed",
+    "merged": true,
+    "merged_at": "2026-08-12T06:46:12Z",
+    "merge_commit_sha": "09baae8733141971e3109a667b6c12dcce9afa29"
+  }
+}

@@ -8,6 +8,7 @@ version = "0.0.0"
 description = "Repo-to-Harbor-task pipeline (successor to stress_stack)"
 requires-python = ">=3.12"
 dependencies = [
+  "packaging>=24",
   "click>=8.1",
   "rich>=13.0",
   "tree-sitter>=0.23",

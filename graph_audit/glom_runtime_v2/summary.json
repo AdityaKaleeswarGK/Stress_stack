@@ -1,0 +1,570 @@
+{
+  "candidate_count": 21,
+  "model": "openai/gpt-6-luna-pro",
+  "max_agents": 2,
+  "max_containers": 2,
+  "api_ceiling_usd": 1.0,
+  "reserved_usd": 0.9992208000000004,
+  "calls": 99,
+  "reported_cost_usd": 0.23053542999999999,
+  "all_completed_calls_report_cost": true,
+  "results": [
+    {
+      "candidate": "6fd41340f30519ddc64a546ad2703dfe53f12356",
+      "status": "reviewed",
+      "assessment": {
+        "decision": "ready_for_runtime_validation",
+        "change_type": "behavioral bug fix with regression coverage; ancillary test-install extra",
+        "rubric": {
+          "behavior": "Path integer indexing now rejects index == len(path), including the equivalent negative boundary and empty paths; valid indexed access is preserved.",
+          "coherence": "The comparison correction, richer IndexError message, and boundary tests align. The setup.py test extra is ancillary and was not independently validated.",
+          "specification": "Consistent with sequence-style indexing and the stated GH-299 contract; no independently verified issue/PR specification was supplied.",
+          "regression_tests": "Patch adds one-past-end cases. Paired probe covers positive and negative boundaries for string/T Paths and empty Path, plus valid indexing.",
+          "runtime_evidence": "Stable base-fail/fixed-pass outcome in two repeated paired runs; complete glom/test suite preserved on fixed with no pass-to-fail outcomes.",
+          "environment": "Pinned Python 3.11 sandbox; no collection or dependency errors. Other interpreters and package-install behavior were not tested.",
+          "stability": "Boundary result repeated identically; valid-index and broad-suite preservation checks passed."
+        },
+        "evidence": [
+          "candidate_metadata",
+          "baseline",
+          "patch",
+          "file:base:glom/core.py",
+          "file:fixed:glom/core.py",
+          "file:fixed:glom/test/test_path_and_t.py",
+          "file:fixed:setup.py",
+          "runtime:1",
+          "runtime:2"
+        ],
+        "next_checks": [
+          "For final corpus review, consider a packaging metadata/build check for the new test extra and supported Python versions; this was not exercised.",
+          "Confirm intended compatibility policy for callers depending on the former generic IndexError message."
+        ],
+        "problem_statement": "Path integer indexing should raise IndexError for every out-of-range index, including the first positive index past the end and its negative counterpart. Valid indices should continue to return the selected one-element Path, and the exception should report the requested index and Path length."
+      },
+      "runtime_experiments": 2,
+      "reason": null
+    },
+    {
+      "candidate": "e515fb33c7af491c6a20b2618591736361bb1d08",
+      "status": "reviewed",
+      "assessment": {
+        "decision": "ready_for_runtime_validation",
+        "change_type": "behavioral bug fix with regression coverage; ancillary CI/coverage configuration updates",
+        "rubric": {
+          "behavior": "Fixes a concrete error-reporting crash for S-rooted paths; also falls back for unsupported path values or invalid indices.",
+          "coherence": "The source change, regression tests, and intended printable-error behavior align. Workflow and Codecov edits are ancillary.",
+          "specification": "PathAccessError is documented to provide readable failures; printing should not fail while formatting an access error. Issue linkage is not independently verified.",
+          "regression_tests": "New tests assert S-path message content and fallback cases, not just absence of a crash.",
+          "runtime_evidence": "Paired full suite: 2 fail-to-pass, no pass-to-fail; fixed 202/202. Error tests repeat stably: 2 fail-to-pass, no pass-to-fail.",
+          "environment": "Pinned Python 3.11 environment; no evidence for other supported interpreter versions or CI configuration behavior.",
+          "stability": "Both new cases reproduce on base and pass on fixed; repeat run stable."
+        },
+        "evidence": [
+          "patch",
+          "candidate_metadata",
+          "baseline",
+          "file:base:glom/core.py",
+          "file:fixed:glom/core.py",
+          "file:base:glom/test/test_error.py",
+          "file:fixed:glom/test/test_error.py",
+          "runtime:1",
+          "runtime:2"
+        ],
+        "next_checks": [
+          "Final corpus review should check the ancillary workflow/cache and Codecov configuration changes separately.",
+          "If cross-version compatibility is required, validate error formatting on the project's other supported Python versions."
+        ],
+        "problem_statement": "When a glom access fails through an S-rooted scope path, PathAccessError should remain printable and include the failing path part, index, and underlying error type rather than failing while formatting its own message. Formatting should also degrade safely for unexpected path values or indices."
+      },
+      "runtime_experiments": 2,
+      "reason": null
+    },
+    {
+      "candidate": "64141ba4794eaadf63242aa76191448159306251",
+      "status": "reviewed",
+      "assessment": {
+        "decision": "needs_regression_test",
+        "change_type": "Intentional public-API compatibility removal bundled with documentation refresh",
+        "rubric": {
+          "behavior": "The three legacy names disappear from the package namespace; the equivalent core symbols remain available and Let still works there.",
+          "coherence": "Broad edits consistently update stale examples, links, and embeds; executable change is limited to package exports.",
+          "specification": "Commit explicitly requests removing backward-compat exports, but release/versioning policy for this breaking change is not evidenced.",
+          "regression_tests": "Changed tests stop importing/asserting legacy names but never assert their absence; add an explicit contract test.",
+          "runtime_evidence": "runtime:2 repeatedly fails on base and passes on fixed for the focused API check; all 200 existing tests pass on both.",
+          "environment": "Paired runs use the same pinned Python 3.11 environment; other supported Python versions and documentation-build dependencies were not checked.",
+          "stability": "Focused result repeated with the same base/fixed outcome; existing suite remained passing in both runs."
+        },
+        "evidence": [
+          "patch",
+          "file:base:glom/__init__.py",
+          "file:fixed:glom/__init__.py",
+          "file:base:glom/test/test_basic.py",
+          "file:fixed:glom/test/test_scope_vars.py",
+          "runtime:2"
+        ],
+        "next_checks": [
+          "Add permanent tests that OMIT, Literal, and Let are absent from the top-level package and that any intended core-level compatibility remains usable.",
+          "Confirm release/versioning policy and communicate that existing `from glom import ...` callers will break.",
+          "Run the documentation build and check changed references/examples; test other supported Python versions if required."
+        ],
+        "problem_statement": "The package should stop exposing the obsolete OMIT, Literal, and Let names at its top level, while preserving any intended internal/core compatibility and keeping the current test suite intact. Documentation should describe current behavior and use working, accurate examples and links."
+      },
+      "runtime_experiments": 2,
+      "reason": null
+    },
+    {
+      "candidate": "bc653da9afec59bbb9c57230ffa2a12374f0346c",
+      "status": "reviewed",
+      "assessment": {
+        "decision": "needs_environment_review",
+        "change_type": "Python-version compatibility and packaging/CI configuration",
+        "rubric": {
+          "behavior": "Meaningful compatibility task: add Python 3.12 support and modernize source syntax while preserving glom behavior. No 3.12-specific failure demonstrated.",
+          "coherence": "Version classifier, tox env list, CI matrix, and Python 3.7+ syntax modernization broadly align.",
+          "specification": "Public compatibility claim is Python 3.12 support; target interpreter remains unverified.",
+          "regression_tests": "Existing test suite passes on both snapshots (200/200); most changed tests update syntax/compatibility rather than add 3.12-specific cases.",
+          "runtime_evidence": "runtime:1 is paired all-pass evidence on Python 3.11, not the target interpreter.",
+          "environment": "The runtime image uses Python 3.11; 3.12 behavior and dependency compatibility cannot be inferred.",
+          "stability": "One paired run; no instability observed."
+        },
+        "evidence": [
+          "patch",
+          "file:fixed:tox.ini",
+          "file:fixed:setup.py",
+          "file:fixed:requirements.in",
+          "runtime:1",
+          "baseline",
+          "runtime_scope"
+        ],
+        "next_checks": [
+          "Run base and fixed suites under Python 3.12 with the intended supported dependency set, including import and CLI tests.",
+          "Run tox packaging/check-manifest and verify sdist/wheel installation under Python 3.12.",
+          "Confirm CI on Linux, Windows, and macOS; clarify whether 3.11 remains supported on Windows/macOS, since the matrix moves those jobs to 3.12."
+        ],
+        "problem_statement": "The project should install and run its public API and CLI on Python 3.12 while preserving behavior across supported Python versions. This change declares and schedules Python 3.12 support, but the paired runtime evidence is Python 3.11 only, so compatibility on the target interpreter still needs validation."
+      },
+      "runtime_experiments": 1,
+      "reason": null
+    },
+    {
+      "candidate": "24c21dcc44cc81abc193aa3bfa2f66304470d205",
+      "status": "reviewed",
+      "assessment": {
+        "decision": "ready_for_runtime_validation",
+        "change_type": "CLI feature",
+        "rubric": {
+          "behavior": "Adds opt-in --scalar output for scalar results; collections remain JSON-serialized. Paired probes distinguish base from fixed.",
+          "coherence": "Flag is registered and passed to the CLI handler; scalar output uses boltons.is_scalar. Existing default behavior is preserved.",
+          "specification": "CLI help documents unquoted, whitespace-free scalar output for scripting; collection fallback follows existing JSON behavior.",
+          "regression_tests": "Patch tests string output only. Probe additionally covers integer, boolean, null, list, and mapping results.",
+          "runtime_evidence": "runtime:1 and runtime:2 show repeat-stable base failures for unknown --scalar and fixed passes; full fixed suite passes.",
+          "environment": "Validation used the pinned Python 3.11 environment. No cross-version or alternate dependency matrix supplied.",
+          "stability": "Repeated paired runs agree; no pass-to-fail tests."
+        },
+        "evidence": [
+          "patch",
+          "file:base:glom/cli.py",
+          "file:fixed:glom/cli.py",
+          "file:base:glom/test/test_cli.py",
+          "file:fixed:glom/test/test_cli.py",
+          "runtime:1",
+          "runtime:2"
+        ],
+        "next_checks": [
+          "Review in final corpus validation, including supported Python/dependency versions and packaging checks for the boltons import.",
+          "Consider retaining regression coverage for scalar numeric/boolean/null results and collection fallback, alongside the string case."
+        ],
+        "problem_statement": "The CLI should offer an opt-in --scalar flag that emits scalar glom results without JSON quotes or surrounding whitespace, while continuing to serialize collection results as JSON and preserving the default output when the flag is absent."
+      },
+      "runtime_experiments": 2,
+      "reason": null
+    },
+    {
+      "candidate": "1336a7c6ba8071dccc3b334ffd5d0affee9e668e",
+      "status": "reviewed",
+      "assessment": {
+        "decision": "ready_for_runtime_validation",
+        "change_type": "CLI diagnostic accuracy and documentation update",
+        "rubric": {
+          "behavior": "Corrects an observable CLI error: TOML is accepted but was missing from the unsupported-format message.",
+          "coherence": "The error now matches the TOML loader branch and supported format synopsis; documentation wording/path edits are ancillary.",
+          "specification": "Supported formats are evidenced by CLI options and TOML/YAML handling; existing tests exercise TOML loading.",
+          "regression_tests": "Existing usage test checks only a generic substring, so it does not guard the omitted TOML name. Add the focused assertion to the repository suite.",
+          "runtime_evidence": "Paired probe consistently fails on base and passes on fixed; existing suite passes on both.",
+          "environment": "Python 3.11 pinned sandbox; no collection or environment errors reported.",
+          "stability": "Repeated paired result was stable."
+        },
+        "evidence": [
+          "patch",
+          "file:base:glom/cli.py",
+          "file:fixed:glom/cli.py",
+          "file:base:glom/test/test_cli.py",
+          "file:base:docs/cli.rst",
+          "file:fixed:docs/cli.rst",
+          "runtime:1",
+          "runtime:2"
+        ],
+        "next_checks": [
+          "Add the focused unsupported-format message assertion to glom/test/test_cli.py.",
+          "Review the hard-coded executable path in the revised documentation example for portability."
+        ],
+        "problem_statement": "When users specify an unsupported target format, the CLI should report the supported formats accurately, including TOML, which the CLI already accepts."
+      },
+      "runtime_experiments": 2,
+      "reason": null
+    },
+    {
+      "candidate": "9082ab6f98b018856fc9d37aec4077d27662f025",
+      "status": "reviewed",
+      "assessment": {
+        "decision": "ready_for_runtime_validation",
+        "change_type": "CLI feature: TOML target-input support",
+        "rubric": {
+          "behavior": "TOML input is parsed from both files and stdin; paired tests fail on base and pass on fixed, with stable repeat.",
+          "coherence": "Parsing is wired into the target loader and an optional tomli extra is declared. CLI help metadata/error text still omits TOML.",
+          "specification": "Supported target formats and added TOML tests establish the expected behavior; Python <3.11 fallback is not validated here.",
+          "regression_tests": "Existing CLI and full repository tests preserve behavior; tests cover valid and malformed TOML files, plus the probe covers stdin.",
+          "runtime_evidence": "Runtime 1: full suite, 3 relevant base failures and 197 fixed passes. Runtime 2: repeated CLI tests and stdin probe, same stable signal.",
+          "environment": "Pinned Python 3.11 environment; validates stdlib tomllib only, not the tomli extra or older supported interpreters.",
+          "stability": "The paired CLI signal repeated successfully; no pass-to-fail results."
+        },
+        "evidence": [
+          "candidate_metadata",
+          "patch",
+          "file:base:glom/cli.py",
+          "file:fixed:glom/cli.py",
+          "file:fixed:glom/test/test_cli.py",
+          "file:fixed:setup.py",
+          "runtime:1",
+          "runtime:2"
+        ],
+        "next_checks": [
+          "Validate the tomli fallback and declared optional extra on a supported Python version below 3.11, including the missing-parser error.",
+          "Update and test CLI help and invalid-format messaging so both list TOML consistently."
+        ],
+        "problem_statement": "The CLI should accept TOML target data, whether supplied as a file or through stdin, and report malformed TOML through its normal target-loading error path."
+      },
+      "runtime_experiments": 2,
+      "reason": null
+    },
+    {
+      "candidate": "d285e7399c4586486cfd1adb203163b5d5bb65e7",
+      "status": "reviewed",
+      "assessment": {
+        "decision": "ready_for_runtime_validation",
+        "change_type": "Python 3.11 compatibility bug fix (traceback formatting and long-repr handling), with CI/docs configuration updates",
+        "rubric": {
+          "behavior": "On Python 3.11, suppresses a detached bytecode caret in formatted Glom errors and restores error formatting for long repr values; paired failures become passes.",
+          "coherence": "The traceback and repr adjustments address the observed compatibility failures. CI adds Python 3.11 coverage; RTD config and requirements path move together.",
+          "specification": "Matches the stated compatibility goal and traceback readability contract. Exact cross-platform/documentation build behavior was not exercised.",
+          "regression_tests": "Added caret regression; existing stack and long-repr cases cover affected behavior. Full glom/test run found no pass-to-fail regressions.",
+          "runtime_evidence": "runtime:1: fixed 195/195 passed; base failed the three relevant cases. runtime:2 repeated all three paired results stably (base fail, fixed pass).",
+          "environment": "Paired checks used the pinned Python 3.11 runtime. No validation on CI Windows/macOS or a Read the Docs build; Python 3.10 baseline was reported passing.",
+          "stability": "The focused paired failures/passes repeated consistently. Full-suite fixed run passed."
+        },
+        "evidence": [
+          "patch",
+          "file:base:glom/core.py",
+          "file:base:glom/test/test_error.py",
+          "file:fixed:glom/core.py",
+          "file:fixed:glom/test/test_error.py",
+          "file:fixed:.github/workflows/tests.yaml",
+          "file:fixed:tox.ini",
+          "runtime:1",
+          "runtime:2",
+          "older_interpreter_baseline"
+        ],
+        "next_checks": [
+          "For final review, validate the declared CI matrix on Windows/macOS Python 3.11 and build docs using the relocated requirements file.",
+          "Retain Python 3.10 and older supported-interpreter coverage when validating the CI changes."
+        ],
+        "problem_statement": "On Python 3.11, Glom should produce readable, correctly formatted exceptions: stale bytecode-position caret markers must not appear detached from their source line, and long object representations must not cause exception stringification to fail. The project should also exercise Python 3.11 in CI while preserving its existing supported-interpreter coverage."
+      },
+      "runtime_experiments": 2,
+      "reason": null
+    },
+    {
+      "candidate": "34315014fe16b4c1e144a1acdf480699bf2303fb",
+      "status": "reviewed",
+      "assessment": {
+        "decision": "ready_for_runtime_validation",
+        "change_type": "YAML deserialization security hardening and dependency upgrade",
+        "rubric": {
+          "behavior": "Paired probe confirms ordinary YAML parses; Python-specific YAML tags are accepted by base but rejected on fixed, repeatedly.",
+          "coherence": "The CLI change and stated safe-load intent align; PyYAML requirement is also advanced.",
+          "specification": "Safe parsing is evidenced by the patch intent. Confirm the intended policy for Python-tagged YAML in release/API documentation.",
+          "regression_tests": "No committed tests changed. Focused paired coverage passes fixed and fails base; full existing suite has no regressions.",
+          "runtime_evidence": "runtime:1 and runtime:2 show stable fail-to-pass and all 194 existing tests preserved; fixed suite plus probe passes (195).",
+          "environment": "Paired snapshots share one dependency environment, so the PyYAML 6.0.1 requirement change itself was not verified by dependency resolution.",
+          "stability": "The focused differential and full-suite preservation result repeated consistently."
+        },
+        "evidence": [
+          "patch",
+          "file:base:glom/cli.py",
+          "file:fixed:glom/cli.py",
+          "file:base:requirements.txt",
+          "file:fixed:requirements.txt",
+          "runtime:1",
+          "runtime:2"
+        ],
+        "next_checks": [
+          "Add a durable CLI regression test covering ordinary YAML and rejection of Python-specific tags.",
+          "Validate installation and CLI tests with the declared PyYAML 6.0.1 dependency, including supported Python versions and the optional YAML extra."
+        ],
+        "problem_statement": "YAML target input should continue to support ordinary YAML data while refusing Python-specific YAML tags that can construct Python objects. Verify this behavior is captured in regression tests and that the declared PyYAML upgrade installs and works across supported environments."
+      },
+      "runtime_experiments": 2,
+      "reason": null
+    },
+    {
+      "candidate": "c97b71a1e4751d227898f2b31e885e001d4818cb",
+      "status": "reviewed",
+      "assessment": {
+        "decision": "needs_specification_review",
+        "change_type": "Internal storage/performance refactor with observable compatibility change",
+        "rubric": {
+          "behavior": "Existing public T/Path and pickle behavior preserved in paired checks; TType weakrefability is intentionally removed by the patch.",
+          "coherence": "All path-state access is migrated from the weak-key map to per-instance state consistently.",
+          "specification": "Unclear whether weak-referencing T expressions is supported API or an acceptable compatibility break; PR/issue contract evidence is unavailable.",
+          "regression_tests": "No committed tests changed. Existing suite plus added pickle/path probes passed on both snapshots; the added cases overlap existing test coverage.",
+          "runtime_evidence": "runtime:3 passed 196 tests on each snapshot, repeated stably. runtime:1 and runtime:2 exposed invalid probe assumptions that failed on both and were corrected. runtime:4 did not expose its memory measurements, so it is not performance evidence.",
+          "environment": "Paired execution used Python 3.9 with the supplied pinned environment; no environment errors observed.",
+          "stability": "The paired functional result repeated consistently; no valid memory or timing comparison was obtained."
+        },
+        "evidence": [
+          "patch",
+          "file:base:glom/core.py",
+          "file:fixed:glom/core.py",
+          "baseline",
+          "runtime:1",
+          "runtime:2",
+          "runtime:3",
+          "runtime:4"
+        ],
+        "next_checks": [
+          "Confirm from authoritative project documentation or PR rationale whether weakref.ref(T-expression) is supported and whether removing that capability is intentional.",
+          "If the intended benefit is memory/performance, add a repeatable paired benchmark that reports comparable allocation or runtime measurements, and document the weakref compatibility impact.",
+          "Add a regression test only for the resolved contract, including pickle/path behavior if it is not already adequately covered."
+        ],
+        "problem_statement": "T expressions and Path objects should retain their documented construction, evaluation, and serialization behavior while internal path state is managed efficiently. It remains to be specified whether callers may rely on creating weak references to T expressions; this change removes that capability, and its compatibility acceptability and claimed resource benefit need confirmation."
+      },
+      "runtime_experiments": 4,
+      "reason": null
+    },
+    {
+      "candidate": "ec19f8b29e09408f946840e51d3fb4aeea0219e2",
+      "status": "reviewed",
+      "assessment": {
+        "decision": "needs_specification_review",
+        "change_type": "Python compatibility-policy change with runtime cleanup and test simplification",
+        "rubric": {
+          "behavior": "The patch intentionally removes Python 2 paths and describes Python 3.7+ support; no behavioral regression was observed on Python 3.9.",
+          "coherence": "CI/tox/docs largely align on 3.7+, but setup.py still advertises Python 3.6, contradicting the stated support floor.",
+          "specification": "The intended minimum is stated as 3.7+, but the stale 3.6 package classifier leaves distribution support metadata ambiguous.",
+          "regression_tests": "The updated tests simplify Python-version conditionals; they do not establish a new behavioral difference on the tested interpreter.",
+          "runtime_evidence": "runtime:1: all 194 tests passed on both base and fixed under the pinned Python 3.9 environment.",
+          "environment": "Evidence covers Python 3.9 only; it does not validate Python 3.7, PyPy, or packaging metadata across supported environments.",
+          "stability": "One paired run; no repeated run was needed for the metadata/specification inconsistency."
+        },
+        "evidence": [
+          "patch",
+          "file:fixed:setup.py",
+          "file:fixed:tox.ini",
+          "file:fixed:glom/matching.py",
+          "runtime:1",
+          "baseline"
+        ],
+        "next_checks": [
+          "Confirm whether Python 3.6 is intentionally unsupported; if so, remove its setup.py classifier and check other support metadata.",
+          "Run the suite and packaging checks on Python 3.7 and a supported PyPy version before certifying the compatibility range."
+        ],
+        "problem_statement": "The declared Python support range should be consistent across documentation, package metadata, and CI. If Python 3.7 is the minimum, distribution metadata should not advertise Python 3.6; supported interpreters should continue to pass the package test suite."
+      },
+      "runtime_experiments": 1,
+      "reason": null
+    },
+    {
+      "candidate": "13432c2c039e8a777d2fa9c1bb61b0220ca305a3",
+      "status": "reviewed",
+      "assessment": {
+        "decision": "ready_for_runtime_validation",
+        "change_type": "public API exposure and documentation",
+        "rubric": {
+          "behavior": "Meaningful API addition: `register_op` becomes importable from `glom`, enabling extension authors to register global custom operations without importing internals. Paired probe demonstrates custom operation dispatch.",
+          "coherence": "Top-level export corresponds to the existing core function; related docs identify the operation registration use case and built-in operators.",
+          "specification": "Expected contract is clear from `TargetRegistry` and core `register_op` documentation: an extension can register an operation handler and use it through the active registry.",
+          "regression_tests": "No repository tests were added. Focused external probe covers top-level import, valid target-registration lifecycle, custom dispatch, and both documented wildcard examples; recommend committing durable public API coverage.",
+          "runtime_evidence": "runtime:2 repeated paired run: API probe fails on base due to missing top-level import and passes on fixed; wildcard examples and full `glom/test` suite pass on both snapshots (196 fixed passes; base has the API probe failure).",
+          "environment": "Pinned Python 3.9 environment matches the supplied baseline target; full test suite passes on both snapshots apart from the intentional base API failure.",
+          "stability": "The relevant API signal and suite results repeat consistently in runtime:2. Initial probe setup was corrected before drawing conclusions."
+        },
+        "evidence": [
+          "candidate_metadata",
+          "baseline",
+          "patch",
+          "file:base:glom/__init__.py",
+          "file:fixed:glom/__init__.py",
+          "file:base:glom/core.py",
+          "file:fixed:glom/core.py",
+          "file:fixed:docs/custom_spec_types.rst",
+          "runtime:2"
+        ],
+        "next_checks": [
+          "Review the public API name and global-registration semantics against project maintainer intent and release/versioning policy.",
+          "Add a maintained regression test for `from glom import register_op` and extension dispatch; consider documenting the required target-type registration order.",
+          "Check rendered documentation and link targets, including the new Path references and wildcard description."
+        ],
+        "problem_statement": "Extension authors should be able to import `register_op` from the top-level `glom` package to add operations to the default target registry, then access those operations through the active registry when implementing custom specifier types. The documentation should accurately describe the supported operations and string-path wildcard behavior."
+      },
+      "runtime_experiments": 2,
+      "reason": null
+    },
+    {
+      "candidate": "de604f59bf8a447cf650c20b1af271016ed8847f",
+      "status": "reviewed",
+      "assessment": {
+        "decision": "ready_for_runtime_validation",
+        "change_type": "intentional public API behavior change / default migration",
+        "rubric": {
+          "behavior": "Default textual `*`/`**` path segments now traverse in parallel; paired focused probe and existing star/broadcast tests fail on base and pass fixed.",
+          "coherence": "Source default and warning text, path/broadcast tests, and mutation tests consistently reflect the migration; explicit T-key access remains supported.",
+          "specification": "Commit subject and source comment describe a planned 23.1 default change; PR/issue evidence is unavailable, so broader release compatibility intent is not independently verified.",
+          "regression_tests": "Fixed suite passes 195 tests; no pass-to-fail changes. The base's five failures are the focused migration probe and four updated star behavior tests, not unrelated regressions.",
+          "runtime_evidence": "runtime:1 and runtime:2; paired signal repeated stably. Fixed full suite passes both runs; base shows 190 pass / 5 expected feature failures both runs.",
+          "environment": "Executed with the supplied Python 3.9 environment, matching the requested image and actual reported Python version. This does not establish coverage on other supported interpreters/dependency sets.",
+          "stability": "Repeated run reproduced identical paired outcomes; no collection or environment errors."
+        },
+        "evidence": [
+          "patch",
+          "runtime:1",
+          "runtime:2",
+          "file:base:glom/core.py",
+          "file:fixed:glom/core.py",
+          "file:base:glom/test/test_path_and_t.py",
+          "file:fixed:glom/test/test_path_and_t.py",
+          "file:base:glom/test/test_mutation.py",
+          "baseline",
+          "runtime_scope"
+        ],
+        "next_checks": [
+          "Confirm public release notes/API documentation explain the changed meaning of textual `*` and `**` and the `T['*']`/`T['**']` escape route.",
+          "Check the project's supported-Python and dependency matrix before treating this as fully validated for release."
+        ],
+        "problem_statement": "Make textual `*` and `**` segments in glom paths perform parallel traversal by default, while preserving an explicit way to access literal mapping keys named `*` or `**` and a compatibility switch during the migration."
+      },
+      "runtime_experiments": 2,
+      "reason": null
+    },
+    {
+      "candidate": "71a82580e9fc4ec81bfad410f4f2edaa0c19440c",
+      "status": "reviewed",
+      "assessment": {
+        "decision": "needs_specification_review",
+        "change_type": "behavioral change to default target dispatch, effect unverified",
+        "rubric": {
+          "behavior": "No demonstrated base-to-fixed behavior change: OrderedDict mapping lookup and ordered star traversal work in both snapshots.",
+          "coherence": "Explicit OrderedDict handlers plausibly clarify mapping support; the diff does not establish why they are needed.",
+          "specification": "Issue #246 linkage and its failing scenario are unavailable; expected change is therefore unverified.",
+          "regression_tests": "No tests were added. Focused public-behavior coverage passes both snapshots.",
+          "runtime_evidence": "Full existing suite passed on both; focused test passed both snapshots twice. Two initial probe assertions were invalid and failed identically.",
+          "environment": "Paired execution used the pinned Python 3.9 environment; no other interpreter/dependency matrix checked.",
+          "stability": "Focused passing result repeated consistently; no base/fixed behavioral distinction observed."
+        },
+        "evidence": [
+          "patch",
+          "file:base:glom/core.py",
+          "file:fixed:glom/core.py",
+          "runtime:1",
+          "runtime:2",
+          "runtime:3",
+          "baseline",
+          "candidate_metadata"
+        ],
+        "next_checks": [
+          "Recover the #246 report or a minimal concrete reproducer specifying which OrderedDict operation should differ.",
+          "Add a regression test for that expected behavior, verify it fails on base and passes on fixed, and confirm mapping subclasses/custom target registrations remain unaffected.",
+          "If the fix is intended to address registration-order nondeterminism, define an observable supported contract and test it across fresh interpreters/hash seeds."
+        ],
+        "problem_statement": "OrderedDict targets should support mapping-key access and preserve insertion order when traversed, consistently with their ordered mapping behavior. The candidate's claimed problem remains unclear because the tested lookup, nested lookup, and star traversal already pass on the base snapshot."
+      },
+      "runtime_experiments": 3,
+      "reason": null
+    },
+    {
+      "candidate": "85a7a3a4a8c793df30fbad1eefaf53c4f5a91cdd",
+      "status": "reviewed",
+      "assessment": {
+        "decision": "ready_for_runtime_validation",
+        "change_type": "behavioral bug fix",
+        "rubric": {
+          "behavior": "Confirmed root-inclusive recursive `**` results and root matching after a suffix; `*` remains child-only.",
+          "coherence": "The source change aligns recursive traversal results with the updated examples and preserves descendant traversal.",
+          "specification": "The patch\u2019s tests define the intended behavior; PR metadata identifies #250, but no independently verified PR/issue record was supplied.",
+          "regression_tests": "The changed test distinguishes base from fixed and checks nested roots, root-level key lookup, error-tolerant targets, and object targets.",
+          "runtime_evidence": "Paired full-suite run was stable: base 193 passed/1 failed at the new root expectation; fixed 194 passed.",
+          "environment": "Python 3.9 pinned environment; supplied historical base run also reported 194 passes. Other interpreter versions were not checked.",
+          "stability": "Repeated paired run produced the same outcome; no intermittent failures."
+        },
+        "evidence": [
+          "patch",
+          "candidate_metadata",
+          "baseline",
+          "file:base:glom/core.py",
+          "file:fixed:glom/core.py",
+          "file:base:glom/test/test_path_and_t.py",
+          "file:fixed:glom/test/test_path_and_t.py",
+          "runtime:1"
+        ],
+        "next_checks": [
+          "Final corpus review of compatibility expectations for recursive-wildcard root inclusion.",
+          "Consider explicit coverage for cyclic/shared-reference targets and custom registered target handlers if those are part of supported traversal guarantees."
+        ],
+        "problem_statement": "When recursive wildcard traversal (`**`) is enabled, the root target should be included among the values considered, just like its descendants. A suffix such as `**.c` should therefore also be able to match a property on the root, while ordinary `*` continues to enumerate only immediate children."
+      },
+      "runtime_experiments": 1,
+      "reason": null
+    },
+    {
+      "candidate": "db6fee719cf4264048879de632f622d9ee073e8f",
+      "status": "incomplete",
+      "assessment": null,
+      "runtime_experiments": 0,
+      "reason": "ValueError: Glom API budget exhausted"
+    },
+    {
+      "candidate": "94b63752c686a42bf71baeec15e250257aee167d",
+      "status": "incomplete",
+      "assessment": null,
+      "runtime_experiments": 0,
+      "reason": "ValueError: Glom API budget exhausted"
+    },
+    {
+      "candidate": "24cc25ff95a597d7301777cf863d1e7b98183912",
+      "status": "incomplete",
+      "assessment": null,
+      "runtime_experiments": 0,
+      "reason": "ValueError: Glom API budget exhausted"
+    },
+    {
+      "candidate": "032f25287331f86835ca91edd068aab5aaefdbef",
+      "status": "incomplete",
+      "assessment": null,
+      "runtime_experiments": 0,
+      "reason": "ValueError: Glom API budget exhausted"
+    },
+    {
+      "candidate": "c31c91e96c14ee58a92bce82d199ae6ac8cbbd05",
+      "status": "incomplete",
+      "assessment": null,
+      "runtime_experiments": 0,
+      "reason": "ValueError: Glom API budget exhausted"
+    },
+    {
+      "candidate": "55bbcd5d8ff4d07a133048a806604d3c290ac8d7",
+      "status": "incomplete",
+      "assessment": null,
+      "runtime_experiments": 0,
+      "reason": "ValueError: Glom API budget exhausted"
+    }
+  ]
+}

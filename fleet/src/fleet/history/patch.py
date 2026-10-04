@@ -44,7 +44,7 @@ class PathKind(StrEnum):
     SOURCE = "source"  # application code — the thing an agent must fix
     TEST = "test"  # proves the fix; the oracle for a runtime task
     DOC = "doc"  # prose, changelogs, examples
-    CONFIG = "config"  # CI, lockfiles, packaging — no behaviour to fix
+    CONFIG = "config"  # CI, lockfiles, packaging — outside the source-focused pilot
 
 
 # Directory names that mark a test tree. Matched on whole path *components*,
@@ -62,8 +62,11 @@ _CONFIG_NAMES = frozenset(
         "go.mod", "go.sum", "cargo.toml", "cargo.lock", "makefile", "dockerfile",
         "tox.ini", ".pre-commit-config.yaml", ".gitignore", ".editorconfig",
         "codecov.yml", ".codecov.yml", "codecov.yaml", "pytest.ini", "requirements.in",
+        "manifest.in", ".coveragerc", ".tox-coveragerc", ".readthedocs.yml", ".readthedocs.yaml",
+        ".travis.yml", ".travis.yaml",
     }
 )
+_REQUIREMENTS_NAME_RE = re.compile(r"^requirements(?:[-_.][\w.-]+)?\.(?:txt|in)$")
 _TEST_BASENAME_RE = re.compile(
     r"""(?x)
     ^test_.*\.(?:py|js|ts|tsx|rb)$      # test_foo.py
@@ -94,13 +97,19 @@ def classify_path(path: str) -> PathKind:
 
     # Docs first: a file under docs/ is never a test, whatever it is called.
     if any(part in _DOC_DIRS for part in directories):
+        # Dependency lists remain configuration even when used to build docs.
+        if _REQUIREMENTS_NAME_RE.fullmatch(basename):
+            return PathKind.CONFIG
         return PathKind.DOC
-    if basename.endswith(_DOC_SUFFIXES):
-        return PathKind.DOC
+    # Agent permissions are development configuration, not application source.
+    if ".claude" in directories and basename in {"settings.json", "settings.local.json"}:
+        return PathKind.CONFIG
     if any(part in _CONFIG_DIRS for part in directories):
         return PathKind.CONFIG
-    if basename in _CONFIG_NAMES:
+    if basename in _CONFIG_NAMES or _REQUIREMENTS_NAME_RE.fullmatch(basename):
         return PathKind.CONFIG
+    if basename.endswith(_DOC_SUFFIXES):
+        return PathKind.DOC
     if any(part in _TEST_DIRS for part in directories):
         return PathKind.TEST
     if _TEST_BASENAME_RE.match(basename):
@@ -177,6 +186,24 @@ class PatchStats:
     def touches_binary(self) -> bool:
         return any(change.binary for change in self.files)
 
+    def counts_by_kind(self) -> dict[str, dict[str, int]]:
+        """Keep source, test, documentation and configuration costs separate.
+
+        Binary files count as files; their line counts are unknown, not measured
+        zero. Consumers can see that in each group's binary_file_count.
+        """
+        return {
+            str(kind): {
+                "file_count": len(files),
+                "added": sum(f.added for f in files),
+                "deleted": sum(f.removed for f in files),
+                "loc_changed": sum(f.loc for f in files),
+                "binary_file_count": sum(f.binary for f in files),
+            }
+            for kind in PathKind
+            for files in (self.of_kind(kind),)
+        }
+
     def to_dict(self) -> dict[str, object]:
         return {
             "loc_changed": self.loc_changed,
@@ -186,6 +213,7 @@ class PatchStats:
             "source_file_count": len(self.source_files),
             "test_file_count": len(self.test_files),
             "has_test_change": self.has_test_change,
+            "by_kind": self.counts_by_kind(),
             "files": [
                 {
                     "path": change.path,
@@ -215,20 +243,37 @@ def _unwrap_rename(path: str) -> str:
 
 
 def parse_numstat(output: str) -> PatchStats:
-    """Parse `git diff --numstat` into per-file changes.
+    """Parse `git diff --numstat [-z]` into per-file changes.
 
     Binary files report `-` for both counts; they are recorded with zero
     lines and a `binary` flag rather than dropped, so a candidate that is
-    mostly a new image doesn't look like an empty diff.
+    mostly a new image doesn't look like an empty diff. Live scans use -z
+    so quoted, Unicode, tab and newline-containing paths stay classifiable.
+    Plain output remains accepted for existing fixtures and saved evidence.
     """
+    rows = []
+    if "\0" in output:
+        fields = iter(output.split("\0"))
+        for field in fields:
+            parts = field.split("\t", 2)
+            if len(parts) != 3:
+                continue
+            added, removed, path = parts
+            if not path:
+                # With -z, a rename is counts + NUL + old path + NUL + new path.
+                next(fields, "")
+                path = next(fields, "")
+            rows.append((added, removed, path))
+    else:
+        for line in output.splitlines():
+            match = _NUMSTAT_RE.match(line)
+            if match:
+                added, removed, path = match.groups()
+                rows.append((added, removed, _unwrap_rename(path.strip())))
+
     changes: list[FileChange] = []
-    for line in output.splitlines():
-        match = _NUMSTAT_RE.match(line)
-        if not match:
-            continue
-        added_raw, removed_raw, raw_path = match.groups()
-        path = _unwrap_rename(raw_path.strip())
-        if not path:
+    for added_raw, removed_raw, path in rows:
+        if not path or any(v != "-" and not v.isdecimal() for v in (added_raw, removed_raw)):
             continue
         binary = added_raw == "-" or removed_raw == "-"
         changes.append(

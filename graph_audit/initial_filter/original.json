@@ -1,0 +1,3526 @@
+{
+  "schema_version": "1.0",
+  "stage": "initial_filter",
+  "repo": "mahmoud/glom",
+  "clone": "/Users/adityagk/Desktop/projects/glom",
+  "ref": "30b477ab65560914a38f331614947d0894701044",
+  "built_at": "2026-09-27T19:22:10.433557+00:00",
+  "limits": {
+    "max_commits": 200,
+    "max_changes": 100,
+    "candidates": 25
+  },
+  "filters": {
+    "min_source_loc": 1,
+    "max_source_loc": null,
+    "max_source_files": 10,
+    "require_source_change": true,
+    "require_integration_point": false
+  },
+  "summary": {
+    "kept": 25,
+    "dropped": 22,
+    "needs_enrichment": 0,
+    "by_style": {
+      "unknown": 16,
+      "squash": 9
+    },
+    "mainline_points": 200,
+    "commits_visited": 47,
+    "commits_measured": 47,
+    "stop_reason": "candidate_limit",
+    "remaining_in_window": 153,
+    "walk_since": null,
+    "walk_until": null,
+    "selected": 25
+  },
+  "candidates": [
+    {
+      "sha": "6fd41340f30519ddc64a546ad2703dfe53f12356",
+      "base_sha": "e515fb33c7af491c6a20b2618591736361bb1d08",
+      "parents": [
+        "e515fb33c7af491c6a20b2618591736361bb1d08"
+      ],
+      "subject": "fix Path.__getitem__ off-by-one (GH-299), add test extra to setup.py",
+      "style": "unknown",
+      "style_evidence": "single parent, no `(#N)` suffix and no PR metadata to disambiguate",
+      "pr_number": null,
+      "closes_issues": [],
+      "author_date": "2026-06-28T15:47:32-07:00",
+      "committer_date": "2026-06-28T20:19:20-07:00",
+      "added": 21,
+      "deleted": 4,
+      "loc_changed": 25,
+      "file_count": 3,
+      "source_loc": 4,
+      "test_loc": 15,
+      "source_file_count": 1,
+      "test_file_count": 1,
+      "has_test_change": true,
+      "by_kind": {
+        "source": {
+          "file_count": 1,
+          "added": 2,
+          "deleted": 2,
+          "loc_changed": 4,
+          "binary_file_count": 0
+        },
+        "test": {
+          "file_count": 1,
+          "added": 13,
+          "deleted": 2,
+          "loc_changed": 15,
+          "binary_file_count": 0
+        },
+        "doc": {
+          "file_count": 0,
+          "added": 0,
+          "deleted": 0,
+          "loc_changed": 0,
+          "binary_file_count": 0
+        },
+        "config": {
+          "file_count": 1,
+          "added": 6,
+          "deleted": 0,
+          "loc_changed": 6,
+          "binary_file_count": 0
+        }
+      },
+      "difficulty": "trivial",
+      "files": [
+        {
+          "path": "glom/core.py",
+          "added": 2,
+          "deleted": 2,
+          "kind": "source"
+        },
+        {
+          "path": "glom/test/test_path_and_t.py",
+          "added": 13,
+          "deleted": 2,
+          "kind": "test"
+        },
+        {
+          "path": "setup.py",
+          "added": 6,
+          "deleted": 0,
+          "kind": "config"
+        }
+      ],
+      "id": "6fd41340f30519ddc64a546ad2703dfe53f12356",
+      "repo": "mahmoud/glom",
+      "fixed_sha": "6fd41340f30519ddc64a546ad2703dfe53f12356",
+      "status": "initial_filter_passed",
+      "validation": "not_run",
+      "message": "fix Path.__getitem__ off-by-one (GH-299), add test extra to setup.py\n\n- Path[len(p)] now correctly raises IndexError instead of returning empty Path()\n- Error message includes index and length for easier debugging\n- setup.py: add 'test' extra with pytest, PyYAML, coverage\n",
+      "pr_url": null,
+      "pr_evidence": "unavailable",
+      "pr_verification": "not_run",
+      "issue_evidence": "unavailable",
+      "issue_linkage": "not_verified"
+    },
+    {
+      "sha": "e515fb33c7af491c6a20b2618591736361bb1d08",
+      "base_sha": "64141ba4794eaadf63242aa76191448159306251",
+      "parents": [
+        "64141ba4794eaadf63242aa76191448159306251"
+      ],
+      "subject": "Keep PathAccessError printable for Scope/S paths (#249) (#298)",
+      "style": "squash",
+      "style_evidence": "single parent with `(#N)` subject suffix (squash adds it, rebase does not)",
+      "pr_number": 298,
+      "closes_issues": [],
+      "author_date": "2026-06-29T05:18:34+02:00",
+      "committer_date": "2026-06-28T20:18:34-07:00",
+      "added": 46,
+      "deleted": 12,
+      "loc_changed": 58,
+      "file_count": 4,
+      "source_loc": 5,
+      "test_loc": 31,
+      "source_file_count": 1,
+      "test_file_count": 1,
+      "has_test_change": true,
+      "by_kind": {
+        "source": {
+          "file_count": 1,
+          "added": 4,
+          "deleted": 1,
+          "loc_changed": 5,
+          "binary_file_count": 0
+        },
+        "test": {
+          "file_count": 1,
+          "added": 30,
+          "deleted": 1,
+          "loc_changed": 31,
+          "binary_file_count": 0
+        },
+        "doc": {
+          "file_count": 0,
+          "added": 0,
+          "deleted": 0,
+          "loc_changed": 0,
+          "binary_file_count": 0
+        },
+        "config": {
+          "file_count": 2,
+          "added": 12,
+          "deleted": 10,
+          "loc_changed": 22,
+          "binary_file_count": 0
+        }
+      },
+      "difficulty": "trivial",
+      "files": [
+        {
+          "path": ".github/workflows/tests.yaml",
+          "added": 3,
+          "deleted": 10,
+          "kind": "config"
+        },
+        {
+          "path": "codecov.yml",
+          "added": 9,
+          "deleted": 0,
+          "kind": "config"
+        },
+        {
+          "path": "glom/core.py",
+          "added": 4,
+          "deleted": 1,
+          "kind": "source"
+        },
+        {
+          "path": "glom/test/test_error.py",
+          "added": 30,
+          "deleted": 1,
+          "kind": "test"
+        }
+      ],
+      "id": "e515fb33c7af491c6a20b2618591736361bb1d08",
+      "repo": "mahmoud/glom",
+      "fixed_sha": "e515fb33c7af491c6a20b2618591736361bb1d08",
+      "status": "initial_filter_passed",
+      "validation": "not_run",
+      "message": "Keep PathAccessError printable for Scope/S paths (#249) (#298)\n\nPathAccessError.get_message() called Path(self.path) which re-wraps an\nalready-Path object. For S-rooted paths, Path() rejects the S root with\nValueError, crashing __str__ and producing '<exception str() failed>'.\n\nFix: call self.path.values() directly \u2014 self.path is already a Path at\nevery call site. Keep a lightweight AttributeError/IndexError fallback\nfor safety in case of unexpected .path types.\n\nTest asserts the message content (key name, part index, error type),\nnot just that it doesn't crash.",
+      "pr_url": "https://github.com/mahmoud/glom/pull/298",
+      "pr_evidence": "commit_subject",
+      "pr_verification": "not_run",
+      "issue_evidence": "unavailable",
+      "issue_linkage": "not_verified"
+    },
+    {
+      "sha": "64141ba4794eaadf63242aa76191448159306251",
+      "base_sha": "c1b2d387548fd3bb736453a6dbd6f749cf329faa",
+      "parents": [
+        "c1b2d387548fd3bb736453a6dbd6f749cf329faa"
+      ],
+      "subject": "Docs refresh: fix dead embeds, stale content, add glompad links, remove backward-compat exports",
+      "style": "unknown",
+      "style_evidence": "single parent, no `(#N)` suffix and no PR metadata to disambiguate",
+      "pr_number": null,
+      "closes_issues": [],
+      "author_date": "2026-05-15T07:13:28Z",
+      "committer_date": "2026-05-15T07:13:28Z",
+      "added": 72,
+      "deleted": 67,
+      "loc_changed": 139,
+      "file_count": 14,
+      "source_loc": 46,
+      "test_loc": 13,
+      "source_file_count": 2,
+      "test_file_count": 2,
+      "has_test_change": true,
+      "by_kind": {
+        "source": {
+          "file_count": 2,
+          "added": 22,
+          "deleted": 24,
+          "loc_changed": 46,
+          "binary_file_count": 0
+        },
+        "test": {
+          "file_count": 2,
+          "added": 5,
+          "deleted": 8,
+          "loc_changed": 13,
+          "binary_file_count": 0
+        },
+        "doc": {
+          "file_count": 10,
+          "added": 45,
+          "deleted": 35,
+          "loc_changed": 80,
+          "binary_file_count": 0
+        },
+        "config": {
+          "file_count": 0,
+          "added": 0,
+          "deleted": 0,
+          "loc_changed": 0,
+          "binary_file_count": 0
+        }
+      },
+      "difficulty": "medium",
+      "files": [
+        {
+          "path": "README.md",
+          "added": 4,
+          "deleted": 2,
+          "kind": "doc"
+        },
+        {
+          "path": "docs/api.rst",
+          "added": 5,
+          "deleted": 4,
+          "kind": "doc"
+        },
+        {
+          "path": "docs/by_analogy.rst",
+          "added": 4,
+          "deleted": 4,
+          "kind": "doc"
+        },
+        {
+          "path": "docs/cli.rst",
+          "added": 1,
+          "deleted": 1,
+          "kind": "doc"
+        },
+        {
+          "path": "docs/debugging.rst",
+          "added": 4,
+          "deleted": 0,
+          "kind": "doc"
+        },
+        {
+          "path": "docs/faq.rst",
+          "added": 4,
+          "deleted": 4,
+          "kind": "doc"
+        },
+        {
+          "path": "docs/index.rst",
+          "added": 1,
+          "deleted": 1,
+          "kind": "doc"
+        },
+        {
+          "path": "docs/matching.rst",
+          "added": 3,
+          "deleted": 9,
+          "kind": "doc"
+        },
+        {
+          "path": "docs/snippets.rst",
+          "added": 18,
+          "deleted": 9,
+          "kind": "doc"
+        },
+        {
+          "path": "docs/tutorial.rst",
+          "added": 1,
+          "deleted": 1,
+          "kind": "doc"
+        },
+        {
+          "path": "glom/__init__.py",
+          "added": 0,
+          "deleted": 3,
+          "kind": "source"
+        },
+        {
+          "path": "glom/test/test_basic.py",
+          "added": 1,
+          "deleted": 4,
+          "kind": "test"
+        },
+        {
+          "path": "glom/test/test_scope_vars.py",
+          "added": 4,
+          "deleted": 4,
+          "kind": "test"
+        },
+        {
+          "path": "glom/tutorial.py",
+          "added": 22,
+          "deleted": 21,
+          "kind": "source"
+        }
+      ],
+      "id": "64141ba4794eaadf63242aa76191448159306251",
+      "repo": "mahmoud/glom",
+      "fixed_sha": "64141ba4794eaadf63242aa76191448159306251",
+      "status": "initial_filter_passed",
+      "validation": "not_run",
+      "message": "Docs refresh: fix dead embeds, stale content, add glompad links, remove backward-compat exports\n\n- Replace 3 dead repl.it iframe embeds with glompad links in tutorial.py\n- Update Jupiter moon count 69\u219295, Pluto 6\u21925, and all derived outputs\n- Fix RST syntax errors in matching.rst (extra paren, missing role colons)\n- Fix :class: \u2192 :func: for convenience functions in faq.rst\n- Drop 'at the time of writing' temporal qualifiers across docs\n- Replace basestring with str in faq.rst historical code sample\n- Rewrite Python 2 framing in snippets.rst to Python 3 only\n- Update stale links: jq, sedimental, Ruby dig, Django docs, readthedocs\n- Fix typos: Similiarity\u2192Similarity, Parellel\u2192Parallel, takes\u2192take\n- Remove hardcoded /home/mahmoud/bin/glom path from cli.rst\n- Change 'a new approach/way' to 'a practical/powerful way' (7+ year old lib)\n- Remove stale deprecation warnings for Check and Call\n- Remove OMIT, Literal, Let from glom.__init__ public exports\n- Add 20+ glompad links across tutorial, snippets, debugging, api, README\n",
+      "pr_url": null,
+      "pr_evidence": "unavailable",
+      "pr_verification": "not_run",
+      "issue_evidence": "unavailable",
+      "issue_linkage": "not_verified"
+    },
+    {
+      "sha": "c1b2d387548fd3bb736453a6dbd6f749cf329faa",
+      "base_sha": "811eadeec404bd99ee5a43ca551e8fb220b999f3",
+      "parents": [
+        "811eadeec404bd99ee5a43ca551e8fb220b999f3"
+      ],
+      "subject": "bumping version for v25.12.1dev",
+      "style": "unknown",
+      "style_evidence": "single parent, no `(#N)` suffix and no PR metadata to disambiguate",
+      "pr_number": null,
+      "closes_issues": [],
+      "author_date": "2025-12-28T22:29:50-08:00",
+      "committer_date": "2025-12-28T22:29:50-08:00",
+      "added": 1,
+      "deleted": 1,
+      "loc_changed": 2,
+      "file_count": 1,
+      "source_loc": 2,
+      "test_loc": 0,
+      "source_file_count": 1,
+      "test_file_count": 0,
+      "has_test_change": false,
+      "by_kind": {
+        "source": {
+          "file_count": 1,
+          "added": 1,
+          "deleted": 1,
+          "loc_changed": 2,
+          "binary_file_count": 0
+        },
+        "test": {
+          "file_count": 0,
+          "added": 0,
+          "deleted": 0,
+          "loc_changed": 0,
+          "binary_file_count": 0
+        },
+        "doc": {
+          "file_count": 0,
+          "added": 0,
+          "deleted": 0,
+          "loc_changed": 0,
+          "binary_file_count": 0
+        },
+        "config": {
+          "file_count": 0,
+          "added": 0,
+          "deleted": 0,
+          "loc_changed": 0,
+          "binary_file_count": 0
+        }
+      },
+      "difficulty": "trivial",
+      "files": [
+        {
+          "path": "glom/_version.py",
+          "added": 1,
+          "deleted": 1,
+          "kind": "source"
+        }
+      ],
+      "id": "c1b2d387548fd3bb736453a6dbd6f749cf329faa",
+      "repo": "mahmoud/glom",
+      "fixed_sha": "c1b2d387548fd3bb736453a6dbd6f749cf329faa",
+      "status": "initial_filter_passed",
+      "validation": "not_run",
+      "message": "bumping version for v25.12.1dev\n",
+      "pr_url": null,
+      "pr_evidence": "unavailable",
+      "pr_verification": "not_run",
+      "issue_evidence": "unavailable",
+      "issue_linkage": "not_verified"
+    },
+    {
+      "sha": "59563e89bdc5fb5f8509c1258402847e074097fa",
+      "base_sha": "9716620ce5e4de73c07b3083634bb3abb58b657f",
+      "parents": [
+        "9716620ce5e4de73c07b3083634bb3abb58b657f"
+      ],
+      "subject": "bump version for v25.12.0 release",
+      "style": "unknown",
+      "style_evidence": "single parent, no `(#N)` suffix and no PR metadata to disambiguate",
+      "pr_number": null,
+      "closes_issues": [],
+      "author_date": "2025-12-28T22:26:42-08:00",
+      "committer_date": "2025-12-28T22:26:42-08:00",
+      "added": 1,
+      "deleted": 1,
+      "loc_changed": 2,
+      "file_count": 1,
+      "source_loc": 2,
+      "test_loc": 0,
+      "source_file_count": 1,
+      "test_file_count": 0,
+      "has_test_change": false,
+      "by_kind": {
+        "source": {
+          "file_count": 1,
+          "added": 1,
+          "deleted": 1,
+          "loc_changed": 2,
+          "binary_file_count": 0
+        },
+        "test": {
+          "file_count": 0,
+          "added": 0,
+          "deleted": 0,
+          "loc_changed": 0,
+          "binary_file_count": 0
+        },
+        "doc": {
+          "file_count": 0,
+          "added": 0,
+          "deleted": 0,
+          "loc_changed": 0,
+          "binary_file_count": 0
+        },
+        "config": {
+          "file_count": 0,
+          "added": 0,
+          "deleted": 0,
+          "loc_changed": 0,
+          "binary_file_count": 0
+        }
+      },
+      "difficulty": "trivial",
+      "files": [
+        {
+          "path": "glom/_version.py",
+          "added": 1,
+          "deleted": 1,
+          "kind": "source"
+        }
+      ],
+      "id": "59563e89bdc5fb5f8509c1258402847e074097fa",
+      "repo": "mahmoud/glom",
+      "fixed_sha": "59563e89bdc5fb5f8509c1258402847e074097fa",
+      "status": "initial_filter_passed",
+      "validation": "not_run",
+      "message": "bump version for v25.12.0 release\n",
+      "pr_url": null,
+      "pr_evidence": "unavailable",
+      "pr_verification": "not_run",
+      "issue_evidence": "unavailable",
+      "issue_linkage": "not_verified"
+    },
+    {
+      "sha": "9716620ce5e4de73c07b3083634bb3abb58b657f",
+      "base_sha": "533a1025b670351b66406efb1f6f1bc8cc839d8b",
+      "parents": [
+        "533a1025b670351b66406efb1f6f1bc8cc839d8b"
+      ],
+      "subject": "Add Python 3.13 and 3.14 tests and fixes (#296)",
+      "style": "squash",
+      "style_evidence": "single parent with `(#N)` subject suffix (squash adds it, rebase does not)",
+      "pr_number": 296,
+      "closes_issues": [],
+      "author_date": "2025-12-28T22:19:12-08:00",
+      "committer_date": "2025-12-28T22:19:12-08:00",
+      "added": 25,
+      "deleted": 9,
+      "loc_changed": 34,
+      "file_count": 7,
+      "source_loc": 1,
+      "test_loc": 11,
+      "source_file_count": 1,
+      "test_file_count": 2,
+      "has_test_change": true,
+      "by_kind": {
+        "source": {
+          "file_count": 1,
+          "added": 1,
+          "deleted": 0,
+          "loc_changed": 1,
+          "binary_file_count": 0
+        },
+        "test": {
+          "file_count": 2,
+          "added": 11,
+          "deleted": 0,
+          "loc_changed": 11,
+          "binary_file_count": 0
+        },
+        "doc": {
+          "file_count": 1,
+          "added": 1,
+          "deleted": 1,
+          "loc_changed": 2,
+          "binary_file_count": 0
+        },
+        "config": {
+          "file_count": 3,
+          "added": 12,
+          "deleted": 8,
+          "loc_changed": 20,
+          "binary_file_count": 0
+        }
+      },
+      "difficulty": "trivial",
+      "files": [
+        {
+          "path": ".github/workflows/tests.yaml",
+          "added": 5,
+          "deleted": 3,
+          "kind": "config"
+        },
+        {
+          "path": ".tox-coveragerc",
+          "added": 1,
+          "deleted": 0,
+          "kind": "source"
+        },
+        {
+          "path": "README.md",
+          "added": 1,
+          "deleted": 1,
+          "kind": "doc"
+        },
+        {
+          "path": "glom/test/conftest.py",
+          "added": 7,
+          "deleted": 0,
+          "kind": "test"
+        },
+        {
+          "path": "glom/test/test_error.py",
+          "added": 4,
+          "deleted": 0,
+          "kind": "test"
+        },
+        {
+          "path": "setup.py",
+          "added": 6,
+          "deleted": 4,
+          "kind": "config"
+        },
+        {
+          "path": "tox.ini",
+          "added": 1,
+          "deleted": 1,
+          "kind": "config"
+        }
+      ],
+      "id": "9716620ce5e4de73c07b3083634bb3abb58b657f",
+      "repo": "mahmoud/glom",
+      "fixed_sha": "9716620ce5e4de73c07b3083634bb3abb58b657f",
+      "status": "initial_filter_passed",
+      "validation": "not_run",
+      "message": "Add Python 3.13 and 3.14 tests and fixes (#296)\n\n",
+      "pr_url": "https://github.com/mahmoud/glom/pull/296",
+      "pr_evidence": "commit_subject",
+      "pr_verification": "not_run",
+      "issue_evidence": "unavailable",
+      "issue_linkage": "not_verified"
+    },
+    {
+      "sha": "533a1025b670351b66406efb1f6f1bc8cc839d8b",
+      "base_sha": "62bd34ae36ead1cb5875f296fa3a2443bd1542ec",
+      "parents": [
+        "62bd34ae36ead1cb5875f296fa3a2443bd1542ec"
+      ],
+      "subject": "add security.md to manifest",
+      "style": "unknown",
+      "style_evidence": "single parent, no `(#N)` suffix and no PR metadata to disambiguate",
+      "pr_number": null,
+      "closes_issues": [],
+      "author_date": "2025-12-28T16:23:58-08:00",
+      "committer_date": "2025-12-28T16:23:58-08:00",
+      "added": 2,
+      "deleted": 1,
+      "loc_changed": 3,
+      "file_count": 2,
+      "source_loc": 2,
+      "test_loc": 0,
+      "source_file_count": 1,
+      "test_file_count": 0,
+      "has_test_change": false,
+      "by_kind": {
+        "source": {
+          "file_count": 1,
+          "added": 1,
+          "deleted": 1,
+          "loc_changed": 2,
+          "binary_file_count": 0
+        },
+        "test": {
+          "file_count": 0,
+          "added": 0,
+          "deleted": 0,
+          "loc_changed": 0,
+          "binary_file_count": 0
+        },
+        "doc": {
+          "file_count": 0,
+          "added": 0,
+          "deleted": 0,
+          "loc_changed": 0,
+          "binary_file_count": 0
+        },
+        "config": {
+          "file_count": 1,
+          "added": 1,
+          "deleted": 0,
+          "loc_changed": 1,
+          "binary_file_count": 0
+        }
+      },
+      "difficulty": "trivial",
+      "files": [
+        {
+          "path": ".gitignore",
+          "added": 1,
+          "deleted": 0,
+          "kind": "config"
+        },
+        {
+          "path": "MANIFEST.in",
+          "added": 1,
+          "deleted": 1,
+          "kind": "source"
+        }
+      ],
+      "id": "533a1025b670351b66406efb1f6f1bc8cc839d8b",
+      "repo": "mahmoud/glom",
+      "fixed_sha": "533a1025b670351b66406efb1f6f1bc8cc839d8b",
+      "status": "initial_filter_passed",
+      "validation": "not_run",
+      "message": "add security.md to manifest\n",
+      "pr_url": null,
+      "pr_evidence": "unavailable",
+      "pr_verification": "not_run",
+      "issue_evidence": "unavailable",
+      "issue_linkage": "not_verified"
+    },
+    {
+      "sha": "b13e7042844be7260b679575c1e198d732d3bb66",
+      "base_sha": "fb3c4e76f28816aebfd2538980e617742e98a7c2",
+      "parents": [
+        "fb3c4e76f28816aebfd2538980e617742e98a7c2"
+      ],
+      "subject": "assignment warning",
+      "style": "unknown",
+      "style_evidence": "single parent, no `(#N)` suffix and no PR metadata to disambiguate",
+      "pr_number": null,
+      "closes_issues": [],
+      "author_date": "2025-01-11T22:59:06-08:00",
+      "committer_date": "2025-01-11T22:59:06-08:00",
+      "added": 9,
+      "deleted": 0,
+      "loc_changed": 9,
+      "file_count": 1,
+      "source_loc": 9,
+      "test_loc": 0,
+      "source_file_count": 1,
+      "test_file_count": 0,
+      "has_test_change": false,
+      "by_kind": {
+        "source": {
+          "file_count": 1,
+          "added": 9,
+          "deleted": 0,
+          "loc_changed": 9,
+          "binary_file_count": 0
+        },
+        "test": {
+          "file_count": 0,
+          "added": 0,
+          "deleted": 0,
+          "loc_changed": 0,
+          "binary_file_count": 0
+        },
+        "doc": {
+          "file_count": 0,
+          "added": 0,
+          "deleted": 0,
+          "loc_changed": 0,
+          "binary_file_count": 0
+        },
+        "config": {
+          "file_count": 0,
+          "added": 0,
+          "deleted": 0,
+          "loc_changed": 0,
+          "binary_file_count": 0
+        }
+      },
+      "difficulty": "small",
+      "files": [
+        {
+          "path": "glom/mutation.py",
+          "added": 9,
+          "deleted": 0,
+          "kind": "source"
+        }
+      ],
+      "id": "b13e7042844be7260b679575c1e198d732d3bb66",
+      "repo": "mahmoud/glom",
+      "fixed_sha": "b13e7042844be7260b679575c1e198d732d3bb66",
+      "status": "initial_filter_passed",
+      "validation": "not_run",
+      "message": "assignment warning\n",
+      "pr_url": null,
+      "pr_evidence": "unavailable",
+      "pr_verification": "not_run",
+      "issue_evidence": "unavailable",
+      "issue_linkage": "not_verified"
+    },
+    {
+      "sha": "920c13c4a8719237f687f98afe3f2b8d1c56640d",
+      "base_sha": "d296009a13b0d8e42a10b4688b18326fda486038",
+      "parents": [
+        "d296009a13b0d8e42a10b4688b18326fda486038"
+      ],
+      "subject": "bump version for v24.11.1dev",
+      "style": "unknown",
+      "style_evidence": "single parent, no `(#N)` suffix and no PR metadata to disambiguate",
+      "pr_number": null,
+      "closes_issues": [],
+      "author_date": "2024-11-02T16:19:42-07:00",
+      "committer_date": "2024-11-02T16:19:42-07:00",
+      "added": 4,
+      "deleted": 5,
+      "loc_changed": 9,
+      "file_count": 2,
+      "source_loc": 2,
+      "test_loc": 0,
+      "source_file_count": 1,
+      "test_file_count": 0,
+      "has_test_change": false,
+      "by_kind": {
+        "source": {
+          "file_count": 1,
+          "added": 1,
+          "deleted": 1,
+          "loc_changed": 2,
+          "binary_file_count": 0
+        },
+        "test": {
+          "file_count": 0,
+          "added": 0,
+          "deleted": 0,
+          "loc_changed": 0,
+          "binary_file_count": 0
+        },
+        "doc": {
+          "file_count": 0,
+          "added": 0,
+          "deleted": 0,
+          "loc_changed": 0,
+          "binary_file_count": 0
+        },
+        "config": {
+          "file_count": 1,
+          "added": 3,
+          "deleted": 4,
+          "loc_changed": 7,
+          "binary_file_count": 0
+        }
+      },
+      "difficulty": "trivial",
+      "files": [
+        {
+          "path": "glom/_version.py",
+          "added": 1,
+          "deleted": 1,
+          "kind": "source"
+        },
+        {
+          "path": "setup.py",
+          "added": 3,
+          "deleted": 4,
+          "kind": "config"
+        }
+      ],
+      "id": "920c13c4a8719237f687f98afe3f2b8d1c56640d",
+      "repo": "mahmoud/glom",
+      "fixed_sha": "920c13c4a8719237f687f98afe3f2b8d1c56640d",
+      "status": "initial_filter_passed",
+      "validation": "not_run",
+      "message": "bump version for v24.11.1dev\n",
+      "pr_url": null,
+      "pr_evidence": "unavailable",
+      "pr_verification": "not_run",
+      "issue_evidence": "unavailable",
+      "issue_linkage": "not_verified"
+    },
+    {
+      "sha": "b23c4bcd391cbef58da32a19c8336283394e2878",
+      "base_sha": "bc653da9afec59bbb9c57230ffa2a12374f0346c",
+      "parents": [
+        "bc653da9afec59bbb9c57230ffa2a12374f0346c"
+      ],
+      "subject": "bump version for v24.11.0 release",
+      "style": "unknown",
+      "style_evidence": "single parent, no `(#N)` suffix and no PR metadata to disambiguate",
+      "pr_number": null,
+      "closes_issues": [],
+      "author_date": "2024-11-02T16:11:45-07:00",
+      "committer_date": "2024-11-02T16:11:45-07:00",
+      "added": 1,
+      "deleted": 1,
+      "loc_changed": 2,
+      "file_count": 1,
+      "source_loc": 2,
+      "test_loc": 0,
+      "source_file_count": 1,
+      "test_file_count": 0,
+      "has_test_change": false,
+      "by_kind": {
+        "source": {
+          "file_count": 1,
+          "added": 1,
+          "deleted": 1,
+          "loc_changed": 2,
+          "binary_file_count": 0
+        },
+        "test": {
+          "file_count": 0,
+          "added": 0,
+          "deleted": 0,
+          "loc_changed": 0,
+          "binary_file_count": 0
+        },
+        "doc": {
+          "file_count": 0,
+          "added": 0,
+          "deleted": 0,
+          "loc_changed": 0,
+          "binary_file_count": 0
+        },
+        "config": {
+          "file_count": 0,
+          "added": 0,
+          "deleted": 0,
+          "loc_changed": 0,
+          "binary_file_count": 0
+        }
+      },
+      "difficulty": "trivial",
+      "files": [
+        {
+          "path": "glom/_version.py",
+          "added": 1,
+          "deleted": 1,
+          "kind": "source"
+        }
+      ],
+      "id": "b23c4bcd391cbef58da32a19c8336283394e2878",
+      "repo": "mahmoud/glom",
+      "fixed_sha": "b23c4bcd391cbef58da32a19c8336283394e2878",
+      "status": "initial_filter_passed",
+      "validation": "not_run",
+      "message": "bump version for v24.11.0 release\n",
+      "pr_url": null,
+      "pr_evidence": "unavailable",
+      "pr_verification": "not_run",
+      "issue_evidence": "unavailable",
+      "issue_linkage": "not_verified"
+    },
+    {
+      "sha": "bc653da9afec59bbb9c57230ffa2a12374f0346c",
+      "base_sha": "24c21dcc44cc81abc193aa3bfa2f66304470d205",
+      "parents": [
+        "24c21dcc44cc81abc193aa3bfa2f66304470d205"
+      ],
+      "subject": "Add Python 3.12 (#285)",
+      "style": "squash",
+      "style_evidence": "single parent with `(#N)` subject suffix (squash adds it, rebase does not)",
+      "pr_number": 285,
+      "closes_issues": [],
+      "author_date": "2024-11-02T16:09:15-07:00",
+      "committer_date": "2024-11-02T16:09:15-07:00",
+      "added": 260,
+      "deleted": 227,
+      "loc_changed": 487,
+      "file_count": 31,
+      "source_loc": 242,
+      "test_loc": 104,
+      "source_file_count": 10,
+      "test_file_count": 16,
+      "has_test_change": true,
+      "by_kind": {
+        "source": {
+          "file_count": 10,
+          "added": 118,
+          "deleted": 124,
+          "loc_changed": 242,
+          "binary_file_count": 0
+        },
+        "test": {
+          "file_count": 16,
+          "added": 43,
+          "deleted": 61,
+          "loc_changed": 104,
+          "binary_file_count": 0
+        },
+        "doc": {
+          "file_count": 2,
+          "added": 70,
+          "deleted": 25,
+          "loc_changed": 95,
+          "binary_file_count": 0
+        },
+        "config": {
+          "file_count": 3,
+          "added": 29,
+          "deleted": 17,
+          "loc_changed": 46,
+          "binary_file_count": 0
+        }
+      },
+      "difficulty": "large",
+      "files": [
+        {
+          "path": ".github/workflows/tests.yaml",
+          "added": 15,
+          "deleted": 15,
+          "kind": "config"
+        },
+        {
+          "path": "docs/conf.py",
+          "added": 1,
+          "deleted": 1,
+          "kind": "doc"
+        },
+        {
+          "path": "glom/__init__.py",
+          "added": 0,
+          "deleted": 1,
+          "kind": "source"
+        },
+        {
+          "path": "glom/__main__.py",
+          "added": 0,
+          "deleted": 1,
+          "kind": "source"
+        },
+        {
+          "path": "glom/cli.py",
+          "added": 8,
+          "deleted": 9,
+          "kind": "source"
+        },
+        {
+          "path": "glom/core.py",
+          "added": 47,
+          "deleted": 48,
+          "kind": "source"
+        },
+        {
+          "path": "glom/grouping.py",
+          "added": 11,
+          "deleted": 12,
+          "kind": "source"
+        },
+        {
+          "path": "glom/matching.py",
+          "added": 31,
+          "deleted": 31,
+          "kind": "source"
+        },
+        {
+          "path": "glom/mutation.py",
+          "added": 7,
+          "deleted": 7,
+          "kind": "source"
+        },
+        {
+          "path": "glom/reduction.py",
+          "added": 6,
+          "deleted": 7,
+          "kind": "source"
+        },
+        {
+          "path": "glom/streaming.py",
+          "added": 5,
+          "deleted": 5,
+          "kind": "source"
+        },
+        {
+          "path": "glom/test/perf_report.py",
+          "added": 1,
+          "deleted": 1,
+          "kind": "test"
+        },
+        {
+          "path": "glom/test/test_basic.py",
+          "added": 7,
+          "deleted": 8,
+          "kind": "test"
+        },
+        {
+          "path": "glom/test/test_check.py",
+          "added": 1,
+          "deleted": 2,
+          "kind": "test"
+        },
+        {
+          "path": "glom/test/test_cli.py",
+          "added": 0,
+          "deleted": 3,
+          "kind": "test"
+        },
+        {
+          "path": "glom/test/test_error.py",
+          "added": 17,
+          "deleted": 18,
+          "kind": "test"
+        },
+        {
+          "path": "glom/test/test_grouping.py",
+          "added": 0,
+          "deleted": 2,
+          "kind": "test"
+        },
+        {
+          "path": "glom/test/test_match.py",
+          "added": 2,
+          "deleted": 3,
+          "kind": "test"
+        },
+        {
+          "path": "glom/test/test_mutation.py",
+          "added": 6,
+          "deleted": 6,
+          "kind": "test"
+        },
+        {
+          "path": "glom/test/test_path_and_t.py",
+          "added": 1,
+          "deleted": 2,
+          "kind": "test"
+        },
+        {
+          "path": "glom/test/test_reduction.py",
+          "added": 0,
+          "deleted": 1,
+          "kind": "test"
+        },
+        {
+          "path": "glom/test/test_scope_vars.py",
+          "added": 2,
+          "deleted": 3,
+          "kind": "test"
+        },
+        {
+          "path": "glom/test/test_snippets.py",
+          "added": 1,
+          "deleted": 1,
+          "kind": "test"
+        },
+        {
+          "path": "glom/test/test_spec.py",
+          "added": 0,
+          "deleted": 1,
+          "kind": "test"
+        },
+        {
+          "path": "glom/test/test_streaming.py",
+          "added": 0,
+          "deleted": 1,
+          "kind": "test"
+        },
+        {
+          "path": "glom/test/test_target_types.py",
+          "added": 5,
+          "deleted": 8,
+          "kind": "test"
+        },
+        {
+          "path": "glom/test/test_tutorial.py",
+          "added": 0,
+          "deleted": 1,
+          "kind": "test"
+        },
+        {
+          "path": "glom/tutorial.py",
+          "added": 3,
+          "deleted": 3,
+          "kind": "source"
+        },
+        {
+          "path": "requirements.txt",
+          "added": 69,
+          "deleted": 24,
+          "kind": "doc"
+        },
+        {
+          "path": "setup.py",
+          "added": 3,
+          "deleted": 0,
+          "kind": "config"
+        },
+        {
+          "path": "tox.ini",
+          "added": 11,
+          "deleted": 2,
+          "kind": "config"
+        }
+      ],
+      "id": "bc653da9afec59bbb9c57230ffa2a12374f0346c",
+      "repo": "mahmoud/glom",
+      "fixed_sha": "bc653da9afec59bbb9c57230ffa2a12374f0346c",
+      "status": "initial_filter_passed",
+      "validation": "not_run",
+      "message": "Add Python 3.12 (#285)\n\n* fix packaging tox job\n\n* add py312 to tox, setup.py, and github actions, plus refresh requirements\n\n* upgrade syntax to py37+ and autoconvert some f-strings. add tox syntax-upgrade task.",
+      "pr_url": "https://github.com/mahmoud/glom/pull/285",
+      "pr_evidence": "commit_subject",
+      "pr_verification": "not_run",
+      "issue_evidence": "unavailable",
+      "issue_linkage": "not_verified"
+    },
+    {
+      "sha": "24c21dcc44cc81abc193aa3bfa2f66304470d205",
+      "base_sha": "5cef40707d8b4765c621d7a09ad5f35f96bf7d1a",
+      "parents": [
+        "5cef40707d8b4765c621d7a09ad5f35f96bf7d1a"
+      ],
+      "subject": "Add --scalar flag to CLI (#280)",
+      "style": "squash",
+      "style_evidence": "single parent with `(#N)` subject suffix (squash adds it, rebase does not)",
+      "pr_number": 280,
+      "closes_issues": [],
+      "author_date": "2024-11-02T15:43:13-07:00",
+      "committer_date": "2024-11-02T15:43:13-07:00",
+      "added": 20,
+      "deleted": 5,
+      "loc_changed": 25,
+      "file_count": 2,
+      "source_loc": 17,
+      "test_loc": 8,
+      "source_file_count": 1,
+      "test_file_count": 1,
+      "has_test_change": true,
+      "by_kind": {
+        "source": {
+          "file_count": 1,
+          "added": 12,
+          "deleted": 5,
+          "loc_changed": 17,
+          "binary_file_count": 0
+        },
+        "test": {
+          "file_count": 1,
+          "added": 8,
+          "deleted": 0,
+          "loc_changed": 8,
+          "binary_file_count": 0
+        },
+        "doc": {
+          "file_count": 0,
+          "added": 0,
+          "deleted": 0,
+          "loc_changed": 0,
+          "binary_file_count": 0
+        },
+        "config": {
+          "file_count": 0,
+          "added": 0,
+          "deleted": 0,
+          "loc_changed": 0,
+          "binary_file_count": 0
+        }
+      },
+      "difficulty": "small",
+      "files": [
+        {
+          "path": "glom/cli.py",
+          "added": 12,
+          "deleted": 5,
+          "kind": "source"
+        },
+        {
+          "path": "glom/test/test_cli.py",
+          "added": 8,
+          "deleted": 0,
+          "kind": "test"
+        }
+      ],
+      "id": "24c21dcc44cc81abc193aa3bfa2f66304470d205",
+      "repo": "mahmoud/glom",
+      "fixed_sha": "24c21dcc44cc81abc193aa3bfa2f66304470d205",
+      "status": "initial_filter_passed",
+      "validation": "not_run",
+      "message": "Add --scalar flag to CLI (#280)\n\n* initial test and impl of --scalar\n\n* fix packaging tox job",
+      "pr_url": "https://github.com/mahmoud/glom/pull/280",
+      "pr_evidence": "commit_subject",
+      "pr_verification": "not_run",
+      "issue_evidence": "unavailable",
+      "issue_linkage": "not_verified"
+    },
+    {
+      "sha": "5cef40707d8b4765c621d7a09ad5f35f96bf7d1a",
+      "base_sha": "3cd57b6a6e04d522ddbab6869a040c408bff8b7a",
+      "parents": [
+        "3cd57b6a6e04d522ddbab6869a040c408bff8b7a"
+      ],
+      "subject": "fix packaging tox job",
+      "style": "unknown",
+      "style_evidence": "single parent, no `(#N)` suffix and no PR metadata to disambiguate",
+      "pr_number": null,
+      "closes_issues": [],
+      "author_date": "2024-11-02T15:20:21-07:00",
+      "committer_date": "2024-11-02T15:40:39-07:00",
+      "added": 1,
+      "deleted": 1,
+      "loc_changed": 2,
+      "file_count": 1,
+      "source_loc": 2,
+      "test_loc": 0,
+      "source_file_count": 1,
+      "test_file_count": 0,
+      "has_test_change": false,
+      "by_kind": {
+        "source": {
+          "file_count": 1,
+          "added": 1,
+          "deleted": 1,
+          "loc_changed": 2,
+          "binary_file_count": 0
+        },
+        "test": {
+          "file_count": 0,
+          "added": 0,
+          "deleted": 0,
+          "loc_changed": 0,
+          "binary_file_count": 0
+        },
+        "doc": {
+          "file_count": 0,
+          "added": 0,
+          "deleted": 0,
+          "loc_changed": 0,
+          "binary_file_count": 0
+        },
+        "config": {
+          "file_count": 0,
+          "added": 0,
+          "deleted": 0,
+          "loc_changed": 0,
+          "binary_file_count": 0
+        }
+      },
+      "difficulty": "trivial",
+      "files": [
+        {
+          "path": "MANIFEST.in",
+          "added": 1,
+          "deleted": 1,
+          "kind": "source"
+        }
+      ],
+      "id": "5cef40707d8b4765c621d7a09ad5f35f96bf7d1a",
+      "repo": "mahmoud/glom",
+      "fixed_sha": "5cef40707d8b4765c621d7a09ad5f35f96bf7d1a",
+      "status": "initial_filter_passed",
+      "validation": "not_run",
+      "message": "fix packaging tox job\n",
+      "pr_url": null,
+      "pr_evidence": "unavailable",
+      "pr_verification": "not_run",
+      "issue_evidence": "unavailable",
+      "issue_linkage": "not_verified"
+    },
+    {
+      "sha": "2e0c552078665bd705044e8abd23b212296f276e",
+      "base_sha": "f9a68b002248790ff0adb1c0678fb0b69565926f",
+      "parents": [
+        "f9a68b002248790ff0adb1c0678fb0b69565926f"
+      ],
+      "subject": "Upgrade requirements (#279)",
+      "style": "squash",
+      "style_evidence": "single parent with `(#N)` subject suffix (squash adds it, rebase does not)",
+      "pr_number": 279,
+      "closes_issues": [],
+      "author_date": "2023-12-17T17:37:43-08:00",
+      "committer_date": "2023-12-17T17:37:43-08:00",
+      "added": 41,
+      "deleted": 13,
+      "loc_changed": 54,
+      "file_count": 6,
+      "source_loc": 3,
+      "test_loc": 0,
+      "source_file_count": 1,
+      "test_file_count": 0,
+      "has_test_change": false,
+      "by_kind": {
+        "source": {
+          "file_count": 1,
+          "added": 3,
+          "deleted": 0,
+          "loc_changed": 3,
+          "binary_file_count": 0
+        },
+        "test": {
+          "file_count": 0,
+          "added": 0,
+          "deleted": 0,
+          "loc_changed": 0,
+          "binary_file_count": 0
+        },
+        "doc": {
+          "file_count": 2,
+          "added": 29,
+          "deleted": 12,
+          "loc_changed": 41,
+          "binary_file_count": 0
+        },
+        "config": {
+          "file_count": 3,
+          "added": 9,
+          "deleted": 1,
+          "loc_changed": 10,
+          "binary_file_count": 0
+        }
+      },
+      "difficulty": "trivial",
+      "files": [
+        {
+          "path": ".gitignore",
+          "added": 1,
+          "deleted": 0,
+          "kind": "config"
+        },
+        {
+          "path": "docs/requirements-rtd.txt",
+          "added": 0,
+          "deleted": 4,
+          "kind": "doc"
+        },
+        {
+          "path": "glom/cli.py",
+          "added": 3,
+          "deleted": 0,
+          "kind": "source"
+        },
+        {
+          "path": "requirements.in",
+          "added": 7,
+          "deleted": 0,
+          "kind": "config"
+        },
+        {
+          "path": "requirements.txt",
+          "added": 29,
+          "deleted": 8,
+          "kind": "doc"
+        },
+        {
+          "path": "setup.py",
+          "added": 1,
+          "deleted": 1,
+          "kind": "config"
+        }
+      ],
+      "id": "2e0c552078665bd705044e8abd23b212296f276e",
+      "repo": "mahmoud/glom",
+      "fixed_sha": "2e0c552078665bd705044e8abd23b212296f276e",
+      "status": "initial_filter_passed",
+      "validation": "not_run",
+      "message": "Upgrade requirements (#279)\n\n* upgrade requirements\n\n* quick remove some overlapping requirements from docs/rtd",
+      "pr_url": "https://github.com/mahmoud/glom/pull/279",
+      "pr_evidence": "commit_subject",
+      "pr_verification": "not_run",
+      "issue_evidence": "unavailable",
+      "issue_linkage": "not_verified"
+    },
+    {
+      "sha": "50ec6c742d9c3eaff26a089f2b61ee358b1d2c7e",
+      "base_sha": "5ceda1fa8e8704180407ab8e7de4fb3c0a8e4744",
+      "parents": [
+        "5ceda1fa8e8704180407ab8e7de4fb3c0a8e4744"
+      ],
+      "subject": "bump version for v23.5.1dev",
+      "style": "unknown",
+      "style_evidence": "single parent, no `(#N)` suffix and no PR metadata to disambiguate",
+      "pr_number": null,
+      "closes_issues": [],
+      "author_date": "2023-11-26T16:35:30-08:00",
+      "committer_date": "2023-11-26T16:35:30-08:00",
+      "added": 1,
+      "deleted": 1,
+      "loc_changed": 2,
+      "file_count": 1,
+      "source_loc": 2,
+      "test_loc": 0,
+      "source_file_count": 1,
+      "test_file_count": 0,
+      "has_test_change": false,
+      "by_kind": {
+        "source": {
+          "file_count": 1,
+          "added": 1,
+          "deleted": 1,
+          "loc_changed": 2,
+          "binary_file_count": 0
+        },
+        "test": {
+          "file_count": 0,
+          "added": 0,
+          "deleted": 0,
+          "loc_changed": 0,
+          "binary_file_count": 0
+        },
+        "doc": {
+          "file_count": 0,
+          "added": 0,
+          "deleted": 0,
+          "loc_changed": 0,
+          "binary_file_count": 0
+        },
+        "config": {
+          "file_count": 0,
+          "added": 0,
+          "deleted": 0,
+          "loc_changed": 0,
+          "binary_file_count": 0
+        }
+      },
+      "difficulty": "trivial",
+      "files": [
+        {
+          "path": "glom/_version.py",
+          "added": 1,
+          "deleted": 1,
+          "kind": "source"
+        }
+      ],
+      "id": "50ec6c742d9c3eaff26a089f2b61ee358b1d2c7e",
+      "repo": "mahmoud/glom",
+      "fixed_sha": "50ec6c742d9c3eaff26a089f2b61ee358b1d2c7e",
+      "status": "initial_filter_passed",
+      "validation": "not_run",
+      "message": "bump version for v23.5.1dev\n",
+      "pr_url": null,
+      "pr_evidence": "unavailable",
+      "pr_verification": "not_run",
+      "issue_evidence": "unavailable",
+      "issue_linkage": "not_verified"
+    },
+    {
+      "sha": "e13258ae91b04833e9366717f2879bee1d11d76e",
+      "base_sha": "9df6850e17aaf5ab05741b96cc05abb4d76de181",
+      "parents": [
+        "9df6850e17aaf5ab05741b96cc05abb4d76de181"
+      ],
+      "subject": "bump version for v23.5.0 release",
+      "style": "unknown",
+      "style_evidence": "single parent, no `(#N)` suffix and no PR metadata to disambiguate",
+      "pr_number": null,
+      "closes_issues": [],
+      "author_date": "2023-11-26T16:23:19-08:00",
+      "committer_date": "2023-11-26T16:23:19-08:00",
+      "added": 1,
+      "deleted": 1,
+      "loc_changed": 2,
+      "file_count": 1,
+      "source_loc": 2,
+      "test_loc": 0,
+      "source_file_count": 1,
+      "test_file_count": 0,
+      "has_test_change": false,
+      "by_kind": {
+        "source": {
+          "file_count": 1,
+          "added": 1,
+          "deleted": 1,
+          "loc_changed": 2,
+          "binary_file_count": 0
+        },
+        "test": {
+          "file_count": 0,
+          "added": 0,
+          "deleted": 0,
+          "loc_changed": 0,
+          "binary_file_count": 0
+        },
+        "doc": {
+          "file_count": 0,
+          "added": 0,
+          "deleted": 0,
+          "loc_changed": 0,
+          "binary_file_count": 0
+        },
+        "config": {
+          "file_count": 0,
+          "added": 0,
+          "deleted": 0,
+          "loc_changed": 0,
+          "binary_file_count": 0
+        }
+      },
+      "difficulty": "trivial",
+      "files": [
+        {
+          "path": "glom/_version.py",
+          "added": 1,
+          "deleted": 1,
+          "kind": "source"
+        }
+      ],
+      "id": "e13258ae91b04833e9366717f2879bee1d11d76e",
+      "repo": "mahmoud/glom",
+      "fixed_sha": "e13258ae91b04833e9366717f2879bee1d11d76e",
+      "status": "initial_filter_passed",
+      "validation": "not_run",
+      "message": "bump version for v23.5.0 release\n",
+      "pr_url": null,
+      "pr_evidence": "unavailable",
+      "pr_verification": "not_run",
+      "issue_evidence": "unavailable",
+      "issue_linkage": "not_verified"
+    },
+    {
+      "sha": "cbd7e8de4d22f5189d70b9e6e56e1feb2ea7d9e4",
+      "base_sha": "1336a7c6ba8071dccc3b334ffd5d0affee9e668e",
+      "parents": [
+        "1336a7c6ba8071dccc3b334ffd5d0affee9e668e"
+      ],
+      "subject": "mark a couple cli import failure lines as uncovered",
+      "style": "unknown",
+      "style_evidence": "single parent, no `(#N)` suffix and no PR metadata to disambiguate",
+      "pr_number": null,
+      "closes_issues": [],
+      "author_date": "2023-11-25T16:28:07-08:00",
+      "committer_date": "2023-11-25T16:28:07-08:00",
+      "added": 5,
+      "deleted": 5,
+      "loc_changed": 10,
+      "file_count": 1,
+      "source_loc": 10,
+      "test_loc": 0,
+      "source_file_count": 1,
+      "test_file_count": 0,
+      "has_test_change": false,
+      "by_kind": {
+        "source": {
+          "file_count": 1,
+          "added": 5,
+          "deleted": 5,
+          "loc_changed": 10,
+          "binary_file_count": 0
+        },
+        "test": {
+          "file_count": 0,
+          "added": 0,
+          "deleted": 0,
+          "loc_changed": 0,
+          "binary_file_count": 0
+        },
+        "doc": {
+          "file_count": 0,
+          "added": 0,
+          "deleted": 0,
+          "loc_changed": 0,
+          "binary_file_count": 0
+        },
+        "config": {
+          "file_count": 0,
+          "added": 0,
+          "deleted": 0,
+          "loc_changed": 0,
+          "binary_file_count": 0
+        }
+      },
+      "difficulty": "small",
+      "files": [
+        {
+          "path": "glom/cli.py",
+          "added": 5,
+          "deleted": 5,
+          "kind": "source"
+        }
+      ],
+      "id": "cbd7e8de4d22f5189d70b9e6e56e1feb2ea7d9e4",
+      "repo": "mahmoud/glom",
+      "fixed_sha": "cbd7e8de4d22f5189d70b9e6e56e1feb2ea7d9e4",
+      "status": "initial_filter_passed",
+      "validation": "not_run",
+      "message": "mark a couple cli import failure lines as uncovered\n",
+      "pr_url": null,
+      "pr_evidence": "unavailable",
+      "pr_verification": "not_run",
+      "issue_evidence": "unavailable",
+      "issue_linkage": "not_verified"
+    },
+    {
+      "sha": "1336a7c6ba8071dccc3b334ffd5d0affee9e668e",
+      "base_sha": "9082ab6f98b018856fc9d37aec4077d27662f025",
+      "parents": [
+        "9082ab6f98b018856fc9d37aec4077d27662f025"
+      ],
+      "subject": "a few cli docs and message updates",
+      "style": "unknown",
+      "style_evidence": "single parent, no `(#N)` suffix and no PR metadata to disambiguate",
+      "pr_number": null,
+      "closes_issues": [],
+      "author_date": "2023-11-25T16:24:42-08:00",
+      "committer_date": "2023-11-25T16:24:42-08:00",
+      "added": 4,
+      "deleted": 6,
+      "loc_changed": 10,
+      "file_count": 2,
+      "source_loc": 4,
+      "test_loc": 0,
+      "source_file_count": 1,
+      "test_file_count": 0,
+      "has_test_change": false,
+      "by_kind": {
+        "source": {
+          "file_count": 1,
+          "added": 2,
+          "deleted": 2,
+          "loc_changed": 4,
+          "binary_file_count": 0
+        },
+        "test": {
+          "file_count": 0,
+          "added": 0,
+          "deleted": 0,
+          "loc_changed": 0,
+          "binary_file_count": 0
+        },
+        "doc": {
+          "file_count": 1,
+          "added": 2,
+          "deleted": 4,
+          "loc_changed": 6,
+          "binary_file_count": 0
+        },
+        "config": {
+          "file_count": 0,
+          "added": 0,
+          "deleted": 0,
+          "loc_changed": 0,
+          "binary_file_count": 0
+        }
+      },
+      "difficulty": "trivial",
+      "files": [
+        {
+          "path": "docs/cli.rst",
+          "added": 2,
+          "deleted": 4,
+          "kind": "doc"
+        },
+        {
+          "path": "glom/cli.py",
+          "added": 2,
+          "deleted": 2,
+          "kind": "source"
+        }
+      ],
+      "id": "1336a7c6ba8071dccc3b334ffd5d0affee9e668e",
+      "repo": "mahmoud/glom",
+      "fixed_sha": "1336a7c6ba8071dccc3b334ffd5d0affee9e668e",
+      "status": "initial_filter_passed",
+      "validation": "not_run",
+      "message": "a few cli docs and message updates\n",
+      "pr_url": null,
+      "pr_evidence": "unavailable",
+      "pr_verification": "not_run",
+      "issue_evidence": "unavailable",
+      "issue_linkage": "not_verified"
+    },
+    {
+      "sha": "9082ab6f98b018856fc9d37aec4077d27662f025",
+      "base_sha": "573cb911aee0af7149ea8376a05f61b3435b23e7",
+      "parents": [
+        "573cb911aee0af7149ea8376a05f61b3435b23e7"
+      ],
+      "subject": "Add support for TOML files to the CLI. (#277)",
+      "style": "squash",
+      "style_evidence": "single parent with `(#N)` subject suffix (squash adds it, rebase does not)",
+      "pr_number": 277,
+      "closes_issues": [],
+      "author_date": "2023-11-25T18:55:50-05:00",
+      "committer_date": "2023-11-25T15:55:50-08:00",
+      "added": 43,
+      "deleted": 6,
+      "loc_changed": 49,
+      "file_count": 6,
+      "source_loc": 19,
+      "test_loc": 24,
+      "source_file_count": 1,
+      "test_file_count": 3,
+      "has_test_change": true,
+      "by_kind": {
+        "source": {
+          "file_count": 1,
+          "added": 15,
+          "deleted": 4,
+          "loc_changed": 19,
+          "binary_file_count": 0
+        },
+        "test": {
+          "file_count": 3,
+          "added": 24,
+          "deleted": 0,
+          "loc_changed": 24,
+          "binary_file_count": 0
+        },
+        "doc": {
+          "file_count": 1,
+          "added": 3,
+          "deleted": 2,
+          "loc_changed": 5,
+          "binary_file_count": 0
+        },
+        "config": {
+          "file_count": 1,
+          "added": 1,
+          "deleted": 0,
+          "loc_changed": 1,
+          "binary_file_count": 0
+        }
+      },
+      "difficulty": "small",
+      "files": [
+        {
+          "path": "docs/cli.rst",
+          "added": 3,
+          "deleted": 2,
+          "kind": "doc"
+        },
+        {
+          "path": "glom/cli.py",
+          "added": 15,
+          "deleted": 4,
+          "kind": "source"
+        },
+        {
+          "path": "glom/test/data/test_invalid.toml",
+          "added": 2,
+          "deleted": 0,
+          "kind": "test"
+        },
+        {
+          "path": "glom/test/data/test_valid.toml",
+          "added": 1,
+          "deleted": 0,
+          "kind": "test"
+        },
+        {
+          "path": "glom/test/test_cli.py",
+          "added": 21,
+          "deleted": 0,
+          "kind": "test"
+        },
+        {
+          "path": "setup.py",
+          "added": 1,
+          "deleted": 0,
+          "kind": "config"
+        }
+      ],
+      "id": "9082ab6f98b018856fc9d37aec4077d27662f025",
+      "repo": "mahmoud/glom",
+      "fixed_sha": "9082ab6f98b018856fc9d37aec4077d27662f025",
+      "status": "initial_filter_passed",
+      "validation": "not_run",
+      "message": "Add support for TOML files to the CLI. (#277)\n\n* Add support for TOML files to the CLI.\n\n---------\n\nCo-authored-by: Mahmoud Hashemi <mahmoud@hatnote.com>",
+      "pr_url": "https://github.com/mahmoud/glom/pull/277",
+      "pr_evidence": "commit_subject",
+      "pr_verification": "not_run",
+      "issue_evidence": "unavailable",
+      "issue_linkage": "not_verified"
+    },
+    {
+      "sha": "573cb911aee0af7149ea8376a05f61b3435b23e7",
+      "base_sha": "c8502f22e46bd58c97ad8c9abab1c8ae90ed892a",
+      "parents": [
+        "c8502f22e46bd58c97ad8c9abab1c8ae90ed892a"
+      ],
+      "subject": "Fix typo in `core.py` (#275)",
+      "style": "squash",
+      "style_evidence": "single parent with `(#N)` subject suffix (squash adds it, rebase does not)",
+      "pr_number": 275,
+      "closes_issues": [],
+      "author_date": "2023-11-10T18:50:51+01:00",
+      "committer_date": "2023-11-10T09:50:51-08:00",
+      "added": 1,
+      "deleted": 1,
+      "loc_changed": 2,
+      "file_count": 1,
+      "source_loc": 2,
+      "test_loc": 0,
+      "source_file_count": 1,
+      "test_file_count": 0,
+      "has_test_change": false,
+      "by_kind": {
+        "source": {
+          "file_count": 1,
+          "added": 1,
+          "deleted": 1,
+          "loc_changed": 2,
+          "binary_file_count": 0
+        },
+        "test": {
+          "file_count": 0,
+          "added": 0,
+          "deleted": 0,
+          "loc_changed": 0,
+          "binary_file_count": 0
+        },
+        "doc": {
+          "file_count": 0,
+          "added": 0,
+          "deleted": 0,
+          "loc_changed": 0,
+          "binary_file_count": 0
+        },
+        "config": {
+          "file_count": 0,
+          "added": 0,
+          "deleted": 0,
+          "loc_changed": 0,
+          "binary_file_count": 0
+        }
+      },
+      "difficulty": "trivial",
+      "files": [
+        {
+          "path": "glom/core.py",
+          "added": 1,
+          "deleted": 1,
+          "kind": "source"
+        }
+      ],
+      "id": "573cb911aee0af7149ea8376a05f61b3435b23e7",
+      "repo": "mahmoud/glom",
+      "fixed_sha": "573cb911aee0af7149ea8376a05f61b3435b23e7",
+      "status": "initial_filter_passed",
+      "validation": "not_run",
+      "message": "Fix typo in `core.py` (#275)\n\n",
+      "pr_url": "https://github.com/mahmoud/glom/pull/275",
+      "pr_evidence": "commit_subject",
+      "pr_verification": "not_run",
+      "issue_evidence": "unavailable",
+      "issue_linkage": "not_verified"
+    },
+    {
+      "sha": "74bcba58d587bdb6a1c5e7acbce0973dbb6e1fff",
+      "base_sha": "2a38e06ae09c172f159b3780f260763e01ad8e64",
+      "parents": [
+        "2a38e06ae09c172f159b3780f260763e01ad8e64"
+      ],
+      "subject": "bump version for v23.4.1 dev",
+      "style": "unknown",
+      "style_evidence": "single parent, no `(#N)` suffix and no PR metadata to disambiguate",
+      "pr_number": null,
+      "closes_issues": [],
+      "author_date": "2023-11-07T16:53:53-08:00",
+      "committer_date": "2023-11-07T16:53:53-08:00",
+      "added": 1,
+      "deleted": 1,
+      "loc_changed": 2,
+      "file_count": 1,
+      "source_loc": 2,
+      "test_loc": 0,
+      "source_file_count": 1,
+      "test_file_count": 0,
+      "has_test_change": false,
+      "by_kind": {
+        "source": {
+          "file_count": 1,
+          "added": 1,
+          "deleted": 1,
+          "loc_changed": 2,
+          "binary_file_count": 0
+        },
+        "test": {
+          "file_count": 0,
+          "added": 0,
+          "deleted": 0,
+          "loc_changed": 0,
+          "binary_file_count": 0
+        },
+        "doc": {
+          "file_count": 0,
+          "added": 0,
+          "deleted": 0,
+          "loc_changed": 0,
+          "binary_file_count": 0
+        },
+        "config": {
+          "file_count": 0,
+          "added": 0,
+          "deleted": 0,
+          "loc_changed": 0,
+          "binary_file_count": 0
+        }
+      },
+      "difficulty": "trivial",
+      "files": [
+        {
+          "path": "glom/_version.py",
+          "added": 1,
+          "deleted": 1,
+          "kind": "source"
+        }
+      ],
+      "id": "74bcba58d587bdb6a1c5e7acbce0973dbb6e1fff",
+      "repo": "mahmoud/glom",
+      "fixed_sha": "74bcba58d587bdb6a1c5e7acbce0973dbb6e1fff",
+      "status": "initial_filter_passed",
+      "validation": "not_run",
+      "message": "bump version for v23.4.1 dev\n",
+      "pr_url": null,
+      "pr_evidence": "unavailable",
+      "pr_verification": "not_run",
+      "issue_evidence": "unavailable",
+      "issue_linkage": "not_verified"
+    },
+    {
+      "sha": "6b6fd93db87d1994b9fe770e20b2c2b272cfd032",
+      "base_sha": "a971ff5b2e07b950be3e491e983d960cef585944",
+      "parents": [
+        "a971ff5b2e07b950be3e491e983d960cef585944"
+      ],
+      "subject": "bump version for v23.4.0 release",
+      "style": "unknown",
+      "style_evidence": "single parent, no `(#N)` suffix and no PR metadata to disambiguate",
+      "pr_number": null,
+      "closes_issues": [],
+      "author_date": "2023-11-07T16:42:52-08:00",
+      "committer_date": "2023-11-07T16:42:52-08:00",
+      "added": 1,
+      "deleted": 1,
+      "loc_changed": 2,
+      "file_count": 1,
+      "source_loc": 2,
+      "test_loc": 0,
+      "source_file_count": 1,
+      "test_file_count": 0,
+      "has_test_change": false,
+      "by_kind": {
+        "source": {
+          "file_count": 1,
+          "added": 1,
+          "deleted": 1,
+          "loc_changed": 2,
+          "binary_file_count": 0
+        },
+        "test": {
+          "file_count": 0,
+          "added": 0,
+          "deleted": 0,
+          "loc_changed": 0,
+          "binary_file_count": 0
+        },
+        "doc": {
+          "file_count": 0,
+          "added": 0,
+          "deleted": 0,
+          "loc_changed": 0,
+          "binary_file_count": 0
+        },
+        "config": {
+          "file_count": 0,
+          "added": 0,
+          "deleted": 0,
+          "loc_changed": 0,
+          "binary_file_count": 0
+        }
+      },
+      "difficulty": "trivial",
+      "files": [
+        {
+          "path": "glom/_version.py",
+          "added": 1,
+          "deleted": 1,
+          "kind": "source"
+        }
+      ],
+      "id": "6b6fd93db87d1994b9fe770e20b2c2b272cfd032",
+      "repo": "mahmoud/glom",
+      "fixed_sha": "6b6fd93db87d1994b9fe770e20b2c2b272cfd032",
+      "status": "initial_filter_passed",
+      "validation": "not_run",
+      "message": "bump version for v23.4.0 release\n",
+      "pr_url": null,
+      "pr_evidence": "unavailable",
+      "pr_verification": "not_run",
+      "issue_evidence": "unavailable",
+      "issue_linkage": "not_verified"
+    },
+    {
+      "sha": "a971ff5b2e07b950be3e491e983d960cef585944",
+      "base_sha": "d285e7399c4586486cfd1adb203163b5d5bb65e7",
+      "parents": [
+        "d285e7399c4586486cfd1adb203163b5d5bb65e7"
+      ],
+      "subject": "exclude rtd yaml from sdist",
+      "style": "unknown",
+      "style_evidence": "single parent, no `(#N)` suffix and no PR metadata to disambiguate",
+      "pr_number": null,
+      "closes_issues": [],
+      "author_date": "2023-11-07T16:41:31-08:00",
+      "committer_date": "2023-11-07T16:41:31-08:00",
+      "added": 1,
+      "deleted": 1,
+      "loc_changed": 2,
+      "file_count": 1,
+      "source_loc": 2,
+      "test_loc": 0,
+      "source_file_count": 1,
+      "test_file_count": 0,
+      "has_test_change": false,
+      "by_kind": {
+        "source": {
+          "file_count": 1,
+          "added": 1,
+          "deleted": 1,
+          "loc_changed": 2,
+          "binary_file_count": 0
+        },
+        "test": {
+          "file_count": 0,
+          "added": 0,
+          "deleted": 0,
+          "loc_changed": 0,
+          "binary_file_count": 0
+        },
+        "doc": {
+          "file_count": 0,
+          "added": 0,
+          "deleted": 0,
+          "loc_changed": 0,
+          "binary_file_count": 0
+        },
+        "config": {
+          "file_count": 0,
+          "added": 0,
+          "deleted": 0,
+          "loc_changed": 0,
+          "binary_file_count": 0
+        }
+      },
+      "difficulty": "trivial",
+      "files": [
+        {
+          "path": "MANIFEST.in",
+          "added": 1,
+          "deleted": 1,
+          "kind": "source"
+        }
+      ],
+      "id": "a971ff5b2e07b950be3e491e983d960cef585944",
+      "repo": "mahmoud/glom",
+      "fixed_sha": "a971ff5b2e07b950be3e491e983d960cef585944",
+      "status": "initial_filter_passed",
+      "validation": "not_run",
+      "message": "exclude rtd yaml from sdist\n",
+      "pr_url": null,
+      "pr_evidence": "unavailable",
+      "pr_verification": "not_run",
+      "issue_evidence": "unavailable",
+      "issue_linkage": "not_verified"
+    },
+    {
+      "sha": "d285e7399c4586486cfd1adb203163b5d5bb65e7",
+      "base_sha": "b56250387e7398b04457bb1e48edcce47f914998",
+      "parents": [
+        "b56250387e7398b04457bb1e48edcce47f914998"
+      ],
+      "subject": "Handle Python 3.11 (#271)",
+      "style": "squash",
+      "style_evidence": "single parent with `(#N)` subject suffix (squash adds it, rebase does not)",
+      "pr_number": 271,
+      "closes_issues": [],
+      "author_date": "2023-10-25T11:10:56-07:00",
+      "committer_date": "2023-10-25T11:10:56-07:00",
+      "added": 55,
+      "deleted": 5,
+      "loc_changed": 60,
+      "file_count": 6,
+      "source_loc": 33,
+      "test_loc": 16,
+      "source_file_count": 2,
+      "test_file_count": 1,
+      "has_test_change": true,
+      "by_kind": {
+        "source": {
+          "file_count": 2,
+          "added": 33,
+          "deleted": 0,
+          "loc_changed": 33,
+          "binary_file_count": 0
+        },
+        "test": {
+          "file_count": 1,
+          "added": 16,
+          "deleted": 0,
+          "loc_changed": 16,
+          "binary_file_count": 0
+        },
+        "doc": {
+          "file_count": 1,
+          "added": 1,
+          "deleted": 1,
+          "loc_changed": 2,
+          "binary_file_count": 0
+        },
+        "config": {
+          "file_count": 2,
+          "added": 5,
+          "deleted": 4,
+          "loc_changed": 9,
+          "binary_file_count": 0
+        }
+      },
+      "difficulty": "medium",
+      "files": [
+        {
+          "path": ".github/workflows/tests.yaml",
+          "added": 4,
+          "deleted": 3,
+          "kind": "config"
+        },
+        {
+          "path": ".readthedocs.yaml",
+          "added": 27,
+          "deleted": 0,
+          "kind": "source"
+        },
+        {
+          "path": "docs/requirements-rtd.txt",
+          "added": 1,
+          "deleted": 1,
+          "kind": "doc"
+        },
+        {
+          "path": "glom/core.py",
+          "added": 6,
+          "deleted": 0,
+          "kind": "source"
+        },
+        {
+          "path": "glom/test/test_error.py",
+          "added": 16,
+          "deleted": 0,
+          "kind": "test"
+        },
+        {
+          "path": "tox.ini",
+          "added": 1,
+          "deleted": 1,
+          "kind": "config"
+        }
+      ],
+      "id": "d285e7399c4586486cfd1adb203163b5d5bb65e7",
+      "repo": "mahmoud/glom",
+      "fixed_sha": "d285e7399c4586486cfd1adb203163b5d5bb65e7",
+      "status": "initial_filter_passed",
+      "validation": "not_run",
+      "message": "Handle Python 3.11 (#271)\n\nMostly fixing the tracebacks, but also adding tox/CI, and updating RTD given some new requirements.\n\n* skipping ~~^^ lines in python 3.11+ when they directly follow the data stack\n\n* add py311 to tox and GH actions\n\n* fixing interaction with reprlib in python 3.11\n\n* add regression test for ~~^ being edited out\n\n* new RTD config for new requirements\n\n* fix relative path for rtd\n\n---------\n\nCo-authored-by: Kurt Rose <kurt@kurtrose.com>",
+      "pr_url": "https://github.com/mahmoud/glom/pull/271",
+      "pr_evidence": "commit_subject",
+      "pr_verification": "not_run",
+      "issue_evidence": "unavailable",
+      "issue_linkage": "not_verified"
+    },
+    {
+      "sha": "34315014fe16b4c1e144a1acdf480699bf2303fb",
+      "base_sha": "c97b71a1e4751d227898f2b31e885e001d4818cb",
+      "parents": [
+        "c97b71a1e4751d227898f2b31e885e001d4818cb"
+      ],
+      "subject": "bump yaml and switch to safe load (#262)",
+      "style": "squash",
+      "style_evidence": "single parent with `(#N)` subject suffix (squash adds it, rebase does not)",
+      "pr_number": 262,
+      "closes_issues": [],
+      "author_date": "2023-08-22T16:33:07-07:00",
+      "committer_date": "2023-08-22T16:33:07-07:00",
+      "added": 2,
+      "deleted": 2,
+      "loc_changed": 4,
+      "file_count": 2,
+      "source_loc": 2,
+      "test_loc": 0,
+      "source_file_count": 1,
+      "test_file_count": 0,
+      "has_test_change": false,
+      "by_kind": {
+        "source": {
+          "file_count": 1,
+          "added": 1,
+          "deleted": 1,
+          "loc_changed": 2,
+          "binary_file_count": 0
+        },
+        "test": {
+          "file_count": 0,
+          "added": 0,
+          "deleted": 0,
+          "loc_changed": 0,
+          "binary_file_count": 0
+        },
+        "doc": {
+          "file_count": 1,
+          "added": 1,
+          "deleted": 1,
+          "loc_changed": 2,
+          "binary_file_count": 0
+        },
+        "config": {
+          "file_count": 0,
+          "added": 0,
+          "deleted": 0,
+          "loc_changed": 0,
+          "binary_file_count": 0
+        }
+      },
+      "difficulty": "trivial",
+      "files": [
+        {
+          "path": "glom/cli.py",
+          "added": 1,
+          "deleted": 1,
+          "kind": "source"
+        },
+        {
+          "path": "requirements.txt",
+          "added": 1,
+          "deleted": 1,
+          "kind": "doc"
+        }
+      ],
+      "id": "34315014fe16b4c1e144a1acdf480699bf2303fb",
+      "repo": "mahmoud/glom",
+      "fixed_sha": "34315014fe16b4c1e144a1acdf480699bf2303fb",
+      "status": "initial_filter_passed",
+      "validation": "not_run",
+      "message": "bump yaml and switch to safe load (#262)\n\n",
+      "pr_url": "https://github.com/mahmoud/glom/pull/262",
+      "pr_evidence": "commit_subject",
+      "pr_verification": "not_run",
+      "issue_evidence": "unavailable",
+      "issue_linkage": "not_verified"
+    }
+  ],
+  "rejected": [
+    {
+      "sha": "30b477ab65560914a38f331614947d0894701044",
+      "base_sha": "b7846d04b1cb64c9ac1bf139f7e33e8faefcac8b",
+      "subject": "ci: restrict workflow token permissions to read-only",
+      "pr_number": null,
+      "reason": "no_source_change",
+      "patch": {
+        "loc_changed": 3,
+        "source_loc": 0,
+        "test_loc": 0,
+        "file_count": 1,
+        "source_file_count": 0,
+        "test_file_count": 0,
+        "has_test_change": false,
+        "by_kind": {
+          "source": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "test": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "doc": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "config": {
+            "file_count": 1,
+            "added": 3,
+            "deleted": 0,
+            "loc_changed": 3,
+            "binary_file_count": 0
+          }
+        },
+        "files": [
+          {
+            "path": ".github/workflows/tests.yaml",
+            "added": 3,
+            "removed": 0,
+            "kind": "config"
+          }
+        ]
+      }
+    },
+    {
+      "sha": "b7846d04b1cb64c9ac1bf139f7e33e8faefcac8b",
+      "base_sha": "6fd41340f30519ddc64a546ad2703dfe53f12356",
+      "subject": "Merge pull request #305 from mahmoud/chore/upgrade-and-pin-actions",
+      "pr_number": 305,
+      "reason": "no_source_change",
+      "patch": {
+        "loc_changed": 6,
+        "source_loc": 0,
+        "test_loc": 0,
+        "file_count": 1,
+        "source_file_count": 0,
+        "test_file_count": 0,
+        "has_test_change": false,
+        "by_kind": {
+          "source": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "test": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "doc": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "config": {
+            "file_count": 1,
+            "added": 3,
+            "deleted": 3,
+            "loc_changed": 6,
+            "binary_file_count": 0
+          }
+        },
+        "files": [
+          {
+            "path": ".github/workflows/tests.yaml",
+            "added": 3,
+            "removed": 3,
+            "kind": "config"
+          }
+        ]
+      }
+    },
+    {
+      "sha": "811eadeec404bd99ee5a43ca551e8fb220b999f3",
+      "base_sha": "59563e89bdc5fb5f8509c1258402847e074097fa",
+      "subject": "docs and changelog for v25.12.0",
+      "pr_number": null,
+      "reason": "no_source_change",
+      "patch": {
+        "loc_changed": 10,
+        "source_loc": 0,
+        "test_loc": 0,
+        "file_count": 2,
+        "source_file_count": 0,
+        "test_file_count": 0,
+        "has_test_change": false,
+        "by_kind": {
+          "source": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "test": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "doc": {
+            "file_count": 2,
+            "added": 8,
+            "deleted": 2,
+            "loc_changed": 10,
+            "binary_file_count": 0
+          },
+          "config": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          }
+        },
+        "files": [
+          {
+            "path": "CHANGELOG.md",
+            "added": 6,
+            "removed": 0,
+            "kind": "doc"
+          },
+          {
+            "path": "docs/conf.py",
+            "added": 2,
+            "removed": 2,
+            "kind": "doc"
+          }
+        ]
+      }
+    },
+    {
+      "sha": "62bd34ae36ead1cb5875f296fa3a2443bd1542ec",
+      "base_sha": "c225e2abeb234be7119911b96b4378cc9d8d6478",
+      "subject": "bump docs to 25.0",
+      "pr_number": null,
+      "reason": "no_source_change",
+      "patch": {
+        "loc_changed": 6,
+        "source_loc": 0,
+        "test_loc": 0,
+        "file_count": 1,
+        "source_file_count": 0,
+        "test_file_count": 0,
+        "has_test_change": false,
+        "by_kind": {
+          "source": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "test": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "doc": {
+            "file_count": 1,
+            "added": 3,
+            "deleted": 3,
+            "loc_changed": 6,
+            "binary_file_count": 0
+          },
+          "config": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          }
+        },
+        "files": [
+          {
+            "path": "docs/conf.py",
+            "added": 3,
+            "removed": 3,
+            "kind": "doc"
+          }
+        ]
+      }
+    },
+    {
+      "sha": "c225e2abeb234be7119911b96b4378cc9d8d6478",
+      "base_sha": "b13e7042844be7260b679575c1e198d732d3bb66",
+      "subject": "fix github actions for 3.7",
+      "pr_number": null,
+      "reason": "no_source_change",
+      "patch": {
+        "loc_changed": 2,
+        "source_loc": 0,
+        "test_loc": 0,
+        "file_count": 1,
+        "source_file_count": 0,
+        "test_file_count": 0,
+        "has_test_change": false,
+        "by_kind": {
+          "source": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "test": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "doc": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "config": {
+            "file_count": 1,
+            "added": 1,
+            "deleted": 1,
+            "loc_changed": 2,
+            "binary_file_count": 0
+          }
+        },
+        "files": [
+          {
+            "path": ".github/workflows/tests.yaml",
+            "added": 1,
+            "removed": 1,
+            "kind": "config"
+          }
+        ]
+      }
+    },
+    {
+      "sha": "fb3c4e76f28816aebfd2538980e617742e98a7c2",
+      "base_sha": "920c13c4a8719237f687f98afe3f2b8d1c56640d",
+      "subject": "Create SECURITY.md",
+      "pr_number": null,
+      "reason": "no_source_change",
+      "patch": {
+        "loc_changed": 12,
+        "source_loc": 0,
+        "test_loc": 0,
+        "file_count": 1,
+        "source_file_count": 0,
+        "test_file_count": 0,
+        "has_test_change": false,
+        "by_kind": {
+          "source": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "test": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "doc": {
+            "file_count": 1,
+            "added": 12,
+            "deleted": 0,
+            "loc_changed": 12,
+            "binary_file_count": 0
+          },
+          "config": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          }
+        },
+        "files": [
+          {
+            "path": "SECURITY.md",
+            "added": 12,
+            "removed": 0,
+            "kind": "doc"
+          }
+        ]
+      }
+    },
+    {
+      "sha": "d296009a13b0d8e42a10b4688b18326fda486038",
+      "base_sha": "e5f19a0c3044926763688496f69cea594dae3c01",
+      "subject": "bump docs version for v24.11.0",
+      "pr_number": null,
+      "reason": "no_source_change",
+      "patch": {
+        "loc_changed": 4,
+        "source_loc": 0,
+        "test_loc": 0,
+        "file_count": 1,
+        "source_file_count": 0,
+        "test_file_count": 0,
+        "has_test_change": false,
+        "by_kind": {
+          "source": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "test": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "doc": {
+            "file_count": 1,
+            "added": 2,
+            "deleted": 2,
+            "loc_changed": 4,
+            "binary_file_count": 0
+          },
+          "config": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          }
+        },
+        "files": [
+          {
+            "path": "docs/conf.py",
+            "added": 2,
+            "removed": 2,
+            "kind": "doc"
+          }
+        ]
+      }
+    },
+    {
+      "sha": "e5f19a0c3044926763688496f69cea594dae3c01",
+      "base_sha": "b23c4bcd391cbef58da32a19c8336283394e2878",
+      "subject": "write changelog for 24.11.0",
+      "pr_number": null,
+      "reason": "no_source_change",
+      "patch": {
+        "loc_changed": 10,
+        "source_loc": 0,
+        "test_loc": 0,
+        "file_count": 1,
+        "source_file_count": 0,
+        "test_file_count": 0,
+        "has_test_change": false,
+        "by_kind": {
+          "source": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "test": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "doc": {
+            "file_count": 1,
+            "added": 10,
+            "deleted": 0,
+            "loc_changed": 10,
+            "binary_file_count": 0
+          },
+          "config": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          }
+        },
+        "files": [
+          {
+            "path": "CHANGELOG.md",
+            "added": 10,
+            "removed": 0,
+            "kind": "doc"
+          }
+        ]
+      }
+    },
+    {
+      "sha": "3cd57b6a6e04d522ddbab6869a040c408bff8b7a",
+      "base_sha": "2e0c552078665bd705044e8abd23b212296f276e",
+      "subject": "Format BSD license to be recognizable by GitHub license detector (#281)",
+      "pr_number": 281,
+      "reason": "no_source_change",
+      "patch": {
+        "loc_changed": 21,
+        "source_loc": 0,
+        "test_loc": 0,
+        "file_count": 1,
+        "source_file_count": 0,
+        "test_file_count": 0,
+        "has_test_change": false,
+        "by_kind": {
+          "source": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "test": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "doc": {
+            "file_count": 1,
+            "added": 11,
+            "deleted": 10,
+            "loc_changed": 21,
+            "binary_file_count": 0
+          },
+          "config": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          }
+        },
+        "files": [
+          {
+            "path": "LICENSE",
+            "added": 11,
+            "removed": 10,
+            "kind": "doc"
+          }
+        ]
+      }
+    },
+    {
+      "sha": "f9a68b002248790ff0adb1c0678fb0b69565926f",
+      "base_sha": "278a7f06d256b4ed906005cc29df319552402176",
+      "subject": "add FAQ entry about remap vs glom, fixes #237",
+      "pr_number": null,
+      "reason": "no_source_change",
+      "patch": {
+        "loc_changed": 25,
+        "source_loc": 0,
+        "test_loc": 0,
+        "file_count": 1,
+        "source_file_count": 0,
+        "test_file_count": 0,
+        "has_test_change": false,
+        "by_kind": {
+          "source": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "test": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "doc": {
+            "file_count": 1,
+            "added": 25,
+            "deleted": 0,
+            "loc_changed": 25,
+            "binary_file_count": 0
+          },
+          "config": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          }
+        },
+        "files": [
+          {
+            "path": "docs/faq.rst",
+            "added": 25,
+            "removed": 0,
+            "kind": "doc"
+          }
+        ]
+      }
+    },
+    {
+      "sha": "278a7f06d256b4ed906005cc29df319552402176",
+      "base_sha": "50ec6c742d9c3eaff26a089f2b61ee358b1d2c7e",
+      "subject": "changelog formatting fix",
+      "pr_number": null,
+      "reason": "no_source_change",
+      "patch": {
+        "loc_changed": 2,
+        "source_loc": 0,
+        "test_loc": 0,
+        "file_count": 1,
+        "source_file_count": 0,
+        "test_file_count": 0,
+        "has_test_change": false,
+        "by_kind": {
+          "source": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "test": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "doc": {
+            "file_count": 1,
+            "added": 1,
+            "deleted": 1,
+            "loc_changed": 2,
+            "binary_file_count": 0
+          },
+          "config": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          }
+        },
+        "files": [
+          {
+            "path": "CHANGELOG.md",
+            "added": 1,
+            "removed": 1,
+            "kind": "doc"
+          }
+        ]
+      }
+    },
+    {
+      "sha": "5ceda1fa8e8704180407ab8e7de4fb3c0a8e4744",
+      "base_sha": "e13258ae91b04833e9366717f2879bee1d11d76e",
+      "subject": "changelog and docs version for v23.5.0",
+      "pr_number": null,
+      "reason": "no_source_change",
+      "patch": {
+        "loc_changed": 274,
+        "source_loc": 0,
+        "test_loc": 0,
+        "file_count": 2,
+        "source_file_count": 0,
+        "test_file_count": 0,
+        "has_test_change": false,
+        "by_kind": {
+          "source": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "test": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "doc": {
+            "file_count": 2,
+            "added": 141,
+            "deleted": 133,
+            "loc_changed": 274,
+            "binary_file_count": 0
+          },
+          "config": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          }
+        },
+        "files": [
+          {
+            "path": "CHANGELOG.md",
+            "added": 139,
+            "removed": 131,
+            "kind": "doc"
+          },
+          {
+            "path": "docs/conf.py",
+            "added": 2,
+            "removed": 2,
+            "kind": "doc"
+          }
+        ]
+      }
+    },
+    {
+      "sha": "9df6850e17aaf5ab05741b96cc05abb4d76de181",
+      "base_sha": "acc3ad7126597f61bbbc65133228c539200d2cfc",
+      "subject": "add 311 classifier",
+      "pr_number": null,
+      "reason": "no_source_change",
+      "patch": {
+        "loc_changed": 1,
+        "source_loc": 0,
+        "test_loc": 0,
+        "file_count": 1,
+        "source_file_count": 0,
+        "test_file_count": 0,
+        "has_test_change": false,
+        "by_kind": {
+          "source": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "test": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "doc": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "config": {
+            "file_count": 1,
+            "added": 1,
+            "deleted": 0,
+            "loc_changed": 1,
+            "binary_file_count": 0
+          }
+        },
+        "files": [
+          {
+            "path": "setup.py",
+            "added": 1,
+            "removed": 0,
+            "kind": "config"
+          }
+        ]
+      }
+    },
+    {
+      "sha": "acc3ad7126597f61bbbc65133228c539200d2cfc",
+      "base_sha": "d90787169bc2c15084dabaf8ac385286c1939ce8",
+      "subject": "add glompad to docs index",
+      "pr_number": null,
+      "reason": "no_source_change",
+      "patch": {
+        "loc_changed": 6,
+        "source_loc": 0,
+        "test_loc": 0,
+        "file_count": 1,
+        "source_file_count": 0,
+        "test_file_count": 0,
+        "has_test_change": false,
+        "by_kind": {
+          "source": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "test": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "doc": {
+            "file_count": 1,
+            "added": 4,
+            "deleted": 2,
+            "loc_changed": 6,
+            "binary_file_count": 0
+          },
+          "config": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          }
+        },
+        "files": [
+          {
+            "path": "docs/index.rst",
+            "added": 4,
+            "removed": 2,
+            "kind": "doc"
+          }
+        ]
+      }
+    },
+    {
+      "sha": "d90787169bc2c15084dabaf8ac385286c1939ce8",
+      "base_sha": "dc6ab4af65afb1e2440f5a75f783baef47288963",
+      "subject": "One more spot for copypasta. (#278)",
+      "pr_number": 278,
+      "reason": "no_source_change",
+      "patch": {
+        "loc_changed": 9,
+        "source_loc": 0,
+        "test_loc": 0,
+        "file_count": 1,
+        "source_file_count": 0,
+        "test_file_count": 0,
+        "has_test_change": false,
+        "by_kind": {
+          "source": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "test": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "doc": {
+            "file_count": 1,
+            "added": 5,
+            "deleted": 4,
+            "loc_changed": 9,
+            "binary_file_count": 0
+          },
+          "config": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          }
+        },
+        "files": [
+          {
+            "path": "README.md",
+            "added": 5,
+            "removed": 4,
+            "kind": "doc"
+          }
+        ]
+      }
+    },
+    {
+      "sha": "dc6ab4af65afb1e2440f5a75f783baef47288963",
+      "base_sha": "cb1df5635005706b8fe85802420e6d813f00df34",
+      "subject": "fix link",
+      "pr_number": null,
+      "reason": "no_source_change",
+      "patch": {
+        "loc_changed": 6,
+        "source_loc": 0,
+        "test_loc": 0,
+        "file_count": 1,
+        "source_file_count": 0,
+        "test_file_count": 0,
+        "has_test_change": false,
+        "by_kind": {
+          "source": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "test": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "doc": {
+            "file_count": 1,
+            "added": 3,
+            "deleted": 3,
+            "loc_changed": 6,
+            "binary_file_count": 0
+          },
+          "config": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          }
+        },
+        "files": [
+          {
+            "path": "docs/snippets.rst",
+            "added": 3,
+            "removed": 3,
+            "kind": "doc"
+          }
+        ]
+      }
+    },
+    {
+      "sha": "cb1df5635005706b8fe85802420e6d813f00df34",
+      "base_sha": "cbd7e8de4d22f5189d70b9e6e56e1feb2ea7d9e4",
+      "subject": "accessing ancestry snippet",
+      "pr_number": null,
+      "reason": "no_source_change",
+      "patch": {
+        "loc_changed": 43,
+        "source_loc": 0,
+        "test_loc": 0,
+        "file_count": 1,
+        "source_file_count": 0,
+        "test_file_count": 0,
+        "has_test_change": false,
+        "by_kind": {
+          "source": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "test": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "doc": {
+            "file_count": 1,
+            "added": 41,
+            "deleted": 2,
+            "loc_changed": 43,
+            "binary_file_count": 0
+          },
+          "config": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          }
+        },
+        "files": [
+          {
+            "path": "docs/snippets.rst",
+            "added": 41,
+            "removed": 2,
+            "kind": "doc"
+          }
+        ]
+      }
+    },
+    {
+      "sha": "c8502f22e46bd58c97ad8c9abab1c8ae90ed892a",
+      "base_sha": "74bcba58d587bdb6a1c5e7acbce0973dbb6e1fff",
+      "subject": "Update codecov action to v3 and add token (#274)",
+      "pr_number": 274,
+      "reason": "no_source_change",
+      "patch": {
+        "loc_changed": 9,
+        "source_loc": 0,
+        "test_loc": 0,
+        "file_count": 1,
+        "source_file_count": 0,
+        "test_file_count": 0,
+        "has_test_change": false,
+        "by_kind": {
+          "source": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "test": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "doc": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "config": {
+            "file_count": 1,
+            "added": 5,
+            "deleted": 4,
+            "loc_changed": 9,
+            "binary_file_count": 0
+          }
+        },
+        "files": [
+          {
+            "path": ".github/workflows/tests.yaml",
+            "added": 5,
+            "removed": 4,
+            "kind": "config"
+          }
+        ]
+      }
+    },
+    {
+      "sha": "2a38e06ae09c172f159b3780f260763e01ad8e64",
+      "base_sha": "6b6fd93db87d1994b9fe770e20b2c2b272cfd032",
+      "subject": "bump docs version, add changelog",
+      "pr_number": null,
+      "reason": "no_source_change",
+      "patch": {
+        "loc_changed": 12,
+        "source_loc": 0,
+        "test_loc": 0,
+        "file_count": 2,
+        "source_file_count": 0,
+        "test_file_count": 0,
+        "has_test_change": false,
+        "by_kind": {
+          "source": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "test": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "doc": {
+            "file_count": 2,
+            "added": 10,
+            "deleted": 2,
+            "loc_changed": 12,
+            "binary_file_count": 0
+          },
+          "config": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          }
+        },
+        "files": [
+          {
+            "path": "CHANGELOG.md",
+            "added": 8,
+            "removed": 0,
+            "kind": "doc"
+          },
+          {
+            "path": "docs/conf.py",
+            "added": 2,
+            "removed": 2,
+            "kind": "doc"
+          }
+        ]
+      }
+    },
+    {
+      "sha": "b56250387e7398b04457bb1e48edcce47f914998",
+      "base_sha": "a853395532c994f7fd2c212b8e43eb0c77241711",
+      "subject": "make a couple tests actually test what they were meant to, fixes #270, fixes #269",
+      "pr_number": null,
+      "reason": "no_source_change",
+      "patch": {
+        "loc_changed": 4,
+        "source_loc": 0,
+        "test_loc": 4,
+        "file_count": 2,
+        "source_file_count": 0,
+        "test_file_count": 2,
+        "has_test_change": true,
+        "by_kind": {
+          "source": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "test": {
+            "file_count": 2,
+            "added": 2,
+            "deleted": 2,
+            "loc_changed": 4,
+            "binary_file_count": 0
+          },
+          "doc": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "config": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          }
+        },
+        "files": [
+          {
+            "path": "glom/test/test_cli.py",
+            "added": 1,
+            "removed": 1,
+            "kind": "test"
+          },
+          {
+            "path": "glom/test/test_mutation.py",
+            "added": 1,
+            "removed": 1,
+            "kind": "test"
+          }
+        ]
+      }
+    },
+    {
+      "sha": "a853395532c994f7fd2c212b8e43eb0c77241711",
+      "base_sha": "1f883f0db898d6b15fcc0f293225dcccc16b2a57",
+      "subject": "fix rtd default theme",
+      "pr_number": null,
+      "reason": "no_source_change",
+      "patch": {
+        "loc_changed": 2,
+        "source_loc": 0,
+        "test_loc": 0,
+        "file_count": 1,
+        "source_file_count": 0,
+        "test_file_count": 0,
+        "has_test_change": false,
+        "by_kind": {
+          "source": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "test": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "doc": {
+            "file_count": 1,
+            "added": 1,
+            "deleted": 1,
+            "loc_changed": 2,
+            "binary_file_count": 0
+          },
+          "config": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          }
+        },
+        "files": [
+          {
+            "path": "docs/conf.py",
+            "added": 1,
+            "removed": 1,
+            "kind": "doc"
+          }
+        ]
+      }
+    },
+    {
+      "sha": "1f883f0db898d6b15fcc0f293225dcccc16b2a57",
+      "base_sha": "34315014fe16b4c1e144a1acdf480699bf2303fb",
+      "subject": "imp -> importlib in setup.py (#263)",
+      "pr_number": 263,
+      "reason": "no_source_change",
+      "patch": {
+        "loc_changed": 12,
+        "source_loc": 0,
+        "test_loc": 0,
+        "file_count": 1,
+        "source_file_count": 0,
+        "test_file_count": 0,
+        "has_test_change": false,
+        "by_kind": {
+          "source": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "test": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "doc": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "config": {
+            "file_count": 1,
+            "added": 10,
+            "deleted": 2,
+            "loc_changed": 12,
+            "binary_file_count": 0
+          }
+        },
+        "files": [
+          {
+            "path": "setup.py",
+            "added": 10,
+            "removed": 2,
+            "kind": "config"
+          }
+        ]
+      }
+    }
+  ],
+  "rejection_reasons": {
+    "no_source_change": 22
+  },
+  "meaning": "Initial diff shortlist only; PR completeness, issue linkage, problem statements and runtime behavior are unverified."
+}

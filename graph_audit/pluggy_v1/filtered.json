@@ -1,0 +1,6366 @@
+{
+  "schema_version": "1.1",
+  "stage": "initial_filter",
+  "repo": "pytest-dev/pluggy",
+  "clone": "/Users/adityagk/Desktop/projects/pluggy",
+  "ref": "d23f110b240d67ee503eba0082f30cae73f3e1e3",
+  "built_at": "2026-09-29T18:51:56.351232+00:00",
+  "limits": {
+    "max_commits": 200,
+    "max_changes": 100,
+    "candidates": 50
+  },
+  "filters": {
+    "min_source_loc": 1,
+    "max_source_loc": null,
+    "max_source_files": 10,
+    "require_source_change": true,
+    "require_integration_point": false
+  },
+  "content_screening": "python_ast_v1",
+  "summary": {
+    "kept": 9,
+    "dropped": 91,
+    "needs_enrichment": 0,
+    "by_style": {
+      "merge_commit": 8,
+      "squash": 1
+    },
+    "mainline_points": 200,
+    "commits_visited": 100,
+    "commits_measured": 100,
+    "stop_reason": "change_limit",
+    "remaining_in_window": 100,
+    "walk_since": null,
+    "walk_until": null,
+    "selected": 9
+  },
+  "candidates": [
+    {
+      "sha": "09baae8733141971e3109a667b6c12dcce9afa29",
+      "base_sha": "54c95345d24edbe1b06646c931d6dcfcfa6683c2",
+      "parents": [
+        "54c95345d24edbe1b06646c931d6dcfcfa6683c2",
+        "faadc7192a7cee656ef0350a781f4d398537d579"
+      ],
+      "subject": "Merge pull request #714 from pytest-dev/pre-commit-ci-update-config",
+      "style": "merge_commit",
+      "style_evidence": "two parents",
+      "pr_number": 714,
+      "closes_issues": [],
+      "author_date": "2026-08-12T08:46:12+02:00",
+      "committer_date": "2026-08-12T08:46:12+02:00",
+      "added": 104,
+      "deleted": 97,
+      "loc_changed": 201,
+      "file_count": 17,
+      "source_loc": 106,
+      "test_loc": 61,
+      "source_file_count": 6,
+      "test_file_count": 6,
+      "has_test_change": true,
+      "source_analysis": [
+        {
+          "path": "downstream/run_downstream.py",
+          "kind": "executable_syntax_changed"
+        },
+        {
+          "path": "src/pluggy/__init__.py",
+          "kind": "executable_syntax_changed"
+        },
+        {
+          "path": "src/pluggy/_callers.py",
+          "kind": "comments_or_formatting_only"
+        },
+        {
+          "path": "src/pluggy/_hooks.py",
+          "kind": "executable_syntax_changed"
+        },
+        {
+          "path": "src/pluggy/_manager.py",
+          "kind": "executable_syntax_changed"
+        },
+        {
+          "path": "src/pluggy/_result.py",
+          "kind": "executable_syntax_changed"
+        }
+      ],
+      "by_kind": {
+        "source": {
+          "file_count": 6,
+          "added": 52,
+          "deleted": 54,
+          "loc_changed": 106,
+          "binary_file_count": 0
+        },
+        "test": {
+          "file_count": 6,
+          "added": 32,
+          "deleted": 29,
+          "loc_changed": 61,
+          "binary_file_count": 0
+        },
+        "doc": {
+          "file_count": 2,
+          "added": 3,
+          "deleted": 5,
+          "loc_changed": 8,
+          "binary_file_count": 0
+        },
+        "config": {
+          "file_count": 3,
+          "added": 17,
+          "deleted": 9,
+          "loc_changed": 26,
+          "binary_file_count": 0
+        }
+      },
+      "difficulty": "large",
+      "files": [
+        {
+          "path": ".pre-commit-config.yaml",
+          "added": 1,
+          "deleted": 3,
+          "kind": "config"
+        },
+        {
+          "path": "CLAUDE.md",
+          "added": 1,
+          "deleted": 1,
+          "kind": "doc"
+        },
+        {
+          "path": "docs/conf.py",
+          "added": 2,
+          "deleted": 4,
+          "kind": "doc"
+        },
+        {
+          "path": "downstream/run_downstream.py",
+          "added": 1,
+          "deleted": 2,
+          "kind": "source"
+        },
+        {
+          "path": "pyproject.toml",
+          "added": 16,
+          "deleted": 2,
+          "kind": "config"
+        },
+        {
+          "path": "src/pluggy/__init__.py",
+          "added": 9,
+          "deleted": 9,
+          "kind": "source"
+        },
+        {
+          "path": "src/pluggy/_callers.py",
+          "added": 1,
+          "deleted": 1,
+          "kind": "source"
+        },
+        {
+          "path": "src/pluggy/_hooks.py",
+          "added": 33,
+          "deleted": 34,
+          "kind": "source"
+        },
+        {
+          "path": "src/pluggy/_manager.py",
+          "added": 7,
+          "deleted": 7,
+          "kind": "source"
+        },
+        {
+          "path": "src/pluggy/_result.py",
+          "added": 1,
+          "deleted": 1,
+          "kind": "source"
+        },
+        {
+          "path": "testing/benchmark.py",
+          "added": 3,
+          "deleted": 1,
+          "kind": "test"
+        },
+        {
+          "path": "testing/test_details.py",
+          "added": 7,
+          "deleted": 7,
+          "kind": "test"
+        },
+        {
+          "path": "testing/test_multicall.py",
+          "added": 2,
+          "deleted": 2,
+          "kind": "test"
+        },
+        {
+          "path": "testing/test_pluginmanager.py",
+          "added": 10,
+          "deleted": 11,
+          "kind": "test"
+        },
+        {
+          "path": "testing/test_result.py",
+          "added": 1,
+          "deleted": 1,
+          "kind": "test"
+        },
+        {
+          "path": "testing/test_warnings.py",
+          "added": 9,
+          "deleted": 7,
+          "kind": "test"
+        },
+        {
+          "path": "tox.ini",
+          "added": 0,
+          "deleted": 4,
+          "kind": "config"
+        }
+      ],
+      "id": "09baae8733141971e3109a667b6c12dcce9afa29",
+      "repo": "pytest-dev/pluggy",
+      "fixed_sha": "09baae8733141971e3109a667b6c12dcce9afa29",
+      "status": "initial_filter_passed",
+      "validation": "not_run",
+      "message": "Merge pull request #714 from pytest-dev/pre-commit-ci-update-config\n\n[pre-commit.ci] pre-commit autoupdate",
+      "pr_url": "https://github.com/pytest-dev/pluggy/pull/714",
+      "pr_evidence": "commit_subject",
+      "pr_verification": "not_run",
+      "issue_evidence": "unavailable",
+      "issue_linkage": "not_verified"
+    },
+    {
+      "sha": "735edb0ab69fdd6c4940606e693c098e93583afb",
+      "base_sha": "cba86adc815a68a09f2765e70ed0cca305cc6ce2",
+      "parents": [
+        "cba86adc815a68a09f2765e70ed0cca305cc6ce2",
+        "53eeddf56e09fede281ac5f3cd6a6b5a83e1799a"
+      ],
+      "subject": "Merge pull request #617 from RonnyPfannschmidt/refactor/setuptools-compat-module",
+      "style": "merge_commit",
+      "style_evidence": "two parents",
+      "pr_number": 617,
+      "closes_issues": [],
+      "author_date": "2026-07-22T10:59:00+02:00",
+      "committer_date": "2026-07-22T10:59:00+02:00",
+      "added": 108,
+      "deleted": 28,
+      "loc_changed": 136,
+      "file_count": 5,
+      "source_loc": 92,
+      "test_loc": 42,
+      "source_file_count": 2,
+      "test_file_count": 2,
+      "has_test_change": true,
+      "source_analysis": [
+        {
+          "path": "src/pluggy/_compat.py",
+          "kind": "unknown",
+          "reason": "snapshot_file_unavailable_or_too_large"
+        },
+        {
+          "path": "src/pluggy/_manager.py",
+          "kind": "executable_syntax_changed"
+        }
+      ],
+      "by_kind": {
+        "source": {
+          "file_count": 2,
+          "added": 70,
+          "deleted": 22,
+          "loc_changed": 92,
+          "binary_file_count": 0
+        },
+        "test": {
+          "file_count": 2,
+          "added": 37,
+          "deleted": 5,
+          "loc_changed": 42,
+          "binary_file_count": 0
+        },
+        "doc": {
+          "file_count": 1,
+          "added": 1,
+          "deleted": 1,
+          "loc_changed": 2,
+          "binary_file_count": 0
+        },
+        "config": {
+          "file_count": 0,
+          "added": 0,
+          "deleted": 0,
+          "loc_changed": 0,
+          "binary_file_count": 0
+        }
+      },
+      "difficulty": "large",
+      "files": [
+        {
+          "path": "docs/conf.py",
+          "added": 1,
+          "deleted": 1,
+          "kind": "doc"
+        },
+        {
+          "path": "src/pluggy/_compat.py",
+          "added": 44,
+          "deleted": 0,
+          "kind": "source"
+        },
+        {
+          "path": "src/pluggy/_manager.py",
+          "added": 26,
+          "deleted": 22,
+          "kind": "source"
+        },
+        {
+          "path": "testing/test_details.py",
+          "added": 26,
+          "deleted": 1,
+          "kind": "test"
+        },
+        {
+          "path": "testing/test_pluginmanager.py",
+          "added": 11,
+          "deleted": 4,
+          "kind": "test"
+        }
+      ],
+      "id": "735edb0ab69fdd6c4940606e693c098e93583afb",
+      "repo": "pytest-dev/pluggy",
+      "fixed_sha": "735edb0ab69fdd6c4940606e693c098e93583afb",
+      "status": "initial_filter_passed",
+      "validation": "not_run",
+      "message": "Merge pull request #617 from RonnyPfannschmidt/refactor/setuptools-compat-module\n\nRefactor setuptools compatibility and add plugin distribution tests",
+      "pr_url": "https://github.com/pytest-dev/pluggy/pull/617",
+      "pr_evidence": "commit_subject",
+      "pr_verification": "not_run",
+      "issue_evidence": "unavailable",
+      "issue_linkage": "not_verified"
+    },
+    {
+      "sha": "5d7bd2cc083571466f44f9683136b7d8f62b88bf",
+      "base_sha": "59e66fdb231bf47ce5e0b8ed75b788820b135c34",
+      "parents": [
+        "59e66fdb231bf47ce5e0b8ed75b788820b135c34",
+        "0258484dc180a0c28705de83783b269f4fed4873"
+      ],
+      "subject": "Merge pull request #632 from RonnyPfannschmidt/varnames-no-resolve-types",
+      "style": "merge_commit",
+      "style_evidence": "two parents",
+      "pr_number": 632,
+      "closes_issues": [],
+      "author_date": "2026-05-27T10:00:07+02:00",
+      "committer_date": "2026-05-27T10:00:07+02:00",
+      "added": 368,
+      "deleted": 42,
+      "loc_changed": 410,
+      "file_count": 7,
+      "source_loc": 112,
+      "test_loc": 296,
+      "source_file_count": 1,
+      "test_file_count": 4,
+      "has_test_change": true,
+      "source_analysis": [
+        {
+          "path": "src/pluggy/_hooks.py",
+          "kind": "executable_syntax_changed"
+        }
+      ],
+      "by_kind": {
+        "source": {
+          "file_count": 1,
+          "added": 73,
+          "deleted": 39,
+          "loc_changed": 112,
+          "binary_file_count": 0
+        },
+        "test": {
+          "file_count": 4,
+          "added": 293,
+          "deleted": 3,
+          "loc_changed": 296,
+          "binary_file_count": 0
+        },
+        "doc": {
+          "file_count": 2,
+          "added": 2,
+          "deleted": 0,
+          "loc_changed": 2,
+          "binary_file_count": 0
+        },
+        "config": {
+          "file_count": 0,
+          "added": 0,
+          "deleted": 0,
+          "loc_changed": 0,
+          "binary_file_count": 0
+        }
+      },
+      "difficulty": "large",
+      "files": [
+        {
+          "path": "changelog/629.bugfix.rst",
+          "added": 1,
+          "deleted": 0,
+          "kind": "doc"
+        },
+        {
+          "path": "changelog/632.removal.rst",
+          "added": 1,
+          "deleted": 0,
+          "kind": "doc"
+        },
+        {
+          "path": "src/pluggy/_hooks.py",
+          "added": 73,
+          "deleted": 39,
+          "kind": "source"
+        },
+        {
+          "path": "testing/benchmark.py",
+          "added": 89,
+          "deleted": 0,
+          "kind": "test"
+        },
+        {
+          "path": "testing/test_helpers.py",
+          "added": 158,
+          "deleted": 0,
+          "kind": "test"
+        },
+        {
+          "path": "testing/test_hookcaller.py",
+          "added": 3,
+          "deleted": 3,
+          "kind": "test"
+        },
+        {
+          "path": "testing/test_warnings.py",
+          "added": 43,
+          "deleted": 0,
+          "kind": "test"
+        }
+      ],
+      "id": "5d7bd2cc083571466f44f9683136b7d8f62b88bf",
+      "repo": "pytest-dev/pluggy",
+      "fixed_sha": "5d7bd2cc083571466f44f9683136b7d8f62b88bf",
+      "status": "initial_filter_passed",
+      "validation": "not_run",
+      "message": "Merge pull request #632 from RonnyPfannschmidt/varnames-no-resolve-types\n\n[NO-SQUASH-MERGE] fix varnames on py3.14 deferred annotations",
+      "pr_url": "https://github.com/pytest-dev/pluggy/pull/632",
+      "pr_evidence": "commit_subject",
+      "pr_verification": "not_run",
+      "issue_evidence": "unavailable",
+      "issue_linkage": "not_verified"
+    },
+    {
+      "sha": "20d8143f127a4d7526dbbea441857b4b80ec8bdd",
+      "base_sha": "6e1d0f13a259776bbf137f90bd7ab8b4474f68e7",
+      "parents": [
+        "6e1d0f13a259776bbf137f90bd7ab8b4474f68e7"
+      ],
+      "subject": "Fix _remove_plugin to remove all hookimpls and get_hookcallers to deduplicate (#646)",
+      "style": "squash",
+      "style_evidence": "single parent with `(#N)` subject suffix (squash adds it, rebase does not)",
+      "pr_number": 646,
+      "closes_issues": [
+        431
+      ],
+      "author_date": "2026-02-25T01:33:37-08:00",
+      "committer_date": "2026-02-25T10:33:37+01:00",
+      "added": 81,
+      "deleted": 8,
+      "loc_changed": 89,
+      "file_count": 4,
+      "source_loc": 15,
+      "test_loc": 73,
+      "source_file_count": 2,
+      "test_file_count": 1,
+      "has_test_change": true,
+      "source_analysis": [
+        {
+          "path": "src/pluggy/_hooks.py",
+          "kind": "executable_syntax_changed"
+        },
+        {
+          "path": "src/pluggy/_manager.py",
+          "kind": "executable_syntax_changed"
+        }
+      ],
+      "by_kind": {
+        "source": {
+          "file_count": 2,
+          "added": 7,
+          "deleted": 8,
+          "loc_changed": 15,
+          "binary_file_count": 0
+        },
+        "test": {
+          "file_count": 1,
+          "added": 73,
+          "deleted": 0,
+          "loc_changed": 73,
+          "binary_file_count": 0
+        },
+        "doc": {
+          "file_count": 1,
+          "added": 1,
+          "deleted": 0,
+          "loc_changed": 1,
+          "binary_file_count": 0
+        },
+        "config": {
+          "file_count": 0,
+          "added": 0,
+          "deleted": 0,
+          "loc_changed": 0,
+          "binary_file_count": 0
+        }
+      },
+      "difficulty": "small",
+      "files": [
+        {
+          "path": "changelog/431.bugfix.rst",
+          "added": 1,
+          "deleted": 0,
+          "kind": "doc"
+        },
+        {
+          "path": "src/pluggy/_hooks.py",
+          "added": 5,
+          "deleted": 5,
+          "kind": "source"
+        },
+        {
+          "path": "src/pluggy/_manager.py",
+          "added": 2,
+          "deleted": 3,
+          "kind": "source"
+        },
+        {
+          "path": "testing/test_pluginmanager.py",
+          "added": 73,
+          "deleted": 0,
+          "kind": "test"
+        }
+      ],
+      "id": "20d8143f127a4d7526dbbea441857b4b80ec8bdd",
+      "repo": "pytest-dev/pluggy",
+      "fixed_sha": "20d8143f127a4d7526dbbea441857b4b80ec8bdd",
+      "status": "initial_filter_passed",
+      "validation": "not_run",
+      "message": "Fix _remove_plugin to remove all hookimpls and get_hookcallers to deduplicate (#646)\n\nWhen a plugin registers multiple hook implementations on the same hook\n(e.g. via specname), `_remove_plugin` only removed the first matching\nhookimpl. This worked because `get_hookcallers` returned duplicate\nHookCaller entries, causing `_remove_plugin` to be called multiple\ntimes. This was fragile and made `get_hookcallers` return unexpected\nduplicates to callers of the public API.\n\nFix `_remove_plugin` to remove all hookimpls for a plugin in a single\ncall, and fix `get_hookcallers` to return each HookCaller at most once.\n\nCloses #431\n\nCo-authored-by: Claude Opus 4.6 <noreply@anthropic.com>",
+      "pr_url": "https://github.com/pytest-dev/pluggy/pull/646",
+      "pr_evidence": "commit_subject",
+      "pr_verification": "not_run",
+      "issue_evidence": "keyword_claim",
+      "issue_linkage": "not_verified"
+    },
+    {
+      "sha": "108f2250fae741ad9e4b22c4770e02b7d0aa24ef",
+      "base_sha": "fd68617c03586508b1b9d1fa4b7027a74c333264",
+      "parents": [
+        "fd68617c03586508b1b9d1fa4b7027a74c333264",
+        "fcee3970d10a2a443d6f9d15c611f88686abbff4"
+      ],
+      "subject": "Merge pull request #639 from Priya-Yanamandra/test/downstream-python-lsp",
+      "style": "merge_commit",
+      "style_evidence": "two parents",
+      "pr_number": 639,
+      "closes_issues": [],
+      "author_date": "2026-02-09T11:37:31+01:00",
+      "committer_date": "2026-02-09T11:37:31+01:00",
+      "added": 31,
+      "deleted": 0,
+      "loc_changed": 31,
+      "file_count": 1,
+      "source_loc": 31,
+      "test_loc": 0,
+      "source_file_count": 1,
+      "test_file_count": 0,
+      "has_test_change": false,
+      "source_analysis": [
+        {
+          "path": "downstream/python-lsp-server.sh",
+          "kind": "unknown",
+          "reason": "unsupported_source_type"
+        }
+      ],
+      "by_kind": {
+        "source": {
+          "file_count": 1,
+          "added": 31,
+          "deleted": 0,
+          "loc_changed": 31,
+          "binary_file_count": 0
+        },
+        "test": {
+          "file_count": 0,
+          "added": 0,
+          "deleted": 0,
+          "loc_changed": 0,
+          "binary_file_count": 0
+        },
+        "doc": {
+          "file_count": 0,
+          "added": 0,
+          "deleted": 0,
+          "loc_changed": 0,
+          "binary_file_count": 0
+        },
+        "config": {
+          "file_count": 0,
+          "added": 0,
+          "deleted": 0,
+          "loc_changed": 0,
+          "binary_file_count": 0
+        }
+      },
+      "difficulty": "medium",
+      "files": [
+        {
+          "path": "downstream/python-lsp-server.sh",
+          "added": 31,
+          "deleted": 0,
+          "kind": "source"
+        }
+      ],
+      "id": "108f2250fae741ad9e4b22c4770e02b7d0aa24ef",
+      "repo": "pytest-dev/pluggy",
+      "fixed_sha": "108f2250fae741ad9e4b22c4770e02b7d0aa24ef",
+      "status": "initial_filter_passed",
+      "validation": "not_run",
+      "message": "Merge pull request #639 from Priya-Yanamandra/test/downstream-python-lsp\n\nAdd python-lsp-server to downstream tests",
+      "pr_url": "https://github.com/pytest-dev/pluggy/pull/639",
+      "pr_evidence": "commit_subject",
+      "pr_verification": "not_run",
+      "issue_evidence": "unavailable",
+      "issue_linkage": "not_verified"
+    },
+    {
+      "sha": "584be1e372bab0f9db5a199652fc0c8a569db017",
+      "base_sha": "fc40456932ec7fb258b0c48ef3789b7cd7747647",
+      "parents": [
+        "fc40456932ec7fb258b0c48ef3789b7cd7747647",
+        "12880913bf3114f84a5af63b3f6a5ac5c5a6eb7b"
+      ],
+      "subject": "Merge pull request #640 from pytest-dev/cleanups",
+      "style": "merge_commit",
+      "style_evidence": "two parents",
+      "pr_number": 640,
+      "closes_issues": [],
+      "author_date": "2026-01-12T14:10:12+02:00",
+      "committer_date": "2026-01-12T14:10:12+02:00",
+      "added": 39,
+      "deleted": 37,
+      "loc_changed": 76,
+      "file_count": 1,
+      "source_loc": 76,
+      "test_loc": 0,
+      "source_file_count": 1,
+      "test_file_count": 0,
+      "has_test_change": false,
+      "source_analysis": [
+        {
+          "path": "src/pluggy/_callers.py",
+          "kind": "executable_syntax_changed"
+        }
+      ],
+      "by_kind": {
+        "source": {
+          "file_count": 1,
+          "added": 39,
+          "deleted": 37,
+          "loc_changed": 76,
+          "binary_file_count": 0
+        },
+        "test": {
+          "file_count": 0,
+          "added": 0,
+          "deleted": 0,
+          "loc_changed": 0,
+          "binary_file_count": 0
+        },
+        "doc": {
+          "file_count": 0,
+          "added": 0,
+          "deleted": 0,
+          "loc_changed": 0,
+          "binary_file_count": 0
+        },
+        "config": {
+          "file_count": 0,
+          "added": 0,
+          "deleted": 0,
+          "loc_changed": 0,
+          "binary_file_count": 0
+        }
+      },
+      "difficulty": "medium",
+      "files": [
+        {
+          "path": "src/pluggy/_callers.py",
+          "added": 39,
+          "deleted": 37,
+          "kind": "source"
+        }
+      ],
+      "id": "584be1e372bab0f9db5a199652fc0c8a569db017",
+      "repo": "pytest-dev/pluggy",
+      "fixed_sha": "584be1e372bab0f9db5a199652fc0c8a569db017",
+      "status": "initial_filter_passed",
+      "validation": "not_run",
+      "message": "Merge pull request #640 from pytest-dev/cleanups\n\nA few small cleanups",
+      "pr_url": "https://github.com/pytest-dev/pluggy/pull/640",
+      "pr_evidence": "commit_subject",
+      "pr_verification": "not_run",
+      "issue_evidence": "unavailable",
+      "issue_linkage": "not_verified"
+    },
+    {
+      "sha": "dbe21314fb947abb42da44953ae8d701a7ff4482",
+      "base_sha": "0c501acaca42f444f79d8a30466c12ee17b7c908",
+      "parents": [
+        "0c501acaca42f444f79d8a30466c12ee17b7c908",
+        "009bdc311ef27a2e3a7e7c4c379aa0136b73a687"
+      ],
+      "subject": "Merge pull request #616 from RonnyPfannschmidt/refactor/require-python310",
+      "style": "merge_commit",
+      "style_evidence": "two parents",
+      "pr_number": 616,
+      "closes_issues": [],
+      "author_date": "2025-11-28T14:45:19+01:00",
+      "committer_date": "2025-11-28T14:45:19+01:00",
+      "added": 49,
+      "deleted": 163,
+      "loc_changed": 212,
+      "file_count": 13,
+      "source_loc": 58,
+      "test_loc": 9,
+      "source_file_count": 5,
+      "test_file_count": 3,
+      "has_test_change": true,
+      "source_analysis": [
+        {
+          "path": "src/pluggy/_callers.py",
+          "kind": "executable_syntax_changed"
+        },
+        {
+          "path": "src/pluggy/_hooks.py",
+          "kind": "executable_syntax_changed"
+        },
+        {
+          "path": "src/pluggy/_manager.py",
+          "kind": "executable_syntax_changed"
+        },
+        {
+          "path": "src/pluggy/_result.py",
+          "kind": "executable_syntax_changed"
+        },
+        {
+          "path": "src/pluggy/_tracing.py",
+          "kind": "executable_syntax_changed"
+        }
+      ],
+      "by_kind": {
+        "source": {
+          "file_count": 5,
+          "added": 31,
+          "deleted": 27,
+          "loc_changed": 58,
+          "binary_file_count": 0
+        },
+        "test": {
+          "file_count": 3,
+          "added": 4,
+          "deleted": 5,
+          "loc_changed": 9,
+          "binary_file_count": 0
+        },
+        "doc": {
+          "file_count": 0,
+          "added": 0,
+          "deleted": 0,
+          "loc_changed": 0,
+          "binary_file_count": 0
+        },
+        "config": {
+          "file_count": 5,
+          "added": 14,
+          "deleted": 131,
+          "loc_changed": 145,
+          "binary_file_count": 0
+        }
+      },
+      "difficulty": "medium",
+      "files": [
+        {
+          "path": ".github/workflows/main.yml",
+          "added": 8,
+          "deleted": 13,
+          "kind": "config"
+        },
+        {
+          "path": ".pre-commit-config.yaml",
+          "added": 1,
+          "deleted": 1,
+          "kind": "config"
+        },
+        {
+          "path": "pyproject.toml",
+          "added": 1,
+          "deleted": 2,
+          "kind": "config"
+        },
+        {
+          "path": "src/pluggy/_callers.py",
+          "added": 8,
+          "deleted": 5,
+          "kind": "source"
+        },
+        {
+          "path": "src/pluggy/_hooks.py",
+          "added": 11,
+          "deleted": 9,
+          "kind": "source"
+        },
+        {
+          "path": "src/pluggy/_manager.py",
+          "added": 6,
+          "deleted": 3,
+          "kind": "source"
+        },
+        {
+          "path": "src/pluggy/_result.py",
+          "added": 3,
+          "deleted": 3,
+          "kind": "source"
+        },
+        {
+          "path": "src/pluggy/_tracing.py",
+          "added": 3,
+          "deleted": 7,
+          "kind": "source"
+        },
+        {
+          "path": "testing/test_helpers.py",
+          "added": 1,
+          "deleted": 1,
+          "kind": "test"
+        },
+        {
+          "path": "testing/test_hookcaller.py",
+          "added": 1,
+          "deleted": 1,
+          "kind": "test"
+        },
+        {
+          "path": "testing/test_multicall.py",
+          "added": 2,
+          "deleted": 3,
+          "kind": "test"
+        },
+        {
+          "path": "tox.ini",
+          "added": 2,
+          "deleted": 2,
+          "kind": "config"
+        },
+        {
+          "path": "uv.lock",
+          "added": 2,
+          "deleted": 113,
+          "kind": "config"
+        }
+      ],
+      "id": "dbe21314fb947abb42da44953ae8d701a7ff4482",
+      "repo": "pytest-dev/pluggy",
+      "fixed_sha": "dbe21314fb947abb42da44953ae8d701a7ff4482",
+      "status": "initial_filter_passed",
+      "validation": "not_run",
+      "message": "Merge pull request #616 from RonnyPfannschmidt/refactor/require-python310\n\nRequire Python 3.10+ and modernize type annotations",
+      "pr_url": "https://github.com/pytest-dev/pluggy/pull/616",
+      "pr_evidence": "commit_subject",
+      "pr_verification": "not_run",
+      "issue_evidence": "unavailable",
+      "issue_linkage": "not_verified"
+    },
+    {
+      "sha": "0c501acaca42f444f79d8a30466c12ee17b7c908",
+      "base_sha": "ddb06db52979bbf310cd51eff2cf3711f4523a1c",
+      "parents": [
+        "ddb06db52979bbf310cd51eff2cf3711f4523a1c",
+        "8f1f6af56af5d04573b0973d579b0314eb7d6f0b"
+      ],
+      "subject": "Merge pull request #615 from RonnyPfannschmidt/docs/add-claude-guidance",
+      "style": "merge_commit",
+      "style_evidence": "two parents",
+      "pr_number": 615,
+      "closes_issues": [],
+      "author_date": "2025-11-28T14:11:24+01:00",
+      "committer_date": "2025-11-28T14:11:24+01:00",
+      "added": 65,
+      "deleted": 0,
+      "loc_changed": 65,
+      "file_count": 3,
+      "source_loc": 11,
+      "test_loc": 0,
+      "source_file_count": 1,
+      "test_file_count": 0,
+      "has_test_change": false,
+      "source_analysis": [
+        {
+          "path": ".claude/settings.json",
+          "kind": "unknown",
+          "reason": "unsupported_source_type"
+        }
+      ],
+      "by_kind": {
+        "source": {
+          "file_count": 1,
+          "added": 11,
+          "deleted": 0,
+          "loc_changed": 11,
+          "binary_file_count": 0
+        },
+        "test": {
+          "file_count": 0,
+          "added": 0,
+          "deleted": 0,
+          "loc_changed": 0,
+          "binary_file_count": 0
+        },
+        "doc": {
+          "file_count": 2,
+          "added": 54,
+          "deleted": 0,
+          "loc_changed": 54,
+          "binary_file_count": 0
+        },
+        "config": {
+          "file_count": 0,
+          "added": 0,
+          "deleted": 0,
+          "loc_changed": 0,
+          "binary_file_count": 0
+        }
+      },
+      "difficulty": "small",
+      "files": [
+        {
+          "path": ".claude/settings.json",
+          "added": 11,
+          "deleted": 0,
+          "kind": "source"
+        },
+        {
+          "path": "AGENTS.md",
+          "added": 3,
+          "deleted": 0,
+          "kind": "doc"
+        },
+        {
+          "path": "CLAUDE.md",
+          "added": 51,
+          "deleted": 0,
+          "kind": "doc"
+        }
+      ],
+      "id": "0c501acaca42f444f79d8a30466c12ee17b7c908",
+      "repo": "pytest-dev/pluggy",
+      "fixed_sha": "0c501acaca42f444f79d8a30466c12ee17b7c908",
+      "status": "initial_filter_passed",
+      "validation": "not_run",
+      "message": "Merge pull request #615 from RonnyPfannschmidt/docs/add-claude-guidance\n\nAdd CLAUDE.md with development guidance",
+      "pr_url": "https://github.com/pytest-dev/pluggy/pull/615",
+      "pr_evidence": "commit_subject",
+      "pr_verification": "not_run",
+      "issue_evidence": "unavailable",
+      "issue_linkage": "not_verified"
+    },
+    {
+      "sha": "1672de415f164aca2b400b06245224718a0c46b1",
+      "base_sha": "1f4844401b0062428aec9a9d0a49d3ca4490e218",
+      "parents": [
+        "1f4844401b0062428aec9a9d0a49d3ca4490e218",
+        "cb69bac7a523825a04f486e1097bca4d54b14e74"
+      ],
+      "subject": "Merge pull request #590 from RonnyPfannschmidt/version-lazy",
+      "style": "merge_commit",
+      "style_evidence": "two parents",
+      "pr_number": 590,
+      "closes_issues": [],
+      "author_date": "2025-06-25T22:10:29+02:00",
+      "committer_date": "2025-06-25T22:10:29+02:00",
+      "added": 10,
+      "deleted": 2,
+      "loc_changed": 12,
+      "file_count": 3,
+      "source_loc": 10,
+      "test_loc": 0,
+      "source_file_count": 1,
+      "test_file_count": 0,
+      "has_test_change": false,
+      "source_analysis": [
+        {
+          "path": "src/pluggy/__init__.py",
+          "kind": "executable_syntax_changed"
+        }
+      ],
+      "by_kind": {
+        "source": {
+          "file_count": 1,
+          "added": 9,
+          "deleted": 1,
+          "loc_changed": 10,
+          "binary_file_count": 0
+        },
+        "test": {
+          "file_count": 0,
+          "added": 0,
+          "deleted": 0,
+          "loc_changed": 0,
+          "binary_file_count": 0
+        },
+        "doc": {
+          "file_count": 1,
+          "added": 1,
+          "deleted": 0,
+          "loc_changed": 1,
+          "binary_file_count": 0
+        },
+        "config": {
+          "file_count": 1,
+          "added": 0,
+          "deleted": 1,
+          "loc_changed": 1,
+          "binary_file_count": 0
+        }
+      },
+      "difficulty": "small",
+      "files": [
+        {
+          "path": "changelog/590.trivial.rst",
+          "added": 1,
+          "deleted": 0,
+          "kind": "doc"
+        },
+        {
+          "path": "pyproject.toml",
+          "added": 0,
+          "deleted": 1,
+          "kind": "config"
+        },
+        {
+          "path": "src/pluggy/__init__.py",
+          "added": 9,
+          "deleted": 1,
+          "kind": "source"
+        }
+      ],
+      "id": "1672de415f164aca2b400b06245224718a0c46b1",
+      "repo": "pytest-dev/pluggy",
+      "fixed_sha": "1672de415f164aca2b400b06245224718a0c46b1",
+      "status": "initial_filter_passed",
+      "validation": "not_run",
+      "message": "Merge pull request #590 from RonnyPfannschmidt/version-lazy\n\nRemove version_file setting and migrate to lazy version loading",
+      "pr_url": "https://github.com/pytest-dev/pluggy/pull/590",
+      "pr_evidence": "commit_subject",
+      "pr_verification": "not_run",
+      "issue_evidence": "unavailable",
+      "issue_linkage": "not_verified"
+    }
+  ],
+  "rejected": [
+    {
+      "sha": "d23f110b240d67ee503eba0082f30cae73f3e1e3",
+      "base_sha": "de345834d3894510a15180cc1c7b9cf81796cdb3",
+      "subject": "Merge pull request #721 from RonnyPfannschmidt/fix/ruff-b018-dunder-getattr-test",
+      "pr_number": 721,
+      "reason": "no_source_change",
+      "patch": {
+        "loc_changed": 2,
+        "source_loc": 0,
+        "test_loc": 2,
+        "file_count": 1,
+        "source_file_count": 0,
+        "test_file_count": 1,
+        "has_test_change": true,
+        "by_kind": {
+          "source": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "test": {
+            "file_count": 1,
+            "added": 1,
+            "deleted": 1,
+            "loc_changed": 2,
+            "binary_file_count": 0
+          },
+          "doc": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "config": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          }
+        },
+        "files": [
+          {
+            "path": "testing/test_details.py",
+            "added": 1,
+            "removed": 1,
+            "kind": "test"
+          }
+        ]
+      },
+      "source_analysis": []
+    },
+    {
+      "sha": "de345834d3894510a15180cc1c7b9cf81796cdb3",
+      "base_sha": "09baae8733141971e3109a667b6c12dcce9afa29",
+      "subject": "Merge pull request #718 from darrenhuai/test/cover-version-getattr-and-remove-plugin",
+      "pr_number": 718,
+      "reason": "no_source_change",
+      "patch": {
+        "loc_changed": 31,
+        "source_loc": 0,
+        "test_loc": 31,
+        "file_count": 2,
+        "source_file_count": 0,
+        "test_file_count": 2,
+        "has_test_change": true,
+        "by_kind": {
+          "source": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "test": {
+            "file_count": 2,
+            "added": 31,
+            "deleted": 0,
+            "loc_changed": 31,
+            "binary_file_count": 0
+          },
+          "doc": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "config": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          }
+        },
+        "files": [
+          {
+            "path": "testing/test_details.py",
+            "added": 9,
+            "removed": 0,
+            "kind": "test"
+          },
+          {
+            "path": "testing/test_hookcaller.py",
+            "added": 22,
+            "removed": 0,
+            "kind": "test"
+          }
+        ]
+      },
+      "source_analysis": []
+    },
+    {
+      "sha": "54c95345d24edbe1b06646c931d6dcfcfa6683c2",
+      "base_sha": "f632a4d1b69e32e210063a91a71ae32fb3ac150c",
+      "subject": "build(deps): bump pypa/gh-action-pypi-publish from 1.14.1 to 1.14.2 (#719)",
+      "pr_number": 719,
+      "reason": "no_source_change",
+      "patch": {
+        "loc_changed": 2,
+        "source_loc": 0,
+        "test_loc": 0,
+        "file_count": 1,
+        "source_file_count": 0,
+        "test_file_count": 0,
+        "has_test_change": false,
+        "by_kind": {
+          "source": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "test": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "doc": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "config": {
+            "file_count": 1,
+            "added": 1,
+            "deleted": 1,
+            "loc_changed": 2,
+            "binary_file_count": 0
+          }
+        },
+        "files": [
+          {
+            "path": ".github/workflows/deploy.yml",
+            "added": 1,
+            "removed": 1,
+            "kind": "config"
+          }
+        ]
+      },
+      "source_analysis": []
+    },
+    {
+      "sha": "f632a4d1b69e32e210063a91a71ae32fb3ac150c",
+      "base_sha": "21bb5d175372aa474b44178b8a0577be1822279e",
+      "subject": "build(deps): bump astral-sh/setup-uv from 8.3.2 to 9.0.0 (#717)",
+      "pr_number": 717,
+      "reason": "no_source_change",
+      "patch": {
+        "loc_changed": 2,
+        "source_loc": 0,
+        "test_loc": 0,
+        "file_count": 1,
+        "source_file_count": 0,
+        "test_file_count": 0,
+        "has_test_change": false,
+        "by_kind": {
+          "source": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "test": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "doc": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "config": {
+            "file_count": 1,
+            "added": 1,
+            "deleted": 1,
+            "loc_changed": 2,
+            "binary_file_count": 0
+          }
+        },
+        "files": [
+          {
+            "path": ".github/workflows/downstream.yml",
+            "added": 1,
+            "removed": 1,
+            "kind": "config"
+          }
+        ]
+      },
+      "source_analysis": []
+    },
+    {
+      "sha": "21bb5d175372aa474b44178b8a0577be1822279e",
+      "base_sha": "d7d724f88235b07e269c0d48b20db40135463ab1",
+      "subject": "build(deps): bump actions/setup-python from 6.3.0 to 7.0.0 (#711)",
+      "pr_number": 711,
+      "reason": "no_source_change",
+      "patch": {
+        "loc_changed": 4,
+        "source_loc": 0,
+        "test_loc": 0,
+        "file_count": 2,
+        "source_file_count": 0,
+        "test_file_count": 0,
+        "has_test_change": false,
+        "by_kind": {
+          "source": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "test": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "doc": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "config": {
+            "file_count": 2,
+            "added": 2,
+            "deleted": 2,
+            "loc_changed": 4,
+            "binary_file_count": 0
+          }
+        },
+        "files": [
+          {
+            "path": ".github/workflows/downstream.yml",
+            "added": 1,
+            "removed": 1,
+            "kind": "config"
+          },
+          {
+            "path": ".github/workflows/test.yml",
+            "added": 1,
+            "removed": 1,
+            "kind": "config"
+          }
+        ]
+      },
+      "source_analysis": []
+    },
+    {
+      "sha": "d7d724f88235b07e269c0d48b20db40135463ab1",
+      "base_sha": "8d9ba39497ff3a261eb8a8caedc87551c18b97fc",
+      "subject": "build(deps): bump actions/checkout from 7.0.0 to 7.0.1 (#712)",
+      "pr_number": 712,
+      "reason": "no_source_change",
+      "patch": {
+        "loc_changed": 8,
+        "source_loc": 0,
+        "test_loc": 0,
+        "file_count": 3,
+        "source_file_count": 0,
+        "test_file_count": 0,
+        "has_test_change": false,
+        "by_kind": {
+          "source": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "test": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "doc": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "config": {
+            "file_count": 3,
+            "added": 4,
+            "deleted": 4,
+            "loc_changed": 8,
+            "binary_file_count": 0
+          }
+        },
+        "files": [
+          {
+            "path": ".github/workflows/deploy.yml",
+            "added": 1,
+            "removed": 1,
+            "kind": "config"
+          },
+          {
+            "path": ".github/workflows/downstream.yml",
+            "added": 1,
+            "removed": 1,
+            "kind": "config"
+          },
+          {
+            "path": ".github/workflows/test.yml",
+            "added": 2,
+            "removed": 2,
+            "kind": "config"
+          }
+        ]
+      },
+      "source_analysis": []
+    },
+    {
+      "sha": "8d9ba39497ff3a261eb8a8caedc87551c18b97fc",
+      "base_sha": "735edb0ab69fdd6c4940606e693c098e93583afb",
+      "subject": "build(deps): bump pypa/gh-action-pypi-publish from 1.14.0 to 1.14.1 (#713)",
+      "pr_number": 713,
+      "reason": "no_source_change",
+      "patch": {
+        "loc_changed": 2,
+        "source_loc": 0,
+        "test_loc": 0,
+        "file_count": 1,
+        "source_file_count": 0,
+        "test_file_count": 0,
+        "has_test_change": false,
+        "by_kind": {
+          "source": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "test": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "doc": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "config": {
+            "file_count": 1,
+            "added": 1,
+            "deleted": 1,
+            "loc_changed": 2,
+            "binary_file_count": 0
+          }
+        },
+        "files": [
+          {
+            "path": ".github/workflows/deploy.yml",
+            "added": 1,
+            "removed": 1,
+            "kind": "config"
+          }
+        ]
+      },
+      "source_analysis": []
+    },
+    {
+      "sha": "cba86adc815a68a09f2765e70ed0cca305cc6ce2",
+      "base_sha": "973b4d53621fb54ad65528d58cd0b9f87ed284e4",
+      "subject": "Merge pull request #677 from pytest-dev/dependabot/github_actions/hynek/build-and-inspect-python-package-2.18.0",
+      "pr_number": 677,
+      "reason": "no_source_change",
+      "patch": {
+        "loc_changed": 4,
+        "source_loc": 0,
+        "test_loc": 0,
+        "file_count": 2,
+        "source_file_count": 0,
+        "test_file_count": 0,
+        "has_test_change": false,
+        "by_kind": {
+          "source": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "test": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "doc": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "config": {
+            "file_count": 2,
+            "added": 2,
+            "deleted": 2,
+            "loc_changed": 4,
+            "binary_file_count": 0
+          }
+        },
+        "files": [
+          {
+            "path": ".github/workflows/deploy.yml",
+            "added": 1,
+            "removed": 1,
+            "kind": "config"
+          },
+          {
+            "path": ".github/workflows/test.yml",
+            "added": 1,
+            "removed": 1,
+            "kind": "config"
+          }
+        ]
+      },
+      "source_analysis": []
+    },
+    {
+      "sha": "973b4d53621fb54ad65528d58cd0b9f87ed284e4",
+      "base_sha": "9146d198c3bae53c6595640de9e0139797174a09",
+      "subject": "Merge pull request #700 from pytest-dev/pre-commit-ci-update-config",
+      "pr_number": 700,
+      "reason": "no_source_change",
+      "patch": {
+        "loc_changed": 2,
+        "source_loc": 0,
+        "test_loc": 0,
+        "file_count": 1,
+        "source_file_count": 0,
+        "test_file_count": 0,
+        "has_test_change": false,
+        "by_kind": {
+          "source": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "test": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "doc": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "config": {
+            "file_count": 1,
+            "added": 1,
+            "deleted": 1,
+            "loc_changed": 2,
+            "binary_file_count": 0
+          }
+        },
+        "files": [
+          {
+            "path": ".pre-commit-config.yaml",
+            "added": 1,
+            "removed": 1,
+            "kind": "config"
+          }
+        ]
+      },
+      "source_analysis": []
+    },
+    {
+      "sha": "9146d198c3bae53c6595640de9e0139797174a09",
+      "base_sha": "c1a5f3ea743c462595b77ecb866a70569e25c901",
+      "subject": "Merge pull request #699 from pytest-dev/dependabot/github_actions/astral-sh/setup-uv-8.3.2",
+      "pr_number": 699,
+      "reason": "no_source_change",
+      "patch": {
+        "loc_changed": 2,
+        "source_loc": 0,
+        "test_loc": 0,
+        "file_count": 1,
+        "source_file_count": 0,
+        "test_file_count": 0,
+        "has_test_change": false,
+        "by_kind": {
+          "source": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "test": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "doc": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "config": {
+            "file_count": 1,
+            "added": 1,
+            "deleted": 1,
+            "loc_changed": 2,
+            "binary_file_count": 0
+          }
+        },
+        "files": [
+          {
+            "path": ".github/workflows/downstream.yml",
+            "added": 1,
+            "removed": 1,
+            "kind": "config"
+          }
+        ]
+      },
+      "source_analysis": []
+    },
+    {
+      "sha": "c1a5f3ea743c462595b77ecb866a70569e25c901",
+      "base_sha": "85d89dbc6205a63037169488953dca38ba95d1b3",
+      "subject": "[pre-commit.ci] pre-commit autoupdate (#698)",
+      "pr_number": 698,
+      "reason": "no_source_change",
+      "patch": {
+        "loc_changed": 4,
+        "source_loc": 0,
+        "test_loc": 0,
+        "file_count": 1,
+        "source_file_count": 0,
+        "test_file_count": 0,
+        "has_test_change": false,
+        "by_kind": {
+          "source": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "test": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "doc": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "config": {
+            "file_count": 1,
+            "added": 2,
+            "deleted": 2,
+            "loc_changed": 4,
+            "binary_file_count": 0
+          }
+        },
+        "files": [
+          {
+            "path": ".pre-commit-config.yaml",
+            "added": 2,
+            "removed": 2,
+            "kind": "config"
+          }
+        ]
+      },
+      "source_analysis": []
+    },
+    {
+      "sha": "85d89dbc6205a63037169488953dca38ba95d1b3",
+      "base_sha": "71137409e4b1d48ceaea83d32e30b65f4d712b34",
+      "subject": "build(deps): bump astral-sh/setup-uv from 8.2.0 to 8.3.0 (#697)",
+      "pr_number": 697,
+      "reason": "no_source_change",
+      "patch": {
+        "loc_changed": 2,
+        "source_loc": 0,
+        "test_loc": 0,
+        "file_count": 1,
+        "source_file_count": 0,
+        "test_file_count": 0,
+        "has_test_change": false,
+        "by_kind": {
+          "source": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "test": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "doc": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "config": {
+            "file_count": 1,
+            "added": 1,
+            "deleted": 1,
+            "loc_changed": 2,
+            "binary_file_count": 0
+          }
+        },
+        "files": [
+          {
+            "path": ".github/workflows/downstream.yml",
+            "added": 1,
+            "removed": 1,
+            "kind": "config"
+          }
+        ]
+      },
+      "source_analysis": []
+    },
+    {
+      "sha": "71137409e4b1d48ceaea83d32e30b65f4d712b34",
+      "base_sha": "6b0f3293895e9a3dc5b5e5d4bcad5b1649e19c21",
+      "subject": "build(deps): bump codecov/codecov-action from 6.0.1 to 7.0.0 (#686)",
+      "pr_number": 686,
+      "reason": "no_source_change",
+      "patch": {
+        "loc_changed": 2,
+        "source_loc": 0,
+        "test_loc": 0,
+        "file_count": 1,
+        "source_file_count": 0,
+        "test_file_count": 0,
+        "has_test_change": false,
+        "by_kind": {
+          "source": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "test": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "doc": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "config": {
+            "file_count": 1,
+            "added": 1,
+            "deleted": 1,
+            "loc_changed": 2,
+            "binary_file_count": 0
+          }
+        },
+        "files": [
+          {
+            "path": ".github/workflows/test.yml",
+            "added": 1,
+            "removed": 1,
+            "kind": "config"
+          }
+        ]
+      },
+      "source_analysis": []
+    },
+    {
+      "sha": "6b0f3293895e9a3dc5b5e5d4bcad5b1649e19c21",
+      "base_sha": "ee65238631e739c2dc6e7d045f97fec099005999",
+      "subject": "build(deps): bump actions/setup-python from 6.2.0 to 6.3.0 (#696)",
+      "pr_number": 696,
+      "reason": "no_source_change",
+      "patch": {
+        "loc_changed": 4,
+        "source_loc": 0,
+        "test_loc": 0,
+        "file_count": 2,
+        "source_file_count": 0,
+        "test_file_count": 0,
+        "has_test_change": false,
+        "by_kind": {
+          "source": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "test": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "doc": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "config": {
+            "file_count": 2,
+            "added": 2,
+            "deleted": 2,
+            "loc_changed": 4,
+            "binary_file_count": 0
+          }
+        },
+        "files": [
+          {
+            "path": ".github/workflows/downstream.yml",
+            "added": 1,
+            "removed": 1,
+            "kind": "config"
+          },
+          {
+            "path": ".github/workflows/test.yml",
+            "added": 1,
+            "removed": 1,
+            "kind": "config"
+          }
+        ]
+      },
+      "source_analysis": []
+    },
+    {
+      "sha": "ee65238631e739c2dc6e7d045f97fec099005999",
+      "base_sha": "81676c1385890efc7d764049f64cbb5a5ac647d2",
+      "subject": "[pre-commit.ci] pre-commit autoupdate (#693)",
+      "pr_number": 693,
+      "reason": "no_source_change",
+      "patch": {
+        "loc_changed": 2,
+        "source_loc": 0,
+        "test_loc": 0,
+        "file_count": 1,
+        "source_file_count": 0,
+        "test_file_count": 0,
+        "has_test_change": false,
+        "by_kind": {
+          "source": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "test": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "doc": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "config": {
+            "file_count": 1,
+            "added": 1,
+            "deleted": 1,
+            "loc_changed": 2,
+            "binary_file_count": 0
+          }
+        },
+        "files": [
+          {
+            "path": ".pre-commit-config.yaml",
+            "added": 1,
+            "removed": 1,
+            "kind": "config"
+          }
+        ]
+      },
+      "source_analysis": []
+    },
+    {
+      "sha": "81676c1385890efc7d764049f64cbb5a5ac647d2",
+      "base_sha": "018dda653fd33c5c383fe2c504f8ecac040038bc",
+      "subject": "build(deps): bump actions/checkout from 6.0.3 to 7.0.0 (#692)",
+      "pr_number": 692,
+      "reason": "no_source_change",
+      "patch": {
+        "loc_changed": 8,
+        "source_loc": 0,
+        "test_loc": 0,
+        "file_count": 3,
+        "source_file_count": 0,
+        "test_file_count": 0,
+        "has_test_change": false,
+        "by_kind": {
+          "source": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "test": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "doc": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "config": {
+            "file_count": 3,
+            "added": 4,
+            "deleted": 4,
+            "loc_changed": 8,
+            "binary_file_count": 0
+          }
+        },
+        "files": [
+          {
+            "path": ".github/workflows/deploy.yml",
+            "added": 1,
+            "removed": 1,
+            "kind": "config"
+          },
+          {
+            "path": ".github/workflows/downstream.yml",
+            "added": 1,
+            "removed": 1,
+            "kind": "config"
+          },
+          {
+            "path": ".github/workflows/test.yml",
+            "added": 2,
+            "removed": 2,
+            "kind": "config"
+          }
+        ]
+      },
+      "source_analysis": []
+    },
+    {
+      "sha": "018dda653fd33c5c383fe2c504f8ecac040038bc",
+      "base_sha": "9b99b85dfb91f81baf85b547e5b643982654534d",
+      "subject": "Fix four outdated links in README.rst (#691)",
+      "pr_number": 691,
+      "reason": "no_source_change",
+      "patch": {
+        "loc_changed": 9,
+        "source_loc": 0,
+        "test_loc": 0,
+        "file_count": 2,
+        "source_file_count": 0,
+        "test_file_count": 0,
+        "has_test_change": false,
+        "by_kind": {
+          "source": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "test": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "doc": {
+            "file_count": 2,
+            "added": 5,
+            "deleted": 4,
+            "loc_changed": 9,
+            "binary_file_count": 0
+          },
+          "config": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          }
+        },
+        "files": [
+          {
+            "path": "README.rst",
+            "added": 4,
+            "removed": 4,
+            "kind": "doc"
+          },
+          {
+            "path": "changelog/691.trivial.rst",
+            "added": 1,
+            "removed": 0,
+            "kind": "doc"
+          }
+        ]
+      },
+      "source_analysis": []
+    },
+    {
+      "sha": "9b99b85dfb91f81baf85b547e5b643982654534d",
+      "base_sha": "7fce99cb955846901b22b051909aa4f30dc16128",
+      "subject": "[pre-commit.ci] pre-commit autoupdate (#690)",
+      "pr_number": 690,
+      "reason": "no_source_change",
+      "patch": {
+        "loc_changed": 2,
+        "source_loc": 0,
+        "test_loc": 0,
+        "file_count": 1,
+        "source_file_count": 0,
+        "test_file_count": 0,
+        "has_test_change": false,
+        "by_kind": {
+          "source": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "test": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "doc": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "config": {
+            "file_count": 1,
+            "added": 1,
+            "deleted": 1,
+            "loc_changed": 2,
+            "binary_file_count": 0
+          }
+        },
+        "files": [
+          {
+            "path": ".pre-commit-config.yaml",
+            "added": 1,
+            "removed": 1,
+            "kind": "config"
+          }
+        ]
+      },
+      "source_analysis": []
+    },
+    {
+      "sha": "7fce99cb955846901b22b051909aa4f30dc16128",
+      "base_sha": "aa8d461452adea6fbb9d8bcf8c8885f150ef6005",
+      "subject": "[pre-commit.ci] pre-commit autoupdate (#689)",
+      "pr_number": 689,
+      "reason": "no_source_change",
+      "patch": {
+        "loc_changed": 2,
+        "source_loc": 0,
+        "test_loc": 0,
+        "file_count": 1,
+        "source_file_count": 0,
+        "test_file_count": 0,
+        "has_test_change": false,
+        "by_kind": {
+          "source": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "test": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "doc": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "config": {
+            "file_count": 1,
+            "added": 1,
+            "deleted": 1,
+            "loc_changed": 2,
+            "binary_file_count": 0
+          }
+        },
+        "files": [
+          {
+            "path": ".pre-commit-config.yaml",
+            "added": 1,
+            "removed": 1,
+            "kind": "config"
+          }
+        ]
+      },
+      "source_analysis": []
+    },
+    {
+      "sha": "aa8d461452adea6fbb9d8bcf8c8885f150ef6005",
+      "base_sha": "9b1f685a1505c6e43bee230c34289a9309c077ea",
+      "subject": "build(deps): bump astral-sh/setup-uv from 8.1.0 to 8.2.0 (#687)",
+      "pr_number": 687,
+      "reason": "no_source_change",
+      "patch": {
+        "loc_changed": 2,
+        "source_loc": 0,
+        "test_loc": 0,
+        "file_count": 1,
+        "source_file_count": 0,
+        "test_file_count": 0,
+        "has_test_change": false,
+        "by_kind": {
+          "source": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "test": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "doc": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "config": {
+            "file_count": 1,
+            "added": 1,
+            "deleted": 1,
+            "loc_changed": 2,
+            "binary_file_count": 0
+          }
+        },
+        "files": [
+          {
+            "path": ".github/workflows/downstream.yml",
+            "added": 1,
+            "removed": 1,
+            "kind": "config"
+          }
+        ]
+      },
+      "source_analysis": []
+    },
+    {
+      "sha": "9b1f685a1505c6e43bee230c34289a9309c077ea",
+      "base_sha": "e2c9b6f101ee1a2ce1de5162c03f75d56635b415",
+      "subject": "build(deps): bump actions/checkout from 6.0.2 to 6.0.3 (#688)",
+      "pr_number": 688,
+      "reason": "no_source_change",
+      "patch": {
+        "loc_changed": 8,
+        "source_loc": 0,
+        "test_loc": 0,
+        "file_count": 3,
+        "source_file_count": 0,
+        "test_file_count": 0,
+        "has_test_change": false,
+        "by_kind": {
+          "source": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "test": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "doc": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "config": {
+            "file_count": 3,
+            "added": 4,
+            "deleted": 4,
+            "loc_changed": 8,
+            "binary_file_count": 0
+          }
+        },
+        "files": [
+          {
+            "path": ".github/workflows/deploy.yml",
+            "added": 1,
+            "removed": 1,
+            "kind": "config"
+          },
+          {
+            "path": ".github/workflows/downstream.yml",
+            "added": 1,
+            "removed": 1,
+            "kind": "config"
+          },
+          {
+            "path": ".github/workflows/test.yml",
+            "added": 2,
+            "removed": 2,
+            "kind": "config"
+          }
+        ]
+      },
+      "source_analysis": []
+    },
+    {
+      "sha": "e2c9b6f101ee1a2ce1de5162c03f75d56635b415",
+      "base_sha": "6e518c734bdd50294897307f3ff20f5be75ba17a",
+      "subject": "[pre-commit.ci] pre-commit autoupdate (#685)",
+      "pr_number": 685,
+      "reason": "no_source_change",
+      "patch": {
+        "loc_changed": 2,
+        "source_loc": 0,
+        "test_loc": 0,
+        "file_count": 1,
+        "source_file_count": 0,
+        "test_file_count": 0,
+        "has_test_change": false,
+        "by_kind": {
+          "source": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "test": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "doc": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "config": {
+            "file_count": 1,
+            "added": 1,
+            "deleted": 1,
+            "loc_changed": 2,
+            "binary_file_count": 0
+          }
+        },
+        "files": [
+          {
+            "path": ".pre-commit-config.yaml",
+            "added": 1,
+            "removed": 1,
+            "kind": "config"
+          }
+        ]
+      },
+      "source_analysis": []
+    },
+    {
+      "sha": "6e518c734bdd50294897307f3ff20f5be75ba17a",
+      "base_sha": "5d7bd2cc083571466f44f9683136b7d8f62b88bf",
+      "subject": "[pre-commit.ci] pre-commit autoupdate (#683)",
+      "pr_number": 683,
+      "reason": "no_source_change",
+      "patch": {
+        "loc_changed": 2,
+        "source_loc": 0,
+        "test_loc": 0,
+        "file_count": 1,
+        "source_file_count": 0,
+        "test_file_count": 0,
+        "has_test_change": false,
+        "by_kind": {
+          "source": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "test": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "doc": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "config": {
+            "file_count": 1,
+            "added": 1,
+            "deleted": 1,
+            "loc_changed": 2,
+            "binary_file_count": 0
+          }
+        },
+        "files": [
+          {
+            "path": ".pre-commit-config.yaml",
+            "added": 1,
+            "removed": 1,
+            "kind": "config"
+          }
+        ]
+      },
+      "source_analysis": []
+    },
+    {
+      "sha": "59e66fdb231bf47ce5e0b8ed75b788820b135c34",
+      "base_sha": "aedcad60cbb2635a6d201378bd54d6e1293305d2",
+      "subject": "[pre-commit.ci] pre-commit autoupdate (#679)",
+      "pr_number": 679,
+      "reason": "no_source_change",
+      "patch": {
+        "loc_changed": 2,
+        "source_loc": 0,
+        "test_loc": 0,
+        "file_count": 1,
+        "source_file_count": 0,
+        "test_file_count": 0,
+        "has_test_change": false,
+        "by_kind": {
+          "source": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "test": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "doc": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "config": {
+            "file_count": 1,
+            "added": 1,
+            "deleted": 1,
+            "loc_changed": 2,
+            "binary_file_count": 0
+          }
+        },
+        "files": [
+          {
+            "path": ".pre-commit-config.yaml",
+            "added": 1,
+            "removed": 1,
+            "kind": "config"
+          }
+        ]
+      },
+      "source_analysis": []
+    },
+    {
+      "sha": "aedcad60cbb2635a6d201378bd54d6e1293305d2",
+      "base_sha": "ffa27787c612606f66bfd0ed6c6f6f2d300549e9",
+      "subject": "build(deps): bump codecov/codecov-action from 6.0.0 to 6.0.1 (#680)",
+      "pr_number": 680,
+      "reason": "no_source_change",
+      "patch": {
+        "loc_changed": 2,
+        "source_loc": 0,
+        "test_loc": 0,
+        "file_count": 1,
+        "source_file_count": 0,
+        "test_file_count": 0,
+        "has_test_change": false,
+        "by_kind": {
+          "source": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "test": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "doc": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "config": {
+            "file_count": 1,
+            "added": 1,
+            "deleted": 1,
+            "loc_changed": 2,
+            "binary_file_count": 0
+          }
+        },
+        "files": [
+          {
+            "path": ".github/workflows/test.yml",
+            "added": 1,
+            "removed": 1,
+            "kind": "config"
+          }
+        ]
+      },
+      "source_analysis": []
+    },
+    {
+      "sha": "ffa27787c612606f66bfd0ed6c6f6f2d300549e9",
+      "base_sha": "7a700d09072b621dc151324b1eb54b40c9680c01",
+      "subject": "[pre-commit.ci] pre-commit autoupdate (#676)",
+      "pr_number": 676,
+      "reason": "no_source_change",
+      "patch": {
+        "loc_changed": 4,
+        "source_loc": 0,
+        "test_loc": 0,
+        "file_count": 1,
+        "source_file_count": 0,
+        "test_file_count": 0,
+        "has_test_change": false,
+        "by_kind": {
+          "source": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "test": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "doc": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "config": {
+            "file_count": 1,
+            "added": 2,
+            "deleted": 2,
+            "loc_changed": 4,
+            "binary_file_count": 0
+          }
+        },
+        "files": [
+          {
+            "path": ".pre-commit-config.yaml",
+            "added": 2,
+            "removed": 2,
+            "kind": "config"
+          }
+        ]
+      },
+      "source_analysis": []
+    },
+    {
+      "sha": "7a700d09072b621dc151324b1eb54b40c9680c01",
+      "base_sha": "e7ea79695ed7510571d741bc0461007e25dd9e50",
+      "subject": "Merge pull request #672 from RonnyPfannschmidt/downstream-driver",
+      "pr_number": 672,
+      "reason": "too_many_source_files",
+      "patch": {
+        "loc_changed": 610,
+        "source_loc": 521,
+        "test_loc": 0,
+        "file_count": 20,
+        "source_file_count": 16,
+        "test_file_count": 0,
+        "has_test_change": false,
+        "by_kind": {
+          "source": {
+            "file_count": 16,
+            "added": 426,
+            "deleted": 95,
+            "loc_changed": 521,
+            "binary_file_count": 0
+          },
+          "test": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "doc": {
+            "file_count": 2,
+            "added": 32,
+            "deleted": 4,
+            "loc_changed": 36,
+            "binary_file_count": 0
+          },
+          "config": {
+            "file_count": 2,
+            "added": 53,
+            "deleted": 0,
+            "loc_changed": 53,
+            "binary_file_count": 0
+          }
+        },
+        "files": [
+          {
+            "path": ".github/workflows/downstream.yml",
+            "added": 52,
+            "removed": 0,
+            "kind": "config"
+          },
+          {
+            "path": "RELEASING.rst",
+            "added": 3,
+            "removed": 2,
+            "kind": "doc"
+          },
+          {
+            "path": "downstream/.gitignore",
+            "added": 1,
+            "removed": 0,
+            "kind": "config"
+          },
+          {
+            "path": "downstream/README.md",
+            "added": 29,
+            "removed": 2,
+            "kind": "doc"
+          },
+          {
+            "path": "downstream/conda.sh",
+            "added": 0,
+            "removed": 12,
+            "kind": "source"
+          },
+          {
+            "path": "downstream/datasette.sh",
+            "added": 0,
+            "removed": 10,
+            "kind": "source"
+          },
+          {
+            "path": "downstream/devpi.sh",
+            "added": 0,
+            "removed": 13,
+            "kind": "source"
+          },
+          {
+            "path": "downstream/hatch.sh",
+            "added": 0,
+            "removed": 10,
+            "kind": "source"
+          },
+          {
+            "path": "downstream/pytest.sh",
+            "added": 0,
+            "removed": 10,
+            "kind": "source"
+          },
+          {
+            "path": "downstream/python-lsp-server.sh",
+            "added": 0,
+            "removed": 31,
+            "kind": "source"
+          },
+          {
+            "path": "downstream/recipes/conda.bash",
+            "added": 22,
+            "removed": 0,
+            "kind": "source"
+          },
+          {
+            "path": "downstream/recipes/conda.toml",
+            "added": 7,
+            "removed": 0,
+            "kind": "source"
+          },
+          {
+            "path": "downstream/recipes/datasette.toml",
+            "added": 10,
+            "removed": 0,
+            "kind": "source"
+          },
+          {
+            "path": "downstream/recipes/devpi.toml",
+            "added": 21,
+            "removed": 0,
+            "kind": "source"
+          },
+          {
+            "path": "downstream/recipes/hatch.toml",
+            "added": 18,
+            "removed": 0,
+            "kind": "source"
+          },
+          {
+            "path": "downstream/recipes/pytest.toml",
+            "added": 10,
+            "removed": 0,
+            "kind": "source"
+          },
+          {
+            "path": "downstream/recipes/python-lsp-server.toml",
+            "added": 15,
+            "removed": 0,
+            "kind": "source"
+          },
+          {
+            "path": "downstream/recipes/tox.toml",
+            "added": 16,
+            "removed": 0,
+            "kind": "source"
+          },
+          {
+            "path": "downstream/run_downstream.py",
+            "added": 307,
+            "removed": 0,
+            "kind": "source"
+          },
+          {
+            "path": "downstream/tox.sh",
+            "added": 0,
+            "removed": 9,
+            "kind": "source"
+          }
+        ]
+      },
+      "source_analysis": []
+    },
+    {
+      "sha": "e7ea79695ed7510571d741bc0461007e25dd9e50",
+      "base_sha": "8da58915b3554b396e06695bb80ec1819c30f9ff",
+      "subject": "docs: fix external project references (#674)",
+      "pr_number": 674,
+      "reason": "no_source_change",
+      "patch": {
+        "loc_changed": 5,
+        "source_loc": 0,
+        "test_loc": 0,
+        "file_count": 2,
+        "source_file_count": 0,
+        "test_file_count": 0,
+        "has_test_change": false,
+        "by_kind": {
+          "source": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "test": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "doc": {
+            "file_count": 2,
+            "added": 3,
+            "deleted": 2,
+            "loc_changed": 5,
+            "binary_file_count": 0
+          },
+          "config": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          }
+        },
+        "files": [
+          {
+            "path": "changelog/186.doc.rst",
+            "added": 1,
+            "removed": 0,
+            "kind": "doc"
+          },
+          {
+            "path": "docs/index.rst",
+            "added": 2,
+            "removed": 2,
+            "kind": "doc"
+          }
+        ]
+      },
+      "source_analysis": []
+    },
+    {
+      "sha": "8da58915b3554b396e06695bb80ec1819c30f9ff",
+      "base_sha": "ab1d07e27841a4003fbe8c61eeb8e90a4aedfaa3",
+      "subject": "docs: clarify hook implementation default arguments (#675)",
+      "pr_number": 675,
+      "reason": "no_source_change",
+      "patch": {
+        "loc_changed": 7,
+        "source_loc": 0,
+        "test_loc": 0,
+        "file_count": 2,
+        "source_file_count": 0,
+        "test_file_count": 0,
+        "has_test_change": false,
+        "by_kind": {
+          "source": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "test": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "doc": {
+            "file_count": 2,
+            "added": 7,
+            "deleted": 0,
+            "loc_changed": 7,
+            "binary_file_count": 0
+          },
+          "config": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          }
+        },
+        "files": [
+          {
+            "path": "changelog/522.doc.rst",
+            "added": 1,
+            "removed": 0,
+            "kind": "doc"
+          },
+          {
+            "path": "docs/index.rst",
+            "added": 6,
+            "removed": 0,
+            "kind": "doc"
+          }
+        ]
+      },
+      "source_analysis": []
+    },
+    {
+      "sha": "ab1d07e27841a4003fbe8c61eeb8e90a4aedfaa3",
+      "base_sha": "a469596df2c9f7f9d5219b85c764c644b81896f7",
+      "subject": "[pre-commit.ci] pre-commit autoupdate (#673)",
+      "pr_number": 673,
+      "reason": "no_source_change",
+      "patch": {
+        "loc_changed": 2,
+        "source_loc": 0,
+        "test_loc": 0,
+        "file_count": 1,
+        "source_file_count": 0,
+        "test_file_count": 0,
+        "has_test_change": false,
+        "by_kind": {
+          "source": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "test": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "doc": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "config": {
+            "file_count": 1,
+            "added": 1,
+            "deleted": 1,
+            "loc_changed": 2,
+            "binary_file_count": 0
+          }
+        },
+        "files": [
+          {
+            "path": ".pre-commit-config.yaml",
+            "added": 1,
+            "removed": 1,
+            "kind": "config"
+          }
+        ]
+      },
+      "source_analysis": []
+    },
+    {
+      "sha": "a469596df2c9f7f9d5219b85c764c644b81896f7",
+      "base_sha": "20b0144b21191a4e9ff3ac8998eca8029681a789",
+      "subject": "Merge pull request #367 from nicoddemus/split-workflows",
+      "pr_number": 367,
+      "reason": "no_source_change",
+      "patch": {
+        "loc_changed": 97,
+        "source_loc": 0,
+        "test_loc": 0,
+        "file_count": 4,
+        "source_file_count": 0,
+        "test_file_count": 0,
+        "has_test_change": false,
+        "by_kind": {
+          "source": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "test": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "doc": {
+            "file_count": 1,
+            "added": 2,
+            "deleted": 2,
+            "loc_changed": 4,
+            "binary_file_count": 0
+          },
+          "config": {
+            "file_count": 3,
+            "added": 64,
+            "deleted": 29,
+            "loc_changed": 93,
+            "binary_file_count": 0
+          }
+        },
+        "files": [
+          {
+            "path": ".github/dependabot.yml",
+            "added": 2,
+            "removed": 0,
+            "kind": "config"
+          },
+          {
+            "path": ".github/workflows/deploy.yml",
+            "added": 42,
+            "removed": 0,
+            "kind": "config"
+          },
+          {
+            "path": ".github/workflows/test.yml",
+            "added": 20,
+            "removed": 29,
+            "kind": "config"
+          },
+          {
+            "path": "README.rst",
+            "added": 2,
+            "removed": 2,
+            "kind": "doc"
+          }
+        ]
+      },
+      "source_analysis": []
+    },
+    {
+      "sha": "20b0144b21191a4e9ff3ac8998eca8029681a789",
+      "base_sha": "2c1fd62786aeb465bc17331ff5aee320cb58ad95",
+      "subject": "Merge pull request #670 from bluetech/uv-upgrade-lock",
+      "pr_number": 670,
+      "reason": "no_source_change",
+      "patch": {
+        "loc_changed": 486,
+        "source_loc": 0,
+        "test_loc": 0,
+        "file_count": 1,
+        "source_file_count": 0,
+        "test_file_count": 0,
+        "has_test_change": false,
+        "by_kind": {
+          "source": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "test": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "doc": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "config": {
+            "file_count": 1,
+            "added": 293,
+            "deleted": 193,
+            "loc_changed": 486,
+            "binary_file_count": 0
+          }
+        },
+        "files": [
+          {
+            "path": "uv.lock",
+            "added": 293,
+            "removed": 193,
+            "kind": "config"
+          }
+        ]
+      },
+      "source_analysis": []
+    },
+    {
+      "sha": "2c1fd62786aeb465bc17331ff5aee320cb58ad95",
+      "base_sha": "06e6b3b4f63ae5175ddfb2a4df482c09b085bbaf",
+      "subject": "chore: fix coverage report paths (#669)",
+      "pr_number": 669,
+      "reason": "no_executable_source_change",
+      "patch": {
+        "loc_changed": 6,
+        "source_loc": 2,
+        "test_loc": 0,
+        "file_count": 3,
+        "source_file_count": 1,
+        "test_file_count": 0,
+        "has_test_change": false,
+        "by_kind": {
+          "source": {
+            "file_count": 1,
+            "added": 1,
+            "deleted": 1,
+            "loc_changed": 2,
+            "binary_file_count": 0
+          },
+          "test": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "doc": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "config": {
+            "file_count": 2,
+            "added": 3,
+            "deleted": 1,
+            "loc_changed": 4,
+            "binary_file_count": 0
+          }
+        },
+        "files": [
+          {
+            "path": ".coveragerc",
+            "added": 2,
+            "removed": 1,
+            "kind": "config"
+          },
+          {
+            "path": "src/pluggy/_hooks.py",
+            "added": 1,
+            "removed": 1,
+            "kind": "source"
+          },
+          {
+            "path": "tox.ini",
+            "added": 1,
+            "removed": 0,
+            "kind": "config"
+          }
+        ]
+      },
+      "source_analysis": [
+        {
+          "path": "src/pluggy/_hooks.py",
+          "kind": "comments_or_formatting_only"
+        }
+      ]
+    },
+    {
+      "sha": "06e6b3b4f63ae5175ddfb2a4df482c09b085bbaf",
+      "base_sha": "2a7fa51bb49d71c97af29daf6a7d180a8c6e8aff",
+      "subject": "[pre-commit.ci] pre-commit autoupdate (#667)",
+      "pr_number": 667,
+      "reason": "no_source_change",
+      "patch": {
+        "loc_changed": 4,
+        "source_loc": 0,
+        "test_loc": 0,
+        "file_count": 1,
+        "source_file_count": 0,
+        "test_file_count": 0,
+        "has_test_change": false,
+        "by_kind": {
+          "source": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "test": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "doc": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "config": {
+            "file_count": 1,
+            "added": 2,
+            "deleted": 2,
+            "loc_changed": 4,
+            "binary_file_count": 0
+          }
+        },
+        "files": [
+          {
+            "path": ".pre-commit-config.yaml",
+            "added": 2,
+            "removed": 2,
+            "kind": "config"
+          }
+        ]
+      },
+      "source_analysis": []
+    },
+    {
+      "sha": "2a7fa51bb49d71c97af29daf6a7d180a8c6e8aff",
+      "base_sha": "7c173c816a81201a03a667bb447ded5feb6526e1",
+      "subject": "[pre-commit.ci] pre-commit autoupdate (#665)",
+      "pr_number": 665,
+      "reason": "no_source_change",
+      "patch": {
+        "loc_changed": 2,
+        "source_loc": 0,
+        "test_loc": 0,
+        "file_count": 1,
+        "source_file_count": 0,
+        "test_file_count": 0,
+        "has_test_change": false,
+        "by_kind": {
+          "source": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "test": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "doc": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "config": {
+            "file_count": 1,
+            "added": 1,
+            "deleted": 1,
+            "loc_changed": 2,
+            "binary_file_count": 0
+          }
+        },
+        "files": [
+          {
+            "path": ".pre-commit-config.yaml",
+            "added": 1,
+            "removed": 1,
+            "kind": "config"
+          }
+        ]
+      },
+      "source_analysis": []
+    },
+    {
+      "sha": "7c173c816a81201a03a667bb447ded5feb6526e1",
+      "base_sha": "53f1fd1aa19606443c8af523fa3dce5e34ab7f67",
+      "subject": "build(deps): bump pypa/gh-action-pypi-publish from 1.13.0 to 1.14.0 (#663)",
+      "pr_number": 663,
+      "reason": "no_source_change",
+      "patch": {
+        "loc_changed": 2,
+        "source_loc": 0,
+        "test_loc": 0,
+        "file_count": 1,
+        "source_file_count": 0,
+        "test_file_count": 0,
+        "has_test_change": false,
+        "by_kind": {
+          "source": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "test": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "doc": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "config": {
+            "file_count": 1,
+            "added": 1,
+            "deleted": 1,
+            "loc_changed": 2,
+            "binary_file_count": 0
+          }
+        },
+        "files": [
+          {
+            "path": ".github/workflows/main.yml",
+            "added": 1,
+            "removed": 1,
+            "kind": "config"
+          }
+        ]
+      },
+      "source_analysis": []
+    },
+    {
+      "sha": "53f1fd1aa19606443c8af523fa3dce5e34ab7f67",
+      "base_sha": "4cef8cb44734f3641ab09a58590198931b67a997",
+      "subject": "[pre-commit.ci] pre-commit autoupdate (#664)",
+      "pr_number": 664,
+      "reason": "no_source_change",
+      "patch": {
+        "loc_changed": 4,
+        "source_loc": 0,
+        "test_loc": 0,
+        "file_count": 1,
+        "source_file_count": 0,
+        "test_file_count": 0,
+        "has_test_change": false,
+        "by_kind": {
+          "source": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "test": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "doc": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "config": {
+            "file_count": 1,
+            "added": 2,
+            "deleted": 2,
+            "loc_changed": 4,
+            "binary_file_count": 0
+          }
+        },
+        "files": [
+          {
+            "path": ".pre-commit-config.yaml",
+            "added": 2,
+            "removed": 2,
+            "kind": "config"
+          }
+        ]
+      },
+      "source_analysis": []
+    },
+    {
+      "sha": "4cef8cb44734f3641ab09a58590198931b67a997",
+      "base_sha": "c22cc33410597b14abf1905cabce3b48009c8702",
+      "subject": "[pre-commit.ci] pre-commit autoupdate (#662)",
+      "pr_number": 662,
+      "reason": "no_source_change",
+      "patch": {
+        "loc_changed": 6,
+        "source_loc": 0,
+        "test_loc": 2,
+        "file_count": 2,
+        "source_file_count": 0,
+        "test_file_count": 1,
+        "has_test_change": true,
+        "by_kind": {
+          "source": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "test": {
+            "file_count": 1,
+            "added": 1,
+            "deleted": 1,
+            "loc_changed": 2,
+            "binary_file_count": 0
+          },
+          "doc": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "config": {
+            "file_count": 1,
+            "added": 2,
+            "deleted": 2,
+            "loc_changed": 4,
+            "binary_file_count": 0
+          }
+        },
+        "files": [
+          {
+            "path": ".pre-commit-config.yaml",
+            "added": 2,
+            "removed": 2,
+            "kind": "config"
+          },
+          {
+            "path": "testing/test_pluginmanager.py",
+            "added": 1,
+            "removed": 1,
+            "kind": "test"
+          }
+        ]
+      },
+      "source_analysis": []
+    },
+    {
+      "sha": "c22cc33410597b14abf1905cabce3b48009c8702",
+      "base_sha": "720204d214dab50ff4f23583074ed94c5833cc46",
+      "subject": "[pre-commit.ci] pre-commit autoupdate (#661)",
+      "pr_number": 661,
+      "reason": "no_source_change",
+      "patch": {
+        "loc_changed": 2,
+        "source_loc": 0,
+        "test_loc": 0,
+        "file_count": 1,
+        "source_file_count": 0,
+        "test_file_count": 0,
+        "has_test_change": false,
+        "by_kind": {
+          "source": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "test": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "doc": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "config": {
+            "file_count": 1,
+            "added": 1,
+            "deleted": 1,
+            "loc_changed": 2,
+            "binary_file_count": 0
+          }
+        },
+        "files": [
+          {
+            "path": ".pre-commit-config.yaml",
+            "added": 1,
+            "removed": 1,
+            "kind": "config"
+          }
+        ]
+      },
+      "source_analysis": []
+    },
+    {
+      "sha": "720204d214dab50ff4f23583074ed94c5833cc46",
+      "base_sha": "1872864a418b2e666795f74a7cb7c87d176a20c1",
+      "subject": "build(deps): bump codecov/codecov-action from 5 to 6 (#660)",
+      "pr_number": 660,
+      "reason": "no_source_change",
+      "patch": {
+        "loc_changed": 2,
+        "source_loc": 0,
+        "test_loc": 0,
+        "file_count": 1,
+        "source_file_count": 0,
+        "test_file_count": 0,
+        "has_test_change": false,
+        "by_kind": {
+          "source": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "test": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "doc": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "config": {
+            "file_count": 1,
+            "added": 1,
+            "deleted": 1,
+            "loc_changed": 2,
+            "binary_file_count": 0
+          }
+        },
+        "files": [
+          {
+            "path": ".github/workflows/main.yml",
+            "added": 1,
+            "removed": 1,
+            "kind": "config"
+          }
+        ]
+      },
+      "source_analysis": []
+    },
+    {
+      "sha": "1872864a418b2e666795f74a7cb7c87d176a20c1",
+      "base_sha": "1b1cb23cff136d93f098f3c05199a73c17cda560",
+      "subject": "[pre-commit.ci] pre-commit autoupdate (#658)",
+      "pr_number": 658,
+      "reason": "no_source_change",
+      "patch": {
+        "loc_changed": 2,
+        "source_loc": 0,
+        "test_loc": 0,
+        "file_count": 1,
+        "source_file_count": 0,
+        "test_file_count": 0,
+        "has_test_change": false,
+        "by_kind": {
+          "source": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "test": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "doc": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "config": {
+            "file_count": 1,
+            "added": 1,
+            "deleted": 1,
+            "loc_changed": 2,
+            "binary_file_count": 0
+          }
+        },
+        "files": [
+          {
+            "path": ".pre-commit-config.yaml",
+            "added": 1,
+            "removed": 1,
+            "kind": "config"
+          }
+        ]
+      },
+      "source_analysis": []
+    },
+    {
+      "sha": "1b1cb23cff136d93f098f3c05199a73c17cda560",
+      "base_sha": "97355a5a464af9c9eef51328ef43fb67145413dd",
+      "subject": "[pre-commit.ci] pre-commit autoupdate (#656)",
+      "pr_number": 656,
+      "reason": "no_source_change",
+      "patch": {
+        "loc_changed": 2,
+        "source_loc": 0,
+        "test_loc": 0,
+        "file_count": 1,
+        "source_file_count": 0,
+        "test_file_count": 0,
+        "has_test_change": false,
+        "by_kind": {
+          "source": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "test": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "doc": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "config": {
+            "file_count": 1,
+            "added": 1,
+            "deleted": 1,
+            "loc_changed": 2,
+            "binary_file_count": 0
+          }
+        },
+        "files": [
+          {
+            "path": ".pre-commit-config.yaml",
+            "added": 1,
+            "removed": 1,
+            "kind": "config"
+          }
+        ]
+      },
+      "source_analysis": []
+    },
+    {
+      "sha": "97355a5a464af9c9eef51328ef43fb67145413dd",
+      "base_sha": "dec0d3ec97075000b9d6ea3b836434f108a67631",
+      "subject": "[pre-commit.ci] pre-commit autoupdate (#655)",
+      "pr_number": 655,
+      "reason": "no_source_change",
+      "patch": {
+        "loc_changed": 2,
+        "source_loc": 0,
+        "test_loc": 0,
+        "file_count": 1,
+        "source_file_count": 0,
+        "test_file_count": 0,
+        "has_test_change": false,
+        "by_kind": {
+          "source": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "test": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "doc": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "config": {
+            "file_count": 1,
+            "added": 1,
+            "deleted": 1,
+            "loc_changed": 2,
+            "binary_file_count": 0
+          }
+        },
+        "files": [
+          {
+            "path": ".pre-commit-config.yaml",
+            "added": 1,
+            "removed": 1,
+            "kind": "config"
+          }
+        ]
+      },
+      "source_analysis": []
+    },
+    {
+      "sha": "dec0d3ec97075000b9d6ea3b836434f108a67631",
+      "base_sha": "0fc95864e6a4121233093a3ceec324664241836e",
+      "subject": "[pre-commit.ci] pre-commit autoupdate (#654)",
+      "pr_number": 654,
+      "reason": "no_source_change",
+      "patch": {
+        "loc_changed": 2,
+        "source_loc": 0,
+        "test_loc": 0,
+        "file_count": 1,
+        "source_file_count": 0,
+        "test_file_count": 0,
+        "has_test_change": false,
+        "by_kind": {
+          "source": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "test": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "doc": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "config": {
+            "file_count": 1,
+            "added": 1,
+            "deleted": 1,
+            "loc_changed": 2,
+            "binary_file_count": 0
+          }
+        },
+        "files": [
+          {
+            "path": ".pre-commit-config.yaml",
+            "added": 1,
+            "removed": 1,
+            "kind": "config"
+          }
+        ]
+      },
+      "source_analysis": []
+    },
+    {
+      "sha": "0fc95864e6a4121233093a3ceec324664241836e",
+      "base_sha": "20d8143f127a4d7526dbbea441857b4b80ec8bdd",
+      "subject": "build(deps): bump actions/download-artifact from 7 to 8 (#651)",
+      "pr_number": 651,
+      "reason": "no_source_change",
+      "patch": {
+        "loc_changed": 4,
+        "source_loc": 0,
+        "test_loc": 0,
+        "file_count": 1,
+        "source_file_count": 0,
+        "test_file_count": 0,
+        "has_test_change": false,
+        "by_kind": {
+          "source": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "test": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "doc": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "config": {
+            "file_count": 1,
+            "added": 2,
+            "deleted": 2,
+            "loc_changed": 4,
+            "binary_file_count": 0
+          }
+        },
+        "files": [
+          {
+            "path": ".github/workflows/main.yml",
+            "added": 2,
+            "removed": 2,
+            "kind": "config"
+          }
+        ]
+      },
+      "source_analysis": []
+    },
+    {
+      "sha": "6e1d0f13a259776bbf137f90bd7ab8b4474f68e7",
+      "base_sha": "6ab917ba3b2dc1dceba6a260a0c30cb947f6a69c",
+      "subject": "[pre-commit.ci] pre-commit autoupdate (#650)",
+      "pr_number": 650,
+      "reason": "no_source_change",
+      "patch": {
+        "loc_changed": 4,
+        "source_loc": 0,
+        "test_loc": 0,
+        "file_count": 1,
+        "source_file_count": 0,
+        "test_file_count": 0,
+        "has_test_change": false,
+        "by_kind": {
+          "source": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "test": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "doc": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "config": {
+            "file_count": 1,
+            "added": 2,
+            "deleted": 2,
+            "loc_changed": 4,
+            "binary_file_count": 0
+          }
+        },
+        "files": [
+          {
+            "path": ".pre-commit-config.yaml",
+            "added": 2,
+            "removed": 2,
+            "kind": "config"
+          }
+        ]
+      },
+      "source_analysis": []
+    },
+    {
+      "sha": "6ab917ba3b2dc1dceba6a260a0c30cb947f6a69c",
+      "base_sha": "4cc08c153344b0d15e96cb196e5f2d7ac2fe847e",
+      "subject": "[pre-commit.ci] pre-commit autoupdate (#647)",
+      "pr_number": 647,
+      "reason": "no_source_change",
+      "patch": {
+        "loc_changed": 2,
+        "source_loc": 0,
+        "test_loc": 0,
+        "file_count": 1,
+        "source_file_count": 0,
+        "test_file_count": 0,
+        "has_test_change": false,
+        "by_kind": {
+          "source": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "test": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "doc": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "config": {
+            "file_count": 1,
+            "added": 1,
+            "deleted": 1,
+            "loc_changed": 2,
+            "binary_file_count": 0
+          }
+        },
+        "files": [
+          {
+            "path": ".pre-commit-config.yaml",
+            "added": 1,
+            "removed": 1,
+            "kind": "config"
+          }
+        ]
+      },
+      "source_analysis": []
+    },
+    {
+      "sha": "4cc08c153344b0d15e96cb196e5f2d7ac2fe847e",
+      "base_sha": "108f2250fae741ad9e4b22c4770e02b7d0aa24ef",
+      "subject": "[pre-commit.ci] pre-commit autoupdate (#645)",
+      "pr_number": 645,
+      "reason": "no_source_change",
+      "patch": {
+        "loc_changed": 2,
+        "source_loc": 0,
+        "test_loc": 0,
+        "file_count": 1,
+        "source_file_count": 0,
+        "test_file_count": 0,
+        "has_test_change": false,
+        "by_kind": {
+          "source": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "test": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "doc": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "config": {
+            "file_count": 1,
+            "added": 1,
+            "deleted": 1,
+            "loc_changed": 2,
+            "binary_file_count": 0
+          }
+        },
+        "files": [
+          {
+            "path": ".pre-commit-config.yaml",
+            "added": 1,
+            "removed": 1,
+            "kind": "config"
+          }
+        ]
+      },
+      "source_analysis": []
+    },
+    {
+      "sha": "fd68617c03586508b1b9d1fa4b7027a74c333264",
+      "base_sha": "2a4718a84c9330dd1f468dbcde1458296e8c5890",
+      "subject": "[pre-commit.ci] pre-commit autoupdate (#644)",
+      "pr_number": 644,
+      "reason": "no_source_change",
+      "patch": {
+        "loc_changed": 2,
+        "source_loc": 0,
+        "test_loc": 0,
+        "file_count": 1,
+        "source_file_count": 0,
+        "test_file_count": 0,
+        "has_test_change": false,
+        "by_kind": {
+          "source": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "test": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "doc": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "config": {
+            "file_count": 1,
+            "added": 1,
+            "deleted": 1,
+            "loc_changed": 2,
+            "binary_file_count": 0
+          }
+        },
+        "files": [
+          {
+            "path": ".pre-commit-config.yaml",
+            "added": 1,
+            "removed": 1,
+            "kind": "config"
+          }
+        ]
+      },
+      "source_analysis": []
+    },
+    {
+      "sha": "2a4718a84c9330dd1f468dbcde1458296e8c5890",
+      "base_sha": "c74ddbc0d4d8e412bb50df9ee5c47dd2ef797272",
+      "subject": "[pre-commit.ci] pre-commit autoupdate (#642)",
+      "pr_number": 642,
+      "reason": "no_source_change",
+      "patch": {
+        "loc_changed": 2,
+        "source_loc": 0,
+        "test_loc": 0,
+        "file_count": 1,
+        "source_file_count": 0,
+        "test_file_count": 0,
+        "has_test_change": false,
+        "by_kind": {
+          "source": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "test": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "doc": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "config": {
+            "file_count": 1,
+            "added": 1,
+            "deleted": 1,
+            "loc_changed": 2,
+            "binary_file_count": 0
+          }
+        },
+        "files": [
+          {
+            "path": ".pre-commit-config.yaml",
+            "added": 1,
+            "removed": 1,
+            "kind": "config"
+          }
+        ]
+      },
+      "source_analysis": []
+    },
+    {
+      "sha": "c74ddbc0d4d8e412bb50df9ee5c47dd2ef797272",
+      "base_sha": "584be1e372bab0f9db5a199652fc0c8a569db017",
+      "subject": "[pre-commit.ci] pre-commit autoupdate (#641)",
+      "pr_number": 641,
+      "reason": "no_source_change",
+      "patch": {
+        "loc_changed": 2,
+        "source_loc": 0,
+        "test_loc": 0,
+        "file_count": 1,
+        "source_file_count": 0,
+        "test_file_count": 0,
+        "has_test_change": false,
+        "by_kind": {
+          "source": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "test": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "doc": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "config": {
+            "file_count": 1,
+            "added": 1,
+            "deleted": 1,
+            "loc_changed": 2,
+            "binary_file_count": 0
+          }
+        },
+        "files": [
+          {
+            "path": ".pre-commit-config.yaml",
+            "added": 1,
+            "removed": 1,
+            "kind": "config"
+          }
+        ]
+      },
+      "source_analysis": []
+    },
+    {
+      "sha": "fc40456932ec7fb258b0c48ef3789b7cd7747647",
+      "base_sha": "0b047fdeea3bcc5448ba808a1582ccff73a23cda",
+      "subject": "[pre-commit.ci] pre-commit autoupdate (#638)",
+      "pr_number": 638,
+      "reason": "no_source_change",
+      "patch": {
+        "loc_changed": 2,
+        "source_loc": 0,
+        "test_loc": 0,
+        "file_count": 1,
+        "source_file_count": 0,
+        "test_file_count": 0,
+        "has_test_change": false,
+        "by_kind": {
+          "source": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "test": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "doc": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "config": {
+            "file_count": 1,
+            "added": 1,
+            "deleted": 1,
+            "loc_changed": 2,
+            "binary_file_count": 0
+          }
+        },
+        "files": [
+          {
+            "path": ".pre-commit-config.yaml",
+            "added": 1,
+            "removed": 1,
+            "kind": "config"
+          }
+        ]
+      },
+      "source_analysis": []
+    },
+    {
+      "sha": "0b047fdeea3bcc5448ba808a1582ccff73a23cda",
+      "base_sha": "9e04451d7f8a06e14dcc825b12a276f2dc16737a",
+      "subject": "[pre-commit.ci] pre-commit autoupdate (#637)",
+      "pr_number": 637,
+      "reason": "no_source_change",
+      "patch": {
+        "loc_changed": 4,
+        "source_loc": 0,
+        "test_loc": 0,
+        "file_count": 1,
+        "source_file_count": 0,
+        "test_file_count": 0,
+        "has_test_change": false,
+        "by_kind": {
+          "source": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "test": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "doc": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "config": {
+            "file_count": 1,
+            "added": 2,
+            "deleted": 2,
+            "loc_changed": 4,
+            "binary_file_count": 0
+          }
+        },
+        "files": [
+          {
+            "path": ".pre-commit-config.yaml",
+            "added": 2,
+            "removed": 2,
+            "kind": "config"
+          }
+        ]
+      },
+      "source_analysis": []
+    },
+    {
+      "sha": "9e04451d7f8a06e14dcc825b12a276f2dc16737a",
+      "base_sha": "587848d2f5aa9630a69fe94bfcf800bc44c6bdbc",
+      "subject": "build(deps): bump actions/download-artifact from 6 to 7 (#636)",
+      "pr_number": 636,
+      "reason": "no_source_change",
+      "patch": {
+        "loc_changed": 4,
+        "source_loc": 0,
+        "test_loc": 0,
+        "file_count": 1,
+        "source_file_count": 0,
+        "test_file_count": 0,
+        "has_test_change": false,
+        "by_kind": {
+          "source": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "test": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "doc": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "config": {
+            "file_count": 1,
+            "added": 2,
+            "deleted": 2,
+            "loc_changed": 4,
+            "binary_file_count": 0
+          }
+        },
+        "files": [
+          {
+            "path": ".github/workflows/main.yml",
+            "added": 2,
+            "removed": 2,
+            "kind": "config"
+          }
+        ]
+      },
+      "source_analysis": []
+    },
+    {
+      "sha": "587848d2f5aa9630a69fe94bfcf800bc44c6bdbc",
+      "base_sha": "5d57ff37b31e5cee8686076e2a0fd942e57f9b62",
+      "subject": "[mypy] Fix better name for untyped decorator in mypy's new version",
+      "pr_number": null,
+      "reason": "no_source_change",
+      "patch": {
+        "loc_changed": 2,
+        "source_loc": 0,
+        "test_loc": 2,
+        "file_count": 1,
+        "source_file_count": 0,
+        "test_file_count": 1,
+        "has_test_change": true,
+        "by_kind": {
+          "source": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "test": {
+            "file_count": 1,
+            "added": 1,
+            "deleted": 1,
+            "loc_changed": 2,
+            "binary_file_count": 0
+          },
+          "doc": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "config": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          }
+        },
+        "files": [
+          {
+            "path": "testing/test_hookcaller.py",
+            "added": 1,
+            "removed": 1,
+            "kind": "test"
+          }
+        ]
+      },
+      "source_analysis": []
+    },
+    {
+      "sha": "5d57ff37b31e5cee8686076e2a0fd942e57f9b62",
+      "base_sha": "2173e7b856941116f48d97dae8fcb9a9cd73f0ac",
+      "subject": "Fix rst-lint: error: unrecognized arguments: --encoding",
+      "pr_number": null,
+      "reason": "no_source_change",
+      "patch": {
+        "loc_changed": 2,
+        "source_loc": 0,
+        "test_loc": 0,
+        "file_count": 1,
+        "source_file_count": 0,
+        "test_file_count": 0,
+        "has_test_change": false,
+        "by_kind": {
+          "source": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "test": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "doc": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "config": {
+            "file_count": 1,
+            "added": 1,
+            "deleted": 1,
+            "loc_changed": 2,
+            "binary_file_count": 0
+          }
+        },
+        "files": [
+          {
+            "path": ".pre-commit-config.yaml",
+            "added": 1,
+            "removed": 1,
+            "kind": "config"
+          }
+        ]
+      },
+      "source_analysis": []
+    },
+    {
+      "sha": "2173e7b856941116f48d97dae8fcb9a9cd73f0ac",
+      "base_sha": "dbe21314fb947abb42da44953ae8d701a7ff4482",
+      "subject": "[pre-commit.ci] pre-commit autoupdate",
+      "pr_number": null,
+      "reason": "no_source_change",
+      "patch": {
+        "loc_changed": 4,
+        "source_loc": 0,
+        "test_loc": 0,
+        "file_count": 1,
+        "source_file_count": 0,
+        "test_file_count": 0,
+        "has_test_change": false,
+        "by_kind": {
+          "source": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "test": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "doc": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "config": {
+            "file_count": 1,
+            "added": 2,
+            "deleted": 2,
+            "loc_changed": 4,
+            "binary_file_count": 0
+          }
+        },
+        "files": [
+          {
+            "path": ".pre-commit-config.yaml",
+            "added": 2,
+            "removed": 2,
+            "kind": "config"
+          }
+        ]
+      },
+      "source_analysis": []
+    },
+    {
+      "sha": "ddb06db52979bbf310cd51eff2cf3711f4523a1c",
+      "base_sha": "b455996566f7070b9a82d4e3a584cf576b3c4b8d",
+      "subject": "Merge pull request #614 from RonnyPfannschmidt/feature/add-uv-tooling",
+      "pr_number": 614,
+      "reason": "no_source_change",
+      "patch": {
+        "loc_changed": 534,
+        "source_loc": 0,
+        "test_loc": 0,
+        "file_count": 4,
+        "source_file_count": 0,
+        "test_file_count": 0,
+        "has_test_change": false,
+        "by_kind": {
+          "source": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "test": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "doc": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "config": {
+            "file_count": 4,
+            "added": 532,
+            "deleted": 2,
+            "loc_changed": 534,
+            "binary_file_count": 0
+          }
+        },
+        "files": [
+          {
+            "path": ".gitignore",
+            "added": 3,
+            "removed": 0,
+            "kind": "config"
+          },
+          {
+            "path": "pyproject.toml",
+            "added": 5,
+            "removed": 1,
+            "kind": "config"
+          },
+          {
+            "path": "tox.ini",
+            "added": 1,
+            "removed": 1,
+            "kind": "config"
+          },
+          {
+            "path": "uv.lock",
+            "added": 523,
+            "removed": 0,
+            "kind": "config"
+          }
+        ]
+      },
+      "source_analysis": []
+    },
+    {
+      "sha": "b455996566f7070b9a82d4e3a584cf576b3c4b8d",
+      "base_sha": "42098afb6c3ef6bb78bf439099b774960c0ae8e3",
+      "subject": "[pre-commit.ci] pre-commit autoupdate (#631)",
+      "pr_number": 631,
+      "reason": "no_source_change",
+      "patch": {
+        "loc_changed": 4,
+        "source_loc": 0,
+        "test_loc": 0,
+        "file_count": 1,
+        "source_file_count": 0,
+        "test_file_count": 0,
+        "has_test_change": false,
+        "by_kind": {
+          "source": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "test": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "doc": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "config": {
+            "file_count": 1,
+            "added": 2,
+            "deleted": 2,
+            "loc_changed": 4,
+            "binary_file_count": 0
+          }
+        },
+        "files": [
+          {
+            "path": ".pre-commit-config.yaml",
+            "added": 2,
+            "removed": 2,
+            "kind": "config"
+          }
+        ]
+      },
+      "source_analysis": []
+    },
+    {
+      "sha": "42098afb6c3ef6bb78bf439099b774960c0ae8e3",
+      "base_sha": "5b24a4df70d963ee2dc92f663d3ac83155ba0bad",
+      "subject": "build(deps): bump actions/checkout from 5 to 6 (#630)",
+      "pr_number": 630,
+      "reason": "no_source_change",
+      "patch": {
+        "loc_changed": 4,
+        "source_loc": 0,
+        "test_loc": 0,
+        "file_count": 1,
+        "source_file_count": 0,
+        "test_file_count": 0,
+        "has_test_change": false,
+        "by_kind": {
+          "source": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "test": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "doc": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "config": {
+            "file_count": 1,
+            "added": 2,
+            "deleted": 2,
+            "loc_changed": 4,
+            "binary_file_count": 0
+          }
+        },
+        "files": [
+          {
+            "path": ".github/workflows/main.yml",
+            "added": 2,
+            "removed": 2,
+            "kind": "config"
+          }
+        ]
+      },
+      "source_analysis": []
+    },
+    {
+      "sha": "5b24a4df70d963ee2dc92f663d3ac83155ba0bad",
+      "base_sha": "b7a7e8a600b5d2bad44d928677c9afbcb41d68cd",
+      "subject": "[pre-commit.ci] pre-commit autoupdate (#625)",
+      "pr_number": 625,
+      "reason": "no_source_change",
+      "patch": {
+        "loc_changed": 2,
+        "source_loc": 0,
+        "test_loc": 0,
+        "file_count": 1,
+        "source_file_count": 0,
+        "test_file_count": 0,
+        "has_test_change": false,
+        "by_kind": {
+          "source": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "test": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "doc": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "config": {
+            "file_count": 1,
+            "added": 1,
+            "deleted": 1,
+            "loc_changed": 2,
+            "binary_file_count": 0
+          }
+        },
+        "files": [
+          {
+            "path": ".pre-commit-config.yaml",
+            "added": 1,
+            "removed": 1,
+            "kind": "config"
+          }
+        ]
+      },
+      "source_analysis": []
+    },
+    {
+      "sha": "b7a7e8a600b5d2bad44d928677c9afbcb41d68cd",
+      "base_sha": "d26b1c5ee543b5c8ae583dc29f646669d833bcd3",
+      "subject": "[pre-commit.ci] pre-commit autoupdate (#624)",
+      "pr_number": 624,
+      "reason": "no_source_change",
+      "patch": {
+        "loc_changed": 4,
+        "source_loc": 0,
+        "test_loc": 0,
+        "file_count": 1,
+        "source_file_count": 0,
+        "test_file_count": 0,
+        "has_test_change": false,
+        "by_kind": {
+          "source": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "test": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "doc": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "config": {
+            "file_count": 1,
+            "added": 2,
+            "deleted": 2,
+            "loc_changed": 4,
+            "binary_file_count": 0
+          }
+        },
+        "files": [
+          {
+            "path": ".pre-commit-config.yaml",
+            "added": 2,
+            "removed": 2,
+            "kind": "config"
+          }
+        ]
+      },
+      "source_analysis": []
+    },
+    {
+      "sha": "d26b1c5ee543b5c8ae583dc29f646669d833bcd3",
+      "base_sha": "e03e818114e46eac403383ca3ca1a70caeaa9cad",
+      "subject": "Add support for Python 3.14 (#623)",
+      "pr_number": 623,
+      "reason": "no_source_change",
+      "patch": {
+        "loc_changed": 15,
+        "source_loc": 0,
+        "test_loc": 0,
+        "file_count": 3,
+        "source_file_count": 0,
+        "test_file_count": 0,
+        "has_test_change": false,
+        "by_kind": {
+          "source": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "test": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "doc": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "config": {
+            "file_count": 3,
+            "added": 13,
+            "deleted": 2,
+            "loc_changed": 15,
+            "binary_file_count": 0
+          }
+        },
+        "files": [
+          {
+            "path": ".github/workflows/main.yml",
+            "added": 11,
+            "removed": 1,
+            "kind": "config"
+          },
+          {
+            "path": "pyproject.toml",
+            "added": 1,
+            "removed": 0,
+            "kind": "config"
+          },
+          {
+            "path": "tox.ini",
+            "added": 1,
+            "removed": 1,
+            "kind": "config"
+          }
+        ]
+      },
+      "source_analysis": []
+    },
+    {
+      "sha": "e03e818114e46eac403383ca3ca1a70caeaa9cad",
+      "base_sha": "9762d31b68501e4b1af6448bb781fa9890002f8f",
+      "subject": "[pre-commit.ci] pre-commit autoupdate (#622)",
+      "pr_number": 622,
+      "reason": "no_source_change",
+      "patch": {
+        "loc_changed": 2,
+        "source_loc": 0,
+        "test_loc": 0,
+        "file_count": 1,
+        "source_file_count": 0,
+        "test_file_count": 0,
+        "has_test_change": false,
+        "by_kind": {
+          "source": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "test": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "doc": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "config": {
+            "file_count": 1,
+            "added": 1,
+            "deleted": 1,
+            "loc_changed": 2,
+            "binary_file_count": 0
+          }
+        },
+        "files": [
+          {
+            "path": ".pre-commit-config.yaml",
+            "added": 1,
+            "removed": 1,
+            "kind": "config"
+          }
+        ]
+      },
+      "source_analysis": []
+    },
+    {
+      "sha": "9762d31b68501e4b1af6448bb781fa9890002f8f",
+      "base_sha": "eddd37a3565b951128b9168cbf56b3f20fffa322",
+      "subject": "[pre-commit.ci] pre-commit autoupdate (#620)",
+      "pr_number": 620,
+      "reason": "no_source_change",
+      "patch": {
+        "loc_changed": 2,
+        "source_loc": 0,
+        "test_loc": 0,
+        "file_count": 1,
+        "source_file_count": 0,
+        "test_file_count": 0,
+        "has_test_change": false,
+        "by_kind": {
+          "source": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "test": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "doc": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "config": {
+            "file_count": 1,
+            "added": 1,
+            "deleted": 1,
+            "loc_changed": 2,
+            "binary_file_count": 0
+          }
+        },
+        "files": [
+          {
+            "path": ".pre-commit-config.yaml",
+            "added": 1,
+            "removed": 1,
+            "kind": "config"
+          }
+        ]
+      },
+      "source_analysis": []
+    },
+    {
+      "sha": "eddd37a3565b951128b9168cbf56b3f20fffa322",
+      "base_sha": "252184c5da930e86ff96afb7adec237ca456b2fa",
+      "subject": "build(deps): bump actions/download-artifact from 5 to 6 (#619)",
+      "pr_number": 619,
+      "reason": "no_source_change",
+      "patch": {
+        "loc_changed": 4,
+        "source_loc": 0,
+        "test_loc": 0,
+        "file_count": 1,
+        "source_file_count": 0,
+        "test_file_count": 0,
+        "has_test_change": false,
+        "by_kind": {
+          "source": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "test": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "doc": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "config": {
+            "file_count": 1,
+            "added": 2,
+            "deleted": 2,
+            "loc_changed": 4,
+            "binary_file_count": 0
+          }
+        },
+        "files": [
+          {
+            "path": ".github/workflows/main.yml",
+            "added": 2,
+            "removed": 2,
+            "kind": "config"
+          }
+        ]
+      },
+      "source_analysis": []
+    },
+    {
+      "sha": "252184c5da930e86ff96afb7adec237ca456b2fa",
+      "base_sha": "37d3aa31989112a1cc602e68c14ea86c786b6610",
+      "subject": "[pre-commit.ci] pre-commit autoupdate (#612)",
+      "pr_number": 612,
+      "reason": "no_source_change",
+      "patch": {
+        "loc_changed": 2,
+        "source_loc": 0,
+        "test_loc": 0,
+        "file_count": 1,
+        "source_file_count": 0,
+        "test_file_count": 0,
+        "has_test_change": false,
+        "by_kind": {
+          "source": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "test": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "doc": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "config": {
+            "file_count": 1,
+            "added": 1,
+            "deleted": 1,
+            "loc_changed": 2,
+            "binary_file_count": 0
+          }
+        },
+        "files": [
+          {
+            "path": ".pre-commit-config.yaml",
+            "added": 1,
+            "removed": 1,
+            "kind": "config"
+          }
+        ]
+      },
+      "source_analysis": []
+    },
+    {
+      "sha": "37d3aa31989112a1cc602e68c14ea86c786b6610",
+      "base_sha": "cbe16503c1773ca6192cd53e5d7352881d77eabd",
+      "subject": "[pre-commit.ci] pre-commit autoupdate (#610)",
+      "pr_number": 610,
+      "reason": "no_source_change",
+      "patch": {
+        "loc_changed": 4,
+        "source_loc": 0,
+        "test_loc": 0,
+        "file_count": 1,
+        "source_file_count": 0,
+        "test_file_count": 0,
+        "has_test_change": false,
+        "by_kind": {
+          "source": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "test": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "doc": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "config": {
+            "file_count": 1,
+            "added": 2,
+            "deleted": 2,
+            "loc_changed": 4,
+            "binary_file_count": 0
+          }
+        },
+        "files": [
+          {
+            "path": ".pre-commit-config.yaml",
+            "added": 2,
+            "removed": 2,
+            "kind": "config"
+          }
+        ]
+      },
+      "source_analysis": []
+    },
+    {
+      "sha": "cbe16503c1773ca6192cd53e5d7352881d77eabd",
+      "base_sha": "92cacb28476c9df7447213ec0c796d02923a4a3c",
+      "subject": "Merge pull request #609 from pytest-dev/pre-commit-ci-update-config",
+      "pr_number": 609,
+      "reason": "no_source_change",
+      "patch": {
+        "loc_changed": 15,
+        "source_loc": 0,
+        "test_loc": 0,
+        "file_count": 2,
+        "source_file_count": 0,
+        "test_file_count": 0,
+        "has_test_change": false,
+        "by_kind": {
+          "source": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "test": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "doc": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "config": {
+            "file_count": 2,
+            "added": 8,
+            "deleted": 7,
+            "loc_changed": 15,
+            "binary_file_count": 0
+          }
+        },
+        "files": [
+          {
+            "path": ".github/workflows/main.yml",
+            "added": 6,
+            "removed": 5,
+            "kind": "config"
+          },
+          {
+            "path": ".pre-commit-config.yaml",
+            "added": 2,
+            "removed": 2,
+            "kind": "config"
+          }
+        ]
+      },
+      "source_analysis": []
+    },
+    {
+      "sha": "92cacb28476c9df7447213ec0c796d02923a4a3c",
+      "base_sha": "6ccaabcaf2d84da187c48f357b5099386fd1279e",
+      "subject": "[pre-commit.ci] pre-commit autoupdate (#607)",
+      "pr_number": 607,
+      "reason": "no_source_change",
+      "patch": {
+        "loc_changed": 4,
+        "source_loc": 0,
+        "test_loc": 0,
+        "file_count": 1,
+        "source_file_count": 0,
+        "test_file_count": 0,
+        "has_test_change": false,
+        "by_kind": {
+          "source": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "test": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "doc": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "config": {
+            "file_count": 1,
+            "added": 2,
+            "deleted": 2,
+            "loc_changed": 4,
+            "binary_file_count": 0
+          }
+        },
+        "files": [
+          {
+            "path": ".pre-commit-config.yaml",
+            "added": 2,
+            "removed": 2,
+            "kind": "config"
+          }
+        ]
+      },
+      "source_analysis": []
+    },
+    {
+      "sha": "6ccaabcaf2d84da187c48f357b5099386fd1279e",
+      "base_sha": "1434d9a0cced694123394df7f6bcbbbe16f7168f",
+      "subject": "[pre-commit.ci] pre-commit autoupdate (#606)",
+      "pr_number": 606,
+      "reason": "no_source_change",
+      "patch": {
+        "loc_changed": 4,
+        "source_loc": 0,
+        "test_loc": 0,
+        "file_count": 1,
+        "source_file_count": 0,
+        "test_file_count": 0,
+        "has_test_change": false,
+        "by_kind": {
+          "source": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "test": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "doc": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "config": {
+            "file_count": 1,
+            "added": 2,
+            "deleted": 2,
+            "loc_changed": 4,
+            "binary_file_count": 0
+          }
+        },
+        "files": [
+          {
+            "path": ".pre-commit-config.yaml",
+            "added": 2,
+            "removed": 2,
+            "kind": "config"
+          }
+        ]
+      },
+      "source_analysis": []
+    },
+    {
+      "sha": "1434d9a0cced694123394df7f6bcbbbe16f7168f",
+      "base_sha": "a1514939a240bc72567281e30d000bed9fe7e057",
+      "subject": "build(deps): bump actions/setup-python from 5 to 6 (#605)",
+      "pr_number": 605,
+      "reason": "no_source_change",
+      "patch": {
+        "loc_changed": 2,
+        "source_loc": 0,
+        "test_loc": 0,
+        "file_count": 1,
+        "source_file_count": 0,
+        "test_file_count": 0,
+        "has_test_change": false,
+        "by_kind": {
+          "source": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "test": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "doc": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "config": {
+            "file_count": 1,
+            "added": 1,
+            "deleted": 1,
+            "loc_changed": 2,
+            "binary_file_count": 0
+          }
+        },
+        "files": [
+          {
+            "path": ".github/workflows/main.yml",
+            "added": 1,
+            "removed": 1,
+            "kind": "config"
+          }
+        ]
+      },
+      "source_analysis": []
+    },
+    {
+      "sha": "a1514939a240bc72567281e30d000bed9fe7e057",
+      "base_sha": "2d0d4772e8afeb8ec19240af1cd3db621cacef5f",
+      "subject": "build(deps): bump pypa/gh-action-pypi-publish in /.github/workflows (#604)",
+      "pr_number": 604,
+      "reason": "no_source_change",
+      "patch": {
+        "loc_changed": 2,
+        "source_loc": 0,
+        "test_loc": 0,
+        "file_count": 1,
+        "source_file_count": 0,
+        "test_file_count": 0,
+        "has_test_change": false,
+        "by_kind": {
+          "source": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "test": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "doc": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "config": {
+            "file_count": 1,
+            "added": 1,
+            "deleted": 1,
+            "loc_changed": 2,
+            "binary_file_count": 0
+          }
+        },
+        "files": [
+          {
+            "path": ".github/workflows/main.yml",
+            "added": 1,
+            "removed": 1,
+            "kind": "config"
+          }
+        ]
+      },
+      "source_analysis": []
+    },
+    {
+      "sha": "2d0d4772e8afeb8ec19240af1cd3db621cacef5f",
+      "base_sha": "f2e9fa2575cc9db3f7bbe81204f2910c86a64715",
+      "subject": "[pre-commit.ci] pre-commit autoupdate (#603)",
+      "pr_number": 603,
+      "reason": "no_source_change",
+      "patch": {
+        "loc_changed": 2,
+        "source_loc": 0,
+        "test_loc": 0,
+        "file_count": 1,
+        "source_file_count": 0,
+        "test_file_count": 0,
+        "has_test_change": false,
+        "by_kind": {
+          "source": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "test": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "doc": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "config": {
+            "file_count": 1,
+            "added": 1,
+            "deleted": 1,
+            "loc_changed": 2,
+            "binary_file_count": 0
+          }
+        },
+        "files": [
+          {
+            "path": ".pre-commit-config.yaml",
+            "added": 1,
+            "removed": 1,
+            "kind": "config"
+          }
+        ]
+      },
+      "source_analysis": []
+    },
+    {
+      "sha": "f2e9fa2575cc9db3f7bbe81204f2910c86a64715",
+      "base_sha": "2d54873369527b5880923ffcd83e4dbbad380837",
+      "subject": "[pre-commit.ci] pre-commit autoupdate (#602)",
+      "pr_number": 602,
+      "reason": "no_source_change",
+      "patch": {
+        "loc_changed": 2,
+        "source_loc": 0,
+        "test_loc": 0,
+        "file_count": 1,
+        "source_file_count": 0,
+        "test_file_count": 0,
+        "has_test_change": false,
+        "by_kind": {
+          "source": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "test": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "doc": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "config": {
+            "file_count": 1,
+            "added": 1,
+            "deleted": 1,
+            "loc_changed": 2,
+            "binary_file_count": 0
+          }
+        },
+        "files": [
+          {
+            "path": ".pre-commit-config.yaml",
+            "added": 1,
+            "removed": 1,
+            "kind": "config"
+          }
+        ]
+      },
+      "source_analysis": []
+    },
+    {
+      "sha": "2d54873369527b5880923ffcd83e4dbbad380837",
+      "base_sha": "67096f3f523996718567d260e85081733adb206c",
+      "subject": "[pre-commit.ci] pre-commit autoupdate (#601)",
+      "pr_number": 601,
+      "reason": "no_source_change",
+      "patch": {
+        "loc_changed": 2,
+        "source_loc": 0,
+        "test_loc": 0,
+        "file_count": 1,
+        "source_file_count": 0,
+        "test_file_count": 0,
+        "has_test_change": false,
+        "by_kind": {
+          "source": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "test": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "doc": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "config": {
+            "file_count": 1,
+            "added": 1,
+            "deleted": 1,
+            "loc_changed": 2,
+            "binary_file_count": 0
+          }
+        },
+        "files": [
+          {
+            "path": ".pre-commit-config.yaml",
+            "added": 1,
+            "removed": 1,
+            "kind": "config"
+          }
+        ]
+      },
+      "source_analysis": []
+    },
+    {
+      "sha": "67096f3f523996718567d260e85081733adb206c",
+      "base_sha": "519f1e5a770aa5f185f1d1cb7dad96e46a6ac634",
+      "subject": "[pre-commit.ci] pre-commit autoupdate (#598)",
+      "pr_number": 598,
+      "reason": "no_source_change",
+      "patch": {
+        "loc_changed": 2,
+        "source_loc": 0,
+        "test_loc": 0,
+        "file_count": 1,
+        "source_file_count": 0,
+        "test_file_count": 0,
+        "has_test_change": false,
+        "by_kind": {
+          "source": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "test": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "doc": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "config": {
+            "file_count": 1,
+            "added": 1,
+            "deleted": 1,
+            "loc_changed": 2,
+            "binary_file_count": 0
+          }
+        },
+        "files": [
+          {
+            "path": ".pre-commit-config.yaml",
+            "added": 1,
+            "removed": 1,
+            "kind": "config"
+          }
+        ]
+      },
+      "source_analysis": []
+    },
+    {
+      "sha": "519f1e5a770aa5f185f1d1cb7dad96e46a6ac634",
+      "base_sha": "5440d6e37ad2ba5b7a36f3e2036e64d66706a3f0",
+      "subject": "build(deps): bump actions/download-artifact from 4 to 5 (#599)",
+      "pr_number": 599,
+      "reason": "no_source_change",
+      "patch": {
+        "loc_changed": 4,
+        "source_loc": 0,
+        "test_loc": 0,
+        "file_count": 1,
+        "source_file_count": 0,
+        "test_file_count": 0,
+        "has_test_change": false,
+        "by_kind": {
+          "source": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "test": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "doc": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "config": {
+            "file_count": 1,
+            "added": 2,
+            "deleted": 2,
+            "loc_changed": 4,
+            "binary_file_count": 0
+          }
+        },
+        "files": [
+          {
+            "path": ".github/workflows/main.yml",
+            "added": 2,
+            "removed": 2,
+            "kind": "config"
+          }
+        ]
+      },
+      "source_analysis": []
+    },
+    {
+      "sha": "5440d6e37ad2ba5b7a36f3e2036e64d66706a3f0",
+      "base_sha": "f403ace3050c9d1580f705e899a5d3cffc62e2c2",
+      "subject": "build(deps): bump actions/checkout from 4 to 5 (#600)",
+      "pr_number": 600,
+      "reason": "no_source_change",
+      "patch": {
+        "loc_changed": 4,
+        "source_loc": 0,
+        "test_loc": 0,
+        "file_count": 1,
+        "source_file_count": 0,
+        "test_file_count": 0,
+        "has_test_change": false,
+        "by_kind": {
+          "source": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "test": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "doc": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "config": {
+            "file_count": 1,
+            "added": 2,
+            "deleted": 2,
+            "loc_changed": 4,
+            "binary_file_count": 0
+          }
+        },
+        "files": [
+          {
+            "path": ".github/workflows/main.yml",
+            "added": 2,
+            "removed": 2,
+            "kind": "config"
+          }
+        ]
+      },
+      "source_analysis": []
+    },
+    {
+      "sha": "f403ace3050c9d1580f705e899a5d3cffc62e2c2",
+      "base_sha": "bd4e24e10a7def69189ac68045da4a05871ee77d",
+      "subject": "[pre-commit.ci] pre-commit autoupdate (#597)",
+      "pr_number": 597,
+      "reason": "no_source_change",
+      "patch": {
+        "loc_changed": 4,
+        "source_loc": 0,
+        "test_loc": 0,
+        "file_count": 1,
+        "source_file_count": 0,
+        "test_file_count": 0,
+        "has_test_change": false,
+        "by_kind": {
+          "source": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "test": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "doc": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "config": {
+            "file_count": 1,
+            "added": 2,
+            "deleted": 2,
+            "loc_changed": 4,
+            "binary_file_count": 0
+          }
+        },
+        "files": [
+          {
+            "path": ".pre-commit-config.yaml",
+            "added": 2,
+            "removed": 2,
+            "kind": "config"
+          }
+        ]
+      },
+      "source_analysis": []
+    },
+    {
+      "sha": "bd4e24e10a7def69189ac68045da4a05871ee77d",
+      "base_sha": "63fba35fd0f2973066cc7fac6c98b533052b614a",
+      "subject": "[pre-commit.ci] pre-commit autoupdate (#596)",
+      "pr_number": 596,
+      "reason": "no_source_change",
+      "patch": {
+        "loc_changed": 2,
+        "source_loc": 0,
+        "test_loc": 0,
+        "file_count": 1,
+        "source_file_count": 0,
+        "test_file_count": 0,
+        "has_test_change": false,
+        "by_kind": {
+          "source": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "test": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "doc": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "config": {
+            "file_count": 1,
+            "added": 1,
+            "deleted": 1,
+            "loc_changed": 2,
+            "binary_file_count": 0
+          }
+        },
+        "files": [
+          {
+            "path": ".pre-commit-config.yaml",
+            "added": 1,
+            "removed": 1,
+            "kind": "config"
+          }
+        ]
+      },
+      "source_analysis": []
+    },
+    {
+      "sha": "63fba35fd0f2973066cc7fac6c98b533052b614a",
+      "base_sha": "646fc4ae76b17f26d26a58369223b7f4548cbc95",
+      "subject": "[pre-commit.ci] pre-commit autoupdate (#595)",
+      "pr_number": 595,
+      "reason": "no_source_change",
+      "patch": {
+        "loc_changed": 4,
+        "source_loc": 0,
+        "test_loc": 0,
+        "file_count": 1,
+        "source_file_count": 0,
+        "test_file_count": 0,
+        "has_test_change": false,
+        "by_kind": {
+          "source": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "test": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "doc": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "config": {
+            "file_count": 1,
+            "added": 2,
+            "deleted": 2,
+            "loc_changed": 4,
+            "binary_file_count": 0
+          }
+        },
+        "files": [
+          {
+            "path": ".pre-commit-config.yaml",
+            "added": 2,
+            "removed": 2,
+            "kind": "config"
+          }
+        ]
+      },
+      "source_analysis": []
+    },
+    {
+      "sha": "646fc4ae76b17f26d26a58369223b7f4548cbc95",
+      "base_sha": "08743295e5c6ee24c27ec36c9986866123deca86",
+      "subject": "[pre-commit.ci] pre-commit autoupdate (#594)",
+      "pr_number": 594,
+      "reason": "no_source_change",
+      "patch": {
+        "loc_changed": 2,
+        "source_loc": 0,
+        "test_loc": 0,
+        "file_count": 1,
+        "source_file_count": 0,
+        "test_file_count": 0,
+        "has_test_change": false,
+        "by_kind": {
+          "source": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "test": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "doc": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "config": {
+            "file_count": 1,
+            "added": 1,
+            "deleted": 1,
+            "loc_changed": 2,
+            "binary_file_count": 0
+          }
+        },
+        "files": [
+          {
+            "path": ".pre-commit-config.yaml",
+            "added": 1,
+            "removed": 1,
+            "kind": "config"
+          }
+        ]
+      },
+      "source_analysis": []
+    },
+    {
+      "sha": "08743295e5c6ee24c27ec36c9986866123deca86",
+      "base_sha": "189e3353b8f8f48bd958ef80cc9914edae52be43",
+      "subject": "[pre-commit.ci] pre-commit autoupdate (#593)",
+      "pr_number": 593,
+      "reason": "no_source_change",
+      "patch": {
+        "loc_changed": 2,
+        "source_loc": 0,
+        "test_loc": 0,
+        "file_count": 1,
+        "source_file_count": 0,
+        "test_file_count": 0,
+        "has_test_change": false,
+        "by_kind": {
+          "source": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "test": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "doc": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "config": {
+            "file_count": 1,
+            "added": 1,
+            "deleted": 1,
+            "loc_changed": 2,
+            "binary_file_count": 0
+          }
+        },
+        "files": [
+          {
+            "path": ".pre-commit-config.yaml",
+            "added": 1,
+            "removed": 1,
+            "kind": "config"
+          }
+        ]
+      },
+      "source_analysis": []
+    },
+    {
+      "sha": "189e3353b8f8f48bd958ef80cc9914edae52be43",
+      "base_sha": "1672de415f164aca2b400b06245224718a0c46b1",
+      "subject": "[pre-commit.ci] pre-commit autoupdate (#592)",
+      "pr_number": 592,
+      "reason": "no_source_change",
+      "patch": {
+        "loc_changed": 2,
+        "source_loc": 0,
+        "test_loc": 0,
+        "file_count": 1,
+        "source_file_count": 0,
+        "test_file_count": 0,
+        "has_test_change": false,
+        "by_kind": {
+          "source": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "test": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "doc": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "config": {
+            "file_count": 1,
+            "added": 1,
+            "deleted": 1,
+            "loc_changed": 2,
+            "binary_file_count": 0
+          }
+        },
+        "files": [
+          {
+            "path": ".pre-commit-config.yaml",
+            "added": 1,
+            "removed": 1,
+            "kind": "config"
+          }
+        ]
+      },
+      "source_analysis": []
+    },
+    {
+      "sha": "1f4844401b0062428aec9a9d0a49d3ca4490e218",
+      "base_sha": "5b803f96039bac77b4a4e6e7f4e0820b6fb89b68",
+      "subject": "Merge pull request #589 from RonnyPfannschmidt/fix-url-kedro",
+      "pr_number": 589,
+      "reason": "no_source_change",
+      "patch": {
+        "loc_changed": 2,
+        "source_loc": 0,
+        "test_loc": 0,
+        "file_count": 1,
+        "source_file_count": 0,
+        "test_file_count": 0,
+        "has_test_change": false,
+        "by_kind": {
+          "source": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "test": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "doc": {
+            "file_count": 1,
+            "added": 1,
+            "deleted": 1,
+            "loc_changed": 2,
+            "binary_file_count": 0
+          },
+          "config": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          }
+        },
+        "files": [
+          {
+            "path": "docs/conf.py",
+            "added": 1,
+            "removed": 1,
+            "kind": "doc"
+          }
+        ]
+      },
+      "source_analysis": []
+    },
+    {
+      "sha": "5b803f96039bac77b4a4e6e7f4e0820b6fb89b68",
+      "base_sha": "1dd83b6c5a203eec0fc745d99486910053be993c",
+      "subject": "Merge pull request #587 from RonnyPfannschmidt/ruff-hook-new-name",
+      "pr_number": 587,
+      "reason": "no_source_change",
+      "patch": {
+        "loc_changed": 2,
+        "source_loc": 0,
+        "test_loc": 0,
+        "file_count": 1,
+        "source_file_count": 0,
+        "test_file_count": 0,
+        "has_test_change": false,
+        "by_kind": {
+          "source": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "test": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "doc": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "config": {
+            "file_count": 1,
+            "added": 1,
+            "deleted": 1,
+            "loc_changed": 2,
+            "binary_file_count": 0
+          }
+        },
+        "files": [
+          {
+            "path": ".pre-commit-config.yaml",
+            "added": 1,
+            "removed": 1,
+            "kind": "config"
+          }
+        ]
+      },
+      "source_analysis": []
+    },
+    {
+      "sha": "1dd83b6c5a203eec0fc745d99486910053be993c",
+      "base_sha": "827475e5dc629207bd62e348472142de52efd429",
+      "subject": "Merge pull request #524 from RonnyPfannschmidt/baipp",
+      "pr_number": 524,
+      "reason": "no_source_change",
+      "patch": {
+        "loc_changed": 48,
+        "source_loc": 0,
+        "test_loc": 0,
+        "file_count": 2,
+        "source_file_count": 0,
+        "test_file_count": 0,
+        "has_test_change": false,
+        "by_kind": {
+          "source": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "test": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "doc": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "config": {
+            "file_count": 2,
+            "added": 26,
+            "deleted": 22,
+            "loc_changed": 48,
+            "binary_file_count": 0
+          }
+        },
+        "files": [
+          {
+            "path": ".github/workflows/main.yml",
+            "added": 24,
+            "removed": 20,
+            "kind": "config"
+          },
+          {
+            "path": "pyproject.toml",
+            "added": 2,
+            "removed": 2,
+            "kind": "config"
+          }
+        ]
+      },
+      "source_analysis": []
+    },
+    {
+      "sha": "827475e5dc629207bd62e348472142de52efd429",
+      "base_sha": "1d607117ff037f2f4d407b89a243d91d80edfea6",
+      "subject": "[pre-commit.ci] pre-commit autoupdate (#586)",
+      "pr_number": 586,
+      "reason": "no_source_change",
+      "patch": {
+        "loc_changed": 4,
+        "source_loc": 0,
+        "test_loc": 0,
+        "file_count": 1,
+        "source_file_count": 0,
+        "test_file_count": 0,
+        "has_test_change": false,
+        "by_kind": {
+          "source": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "test": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "doc": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "config": {
+            "file_count": 1,
+            "added": 2,
+            "deleted": 2,
+            "loc_changed": 4,
+            "binary_file_count": 0
+          }
+        },
+        "files": [
+          {
+            "path": ".pre-commit-config.yaml",
+            "added": 2,
+            "removed": 2,
+            "kind": "config"
+          }
+        ]
+      },
+      "source_analysis": []
+    },
+    {
+      "sha": "1d607117ff037f2f4d407b89a243d91d80edfea6",
+      "base_sha": "cc9671debbcc699841ec7e1205578cf79211a706",
+      "subject": "[pre-commit.ci] pre-commit autoupdate (#583)",
+      "pr_number": 583,
+      "reason": "no_source_change",
+      "patch": {
+        "loc_changed": 2,
+        "source_loc": 0,
+        "test_loc": 0,
+        "file_count": 1,
+        "source_file_count": 0,
+        "test_file_count": 0,
+        "has_test_change": false,
+        "by_kind": {
+          "source": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "test": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "doc": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "config": {
+            "file_count": 1,
+            "added": 1,
+            "deleted": 1,
+            "loc_changed": 2,
+            "binary_file_count": 0
+          }
+        },
+        "files": [
+          {
+            "path": ".pre-commit-config.yaml",
+            "added": 1,
+            "removed": 1,
+            "kind": "config"
+          }
+        ]
+      },
+      "source_analysis": []
+    },
+    {
+      "sha": "cc9671debbcc699841ec7e1205578cf79211a706",
+      "base_sha": "f0d094072e19388f8f96c5f5d61db8ff72ca2933",
+      "subject": "[pre-commit.ci] pre-commit autoupdate (#582)",
+      "pr_number": 582,
+      "reason": "no_source_change",
+      "patch": {
+        "loc_changed": 4,
+        "source_loc": 0,
+        "test_loc": 0,
+        "file_count": 1,
+        "source_file_count": 0,
+        "test_file_count": 0,
+        "has_test_change": false,
+        "by_kind": {
+          "source": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "test": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "doc": {
+            "file_count": 0,
+            "added": 0,
+            "deleted": 0,
+            "loc_changed": 0,
+            "binary_file_count": 0
+          },
+          "config": {
+            "file_count": 1,
+            "added": 2,
+            "deleted": 2,
+            "loc_changed": 4,
+            "binary_file_count": 0
+          }
+        },
+        "files": [
+          {
+            "path": ".pre-commit-config.yaml",
+            "added": 2,
+            "removed": 2,
+            "kind": "config"
+          }
+        ]
+      },
+      "source_analysis": []
+    }
+  ],
+  "rejection_reasons": {
+    "no_source_change": 89,
+    "too_many_source_files": 1,
+    "no_executable_source_change": 1
+  },
+  "meaning": "Initial diff shortlist only; PR completeness, issue linkage, problem statements and runtime behavior are unverified."
+}

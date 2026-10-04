@@ -1,0 +1,218 @@
+{
+  "version": "pluggy-pipeline-v1-audited",
+  "ref": "d23f110b240d67ee503eba0082f30cae73f3e1e3",
+  "history_scope": {
+    "max_commits": 200,
+    "max_changes": 100,
+    "candidates": 50
+  },
+  "original_selected": 9,
+  "selected_after_config_classification_fix": 8,
+  "candidate_cap_hit": false,
+  "decisions": [
+    {
+      "id": "09baae8733141971e3109a667b6c12dcce9afa29",
+      "base_sha": "54c95345d24edbe1b06646c931d6dcfcfa6683c2",
+      "fixed_sha": "09baae8733141971e3109a667b6c12dcce9afa29",
+      "pr_number": 714,
+      "pr_url": "https://github.com/pytest-dev/pluggy/pull/714",
+      "subject": "Merge pull request #714 from pytest-dev/pre-commit-ci-update-config",
+      "agent_decision": "exclude",
+      "audited_decision": "exclude",
+      "reason": "Mechanical lint/style cleanup; no demonstrated task-relevant behavior difference.",
+      "observed_existing_test_suite": {
+        "fail_to_pass": [],
+        "pass_to_pass_count": 141,
+        "pass_to_fail": []
+      },
+      "training_ready": false,
+      "scope": "Initial candidate corpus decision under the recorded environment; not a guarantee of all behavior or a completed training task specification."
+    },
+    {
+      "id": "735edb0ab69fdd6c4940606e693c098e93583afb",
+      "base_sha": "cba86adc815a68a09f2765e70ed0cca305cc6ce2",
+      "fixed_sha": "735edb0ab69fdd6c4940606e693c098e93583afb",
+      "pr_number": 617,
+      "pr_url": "https://github.com/pytest-dev/pluggy/pull/617",
+      "subject": "Merge pull request #617 from RonnyPfannschmidt/refactor/setuptools-compat-module",
+      "agent_decision": "ready_for_runtime_validation",
+      "audited_decision": "include_in_v1_candidate_corpus",
+      "reason": "Public distribution-listing feature is meaningful. Count the public API test as the useful F2P; three private-module import failures are structural evidence, not three independent bug reproductions.",
+      "observed_existing_test_suite": {
+        "fail_to_pass": [
+          "testing.test_details::test_dist_facade_identity_equality_and_hash",
+          "testing.test_details::test_dist_facade_list_attributes",
+          "testing.test_details::test_dist_facade_project_name_and_delegation",
+          "testing.test_pluginmanager::test_load_setuptools_instantiation"
+        ],
+        "pass_to_pass_count": 137,
+        "pass_to_fail": []
+      },
+      "training_ready": false,
+      "scope": "Initial candidate corpus decision under the recorded environment; not a guarantee of all behavior or a completed training task specification."
+    },
+    {
+      "id": "5d7bd2cc083571466f44f9683136b7d8f62b88bf",
+      "base_sha": "59e66fdb231bf47ce5e0b8ed75b788820b135c34",
+      "fixed_sha": "5d7bd2cc083571466f44f9683136b7d8f62b88bf",
+      "pr_number": 632,
+      "pr_url": "https://github.com/pytest-dev/pluggy/pull/632",
+      "subject": "Merge pull request #632 from RonnyPfannschmidt/varnames-no-resolve-types",
+      "agent_decision": "ready_for_runtime_validation",
+      "audited_decision": "include_in_v1_candidate_corpus",
+      "reason": "Deferred-annotation compatibility is a real bug. Independent public registration regression reproduces issue #629 on base and passes on fixed twice; bundled tests primarily exposed warning/API changes.",
+      "observed_existing_test_suite": {
+        "fail_to_pass": [
+          "testing.test_helpers::test_varnames_legacy_noself_no_warn_with_self",
+          "testing.test_helpers::test_varnames_legacy_noself_suppressed_for_timeout_hooks",
+          "testing.test_helpers::test_varnames_legacy_noself_warns",
+          "testing.test_warnings::test_hookspec_missing_self_warns"
+        ],
+        "pass_to_pass_count": 135,
+        "pass_to_fail": []
+      },
+      "training_ready": false,
+      "scope": "Initial candidate corpus decision under the recorded environment; not a guarantee of all behavior or a completed training task specification."
+    },
+    {
+      "id": "20d8143f127a4d7526dbbea441857b4b80ec8bdd",
+      "base_sha": "6e1d0f13a259776bbf137f90bd7ab8b4474f68e7",
+      "fixed_sha": "20d8143f127a4d7526dbbea441857b4b80ec8bdd",
+      "pr_number": 646,
+      "pr_url": "https://github.com/pytest-dev/pluggy/pull/646",
+      "subject": "Fix _remove_plugin to remove all hookimpls and get_hookcallers to deduplicate (#646)",
+      "agent_decision": "ready_for_runtime_validation",
+      "audited_decision": "include_in_v1_candidate_corpus",
+      "reason": "Duplicate hook caller bug has a direct repeated assertion F2P and 125 P2P tests. The other added unregister test passes on both and is preservation coverage.",
+      "observed_existing_test_suite": {
+        "fail_to_pass": [
+          "testing.test_pluginmanager::test_get_hookcallers_no_duplicates"
+        ],
+        "pass_to_pass_count": 125,
+        "pass_to_fail": []
+      },
+      "training_ready": false,
+      "scope": "Initial candidate corpus decision under the recorded environment; not a guarantee of all behavior or a completed training task specification."
+    },
+    {
+      "id": "108f2250fae741ad9e4b22c4770e02b7d0aa24ef",
+      "base_sha": "fd68617c03586508b1b9d1fa4b7027a74c333264",
+      "fixed_sha": "108f2250fae741ad9e4b22c4770e02b7d0aa24ef",
+      "pr_number": 639,
+      "pr_url": "https://github.com/pytest-dev/pluggy/pull/639",
+      "subject": "Merge pull request #639 from Priya-Yanamandra/test/downstream-python-lsp",
+      "agent_decision": "needs_environment_review",
+      "audited_decision": "hold_tooling_environment",
+      "reason": "Useful downstream tooling rather than core library fix. Existing tests do not execute the script; mutable dependencies and || true need a separate reproducible test contract.",
+      "observed_existing_test_suite": {
+        "fail_to_pass": [],
+        "pass_to_pass_count": 124,
+        "pass_to_fail": []
+      },
+      "training_ready": false,
+      "scope": "Initial candidate corpus decision under the recorded environment; not a guarantee of all behavior or a completed training task specification."
+    },
+    {
+      "id": "584be1e372bab0f9db5a199652fc0c8a569db017",
+      "base_sha": "fc40456932ec7fb258b0c48ef3789b7cd7747647",
+      "fixed_sha": "584be1e372bab0f9db5a199652fc0c8a569db017",
+      "pr_number": 640,
+      "pr_url": "https://github.com/pytest-dev/pluggy/pull/640",
+      "subject": "Merge pull request #640 from pytest-dev/cleanups",
+      "agent_decision": "needs_regression_test",
+      "audited_decision": "hold_performance_or_supported_behavior_specification",
+      "reason": "Cleanup/performance work may be useful, but the agent-suggested wrapper-factory problem is rejected during registration on both versions. No supported-API F2P established; do not use that proposed problem statement.",
+      "observed_existing_test_suite": {
+        "fail_to_pass": [],
+        "pass_to_pass_count": 124,
+        "pass_to_fail": []
+      },
+      "training_ready": false,
+      "scope": "Initial candidate corpus decision under the recorded environment; not a guarantee of all behavior or a completed training task specification."
+    },
+    {
+      "id": "dbe21314fb947abb42da44953ae8d701a7ff4482",
+      "base_sha": "0c501acaca42f444f79d8a30466c12ee17b7c908",
+      "fixed_sha": "dbe21314fb947abb42da44953ae8d701a7ff4482",
+      "pr_number": 616,
+      "pr_url": "https://github.com/pytest-dev/pluggy/pull/616",
+      "subject": "Merge pull request #616 from RonnyPfannschmidt/refactor/require-python310",
+      "agent_decision": "needs_environment_review",
+      "audited_decision": "reject_reference_patch_for_v1",
+      "reason": "Independent tracing probe passes on base and fails on fixed twice: a registered falsey callable is no longer called. The 124 existing passing tests missed this behavior regression.",
+      "observed_existing_test_suite": {
+        "fail_to_pass": [],
+        "pass_to_pass_count": 124,
+        "pass_to_fail": []
+      },
+      "training_ready": false,
+      "scope": "Initial candidate corpus decision under the recorded environment; not a guarantee of all behavior or a completed training task specification."
+    },
+    {
+      "id": "0c501acaca42f444f79d8a30466c12ee17b7c908",
+      "base_sha": "ddb06db52979bbf310cd51eff2cf3711f4523a1c",
+      "fixed_sha": "0c501acaca42f444f79d8a30466c12ee17b7c908",
+      "pr_number": 615,
+      "pr_url": "https://github.com/pytest-dev/pluggy/pull/615",
+      "subject": "Merge pull request #615 from RonnyPfannschmidt/docs/add-claude-guidance",
+      "agent_decision": "exclude",
+      "audited_decision": "exclude",
+      "reason": "Agent configuration and guidance only. Fixed the settings JSON classification; the corrected filter now excludes it before sandbox work.",
+      "observed_existing_test_suite": {
+        "fail_to_pass": [],
+        "pass_to_pass_count": 124,
+        "pass_to_fail": []
+      },
+      "training_ready": false,
+      "scope": "Initial candidate corpus decision under the recorded environment; not a guarantee of all behavior or a completed training task specification."
+    },
+    {
+      "id": "1672de415f164aca2b400b06245224718a0c46b1",
+      "base_sha": "1f4844401b0062428aec9a9d0a49d3ca4490e218",
+      "fixed_sha": "1672de415f164aca2b400b06245224718a0c46b1",
+      "pr_number": 590,
+      "pr_url": "https://github.com/pytest-dev/pluggy/pull/590",
+      "subject": "Merge pull request #590 from RonnyPfannschmidt/version-lazy",
+      "agent_decision": "needs_regression_test",
+      "audited_decision": "hold_regression_test",
+      "reason": "Lazy version access is a plausible source-only task. Existing 124 tests provide no distinguishing F2P; needs an installed-package/lazy-lookup regression.",
+      "observed_existing_test_suite": {
+        "fail_to_pass": [],
+        "pass_to_pass_count": 124,
+        "pass_to_fail": []
+      },
+      "training_ready": false,
+      "scope": "Initial candidate corpus decision under the recorded environment; not a guarantee of all behavior or a completed training task specification."
+    },
+    {
+      "id": "7a700d09072b621dc151324b1eb54b40c9680c01",
+      "audited_decision": "defer_recovered_tooling_candidate",
+      "agent_decision": "needs_regression_test",
+      "reason": "Recover as tooling candidate: substantive downstream runner was rejected by the 10-source-file cap.",
+      "training_ready": false,
+      "sandbox_executed": false
+    },
+    {
+      "id": "2c1fd62786aeb465bc17331ff5aee320cb58ad95",
+      "audited_decision": "defer_recovered_tooling_candidate",
+      "agent_decision": "needs_regression_test",
+      "reason": "Retain optional coverage-tooling task: meaningful configuration effect despite no executable Python AST change.",
+      "training_ready": false,
+      "sandbox_executed": false
+    }
+  ],
+  "included_ids": [
+    "735edb0ab69fdd6c4940606e693c098e93583afb",
+    "5d7bd2cc083571466f44f9683136b7d8f62b88bf",
+    "20d8143f127a4d7526dbbea441857b4b80ec8bdd"
+  ],
+  "model_cost_usd": 0.10913158,
+  "limitations": [
+    "100 first-parent changes only; no completeness claim for older history.",
+    "Linux amd64 Docker Desktop runc, not gVisor/Firecracker; Python 3.14 except version-lazy candidate on 3.13.",
+    "Dependency set frozen by shared image after current resolution; not historical uv.lock replay. Synthetic SCM version 1.6.0 for archive packaging.",
+    "Paired tests replace the entire testing/ tree; relocated private imports need semantic audit.",
+    "Agents have read-only tools; additional probe executions were performed by the orchestrating assistant, not the OpenRouter reviewer.",
+    "PR merge SHAs verified against GitHub; closed issue references are textual claims plus issue state, not authoritative closing-event linkage."
+  ]
+}

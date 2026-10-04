@@ -87,18 +87,14 @@ class SelectionPolicy:
     # rejects one-line fixes, which are the most valuable candidates when
     # they arrive with a strong regression test.
     min_source_loc: int = 1
-    # Above this the PR is a refactor or a feature, not a fix: the diff stops
-    # being reconstructible from the issue text, so no agent can be expected
-    # to reproduce it and no reward signal means anything.
-    max_source_loc: int = 400
+    # Line counts describe scope; no default upper bound on a possible fix.
+    max_source_loc: int | None = None
     # A fix spread across many files is usually a rename or a sweep.
     max_source_files: int = 10
     # Test-only and docs-only diffs leave nothing to fix.
     require_source_change: bool = True
-    # Off by default: a fail-to-pass oracle needs a test change, but a
-    # diff-similarity task does not, and phase A shouldn't pre-judge which
-    # kind of task a candidate becomes. `has_test_change` is recorded on
-    # every candidate either way, so phase B can filter without re-mining.
+    # Existing tests or a later reproduction may expose a source-only fix.
+    # Record test changes here; runtime investigation decides their adequacy.
     require_test_change: bool = False
 
     def issue_rejection(self, issue: Issue) -> Rejection | None:
@@ -123,7 +119,7 @@ class SelectionPolicy:
             return Rejection.TOO_MANY_SOURCE_FILES
         if stats.source_loc < self.min_source_loc:
             return Rejection.DIFF_TOO_SMALL
-        if stats.source_loc > self.max_source_loc:
+        if self.max_source_loc is not None and stats.source_loc > self.max_source_loc:
             return Rejection.DIFF_TOO_LARGE
         return None
 
