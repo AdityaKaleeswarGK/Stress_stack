@@ -29,7 +29,9 @@ for r in report["rejected"]:
         row["paths"] = [f["path"] for f in r["patch"]["files"]]
     rejected.append(row)
 # How well does the commit message alone predict the project's own label?
-truth = [r for r in kept + rejected if r.get("kind_basis") == "changelog_fragment"]
+# The project's own label: a typed changelog fragment or a versioned release note.
+LABELLED = {"changelog_fragment", "patch_release_notes", "minor_release_notes"}
+truth = [r for r in kept + rejected if r.get("kind_basis") in LABELLED]
 agreement = Counter((r["kind"], r["message"]["kind"]) for r in truth)
 result = {"repo": repo, "summary": report["summary"], "rejection_reasons": report["rejection_reasons"],
           "seconds": {"gates": round(gated, 1), "total": round(time.monotonic() - started, 1)},

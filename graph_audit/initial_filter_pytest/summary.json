@@ -1,12 +1,12 @@
 {
   "repo": "pytest-dev/pytest",
   "summary": {
-    "kept": 195,
-    "dropped": 205,
+    "kept": 189,
+    "dropped": 211,
     "needs_enrichment": 0,
     "by_style": {
-      "merge_commit": 113,
-      "squash": 77,
+      "merge_commit": 111,
+      "squash": 73,
       "unknown": 5
     },
     "mainline_points": 400,
@@ -16,43 +16,43 @@
     "remaining_in_window": 0,
     "walk_since": null,
     "walk_until": null,
-    "selected": 195
+    "selected": 189
   },
   "rejection_reasons": {
     "no_source_change": 203,
-    "no_executable_source_change": 2
+    "no_executable_source_change": 8
   },
   "seconds": {
-    "gates": 65.5,
-    "total": 76.5
+    "gates": 61.0,
+    "total": 70.4
   },
   "kept_bins": {
     "by_kind": {
-      "bug_fix": 93,
-      "feature": 56,
-      "unknown": 27,
+      "bug_fix": 94,
+      "feature": 59,
+      "unknown": 17,
       "refactor": 15,
       "other": 4
     },
     "by_kind_basis": {
       "changelog_fragment": 146,
-      "none": 27,
-      "commit_message": 22
+      "commit_message": 26,
+      "none": 17
     },
     "by_size_tier": {
-      "single_file": 136,
+      "single_file": 130,
       "multi_file": 49,
       "wide": 10
     },
     "by_kind_and_test": {
-      "bug_fix|tested": 87,
-      "feature|tested": 51,
-      "unknown|tested": 15,
-      "unknown|untested": 12,
+      "bug_fix|tested": 88,
+      "feature|tested": 53,
+      "unknown|tested": 10,
       "refactor|untested": 8,
+      "unknown|untested": 7,
       "refactor|tested": 7,
+      "feature|untested": 6,
       "bug_fix|untested": 6,
-      "feature|untested": 5,
       "other|untested": 3,
       "other|tested": 1
     },
@@ -61,16 +61,18 @@
     "reverted_later": 0
   },
   "message_vs_changelog": {
-    "bug_fix <- msg bug_fix": 55,
-    "bug_fix <- msg unknown": 34,
-    "feature <- msg unknown": 27,
-    "other <- msg unknown": 18,
+    "bug_fix <- msg bug_fix": 65,
+    "feature <- msg unknown": 22,
+    "bug_fix <- msg unknown": 21,
     "feature <- msg bug_fix": 17,
-    "feature <- msg feature": 8,
-    "other <- msg other": 8,
+    "other <- msg other": 16,
+    "feature <- msg feature": 12,
+    "other <- msg unknown": 6,
+    "bug_fix <- msg feature": 4,
+    "feature <- msg refactor": 4,
+    "other <- msg feature": 3,
     "bug_fix <- msg refactor": 3,
-    "feature <- msg refactor": 3,
-    "bug_fix <- msg feature": 2,
-    "other <- msg bug_fix": 2
+    "other <- msg bug_fix": 3,
+    "bug_fix <- msg other": 1
   }
 }

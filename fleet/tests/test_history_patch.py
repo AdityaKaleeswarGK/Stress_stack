@@ -81,6 +81,31 @@ def test_source_files_whose_names_merely_contain_test_are_not_tests(path: str) -
     assert classify_path(path) is PathKind.SOURCE
 
 
+@pytest.mark.parametrize(
+    "path,expected",
+    [
+        # A library's own testing toolkit, shipped to its users.
+        ("django/test/client.py", PathKind.SOURCE),
+        ("numpy/testing/_private/utils.py", PathKind.SOURCE),
+        ("lib/sqlalchemy/testing/fixtures.py", PathKind.SOURCE),
+        ("src/pkg/testing/helpers.py", PathKind.SOURCE),
+        # Test suites, wherever they sit.
+        ("glom/test/test_basic.py", PathKind.TEST),
+        ("django/test/test_client.py", PathKind.TEST),
+        ("pandas/tests/frame/common.py", PathKind.TEST),
+        ("testing/python/metafunc.py", PathKind.TEST),
+        ("src/tests/helpers.py", PathKind.TEST),
+        ("test/helpers.py", PathKind.TEST),
+        ("pkg/testing/conftest.py", PathKind.TEST),
+        # Translation catalogues are data, not code.
+        ("django/contrib/admin/locale/de/LC_MESSAGES/django.po", PathKind.DOC),
+        ("django/conf/locale/fr/LC_MESSAGES/django.mo", PathKind.DOC),
+    ],
+)
+def test_library_testing_toolkits_and_translations(path: str, expected: PathKind) -> None:
+    assert classify_path(path) is expected
+
+
 def test_docs_win_over_tests() -> None:
     """`docs/testing.md` is documentation, whatever its name suggests."""
     assert classify_path("docs/testing.md") is PathKind.DOC

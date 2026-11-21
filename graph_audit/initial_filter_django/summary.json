@@ -1,0 +1,70 @@
+{
+  "repo": "django/django",
+  "summary": {
+    "kept": 199,
+    "dropped": 201,
+    "needs_enrichment": 0,
+    "by_style": {
+      "unknown": 199
+    },
+    "mainline_points": 400,
+    "commits_visited": 400,
+    "commits_measured": 400,
+    "stop_reason": "change_limit",
+    "remaining_in_window": 0,
+    "walk_since": null,
+    "walk_until": null,
+    "selected": 199
+  },
+  "rejection_reasons": {
+    "no_source_change": 192,
+    "no_executable_source_change": 9
+  },
+  "seconds": {
+    "gates": 72.1,
+    "total": 81.2
+  },
+  "kept_bins": {
+    "by_kind": {
+      "bug_fix": 136,
+      "feature": 43,
+      "unknown": 18,
+      "refactor": 2
+    },
+    "by_kind_basis": {
+      "commit_message": 90,
+      "patch_release_notes": 55,
+      "minor_release_notes": 35,
+      "none": 18,
+      "repeated_edit_across_files": 1
+    },
+    "by_size_tier": {
+      "single_file": 137,
+      "multi_file": 51,
+      "wide": 8,
+      "sweeping": 3
+    },
+    "by_kind_and_test": {
+      "bug_fix|tested": 120,
+      "feature|tested": 38,
+      "bug_fix|untested": 16,
+      "unknown|untested": 12,
+      "unknown|tested": 6,
+      "feature|untested": 5,
+      "refactor|untested": 1,
+      "refactor|tested": 1
+    },
+    "mechanical": 3,
+    "backported": 0,
+    "reverted_later": 0
+  },
+  "message_vs_changelog": {
+    "bug_fix <- msg bug_fix": 56,
+    "feature <- msg bug_fix": 38,
+    "bug_fix <- msg feature": 11,
+    "feature <- msg unknown": 8,
+    "feature <- msg feature": 4,
+    "bug_fix <- msg unknown": 4,
+    "feature <- msg refactor": 1
+  }
+}

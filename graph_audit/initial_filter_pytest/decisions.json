@@ -58,8 +58,8 @@
   {
    "sha": "6665a79fb9a6553ce4e1be5574c21a9e3b769eec",
    "subject": "Merge pull request #15367 from neutrinoceros/enh/no-warning-skip-w-kwarg-reason",
-   "kind": "unknown",
-   "kind_basis": "none",
+   "kind": "feature",
+   "kind_basis": "commit_message",
    "size_tier": "single_file",
    "source_files": 1,
    "source_loc": 9,
@@ -218,17 +218,6 @@
    "backported_to": []
   },
   {
-   "sha": "c9c19f8e62c12834ad83193a1869cc82fe9c700e",
-   "subject": "[pre-commit.ci] pre-commit autoupdate (#15170)",
-   "kind": "unknown",
-   "kind_basis": "none",
-   "size_tier": "single_file",
-   "source_files": 1,
-   "source_loc": 4,
-   "test_changed": true,
-   "backported_to": []
-  },
-  {
    "sha": "4e64e831268758cf0040c52c144e0f09f46cd8a3",
    "subject": "Merge pull request #15145 from pytest-dev/claude/project-thread-0ll2wg",
    "kind": "bug_fix",
@@ -339,17 +328,6 @@
    "backported_to": []
   },
   {
-   "sha": "e84e063e7d35e7e198536d05099395be7a92a9a1",
-   "subject": "[pre-commit.ci] pre-commit autoupdate (#15140)",
-   "kind": "unknown",
-   "kind_basis": "none",
-   "size_tier": "single_file",
-   "source_files": 1,
-   "source_loc": 4,
-   "test_changed": false,
-   "backported_to": []
-  },
-  {
    "sha": "980445e88fae083d9ff91649bd22913a8abbaf18",
    "subject": "fix: stop reusing shared PytestWarning instances whose tracebacks grow under -W error (#14931)",
    "kind": "bug_fix",
@@ -396,8 +374,8 @@
   {
    "sha": "7d90c44cca8f2e37dc0ab3d9643a4672a8a3f7f9",
    "subject": "Merge pull request #15057 from bluetech/rm-dead-code",
-   "kind": "unknown",
-   "kind_basis": "none",
+   "kind": "feature",
+   "kind_basis": "commit_message",
    "size_tier": "single_file",
    "source_files": 1,
    "source_loc": 5,
@@ -1053,17 +1031,6 @@
    "backported_to": []
   },
   {
-   "sha": "8d40684d1f997e62758785aebb3132c2f5b712e1",
-   "subject": "Document firstresult behavior for report (de)serialization hooks (#14759)",
-   "kind": "unknown",
-   "kind_basis": "none",
-   "size_tier": "single_file",
-   "source_files": 1,
-   "source_loc": 4,
-   "test_changed": false,
-   "backported_to": []
-  },
-  {
    "sha": "d07c5d4e3956cb6b8ff7f9f49c0bc4d819a15349",
    "subject": "feat: introduce a legend for - and + in diff outputs (#14756)",
    "kind": "feature",
@@ -1138,17 +1105,6 @@
    "source_files": 1,
    "source_loc": 68,
    "test_changed": true,
-   "backported_to": []
-  },
-  {
-   "sha": "ec12ff382ccddcaa1f9308f965e9005b1a4f087e",
-   "subject": "Merge pull request #14738 from Joosboy/docs/12062-pytest_assertrepr_compare",
-   "kind": "unknown",
-   "kind_basis": "none",
-   "size_tier": "single_file",
-   "source_files": 1,
-   "source_loc": 5,
-   "test_changed": false,
    "backported_to": []
   },
   {
@@ -1349,8 +1305,8 @@
   {
    "sha": "9b27bec696048032eb8d651af8fe9170c473ef42",
    "subject": "Merge pull request #14573 from bluetech/repr-doc",
-   "kind": "unknown",
-   "kind_basis": "none",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message",
    "size_tier": "multi_file",
    "source_files": 3,
    "source_loc": 146,
@@ -1419,8 +1375,8 @@
   {
    "sha": "34e0395163647c9096551208bb8a6990213cc8f1",
    "subject": "Merge pull request #14521 from Pierre-Sassoulas/yield-comparators",
-   "kind": "unknown",
-   "kind_basis": "none",
+   "kind": "refactor",
+   "kind_basis": "commit_message",
    "size_tier": "wide",
    "source_files": 6,
    "source_loc": 233,
@@ -1722,7 +1678,7 @@
   {
    "sha": "8f81c76744daf72d4f77cfc8423f4bdc60733d78",
    "subject": "Merge pull request #10546 from ykadowak/refactor_atexit",
-   "kind": "refactor",
+   "kind": "feature",
    "kind_basis": "commit_message",
    "size_tier": "multi_file",
    "source_files": 2,
@@ -1933,17 +1889,6 @@
    "backported_to": []
   },
   {
-   "sha": "c23393a20a36443789d5daf7a9e793b60af38f8a",
-   "subject": "Merge pull request #14360 from pytest-dev/pre-commit-ci-update-config",
-   "kind": "unknown",
-   "kind_basis": "none",
-   "size_tier": "single_file",
-   "source_files": 1,
-   "source_loc": 3,
-   "test_changed": true,
-   "backported_to": []
-  },
-  {
    "sha": "95d8423bd24992deea5b9df32555fa1741679e2c",
    "subject": "Merge pull request #14343 from bluetech/cve-2025-71176-simple",
    "kind": "bug_fix",
@@ -2020,17 +1965,6 @@
    "source_files": 3,
    "source_loc": 14,
    "test_changed": true,
-   "backported_to": []
-  },
-  {
-   "sha": "abdb2b601d262edf6ccdaa396ee0d09a4a6bb040",
-   "subject": "Merge pull request #14308 from bluetech/rm-hookspec-path-param",
-   "kind": "unknown",
-   "kind_basis": "none",
-   "size_tier": "single_file",
-   "source_files": 1,
-   "source_loc": 5,
-   "test_changed": false,
    "backported_to": []
   },
   {
@@ -2199,8 +2133,8 @@
    "sha": "9efd0121a4396da80c20d7c3b7844825966612f6",
    "subject": "Merge pull request #15008 from Hugohong258/work/round-five",
    "reason": "no_source_change",
-   "kind": "unknown",
-   "kind_basis": "none"
+   "kind": "other",
+   "kind_basis": "commit_message"
   },
   {
    "sha": "36eed6b7b0eb59760fc4b33e90bdaac5057388f0",
@@ -2227,8 +2161,8 @@
    "sha": "171c924acfd66d03ab51d08da2509461da6233a7",
    "subject": "Merge pull request #15348 from pytest-dev/dependabot/pip/testing/plugins_integration/pip-97d45fb942",
    "reason": "no_source_change",
-   "kind": "unknown",
-   "kind_basis": "none"
+   "kind": "other",
+   "kind_basis": "commit_message"
   },
   {
    "sha": "8b005ed7f972987033ec34dc1e68b0635fb8142b",
@@ -2241,8 +2175,8 @@
    "sha": "1211245aa72f1efe07bcfce63a7c543156cee976",
    "subject": "Merge pull request #15309 from pytest-dev/dependabot/github_actions/github-actions-35a4fca628",
    "reason": "no_source_change",
-   "kind": "unknown",
-   "kind_basis": "none"
+   "kind": "other",
+   "kind_basis": "commit_message"
   },
   {
    "sha": "afac7979e3d0d30914aa986192dcbbc48379cb86",
@@ -2290,8 +2224,8 @@
    "sha": "b9022ba04a33bfc76b5c9aefb8974755a80bf5ce",
    "subject": "Merge pull request #15182 from 1871698/docs/improve-getting-started-description",
    "reason": "no_source_change",
-   "kind": "unknown",
-   "kind_basis": "none"
+   "kind": "other",
+   "kind_basis": "commit_message"
   },
   {
    "sha": "4aa7d5d19ce74999624102208ed4522c5587492d",
@@ -2353,6 +2287,13 @@
    "sha": "11b8391bbab1754e316de51cf36d30d014af0a61",
    "subject": "Merge pull request #15179 from scott-huberty/doc-crossref",
    "reason": "no_source_change",
+   "kind": "other",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "c9c19f8e62c12834ad83193a1869cc82fe9c700e",
+   "subject": "[pre-commit.ci] pre-commit autoupdate (#15170)",
+   "reason": "no_executable_source_change",
    "kind": "unknown",
    "kind_basis": "none"
   },
@@ -2383,6 +2324,13 @@
    "reason": "no_executable_source_change",
    "kind": "other",
    "kind_basis": "changelog_fragment"
+  },
+  {
+   "sha": "e84e063e7d35e7e198536d05099395be7a92a9a1",
+   "subject": "[pre-commit.ci] pre-commit autoupdate (#15140)",
+   "reason": "no_executable_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
   },
   {
    "sha": "fd17fdfea252260bb7db5c9144f04b881e11d5d7",
@@ -2465,8 +2413,8 @@
    "sha": "fe9eef7ebc62042f26edfca2b922e08c33180ed5",
    "subject": "Merge pull request #14956 from pytest-dev/dependabot/github_actions/re-actors/alls-green-b5b5b37504aa4183270bd3d855c52a67f212be35",
    "reason": "no_source_change",
-   "kind": "unknown",
-   "kind_basis": "none"
+   "kind": "other",
+   "kind_basis": "commit_message"
   },
   {
    "sha": "53bc06b9933eb50b40cd904aa50bcd1b6cf2a49c",
@@ -2521,7 +2469,7 @@
    "sha": "adc4c54cf3bd5c6c56293bd4e8a2729ce2a5d8d9",
    "subject": "doc: fix three dead reference links (#14977)",
    "reason": "no_source_change",
-   "kind": "bug_fix",
+   "kind": "other",
    "kind_basis": "commit_message"
   },
   {
@@ -2535,8 +2483,8 @@
    "sha": "eadb5a625081a1c9db58552797fecf8c88b2508c",
    "subject": "Merge pull request #14967 from faheel/patch-1",
    "reason": "no_source_change",
-   "kind": "unknown",
-   "kind_basis": "none"
+   "kind": "bug_fix",
+   "kind_basis": "commit_message"
   },
   {
    "sha": "e984a9b94740697411f5a05fcdfc3299dd20f13a",
@@ -2682,8 +2630,8 @@
    "sha": "8d5a9660856b9626b93d1bfda200cd0aeb3a0403",
    "subject": "Merge pull request #14790 from RonnyPfannschmidt/doc/commit-access-is-an-invitation",
    "reason": "no_source_change",
-   "kind": "unknown",
-   "kind_basis": "none"
+   "kind": "other",
+   "kind_basis": "commit_message"
   },
   {
    "sha": "15b58a224ccbce113ac1b350bb1738dd345175f2",
@@ -2745,8 +2693,8 @@
    "sha": "70f8650a624c92f91c94dd26b391326df2ea4143",
    "subject": "Merge pull request #14785 from pytest-dev/dependabot/github_actions/pypa/gh-action-pypi-publish-1.14.1",
    "reason": "no_source_change",
-   "kind": "unknown",
-   "kind_basis": "none"
+   "kind": "other",
+   "kind_basis": "commit_message"
   },
   {
    "sha": "a53a4d99c4ded7f30b712d57068d92243a731ce7",
@@ -2759,15 +2707,22 @@
    "sha": "a10ed097e94435cfcfaebe627b76ed9c8865786d",
    "subject": "Merge pull request #14768 from RonnyPfannschmidt/doc/emphasize-ai-effort-policy",
    "reason": "no_source_change",
-   "kind": "unknown",
-   "kind_basis": "none"
+   "kind": "other",
+   "kind_basis": "commit_message"
   },
   {
    "sha": "85003621822f9c10063940068ccacc9c12b8c73f",
    "subject": "doc: Fix grammar 'the same to apply' -> 'the same as applying' (#14767)",
    "reason": "no_source_change",
-   "kind": "bug_fix",
+   "kind": "other",
    "kind_basis": "commit_message"
+  },
+  {
+   "sha": "8d40684d1f997e62758785aebb3132c2f5b712e1",
+   "subject": "Document firstresult behavior for report (de)serialization hooks (#14759)",
+   "reason": "no_executable_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
   },
   {
    "sha": "849fbda3ce87e3829b30d005979bee59928c01ff",
@@ -2789,6 +2744,13 @@
    "reason": "no_source_change",
    "kind": "unknown",
    "kind_basis": "none"
+  },
+  {
+   "sha": "ec12ff382ccddcaa1f9308f965e9005b1a4f087e",
+   "subject": "Merge pull request #14738 from Joosboy/docs/12062-pytest_assertrepr_compare",
+   "reason": "no_executable_source_change",
+   "kind": "other",
+   "kind_basis": "commit_message"
   },
   {
    "sha": "eb79044cea1c2c7b6e58ebcce17c55da871fef6c",
@@ -2822,22 +2784,22 @@
    "sha": "67a174fcee355334c53588be2eeba8df702477e9",
    "subject": "Merge pull request #14699 from pytest-dev/dependabot/pip/testing/plugins_integration/pytest-rerunfailures-16.4",
    "reason": "no_source_change",
-   "kind": "unknown",
-   "kind_basis": "none"
+   "kind": "other",
+   "kind_basis": "commit_message"
   },
   {
    "sha": "6153372429f86e6ff224548d62e54945def76d8f",
    "subject": "Merge pull request #14701 from Pierre-Sassoulas/fix-pypy311-hypothesis",
    "reason": "no_source_change",
-   "kind": "bug_fix",
+   "kind": "other",
    "kind_basis": "commit_message"
   },
   {
    "sha": "efc013416e45d9162dc00dca9e4a83e1ef1c4089",
    "subject": "Merge pull request #14682 from The-Compiler/doc-ai-slop",
    "reason": "no_source_change",
-   "kind": "unknown",
-   "kind_basis": "none"
+   "kind": "bug_fix",
+   "kind_basis": "commit_message"
   },
   {
    "sha": "96238a4683b12afeabee534430306dfe38fcdb7b",
@@ -2934,8 +2896,8 @@
    "sha": "a07c31a97d0a412c09b1f2f5953adb4b4a75d04d",
    "subject": "Merge pull request #14596 from bluetech/doc-classmethod",
    "reason": "no_source_change",
-   "kind": "unknown",
-   "kind_basis": "none"
+   "kind": "bug_fix",
+   "kind_basis": "commit_message"
   },
   {
    "sha": "0ee0dffffe53608ef222aa98683b65762cdd966a",
@@ -3011,8 +2973,8 @@
    "sha": "b8d5cb25a2ce20af3019a10cc29ef065bb1a3a05",
    "subject": "Merge pull request #14558 from dhruvatr/patch-1",
    "reason": "no_source_change",
-   "kind": "unknown",
-   "kind_basis": "none"
+   "kind": "other",
+   "kind_basis": "commit_message"
   },
   {
    "sha": "b33a27d12b93311cf6c41b77ebf2994e555e52f9",
@@ -3046,22 +3008,22 @@
    "sha": "aa01adceb7d52294d7a78f68939bf6862e0ce846",
    "subject": "Merge pull request #14550 from trendels/docs-fix",
    "reason": "no_source_change",
-   "kind": "bug_fix",
+   "kind": "other",
    "kind_basis": "commit_message"
   },
   {
    "sha": "4e80019353af4748669cec522352e0651e36f1d2",
    "subject": "Merge pull request #14494 from pytest-dev/dependabot/github_actions/hynek/build-and-inspect-python-package-2.18.0",
    "reason": "no_source_change",
-   "kind": "unknown",
-   "kind_basis": "none"
+   "kind": "other",
+   "kind_basis": "commit_message"
   },
   {
    "sha": "404ab3694d587b05bda4e5c354f4bc8e56774fa3",
    "subject": "Merge pull request #14541 from pytest-dev/dependabot/pip/testing/plugins_integration/pytest-rerunfailures-16.3",
    "reason": "no_source_change",
-   "kind": "unknown",
-   "kind_basis": "none"
+   "kind": "other",
+   "kind_basis": "commit_message"
   },
   {
    "sha": "4affa2827598b69ccb6987b04e479059b829669d",
@@ -3088,8 +3050,8 @@
    "sha": "8927e35166ab410afe5002dcfa93481dc020c096",
    "subject": "Merge pull request #14511 from The-Compiler/doc-sprint",
    "reason": "no_source_change",
-   "kind": "unknown",
-   "kind_basis": "none"
+   "kind": "other",
+   "kind_basis": "commit_message"
   },
   {
    "sha": "7f1c0d8b51fd9c25233dc44d2412f846c0d35cae",
@@ -3186,7 +3148,7 @@
    "sha": "db091ecc2514a924589db5165bb6fcac0e9e7d44",
    "subject": "Merge pull request #14479 from lphuc2250gma/docs/fix-plugin-list-grammar",
    "reason": "no_source_change",
-   "kind": "bug_fix",
+   "kind": "other",
    "kind_basis": "commit_message"
   },
   {
@@ -3319,15 +3281,15 @@
    "sha": "18db92df7f2515e4a9bf589c54a863693dff724d",
    "subject": "Merge pull request #14380 from bluetech/doc-ns-import-note",
    "reason": "no_source_change",
-   "kind": "unknown",
-   "kind_basis": "none"
+   "kind": "feature",
+   "kind_basis": "commit_message"
   },
   {
    "sha": "146041f51d3d937196f556ae2dfcdb8771e12860",
    "subject": "Merge pull request #14338 from pytest-dev/dependabot/github_actions/actions/cache-5.0.4",
    "reason": "no_source_change",
-   "kind": "unknown",
-   "kind_basis": "none"
+   "kind": "other",
+   "kind_basis": "commit_message"
   },
   {
    "sha": "c26c145e0fcef51426d64a184d0faa651777f86f",
@@ -3349,6 +3311,13 @@
    "reason": "no_source_change",
    "kind": "bug_fix",
    "kind_basis": "changelog_fragment"
+  },
+  {
+   "sha": "c23393a20a36443789d5daf7a9e793b60af38f8a",
+   "subject": "Merge pull request #14360 from pytest-dev/pre-commit-ci-update-config",
+   "reason": "no_executable_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
   },
   {
    "sha": "f0554edaddd091fd93716aaf8c8d94dc101d8b0a",
@@ -3407,6 +3376,13 @@
    "kind_basis": "commit_message"
   },
   {
+   "sha": "abdb2b601d262edf6ccdaa396ee0d09a4a6bb040",
+   "subject": "Merge pull request #14308 from bluetech/rm-hookspec-path-param",
+   "reason": "no_executable_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
    "sha": "09d01042fe6ee88b667b8b854d10bce12f69aacb",
    "subject": "[automated] Update plugin list (#14309)",
    "reason": "no_source_change",
@@ -3417,8 +3393,8 @@
    "sha": "6aafcdce9022149fcc977205676d1bc12ab43b9b",
    "subject": "Merge pull request #14305 from bluetech/sphinx-py314",
    "reason": "no_source_change",
-   "kind": "unknown",
-   "kind_basis": "none"
+   "kind": "other",
+   "kind_basis": "commit_message"
   },
   {
    "sha": "291b90acaf076c960a281168f6d971d4b56031c3",
@@ -3431,15 +3407,15 @@
    "sha": "5de1f491fe02110686ffdeb68bef3d855687ecab",
    "subject": "doc: Update training info (#14298)",
    "reason": "no_source_change",
-   "kind": "unknown",
-   "kind_basis": "none"
+   "kind": "other",
+   "kind_basis": "commit_message"
   },
   {
    "sha": "295d9da900a0dbe8b4093d6a6bc977cd567aa4b0",
    "subject": "Merge pull request #14154 from pytest-dev/dependabot/github_actions/peter-evans/create-pull-request-8.1.0",
    "reason": "no_source_change",
-   "kind": "unknown",
-   "kind_basis": "none"
+   "kind": "other",
+   "kind_basis": "commit_message"
   },
   {
    "sha": "190939265b55b6ece2b2acf626bc755018c71265",
@@ -3473,8 +3449,8 @@
    "sha": "ced0a8d4a4317f4cb24b4ffb8138deb319dac212",
    "subject": "Merge pull request #14259 from mitre88/patch-4",
    "reason": "no_source_change",
-   "kind": "unknown",
-   "kind_basis": "none"
+   "kind": "other",
+   "kind_basis": "commit_message"
   },
   {
    "sha": "d6fa26c62873ea648272b337f2dc45d095394745",
@@ -3515,8 +3491,8 @@
    "sha": "3a1fe2818c71cb78fad1be74bb9e86760d499ca6",
    "subject": "Merge pull request #14223 from RonnyPfannschmidt/contributions-agents",
    "reason": "no_source_change",
-   "kind": "unknown",
-   "kind_basis": "none"
+   "kind": "other",
+   "kind_basis": "commit_message"
   },
   {
    "sha": "1faee72a00dd351be3279807f4fa7fbe101f9ff9",
@@ -3536,7 +3512,7 @@
    "sha": "9fd1eebd8af715b58832412bb8398d394ab67666",
    "subject": "doc: fix removed pytest.config reference in historical-notes (#14216)",
    "reason": "no_source_change",
-   "kind": "bug_fix",
+   "kind": "other",
    "kind_basis": "commit_message"
   },
   {
@@ -3585,22 +3561,22 @@
    "sha": "2f09ddc84ea6a7ccd56f19b0b998c8d2c51a4652",
    "subject": "doc: fixed typo in file name format (#14191)",
    "reason": "no_source_change",
-   "kind": "bug_fix",
+   "kind": "other",
    "kind_basis": "commit_message"
   },
   {
    "sha": "3c37b551e71c8b18c5323dac8a27d248bb98a5a9",
    "subject": "Merge pull request #14184 from him2him2/doc-src-layout-link",
    "reason": "no_source_change",
-   "kind": "unknown",
-   "kind_basis": "none"
+   "kind": "other",
+   "kind_basis": "commit_message"
   },
   {
    "sha": "3740cb962027ed73460c04568b409ef8c52af99e",
    "subject": "doc: indent envvar directive bodies in reference.rst (#14183)",
    "reason": "no_source_change",
-   "kind": "unknown",
-   "kind_basis": "none"
+   "kind": "other",
+   "kind_basis": "commit_message"
   },
   {
    "sha": "b2310f28314249e4bfa1e0b9817dbef5cb968f4d",
@@ -3620,15 +3596,15 @@
    "sha": "e77b9a403f94b4a70d588b62ca4dfb66060b84b4",
    "subject": "doc: Adjust training info (#14174)",
    "reason": "no_source_change",
-   "kind": "unknown",
-   "kind_basis": "none"
+   "kind": "other",
+   "kind_basis": "commit_message"
   },
   {
    "sha": "d49c94b5c13111790a4b6bc7f320bbc23b2c61e0",
    "subject": "Merge pull request #14171 from pytest-dev/dependabot/github_actions/re-actors/alls-green-a638d6464689bbb24c325bb3fe9404d63a913030",
    "reason": "no_source_change",
-   "kind": "unknown",
-   "kind_basis": "none"
+   "kind": "other",
+   "kind_basis": "commit_message"
   }
  ]
 }

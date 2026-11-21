@@ -12,11 +12,39 @@ def test_changelog_fragment_is_the_projects_own_label():
     assert signals.changelog_signal(["src/a.py"]) is None
 
 
+def test_versioned_release_notes_label_the_change():
+    fix = signals.changelog_signal(["django/db/models/query.py", "docs/releases/6.0.1.txt"])
+    assert fix["kind"] == signals.BUG_FIX and fix["source"] == "patch_release_notes"
+    # Fixed in the release and noted for the next one: the patch note decides.
+    both = signals.changelog_signal(["docs/releases/6.1.txt", "docs/releases/6.0.1.txt"])
+    assert both["kind"] == signals.BUG_FIX
+    feature = signals.changelog_signal(["doc/source/whatsnew/v2.3.0.rst"])
+    assert feature["kind"] == signals.FEATURE and feature["source"] == "minor_release_notes"
+    # A version-named file outside a release-notes folder says nothing.
+    assert signals.changelog_signal(["data/1.2.3.txt"]) is None
+
+
 def test_message_signal_is_weak_and_says_so():
     assert signals.message_signal("fix(core): handle None")["kind"] == signals.BUG_FIX
     assert signals.message_signal("feat: add --scalar")["evidence"] == "prefix feat:"
     assert signals.message_signal("Simplify the loader")["kind"] == signals.REFACTOR
     assert signals.message_signal("Update core.py")["kind"] == signals.UNKNOWN
+
+
+def test_merge_commits_are_read_by_their_pr_title_then_branch():
+    merge = "Merge pull request #15367 from someone/enh/no-warning\n\nENH: allow suspicious reasons in skip"
+    assert signals.describe(merge) == ("ENH: allow suspicious reasons in skip", "enh/no-warning")
+    assert signals.message_signal(merge) == {"kind": signals.FEATURE, "evidence": "prefix enh:"}
+    # A title with no recognisable wording falls back to the branch.
+    assert signals.message_signal("Merge pull request #1 from a/fix/2353-thing\n\nPreregister rewrite")["kind"] == signals.BUG_FIX
+    assert signals.message_signal("Merge pull request #2 from a/rm-dead-code\n\nTidy")["kind"] == signals.REFACTOR
+    assert signals.message_signal("Merge branch 'bugfix/crash'")["kind"] == signals.BUG_FIX
+    assert signals.message_signal("Merge pull request #3 from a/b\n\nChange my name")["kind"] == signals.UNKNOWN
+
+
+def test_numpy_style_prefixes():
+    assert signals.message_signal("BUG: fix overflow in sum")["kind"] == signals.BUG_FIX
+    assert signals.message_signal("MAINT: move helpers")["kind"] == signals.REFACTOR
 
 
 def test_size_tiers():

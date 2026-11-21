@@ -103,3 +103,7 @@ The comments/docstrings screen (`history/content.py`) parsed source with `ast.pa
 The screen now parses without type comments. Re-running the same 400-change window: kept went from **195 to 189**, docstring/comment-only rejections from 2 to 8, and no change moved the other way. All six newly rejected changes were checked by hand and touch only comments or docstrings in source. Regression tests were added to `tests/test_history_content.py`.
 
 The other four bot/autofix commits listed under Leak 1 genuinely change code and are still kept; catching them needs the separate author and branch-name check.
+
+## Addendum — merge-commit titles (2026-11-21)
+
+The message signal now reads a GitHub merge commit's PR title (the paragraph after "Merge pull request #N from …") and falls back to the branch name. It also understands NumPy-style prefixes (`ENH:`, `BUG:`, `MAINT:`). On this window, kept changes with an unknown kind fell from 27 to 17. Against the changelog labels the message alone is now right 53% (was 40%), silent 28% (was 45%) and wrong 20% (was 15%). The classifier and release-notes changes made for Django left pytest's decisions unchanged (189 kept). `summary.json` and `decisions.json` reflect this re-run.

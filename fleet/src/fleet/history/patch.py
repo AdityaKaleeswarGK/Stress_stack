@@ -53,7 +53,14 @@ class PathKind(StrEnum):
 # tests, because both contain "testing".
 _TEST_DIRS = frozenset({"test", "tests", "testing", "spec", "specs", "e2e", "__tests__", "it"})
 _DOC_DIRS = frozenset({"doc", "docs", "documentation", "example", "examples", "sample", "samples"})
-_DOC_SUFFIXES = (".md", ".rst", ".txt", ".adoc")
+# Prose, plus translation catalogues: `.po`/`.pot`/`.mo` are data a
+# translation service regenerates. Django's "Updated translations from
+# Transifex" touched 108 of them and counted as a 108-file source change.
+_DOC_SUFFIXES = (".md", ".rst", ".txt", ".adoc", ".po", ".pot", ".mo")
+# Singular names that, *inside* a package, are usually a library's own testing
+# toolkit shipped to its users rather than its test suite: django/test/,
+# numpy/testing/, lib/sqlalchemy/testing/. Plural `tests/` stays a suite.
+_LIBRARY_TEST_DIRS = frozenset({"test", "testing"})
 _CONFIG_DIRS = frozenset({".github", ".circleci", ".gitlab", "ci", ".devcontainer"})
 _CONFIG_NAMES = frozenset(
     {
@@ -110,7 +117,18 @@ def classify_path(path: str) -> PathKind:
         return PathKind.CONFIG
     if basename.endswith(_DOC_SUFFIXES):
         return PathKind.DOC
-    if any(part in _TEST_DIRS for part in directories):
+    test_dirs = [index for index, part in enumerate(directories) if part in _TEST_DIRS]
+    if test_dirs:
+        first = test_dirs[0]
+        # A root-level suite (`tests/`, `testing/`, `src/tests/`) is tests.
+        # A singular `test`/`testing` *inside* a package is a library's
+        # testing toolkit — `django/test/client.py` is the test client Django
+        # ships — unless the file itself is named like a test. Treating it as
+        # tests dropped four real Django fixes as "no source change".
+        nested = first > (1 if directories[0] in {"src", "lib"} else 0)
+        if (nested and all(directories[i] in _LIBRARY_TEST_DIRS for i in test_dirs)
+                and not _TEST_BASENAME_RE.match(basename)):
+            return PathKind.SOURCE
         return PathKind.TEST
     if _TEST_BASENAME_RE.match(basename):
         return PathKind.TEST

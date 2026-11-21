@@ -1,0 +1,3403 @@
+{
+ "kept": [
+  {
+   "sha": "c67d872765e05ebd009fadf7de8d834b01bae9e4",
+   "subject": "Fixed #37513 -- Raised DoesNotExist for missing non-nullable FKs with FETCH_PEERS.",
+   "kind": "bug_fix",
+   "kind_basis": "patch_release_notes",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 6,
+   "test_changed": true
+  },
+  {
+   "sha": "9e2e5a31e2ef2e8673d3c2a38d2a391dbf42cf23",
+   "subject": "Fixed #37499 -- Clarified QuerySet.contains() error for unset primary keys.",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 4,
+   "test_changed": true
+  },
+  {
+   "sha": "102c3c327d4974a58883b47a68f8d85da0be3648",
+   "subject": "Fixed #37423 -- Enforced integer expiry times for file-based sessions.",
+   "kind": "feature",
+   "kind_basis": "minor_release_notes",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 15,
+   "test_changed": true
+  },
+  {
+   "sha": "d3954c981368eb4439be63f2f165d400f33bcd70",
+   "subject": "Fixed #37491 -- Reraised RecursionError as ValueError for deeply nested GeoJSON.",
+   "kind": "bug_fix",
+   "kind_basis": "patch_release_notes",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 5,
+   "test_changed": true
+  },
+  {
+   "sha": "29b7829d6a6ff553feabc99688504a61aa00de3f",
+   "subject": "Fixed #36067 -- Removed \"Delete?\" in admin TabularInline when deletion is not allowed.",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message",
+   "size_tier": "multi_file",
+   "source_files": 3,
+   "source_loc": 18,
+   "test_changed": true
+  },
+  {
+   "sha": "f24f38c6b2825f15628c07bf2892f1664eed9361",
+   "subject": "Refs #37498 -- Moved GEOSGeometryBase._GEOS_CLASSES set up to a staticmethod.",
+   "kind": "unknown",
+   "kind_basis": "none",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 50,
+   "test_changed": false
+  },
+  {
+   "sha": "9102fd76e3af8f9b0aeffc724f17fa3690236138",
+   "subject": "Added a cooldown for JavaScript dependencies.",
+   "kind": "feature",
+   "kind_basis": "commit_message",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 1,
+   "test_changed": false
+  },
+  {
+   "sha": "c57c20ff4e8b98b21fa85029614f36c933830790",
+   "subject": "Fixed #37442 -- Fixed JSONL deserialization of Unicode line separators.",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 2,
+   "test_changed": true
+  },
+  {
+   "sha": "a868478f9e1c02e1b7ecbc06f1f5393d41ab1e9d",
+   "subject": "Refs #37483, #34118 -- Used inspect.iscoroutinefunction() instead of deprecated asyncio alias.",
+   "kind": "unknown",
+   "kind_basis": "none",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 2,
+   "test_changed": false
+  },
+  {
+   "sha": "60cecbf8c842122eb96628dadb22258dea1360f5",
+   "subject": "Fixed release script to raise AssertionError for missing DEST_FOLDER.",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 6,
+   "test_changed": false
+  },
+  {
+   "sha": "6c8143cf012e562dd713d91490853d7909a83a5f",
+   "subject": "Fixed #36670 -- Improved selector colors in admin m2m filter_vertical widget.",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message",
+   "size_tier": "multi_file",
+   "source_files": 4,
+   "source_loc": 65,
+   "test_changed": true
+  },
+  {
+   "sha": "2c64002f0df87e66411d16dcceb1c7e5e6e22157",
+   "subject": "Refs #37159 -- Documented building release wheel reproducibly.",
+   "kind": "unknown",
+   "kind_basis": "none",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 9,
+   "test_changed": false
+  },
+  {
+   "sha": "a0f2e29e0a98ee14aa808ebe38ec5fb79c8af71f",
+   "subject": "Fixed #37317 -- Deprecated passing table names to createcachetable.",
+   "kind": "feature",
+   "kind_basis": "minor_release_notes",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 20,
+   "test_changed": true
+  },
+  {
+   "sha": "2d89a635128e1fe91fb01ebd6ec2672ab1f2dd0a",
+   "subject": "Fixed #33752 -- Added support for exception groups to technical 500 debug pages.",
+   "kind": "feature",
+   "kind_basis": "minor_release_notes",
+   "size_tier": "multi_file",
+   "source_files": 2,
+   "source_loc": 36,
+   "test_changed": true
+  },
+  {
+   "sha": "5d6d1f051e0930537b8eda9760d05441d4279594",
+   "subject": "Fixed #37471 -- Made models.E050 detect generic relations with database-level on_delete.",
+   "kind": "bug_fix",
+   "kind_basis": "patch_release_notes",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 7,
+   "test_changed": true
+  },
+  {
+   "sha": "3f079b9d84a52bf0b04f5ede7125c898fa2a0bcf",
+   "subject": "Fixed #36998 -- Rejected firstof tags without arguments before \"as\".",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 4,
+   "test_changed": true
+  },
+  {
+   "sha": "2d50268e63b2ea6faeb69b8d39f36c6b5b57c645",
+   "subject": "Fixed #37081 -- Allowed dots in fixture directory paths in loaddata.",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 6,
+   "test_changed": true
+  },
+  {
+   "sha": "a1f2b45ce5a327f42437bdb620a817839d0bd067",
+   "subject": "Fixed #30306 -- Added input_type to Textarea widget.",
+   "kind": "feature",
+   "kind_basis": "minor_release_notes",
+   "size_tier": "multi_file",
+   "source_files": 3,
+   "source_loc": 5,
+   "test_changed": true
+  },
+  {
+   "sha": "d9d05f104e3187bd42b4bc288234ef1523a2cc73",
+   "subject": "Fixed #36642 -- Fixed capitalization of locale suggestions in makemessages.",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 14,
+   "test_changed": true
+  },
+  {
+   "sha": "8e3dec67c42f1557fe0ecb11b620ed707b01f498",
+   "subject": "Fixed #37330 -- Fixed QuerySet.values() crash with an annotation transform.",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 34,
+   "test_changed": true
+  },
+  {
+   "sha": "c392a758e6d3764ca5414a42baaad5082475e20a",
+   "subject": "Fixed #36022 -- Renamed django-admin to django.",
+   "kind": "bug_fix",
+   "kind_basis": "patch_release_notes",
+   "size_tier": "wide",
+   "source_files": 8,
+   "source_loc": 30,
+   "test_changed": true
+  },
+  {
+   "sha": "89e3b1bfcf312d20397c6dd7bc7970c46f384851",
+   "subject": "Refs CVE-2026-15307 -- Optimized lookup preparation of GeoJSON geometries.",
+   "kind": "unknown",
+   "kind_basis": "none",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 5,
+   "test_changed": false
+  },
+  {
+   "sha": "1860f0a3f41e54f265e57de76d320ea0887d6b1c",
+   "subject": "Fixed #37469 -- Made psycopg adapter UTF8Dumper handle None.",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 2,
+   "test_changed": true
+  },
+  {
+   "sha": "3a2ec4378b53c7b8ff5283ad7eba624ffa6f2b2f",
+   "subject": "Fixed CVE-2026-114582 -- Blocked file and network access when setting SRS on GDAL 3.9+.",
+   "kind": "bug_fix",
+   "kind_basis": "patch_release_notes",
+   "size_tier": "multi_file",
+   "source_files": 5,
+   "source_loc": 54,
+   "test_changed": true
+  },
+  {
+   "sha": "f5b039a619b3b5394ea5b966e17c7546fda6f937",
+   "subject": "Fixed CVE-2026-113733 -- Fixed password hash disclosure to \"view only\" admin users with custom user models.",
+   "kind": "bug_fix",
+   "kind_basis": "patch_release_notes",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 6,
+   "test_changed": true
+  },
+  {
+   "sha": "c0b7e5e4e4546e8ddc58262f1945938bb9d9ac2d",
+   "subject": "Fixed CVE-2026-113593 -- Differentiated empty and missing headers in response cache.",
+   "kind": "bug_fix",
+   "kind_basis": "patch_release_notes",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 6,
+   "test_changed": true
+  },
+  {
+   "sha": "ecb2b77b49890d6b2120f73fb3d7eb7ac7650143",
+   "subject": "Fixed CVE-2026-111362 -- Blocked external CRS values in GeoJSON geometries.",
+   "kind": "bug_fix",
+   "kind_basis": "patch_release_notes",
+   "size_tier": "multi_file",
+   "source_files": 3,
+   "source_loc": 128,
+   "test_changed": true
+  },
+  {
+   "sha": "af4319f7217e33ad5db747226765f09b49ec07ba",
+   "subject": "Fixed CVE-2026-111211 -- Escaped log messages in BaseGeometryWidget.deserialize().",
+   "kind": "bug_fix",
+   "kind_basis": "patch_release_notes",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 12,
+   "test_changed": true
+  },
+  {
+   "sha": "5d95d9236fa4ededfb1931c60a65432385ece85f",
+   "subject": "Fixed CVE-2026-108147 -- Bounded memory use of base64 file uploads in MultiPartParser.",
+   "kind": "bug_fix",
+   "kind_basis": "patch_release_notes",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 32,
+   "test_changed": true
+  },
+  {
+   "sha": "6b212c29e7dfa94f92110d5be034033f449a0cf2",
+   "subject": "Fixed #37436 -- Avoided overwriting when FETCH_PEERS fetches deferred fields.",
+   "kind": "bug_fix",
+   "kind_basis": "patch_release_notes",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 23,
+   "test_changed": true
+  },
+  {
+   "sha": "308b6d6ac0927d2095d380c84d9c7d101c851d4f",
+   "subject": "Fixed #37467 -- Fixed deletion of cookies with __Http- and __Host-Http- prefixes.",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 8,
+   "test_changed": true
+  },
+  {
+   "sha": "817df1c4d6d38f416460d7d9354d7deab9d35139",
+   "subject": "Fixed #37463 -- Fixed attrs mutation in legend_tag().",
+   "kind": "bug_fix",
+   "kind_basis": "patch_release_notes",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 3,
+   "test_changed": true
+  },
+  {
+   "sha": "2d9d619676e2047a8477c086dda161e4d510c316",
+   "subject": "Fixed #37089 -- Made ignore_warnings() match substrings by default.",
+   "kind": "feature",
+   "kind_basis": "minor_release_notes",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 47,
+   "test_changed": true
+  },
+  {
+   "sha": "8be9c12275f8d18083f06ba63196cd2c5cf5d65d",
+   "subject": "Refs #35225 -- Fixed typo in test skip.",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 2,
+   "test_changed": false
+  },
+  {
+   "sha": "e74c8a808ea232480674ec0ca73bac83ba8594aa",
+   "subject": "Refs #35899 -- Added allow_multiline_tags transitional template option to disable multiline template tags.",
+   "kind": "feature",
+   "kind_basis": "minor_release_notes",
+   "size_tier": "multi_file",
+   "source_files": 2,
+   "source_loc": 62,
+   "test_changed": true
+  },
+  {
+   "sha": "0804aed32017f835eb8aa7cf053a935f5bea7c7f",
+   "subject": "Fixed #35899 -- Allowed multiline template tags.",
+   "kind": "feature",
+   "kind_basis": "minor_release_notes",
+   "size_tier": "multi_file",
+   "source_files": 3,
+   "source_loc": 99,
+   "test_changed": true
+  },
+  {
+   "sha": "63d898bde2ae34241b5038434186e73ffb7470ef",
+   "subject": "Fixed #35225 -- Skipped JSONObject ordering tests on Oracle 21c.",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 11,
+   "test_changed": false
+  },
+  {
+   "sha": "360ccd4bd89d8c2404d5d29bdc71a4a465c7e740",
+   "subject": "Fixed #37432 -- Made select_for_update() raise after combined queries.",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 1,
+   "test_changed": true
+  },
+  {
+   "sha": "77eea99b455396145188305c31284720751df6f5",
+   "subject": "Fixed #37438 -- Fixed join promotion for XOR conditions.",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 24,
+   "test_changed": true
+  },
+  {
+   "sha": "5c13b5a19864807cae7266339554c14e151e5961",
+   "subject": "Fixed #37232 -- Added support for the HTTP QUERY method.",
+   "kind": "feature",
+   "kind_basis": "minor_release_notes",
+   "size_tier": "wide",
+   "source_files": 9,
+   "source_loc": 134,
+   "test_changed": true
+  },
+  {
+   "sha": "45fe4636d8d147b87040170a6cee4ab036ed2324",
+   "subject": "Fixed #37450 -- Fixed parsing of comment and verbatim tags without spaces.",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 6,
+   "test_changed": true
+  },
+  {
+   "sha": "a2a0b4f2764f7b192bff4bb75ed56ce017931a71",
+   "subject": "Fixed #37427 -- Kept generic relation queryset routing lazy.",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 10,
+   "test_changed": true
+  },
+  {
+   "sha": "512b92a493f8006e149bb924957561acc6714e52",
+   "subject": "Fixed #30949 -- Deprecated django.utils.functional.cached_property.",
+   "kind": "feature",
+   "kind_basis": "minor_release_notes",
+   "size_tier": "multi_file",
+   "source_files": 3,
+   "source_loc": 19,
+   "test_changed": true
+  },
+  {
+   "sha": "816ea69cb8d24df97611935384d380a752c14e0f",
+   "subject": "Refs #30949 -- Replaced django.utils.functional.cached_property with functools.cached_property.",
+   "kind": "feature",
+   "kind_basis": "minor_release_notes",
+   "size_tier": "sweeping",
+   "source_files": 86,
+   "source_loc": 284,
+   "test_changed": true
+  },
+  {
+   "sha": "32a46625c24cbc72adc5a77296b085a49c47ae12",
+   "subject": "Fixed #37449 -- Corrected local name for Punjabi in django/conf/locale/__init__.py.",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 2,
+   "test_changed": false
+  },
+  {
+   "sha": "a26ceb0903189bb534394db62e031403b2b9fa93",
+   "subject": "Fixed test_asgeojson() on MySQL 9.5.",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 7,
+   "test_changed": true
+  },
+  {
+   "sha": "fa214ea7b217a37484507b6222cca4915c70b4cc",
+   "subject": "Fixed #37447 -- Fixed makemessages with non-ASCII file names on Windows.",
+   "kind": "bug_fix",
+   "kind_basis": "patch_release_notes",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 11,
+   "test_changed": false
+  },
+  {
+   "sha": "549605de8c7834a0e62c42ad651d9285382c9d4a",
+   "subject": "Fixed #37395 -- Emitted 'none' for CSP directives left empty by an unused nonce.",
+   "kind": "feature",
+   "kind_basis": "minor_release_notes",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 4,
+   "test_changed": true
+  },
+  {
+   "sha": "4b09d8c2c84b41931ca17e460edaa2f849e03170",
+   "subject": "Fixed #37401 -- Aligned safe_makedirs() with os.makedirs() semantics.",
+   "kind": "feature",
+   "kind_basis": "minor_release_notes",
+   "size_tier": "multi_file",
+   "source_files": 3,
+   "source_loc": 28,
+   "test_changed": true
+  },
+  {
+   "sha": "5190bbc3b70ae6c359a7604b7bc55e1fe3440841",
+   "subject": "Fixed #37433 -- Escaped database error messages logged by Q.check().",
+   "kind": "feature",
+   "kind_basis": "minor_release_notes",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 12,
+   "test_changed": true
+  },
+  {
+   "sha": "7d89d63c899ea323f91aa35783bf2d2da27406f9",
+   "subject": "Refs #37433 -- Added django.utils.text.trim_value() helper.",
+   "kind": "feature",
+   "kind_basis": "commit_message",
+   "size_tier": "multi_file",
+   "source_files": 3,
+   "source_loc": 34,
+   "test_changed": true
+  },
+  {
+   "sha": "3d3d943b7442f1f5278ed876331a06047fa96ea8",
+   "subject": "Fixed #37419 -- Included CSP nonces in headers for streaming responses.",
+   "kind": "feature",
+   "kind_basis": "minor_release_notes",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 11,
+   "test_changed": true
+  },
+  {
+   "sha": "4e7c04fdfa7651d0cda59fb4d8020fb644d1a401",
+   "subject": "Refs #37419 -- Moved CSP nonce detection helper to django.utils.csp for middleware reuse.",
+   "kind": "unknown",
+   "kind_basis": "none",
+   "size_tier": "multi_file",
+   "source_files": 2,
+   "source_loc": 30,
+   "test_changed": false
+  },
+  {
+   "sha": "6de4b35a79b8131cffe433aab67c20cae7ad8e56",
+   "subject": "Fixed #37407 -- Prevented UUIDTextMixin from mutating the lookup in-place.",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 15,
+   "test_changed": true
+  },
+  {
+   "sha": "2fff3e9f493a9c85fb8a2294358c6751575ee4bf",
+   "subject": "Fixed #37431 -- Added support for serializing frozendicts in migrations.",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 9,
+   "test_changed": true
+  },
+  {
+   "sha": "9b83f7513c06aef91a20669450809ddd944e0792",
+   "subject": "Fixed #37426 -- Added a pull request limit for new contributors.",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message",
+   "size_tier": "multi_file",
+   "source_files": 4,
+   "source_loc": 329,
+   "test_changed": false
+  },
+  {
+   "sha": "2a7992385f9164f4d69f79013c82a9f62cad9934",
+   "subject": "Refs #37426 -- Moved scripts GitHub API helpers to a shared module for reuse.",
+   "kind": "unknown",
+   "kind_basis": "none",
+   "size_tier": "multi_file",
+   "source_files": 2,
+   "source_loc": 212,
+   "test_changed": true
+  },
+  {
+   "sha": "80c997fc23b08897d8611b5439c1877485a4676f",
+   "subject": "Fixed #37424 -- Fixed whitespace handling when parsing max-age directives.",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 2,
+   "test_changed": true
+  },
+  {
+   "sha": "adeef108afa7c6c50959cf2c94a4d4efbf1fae91",
+   "subject": "Refs #32980 -- Avoided unnecessary router and connection lookups for reverse FKs.",
+   "kind": "unknown",
+   "kind_basis": "none",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 16,
+   "test_changed": true
+  },
+  {
+   "sha": "c07486b98b2dfc1dab2e97db83a95ed0ac645e1b",
+   "subject": "Fixed #32980 -- Optimized ManyRelatedManager.__init__().",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 49,
+   "test_changed": false
+  },
+  {
+   "sha": "9014ca519c1cc825709a8fce0934f9919861ffb9",
+   "subject": "Fixed #37418 -- Fixed JSONField/HStoreField crash on deeply nested JSON.",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message",
+   "size_tier": "multi_file",
+   "source_files": 2,
+   "source_loc": 6,
+   "test_changed": true
+  },
+  {
+   "sha": "1a9fba7a6c2a0acead19bbb45c25ceb0fdcca7c8",
+   "subject": "Fixed #23424 -- Corrected tokenization of verbatim blocks.",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 125,
+   "test_changed": true
+  },
+  {
+   "sha": "31c3e4cf7544597600141d9be60bd919371114c9",
+   "subject": "Refs #37372 -- Simplified NULL handling logic in sql.Query.build_filter().",
+   "kind": "refactor",
+   "kind_basis": "commit_message",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 76,
+   "test_changed": false
+  },
+  {
+   "sha": "f1d11117c6a3e227ce7cdd263cf0743f0eb73070",
+   "subject": "Fixed #28219 -- Made UnorderedObjectListWarning skip Django frames.",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 3,
+   "test_changed": true
+  },
+  {
+   "sha": "6669d66a795029add189bebe6f7a7fdcf2c9f9d4",
+   "subject": "Skipped 1-element geometry collection tests on all Oracle versions.",
+   "kind": "unknown",
+   "kind_basis": "none",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 23,
+   "test_changed": false
+  },
+  {
+   "sha": "cf63ff2186852ee1aac4a802b0ff6a93f6e08891",
+   "subject": "Fixed #37411 -- Added compatibility for oracledb 26.0.0+.",
+   "kind": "bug_fix",
+   "kind_basis": "patch_release_notes",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 27,
+   "test_changed": false
+  },
+  {
+   "sha": "c01135b42f8257581da7286786be69f923f24cfc",
+   "subject": "Removed new contributor GitHub Action workflow.",
+   "kind": "feature",
+   "kind_basis": "commit_message",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 1,
+   "test_changed": false
+  },
+  {
+   "sha": "0264b4fc364960e83f561fd94154005508bf6dae",
+   "subject": "Fixed #37387 -- Made admindocs model index table full width.",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message",
+   "size_tier": "multi_file",
+   "source_files": 2,
+   "source_loc": 10,
+   "test_changed": true
+  },
+  {
+   "sha": "bef1986b9ae31fd19d84c933e5d351fdae949d0d",
+   "subject": "Fixed #37118 -- Added variable support to the {% now %} template tag.",
+   "kind": "feature",
+   "kind_basis": "minor_release_notes",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 22,
+   "test_changed": true
+  },
+  {
+   "sha": "93d7e82b6a67aa56a2d9dababfefb8bda543786e",
+   "subject": "Fixed #37382, Refs #29303 -- Made @non_atomic_requests recognize async views.",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 15,
+   "test_changed": true
+  },
+  {
+   "sha": "ce285ce0e755abbdd991e707b7aaf4d3c636e944",
+   "subject": "Added a 24 hour grace period for automated PR quality checks.",
+   "kind": "feature",
+   "kind_basis": "commit_message",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 207,
+   "test_changed": true
+  },
+  {
+   "sha": "1267767ccd86ae9a57b78cab1558d3e985e6820d",
+   "subject": "Fixed passing of pagination data as params to github_request().",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 2,
+   "test_changed": true
+  },
+  {
+   "sha": "1b4d021b6525bff6439b9d3b8d5388a1a1906ecd",
+   "subject": "Fixed #37403 -- Fixed JSONField __in crash on SQLite with Value(None) expressions.",
+   "kind": "bug_fix",
+   "kind_basis": "patch_release_notes",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 19,
+   "test_changed": true
+  },
+  {
+   "sha": "7f48e266a83110d62ffb4663d72c9e347db75a9b",
+   "subject": "Refs #37297 -- Prevented crash on JSONField __isnull lookups on Oracle when a key is outside its integer range.",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 20,
+   "test_changed": true
+  },
+  {
+   "sha": "66c40aafa2310abb9ec809c1584955b7caa2a706",
+   "subject": "Fixed #37297 -- Prevented crash on JSONField key lookups when an integer key is outside PostgreSQL's int4 range.",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 17,
+   "test_changed": true
+  },
+  {
+   "sha": "135d7c606fc66a9f47f690e5f242ced386524954",
+   "subject": "Allowed full stops inside quotes in commit messages.",
+   "kind": "feature",
+   "kind_basis": "commit_message",
+   "size_tier": "multi_file",
+   "source_files": 2,
+   "source_loc": 9,
+   "test_changed": false
+  },
+  {
+   "sha": "a269574f1bcf4716502b9ba8c3492abf15dc93eb",
+   "subject": "Fixed #37405 -- Fixed crash if sort_keys option is used with YAML serializer.",
+   "kind": "bug_fix",
+   "kind_basis": "patch_release_notes",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 2,
+   "test_changed": true
+  },
+  {
+   "sha": "62ef9d40cf4ea75f16518436b44b8ab2515340df",
+   "subject": "Refs CVE-2026-15830 -- Fixed WKB geometry collection limit bypasses.",
+   "kind": "bug_fix",
+   "kind_basis": "patch_release_notes",
+   "size_tier": "multi_file",
+   "source_files": 3,
+   "source_loc": 189,
+   "test_changed": true
+  },
+  {
+   "sha": "83cbd21be57483e6b3eb6e4688a561c841aff75e",
+   "subject": "Fixed CVE-2026-87975 -- Prevented forging actions in model formsets with editable PKs.",
+   "kind": "bug_fix",
+   "kind_basis": "patch_release_notes",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 9,
+   "test_changed": true
+  },
+  {
+   "sha": "ebcb13b327301f28cbc6cd5e4988a719f00575aa",
+   "subject": "Fixed CVE-2026-87890 -- Blocked bytes in spatial lookups.",
+   "kind": "bug_fix",
+   "kind_basis": "patch_release_notes",
+   "size_tier": "multi_file",
+   "source_files": 2,
+   "source_loc": 25,
+   "test_changed": true
+  },
+  {
+   "sha": "7ff7fcc0508864a4bc39693128ace38b1e95a890",
+   "subject": "Fixed CVE-2026-84429 -- Simplified parse_header_parameters by leveraging stdlib's Message.",
+   "kind": "bug_fix",
+   "kind_basis": "patch_release_notes",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 58,
+   "test_changed": true
+  },
+  {
+   "sha": "c88b304cc2d90fc37d3bd1f5f3829706fa6c13bc",
+   "subject": "Fixed CVE-2026-77050 -- Prevented memory exhaustion in get_supported_language_variant().",
+   "kind": "bug_fix",
+   "kind_basis": "patch_release_notes",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 73,
+   "test_changed": true
+  },
+  {
+   "sha": "08e4c0d8e7db6343567e7b02e25da8ea2226a7e0",
+   "subject": "Fixed #37322 -- Avoided transforms on spatial fields with srid=None.",
+   "kind": "bug_fix",
+   "kind_basis": "patch_release_notes",
+   "size_tier": "multi_file",
+   "source_files": 2,
+   "source_loc": 21,
+   "test_changed": true
+  },
+  {
+   "sha": "fabce94374e166e80e2643db8b85d1e3442427bf",
+   "subject": "Fixed #37377 -- Fixed JSONField __in crash/wrong result for Value() primitives.",
+   "kind": "bug_fix",
+   "kind_basis": "patch_release_notes",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 15,
+   "test_changed": true
+  },
+  {
+   "sha": "8abacfc36d755d8e762a4d2074601b8dc412bfee",
+   "subject": "Refs #37386 -- Tailored error messages for the delete_confirmation_max_display=0 case.",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message",
+   "size_tier": "multi_file",
+   "source_files": 3,
+   "source_loc": 29,
+   "test_changed": true
+  },
+  {
+   "sha": "7d94ee295df9b2503135158a7f2b55fb686785fc",
+   "subject": "Fixed #37386 -- Observed delete_confirmation_max_display=0 for inlines.",
+   "kind": "bug_fix",
+   "kind_basis": "patch_release_notes",
+   "size_tier": "multi_file",
+   "source_files": 3,
+   "source_loc": 17,
+   "test_changed": true
+  },
+  {
+   "sha": "7847227a3fecde4b2a169552b84c60c6286b6025",
+   "subject": "Fixed #37361 -- Fixed permission renames for chained RenameModel operations.",
+   "kind": "bug_fix",
+   "kind_basis": "patch_release_notes",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 98,
+   "test_changed": true
+  },
+  {
+   "sha": "3db0898eee4061d44de5052953ef0fe3afb5951f",
+   "subject": "Fixed #37376 -- Made UUID4() persist data in lowercase on Oracle.",
+   "kind": "bug_fix",
+   "kind_basis": "patch_release_notes",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 11,
+   "test_changed": true
+  },
+  {
+   "sha": "80ea222c8af501031b2eae4f7d9fdbf16cb507a7",
+   "subject": "Fixed #37167 -- Allowed email.headerregistry.Address objects as email addresses.",
+   "kind": "feature",
+   "kind_basis": "minor_release_notes",
+   "size_tier": "multi_file",
+   "source_files": 2,
+   "source_loc": 19,
+   "test_changed": true
+  },
+  {
+   "sha": "91585625a93a41388ded73b99fc71328bde1e760",
+   "subject": "Fixed #37212 -- Improved djangodocs Sphinx extension portability.",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 5,
+   "test_changed": false
+  },
+  {
+   "sha": "50eef95591b1e5d8c47b2e8c96066cb0c516753a",
+   "subject": "Fixed #37291 -- Prevented tuple lookups from hanging on F() expressions.",
+   "kind": "bug_fix",
+   "kind_basis": "patch_release_notes",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 6,
+   "test_changed": true
+  },
+  {
+   "sha": "479ba6d2812bb0613d1646d445be43f7c6ab7bc7",
+   "subject": "Fixed #37378 -- Removed extra empty breadcrumb in admindocs model index.",
+   "kind": "bug_fix",
+   "kind_basis": "patch_release_notes",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 2,
+   "test_changed": true
+  },
+  {
+   "sha": "2f7f30c320b6517d31fb8852db1875ad3a6a774f",
+   "subject": "Fixed #36496 -- Ensured the parent path to a sqlite file exists.",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 8,
+   "test_changed": true
+  },
+  {
+   "sha": "dffadf6dfc1585da2d5822db4b95322f23f39d4b",
+   "subject": "Fixed #37350 -- Made distinct(*fields) resolve aliases containing \"__\".",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message",
+   "size_tier": "multi_file",
+   "source_files": 2,
+   "source_loc": 12,
+   "test_changed": true
+  },
+  {
+   "sha": "9e06baf2e4dd17834b5deaf3a3e6ae3bff2fcf26",
+   "subject": "Fixed #37066 -- Wrapped async iteration sites in (maybe_)aclosing.",
+   "kind": "feature",
+   "kind_basis": "minor_release_notes",
+   "size_tier": "wide",
+   "source_files": 8,
+   "source_loc": 120,
+   "test_changed": true
+  },
+  {
+   "sha": "a013c821ea7838a953869615b0bdcfdb298cc09f",
+   "subject": "Fixed #37177 -- Reduced per-middleware context switching under ASGI.",
+   "kind": "feature",
+   "kind_basis": "minor_release_notes",
+   "size_tier": "wide",
+   "source_files": 15,
+   "source_loc": 30,
+   "test_changed": true
+  },
+  {
+   "sha": "703283b5b455a8410b4ce0a2e6ea0e1bde7f3047",
+   "subject": "Fixed #37358 -- Dropped support for GDAL 3.3 and 3.4.",
+   "kind": "feature",
+   "kind_basis": "minor_release_notes",
+   "size_tier": "multi_file",
+   "source_files": 2,
+   "source_loc": 8,
+   "test_changed": true
+  },
+  {
+   "sha": "446d9cf602a5c42862da118b714a5679bb61cf27",
+   "subject": "Fixed #37114 -- Dropped support for PostgreSQL 15 and PostGIS 3.2.",
+   "kind": "feature",
+   "kind_basis": "minor_release_notes",
+   "size_tier": "multi_file",
+   "source_files": 3,
+   "source_loc": 36,
+   "test_changed": true
+  },
+  {
+   "sha": "935edaa91b756325352ca70d5eba49a64b70d28c",
+   "subject": "Fixed #37357 -- Handled out-of-range year in admin date_hierarchy.",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 18,
+   "test_changed": true
+  },
+  {
+   "sha": "581deb9402edc70f85b63c170c199a393f0f2183",
+   "subject": "Fixed #37339 -- Allowed ipaddress objects in GenericIPAddressField.",
+   "kind": "feature",
+   "kind_basis": "minor_release_notes",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 9,
+   "test_changed": true
+  },
+  {
+   "sha": "6ade6258480fba84a7e895b4b1e1716dfc954778",
+   "subject": "Fixed #37344 -- Enabled FETCH_PEERS batching for instances loaded by select_related.",
+   "kind": "bug_fix",
+   "kind_basis": "patch_release_notes",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 4,
+   "test_changed": true
+  },
+  {
+   "sha": "fb32a564ccc6f91d4b7594f5707c62fab0c11c04",
+   "subject": "Fixed #37348 -- Reverted \"Fixed #36806 -- Added system check for null kwarg in GeneratedField.\".",
+   "kind": "bug_fix",
+   "kind_basis": "patch_release_notes",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 16,
+   "test_changed": true
+  },
+  {
+   "sha": "8cbdd4a814397f81adf0129288f32b615bd1f94f",
+   "subject": "Fixed #37286 -- Preserved unique constraints when removing db_index.",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 5,
+   "test_changed": true
+  },
+  {
+   "sha": "64edef37e7b419dd584307d84650a192fb47dc4c",
+   "subject": "Fixed #36947 -- Avoided altering column type when only db_comment changes.",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message",
+   "size_tier": "multi_file",
+   "source_files": 4,
+   "source_loc": 14,
+   "test_changed": true
+  },
+  {
+   "sha": "97c38590a2396c8bb123d0782dbe96ddfd760a9a",
+   "subject": "Fixed false positive in func_supports_parameter() for non-keyword args.",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 13,
+   "test_changed": true
+  },
+  {
+   "sha": "abb9c04bd6f4a1be893d40b2e1afe098e1beecf0",
+   "subject": "Fixed #36629 -- Added missing \"Choose all\" and \"Remove all\" buttons in admin m2m filter_vertical widget.",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message",
+   "size_tier": "multi_file",
+   "source_files": 2,
+   "source_loc": 11,
+   "test_changed": true
+  },
+  {
+   "sha": "850e026cbfbe65944a5e0dc50e47c7ac64143708",
+   "subject": "Fixed #36809 -- Allowed customizing EmailValidator per-part validation.",
+   "kind": "feature",
+   "kind_basis": "minor_release_notes",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 95,
+   "test_changed": true
+  },
+  {
+   "sha": "2b30f6255b5ef84afbd827993643d52ef2c0963a",
+   "subject": "Fixed #36933 -- Distinguished shapes of boolean icons.",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message",
+   "size_tier": "multi_file",
+   "source_files": 2,
+   "source_loc": 8,
+   "test_changed": false
+  },
+  {
+   "sha": "fc4eaaabf419508ea39d750ca5ca801d933e0b16",
+   "subject": "Fixed #37289 -- Avoided deleting network rasters.",
+   "kind": "bug_fix",
+   "kind_basis": "patch_release_notes",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 10,
+   "test_changed": true
+  },
+  {
+   "sha": "be6a149de8f85fb8f858680f721dbaadd182f1d8",
+   "subject": "Fixed #37145 -- Made ModelFormSet respect custom Form.add_prefix().",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 9,
+   "test_changed": true
+  },
+  {
+   "sha": "b3f4d83aad7f589f165a6d8b020b7acba4936f35",
+   "subject": "Fixed #37013 -- Deprecated Trunc/Extract in migrations with USE_TZ=True and no tzinfo.",
+   "kind": "feature",
+   "kind_basis": "minor_release_notes",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 22,
+   "test_changed": true
+  },
+  {
+   "sha": "0398417c503e9f32674b36865abc54e575e8bcd7",
+   "subject": "Fixed #36523 -- Added django.utils.module_loading.qualname() helper.",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message",
+   "size_tier": "wide",
+   "source_files": 6,
+   "source_loc": 58,
+   "test_changed": true
+  },
+  {
+   "sha": "cc933385e75172cabacb49cfb9fe3571845cb216",
+   "subject": "Fixed #37271 -- Added calendar version support to django.utils.version.",
+   "kind": "feature",
+   "kind_basis": "minor_release_notes",
+   "size_tier": "multi_file",
+   "source_files": 2,
+   "source_loc": 174,
+   "test_changed": true
+  },
+  {
+   "sha": "aca5b3f694cdabaee8d9accbb0c6fcd01839e9f3",
+   "subject": "Refs #37178 -- Deferred django.middleware import in django.utils.deprecation.",
+   "kind": "unknown",
+   "kind_basis": "none",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 10,
+   "test_changed": false
+  },
+  {
+   "sha": "52abe52bec23df6523aff492364f4f1b049c9572",
+   "subject": "Fixed #37293 -- Renamed RemovedInDjango71Warning to RemovedInDjango2029Warning.",
+   "kind": "feature",
+   "kind_basis": "minor_release_notes",
+   "size_tier": "multi_file",
+   "source_files": 3,
+   "source_loc": 26,
+   "test_changed": true
+  },
+  {
+   "sha": "0d0e7f15038360c158b6d22c679b47b21557fa1f",
+   "subject": "Refs #37293 -- Aliased RemovedInDjango70Warning to RemovedInDjango2028Warning.",
+   "kind": "bug_fix",
+   "kind_basis": "patch_release_notes",
+   "size_tier": "sweeping",
+   "source_files": 31,
+   "source_loc": 481,
+   "test_changed": true
+  },
+  {
+   "sha": "00dca6f097f443de7a24c04bc133f98c83c632aa",
+   "subject": "Fixed #37222 -- Fixed QuerySet.distinct() crash on duplicated selections.",
+   "kind": "bug_fix",
+   "kind_basis": "patch_release_notes",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 23,
+   "test_changed": true
+  },
+  {
+   "sha": "f14e293cd7444e064b9c9ba471fd5aa7e6132ea6",
+   "subject": "Fixed #37312, Refs #36605 -- Fixed annotation preservation and key selection in in_bulk().",
+   "kind": "bug_fix",
+   "kind_basis": "patch_release_notes",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 19,
+   "test_changed": true
+  },
+  {
+   "sha": "0751d5fed159fd9ff7edba522ece13c8c9d2a0d0",
+   "subject": "Fixed #37311 -- Prevented consumption of rhs iterators in annotation lookups.",
+   "kind": "bug_fix",
+   "kind_basis": "patch_release_notes",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 9,
+   "test_changed": true
+  },
+  {
+   "sha": "6126f5d2fe0f22c0d2d4888de8c94b91a9795bb6",
+   "subject": "Refs #37309 -- Used _is_pk_set() in the XML serializer.",
+   "kind": "unknown",
+   "kind_basis": "none",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 3,
+   "test_changed": true
+  },
+  {
+   "sha": "8d1c673466bcabff500edc6c7724e5a20f6df3de",
+   "subject": "Fixed #37309 -- Used _is_pk_set() in Model.__eq__.",
+   "kind": "feature",
+   "kind_basis": "minor_release_notes",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 5,
+   "test_changed": true
+  },
+  {
+   "sha": "5babd2e21ac0877d66c5452da17b97608b337fba",
+   "subject": "Fixed #37237 -- Improved RelatedIn lookup preparation performance.",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 1,
+   "test_changed": false
+  },
+  {
+   "sha": "60a17fccf4f2fa31b823b0f938005897f2f3ef16",
+   "subject": "Fixed #37300 -- Preserved parent instance hints on custom Prefetch querysets.",
+   "kind": "bug_fix",
+   "kind_basis": "patch_release_notes",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 2,
+   "test_changed": true
+  },
+  {
+   "sha": "fe81969e83d03b61e587a28ddebb92b9fca2b441",
+   "subject": "Fixed #37263 -- Fixed changelist __exact search crashes and over-matching.",
+   "kind": "bug_fix",
+   "kind_basis": "patch_release_notes",
+   "size_tier": "multi_file",
+   "source_files": 2,
+   "source_loc": 71,
+   "test_changed": true
+  },
+  {
+   "sha": "73cc09f14f13fedddc14d6ba5b287cb33c24e4a4",
+   "subject": "Fixed #36945 -- Made .values() and .order_by() resolve FilteredRelation aliases correctly.",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message",
+   "size_tier": "multi_file",
+   "source_files": 2,
+   "source_loc": 15,
+   "test_changed": true
+  },
+  {
+   "sha": "439b936753e5a679ffcf40cff5918c5637f7c72b",
+   "subject": "Added test skip for 1-element GeometryCollections on Oracle 23.9.",
+   "kind": "feature",
+   "kind_basis": "commit_message",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 2,
+   "test_changed": false
+  },
+  {
+   "sha": "fdfbb711e3dd52683ae633f568761efe2735d5f0",
+   "subject": "Fixed #37296 -- Included the invalid view type in path()/re_path() error.",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 3,
+   "test_changed": true
+  },
+  {
+   "sha": "cccc004b46f71b4e54d87b376be691a17de6b903",
+   "subject": "Skipped tests involving 1-element GeometryCollections on Oracle 23.9.",
+   "kind": "unknown",
+   "kind_basis": "none",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 13,
+   "test_changed": false
+  },
+  {
+   "sha": "d992705f9eb56199dc474b77af16474e5ce3d2ab",
+   "subject": "Fixed #37259 -- Restored support for old-signature Model.from_db() overrides.",
+   "kind": "bug_fix",
+   "kind_basis": "patch_release_notes",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 55,
+   "test_changed": true
+  },
+  {
+   "sha": "464a5e184443af937977ebe0ec5150fbfd6ee854",
+   "subject": "Fixed #37154, #37149 -- Switched from Selenium to Playwright for integration testing.",
+   "kind": "feature",
+   "kind_basis": "minor_release_notes",
+   "size_tier": "multi_file",
+   "source_files": 2,
+   "source_loc": 545,
+   "test_changed": true
+  },
+  {
+   "sha": "be6cf832293779d8aeaeddca8c47a37ba1530898",
+   "subject": "Fixed #37274 -- Allowed transforms in order_by() after alias().",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message",
+   "size_tier": "multi_file",
+   "source_files": 2,
+   "source_loc": 9,
+   "test_changed": true
+  },
+  {
+   "sha": "c72f5fb4793f2cac66d76e3cbd590499ad85b89e",
+   "subject": "Fixed #37279 -- Rejected null characters in URLValidator.",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 2,
+   "test_changed": true
+  },
+  {
+   "sha": "f7610bda78afb13ee395dfee2445805d8c7ad0f6",
+   "subject": "Fixed #37250 -- Allowed nesting GEOS GeometryCollection objects.",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 1,
+   "test_changed": true
+  },
+  {
+   "sha": "a3e6e7d3aa6e2aa793ba1d122a76cb007727197c",
+   "subject": "Fixed #37275, Refs #24920 -- Fixed SQLite DecimalField conversion without precision.",
+   "kind": "bug_fix",
+   "kind_basis": "patch_release_notes",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 5,
+   "test_changed": true
+  },
+  {
+   "sha": "1a001208b0b9d79b15b27ca04d94f31f3d55d5ea",
+   "subject": "Fixed #37278 -- Made QuerySet.totally_ordered understand aliases to pure Col/ColPairs.",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 50,
+   "test_changed": true
+  },
+  {
+   "sha": "07d4f69c94a0e32c583b3aee5daf48fd81b4cd69",
+   "subject": "Fixed #37260 -- Made alterations between Python on_delete options noops.",
+   "kind": "bug_fix",
+   "kind_basis": "patch_release_notes",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 8,
+   "test_changed": true
+  },
+  {
+   "sha": "febefb175e03352e5aeb2ed827024bacab96cf16",
+   "subject": "Fixed #37248 -- Skipped unique validation of a dynamic DatabaseDefault expression.",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message",
+   "size_tier": "multi_file",
+   "source_files": 2,
+   "source_loc": 28,
+   "test_changed": true
+  },
+  {
+   "sha": "812c08bd4e9da7b74ab9ee0db83da58a6da48d19",
+   "subject": "Fixed #37273 -- Allowed F() expressions on the RHS of CompositePK lookups.",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 2,
+   "test_changed": true
+  },
+  {
+   "sha": "d6b73a6613f5e7de95fd8719198d0347c85ddf42",
+   "subject": "Fixed #37276 -- Fixed Slovak case mapping for '\u00c1' in urlify.js.",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 2,
+   "test_changed": false
+  },
+  {
+   "sha": "99d56e5cf15839995f62f24294584f1e2976b1ea",
+   "subject": "Fixed #37262 -- Restored rendering of html-safe strings in form media.",
+   "kind": "bug_fix",
+   "kind_basis": "patch_release_notes",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 4,
+   "test_changed": true
+  },
+  {
+   "sha": "c6be0bf3bb744d234947cefd6def9f31d9655800",
+   "subject": "Fixed #37254 -- Added fields.E323 for models referenced by ManyToManyFields.",
+   "kind": "bug_fix",
+   "kind_basis": "patch_release_notes",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 45,
+   "test_changed": true
+  },
+  {
+   "sha": "082b3df4067c3899dd4d57e8c2eca5baea9d07bb",
+   "subject": "Fixed #37270 -- Fixed incorrect values for second-degree relations in ModelAdmin.list_display.",
+   "kind": "bug_fix",
+   "kind_basis": "patch_release_notes",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 7,
+   "test_changed": true
+  },
+  {
+   "sha": "616e8c52ded7f4c7b00cae5a95f5a5d12a6a39b9",
+   "subject": "Fixed #37264 -- Handled further malformed _source_model values in admin popups.",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 4,
+   "test_changed": true
+  },
+  {
+   "sha": "b5388a3a80cafcce2e34196d8e81cf5b48eb33bb",
+   "subject": "Fixed #37257, Refs #35738 -- Prevented double-dot deprecation warnings for template literals.",
+   "kind": "bug_fix",
+   "kind_basis": "patch_release_notes",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 2,
+   "test_changed": true
+  },
+  {
+   "sha": "89e82866dc2746383c336c7b10e050b9da3ae1ef",
+   "subject": "Fixed #29969 -- Omitted inlines without add permission on save-as-new.",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 6,
+   "test_changed": true
+  },
+  {
+   "sha": "30ebe0001c1d10bebc68567f796d821f7b309f4d",
+   "subject": "Added missing lang override in translation fetching helper for Serbian (Latin script).",
+   "kind": "feature",
+   "kind_basis": "commit_message",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 1,
+   "test_changed": false
+  },
+  {
+   "sha": "8f52e9199b260cdacc5ad372692cddf2dcf76558",
+   "subject": "Fixed #37224 -- Skipped questioner for field changes on unmanaged models.",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 15,
+   "test_changed": true
+  },
+  {
+   "sha": "cef2346abf8d6e9e61a5a3599fbcf72163e6a6e5",
+   "subject": "Fixed #37239 -- Cleared stale db_default when pk comes from related object.",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 13,
+   "test_changed": true
+  },
+  {
+   "sha": "f00270d05e3510f2edc8ae012418d1dfe34d99f5",
+   "subject": "Refs #36735 -- Added DatabaseFeatures.supports_uuid4_function_in_default feature flag.",
+   "kind": "refactor",
+   "kind_basis": "repeated_edit_across_files",
+   "size_tier": "multi_file",
+   "source_files": 5,
+   "source_loc": 15,
+   "test_changed": true
+  },
+  {
+   "sha": "47511a21026cdd721d8fbf8571cc079bc38bb46d",
+   "subject": "Fixed CVE-2026-15920 -- Made display_for_field() validate URLs before rendering admin links.",
+   "kind": "bug_fix",
+   "kind_basis": "patch_release_notes",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 12,
+   "test_changed": true
+  },
+  {
+   "sha": "d2e59b77fe18de318a8272c2a7bbc798d84d1d0d",
+   "subject": "Fixed CVE-2026-15830 -- Mitigated potential DoS via nested geometry collections.",
+   "kind": "bug_fix",
+   "kind_basis": "patch_release_notes",
+   "size_tier": "wide",
+   "source_files": 12,
+   "source_loc": 272,
+   "test_changed": true
+  },
+  {
+   "sha": "27137e655e442e81095f1f8f77ff3870d9fdf169",
+   "subject": "Fixed CVE-2026-15337 -- Mitigated potential DoS in check_for_language().",
+   "kind": "bug_fix",
+   "kind_basis": "patch_release_notes",
+   "size_tier": "multi_file",
+   "source_files": 2,
+   "source_loc": 29,
+   "test_changed": true
+  },
+  {
+   "sha": "f1949c1f9758947ade984c895ff16bef46f56520",
+   "subject": "Fixed CVE-2026-15307 -- Blocked raster strings and dicts in spatial lookups.",
+   "kind": "bug_fix",
+   "kind_basis": "patch_release_notes",
+   "size_tier": "multi_file",
+   "source_files": 2,
+   "source_loc": 83,
+   "test_changed": true
+  },
+  {
+   "sha": "7dee35f5eea131ddf807788c533da1264e571c61",
+   "subject": "Refs #28586 -- Renamed RAISE fetch mode to FETCH_RAISE.",
+   "kind": "feature",
+   "kind_basis": "minor_release_notes",
+   "size_tier": "multi_file",
+   "source_files": 2,
+   "source_loc": 10,
+   "test_changed": true
+  },
+  {
+   "sha": "2cace96be6d64b7dde7eb66d3ffc2c7f08ef644f",
+   "subject": "Fixed #37242 -- Fixed reading null time fields in LayerMapping.",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 2,
+   "test_changed": true
+  },
+  {
+   "sha": "60121939f6b225c7a719dd561e372e1d8e5e2c4a",
+   "subject": "Fixed #36626 -- Preserved milliseconds in DataSource time fields.",
+   "kind": "feature",
+   "kind_basis": "minor_release_notes",
+   "size_tier": "multi_file",
+   "source_files": 2,
+   "source_loc": 31,
+   "test_changed": true
+  },
+  {
+   "sha": "ea303dee45f4b703b31f73ceb235f11742d3c518",
+   "subject": "Fixed #37236 -- Allowed altering spatial indexes on RasterField.",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 6,
+   "test_changed": true
+  },
+  {
+   "sha": "06463d3c11b3ce132075283d5f9368a269d66343",
+   "subject": "Fixed #27734 -- Made parallel test workers reuse database clones of exited workers.",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 79,
+   "test_changed": true
+  },
+  {
+   "sha": "9465349120ef8a0b0689e12bcbfd05f3d173ebdf",
+   "subject": "Fixed #37238 -- Prevented fallback to python default for a pk with a db_default.",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 4,
+   "test_changed": true
+  },
+  {
+   "sha": "8c83e9c0ea39099b213478a893cbebe9faa837ba",
+   "subject": "Fixed #37235 -- Added compatibility for sqlparse 0.5.5.",
+   "kind": "bug_fix",
+   "kind_basis": "patch_release_notes",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 7,
+   "test_changed": false
+  },
+  {
+   "sha": "ca14173f968cf36115f22d6c6785f738de4391ed",
+   "subject": "Fixed #37240 -- Fixed simplify_regex() with multiple unnamed groups.",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 5,
+   "test_changed": true
+  },
+  {
+   "sha": "c9ff757a55392b1f50968eb89fe775f6155168d8",
+   "subject": "Fixed #37234 -- Fixed bulk_create() for late-saved related primary keys.",
+   "kind": "bug_fix",
+   "kind_basis": "patch_release_notes",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 2,
+   "test_changed": true
+  },
+  {
+   "sha": "2936a0a99719e3c3777039a0d6968deecb55c752",
+   "subject": "Fixed #27752 -- Fixed ordering by Model.__str__ in the admin.",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message",
+   "size_tier": "multi_file",
+   "source_files": 2,
+   "source_loc": 4,
+   "test_changed": true
+  },
+  {
+   "sha": "a959c2596f8a1d1ef9f321b8b227a399e86409e2",
+   "subject": "Removed PR number artifact from coverage comment workflows.",
+   "kind": "unknown",
+   "kind_basis": "none",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 1,
+   "test_changed": false
+  },
+  {
+   "sha": "92e1d9e3619ae5274a64b38f26177064486892f2",
+   "subject": "Fixed #37233 -- Prevented sort controls for unordered __str__ admin columns.",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 4,
+   "test_changed": true
+  },
+  {
+   "sha": "92470ad3742524902b29769d2c822dbe791630db",
+   "subject": "Fixed #37230 -- Fixed a crash for second-degree relations in ModelAdmin.list_display.",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message",
+   "size_tier": "multi_file",
+   "source_files": 2,
+   "source_loc": 11,
+   "test_changed": true
+  },
+  {
+   "sha": "5e32c82a5a896e1d942cfc9dd9a2ebbe86741258",
+   "subject": "Refs #22712 -- Restored django.contrib.staticfiles.finders.BaseFinder.find().",
+   "kind": "unknown",
+   "kind_basis": "none",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 11,
+   "test_changed": true
+  },
+  {
+   "sha": "c2517faff335f683e1cbe55d9844910b3fb40670",
+   "subject": "Fixed #37198 -- Fixed content_disposition_header() quoting of filenames ending with newlines.",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 2,
+   "test_changed": true
+  },
+  {
+   "sha": "4ea38d54c10e0f44e189605c217a55cdfe9fdde8",
+   "subject": "Fixed #37160 -- Made admin views raise PermissionDenied consistently.",
+   "kind": "feature",
+   "kind_basis": "minor_release_notes",
+   "size_tier": "multi_file",
+   "source_files": 2,
+   "source_loc": 32,
+   "test_changed": true
+  },
+  {
+   "sha": "8a162076e1988ddf9453edfb8329d5df1573dc38",
+   "subject": "Improved wording in PR quality check messages.",
+   "kind": "unknown",
+   "kind_basis": "none",
+   "size_tier": "multi_file",
+   "source_files": 2,
+   "source_loc": 10,
+   "test_changed": true
+  },
+  {
+   "sha": "e0d64a5adaaad1cec22a0f909602ea4127c04ad3",
+   "subject": "Fixed subject/verb agreement in DecimalValidator messages.",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 6,
+   "test_changed": false
+  },
+  {
+   "sha": "9ea5f4facca9931519109ae5d3646d3077da3e5f",
+   "subject": "Fixed minor typos and grammatical errors in docs and docstrings.",
+   "kind": "feature",
+   "kind_basis": "minor_release_notes",
+   "size_tier": "sweeping",
+   "source_files": 28,
+   "source_loc": 62,
+   "test_changed": true
+  },
+  {
+   "sha": "6fc8150005256db2052b01812d65dff737563a1b",
+   "subject": "Fixed #36027 -- Made error response rendering thread-sensitive.",
+   "kind": "feature",
+   "kind_basis": "minor_release_notes",
+   "size_tier": "multi_file",
+   "source_files": 2,
+   "source_loc": 4,
+   "test_changed": true
+  },
+  {
+   "sha": "2a5da9d00555beef8e5f6307cfcbfc029d45491e",
+   "subject": "Fixed #37203 -- Used normalized field names for composite pks in inspectdb.",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 16,
+   "test_changed": true
+  },
+  {
+   "sha": "d8cedcab5241725003eef059dd76c533f24c5430",
+   "subject": "Refs #37203 -- Escaped introspection error comments in inspectdb.",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 4,
+   "test_changed": true
+  },
+  {
+   "sha": "27151e13c4b61fed42f19a2f07be0b1e73aacecc",
+   "subject": "Fixed #36229 -- Improved SVG icon color contrast in django/views/templates/default_urlconf.html.",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 4,
+   "test_changed": false
+  },
+  {
+   "sha": "76e1bca1311ae7073a1fa4add6f9d19d709f0f09",
+   "subject": "Fixed #36694 -- Restored missing Index options in PostGISSchemaEditor._create_spatial_index_sql().",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 19,
+   "test_changed": true
+  },
+  {
+   "sha": "3d34265d5d1b83fee5df3c1b6f55087b1a6a1ded",
+   "subject": "Fixed #35875 -- Added dark mode support to technical 404 and 500 error views.",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message",
+   "size_tier": "multi_file",
+   "source_files": 3,
+   "source_loc": 94,
+   "test_changed": false
+  },
+  {
+   "sha": "274df4df0bca7fcfb5c1c1d49567f770df147eeb",
+   "subject": "Fixed #37093 -- Clarified pull request instructions and adjusted error messages.",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message",
+   "size_tier": "multi_file",
+   "source_files": 2,
+   "source_loc": 19,
+   "test_changed": true
+  },
+  {
+   "sha": "537c6df3e641ebc21e9da76c86aea4d36e6a32e2",
+   "subject": "Fixed #32915 -- Suppressed fewer ImportErrors in management commands.",
+   "kind": "feature",
+   "kind_basis": "minor_release_notes",
+   "size_tier": "wide",
+   "source_files": 7,
+   "source_loc": 39,
+   "test_changed": true
+  },
+  {
+   "sha": "a486b48d4ea0d34babe58cae215b2123748aacbd",
+   "subject": "Fixed #37210 -- Logged cached_db session cache delete failures.",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 10,
+   "test_changed": true
+  },
+  {
+   "sha": "2e48636c54910e435eb31e1b7d8a8089c84233ad",
+   "subject": "Fixed #37187, #37190 -- Pointed ModelAdmin warnings to the deprecated code.",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 13,
+   "test_changed": true
+  },
+  {
+   "sha": "260d136920acf27dbd3cae9bc80eba2a43b44bba",
+   "subject": "Refs #37187 -- Implemented warn_about_implementation() deprecation utility.",
+   "kind": "feature",
+   "kind_basis": "commit_message",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 53,
+   "test_changed": true
+  },
+  {
+   "sha": "5f90dc2468bc52373efe4b231c4eb383b3f1edd2",
+   "subject": "Fixed #37178 -- Moved MiddlewareMixin out of utils.deprecation.",
+   "kind": "bug_fix",
+   "kind_basis": "patch_release_notes",
+   "size_tier": "wide",
+   "source_files": 18,
+   "source_loc": 172,
+   "test_changed": true
+  },
+  {
+   "sha": "bdbda29c3e126754c3ae04ceb5c5d35d49aae01c",
+   "subject": "Fixed #29303 -- Avoided mutating original view in non_atomic_requests().",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 13,
+   "test_changed": true
+  },
+  {
+   "sha": "65a9f14196c338d70889bd54753370606b3fb4eb",
+   "subject": "Fixed #36864 -- Supported modules and submodules in import_string().",
+   "kind": "feature",
+   "kind_basis": "minor_release_notes",
+   "size_tier": "multi_file",
+   "source_files": 3,
+   "source_loc": 65,
+   "test_changed": true
+  },
+  {
+   "sha": "7b8504eaabea6c70195baa3c02155c24a6e270c6",
+   "subject": "Fixed #35813 -- Made migrations track all changes to unmanaged models.",
+   "kind": "feature",
+   "kind_basis": "minor_release_notes",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 59,
+   "test_changed": true
+  },
+  {
+   "sha": "e28c2a9a011a8260e58fe4cf2b4b948116d4223f",
+   "subject": "Fixed #36621 -- Fixed arrow buttons position in admin filter_vertical widget.",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message",
+   "size_tier": "multi_file",
+   "source_files": 2,
+   "source_loc": 5,
+   "test_changed": true
+  },
+  {
+   "sha": "7ab2d803533dd3ffe310055414ad584cfbbf0bea",
+   "subject": "Fixed #17631 -- Handled fields and files with the same name in encode_multipart().",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 5,
+   "test_changed": true
+  },
+  {
+   "sha": "5d489a52c3c604018c786f11d45453eb75fa24b3",
+   "subject": "Refs #36983 -- Skipped GC specific tests when GIL disabled.",
+   "kind": "unknown",
+   "kind_basis": "none",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 11,
+   "test_changed": true
+  },
+  {
+   "sha": "3a720d0d8bf2529253b98968f10ca73daf6d693c",
+   "subject": "Fixed CVE-2026-53878 -- Prevented newlines from being accepted in DomainNameValidator.",
+   "kind": "bug_fix",
+   "kind_basis": "patch_release_notes",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 28,
+   "test_changed": true
+  },
+  {
+   "sha": "6ca2bbe2efce21010eff48f1f36a3f621d698ed8",
+   "subject": "Fixed CVE-2026-53877 -- Prevented heap buffer over-read when creating GDALRaster from bytes.",
+   "kind": "bug_fix",
+   "kind_basis": "patch_release_notes",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 3,
+   "test_changed": true
+  },
+  {
+   "sha": "6e365f8d01f2ba0bbd90968d76a42600fb8bc4b1",
+   "subject": "Fixed CVE-2026-48588 -- Prevented caching of responses that set cookies and vary on Cookie.",
+   "kind": "bug_fix",
+   "kind_basis": "patch_release_notes",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 8,
+   "test_changed": true
+  },
+  {
+   "sha": "e26cdc556eabd8ea443401c38e8b2f9c7f7f046c",
+   "subject": "Fixed #37122 -- Updated JSONField has_changed method to check for disabled status.",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 2,
+   "test_changed": true
+  },
+  {
+   "sha": "356e5b0f5ddb473eec3ed96d8ad9a37f3f8585eb",
+   "subject": "Fixed #37184 -- Allowed non-UTF-8 bytes passwords in the PBKDF2 and MD5 password hashers.",
+   "kind": "bug_fix",
+   "kind_basis": "patch_release_notes",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 7,
+   "test_changed": true
+  },
+  {
+   "sha": "d058058976496cedf3f36fa303a0327af38cdeaa",
+   "subject": "Fixed #37191 -- Prevented ValueError in FileBasedCache.touch() for expired keys.",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 4,
+   "test_changed": true
+  },
+  {
+   "sha": "99672c672a1537aeb0d1fd5911ca6f04154cc091",
+   "subject": "Refs #36593, #37187 -- Avoided spurious select_related() warning in ModelAdmin.",
+   "kind": "unknown",
+   "kind_basis": "none",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 10,
+   "test_changed": false
+  },
+  {
+   "sha": "93a1751f2fc0dfb81057ec3a7fb86778de1780fa",
+   "subject": "Avoided breaking sha1sum verification in the generated checksum.txt file.",
+   "kind": "unknown",
+   "kind_basis": "none",
+   "size_tier": "multi_file",
+   "source_files": 2,
+   "source_loc": 8,
+   "test_changed": false
+  },
+  {
+   "sha": "01c3cceca1ac80796e5448295e294cbc01948185",
+   "subject": "Replaced the defunct pgp.mit.edu keyserver with GitHub for key import.",
+   "kind": "unknown",
+   "kind_basis": "none",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 9,
+   "test_changed": false
+  }
+ ],
+ "rejected": [
+  {
+   "sha": "03b95b8fbab990ebbe399a4676e4ad581fe9acfd",
+   "subject": "Updated translations from Transifex.",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "03158f2189346e35831586dfd0381e37eacb685d",
+   "subject": "Added stub release notes and release date for 6.0.11 and 5.2.20.",
+   "reason": "no_source_change",
+   "kind": "bug_fix",
+   "kind_basis": "patch_release_notes"
+  },
+  {
+   "sha": "b75b85e9ac025c30309dc7f80f39c448031898bd",
+   "subject": "Refs #36664 -- Used os.path.commonpath() instead of deprecated os.path.commonprefix().",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "b6c9fda92318089b7cae8e4e74eb597af5fd0a2d",
+   "subject": "Added tests for gdal.Driver instantiation.",
+   "reason": "no_source_change",
+   "kind": "feature",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "9600da0b98b98b00e310c66b964f259ad5932daa",
+   "subject": "Bumped minimum Playwright version to 1.65.0.",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "95636a4d7e8827832a8574dfcb9ae3d301c58d32",
+   "subject": "Clarified AUTHORS guidance for trivial contributions.",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "9425a85c90c2640f45e311fe2dd1f912553100d1",
+   "subject": "Fixed #37489 -- Added comment documenting Field.template_name.",
+   "reason": "no_executable_source_change",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "6a8248f13fe7b51c4414eeaf3554a666464b2636",
+   "subject": "Fixed #18543 -- Corrected ImageField validation documentation.",
+   "reason": "no_source_change",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "f93a84a80c8706e4b9b2ce130ed5e88409117b72",
+   "subject": "Refs #36642 -- Added makemessages test for en_001 locale.",
+   "reason": "no_source_change",
+   "kind": "feature",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "6675dac0ffbaf15eaf725324192de01dc2b17acb",
+   "subject": "Fixed #37482 -- Corrected parse_time() docs about UTC offsets.",
+   "reason": "no_executable_source_change",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "368bef0b2e7a8b74b417af5bb8427758b9e3876a",
+   "subject": "Refs #37330 -- Added further annotations tests for QuerySet.values().",
+   "reason": "no_source_change",
+   "kind": "feature",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "b3997c604720ff061e9d3588c86a9bf7ca07fa32",
+   "subject": "Fixed #20551 -- Renamed duplicate \"initial\" fixtures in gis_tests.",
+   "reason": "no_source_change",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "9208dcfec84e49b56b63cb59bcbcb3cbe66f8846",
+   "subject": "Fixed #37388 -- Improved unsafe user input examples in security reporting docs.",
+   "reason": "no_source_change",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "ca3f31b255dee9d046eba41cbdb2adcfc4297588",
+   "subject": "Refs #37132 -- Fixed outdated change note reference.",
+   "reason": "no_source_change",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "a7629749fa2886d0dcb8ddf2df1842fd85511093",
+   "subject": "Fixed #37452 -- Made virtual environment activation cross-shell compatible for Windows users in docs.",
+   "reason": "no_source_change",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "82dcd4693877348df739559d3c8c14b136cf4442",
+   "subject": "Added reporter's right of first refusal to contributing docs.",
+   "reason": "no_source_change",
+   "kind": "feature",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "3b29f6e8d8f3928d1cc3278aafb698c0212168a1",
+   "subject": "Refs #37371 -- Added test databases to .gitignore.",
+   "reason": "no_source_change",
+   "kind": "feature",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "2382f40aed50332d2325563ea9097853561d45e8",
+   "subject": "Added requirement for a single vulnerability per email.",
+   "reason": "no_source_change",
+   "kind": "feature",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "5bd95c57a279fad1ac9432d9b7705b8fdf0336c9",
+   "subject": "Added CVE-2026-108147, CVE-2026-111211, CVE-2026-111362, CVE-2026-113593, CVE-2026-113733, and CVE-2026-114582 to security archive.",
+   "reason": "no_source_change",
+   "kind": "feature",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "9c0674b6498a90a7d1ec359d454ae29f716da2c8",
+   "subject": "Added stub release notes for 6.1.4.",
+   "reason": "no_source_change",
+   "kind": "bug_fix",
+   "kind_basis": "patch_release_notes"
+  },
+  {
+   "sha": "b501b8493f31cf8cba31211d59b3b78642b8cb02",
+   "subject": "Fixed #37468 -- Clarified the effects of changing primary keys to existing values.",
+   "reason": "no_source_change",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "a05e16a7230fe33d3f43f4a3aaed103cebb42efc",
+   "subject": "Refs #35514, #37293 -- Corrected removal version for EMAIL_* settings in 6.1 release notes.",
+   "reason": "no_source_change",
+   "kind": "feature",
+   "kind_basis": "minor_release_notes"
+  },
+  {
+   "sha": "f4c65fd6a517dd32bd2e732ae3543e550e56f206",
+   "subject": "Fixed #37138 -- Changed docs to use customized pydata-sphinx-theme.",
+   "reason": "no_source_change",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "a6a5d1e67a62328a303257e511886e1a139a0558",
+   "subject": "Refs #37271, #37272 -- Doc'd remaining DEP 20 changes for users and releasers.",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "3bdcd29a61be034b9c9a1cea744371c12339c48e",
+   "subject": "Fixed `make.bat check` to exit non-zero when a check fails.",
+   "reason": "no_source_change",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "19f0ac809e0aef9630eece22d77599641a44cb93",
+   "subject": "Ran docs checks and sphinx_tests on Windows via GitHub Actions.",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "e7119cdb6d6f0e3d5730d777d6e26d000439658f",
+   "subject": "Refs #35874 -- Excluded console-tabs.css from epub building on Windows.",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "1f97f36d786bbacbacd3a007de5d2308bc008583",
+   "subject": "Ensured docs checks cover same files as docs builds.",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "c61620099cfa1874c12771a4637e405f59c287a8",
+   "subject": "Fixed #37349 -- Documented that JSONField doesn't guarantee preserving object key order.",
+   "reason": "no_source_change",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "8aab4fa1ab4503019dbbbbd326d95a6e6833e230",
+   "subject": "Refs #37089 -- Added test coverage for ignore_warnings().",
+   "reason": "no_source_change",
+   "kind": "feature",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "a6304ac10554b97ea2458d27144e02db6dd95230",
+   "subject": "Refs #35874 -- Added EPUBCheck to the documentation build.",
+   "reason": "no_source_change",
+   "kind": "feature",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "1c6c7f909d44d78c1b4e9425ae6eb0383110d752",
+   "subject": "Refs #35874 -- Fixed console tabs overflow in narrow windows.",
+   "reason": "no_source_change",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "8274ae1c219f6dbd00776c9202d0216ea76c3b30",
+   "subject": "Refs #35874 -- Excluded console-tabs.css from epub.",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "e9cf067c614fd08f2ba1d216edf213c6ff806554",
+   "subject": "Fixed #37456 -- Converted contribution process diagram to plain SVG.",
+   "reason": "no_source_change",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "2ebb1aaf1f18699e9c42f4a181d2693c61a501cb",
+   "subject": "Confirmed release date for 6.1.3, 6.0.10, and 5.2.19.",
+   "reason": "no_source_change",
+   "kind": "bug_fix",
+   "kind_basis": "patch_release_notes"
+  },
+  {
+   "sha": "e9414948e9660ee4c167eebb187710ee3031d9d8",
+   "subject": "Fixed #37370 -- Reorganized the security policy page.",
+   "reason": "no_source_change",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "36920bb4766679f5b32445797dcc5d32b8ff5ad2",
+   "subject": "Refs #36664 -- Fixed python version labels in GeoDjango CI workflow.",
+   "reason": "no_source_change",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "0e128d524d0a7c55a955570d6e5da983ac6ce6c7",
+   "subject": "Refs #35874 -- Improved documentation console tabs accessibility.",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "1b40abab06d248ee409fa8b7a8dfb6312de6ca08",
+   "subject": "Updated asgiref dependency.",
+   "reason": "no_source_change",
+   "kind": "feature",
+   "kind_basis": "minor_release_notes"
+  },
+  {
+   "sha": "8e4e95da9b5b751923cd80989d9ece4b6c6fb1a3",
+   "subject": "Refs #36664 -- Installed gettext in scheduled Windows tests.",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "210c7ca0c10136c67067696588ec3f6bed74159d",
+   "subject": "Documented the \"Low\" ticket severity in triaging docs.",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "79502d08405dbf24efa39e8731320f31035b9e9c",
+   "subject": "Refs #36717 -- Noted RedirectURLMixin signature changes in 6.1 release notes.",
+   "reason": "no_source_change",
+   "kind": "feature",
+   "kind_basis": "minor_release_notes"
+  },
+  {
+   "sha": "3c85ea391e27bdcf25ea5b7592486ad55f4f8350",
+   "subject": "Refs #34865 -- Cleared gc.garbage in test_release_memory_without_garbage_collection().",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "0b4aaa7cdb86838b6b983346d729afdedcef1741",
+   "subject": "Fixed #37396 -- Added gettext to PATH in Windows CI.",
+   "reason": "no_source_change",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "45ce894a3b333edb154abe660e40e76f1a35e141",
+   "subject": "Doc'd ContentType.model_class behaviour for stale content types.",
+   "reason": "no_executable_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "c6ebf51871fa149e88f39ea44aaf700590366607",
+   "subject": "Fixed #36664 -- Doc'd Python 3.15 compatibility.",
+   "reason": "no_source_change",
+   "kind": "bug_fix",
+   "kind_basis": "patch_release_notes"
+  },
+  {
+   "sha": "11af25c0ae06c8275ebb8def8b8ca777a5660ed6",
+   "subject": "Fixed #37272 -- Documented the annual release cycle within the release process docs.",
+   "reason": "no_source_change",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "d430084791a61b31cecec132bce3dca19194f7f2",
+   "subject": "Pinned Playwright below 1.64.0 to avoid false WebKit CSP violation.",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "57ddccdcb0bc23eee6e9c304f69cf1ffd099151b",
+   "subject": "Refs #37212 -- Updated docs workflow to run Sphinx extension tests.",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "b720b73dbf490ef4b6452382b9c8f1833e869764",
+   "subject": "Refs #37212 -- Fixed console tabs bug on shared doctrees.",
+   "reason": "no_source_change",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "bbd01982a1e95a3073452e7e2aba8c5308e473db",
+   "subject": "Refs #37212 -- Added tests for djangodocs Sphinx extension.",
+   "reason": "no_source_change",
+   "kind": "feature",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "ad96d15302c2505bcc6f4699f88ba8236f96e8f2",
+   "subject": "Refs #37212 -- Removed unused code in djangodocs Sphinx extension.",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "1087f12f76426f804c680eb033c53ea92421491a",
+   "subject": "Refs #37409 -- Corrected docs home links whose text did not match their target.",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "6ef40f21937a585fa422ae2a6ea7e73cc2e59ff6",
+   "subject": "Refs #37051 -- Clarified the description of topic guides in docs home page.",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "c8906fe15f8bd280a5c0bb5e695b36c244419a16",
+   "subject": "Refs #37409 -- Regrouped single-link entries on the docs home page.",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "0357fd194b2a74152b638ac110ef48a847240113",
+   "subject": "Fixed #37409 -- Removed ambiguous \"Overview\" link text from the docs home page.",
+   "reason": "no_source_change",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "de6559094e81a55583fd6428b502fa925db8f593",
+   "subject": "Refs #23424 -- Added tests for existing comment and verbatim behavior.",
+   "reason": "no_source_change",
+   "kind": "feature",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "b33bab33709bbd74f4dfc376786ba0b3912c3f53",
+   "subject": "Fixed #37397 -- Clarified DATA_UPLOAD_MAX_MEMORY_SIZE behavior on request.body vs request.POST.",
+   "reason": "no_source_change",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "8a909f3c6b4f7805e4a274c534afbe3035bf097f",
+   "subject": "Fixed #37294 -- Added Firefox and WebKit to daily SQLite Playwright CI.",
+   "reason": "no_source_change",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "0f34a4cf9f1b5f3e68decbdca76aebb71268ba93",
+   "subject": "Replaced RST links named in English with explicit URLs.",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "dab0a5c47f159eb58472110dcbc10bd4a9b01adb",
+   "subject": "Extended translation fetching guide in docs/internals/howto-release-django.txt.",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "38e2188cde2278131237fd2177b55ded3d515556",
+   "subject": "Fixed #37412, Refs #34041 -- Added backwards incompatible note for admin breadcrumb changes.",
+   "reason": "no_source_change",
+   "kind": "feature",
+   "kind_basis": "minor_release_notes"
+  },
+  {
+   "sha": "677fbf05dabe34c4b36a8cca54277274d2afe298",
+   "subject": "Refs #37271 -- Updated docs/conf.py for calendar versioning.",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "650fa4ef3e50b146fba807a7561c792d36f2414d",
+   "subject": "Fixed #37007 -- Added \"Voice\" section to writing style docs.",
+   "reason": "no_source_change",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "a272e554b85b3f977d7f01c1ab2bce57b094eb56",
+   "subject": "Fixed GeoQuerySetTest.test_unionagg_tolerance() to accept either merged point.",
+   "reason": "no_source_change",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "e9f88e37164c73b324afeab3db56f8a64b7ea34f",
+   "subject": "Refs #29504 -- Used \"object\" when referring to JSON keys in query docs.",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "badbcf20e1a2894bf557d9cf0707367da4abfe41",
+   "subject": "Fixed #29504 -- Documented limitations of integer-like keys in JSONField.",
+   "reason": "no_source_change",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "137b77706e8780764a831ecf246c10a56f800ac2",
+   "subject": "Refs CVE-2026-15830 -- Increased coverage for WKT depth check in GEOS limiter.",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "904349fcbe0ad4eed097b5e7fb7171954591cb28",
+   "subject": "Added follow-up to CVE-2026-15830 to security archive.",
+   "reason": "no_source_change",
+   "kind": "feature",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "cf564bf3a7e0d92bc32292ccff1eca5aeb24b1ef",
+   "subject": "Refs #37065 -- Added missing await in method_decorator example.",
+   "reason": "no_source_change",
+   "kind": "feature",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "8c34887b1ad8bb3ec61c6e713442dab3c643d557",
+   "subject": "Added trailing newline to 6.1.3.txt.",
+   "reason": "no_source_change",
+   "kind": "bug_fix",
+   "kind_basis": "patch_release_notes"
+  },
+  {
+   "sha": "2bc761b01b55f8464cbd41e5189a04f2750f04fb",
+   "subject": "Removed reference to 6.0.8 from 6.1.2 and 5.2.18 release notes.",
+   "reason": "no_source_change",
+   "kind": "bug_fix",
+   "kind_basis": "patch_release_notes"
+  },
+  {
+   "sha": "3b7ae042cef02a09caab70ba54077a6f4cffac80",
+   "subject": "Added CVE-2026-77050, CVE-2026-84429, CVE-2026-87890, and CVE-2026-87975 to security archive.",
+   "reason": "no_source_change",
+   "kind": "feature",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "4c5b1d84f42e88f1450fd2efa7679300a826db0d",
+   "subject": "Added stub release notes for 6.1.3.",
+   "reason": "no_source_change",
+   "kind": "bug_fix",
+   "kind_basis": "patch_release_notes"
+  },
+  {
+   "sha": "fd91518f17c8a84fa47fe0e5534ef46afa7a0f7a",
+   "subject": "Limited postgis.yml CI action to GIS tests.",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "a461af8ce48762d7ec602260aaff81014ddccbcb",
+   "subject": "Fixed decimal comparison in RelatedGeoModelTest.test_related_union_aggregate().",
+   "reason": "no_source_change",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "55c2d202a6e68d40c649f9b27aed11494898628d",
+   "subject": "Refs #37140 -- Limited NULL handling warning for __in lookups to subqueries.",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "0ae93a02e55ec42dfde251fc5500b3ec617a4200",
+   "subject": "Fixed #37381 -- Corrected execute_wrapper() module reference in docs.",
+   "reason": "no_source_change",
+   "kind": "feature",
+   "kind_basis": "minor_release_notes"
+  },
+  {
+   "sha": "23e8bcc464e5faefec28bf36a2f4610a5e7f4be5",
+   "subject": "Clarified \"Documenting new features\" in \"Writing Documentation\" page.",
+   "reason": "no_source_change",
+   "kind": "feature",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "5a4511adb247a44a1cada11fe4763abba0a42663",
+   "subject": "Confirmed release date for 6.1.2, 6.0.9, and 5.2.18.",
+   "reason": "no_source_change",
+   "kind": "bug_fix",
+   "kind_basis": "patch_release_notes"
+  },
+  {
+   "sha": "9332b163a67eabe5bdbf8066b1c5da394be9aa9c",
+   "subject": "Refs #37136 -- Fixed test skips for Oracle Test Pilot.",
+   "reason": "no_source_change",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "6b58ab0b8c61d30567eea4f5f28db000f4472b0b",
+   "subject": "Fixed #37374 -- Removed unused hyperlink targets pointing to nonexistent docs pages.",
+   "reason": "no_source_change",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "4fab678a0739d54401ccee7eb587553657c9f76e",
+   "subject": "Fixed typo in docs/releases/6.1.2.txt.",
+   "reason": "no_source_change",
+   "kind": "bug_fix",
+   "kind_basis": "patch_release_notes"
+  },
+  {
+   "sha": "9d977aaa2d037cf0a6e2fcad40763305fe88cfda",
+   "subject": "Fixed #37051 -- Improved organisation of documentation home page.",
+   "reason": "no_source_change",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "951d13c77bc120be385c46fc701a1ad93694edd1",
+   "subject": "Added missing notes about including latest translations in 6.0.4 and 6.0.6.",
+   "reason": "no_source_change",
+   "kind": "bug_fix",
+   "kind_basis": "patch_release_notes"
+  },
+  {
+   "sha": "dd6f6b1531984823e3dc56740dfa93f3ceb09357",
+   "subject": "Corrected output of Prefetch.to_attr example.",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "85647bccc19947646f5b382808415acf623e964d",
+   "subject": "Fixed #37321 -- Documented BaseSpatialField.srid=-1 behavior.",
+   "reason": "no_source_change",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "82f34e2f7290d98ae2d1fe80919b2f0e21b18369",
+   "subject": "Refs #36947 -- Added supports_comments skip to test_alter_generated_field_base_field_comment.",
+   "reason": "no_source_change",
+   "kind": "feature",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "862ade3409ceaa8ec5305e6f5aa26ee0e553cf02",
+   "subject": "De-emphasized typo fixes in contributing docs.",
+   "reason": "no_source_change",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "a3f0642f69277f01611d0d3e829fc3b85aded2ec",
+   "subject": "Refs #36947 -- Added missing max_length in GeneratedField test for Oracle.",
+   "reason": "no_source_change",
+   "kind": "feature",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "376909dc434395ae0156ac74e998d828e9551989",
+   "subject": "Fixed #37140 -- Documented NULL handling of __in lookups.",
+   "reason": "no_source_change",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "08ba4d0e0f62e322c6727596ee7a324465076a76",
+   "subject": "Modeled a safer mechanism for installing a git hook for backports.",
+   "reason": "no_executable_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "2abf9d2cf8602f0ddc0db4ec1a33769b41b4232a",
+   "subject": "Refs #37348 -- Added test for excluding on a nullable GeneratedField.",
+   "reason": "no_source_change",
+   "kind": "feature",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "e7f464ecdc025000899067ceb6bc61116ca81996",
+   "subject": "Refs #37348 -- Reverted \"Refs #36806 -- Removed unnecessary null=True from GeneratedField in test models.\".",
+   "reason": "no_source_change",
+   "kind": "bug_fix",
+   "kind_basis": "reverts_a_commit"
+  },
+  {
+   "sha": "f91c8897f568a8075f4f0c1c9dcc81b8ec798ef3",
+   "subject": "Restored timeout in GeoDjango CI workflow.",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "9cb2cba6fc7f71ed768aed8cbc32e7447ecb0be8",
+   "subject": "Fixed typo in django/db/backends/mysql/schema.py.",
+   "reason": "no_executable_source_change",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "bbf5a998c02b52f1b72474e4b310cff94f24ff36",
+   "subject": "Fixed #37261 -- Documented error reporting migration to MAILERS.",
+   "reason": "no_source_change",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "516d06e48fb5a4e7deb055ef578fa1272e86d326",
+   "subject": "Fixed #37283 -- Clarified PostgreSQL connection pooling configuration.",
+   "reason": "no_source_change",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "89768ae1ab909ae77cbecc2e57927530dbe8584f",
+   "subject": "Fixed #37331 -- Dropped support for GEOS 3.10.",
+   "reason": "no_source_change",
+   "kind": "feature",
+   "kind_basis": "minor_release_notes"
+  },
+  {
+   "sha": "e7d301b06a1752d648675702d4db0fe110031906",
+   "subject": "Fixed Playwright test flakiness in admin collapse filter tests.",
+   "reason": "no_source_change",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "e2a3da142687c3b3dfa9cbc63c1a1a4433a8f842",
+   "subject": "Fixed #37313 -- Confirmed support for GEOS 3.15.",
+   "reason": "no_source_change",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "dc2c0b5a44d4fb531bb00d299c2c428f6ac87474",
+   "subject": "Moved the sqlmigrate walkthrough out of the tutorial.",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "5f0293b3ab546f86d666524f07d17304ac785506",
+   "subject": "Fixed #37136 -- Added test skips for Oracle Test Pilot.",
+   "reason": "no_source_change",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "177fb98c1025dd32879380e0665bc238cbfe6819",
+   "subject": "Fixed #37127 -- Added source links for form templates.",
+   "reason": "no_source_change",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "fee1cf726204f7ead542bf86b6647362cbe7a695",
+   "subject": "Refs #37127 -- Added a version-aware sourcefile Sphinx role.",
+   "reason": "no_source_change",
+   "kind": "feature",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "9193cb54550727a02fd55dab1b430597a9aa4297",
+   "subject": "Fixed #37325 -- Bumped minimum oracledb version to 4.0.2.",
+   "reason": "no_source_change",
+   "kind": "feature",
+   "kind_basis": "minor_release_notes"
+  },
+  {
+   "sha": "026b005f3dc43a98557ce5a546b5e4938d06fed1",
+   "subject": "Refs #37293 -- Updated deprecation docs for calendar-based warning names.",
+   "reason": "no_executable_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "5180f82f48b589f93cddc7be7896f654a9aec1ad",
+   "subject": "Added stub release notes for 6.1.2.",
+   "reason": "no_source_change",
+   "kind": "bug_fix",
+   "kind_basis": "patch_release_notes"
+  },
+  {
+   "sha": "8c2db58d3d9a823af419cd10bf9524050242c181",
+   "subject": "Added release date for 6.1.1.",
+   "reason": "no_source_change",
+   "kind": "bug_fix",
+   "kind_basis": "patch_release_notes"
+  },
+  {
+   "sha": "4d2a26095e99e52729bf2719d41cab07d7542908",
+   "subject": "Added remaining community package mentions to the documentation.",
+   "reason": "no_source_change",
+   "kind": "feature",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "05aec0a4aa111b54b50daec64059fd18ac70b437",
+   "subject": "Clarified scope of object-level admin view permissions.",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "ddb83ea0e0a22e6e0345b77d879522ee85688190",
+   "subject": "Corrected heading hierarchy in the admin actions documentation.",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "ae7450c857cc766175e29d3045f17b30e8a43154",
+   "subject": "Clarified object-level permission checks in admin actions.",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "189136c2a3e166c59a49cca2444aa6a1d77aa136",
+   "subject": "Fixed gunicorn links in security policy.",
+   "reason": "no_source_change",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "3b767c5f6ab6a4421ea3892ac6afacd8aa1345d6",
+   "subject": "Fixed #37301 -- Fixed broken references in accessibility documentation.",
+   "reason": "no_source_change",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "7576781cc6718fae313faadd29288ad8c4313f3c",
+   "subject": "Fixed #37255 -- Avoided relying on implicit SELECT ordering in tests.",
+   "reason": "no_source_change",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "0b40210e4808937a7c0922e8b7502bff4752faa3",
+   "subject": "Refs #37258, #36644 -- Fixed release note for clearing default ordering after combination.",
+   "reason": "no_source_change",
+   "kind": "feature",
+   "kind_basis": "minor_release_notes"
+  },
+  {
+   "sha": "03988c5a5ba248c3b9b11ea96fd4fda5e98849aa",
+   "subject": "Refs #36664 -- Readded optional requirements on daily builds for Python 3.15.",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "4c4f8fd775c61ad8cfb07b4da244b07000c89edc",
+   "subject": "Removed more versionadded/versionchanged directives for 6.1.",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "1d50f12929f8f2d424f0e7cc6b1f693f590f71a2",
+   "subject": "Fixed #37258, Refs #36644 -- Documented error when default ordering fields are missing in combined queries.",
+   "reason": "no_source_change",
+   "kind": "feature",
+   "kind_basis": "minor_release_notes"
+  },
+  {
+   "sha": "504d1f12cd5879177295fecd2ba4da1001a0930f",
+   "subject": "Refs #37260 -- Added missing skip condition to test_fk_alter_on_delete_db_level.",
+   "reason": "no_source_change",
+   "kind": "feature",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "d92b0209014021350af0383983315bf0a05ffac0",
+   "subject": "Corrected indentation in docs/refs/models/instances.txt.",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "3436cf9bce84bb1f6877ad96819637366b27b719",
+   "subject": "Clarified that FORM_RENDERER applies to the admin.",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "4ee04972e7f9163dbdf5a7c36330e3379187e187",
+   "subject": "Refs CVE-2026-15307 -- Used a more common lookup in raster lookup tests.",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "6df8fe3bc1879265958b8e59c637a4145995e93c",
+   "subject": "Fixed #24580 -- Tested FK values with __html__() in ModelAdmin.list_display.",
+   "reason": "no_source_change",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "2b4c88b2ce753a44b5ba867e5e52a20e07b258e6",
+   "subject": "Refs #28586 -- Updated Model.from_db() signature in docs.",
+   "reason": "no_source_change",
+   "kind": "feature",
+   "kind_basis": "minor_release_notes"
+  },
+  {
+   "sha": "c9eb16a87e60c305fb3651459639f647cce498db",
+   "subject": "Refs #36905 -- Corrected safe param in JSONResponse signature in docs.",
+   "reason": "no_executable_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "4243ab11dc957fd14a1875e6b715ff5e6114a415",
+   "subject": "Documented additional caveats for inspectdb.",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "ae25a40be07e8a749edf526df37c93e59d4a22c9",
+   "subject": "Fixed #37196 -- Documented SimpleTestCase.async_client_class and async_client in testing tools.",
+   "reason": "no_source_change",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "dfc52e53f1d19a2730854d68b602fb4dba8bf0c5",
+   "subject": "Added stub release notes for 6.1.1.",
+   "reason": "no_source_change",
+   "kind": "bug_fix",
+   "kind_basis": "patch_release_notes"
+  },
+  {
+   "sha": "401f1266473cf3635957cc9c582321fe442ae816",
+   "subject": "Finalized release notes for Django 6.1.",
+   "reason": "no_source_change",
+   "kind": "feature",
+   "kind_basis": "minor_release_notes"
+  },
+  {
+   "sha": "9e0655e49b01ae211c780003054fb49678064064",
+   "subject": "Updated translations from Transifex.",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "6baaf6a87706265446c4c7f2e3b96e3c49385b27",
+   "subject": "Fixed #37205 -- Asserted exact HttpResponse types in tests.",
+   "reason": "no_source_change",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "7d75c0b9285f0e29cb796c647cc27f2076f9d49c",
+   "subject": "Added CVE-2026-15307, CVE-2026-15337, CVE-2026-15830, and CVE-2026-15920 to security archive.",
+   "reason": "no_source_change",
+   "kind": "feature",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "fb1137658ff597ffac758c3246a9bf8f0e90c753",
+   "subject": "Added free-threaded Python 3.14t to PostGIS CI workflow.",
+   "reason": "no_source_change",
+   "kind": "feature",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "1c550a8151c84d7e221ccc42821aae25f43f0452",
+   "subject": "Fixed #37069 -- Clarified that UniqueConstraint may create a unique index.",
+   "reason": "no_source_change",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "5637bec7a033d67407694316bdda74304449488e",
+   "subject": "Fixed #36770 -- Fixed incomplete mocking in SQLiteInMemoryTestDbs.",
+   "reason": "no_source_change",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "2b0e08a149b2036352684b8247f35c031cf61504",
+   "subject": "Removed advice to include ticket numbers in tests.",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "902e5c0fb2d3f0772efbfebc8ff135926a2bb47a",
+   "subject": "Refs #37139 -- Doc'd _is_pk_set() handling of DatabaseDefault.",
+   "reason": "no_source_change",
+   "kind": "feature",
+   "kind_basis": "minor_release_notes"
+  },
+  {
+   "sha": "1c5927f04a853c79ac9b098eab92fb328ff9e4ad",
+   "subject": "Updated asgiref dependency in free-threaded requirements.",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "50d706d0aebcc2d073c8d034b6e22fc98fad49f2",
+   "subject": "Fixed PR number lookup in coverage comment workflow.",
+   "reason": "no_source_change",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "143a65ca92b8e8d8bc692c52b27605378369ee00",
+   "subject": "Fixed #37111 -- Added sprints quickstart docs page.",
+   "reason": "no_source_change",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "834b5cbb68d68ef098ddeba325e849f2c0556e61",
+   "subject": "Refs #28586 -- Doc'd fetch_mode attribute on ModelState.",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "274a1d494d11d87a1b767340d1f398f197810f93",
+   "subject": "Refs #12227 -- Added test for PREPEND_WWW redirect following in test client.",
+   "reason": "no_source_change",
+   "kind": "feature",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "5c4a36f81752025e1d8bd0eefafafd2206e02f10",
+   "subject": "Refs #28586 -- Added coverage for from_queryset's fetch mode in refresh_from_db().",
+   "reason": "no_source_change",
+   "kind": "feature",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "e1feeee45ea8bcd4325554c9b94fcd75fcd8dbdc",
+   "subject": "Fixed #37194 -- Removed redundant choice widget documentation.",
+   "reason": "no_source_change",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "50e5264a458961134d34d6340a00d9a1b269df7a",
+   "subject": "Allowed the full Python test matrix to run on GitHub Actions.",
+   "reason": "no_source_change",
+   "kind": "feature",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "09c8b50bc8e59f7ec2d97df1bfb3fbd3ae0d4522",
+   "subject": "Added stub release notes and release date for 6.0.8 and 5.2.17.",
+   "reason": "no_source_change",
+   "kind": "bug_fix",
+   "kind_basis": "patch_release_notes"
+  },
+  {
+   "sha": "8362cdc7efc9c881fdba48ce19e89b9194de7c46",
+   "subject": "Bumped minimum setuptools version to 83.",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "ea6b17b4815d36f6cc7780fdec303d27997eca49",
+   "subject": "Fixed #20023 -- Added custom validation example for admin inlines.",
+   "reason": "no_source_change",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "957d0cee7167757ae221ffde59d2cf0a322e89c7",
+   "subject": "Removed outdated Python 2 references from contributing docs.",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "99ab4bd124df9cd69f990a2deba2bcfa9905851e",
+   "subject": "Refs #37217 -- Updated version references to 6.2 in contributing docs.",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "4a89f5c3978821e559b55f45d7a86984b26ceaa0",
+   "subject": "Fixed typo and versionadded locations in email docs.",
+   "reason": "no_source_change",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "50c2b7c83661a61da48f78dd0130fc3cbf8ed39f",
+   "subject": "Refs #36694 -- Skipped GIS test needing spatial index on Oracle.",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "c8ad2fbb2a81d292d88a47811cebfd7d6d6e815e",
+   "subject": "Updated source translation catalogs.",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "21b3a4c4c528ca827adda14b6c4cf045afba6d4f",
+   "subject": "Fixed #36925 -- Listed further shared features for InlineModelAdmin.",
+   "reason": "no_source_change",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "6cbee65e1fdc193bf762321a5f2e805afd736325",
+   "subject": "Added expected end of support dates for 6.1.",
+   "reason": "no_source_change",
+   "kind": "feature",
+   "kind_basis": "minor_release_notes"
+  },
+  {
+   "sha": "dca76b15c62a1118325b71678ce3235e2231198d",
+   "subject": "Fixed #37032 -- Documented that the CSRF context processor is always enabled in its reference documentation.",
+   "reason": "no_source_change",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "4ef959ab0c7dde0459041a795359c9bc040df2b7",
+   "subject": "Refs #15855 -- Documented that cache_page caches responses before response middleware runs.",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "cceb6969d4dd62a421c483eefb54cbc159afbded",
+   "subject": "Refs #32539 -- Fixed flaky facet filter tests.",
+   "reason": "no_source_change",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "e909d5e3f62eb28670f71ba353406acf608b8c19",
+   "subject": "Installed gettext in Github Actions workflows to avoid test skips.",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "659a77cf1d8fd7b35e82e1cd830b32360d189ba4",
+   "subject": "Unified dependency apt installation in GitHub Action workflows.",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "dd4fc22d4cfd182c04e0468ae4a8f630fbb2fd1b",
+   "subject": "Fixed #37219 -- Added GeneratedField example to PostgreSQL search reference.",
+   "reason": "no_source_change",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "ad289c1de4c39cc2b35748dc7a5ac84c7cbdf10a",
+   "subject": "Fixed #37218 -- Doc'd that on-demand fetching is sync only.",
+   "reason": "no_source_change",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "cae38ec9b9bd394f630bdcbffa013c2761e831e9",
+   "subject": "Refs #36983 -- Fixed race condition in ExceptionReporterTests under free-threading.",
+   "reason": "no_source_change",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "726440a47358d54bfbae1ebea4fa9e44f45ca714",
+   "subject": "Refs #36983 -- Added CI tests on free-threaded Python 3.13t and 3.14t.",
+   "reason": "no_source_change",
+   "kind": "feature",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "0bba6363b0ecf3426defbdada17c5efbd51a77c8",
+   "subject": "Updated asgiref dependency.",
+   "reason": "no_source_change",
+   "kind": "feature",
+   "kind_basis": "minor_release_notes"
+  },
+  {
+   "sha": "a19b1355ce4b2304a4c72ae75cf3dc99856b451a",
+   "subject": "Added MAILERS to core settings topical index.",
+   "reason": "no_source_change",
+   "kind": "feature",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "581f2969eddedefacc100e08f494a439c47a9828",
+   "subject": "Fixed broken link in uvicorn deployment docs.",
+   "reason": "no_source_change",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "bf5e73c576c8c7d8b3ef1c03a22cf724dbb2f306",
+   "subject": "Closed temporary files in GDALRasterTests.",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "065a4a4b8d55451c4ffba02e447faf9cf5e8d807",
+   "subject": "Fixed #37131 -- Improved XSS section in security documentation.",
+   "reason": "no_source_change",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "bd1cd8f0f8776fc35c6d2d600c75d1292037ab68",
+   "subject": "Fixed #25243 -- Added inspectdb regression test for sqlite_schema FK.",
+   "reason": "no_source_change",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "7112007fcaf7a7db8a4a6bb1d45b51d8fa41d0b7",
+   "subject": "Fixed #37199 -- Fixed typo in bulk_update code example in docs/ref/models/querysets.txt.",
+   "reason": "no_source_change",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "f51347964a85bd4881caabf3c736b2c54d75262f",
+   "subject": "Fixed #37181 -- Corrected assertion in SeleniumTests.test_pagination.",
+   "reason": "no_source_change",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "4106acd141b614ca708c3d932ec8795aae45f5e2",
+   "subject": "Fixed #37182 -- Corrected property typo in skip link to content test.",
+   "reason": "no_source_change",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "ecc619703ad22d7707c14c11b14e3bea9684b3b6",
+   "subject": "Fixed #37180 -- Fixed admin SelectBox height tests to verify available/chosen box heights.",
+   "reason": "no_source_change",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "3ebd048cf78048c7a6153701d182a2f683277ba3",
+   "subject": "Bumped versions in Github actions configuration.",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "b34b834378adc590a771cccd44b9fb0b953cdca2",
+   "subject": "Fixed concurrency in labels.yml GitHub Action.",
+   "reason": "no_source_change",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "8c454124cdbe4a286b02f5b3ff7d01adcb9d9b32",
+   "subject": "Refs #36277 -- Added release note for Postgres 18+ virtual column.",
+   "reason": "no_source_change",
+   "kind": "feature",
+   "kind_basis": "minor_release_notes"
+  },
+  {
+   "sha": "f8fc89d79c8850f3a1f29413de8277f8752f922d",
+   "subject": "Refs #32670 -- Revealed warning in GDAL virtual filesystem reference.",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "c93a9e3c8817f0128ed3e1b9f8e46da4cd86b699",
+   "subject": "Added CVE-2026-48588, CVE-2026-53877, and CVE-2026-53878 to security archive.",
+   "reason": "no_source_change",
+   "kind": "feature",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "2f3acc05eb530fbeb9418a48ab482a2a72d60b59",
+   "subject": "Added stub release notes for 6.0.8.",
+   "reason": "no_source_change",
+   "kind": "bug_fix",
+   "kind_basis": "patch_release_notes"
+  },
+  {
+   "sha": "7f3954386beaabc59695629b81c2c2d0cf0fe522",
+   "subject": "Added tests for StringAgg edge cases.",
+   "reason": "no_source_change",
+   "kind": "feature",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "3a15d1b34d7d52616c9e217fab2192b1e93aa881",
+   "subject": "Fixed flatpages synopsis in docs.",
+   "reason": "no_source_change",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "73dd0169a54f4bbcb41b29bf7d51a36f86c89afe",
+   "subject": "Added FILE_UPLOAD_DIRECTORY_PERMISSIONS to docs settings index.",
+   "reason": "no_source_change",
+   "kind": "feature",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "5875c79cb97688d05f180437e42c6b70b623e69d",
+   "subject": "Fixed #37172 -- Linked to upload handlers section in FILE_UPLOAD_* settings see for details.",
+   "reason": "no_source_change",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "6b13c8c4999f386b0eb22f311a5d3bbfd22d7be7",
+   "subject": "Fixed #37158 -- Reordered the contribution checklist sections.",
+   "reason": "no_source_change",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "c087b7e8c169f009ff6113647685df4ea9fefe88",
+   "subject": "Fixed #37204 -- Rendered console directives as plain code in epub docs builds.",
+   "reason": "no_source_change",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "318a316a4c86a65bede68144f9546a6056d91379",
+   "subject": "Fixed document referenced in multiple toctrees warning in docs/internals/contributing/writing-code/index.txt.",
+   "reason": "no_source_change",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "c8b1f22a3d88284a87d2d278d34c103d3a859c8b",
+   "subject": "Fixed duplicate target name in docs/internals/howto-release-django.txt.",
+   "reason": "no_source_change",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "cc68c7d2483e0b86e5ffe5b583ecfd8bd3e972ec",
+   "subject": "Updated howto-release-django.txt with reminder to bump asgiref.",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "ff4eedbf0ee5cc8ed522333ed87dae5ebe4f364c",
+   "subject": "Disambiguated duplicate \"Example\" hyperlink targets in howto-release-django.txt.",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "f3f9601cff03b38942e70ce8042bdfdec6002449",
+   "subject": "Fixed #34753 -- Extended security and safety remarks in email topics docs.",
+   "reason": "no_source_change",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "54495840a6a8b09ec40c793495e6541a3c0d3d5b",
+   "subject": "Fixed #37162 -- Updated ContactForm docs example to use safe practices.",
+   "reason": "no_source_change",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "8defe54f03d1bd50c2051f8514dfa1e85efa38f7",
+   "subject": "Added stub release notes and release date for 6.0.7 and 5.2.16.",
+   "reason": "no_source_change",
+   "kind": "bug_fix",
+   "kind_basis": "patch_release_notes"
+  },
+  {
+   "sha": "7b09ce8280ef9cdf4922a83c4119c80b868e4304",
+   "subject": "Renamed tests/migrations/test_base.py to base.py.",
+   "reason": "no_source_change",
+   "kind": "refactor",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "e78991410b78391bc07a4b5010b273dfec814ff6",
+   "subject": "Clarified \"plaintext\" vs. \"plain-text\" in password hashers docs.",
+   "reason": "no_executable_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "d5797ae57d4822ee77091c8e8e5d35e5f4efca53",
+   "subject": "Refs #37188 -- Used a more realistic --ignore in compilemessages example.",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "f7cb1e1bbbc613eaf74a09f5c6dcb24c1fbde21b",
+   "subject": "Removed hardcoded pks in many tests.",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "8013cf61c6a1aff9839af2953c5bdda804efdff4",
+   "subject": "Refs #36984 -- Preserved translator comment on separator string.",
+   "reason": "no_executable_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "b3a4ce3695a952f83488b89adb4dd19fa428efb7",
+   "subject": "Refs #35514 -- Added migration guide link to `AdminEmailHandler` deprecation note.",
+   "reason": "no_source_change",
+   "kind": "feature",
+   "kind_basis": "minor_release_notes"
+  }
+ ]
+}

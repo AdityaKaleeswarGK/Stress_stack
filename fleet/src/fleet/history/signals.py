@@ -7,9 +7,10 @@ signal against what the change really was.
 The signals are ordered by how far they can be trusted, which decides how the
 kind is chosen:
 
-1. **A changelog fragment the project wrote** (`changelog/123.bugfix.rst`,
-   towncrier style). The maintainers classified the change themselves, at
-   review time, for their users. Strongest, and absent from most repos.
+1. **A changelog entry the project wrote.** Strongest when it is a typed
+   fragment (`changelog/123.bugfix.rst`, towncrier style): the maintainers
+   classified the change themselves, at review time. Versioned release notes
+   (`docs/releases/6.0.1.txt`) come next: only fixes reach a patch release.
 2. **A revert relationship.** `This reverts commit X` is machine-written by
    git; a reverted change was judged broken by the project.
 3. **The commit message.** Weakest: about 44% of commit messages lack the
@@ -41,13 +42,28 @@ _FRAGMENT_KINDS = {
     "packaging": OTHER, "vendor": OTHER, "internal": OTHER,
 }
 _LOG_FILES = {"changelog", "changes", "history", "news", "release-notes", "releasenotes"}
+# Versioned release notes, one file per release: Django's docs/releases/6.0.1.txt,
+# pandas' doc/source/whatsnew/v2.3.1.rst. Only fixes are backported into a
+# patch release, so a note in a patch-release file is the project saying "bug
+# fix". A note in a minor-release file usually means a feature, but projects
+# such as pandas also list that release's bug fixes there, so it is weaker.
+_RELEASE_DIRS = {"releases", "release-notes", "release_notes", "whatsnew", "release"}
+_RELEASE_FILE = re.compile(r"^v?\d+\.\d+(?:\.(?P<patch>\d+))?\.(?:txt|rst|md)$")
 
 _CONVENTIONAL = re.compile(r"^(?P<type>[a-z]+)(?:\([^)]*\))?!?:\s")
 _CONVENTIONAL_KINDS = {"fix": BUG_FIX, "bugfix": BUG_FIX, "hotfix": BUG_FIX,
                        "feat": FEATURE, "feature": FEATURE,
                        "refactor": REFACTOR, "perf": REFACTOR, "style": REFACTOR,
-                       "docs": OTHER, "test": OTHER, "tests": OTHER, "chore": OTHER,
-                       "build": OTHER, "ci": OTHER, "deps": OTHER}
+                       "docs": OTHER, "doc": OTHER, "test": OTHER, "tests": OTHER, "chore": OTHER,
+                       "build": OTHER, "ci": OTHER, "deps": OTHER,
+                       # NumPy/SciPy/pandas convention: `ENH: ...`, `BUG: ...`.
+                       "bug": BUG_FIX, "enh": FEATURE, "api": FEATURE, "dep": FEATURE,
+                       "maint": REFACTOR, "sty": REFACTOR, "tst": OTHER, "bld": OTHER, "rel": OTHER}
+# A branch name's first segment, when it is a recognisable type: `fix/2353-...`.
+_BRANCH_TYPE = re.compile(r"^(?P<type>[a-z]+)[/_-]")
+# GitHub's merge subject names the branch; the PR title is the next paragraph.
+_MERGE_PR = re.compile(r"^Merge pull request #\d+ from [^/\s]+/(?P<branch>\S+)")
+_MERGE_BRANCH = re.compile(r"^Merge (?:remote-tracking )?branch '(?P<branch>[^']+)'")
 _WORDS = (
     (BUG_FIX, re.compile(r"\b(fix(e[sd])?|bug|regression|crash(es|ed)?|incorrect(ly)?|wrong|broken|"
                          r"error|exception|traceback|handle[sd]?|issue)\b", re.I)),
@@ -72,24 +88,68 @@ def changelog_signal(paths: list[str]) -> dict | None:
                 fragments.append(path)
                 kinds.append(_FRAGMENT_KINDS[match["type"]])
     if not kinds:
+        patch_notes, minor_notes = [], []
+        for path in paths:
+            parts = PurePosixPath(path).parts
+            match = _RELEASE_FILE.match(parts[-1].lower())
+            if match and any(part.lower() in _RELEASE_DIRS for part in parts[:-1]):
+                (patch_notes if match["patch"] and int(match["patch"]) > 0 else minor_notes).append(path)
+        if patch_notes:
+            return {"kind": BUG_FIX, "release_notes": patch_notes + minor_notes, "source": "patch_release_notes"}
+        if minor_notes:
+            return {"kind": FEATURE, "release_notes": minor_notes, "source": "minor_release_notes"}
         edited = [p for p in paths if PurePosixPath(p).stem.lower() in _LOG_FILES]
         return {"kind": None, "edited_changelog": edited} if edited else None
     # A change shipping a bugfix fragment is a fix even if it also notes a
     # doc tweak; only the substantive kinds compete.
     ranked = [k for k in (BUG_FIX, FEATURE, REFACTOR, OTHER) if k in kinds]
-    return {"kind": ranked[0], "fragments": fragments}
+    return {"kind": ranked[0], "fragments": fragments, "source": "changelog_fragment"}
+
+
+def describe(message: str) -> tuple[str, str]:
+    """The human-written title of a change, and its branch name if git recorded one.
+
+    For an ordinary commit the title is the subject line. A GitHub merge
+    commit's subject is boilerplate (`Merge pull request #N from user/branch`)
+    and says nothing; the PR's own title is the next paragraph of the same
+    message. Reading only the subject left 21 of 27 pytest candidates with no
+    kind at all.
+    """
+    lines = [line.strip() for line in message.strip().splitlines()]
+    subject = lines[0] if lines else ""
+    merged = _MERGE_PR.match(subject)
+    if merged:
+        title = next((line for line in lines[1:] if line), "")
+        return title, merged["branch"]
+    merged = _MERGE_BRANCH.match(subject)
+    if merged:
+        return "", merged["branch"]
+    return subject, ""
 
 
 def message_signal(message: str) -> dict:
-    """What the commit message claims. Weak evidence; see the module docstring."""
-    subject = message.strip().splitlines()[0] if message.strip() else ""
-    conventional = _CONVENTIONAL.match(subject.lower())
+    """What the commit message claims. Weak evidence; see the module docstring.
+
+    The title is read first, the branch name second, because a branch is
+    chosen before the work is done and a title after it.
+    """
+    title, branch = describe(message)
+    conventional = _CONVENTIONAL.match(title.lower())
     if conventional and conventional["type"] in _CONVENTIONAL_KINDS:
         return {"kind": _CONVENTIONAL_KINDS[conventional["type"]], "evidence": f"prefix {conventional['type']}:"}
     for kind, pattern in _WORDS:
-        found = pattern.search(subject)
+        found = pattern.search(title)
         if found:
             return {"kind": kind, "evidence": f"word '{found.group(0)}'"}
+    if branch:
+        typed = _BRANCH_TYPE.match(branch.lower())
+        if typed and typed["type"] in _CONVENTIONAL_KINDS:
+            return {"kind": _CONVENTIONAL_KINDS[typed["type"]], "evidence": f"branch {branch}"}
+        words = re.sub(r"[/_.-]+", " ", branch)
+        for kind, pattern in _WORDS:
+            found = pattern.search(words)
+            if found:
+                return {"kind": kind, "evidence": f"branch word '{found.group(0)}'"}
     return {"kind": UNKNOWN, "evidence": "no recognised wording"}
 
 
@@ -171,7 +231,9 @@ def classify(record: dict, message: str, root, links) -> dict:
     shape = diff_signal(root, record["base_sha"], record["sha"], sources)
 
     if changelog and changelog.get("kind"):
-        kind, basis, confidence = changelog["kind"], "changelog_fragment", "high"
+        basis = changelog["source"]
+        confidence = {"changelog_fragment": "high", "patch_release_notes": "medium"}.get(basis, "low")
+        kind = changelog["kind"]
     elif reverts:
         kind, basis, confidence = BUG_FIX, "reverts_a_commit", "medium"
     elif shape["mechanical"]:
