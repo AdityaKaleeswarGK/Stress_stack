@@ -192,3 +192,38 @@ def test_date_pinning_can_be_switched_off(tmp_path, monkeypatch):
               "pin_index_date": False}
     result = validation.validate(candidate, repo, tmp_path / "out", recipe, repeats=2)
     assert result["index_cutoff"] is None and "UV_EXCLUDE_NEWER" not in docker.dockerfiles[0]
+
+
+def test_gvisor_is_chosen_when_docker_offers_it(monkeypatch):
+    offered = lambda runtimes: (lambda args, **kw: SimpleNamespace(
+        returncode=0, stdout=json.dumps({name: {} for name in runtimes}).encode(), stderr=b""))
+    monkeypatch.delenv("FLEET_SANDBOX_RUNTIME", raising=False)
+    monkeypatch.setattr(validation, "run", offered(["runc", "runsc"]))
+    assert validation.sandbox_runtime() == "runsc"
+    monkeypatch.setattr(validation, "run", offered(["runc"]))
+    assert validation.sandbox_runtime() == "runc"
+    # An explicit choice wins, including asking for gVisor where it is absent:
+    # the launch then fails rather than quietly using the weaker runtime.
+    monkeypatch.setenv("FLEET_SANDBOX_RUNTIME", "runsc")
+    assert validation.sandbox_runtime() == "runsc"
+    monkeypatch.setenv("FLEET_SANDBOX_RUNTIME", "runc")
+    monkeypatch.setattr(validation, "run", offered(["runc", "runsc"]))
+    assert validation.sandbox_runtime() == "runc"
+
+
+def test_runs_use_the_chosen_runtime_and_check_out_inside_the_workspace(tmp_path, monkeypatch):
+    repo, candidate = candidate_repo(tmp_path)
+    docker = FakeDocker()
+    monkeypatch.setattr(validation, "run", docker)
+    monkeypatch.setenv("FLEET_SANDBOX_RUNTIME", "runsc")
+    out = tmp_path / "out"
+    recipe = {"image": "python:3.12-slim", "install_command": "pip install -e .", "test_paths": ["tests"]}
+    result = validation.validate(candidate, repo, out, recipe, repeats=2)
+    assert result["sandbox_runtime"] == "runsc"
+    assert all("--runtime=runsc" in launch for launch in docker.launches)
+    # Every mounted checkout lives under the evidence folder, never $TMPDIR,
+    # because Colima shares only the home folder with its VM.
+    sources = [a.split(",dst=")[0].removeprefix("type=bind,src=") for launch in docker.launches
+               for a in launch if a.endswith("dst=/workspace")]
+    assert sources and all(Path(source).is_relative_to(out) for source in sources)
+    assert not list(out.glob(".work-*"))  # cleaned up afterwards

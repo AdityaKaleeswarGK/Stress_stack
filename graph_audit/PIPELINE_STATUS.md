@@ -17,6 +17,17 @@ New tests passing on both versions can provide coverage/preservation evidence. A
 
 ## Remaining work
 
+### Deferred: Go and C/C++ (decided 2026-11-21)
+
+Filtering and era detection already handle Go and C/C++ (token-based comment check, CMake/Meson/Conan/vcpkg files as build config, `go.mod`/`go.sum`/CMake eras, toolchain recording), audited offline on gin and fmt in `multilang_filter_eras/`. Further testing is parked so validation can focus on Python first. To pick up later:
+
+- Run Go and C/C++ candidates in containers (the validator is pytest-only today).
+- Share one Go module cache per toolchain version instead of one image per `go.sum` (gin: 65 eras from 175 changes).
+- Track `CMakeLists.txt` files below the repository root (fmt's `test/CMakeLists.txt` declares its test dependencies).
+- Use the recorded toolchain (`go` directive, CMake minimum, C++ standard) to choose the base image.
+
+### Other open work
+
 - Finish the six Glom reviews and independently audit agent assertions, generated probes and task statements.
 - Reconcile completed API-call costs with reserved budgets.
 - Verify authoritative closed-issue-to-PR relationships; commit-message hints and closing claims alone do not establish that relationship.

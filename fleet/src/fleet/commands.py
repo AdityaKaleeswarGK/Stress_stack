@@ -215,6 +215,15 @@ def doctor():
         try:
             result = subprocess.run(["docker", "info", "--format", "{{.ServerVersion}}"], capture_output=True, text=True, timeout=15)
             progress(f"Docker daemon: {result.stdout.strip() if result.returncode == 0 else 'unavailable'}")
+            if result.returncode == 0:
+                from fleet.validation import sandbox_runtime
+
+                runtime = sandbox_runtime()
+                progress(f"Sandbox runtime: {runtime}" + ("" if runtime == "runsc" else
+                         " (gVisor not available; test containers share the VM kernel)"))
+                context = subprocess.run(["docker", "context", "show"], capture_output=True, text=True, timeout=15)
+                if context.stdout.strip() == "colima":
+                    progress("Docker context: colima (only the home folder is shared; keep workspaces under it)")
         except (OSError, subprocess.TimeoutExpired):
             progress("Docker daemon: unavailable")
 

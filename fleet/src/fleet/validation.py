@@ -228,8 +228,45 @@ MAX_HUNK_PROBES = 8
 _RESULT_EXIT_CODES = {0, 1}
 
 
+def sandbox_runtime() -> str:
+    """The OCI runtime test containers run under: gVisor when Docker offers it.
+
+    runc shares the host kernel with the code under test; gVisor puts a
+    user-space kernel between them, which is the boundary hosted agent
+    sandboxes treat as the minimum for untrusted code. Measured on this
+    project's laptop setup (Colima, arm64), gVisor gave identical per-test
+    results on pluggy (144 tests) and glom (202) at about 25-35% more test
+    time and 0.3-0.4 s more per container.
+
+    `FLEET_SANDBOX_RUNTIME` overrides: `runc`, `runsc`, or `auto` (default).
+    An explicit `runsc` that Docker does not offer fails at launch, which is
+    the point: asking for the stronger boundary must not silently get the
+    weaker one.
+    """
+    choice = os.environ.get("FLEET_SANDBOX_RUNTIME", "auto").strip().lower()
+    if choice in {"runc", "runsc"}:
+        return choice
+    try:
+        listed = run(["docker", "info", "--format", "{{json .Runtimes}}"], timeout=20)
+        runtimes = json.loads(listed.stdout or b"{}") if listed.returncode == 0 else {}
+    except (ValueError, OSError, subprocess.SubprocessError):
+        runtimes = {}
+    return "runsc" if isinstance(runtimes, dict) and "runsc" in runtimes else "runc"
+
+
+def work_directory(out: Path):
+    """Scratch space for checkouts, inside the evidence folder.
+
+    Not the system temp folder: Docker Desktop shares `/var/folders` with its
+    VM, but Colima shares only the home folder, so a checkout under
+    `$TMPDIR` cannot be mounted and every run fails before a test starts.
+    """
+    out.mkdir(parents=True, exist_ok=True)
+    return tempfile.TemporaryDirectory(prefix=".work-", dir=out)
+
+
 def _execute(state: str, checkout: Path, evidence: Path, image_id: str, paths: list[str],
-             timeout: int) -> dict:
+             timeout: int, runtime: str = "runc") -> dict:
     """One sandboxed pytest run. Infrastructure failures raise; test failures do not."""
     evidence.mkdir(parents=True, exist_ok=True)
     # Never reuse a JUnit file left by a previous attempt.
@@ -238,7 +275,7 @@ def _execute(state: str, checkout: Path, evidence: Path, image_id: str, paths: l
     # --init reaps test subprocesses (zombies count against the PID ceiling);
     # --memory-swap equal to --memory disables swap, so 2g means 2g on every
     # host rather than 4g where swap exists.
-    args = ["docker", "run", "--rm", "--init", "--name", name, "--network=none", "--cap-drop=ALL",
+    args = ["docker", "run", "--rm", "--init", f"--runtime={runtime}", "--name", name, "--network=none", "--cap-drop=ALL",
             "--security-opt=no-new-privileges", "--memory=2g", "--memory-swap=2g", "--cpus=2", "--pids-limit=256",
             "--read-only", "--tmpfs", "/tmp:rw,nosuid,size=512m", "--user", f"{os.getuid()}:{os.getgid()}",
             "--env", "PYTHONPATH=" + ":".join(source_roots(checkout)),
@@ -388,7 +425,9 @@ def validate(candidate: dict, root: Path, out: Path, recipe: dict, *, timeout: i
         # code is under test.
         key = hashlib.sha256(json.dumps([candidate["repo"], era["key"], pinned, install, cutoff, "validator-v3"], sort_keys=True).encode()).hexdigest()[:24]
         tag = f"fleet-validation:{key}"
-        with tempfile.TemporaryDirectory(prefix="fleet-validate-") as tmp:
+        runtime = sandbox_runtime()
+        result["sandbox_runtime"] = runtime
+        with work_directory(out) as tmp:
             work = Path(tmp)
             base = work / "base"
             snapshot(root, candidate["base_sha"], base)
@@ -437,7 +476,7 @@ def validate(candidate: dict, root: Path, out: Path, recipe: dict, *, timeout: i
             for state, kinds in states:
                 if progress:
                     progress(f"Running {state}")
-                result["runs"].append(_execute(state, checkout_for(state, kinds), out / state, built_id, paths, timeout))
+                result["runs"].append(_execute(state, checkout_for(state, kinds), out / state, built_id, paths, timeout, runtime))
             by_state = {r["state"]: r["tests"] for r in result["runs"]}
             measured = judge(by_state["base"],
                              [by_state[f"before-{i}"] for i in range(1, repeats + 1)],
@@ -458,7 +497,7 @@ def validate(candidate: dict, root: Path, out: Path, recipe: dict, *, timeout: i
                     state = f"hunk-{len(list(work.glob('run-hunk-*'))) + 1}"
                     checkout = checkout_for(state, ("test", "source"))
                     _apply(checkout, hunk["patch"], reverse=True)
-                    return _execute(state, checkout, out / state, built_id, paths, timeout)["tests"]
+                    return _execute(state, checkout, out / state, built_id, paths, timeout, runtime)["tests"]
 
                 if progress and len(hunks) > 1:
                     progress(f"Probing {min(len(hunks), MAX_HUNK_PROBES)} source hunks")

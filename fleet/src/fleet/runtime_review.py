@@ -108,6 +108,8 @@ class RuntimeInvestigator:
                 raise ValueError("Layout roots must be safe repository-relative paths")
         self.test_root, self.source_roots, self.integrity_roots = test_root, source_roots, integrity_roots
         self.calls = 0
+        from fleet.validation import sandbox_runtime
+        self.runtime = sandbox_runtime()
         self.observations = []
         self.blocked = False
 
@@ -134,7 +136,7 @@ class RuntimeInvestigator:
         # `--init` reaps the probe's children so they cannot exhaust the PID
         # ceiling; `--memory-swap` equal to `--memory` means no swap, so the
         # ceiling is the same on every host.
-        command=['docker','run','--rm','--init','--name',name,'--network=none',
+        command=['docker','run','--rm','--init',f'--runtime={self.runtime}','--name',name,'--network=none',
                  '--cap-drop=ALL','--security-opt=no-new-privileges','--memory=1g','--memory-swap=1g','--cpus=1','--pids-limit=128',
                  '--read-only','--tmpfs','/tmp:rw,nosuid,size=256m','--tmpfs','/workspace:rw,nosuid,size=128m,mode=1777','--user','65534:65534',
                  '--mount',f'type=bind,src={snapshot},dst=/snapshot,readonly',
