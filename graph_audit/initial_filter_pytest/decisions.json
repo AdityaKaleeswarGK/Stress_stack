@@ -1,0 +1,3634 @@
+{
+ "kept": [
+  {
+   "sha": "ad958066c17c62e7df9be82c73aab8a26fcd7a71",
+   "subject": "Merge pull request #15039 from SemTiOne/fix/2353-preregister-assert-rewrite",
+   "kind": "bug_fix",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 19,
+   "test_changed": true,
+   "backported_to": []
+  },
+  {
+   "sha": "2c69f05ca0e4df3516a843c81002a506757f803d",
+   "subject": "Merge pull request #15224 from rafael-g-v/fix-4871",
+   "kind": "feature",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 9,
+   "test_changed": true,
+   "backported_to": []
+  },
+  {
+   "sha": "0ac456ab46cdfff1a5fd791b540cdc0361c6bbad",
+   "subject": "Merge pull request #14963 from antnewman/pytester-subprocess-encoding",
+   "kind": "bug_fix",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 9,
+   "test_changed": true,
+   "backported_to": []
+  },
+  {
+   "sha": "e550ae40b082af782082b904d2ca5a40f64c5abe",
+   "subject": "Merge pull request #15409 from pytest-dev/claude/project-thread-bae6py",
+   "kind": "bug_fix",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 26,
+   "test_changed": true,
+   "backported_to": []
+  },
+  {
+   "sha": "9255aa01e48f47be636987293471a5b102d78c26",
+   "subject": "Merge pull request #14630 from RonnyPfannschmidt/fix/iter-markers-mro-closest-first",
+   "kind": "bug_fix",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "wide",
+   "source_files": 6,
+   "source_loc": 228,
+   "test_changed": true,
+   "backported_to": []
+  },
+  {
+   "sha": "6665a79fb9a6553ce4e1be5574c21a9e3b769eec",
+   "subject": "Merge pull request #15367 from neutrinoceros/enh/no-warning-skip-w-kwarg-reason",
+   "kind": "unknown",
+   "kind_basis": "none",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 9,
+   "test_changed": true,
+   "backported_to": []
+  },
+  {
+   "sha": "50234b4e670064c42a4c29cb6258115a2079ba4c",
+   "subject": "Fix startup crash on Python 3.10.0 caused by missing NodeId cache (#15342)",
+   "kind": "bug_fix",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 10,
+   "test_changed": true,
+   "backported_to": [
+    "953362ae9a9a249e0d6e695a20fb996172105fc6"
+   ]
+  },
+  {
+   "sha": "fc9a7ef678f64d17f1c03b619f3842ea1d127e74",
+   "subject": "Merge pull request #15374 from pytest-dev/claude/project-thread-vvbrcl",
+   "kind": "bug_fix",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "multi_file",
+   "source_files": 2,
+   "source_loc": 24,
+   "test_changed": true,
+   "backported_to": [
+    "05a1f534f37dfd3f1a6c6201c8daf88837c98a84"
+   ]
+  },
+  {
+   "sha": "1b6f4419c6fe9371a8d8c52c12ed0a1577c2504a",
+   "subject": "Merge pull request #15361 from pytest-dev/claude/project-thread-zb2mnu",
+   "kind": "bug_fix",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 3,
+   "test_changed": true,
+   "backported_to": []
+  },
+  {
+   "sha": "aa0096a0b5c09e1c5c950a11a3f617c98da20323",
+   "subject": "Warn when pytest.mark.skip reason looks like a condition (#15252)",
+   "kind": "feature",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 34,
+   "test_changed": true,
+   "backported_to": []
+  },
+  {
+   "sha": "08017d9ada4c72a7b6a78f7873c238070e24c982",
+   "subject": "Merge pull request #15296 from pytest-dev/claude/project-thread-cukdhn",
+   "kind": "bug_fix",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "multi_file",
+   "source_files": 3,
+   "source_loc": 49,
+   "test_changed": true,
+   "backported_to": [
+    "620cc433033b6d2170ea983e5f90b56d1d577f04"
+   ]
+  },
+  {
+   "sha": "0212785e34eb635b3359e4eccc757de95bf39036",
+   "subject": "Merge pull request #15298 from RonnyPfannschmidt/callinfo-duration",
+   "kind": "bug_fix",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "multi_file",
+   "source_files": 4,
+   "source_loc": 95,
+   "test_changed": true,
+   "backported_to": []
+  },
+  {
+   "sha": "4b3bb3cca4bb53ffe38473b7f29d832d42a4177b",
+   "subject": "Merge pull request #15285 from gerlero/fix-15284",
+   "kind": "bug_fix",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 5,
+   "test_changed": true,
+   "backported_to": [
+    "1221a5c9a021bb826976f32899134ced86b9e6dd"
+   ]
+  },
+  {
+   "sha": "082ed70e314ee8e1ab117763d17fe801648f7508",
+   "subject": "Merge pull request #15255 from pytest-dev/claude/project-thread-eoi3d6",
+   "kind": "feature",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 52,
+   "test_changed": true,
+   "backported_to": []
+  },
+  {
+   "sha": "ae37a013763e9c4a143245eda1acdc3c27961685",
+   "subject": "Merge pull request #15227 from pytest-dev/claude/project-thread-4etye4",
+   "kind": "other",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 11,
+   "test_changed": false,
+   "backported_to": []
+  },
+  {
+   "sha": "7d646b595cf6e5e0111bbb41bac5e1f5cdf2881b",
+   "subject": "Merge pull request #15173 from HakeemTheEmperor/fix-frozendict-print",
+   "kind": "bug_fix",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 33,
+   "test_changed": true,
+   "backported_to": []
+  },
+  {
+   "sha": "92f29d723af802cff92064f5ca13dfd5bbef717a",
+   "subject": "Merge pull request #15246 from simukappu/add-agentverify-plugin-list",
+   "kind": "feature",
+   "kind_basis": "commit_message",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 1,
+   "test_changed": false,
+   "backported_to": []
+  },
+  {
+   "sha": "0f54d41bedf00505bb1ac2c724abf96ba6dcf48d",
+   "subject": "Merge pull request #15193 from paneendrakumar0/expose-parameterset-13431",
+   "kind": "feature",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "multi_file",
+   "source_files": 2,
+   "source_loc": 59,
+   "test_changed": false,
+   "backported_to": []
+  },
+  {
+   "sha": "4088e1a84ef1cb8ba80aac4e75449459fc092c12",
+   "subject": "Merge pull request #15202 from LuanaPBueno/deprecate-write-line-bytes",
+   "kind": "feature",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "multi_file",
+   "source_files": 2,
+   "source_loc": 8,
+   "test_changed": true,
+   "backported_to": []
+  },
+  {
+   "sha": "c9c19f8e62c12834ad83193a1869cc82fe9c700e",
+   "subject": "[pre-commit.ci] pre-commit autoupdate (#15170)",
+   "kind": "unknown",
+   "kind_basis": "none",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 4,
+   "test_changed": true,
+   "backported_to": []
+  },
+  {
+   "sha": "4e64e831268758cf0040c52c144e0f09f46cd8a3",
+   "subject": "Merge pull request #15145 from pytest-dev/claude/project-thread-0ll2wg",
+   "kind": "bug_fix",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 35,
+   "test_changed": true,
+   "backported_to": []
+  },
+  {
+   "sha": "4fa645fe43855630b4492fc3fdec13050152f4ef",
+   "subject": "Merge pull request #15040 from GangEunzzang/fix/mark-editable-plugins-for-rewrite",
+   "kind": "bug_fix",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 71,
+   "test_changed": true,
+   "backported_to": []
+  },
+  {
+   "sha": "e4f7f174bc4a1686b31639d29a3e211941390979",
+   "subject": "Merge pull request #15153 from pytest-dev/claude/project-thread-ts7rab",
+   "kind": "feature",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "multi_file",
+   "source_files": 4,
+   "source_loc": 27,
+   "test_changed": true,
+   "backported_to": []
+  },
+  {
+   "sha": "adf183f4d3113b50e6eefa488c0e2a37a782d14a",
+   "subject": "Merge pull request #15133 from hfycium/codex/faulthandler-toml-type",
+   "kind": "bug_fix",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 2,
+   "test_changed": true,
+   "backported_to": []
+  },
+  {
+   "sha": "aaa3e7ec82875eac1edd6885a5b33c3f6911baad",
+   "subject": "Merge pull request #14463 from RonnyPfannschmidt/fix/14461-mapping-assertrepr",
+   "kind": "feature",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 14,
+   "test_changed": true,
+   "backported_to": []
+  },
+  {
+   "sha": "8cb80978556fe0211d2f797216e171d7405e733d",
+   "subject": "Merge pull request #15150 from pytest-dev/claude/project-thread-73tyoe",
+   "kind": "bug_fix",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 41,
+   "test_changed": true,
+   "backported_to": []
+  },
+  {
+   "sha": "3e34325a991b0f3b77f2ca27a227addcc0570bc2",
+   "subject": "Merge pull request #15149 from pytest-dev/claude/project-thread-o2uoxy",
+   "kind": "bug_fix",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 37,
+   "test_changed": true,
+   "backported_to": []
+  },
+  {
+   "sha": "e90885e6b3b6223a4b391632a15bfc2a0a20a591",
+   "subject": "Merge pull request #14211 from The-Compiler/simplify-subtests-teststatus",
+   "kind": "refactor",
+   "kind_basis": "commit_message",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 23,
+   "test_changed": false,
+   "backported_to": []
+  },
+  {
+   "sha": "59200df778adf8079df6125d60662908ac0a0646",
+   "subject": "Fix fixture discovery for bound methods in custom collectors (#15058)",
+   "kind": "bug_fix",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 1,
+   "test_changed": true,
+   "backported_to": []
+  },
+  {
+   "sha": "b4a8bc6b823c78951f781a900ec0a533e154693b",
+   "subject": "Bugfix 14412 subtests timing (#14670)",
+   "kind": "bug_fix",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 22,
+   "test_changed": true,
+   "backported_to": []
+  },
+  {
+   "sha": "e84e063e7d35e7e198536d05099395be7a92a9a1",
+   "subject": "[pre-commit.ci] pre-commit autoupdate (#15140)",
+   "kind": "unknown",
+   "kind_basis": "none",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 4,
+   "test_changed": false,
+   "backported_to": []
+  },
+  {
+   "sha": "980445e88fae083d9ff91649bd22913a8abbaf18",
+   "subject": "fix: stop reusing shared PytestWarning instances whose tracebacks grow under -W error (#14931)",
+   "kind": "bug_fix",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "wide",
+   "source_files": 6,
+   "source_loc": 85,
+   "test_changed": true,
+   "backported_to": []
+  },
+  {
+   "sha": "f9554ee56d264da285f3951ebfdf6f1d59ba4077",
+   "subject": "Fix doctest option flags leaking between docstrings (#15033)",
+   "kind": "bug_fix",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 11,
+   "test_changed": true,
+   "backported_to": []
+  },
+  {
+   "sha": "f12c34b5efb3e2b0f349375c780dc3e6b462fa4f",
+   "subject": "Clarify the relation between marks and keywords (#15011)",
+   "kind": "bug_fix",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "multi_file",
+   "source_files": 5,
+   "source_loc": 97,
+   "test_changed": true,
+   "backported_to": []
+  },
+  {
+   "sha": "6a0de9be56365e75ff30d75cee9654739ca95f97",
+   "subject": "Warn when writing or closing a cache file fails (#15044)",
+   "kind": "bug_fix",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 5,
+   "test_changed": true,
+   "backported_to": []
+  },
+  {
+   "sha": "7d90c44cca8f2e37dc0ab3d9643a4672a8a3f7f9",
+   "subject": "Merge pull request #15057 from bluetech/rm-dead-code",
+   "kind": "unknown",
+   "kind_basis": "none",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 5,
+   "test_changed": false,
+   "backported_to": []
+  },
+  {
+   "sha": "56a92c19d4a71152c594726efc9deb5f0e126e99",
+   "subject": "Merge pull request #15053 from bluetech/showfixtures-item-lineno",
+   "kind": "bug_fix",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 4,
+   "test_changed": true,
+   "backported_to": []
+  },
+  {
+   "sha": "f8ad1f6f95307ed5b7da9b73f1c585695bf2b51a",
+   "subject": "Merge pull request #14989 from 15r10nk/fix-stale-cached-bytecode-on-file-move",
+   "kind": "bug_fix",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 38,
+   "test_changed": true,
+   "backported_to": [
+    "711313af5e306fa3f377680f859df7a3db948b3b"
+   ]
+  },
+  {
+   "sha": "a453d653f92bfbdbfe47d2af9bfd8801860ff9e3",
+   "subject": "Merge pull request #15032 from RonnyPfannschmidt/fix/help-text-wrapping",
+   "kind": "bug_fix",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "multi_file",
+   "source_files": 2,
+   "source_loc": 78,
+   "test_changed": true,
+   "backported_to": []
+  },
+  {
+   "sha": "de30d8417f3d93bc0c16fc0a64092e197c46e36a",
+   "subject": "Merge pull request #15023 from RonnyPfannschmidt/packaging/git-archival",
+   "kind": "other",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 7,
+   "test_changed": false,
+   "backported_to": [
+    "3ef663dcaf8a360812240c76e4a991caf722ad22"
+   ]
+  },
+  {
+   "sha": "aceb21ab2fa19f91282adfdb978a6ae252b3b020",
+   "subject": "Merge pull request #14984 from bluetech/arg2node2fixturedef",
+   "kind": "bug_fix",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 160,
+   "test_changed": true,
+   "backported_to": []
+  },
+  {
+   "sha": "a315b97ce61f158bef9957152c8415fe743aa553",
+   "subject": "Merge pull request #14978 from RonnyPfannschmidt/claude/pytest-pr-history-preserve-25hub3",
+   "kind": "bug_fix",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 17,
+   "test_changed": true,
+   "backported_to": []
+  },
+  {
+   "sha": "86c6c354e19d0c8713bb47d6cb1c4aaebea7cb6a",
+   "subject": "Merge pull request #15006 from RonnyPfannschmidt/fix-15005-decimal-outside-float-range",
+   "kind": "bug_fix",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "multi_file",
+   "source_files": 3,
+   "source_loc": 220,
+   "test_changed": true,
+   "backported_to": []
+  },
+  {
+   "sha": "472b4de93d83c118e0d089a34918fd1210d9ebc8",
+   "subject": "Merge pull request #14969 from Irahan2/fix-10644-monkeypatch-inherited-attr",
+   "kind": "bug_fix",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 24,
+   "test_changed": true,
+   "backported_to": []
+  },
+  {
+   "sha": "ae777851d8b324de5eb3d0e860c28b219ce3fcd8",
+   "subject": "Merge pull request #14910 from sharonyao1127/fix-monkey-patch-delattr-setitem-delitem-stale-undo",
+   "kind": "bug_fix",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 8,
+   "test_changed": true,
+   "backported_to": []
+  },
+  {
+   "sha": "431f3e1f5fd70b9b0f8afa2d20a10421542e5c6a",
+   "subject": "Replace string nodeids with a structured NodeId internally (#14758)",
+   "kind": "other",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "wide",
+   "source_files": 15,
+   "source_loc": 501,
+   "test_changed": true,
+   "backported_to": []
+  },
+  {
+   "sha": "b0ca559dd01f4f056eeefdc4f67985008d3f3ea4",
+   "subject": "Merge pull request #14954 from Dmao233/cursor/max-warnings-toml-int-6b43",
+   "kind": "bug_fix",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "multi_file",
+   "source_files": 2,
+   "source_loc": 8,
+   "test_changed": true,
+   "backported_to": []
+  },
+  {
+   "sha": "51e9a9f148cd2509a31e3fa0d2b1b3204c2b0dd7",
+   "subject": "Merge pull request #14447 from RonnyPfannschmidt/ronny/fix-14445-assert-walrus",
+   "kind": "bug_fix",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 158,
+   "test_changed": true,
+   "backported_to": []
+  },
+  {
+   "sha": "5d85267e3539968dad33937295b0a77b6c7eb7b3",
+   "subject": "Merge pull request #14824 from RonnyPfannschmidt/plugin-import-error-exit-codes-993",
+   "kind": "feature",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 76,
+   "test_changed": true,
+   "backported_to": []
+  },
+  {
+   "sha": "814d3da7f473ffde635559af58292ed90f23793d",
+   "subject": "[ruff] Enable a dozen rules from ruff 0.16 (#14915)",
+   "kind": "feature",
+   "kind_basis": "commit_message",
+   "size_tier": "multi_file",
+   "source_files": 2,
+   "source_loc": 3,
+   "test_changed": true,
+   "backported_to": []
+  },
+  {
+   "sha": "28549a5f6b82bc916bb2ec5cb9fbfffe9b79fc66",
+   "subject": "Merge pull request #14921 from RonnyPfannschmidt/ronny/assert-rewrite-diff-tool",
+   "kind": "other",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 157,
+   "test_changed": false,
+   "backported_to": []
+  },
+  {
+   "sha": "c7f9e75c5d3b04bf96e8389a9eac6d98da2be8f4",
+   "subject": "Merge pull request #14284 from oaksprout/fix-nested-caplog-filtering",
+   "kind": "bug_fix",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 12,
+   "test_changed": true,
+   "backported_to": [
+    "f10de7df523fb654fded1df730d752fc7ae5eb64"
+   ]
+  },
+  {
+   "sha": "b0de7356b509ed01777a485662e05a9dc8e23c67",
+   "subject": "fix: raise on any nested container in approx, not only same-type (#14934)",
+   "kind": "bug_fix",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 15,
+   "test_changed": true,
+   "backported_to": []
+  },
+  {
+   "sha": "75e6815c55ac66dacf033ababa40c2a91b82e99c",
+   "subject": "Merge pull request #14649 from EternalRights/fix-exceptiongroup-tracebackhide",
+   "kind": "bug_fix",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 46,
+   "test_changed": true,
+   "backported_to": []
+  },
+  {
+   "sha": "d7f61905d625e8e621d8c0157d0a4f23f0b78290",
+   "subject": "Merge pull request #14755 from seifertm/yield_fixture_removal",
+   "kind": "feature",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 2,
+   "test_changed": true,
+   "backported_to": []
+  },
+  {
+   "sha": "977575388358e8c00b77a397546304c91dc5794b",
+   "subject": "Merge pull request #14811 from EternalRights/fix-config-getini-string-validation",
+   "kind": "feature",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "multi_file",
+   "source_files": 2,
+   "source_loc": 13,
+   "test_changed": true,
+   "backported_to": []
+  },
+  {
+   "sha": "060c851856f732d06cfd68feb35e7a332b1c32ad",
+   "subject": "Merge pull request #14838 from Bortlesboat/agent/13369-pytester-summary-error",
+   "kind": "feature",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 14,
+   "test_changed": true,
+   "backported_to": []
+  },
+  {
+   "sha": "d724e161fbe681edc8dff8308d6523f4f59623a4",
+   "subject": "Merge pull request #14774 from The-Compiler/deprecate-class-fixt-higher-scope",
+   "kind": "feature",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "multi_file",
+   "source_files": 2,
+   "source_loc": 7,
+   "test_changed": true,
+   "backported_to": []
+  },
+  {
+   "sha": "efa117ad49ce197c5971b12310d53b73ed678d92",
+   "subject": "[ruff] Apply unsafe autofixes from ruff 0.16 (#14913)",
+   "kind": "unknown",
+   "kind_basis": "none",
+   "size_tier": "wide",
+   "source_files": 6,
+   "source_loc": 16,
+   "test_changed": true,
+   "backported_to": []
+  },
+  {
+   "sha": "d89ac92ef0d7eb924e2831f334ba942b739ca4ae",
+   "subject": "Merge pull request #14897 from Pierre-Sassoulas/ruff-safe-autofixes",
+   "kind": "unknown",
+   "kind_basis": "none",
+   "size_tier": "wide",
+   "source_files": 7,
+   "source_loc": 34,
+   "test_changed": true,
+   "backported_to": []
+  },
+  {
+   "sha": "e9eb967ea2fbb037bbf679df7dd59ac285bdbfd2",
+   "subject": "Merge pull request #14905 from RonnyPfannschmidt/pr11418-checked-hash-pyc",
+   "kind": "bug_fix",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 56,
+   "test_changed": true,
+   "backported_to": []
+  },
+  {
+   "sha": "e16499d26e0eac8d1a0c508096f8ae836fcec34d",
+   "subject": "[refactor] Drop an unreachable 'setUpClass' / 'tearDownClass' guard in 'UnitTestCase'",
+   "kind": "refactor",
+   "kind_basis": "commit_message",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 2,
+   "test_changed": false,
+   "backported_to": []
+  },
+  {
+   "sha": "c0ab40c93b3a6bc0c1d586f5c313b265f7ceabed",
+   "subject": "Merge pull request #14903 from RonnyPfannschmidt/fix-10745-cheaper-recursion-tracebacks",
+   "kind": "feature",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "multi_file",
+   "source_files": 2,
+   "source_loc": 36,
+   "test_changed": true,
+   "backported_to": []
+  },
+  {
+   "sha": "d6f66d42df86624ed128b84ce57df3d173fe1b95",
+   "subject": "Merge pull request #14865 from RonnyPfannschmidt/fix-14864-samefile-zero-file-id",
+   "kind": "bug_fix",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 10,
+   "test_changed": true,
+   "backported_to": [
+    "40c95783d7a4d99525633ffbb3c85d2613dc2672"
+   ]
+  },
+  {
+   "sha": "2a9e201ee0ad4e593ff9ead05e4d1ef108324863",
+   "subject": "Merge pull request #14884 from RonnyPfannschmidt/cache-key-containment",
+   "kind": "bug_fix",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 48,
+   "test_changed": true,
+   "backported_to": []
+  },
+  {
+   "sha": "e739014f38d284f1ce57745cdd4e13392fb56165",
+   "subject": "Fix duplicated exception chain output when an exception group has a cause (#14829)",
+   "kind": "bug_fix",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 4,
+   "test_changed": true,
+   "backported_to": []
+  },
+  {
+   "sha": "aa4c208fc0f11f0572cf010f72fe497f46e81ec1",
+   "subject": "Merge pull request #14875 from royy92/fix-6997",
+   "kind": "bug_fix",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 7,
+   "test_changed": true,
+   "backported_to": []
+  },
+  {
+   "sha": "fa7ccb176fd48f5591bfb3e3525492698a1d3f25",
+   "subject": "[refactor] Start using match case in 'assertrepr_compare' (#13762)",
+   "kind": "refactor",
+   "kind_basis": "commit_message",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 34,
+   "test_changed": false,
+   "backported_to": []
+  },
+  {
+   "sha": "d45fc1c74989e7c71093cc8c24a775c0cf56bba6",
+   "subject": "Merge pull request #14780 from ace2016/fix-9436-xfail-traceback",
+   "kind": "feature",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 4,
+   "test_changed": true,
+   "backported_to": []
+  },
+  {
+   "sha": "b9353807eb8c4d7232556138f9e81ce53556f43c",
+   "subject": "Merge pull request #14833 from ace2016/fix-13354-marker-default",
+   "kind": "feature",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 13,
+   "test_changed": true,
+   "backported_to": []
+  },
+  {
+   "sha": "9421df77e503cabb76990d992c87ad97d5fe061f",
+   "subject": "Merge pull request #14687 from henryiii/capture-snap-fastpath",
+   "kind": "feature",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 6,
+   "test_changed": false,
+   "backported_to": []
+  },
+  {
+   "sha": "5fd2be03b1f8b5eef48d507d001ebf0a82e875a1",
+   "subject": "Merge pull request #14127 from RonnyPfannschmidt/fix-2781-strict-markers-m-expression",
+   "kind": "feature",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "multi_file",
+   "source_files": 4,
+   "source_loc": 90,
+   "test_changed": true,
+   "backported_to": []
+  },
+  {
+   "sha": "0d6fbdeffa57c796123f62f81f7dd370d9b7ecdc",
+   "subject": "Fix duplicated exception chain output for exceptions without a traceback (#14781)",
+   "kind": "bug_fix",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 4,
+   "test_changed": true,
+   "backported_to": []
+  },
+  {
+   "sha": "28e86a6c2ae0173831e4925a4af89b02a2936d09",
+   "subject": "Merge pull request #14807 from RonnyPfannschmidt/refactor/config-file-dispatch",
+   "kind": "bug_fix",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 377,
+   "test_changed": true,
+   "backported_to": []
+  },
+  {
+   "sha": "98b357f69e380da908740a212288d73b2ee06687",
+   "subject": "Merge pull request #14776 from tjkuson/plugin-import-warnings",
+   "kind": "feature",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 57,
+   "test_changed": true,
+   "backported_to": []
+  },
+  {
+   "sha": "d81152a8376372c142ea1fcd464b060e52974cd5",
+   "subject": "Merge pull request #14799 from Pierre-Sassoulas/match-case-isinstance-dispatch",
+   "kind": "unknown",
+   "kind_basis": "none",
+   "size_tier": "multi_file",
+   "source_files": 3,
+   "source_loc": 84,
+   "test_changed": false,
+   "backported_to": []
+  },
+  {
+   "sha": "27601124ffba478ab1a8e3758f335234686a16e3",
+   "subject": "Merge pull request #14788 from pytest-dev/pre-commit-ci-update-config",
+   "kind": "unknown",
+   "kind_basis": "none",
+   "size_tier": "wide",
+   "source_files": 8,
+   "source_loc": 46,
+   "test_changed": true,
+   "backported_to": []
+  },
+  {
+   "sha": "224e9ef86758841a716c43a2bc711e1f56934528",
+   "subject": "Merge pull request #14754, handle infinite relative tolerance for timedelta values",
+   "kind": "feature",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 2,
+   "test_changed": true,
+   "backported_to": []
+  },
+  {
+   "sha": "1d5c40392ea42db38582b096f639eb762a5527c8",
+   "subject": "Merge pull request #14791 from Pierre-Sassoulas/ini-literal-option-types",
+   "kind": "feature",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "wide",
+   "source_files": 8,
+   "source_loc": 192,
+   "test_changed": true,
+   "backported_to": []
+  },
+  {
+   "sha": "f306da747e70403ca75ae6d9e1dd61f2ad1b8979",
+   "subject": "Allow int for ``truncation_limit_lines`` and ``truncation_limit_chars`` in TOML (#14692)",
+   "kind": "bug_fix",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "multi_file",
+   "source_files": 3,
+   "source_loc": 49,
+   "test_changed": true,
+   "backported_to": []
+  },
+  {
+   "sha": "771ab77e131d19124daf0d558baaed38c9d4833e",
+   "subject": "Reject negative log_auto_indent values (#14586)",
+   "kind": "bug_fix",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 4,
+   "test_changed": true,
+   "backported_to": []
+  },
+  {
+   "sha": "d575dba9343a4dca757e4be6af82836031f99500",
+   "subject": "Use streaming in all assertion comparisons consumers (#14523)",
+   "kind": "feature",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "wide",
+   "source_files": 8,
+   "source_loc": 263,
+   "test_changed": true,
+   "backported_to": []
+  },
+  {
+   "sha": "d02c36266339ec7fab376db2e77d4e55ea165384",
+   "subject": "fixtures: reorder parametrized tests by param value, not index (#14746)",
+   "kind": "bug_fix",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 68,
+   "test_changed": true,
+   "backported_to": []
+  },
+  {
+   "sha": "36704f9b54c40b3de715f5d5d28666faf566b843",
+   "subject": "Fix elision of long collections in assertion messages with -vv (#14748)",
+   "kind": "bug_fix",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 2,
+   "test_changed": true,
+   "backported_to": []
+  },
+  {
+   "sha": "344c23787cdb3431dcc441b8b63ee9950f04b921",
+   "subject": "Accept type expressions in Parser.addini(type=...) (#14751)",
+   "kind": "feature",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "multi_file",
+   "source_files": 3,
+   "source_loc": 188,
+   "test_changed": true,
+   "backported_to": []
+  },
+  {
+   "sha": "ef052d0bc481af97afb3fbd2aae24d8abce08604",
+   "subject": "Merge pull request #14694 from breidenbach0/fix/doctest-namespace-not-loaded-outside-rootdir",
+   "kind": "bug_fix",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 36,
+   "test_changed": true,
+   "backported_to": []
+  },
+  {
+   "sha": "ced9022c0ca87ae2a0a604c68d2e1c462f8a5c6f",
+   "subject": "Improve deprecation message for class-scoped fixtures as instance methods (#14764)",
+   "kind": "unknown",
+   "kind_basis": "none",
+   "size_tier": "multi_file",
+   "source_files": 2,
+   "source_loc": 22,
+   "test_changed": true,
+   "backported_to": []
+  },
+  {
+   "sha": "5c0dcffce5f33a58b891eff7f51a52ce3a3617ce",
+   "subject": "Merge pull request #14742 from RonnyPfannschmidt/ronny/rename-callspec2-to-callspec",
+   "kind": "feature",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "multi_file",
+   "source_files": 3,
+   "source_loc": 36,
+   "test_changed": true,
+   "backported_to": []
+  },
+  {
+   "sha": "6f1b078537cf4ab14d0a7b29972c4e73f23a9011",
+   "subject": "fix: keep pytest_terminal_summary under --no-summary (#14730)",
+   "kind": "feature",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 28,
+   "test_changed": true,
+   "backported_to": []
+  },
+  {
+   "sha": "b4e846616cbb0ba74dc548f7066b09d820f5dc05",
+   "subject": "Apply warning filters to `pytest_configure` (#14760)",
+   "kind": "bug_fix",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "multi_file",
+   "source_files": 2,
+   "source_loc": 76,
+   "test_changed": true,
+   "backported_to": []
+  },
+  {
+   "sha": "264846d02f5c19ec481fc2f0ffb8892f8f60cd2e",
+   "subject": "fix #13564 - warn when fixtures get wrapped with a decorator (#13745)",
+   "kind": "feature",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "multi_file",
+   "source_files": 2,
+   "source_loc": 131,
+   "test_changed": true,
+   "backported_to": []
+  },
+  {
+   "sha": "a933cf5de4d64192d1d588a851ca4e76eec71efc",
+   "subject": "Merge pull request #14645 from RonnyPfannschmidt/fix/14635-deduplicate-directory-nodes-on-recollection",
+   "kind": "bug_fix",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 24,
+   "test_changed": true,
+   "backported_to": [
+    "fa49703ddbc01edc8a556ba2643a6c64ffa4ede3"
+   ]
+  },
+  {
+   "sha": "35f21fdcfc9b5817a2aafc449dc5cff5aba83725",
+   "subject": "Merge pull request #14331 from RonnyPfannschmidt/fix/rm-rf-no-exec-permission-7940",
+   "kind": "bug_fix",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 76,
+   "test_changed": true,
+   "backported_to": []
+  },
+  {
+   "sha": "532b20103ecf9972f752353f20088c5cc878003b",
+   "subject": "Reject implicit option destination conflicts (#14661)",
+   "kind": "bug_fix",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 18,
+   "test_changed": true,
+   "backported_to": []
+  },
+  {
+   "sha": "8d40684d1f997e62758785aebb3132c2f5b712e1",
+   "subject": "Document firstresult behavior for report (de)serialization hooks (#14759)",
+   "kind": "unknown",
+   "kind_basis": "none",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 4,
+   "test_changed": false,
+   "backported_to": []
+  },
+  {
+   "sha": "d07c5d4e3956cb6b8ff7f9f49c0bc4d819a15349",
+   "subject": "feat: introduce a legend for - and + in diff outputs (#14756)",
+   "kind": "feature",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 2,
+   "test_changed": true,
+   "backported_to": []
+  },
+  {
+   "sha": "a56281b272c5cea1c0464ab9f1a824ceea7fec1e",
+   "subject": "Make `Metafunc.parametrize` keyword-only from indirect onwards (#14753)",
+   "kind": "feature",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 6,
+   "test_changed": true,
+   "backported_to": []
+  },
+  {
+   "sha": "1c36631c68427619646d9f12904cc513e48d472b",
+   "subject": "Fix pytest.warns re-emitting warnings with module=\"warnings\" (#14747)",
+   "kind": "bug_fix",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 1,
+   "test_changed": true,
+   "backported_to": []
+  },
+  {
+   "sha": "198eff1604e7b649e3fdcf306306517070d19235",
+   "subject": "Consider entry points for PYTEST_PLUGINS and pytest_plugins (#14752)",
+   "kind": "feature",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 2,
+   "test_changed": true,
+   "backported_to": []
+  },
+  {
+   "sha": "34b6a4e5354dbd0e169de7cd22425bc34038dbf6",
+   "subject": "Fix missing traceback source for code with cwd-relative filenames (#14744)",
+   "kind": "bug_fix",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 16,
+   "test_changed": true,
+   "backported_to": []
+  },
+  {
+   "sha": "e7355d70771b5f34f78d7012f73bdc8eb79574d6",
+   "subject": "Merge pull request #14702 from vetrovk/fix/doctest-fixture-line-number",
+   "kind": "bug_fix",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 12,
+   "test_changed": true,
+   "backported_to": []
+  },
+  {
+   "sha": "d776e8d72707e223330cc6c48f52a47765fac721",
+   "subject": "Merge pull request #13370 from RonnyPfannschmidt/fix-6881-long-str-shal-not-be-a-id",
+   "kind": "feature",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 68,
+   "test_changed": true,
+   "backported_to": []
+  },
+  {
+   "sha": "ec12ff382ccddcaa1f9308f965e9005b1a4f087e",
+   "subject": "Merge pull request #14738 from Joosboy/docs/12062-pytest_assertrepr_compare",
+   "kind": "unknown",
+   "kind_basis": "none",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 5,
+   "test_changed": false,
+   "backported_to": []
+  },
+  {
+   "sha": "ed7672b9312318b3b90ffb743e2b145185fc21e3",
+   "subject": "[refactor] Introduce a TruncationBudget for assertion truncation (#14652)",
+   "kind": "refactor",
+   "kind_basis": "commit_message",
+   "size_tier": "multi_file",
+   "source_files": 2,
+   "source_loc": 53,
+   "test_changed": true,
+   "backported_to": []
+  },
+  {
+   "sha": "3fa8d9b15b733aadb8a043cca3e98447804e1f28",
+   "subject": "Fix off-by-one in trailing assertion diff skipping (#14637) (#14639)",
+   "kind": "bug_fix",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 2,
+   "test_changed": true,
+   "backported_to": []
+  },
+  {
+   "sha": "7660d7d5ce47cc4fcf3f5672954484744c9b59c8",
+   "subject": "Error on top-level options in pytest.toml (#14646)",
+   "kind": "bug_fix",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 14,
+   "test_changed": true,
+   "backported_to": []
+  },
+  {
+   "sha": "9db664649af9b24d496fb7ad482b66c0c341a28c",
+   "subject": "assertion: add support for `dict.keys()` and `dict.values()` types in assertion explanations (as sets)",
+   "kind": "feature",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 5,
+   "test_changed": true,
+   "backported_to": []
+  },
+  {
+   "sha": "32e3ddb2379865c24201f9391086bfefd940b8e8",
+   "subject": "Merge pull request #14647 from bluetech/approx-typing",
+   "kind": "feature",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "multi_file",
+   "source_files": 4,
+   "source_loc": 279,
+   "test_changed": true,
+   "backported_to": []
+  },
+  {
+   "sha": "d2466e3a9655f75d25719bcc4510cdbcb39cf10d",
+   "subject": "[perf] Make ``PrettyPrinter`` format lazily so output can be budget-capped (#14588)",
+   "kind": "refactor",
+   "kind_basis": "commit_message",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 341,
+   "test_changed": true,
+   "backported_to": []
+  },
+  {
+   "sha": "b375b79ec913630af83ceff58944347408a6534a",
+   "subject": "Merge pull request #14622 from chrisburr/fix-14608-initial-conftest-test-subdir",
+   "kind": "bug_fix",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 18,
+   "test_changed": true,
+   "backported_to": [
+    "b61f588e36e9377c3d1d3f06bece1da0fc31d9ca"
+   ]
+  },
+  {
+   "sha": "070e35b1e3867803a61fc607c051c731ac5dc180",
+   "subject": "Merge pull request #14614 from bluetech/refactor-infer-scope",
+   "kind": "refactor",
+   "kind_basis": "commit_message",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 20,
+   "test_changed": true,
+   "backported_to": []
+  },
+  {
+   "sha": "680f9f3ed3faaaa9a4fd1d8120618cd17cdee2d0",
+   "subject": "Merge pull request #14220 from bysiber/fix-stale-iexp-raisesgroup",
+   "kind": "bug_fix",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 2,
+   "test_changed": true,
+   "backported_to": [
+    "66abd0784d4cb7c1ba44ab9a8896506cd4985acc"
+   ]
+  },
+  {
+   "sha": "974ed48b696d706b7e7cc834ddca9bb0edd488a4",
+   "subject": "Merge pull request #14611 from bluetech/parametrize-argvalues-typing",
+   "kind": "bug_fix",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 26,
+   "test_changed": true,
+   "backported_to": [
+    "0d312eb876177e9f1c04262b54060a41034ebf5c"
+   ]
+  },
+  {
+   "sha": "77723b8ce1875de809e82e4375e577df889afe83",
+   "subject": "Merge pull request #14597 from bluetech/fix-param-override",
+   "kind": "bug_fix",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 14,
+   "test_changed": true,
+   "backported_to": [
+    "2952caf8f5cae7f72678991d161f10c43a1d2744"
+   ]
+  },
+  {
+   "sha": "368d2fca78e86ac79ec269bb078fcb1259a94fed",
+   "subject": "[refactor] Tighten ``SetComparisonFunction`` to ``Iterator[str]`` (#14587)",
+   "kind": "refactor",
+   "kind_basis": "commit_message",
+   "size_tier": "multi_file",
+   "source_files": 2,
+   "source_loc": 21,
+   "test_changed": false,
+   "backported_to": []
+  },
+  {
+   "sha": "ff77cd8b66b43a88c26ca54384bbcab72d079497",
+   "subject": "[refactor] Make base assertion comparisons return an iterator instead of a list of string (#14546)",
+   "kind": "refactor",
+   "kind_basis": "commit_message",
+   "size_tier": "multi_file",
+   "source_files": 4,
+   "source_loc": 190,
+   "test_changed": true,
+   "backported_to": []
+  },
+  {
+   "sha": "4a809d9c892f6abb5ba92b77b06f1dd878f4660a",
+   "subject": "Merge pull request #14568 from pytest-dev/register-fixture",
+   "kind": "feature",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "multi_file",
+   "source_files": 4,
+   "source_loc": 76,
+   "test_changed": true,
+   "backported_to": []
+  },
+  {
+   "sha": "a8ac094e80df788aec844794170b126eab0be7a4",
+   "subject": "Merge pull request #14567 from pytest-dev/more-visibility-deprecate",
+   "kind": "feature",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "multi_file",
+   "source_files": 3,
+   "source_loc": 105,
+   "test_changed": true,
+   "backported_to": []
+  },
+  {
+   "sha": "2ce9c6d94eb691ea4da7f91f330602cbb67a6daf",
+   "subject": "Merge pull request #14540 from minbang930/fix-14533-doctest-module-fixtures",
+   "kind": "feature",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "multi_file",
+   "source_files": 2,
+   "source_loc": 7,
+   "test_changed": true,
+   "backported_to": []
+  },
+  {
+   "sha": "e0fab11744614da1b0420c27bb7a9895c89fcab5",
+   "subject": "Merge pull request #14566 from pytest-dev/visibility-override",
+   "kind": "feature",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 50,
+   "test_changed": true,
+   "backported_to": []
+  },
+  {
+   "sha": "9b27bec696048032eb8d651af8fe9170c473ef42",
+   "subject": "Merge pull request #14573 from bluetech/repr-doc",
+   "kind": "unknown",
+   "kind_basis": "none",
+   "size_tier": "multi_file",
+   "source_files": 3,
+   "source_loc": 146,
+   "test_changed": true,
+   "backported_to": []
+  },
+  {
+   "sha": "f9058d453d9f474847a9cb7f84684a4a0538a69a",
+   "subject": "Merge pull request #14565 from pytest-dev/getscopepkg-node",
+   "kind": "unknown",
+   "kind_basis": "none",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 9,
+   "test_changed": false,
+   "backported_to": []
+  },
+  {
+   "sha": "57bbf5a0b9d6eed7cf146e11e77fdab5bc46bd82",
+   "subject": "Use inspect module in Code class instead of direct co_* attribute access (#14536)",
+   "kind": "unknown",
+   "kind_basis": "none",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 28,
+   "test_changed": false,
+   "backported_to": []
+  },
+  {
+   "sha": "f976bb67b293cf358e2fbd0352638e2f5a9da8e0",
+   "subject": "Fix Code.getargs() treating co_flags bitmask values as counts (#14493)",
+   "kind": "bug_fix",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 5,
+   "test_changed": true,
+   "backported_to": [
+    "76fefd0e57df8e49768e0b7673044125c28727f4"
+   ]
+  },
+  {
+   "sha": "4748bb15b9053a791c04783d4d84eba512c7cf79",
+   "subject": "junitxml: fix supplementary plane characters incorrectly escaped (#14484)",
+   "kind": "bug_fix",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 4,
+   "test_changed": true,
+   "backported_to": [
+    "7fc5c7908bd90b273305de192ca2bd9ae38ed36a"
+   ]
+  },
+  {
+   "sha": "c9d940f12ed381320f7b21ca8f0987190cfff934",
+   "subject": "Surface filter-promoted unraisable warnings directly (#14263) (#14499)",
+   "kind": "bug_fix",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 20,
+   "test_changed": true,
+   "backported_to": []
+  },
+  {
+   "sha": "34e0395163647c9096551208bb8a6990213cc8f1",
+   "subject": "Merge pull request #14521 from Pierre-Sassoulas/yield-comparators",
+   "kind": "unknown",
+   "kind_basis": "none",
+   "size_tier": "wide",
+   "source_files": 6,
+   "source_loc": 233,
+   "test_changed": true,
+   "backported_to": []
+  },
+  {
+   "sha": "58d8b55beb7b341fb7d8a90a0a0bce1e701fb280",
+   "subject": "Move comparison helpers to their own files out of ``assertion/util.py`` (#14520)",
+   "kind": "unknown",
+   "kind_basis": "none",
+   "size_tier": "wide",
+   "source_files": 10,
+   "source_loc": 1103,
+   "test_changed": true,
+   "backported_to": []
+  },
+  {
+   "sha": "59dc7f6fa08389798b69a9df2de9a8519181f92c",
+   "subject": "Merge pull request #14126 from RonnyPfannschmidt/fix-1764-argparse-program-name",
+   "kind": "feature",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "multi_file",
+   "source_files": 4,
+   "source_loc": 73,
+   "test_changed": true,
+   "backported_to": []
+  },
+  {
+   "sha": "d84fccb8a840641287b4873a411346d22591f02d",
+   "subject": "reduce gc_collect_harder default to 1 on CPython",
+   "kind": "feature",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 11,
+   "test_changed": false,
+   "backported_to": []
+  },
+  {
+   "sha": "9d0a874137c8d1a1286035765f149deb6706d2c5",
+   "subject": "[refactor] Avoid calling ``_as_numpy_array`` twice in ``approx`` (#14508)",
+   "kind": "refactor",
+   "kind_basis": "commit_message",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 12,
+   "test_changed": false,
+   "backported_to": []
+  },
+  {
+   "sha": "e2dbcb27f9d44ec510dae964672499c93f78bbc1",
+   "subject": "Fix junitxml count for teardown errors (#14501)",
+   "kind": "bug_fix",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 12,
+   "test_changed": true,
+   "backported_to": []
+  },
+  {
+   "sha": "722ef550df48bd3154241b208ce9d11c181da6bb",
+   "subject": "[refactor] Use match case in ``_get_auto_indent`` (#14512)",
+   "kind": "refactor",
+   "kind_basis": "commit_message",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 35,
+   "test_changed": false,
+   "backported_to": []
+  },
+  {
+   "sha": "982672e01b2b820ddf1bd00e3f938d0343acd295",
+   "subject": "[refactor] Use match case in ``RaisesGroup._parse_excgroup`` (#14509)",
+   "kind": "refactor",
+   "kind_basis": "commit_message",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 33,
+   "test_changed": false,
+   "backported_to": []
+  },
+  {
+   "sha": "46ea2a3cfc50ae42310c278387be49d165d71581",
+   "subject": "Fix capteesys producing doubled output with --capture=no (#14205)",
+   "kind": "bug_fix",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 9,
+   "test_changed": true,
+   "backported_to": []
+  },
+  {
+   "sha": "58d454a6aedce3f57613e40556f474396123e0f2",
+   "subject": "Merge pull request #14505 from Pierre-Sassoulas/fix-unittest-skip-fixture-nodeid",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 2,
+   "test_changed": false,
+   "backported_to": []
+  },
+  {
+   "sha": "1abe84a29554e72f57ac2160d8fbaaafade3bb8c",
+   "subject": "Improve error message for module-level __getattr__ issues (#14170)",
+   "kind": "feature",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 14,
+   "test_changed": true,
+   "backported_to": []
+  },
+  {
+   "sha": "47ed628df2b39ff114c069e70a5cc4ccbdc89b97",
+   "subject": "Fix monkeypatch.setattr() teardown crash on failed setattr (#14161) (#14209)",
+   "kind": "bug_fix",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 2,
+   "test_changed": true,
+   "backported_to": []
+  },
+  {
+   "sha": "fd90f701b3356998fc0562a1fae3c52afcf8e0dc",
+   "subject": "fix missing type annotations on `makepyfile` and `maketxtfile` methods (#14080)",
+   "kind": "bug_fix",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 10,
+   "test_changed": false,
+   "backported_to": []
+  },
+  {
+   "sha": "62ca642621c0888b044ac5f663c78e86de063887",
+   "subject": "Fix autouse fixtures running in @unittest.skip classes (#14210)",
+   "kind": "bug_fix",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 18,
+   "test_changed": true,
+   "backported_to": []
+  },
+  {
+   "sha": "ec0f6d01aef6f324b33be1ba64105edccf537c4b",
+   "subject": "Improve assertion diffs for mappings (#14504)",
+   "kind": "feature",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 10,
+   "test_changed": true,
+   "backported_to": []
+  },
+  {
+   "sha": "bd001370538cf19cced79376a74a9e46ea0fdf68",
+   "subject": "Merge pull request #14098 from RonnyPfannschmidt/fix-14004-contest-nodeid-assingnment",
+   "kind": "bug_fix",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "multi_file",
+   "source_files": 4,
+   "source_loc": 230,
+   "test_changed": true,
+   "backported_to": []
+  },
+  {
+   "sha": "543b11f2534bb0edc85b86767ed239da9c5bd140",
+   "subject": "Fix -v hint in raises match diff not working (#14226)",
+   "kind": "bug_fix",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 13,
+   "test_changed": true,
+   "backported_to": []
+  },
+  {
+   "sha": "d6dbe52bda18fe2cb63c3c9060d7ef8597465655",
+   "subject": "New assertion_text_diff_style option for text diff blocks (#14425)",
+   "kind": "feature",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "multi_file",
+   "source_files": 2,
+   "source_loc": 116,
+   "test_changed": true,
+   "backported_to": []
+  },
+  {
+   "sha": "8571cf8d44a390c4c61f82c9b5a825ae393b1203",
+   "subject": "Deprecate `self` in class-scoped fixtures on base classes (#14071)",
+   "kind": "feature",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "multi_file",
+   "source_files": 2,
+   "source_loc": 19,
+   "test_changed": true,
+   "backported_to": []
+  },
+  {
+   "sha": "21be7a259424e509e3d667082a138bcc8fc45c00",
+   "subject": "approx: fix buggy `__array_interface__` check",
+   "kind": "bug_fix",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 2,
+   "test_changed": false,
+   "backported_to": [
+    "1e5f8d07534a16969240181a48ba7b202f3025d6"
+   ]
+  },
+  {
+   "sha": "984cabfaccf8aa69fe49097ed3d07bd60d05f240",
+   "subject": "mark/expression: fix scanner - search for backslash in string value, not entire input (#14475)",
+   "kind": "bug_fix",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 4,
+   "test_changed": true,
+   "backported_to": [
+    "439f3efb7e0049d7c4cc1d58a592d837988f72b8"
+   ]
+  },
+  {
+   "sha": "2c555d62fa2c51ccb0c4c1cdd6243149ce4ffa97",
+   "subject": "fix approx rel for timedelta: accept float, compute rel * expected (#14466)",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 43,
+   "test_changed": true,
+   "backported_to": []
+  },
+  {
+   "sha": "856da14ae04ca61dfb61feccbb8292ac66af1346",
+   "subject": "Merge pull request #14460 from bluetech/deprecate-pastebin",
+   "kind": "feature",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "multi_file",
+   "source_files": 2,
+   "source_loc": 10,
+   "test_changed": true,
+   "backported_to": []
+  },
+  {
+   "sha": "a481f264d70ac3d053d5f7408f4ac1ec439d0c2f",
+   "subject": "Fix strict options from addopts",
+   "kind": "bug_fix",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 7,
+   "test_changed": true,
+   "backported_to": [
+    "e4f1cf3e4de43baf642b92a8da0884c2f4de1fe8"
+   ]
+  },
+  {
+   "sha": "794de4c93461d3b3570b074240167e85715a8f69",
+   "subject": "Merge pull request #14375 from bluetech/logging-propagation",
+   "kind": "bug_fix",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 22,
+   "test_changed": true,
+   "backported_to": []
+  },
+  {
+   "sha": "07dbfab72000c076352edc41d0cbec7a77c6e376",
+   "subject": "Add datetime/timedelta support to pytest.approx (#8395) (#14414)",
+   "kind": "feature",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 91,
+   "test_changed": true,
+   "backported_to": []
+  },
+  {
+   "sha": "84ae27e4710af45cc307f8c0c25259e917090219",
+   "subject": "Fix Argument.__repr__ crash when _action is not initialized (#14429)",
+   "kind": "bug_fix",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 5,
+   "test_changed": true,
+   "backported_to": []
+  },
+  {
+   "sha": "8f81c76744daf72d4f77cfc8423f4bdc60733d78",
+   "subject": "Merge pull request #10546 from ykadowak/refactor_atexit",
+   "kind": "refactor",
+   "kind_basis": "commit_message",
+   "size_tier": "multi_file",
+   "source_files": 2,
+   "source_loc": 45,
+   "test_changed": true,
+   "backported_to": []
+  },
+  {
+   "sha": "206b9716abd936702689381e8cee0d84ff61945f",
+   "subject": "Merge pull request #14369 from bluetech/fixture-override-with-parametrization",
+   "kind": "bug_fix",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 110,
+   "test_changed": true,
+   "backported_to": []
+  },
+  {
+   "sha": "deb9f5f79b0537a5e80cc26dd11bfb217e263a72",
+   "subject": "Add a space after the test name with --setup-show (#14430)",
+   "kind": "feature",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 9,
+   "test_changed": true,
+   "backported_to": []
+  },
+  {
+   "sha": "32dab33559d19270ef999e12d096074313c7d684",
+   "subject": "Merge pull request #14418 from bluetech/assert-no-terminalreporter",
+   "kind": "bug_fix",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "multi_file",
+   "source_files": 2,
+   "source_loc": 23,
+   "test_changed": true,
+   "backported_to": []
+  },
+  {
+   "sha": "6f93bd03849570ce53f7bb3608e29442378b4d1a",
+   "subject": "Merge pull request #14383 from bluetech/assertion-util-typing",
+   "kind": "refactor",
+   "kind_basis": "commit_message",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 89,
+   "test_changed": true,
+   "backported_to": []
+  },
+  {
+   "sha": "602fc183e54f7652d164f85782c3bba0c96d96d9",
+   "subject": "Merge pull request #14422 from EternalRights/fix-known-args-namespace-duplicate",
+   "kind": "bug_fix",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 9,
+   "test_changed": true,
+   "backported_to": []
+  },
+  {
+   "sha": "a95bea7f685e20f86f07d042fb4f52bc96f3a84e",
+   "subject": "Merge pull request #14246 from V1SHAL421/typing-allow-hidden-param-ids",
+   "kind": "bug_fix",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 2,
+   "test_changed": true,
+   "backported_to": []
+  },
+  {
+   "sha": "cd7592c41c40ebc9663c2984447d72e95c731bda",
+   "subject": "raises: suppress exception cause in raises match failures (#14391)",
+   "kind": "bug_fix",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 2,
+   "test_changed": true,
+   "backported_to": [
+    "093184048e36453c5b8c1bb770f22e956a9f310d"
+   ]
+  },
+  {
+   "sha": "a38b20d79039d50c504320b5d4d790c61893a90e",
+   "subject": "raises: is_fully_escaped does not handle consecutive backslashes correctly (#14393)",
+   "kind": "bug_fix",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 7,
+   "test_changed": true,
+   "backported_to": []
+  },
+  {
+   "sha": "d72943a57266ef368fb3498a3fd136cbf1c7aee6",
+   "subject": "Fix `-V` to show version information (#14382)",
+   "kind": "bug_fix",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 7,
+   "test_changed": true,
+   "backported_to": [
+    "68a341f49596fa43c89e052d437723860b98a443"
+   ]
+  },
+  {
+   "sha": "0b21993dec0c999de95b802a18b299f278f590fe",
+   "subject": "fix: use f-string instead of .format() in show_test_item (#14398)",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 2,
+   "test_changed": false,
+   "backported_to": []
+  },
+  {
+   "sha": "90465694d3501267decade1ac0be988999940957",
+   "subject": "Add `--max-warnings` option to fail test runs (#14372)",
+   "kind": "feature",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "multi_file",
+   "source_files": 3,
+   "source_loc": 37,
+   "test_changed": true,
+   "backported_to": []
+  },
+  {
+   "sha": "7bb1aa6df90bcb1bca9060e34ab984d4586edd8f",
+   "subject": "Style: Use type.__name__ in raises error messages for consistency (#13862)",
+   "kind": "feature",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 9,
+   "test_changed": true,
+   "backported_to": []
+  },
+  {
+   "sha": "2d3d16907540149a9d8bd5b58d5a767e513718d7",
+   "subject": "Merge pull request #13626 from mon/insufficient_cleanup_on_keyboardinterrupt",
+   "kind": "bug_fix",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 36,
+   "test_changed": true,
+   "backported_to": []
+  },
+  {
+   "sha": "5f7684db1f9e7141493b6447f4f026aadc30af56",
+   "subject": "Merge pull request #14379 from bluetech/importlib-cleanup",
+   "kind": "refactor",
+   "kind_basis": "commit_message",
+   "size_tier": "multi_file",
+   "source_files": 2,
+   "source_loc": 39,
+   "test_changed": true,
+   "backported_to": []
+  },
+  {
+   "sha": "8ecf49ec2807768105b05dda5461b28cdad89d03",
+   "subject": "Merge pull request #12313 from Flared/isra/fix-pathlib-with-ns",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 4,
+   "test_changed": false,
+   "backported_to": []
+  },
+  {
+   "sha": "694ffffa3babfd15588cadf83079559da89be28c",
+   "subject": "Type `pytest.approx` (#14373)",
+   "kind": "feature",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 7,
+   "test_changed": true,
+   "backported_to": []
+  },
+  {
+   "sha": "4cbef646720bfce2a12f271e3a754f087250160b",
+   "subject": "Merge pull request #13241 from jakkdl/raises_paramspec",
+   "kind": "feature",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "multi_file",
+   "source_files": 2,
+   "source_loc": 78,
+   "test_changed": true,
+   "backported_to": []
+  },
+  {
+   "sha": "fa643deada0fd23337ad11bb3201314b3e38a4f2",
+   "subject": "Merge pull request #12129 from WarrenTheRabbit/exclude-psuedo-fixtures-from-fixtures-per-test-output",
+   "kind": "feature",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "multi_file",
+   "source_files": 2,
+   "source_loc": 108,
+   "test_changed": true,
+   "backported_to": []
+  },
+  {
+   "sha": "c23393a20a36443789d5daf7a9e793b60af38f8a",
+   "subject": "Merge pull request #14360 from pytest-dev/pre-commit-ci-update-config",
+   "kind": "unknown",
+   "kind_basis": "none",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 3,
+   "test_changed": true,
+   "backported_to": []
+  },
+  {
+   "sha": "95d8423bd24992deea5b9df32555fa1741679e2c",
+   "subject": "Merge pull request #14343 from bluetech/cve-2025-71176-simple",
+   "kind": "bug_fix",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 26,
+   "test_changed": true,
+   "backported_to": [
+    "ddee02a578da30dd43aedc39c1c1f1aaadfcee95"
+   ]
+  },
+  {
+   "sha": "f93656d611f3c9cd22f346dfeda52cddb778c589",
+   "subject": "Make ScopeName public to enable downstream type checking  (#14325)",
+   "kind": "feature",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "multi_file",
+   "source_files": 5,
+   "source_loc": 38,
+   "test_changed": true,
+   "backported_to": []
+  },
+  {
+   "sha": "80f54926278ad4a489030c8c189b359bf2b9658a",
+   "subject": "Mark `yield_fixture` as deprecated (#14342)",
+   "kind": "feature",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "multi_file",
+   "source_files": 2,
+   "source_loc": 7,
+   "test_changed": true,
+   "backported_to": []
+  },
+  {
+   "sha": "ada80d5e96e469939abb2a945985279f01857e10",
+   "subject": "Merge pull request #14335 from bluetech/sched-rm-legacy-hook-marks",
+   "kind": "feature",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 2,
+   "test_changed": false,
+   "backported_to": []
+  },
+  {
+   "sha": "3e27786ce7d8e484d3011e0eea09dcca5b07a97c",
+   "subject": "Make FixtureFuction type alias instead of TypeVar (#14339)",
+   "kind": "unknown",
+   "kind_basis": "none",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 4,
+   "test_changed": false,
+   "backported_to": []
+  },
+  {
+   "sha": "bc57e69aaa01ae0271463f3cd85e8388d16da55e",
+   "subject": "recwarn: improved `warns(match=...)` error message on regex mismatch (closes #11225) (#14310)",
+   "kind": "feature",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 17,
+   "test_changed": true,
+   "backported_to": []
+  },
+  {
+   "sha": "2ca0f8ad7c0b03035ab3931839999832293b2852",
+   "subject": "Merge pull request #14175 from pytest-dev/pre-commit-ci-update-config",
+   "kind": "unknown",
+   "kind_basis": "none",
+   "size_tier": "multi_file",
+   "source_files": 3,
+   "source_loc": 14,
+   "test_changed": true,
+   "backported_to": []
+  },
+  {
+   "sha": "abdb2b601d262edf6ccdaa396ee0d09a4a6bb040",
+   "subject": "Merge pull request #14308 from bluetech/rm-hookspec-path-param",
+   "kind": "unknown",
+   "kind_basis": "none",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 5,
+   "test_changed": false,
+   "backported_to": []
+  },
+  {
+   "sha": "b665afc848a83f7498b9a52c467ec255bbd208a1",
+   "subject": "config: slightly simplify `_set_initial_conftests` (#14307)",
+   "kind": "refactor",
+   "kind_basis": "commit_message",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 50,
+   "test_changed": false,
+   "backported_to": []
+  },
+  {
+   "sha": "ecac57287b679cc707fb4d22aa9d48426eaacac4",
+   "subject": "Remove `PytestRemovedIn9Warning` (#14299)",
+   "kind": "unknown",
+   "kind_basis": "none",
+   "size_tier": "multi_file",
+   "source_files": 3,
+   "source_loc": 11,
+   "test_changed": true,
+   "backported_to": []
+  },
+  {
+   "sha": "960ddc6f67d7a37b8390f260f8ded2049f8a28de",
+   "subject": "Merge pull request #14222 from bysiber/fix-missing-pipe-metacharacter",
+   "kind": "bug_fix",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 4,
+   "test_changed": true,
+   "backported_to": []
+  },
+  {
+   "sha": "12558b562bef4bc454e9bfd3a4440cd892fe52a7",
+   "subject": "Merge pull request #14295 from bluetech/deprecate-getfixturevalue-teardown",
+   "kind": "feature",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "multi_file",
+   "source_files": 3,
+   "source_loc": 53,
+   "test_changed": true,
+   "backported_to": []
+  },
+  {
+   "sha": "9323dbfc7349caef53a616353778af48aca34fe5",
+   "subject": "Merge pull request #14293 from bluetech/rm-importorskip-importerror",
+   "kind": "unknown",
+   "kind_basis": "none",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 43,
+   "test_changed": true,
+   "backported_to": []
+  },
+  {
+   "sha": "e95f7f19aa11be55adc5d5e80550699672d69957",
+   "subject": "Merge pull request #14290 from pytest-dev/rm-getfixturevalue-opt",
+   "kind": "unknown",
+   "kind_basis": "none",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 13,
+   "test_changed": false,
+   "backported_to": []
+  },
+  {
+   "sha": "480872854a0fc0e48568054aee3ba43cccf1c648",
+   "subject": "Merge pull request #14294 from bluetech/fixtures-subreq-node-eager",
+   "kind": "unknown",
+   "kind_basis": "none",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 26,
+   "test_changed": false,
+   "backported_to": []
+  },
+  {
+   "sha": "77dceaa1fd1598293a7a39a837f859620a07002f",
+   "subject": "Merge pull request #14292 from bluetech/rm-node-ctor-fspath",
+   "kind": "unknown",
+   "kind_basis": "none",
+   "size_tier": "multi_file",
+   "source_files": 4,
+   "source_loc": 67,
+   "test_changed": true,
+   "backported_to": []
+  },
+  {
+   "sha": "d889ca0f3b8c45f92ef90f34e67ddbaa2c988134",
+   "subject": "Merge pull request #14275 from bluetech/fixturedef-finish-idempotent",
+   "kind": "bug_fix",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 15,
+   "test_changed": true,
+   "backported_to": []
+  },
+  {
+   "sha": "55560d9d4187feecea18b1e637f43f55912d0303",
+   "subject": "Merge pull request #12378 from Pierre-Sassoulas/fix-implicit-str-concat-and-discovered-bug-due-to-it",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 2,
+   "test_changed": false,
+   "backported_to": [
+    "7ee58acc8777c31ac6cf388d01addf5a414a7439"
+   ]
+  },
+  {
+   "sha": "6b700f49fb59fc6cec43b9a550cf558954d83332",
+   "subject": "subtests: avoid double `saferepr()` (#14213)",
+   "kind": "unknown",
+   "kind_basis": "none",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 2,
+   "test_changed": true,
+   "backported_to": []
+  },
+  {
+   "sha": "8950ca3bc0988647dfc35b02f854347a1435bd36",
+   "subject": "subtests: fix inconcistent handling of non-string messages (#14196)",
+   "kind": "bug_fix",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "single_file",
+   "source_files": 1,
+   "source_loc": 6,
+   "test_changed": true,
+   "backported_to": [
+    "3065de713adfb3f38db16056fa2e702824d89978"
+   ]
+  },
+  {
+   "sha": "966edc9d517cd092104028796b684fb1119a7c73",
+   "subject": "Fix: assertrepr_compare respects dict insertion order (#14050)",
+   "kind": "bug_fix",
+   "kind_basis": "changelog_fragment",
+   "size_tier": "multi_file",
+   "source_files": 3,
+   "source_loc": 33,
+   "test_changed": true,
+   "backported_to": [
+    "60fb59d341a6373e632849de0a35b90aa85f0d61"
+   ]
+  },
+  {
+   "sha": "082f267b32d84fe16cbb448be5cfb7f07af62a64",
+   "subject": "Merge pull request #14176 from The-Compiler/name-change",
+   "kind": "unknown",
+   "kind_basis": "none",
+   "size_tier": "multi_file",
+   "source_files": 2,
+   "source_loc": 10,
+   "test_changed": false,
+   "backported_to": []
+  }
+ ],
+ "rejected": [
+  {
+   "sha": "9efd0121a4396da80c20d7c3b7844825966612f6",
+   "subject": "Merge pull request #15008 from Hugohong258/work/round-five",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "36eed6b7b0eb59760fc4b33e90bdaac5057388f0",
+   "subject": "[pre-commit.ci] pre-commit autoupdate (#15408)",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "e4378d56736ff3bbb317dd9d9de898419adf309d",
+   "subject": "[pre-commit.ci] pre-commit autoupdate (#15362)",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "bc14038c406563b18a03e15453a10b9eee969e42",
+   "subject": "[automated] Update plugin list (#15349)",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "171c924acfd66d03ab51d08da2509461da6233a7",
+   "subject": "Merge pull request #15348 from pytest-dev/dependabot/pip/testing/plugins_integration/pip-97d45fb942",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "8b005ed7f972987033ec34dc1e68b0635fb8142b",
+   "subject": "[pre-commit.ci] pre-commit autoupdate (#15327)",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "1211245aa72f1efe07bcfce63a7c543156cee976",
+   "subject": "Merge pull request #15309 from pytest-dev/dependabot/github_actions/github-actions-35a4fca628",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "afac7979e3d0d30914aa986192dcbbc48379cb86",
+   "subject": "build(deps): Bump twisted in /testing/plugins_integration (#15320)",
+   "reason": "no_source_change",
+   "kind": "other",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "d0fc3bb4d35258884c6b8bf41b36cef4365d3adc",
+   "subject": "tests(plugin_integration): Bump pytest-asyncio to v1.4.1.post1. (#15319)",
+   "reason": "no_source_change",
+   "kind": "other",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "4abdff385dfe09a7630f90dd86f077ab8528a702",
+   "subject": "Merge pull request #15272 from bluetech/cherry-pick-release",
+   "reason": "no_source_change",
+   "kind": "bug_fix",
+   "kind_basis": "changelog_fragment"
+  },
+  {
+   "sha": "a7b2446ee41a7298d3a0bc22c52f3b8bacae1566",
+   "subject": "Merge pull request #15245 from pytest-dev/claude/project-thread-9jcf91",
+   "reason": "no_source_change",
+   "kind": "other",
+   "kind_basis": "changelog_fragment"
+  },
+  {
+   "sha": "679d09c6945156746e17e9ec0b1c8309bbde3ad3",
+   "subject": "[pre-commit.ci] pre-commit autoupdate (#15266)",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "41d12cdbb4a35a7877768d93d8dc50a9117a8d8c",
+   "subject": "docs: clarify typing for yield fixtures",
+   "reason": "no_source_change",
+   "kind": "other",
+   "kind_basis": "changelog_fragment"
+  },
+  {
+   "sha": "b9022ba04a33bfc76b5c9aefb8974755a80bf5ce",
+   "subject": "Merge pull request #15182 from 1871698/docs/improve-getting-started-description",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "4aa7d5d19ce74999624102208ed4522c5587492d",
+   "subject": "[automated] Update plugin list (#15257)",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "c9bf1edf9e0d388f3e7bebc88576e608ffbc40a4",
+   "subject": "build(deps): Bump the github-actions group with 2 updates (#15233)",
+   "reason": "no_source_change",
+   "kind": "other",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "9225e4fe0e184ebe63d8f7a1a48405d195a553f2",
+   "subject": "Group dependabot updates for pip and github-actions (#15223)",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "49ea4d08714f9ae519b86ee17b6b50c1dd080f32",
+   "subject": "[pre-commit.ci] pre-commit autoupdate (#15225)",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "2516c39788290123567e1cabd32a7fa4532cf09b",
+   "subject": "build(deps): Bump django in /testing/plugins_integration (#15211)",
+   "reason": "no_source_change",
+   "kind": "other",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "3751648646686eb46f8bdcfebee70c049f1b8acf",
+   "subject": "build(deps): Bump actions/download-artifact from 8.0.1 to 8.0.2 (#15212)",
+   "reason": "no_source_change",
+   "kind": "other",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "420cf37a3fc8c03c9a4769c2635a03773d27be10",
+   "subject": "Merge pull request #15128 from RonnyPfannschmidt/fix-9236-pluggy-floor",
+   "reason": "no_source_change",
+   "kind": "other",
+   "kind_basis": "changelog_fragment"
+  },
+  {
+   "sha": "cb6ff97bcb147f2bb5d9e0072c424dc03a452ba1",
+   "subject": "Merge pull request #15192 from Lothnic/docs-pluggy-distfacade",
+   "reason": "no_source_change",
+   "kind": "other",
+   "kind_basis": "changelog_fragment"
+  },
+  {
+   "sha": "11b8391bbab1754e316de51cf36d30d014af0a61",
+   "subject": "Merge pull request #15179 from scott-huberty/doc-crossref",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "aec0291ed14c724873bfcea99d5dfd739f75a68f",
+   "subject": "build(deps): Bump pytest-bdd in /testing/plugins_integration (#15167)",
+   "reason": "no_source_change",
+   "kind": "other",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "587ebc501ba292539202a1aac3a7f5b0112a08ec",
+   "subject": "[automated] Update plugin list (#15159)",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "7edc6b039a56844d74a8aeef313a2d36560f08cc",
+   "subject": "Fix two flaky tests: slow-teardown timing and pdb EOF race (#15151)",
+   "reason": "no_source_change",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "2950bc2392f521fc0fd5e889a6a9857bc9d3ffe8",
+   "subject": "Clarify collection counts after deselection (#15121)",
+   "reason": "no_executable_source_change",
+   "kind": "other",
+   "kind_basis": "changelog_fragment"
+  },
+  {
+   "sha": "fd17fdfea252260bb7db5c9144f04b881e11d5d7",
+   "subject": "build(deps): Bump pytest-mock in /testing/plugins_integration (#15131)",
+   "reason": "no_source_change",
+   "kind": "other",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "f5240bef4d8b31232d570fb80ea4f7c50b087d1b",
+   "subject": "[automated] Update plugin list (#15126)",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "2887015cade4757385308e7a7d8083557fc637e2",
+   "subject": "[pre-commit.ci] pre-commit autoupdate (#15077)",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "b1de564f337c63db919a65253b931dd099909618",
+   "subject": "build(deps): Bump pytest-rerunfailures in /testing/plugins_integration (#15110)",
+   "reason": "no_source_change",
+   "kind": "other",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "24e7f30b020f5d2981106cd1927669af3e2daa8e",
+   "subject": "build(deps): Bump codecov/codecov-action from 7.1.0 to 7.1.1 (#15111)",
+   "reason": "no_source_change",
+   "kind": "other",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "c333125d977b323fafbeb0e09cd86e203ab4af39",
+   "subject": "[automated] Update plugin list (#15107)",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "8721173580390a9d297e5af06cac3f0b6841f425",
+   "subject": "testing: ignore Cython's PyPy collection_type warning (#15096)",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "6a9ba0f02f827a54cff6ab4da0dddecd65444ff6",
+   "subject": "[automated] Update plugin list (#15066)",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "79833c82b92409dd74c9236c59b8b18970d026e0",
+   "subject": "build(deps): Bump codecov/codecov-action from 7.0.0 to 7.1.0 (#15070)",
+   "reason": "no_source_change",
+   "kind": "other",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "99ab2acccff15f757260a1e1fbb0d2a47fc01041",
+   "subject": "Merge pull request #14972 from bluetech/testing-fix",
+   "reason": "no_source_change",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "affb9c4cdc729da46c03b0de2ec17ab3e31c1e65",
+   "subject": "Merge pull request #14157 from test-flare/main",
+   "reason": "no_source_change",
+   "kind": "other",
+   "kind_basis": "changelog_fragment"
+  },
+  {
+   "sha": "fe9eef7ebc62042f26edfca2b922e08c33180ed5",
+   "subject": "Merge pull request #14956 from pytest-dev/dependabot/github_actions/re-actors/alls-green-b5b5b37504aa4183270bd3d855c52a67f212be35",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "53bc06b9933eb50b40cd904aa50bcd1b6cf2a49c",
+   "subject": "[pre-commit.ci] pre-commit autoupdate (#15027)",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "efc38328c97040702f6c71a57516a009c438435f",
+   "subject": "build(deps): Bump django in /testing/plugins_integration (#15018)",
+   "reason": "no_source_change",
+   "kind": "other",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "1e802740ca4850b7a6012f3b2318d5c0ebd98ce4",
+   "subject": "build(deps): Bump anyio in /testing/plugins_integration (#15019)",
+   "reason": "no_source_change",
+   "kind": "other",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "f7cc4c239090a1df6376383505dd2e44f96d5cbc",
+   "subject": "build(deps): Bump pytest-rerunfailures in /testing/plugins_integration (#15020)",
+   "reason": "no_source_change",
+   "kind": "other",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "ff42276a55b99a315c304db882edf0e69de9fae3",
+   "subject": "[automated] Update plugin list (#15004)",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "3fd8675d6d798507c06cf9c60753be6d9d7b0e17",
+   "subject": "[pre-commit.ci] pre-commit autoupdate (#14986)",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "0fabaa620d204fd040066eefd2a3ea2aad8d84cc",
+   "subject": "Merge pull request #14669 from ishaanlabs-gg/docs-fixture-hooks-runtest",
+   "reason": "no_source_change",
+   "kind": "other",
+   "kind_basis": "changelog_fragment"
+  },
+  {
+   "sha": "adc4c54cf3bd5c6c56293bd4e8a2729ce2a5d8d9",
+   "subject": "doc: fix three dead reference links (#14977)",
+   "reason": "no_source_change",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "1f787563f0a174f938ad3415c2ecd90ae35f03e2",
+   "subject": "[automated] Update plugin list (#14975)",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "eadb5a625081a1c9db58552797fecf8c88b2508c",
+   "subject": "Merge pull request #14967 from faheel/patch-1",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "e984a9b94740697411f5a05fcdfc3299dd20f13a",
+   "subject": "[pre-commit.ci] pre-commit autoupdate (#14957)",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "2cd217e5b8842f842bc6e25514db8946b3108b2d",
+   "subject": "build(deps): Bump pytest-rerunfailures in /testing/plugins_integration (#14955)",
+   "reason": "no_source_change",
+   "kind": "other",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "59e7f3ad5382e35751347e749d62a9dc0c84ece1",
+   "subject": "[automated] Update plugin list (#14951)",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "fdba12e1708313f56e9cf713d260c029764ca2b7",
+   "subject": "chore: drop duplicate PLR1714 ruff rule (#14933)",
+   "reason": "no_source_change",
+   "kind": "other",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "6a30f9e5764d106ce5a37e5bb706e797d46e318f",
+   "subject": "Merge pull request #14932 from pytest-dev/pre-commit-ci-update-config",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "c99f595a896eb84c1dda4f4b85a0929c52011e27",
+   "subject": "build(deps): Bump pytest-rerunfailures in /testing/plugins_integration (#14929)",
+   "reason": "no_source_change",
+   "kind": "other",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "cfe321c4862cad89cd6745d75516a9680b078ff9",
+   "subject": "build(deps): Bump pytest-django in /testing/plugins_integration (#14930)",
+   "reason": "no_source_change",
+   "kind": "other",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "df87db7b0462fb764ef73fa00561adf8ad047572",
+   "subject": "Merge pull request #14813 from RonnyPfannschmidt/ronny/assert-rewrite-coverage-harness",
+   "reason": "no_source_change",
+   "kind": "other",
+   "kind_basis": "changelog_fragment"
+  },
+  {
+   "sha": "1ae99acbe4b88bf7c73081895ed051486ebe953c",
+   "subject": "Merge pull request #14898 from pytest-dev/pre-commit-ci-update-config",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "6c8ea15e3b1a5a84258554097d6424732d621351",
+   "subject": "Merge pull request #14895 from Pierre-Sassoulas/ruff-enable-rules-that-already-pass",
+   "reason": "no_source_change",
+   "kind": "feature",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "8f84744c418689e7b723d50aca54cd9d6c33af2e",
+   "subject": "build(deps): Bump pytest-django in /testing/plugins_integration (#14893)",
+   "reason": "no_source_change",
+   "kind": "other",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "4e8d550321267c89bb997e8e021b7aa11c6693ab",
+   "subject": "build(deps): Bump django in /testing/plugins_integration (#14894)",
+   "reason": "no_source_change",
+   "kind": "other",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "604e2d0390c3850ded48788bdc9e4a5fb7013744",
+   "subject": "Merge pull request #14887 from pytest-dev/update-plugin-list/patch-fa7ccb176",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "68308aa288e00ff84880572ed9b3590f6cd7d470",
+   "subject": "Merge pull request #14845 from Shriprasad-P/docs/14834-endorse-pytest-skip-slow",
+   "reason": "no_source_change",
+   "kind": "other",
+   "kind_basis": "changelog_fragment"
+  },
+  {
+   "sha": "a3a62a0ebd43ec848b979227421e2b7ba93a9dc9",
+   "subject": "[pre-commit.ci] pre-commit autoupdate (#14851)",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "ecade5a6c120732f94126c806c40bee12c98398a",
+   "subject": "build(deps): Bump hynek/build-and-inspect-python-package (#14848)",
+   "reason": "no_source_change",
+   "kind": "other",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "cb957123887dc45ace38f9adf9ffa679036a40fe",
+   "subject": "build(deps): Bump pypa/gh-action-pypi-publish from 1.14.1 to 1.14.2 (#14849)",
+   "reason": "no_source_change",
+   "kind": "other",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "006884bac1cff49d2e2908c20fbbb0f0bc8e671b",
+   "subject": "[automated] Update plugin list (#14842)",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "9072c4b7bb0832f6d752520a762469babe7a0c44",
+   "subject": "docs: qualify tox package_env references (#14825)",
+   "reason": "no_source_change",
+   "kind": "other",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "d27774fa6ce0f7e966fadcbac1330862b02292d2",
+   "subject": "build(deps): Bump actions/stale from 10.4.0 to 11.0.0 (#14830)",
+   "reason": "no_source_change",
+   "kind": "other",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "8d5a9660856b9626b93d1bfda200cd0aeb3a0403",
+   "subject": "Merge pull request #14790 from RonnyPfannschmidt/doc/commit-access-is-an-invitation",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "15b58a224ccbce113ac1b350bb1738dd345175f2",
+   "subject": "[pre-commit.ci] pre-commit autoupdate (#14832)",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "bf2ca20b6ff0b98438edbe8496a622853c2dc2a7",
+   "subject": "Merge pull request #14810 from atiqur-rahman-pro/docs/pyproject-entry-points-10721",
+   "reason": "no_source_change",
+   "kind": "other",
+   "kind_basis": "changelog_fragment"
+  },
+  {
+   "sha": "c62ad48a67a755a075f2b96aa838856fee5f0d35",
+   "subject": "[automated] Update plugin list (#14826)",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "e6701ff230876a17833b26f6406371aa411211e9",
+   "subject": "docs: update 'Twitter' to 'social media' in CONTRIBUTING.rst (#14804)",
+   "reason": "no_source_change",
+   "kind": "other",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "56b196e921acec0259d84622a570fde6032e15b5",
+   "subject": "build(deps): Bump codecov/codecov-action from 6.0.1 to 7.0.0 (#14601)",
+   "reason": "no_source_change",
+   "kind": "other",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "ab2ba2dcb35958dfaae65e6485055f157daafbb8",
+   "subject": "build(deps): Bump actions/setup-python from 6.3.0 to 7.0.0 (#14784)",
+   "reason": "no_source_change",
+   "kind": "other",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "aa09fa2acec06243caad56a034ead3a2fdf9f1e2",
+   "subject": "docs: clarify confcutdir plugin discovery cutoff (#14598)",
+   "reason": "no_source_change",
+   "kind": "other",
+   "kind_basis": "changelog_fragment"
+  },
+  {
+   "sha": "0cfa7b38f68c3ee14eb31c42ee73d3a5642a4baf",
+   "subject": "Merge pull request #14783 from pytest-dev/update-plugin-list/patch-36704f9b5",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "70f8650a624c92f91c94dd26b391326df2ea4143",
+   "subject": "Merge pull request #14785 from pytest-dev/dependabot/github_actions/pypa/gh-action-pypi-publish-1.14.1",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "a53a4d99c4ded7f30b712d57068d92243a731ce7",
+   "subject": "Docs: align pytest.mark.xfail and skip parameter signatures with reality (#10094) (#14725)",
+   "reason": "no_source_change",
+   "kind": "other",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "a10ed097e94435cfcfaebe627b76ed9c8865786d",
+   "subject": "Merge pull request #14768 from RonnyPfannschmidt/doc/emphasize-ai-effort-policy",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "85003621822f9c10063940068ccacc9c12b8c73f",
+   "subject": "doc: Fix grammar 'the same to apply' -> 'the same as applying' (#14767)",
+   "reason": "no_source_change",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "849fbda3ce87e3829b30d005979bee59928c01ff",
+   "subject": "Merge pull request #14122 from RonnyPfannschmidt/enable-uv",
+   "reason": "no_source_change",
+   "kind": "feature",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "f1211ba21d1df2f55cf2ba1523b9d7b6c6a9ef56",
+   "subject": "Add regression test for #2568 (properties evaluated during collection) (#14745)",
+   "reason": "no_source_change",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "70dc4e94a59a8f66d2dc7fc7aaa258e983bc376f",
+   "subject": "Merge pull request #14721 from pytest-dev/update-plugin-list/patch-67a174fce",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "eb79044cea1c2c7b6e58ebcce17c55da871fef6c",
+   "subject": "Merge pull request #14704 from pytest-dev/pre-commit-ci-update-config",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "22ba7dfd77dd2274a821ac8b2ff94078c1a6cdd0",
+   "subject": "build(deps): Bump django in /testing/plugins_integration (#14733)",
+   "reason": "no_source_change",
+   "kind": "other",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "d46dd4840d51125fec59c8dc1afd735a62b4dbc5",
+   "subject": "build(deps): Bump anyio in /testing/plugins_integration (#14734)",
+   "reason": "no_source_change",
+   "kind": "other",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "9309b037d9848df4c6cad5491a5239c9123315fa",
+   "subject": "build(deps): Bump actions/stale from 10.3.0 to 10.4.0 (#14735)",
+   "reason": "no_source_change",
+   "kind": "other",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "67a174fcee355334c53588be2eeba8df702477e9",
+   "subject": "Merge pull request #14699 from pytest-dev/dependabot/pip/testing/plugins_integration/pytest-rerunfailures-16.4",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "6153372429f86e6ff224548d62e54945def76d8f",
+   "subject": "Merge pull request #14701 from Pierre-Sassoulas/fix-pypy311-hypothesis",
+   "reason": "no_source_change",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "efc013416e45d9162dc00dca9e4a83e1ef1c4089",
+   "subject": "Merge pull request #14682 from The-Compiler/doc-ai-slop",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "96238a4683b12afeabee534430306dfe38fcdb7b",
+   "subject": "build(deps): Bump actions/cache from 5.0.5 to 6.1.0 (#14681)",
+   "reason": "no_source_change",
+   "kind": "other",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "9720f722114524cc610fa0eba363bbd63a2eb18e",
+   "subject": "build(deps): Bump actions/setup-python from 6.2.0 to 6.3.0 (#14680)",
+   "reason": "no_source_change",
+   "kind": "other",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "83b022078855ea64c5c53bc50bd9299a5a1f1dc0",
+   "subject": "build(deps): Bump anyio in /testing/plugins_integration (#14679)",
+   "reason": "no_source_change",
+   "kind": "other",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "7f245ff675188f2798018caab204aa5846159ef7",
+   "subject": "[automated] Update plugin list (#14676)",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "1aa747de62dd9e9f395513c25298ba604f1724d0",
+   "subject": "[pre-commit.ci] pre-commit autoupdate (#14663)",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "0e0f7813327ca0ef65feb457cf9a5885e9ba7cb9",
+   "subject": "build(deps): Bump anyio in /testing/plugins_integration (#14658)",
+   "reason": "no_source_change",
+   "kind": "other",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "d377458dd4f2547e527a8e765d3b359a54adc06a",
+   "subject": "build(deps): Bump actions/checkout from 6.0.3 to 7.0.0 (#14659)",
+   "reason": "no_source_change",
+   "kind": "other",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "fc5ebf3c58c3f9652fa802388eb0f0cc1fae9819",
+   "subject": "docs: fix malformed list (#14655)",
+   "reason": "no_source_change",
+   "kind": "other",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "1fae9e28fd9028bed1a29b2e5b222b4fb65ccc36",
+   "subject": "[automated] Update plugin list (#14656)",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "e6d8374449d0862093295f131b21a0eb2ca9526b",
+   "subject": "docs: clarify recwarn resets warnings filter after tests (#14653)",
+   "reason": "no_source_change",
+   "kind": "other",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "2eac0d6cfe0be3d2d49b86c3860ee00f60517813",
+   "subject": "[pre-commit.ci] pre-commit autoupdate (#14643)",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "f78e909f6e7b0aa7e234dd7ee3918350f352d469",
+   "subject": "[automated] Update plugin list (#14631)",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "4904d2ba80c3532037fc1d5360ac6faf30b93f2f",
+   "subject": "Merge pull request #14628 from bluetech/cherry-pick-release",
+   "reason": "no_source_change",
+   "kind": "bug_fix",
+   "kind_basis": "changelog_fragment"
+  },
+  {
+   "sha": "a07c31a97d0a412c09b1f2f5953adb4b4a75d04d",
+   "subject": "Merge pull request #14596 from bluetech/doc-classmethod",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "0ee0dffffe53608ef222aa98683b65762cdd966a",
+   "subject": "update-plugin-list: fix add label command (#14616)",
+   "reason": "no_source_change",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "9fa5673545edd15a2cd0068f87eb322c93948007",
+   "subject": "Backport plugin list updates to maintenance branches (#14538)",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "addf8838687c0a4caa20b1bd528a419eb99ddf56",
+   "subject": "[pre-commit.ci] pre-commit autoupdate (#14609)",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "0a600a1fc0a653fc35a3cbd190e4c1682a11c102",
+   "subject": "build(deps): Bump django in /testing/plugins_integration (#14599)",
+   "reason": "no_source_change",
+   "kind": "other",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "7089db526150a6ffd50392672aa45098f27d14e2",
+   "subject": "build(deps): Bump actions/checkout from 6.0.2 to 6.0.3 (#14600)",
+   "reason": "no_source_change",
+   "kind": "other",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "0233593bcfe500f6f89e2801679d1279e1f79b2e",
+   "subject": "[automated] Update plugin list (#14595)",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "f8e2aa8abf0b47eb553ee21835f279652fffd5fd",
+   "subject": "Merge pull request #14590 from bluetech/cherry-pick-release",
+   "reason": "no_source_change",
+   "kind": "bug_fix",
+   "kind_basis": "changelog_fragment"
+  },
+  {
+   "sha": "0d8491a4ecf971800de0479ef55c7f5292c54937",
+   "subject": "build(deps): Bump actions/stale from 10.2.0 to 10.3.0",
+   "reason": "no_source_change",
+   "kind": "other",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "5dfa38541becfb77d0f52cac4cc8cce71849ab61",
+   "subject": "Fix recursion traceback test to cover all styles (#14582)",
+   "reason": "no_source_change",
+   "kind": "other",
+   "kind_basis": "changelog_fragment"
+  },
+  {
+   "sha": "e5620cd21ec62f5a5f9a5141a3c76fb3953729b6",
+   "subject": "[pre-commit.ci] pre-commit autoupdate (#14577)",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "b8d5cb25a2ce20af3019a10cc29ef065bb1a3a05",
+   "subject": "Merge pull request #14558 from dhruvatr/patch-1",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "b33a27d12b93311cf6c41b77ebf2994e555e52f9",
+   "subject": "build(deps): Bump pytest-asyncio in /testing/plugins_integration (#14574)",
+   "reason": "no_source_change",
+   "kind": "other",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "8e050e5e1b7b0fb36f9d5da8e1382c5569926f72",
+   "subject": "Merge pull request #14572 from pytest-dev/update-plugin-list/patch-3422c67a3",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "3422c67a3a46ccb4b5549c88821d5d768843418e",
+   "subject": "Clarify request fixture in indirect parametrization docs (#14539)",
+   "reason": "no_source_change",
+   "kind": "other",
+   "kind_basis": "changelog_fragment"
+  },
+  {
+   "sha": "fbd736f688521fd5d926fa00bb495e720fa6c416",
+   "subject": "Report security vulnerabilities using GitHub (#14549)",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "aa01adceb7d52294d7a78f68939bf6862e0ce846",
+   "subject": "Merge pull request #14550 from trendels/docs-fix",
+   "reason": "no_source_change",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "4e80019353af4748669cec522352e0651e36f1d2",
+   "subject": "Merge pull request #14494 from pytest-dev/dependabot/github_actions/hynek/build-and-inspect-python-package-2.18.0",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "404ab3694d587b05bda4e5c354f4bc8e56774fa3",
+   "subject": "Merge pull request #14541 from pytest-dev/dependabot/pip/testing/plugins_integration/pytest-rerunfailures-16.3",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "4affa2827598b69ccb6987b04e479059b829669d",
+   "subject": "Merge pull request #14547 from pytest-dev/pre-commit-ci-update-config",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "0a465c8a716f37aca0ce456eb34614699ecd701f",
+   "subject": "Merge pull request #14537 from pytest-dev/update-plugin-list/patch-f976bb67b",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "ea98f72badc085bdff17c784cfe9a611af5196a4",
+   "subject": "Merge pull request #14527 from bluetech/py315",
+   "reason": "no_source_change",
+   "kind": "feature",
+   "kind_basis": "changelog_fragment"
+  },
+  {
+   "sha": "8927e35166ab410afe5002dcfa93481dc020c096",
+   "subject": "Merge pull request #14511 from The-Compiler/doc-sprint",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "7f1c0d8b51fd9c25233dc44d2412f846c0d35cae",
+   "subject": "[pre-commit.ci] pre-commit autoupdate (#14522)",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "2f26a02d7a12c23a42b93f2b52702e52f75a5716",
+   "subject": "build(deps): Bump twisted in /testing/plugins_integration (#14516)",
+   "reason": "no_source_change",
+   "kind": "other",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "ab03c0c1610119a44ce3d05621f9f22bfc314f02",
+   "subject": "build(deps): Bump pytest-rerunfailures in /testing/plugins_integration (#14517)",
+   "reason": "no_source_change",
+   "kind": "other",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "27ed4b95be0a0a64d99702a753a02fbeb46c8c0d",
+   "subject": "build(deps): Bump codecov/codecov-action from 6.0.0 to 6.0.1 (#14518)",
+   "reason": "no_source_change",
+   "kind": "other",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "24d6e24dfcd375f044304535b1cdec0cd20eaad8",
+   "subject": "Add regression test for get_user() OSError handling (#14506)",
+   "reason": "no_source_change",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "7c9dec04b5c53abf6e83ca9a46069dbdbd9f8068",
+   "subject": "[automated] Update plugin list (#14507)",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "b857039035af33cc040b47a3da285d16acf9fa55",
+   "subject": "doc: Clarify conftest.py hooks unavailable during pytest_addoption (#13954)",
+   "reason": "no_source_change",
+   "kind": "other",
+   "kind_basis": "changelog_fragment"
+  },
+  {
+   "sha": "0a4f8891de22ae9bbf7f89252f64ba50080bbedb",
+   "subject": "docs: clarify hookimpl specname limitation (#14485)",
+   "reason": "no_source_change",
+   "kind": "other",
+   "kind_basis": "changelog_fragment"
+  },
+  {
+   "sha": "b6c4d919f53cc2100da6eb6b74e3d700008f7c54",
+   "subject": "docs: clarify stdlib monkeypatch guidance (#14486)",
+   "reason": "no_source_change",
+   "kind": "other",
+   "kind_basis": "changelog_fragment"
+  },
+  {
+   "sha": "28c1700408767f87e4cf3f10c02afb1ab21f9123",
+   "subject": "docs: document doctest fixture parametrization limit (#14487)",
+   "reason": "no_source_change",
+   "kind": "other",
+   "kind_basis": "changelog_fragment"
+  },
+  {
+   "sha": "f15e1a834efec49250d8413453e9f4ee7b948610",
+   "subject": "docs: link the current pytest-xdist newhooks.py from the hooks how-to (#14503)",
+   "reason": "no_source_change",
+   "kind": "other",
+   "kind_basis": "changelog_fragment"
+  },
+  {
+   "sha": "28d9c65a61e7bdfef7bf726625215f27a624b94b",
+   "subject": "[pre-commit.ci] pre-commit autoupdate (#14496)",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "d1cb30d9aece2b2ec750fc901232ce0ea356f68e",
+   "subject": "Merge pull request #14490 from pytest-dev/update-plugin-list/patch-8571cf8d4",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "db091ecc2514a924589db5165bb6fcac0e9e7d44",
+   "subject": "Merge pull request #14479 from lphuc2250gma/docs/fix-plugin-list-grammar",
+   "reason": "no_source_change",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "7df5d80ff3a98714a1d3cdbe82941229e511f4b3",
+   "subject": "docs: clarify subtests progress output (#14467)",
+   "reason": "no_source_change",
+   "kind": "other",
+   "kind_basis": "changelog_fragment"
+  },
+  {
+   "sha": "fbab7c5dfe63a22f545207e8dc163ed61ad51d98",
+   "subject": "[pre-commit.ci] pre-commit autoupdate (#14464)",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "09f969fefcd3ccc29461b6a1b41211ff62c879e4",
+   "subject": "[automated] Update plugin list (#14455)",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "b10612810dc6f3614385f6456ddc5e7c8277e15b",
+   "subject": "build(deps): Bump django in /testing/plugins_integration (#14450)",
+   "reason": "no_source_change",
+   "kind": "other",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "551eafb2c8540cabda43d5e5ed91aeaf186cbf3b",
+   "subject": "pytester: improve Pytester.LineMatcher._no_match_line docstring (#14438)",
+   "reason": "no_executable_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "46368429d39cf944461b946619b753897e0f556e",
+   "subject": "[automated] Update plugin list (#14437)",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "2aa07343b6ebcb426f4cc595e3bf1912b0a442de",
+   "subject": "docs: guard pytestconfig.cache example when cacheprovider is disabled (#14254)",
+   "reason": "no_source_change",
+   "kind": "other",
+   "kind_basis": "changelog_fragment"
+  },
+  {
+   "sha": "200e8c66fe2daa90eda7f4ff899b4eab6c768070",
+   "subject": "[pre-commit.ci] pre-commit autoupdate (#14426)",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "5dfd4eab7d328266fb3788dcbb031c9d67903daf",
+   "subject": "[automated] Update plugin list (#14419)",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "f84c0230770af13fe9475cded799eaa0ccbe590d",
+   "subject": "Merge pull request #14421 from bluetech/changelog-fixup",
+   "reason": "no_source_change",
+   "kind": "bug_fix",
+   "kind_basis": "changelog_fragment"
+  },
+  {
+   "sha": "d4fde45a5846dfed2581d38a4e90e9d4be917e2f",
+   "subject": "build(deps): Bump peter-evans/create-pull-request from 8.1.0 to 8.1.1 (#14401)",
+   "reason": "no_source_change",
+   "kind": "other",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "eaf605cd09ba00e35c62870e2a9ca80cfd4246af",
+   "subject": "[automated] Update plugin list (#14395)",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "916a7598e51d321abddb851bc9ed356bf11b0534",
+   "subject": "[pre-commit.ci] pre-commit autoupdate (#14405)",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "91e5af13db33d9c1d2363290c6067ddfd1e38162",
+   "subject": "build(deps): Bump pypa/gh-action-pypi-publish from 1.13.0 to 1.14.0 (#14399)",
+   "reason": "no_source_change",
+   "kind": "other",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "9979555d6d63f9d829c3b5ad13377139b0ddab90",
+   "subject": "build(deps): Bump actions/cache from 5.0.4 to 5.0.5 (#14400)",
+   "reason": "no_source_change",
+   "kind": "other",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "b7c7172849009e021b43736e8c5dcbf3ee47f7f1",
+   "subject": "build(deps): Bump actions/upload-artifact from 7.0.0 to 7.0.1 (#14402)",
+   "reason": "no_source_change",
+   "kind": "other",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "2f156949b1e4bcaebd572ed545bedd47ae2f0ba9",
+   "subject": "[pre-commit.ci] pre-commit autoupdate (#14385)",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "5898e9c7a1b8aee15c4c834298ba7ed32ce92cb9",
+   "subject": "[automated] Update plugin list (#14384)",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "18db92df7f2515e4a9bf589c54a863693dff724d",
+   "subject": "Merge pull request #14380 from bluetech/doc-ns-import-note",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "146041f51d3d937196f556ae2dfcdb8771e12860",
+   "subject": "Merge pull request #14338 from pytest-dev/dependabot/github_actions/actions/cache-5.0.4",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "c26c145e0fcef51426d64a184d0faa651777f86f",
+   "subject": "Merge pull request #14012 from bluetech/doc-confval",
+   "reason": "no_source_change",
+   "kind": "other",
+   "kind_basis": "changelog_fragment"
+  },
+  {
+   "sha": "48fcc261764ca8c06246bfc0fce86f749e51ed48",
+   "subject": "build(deps): Bump django in /testing/plugins_integration (#14370)",
+   "reason": "no_source_change",
+   "kind": "other",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "cb2eb562f040b5078cdf1abb5caaacd8ac517935",
+   "subject": "Merge pull request #14368 from bluetech/cherry-pick-release",
+   "reason": "no_source_change",
+   "kind": "bug_fix",
+   "kind_basis": "changelog_fragment"
+  },
+  {
+   "sha": "f0554edaddd091fd93716aaf8c8d94dc101d8b0a",
+   "subject": "build(deps): Bump hynek/build-and-inspect-python-package (#14354)",
+   "reason": "no_source_change",
+   "kind": "other",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "728652641b378bb6ff31843698e562fc45536634",
+   "subject": "build(deps): Bump anyio in /testing/plugins_integration (#14352)",
+   "reason": "no_source_change",
+   "kind": "other",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "3e39c0ae5397a971544e5496dd64a2839f1da6c2",
+   "subject": "build(deps): Bump codecov/codecov-action from 5.5.2 to 6.0.0 (#14353)",
+   "reason": "no_source_change",
+   "kind": "other",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "9e6755a891aa9db7381eca6db4a2f87026dcd29c",
+   "subject": "[automated] Update plugin list (#14350)",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "2a74cdfaff97f2405c0d747075d20da2df123786",
+   "subject": "[pre-commit.ci] pre-commit autoupdate (#14341)",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "fc54e3523bcc828d3746befa1551103ff92191b2",
+   "subject": "build(deps): Bump pytest-cov in /testing/plugins_integration (#14337)",
+   "reason": "no_source_change",
+   "kind": "other",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "d46fb403bb5169b1f91db53689379e28161b1eba",
+   "subject": "Merge pull request #14336 from pytest-dev/update-plugin-list/patch-bc57e69aa",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "75609e71415e67c0f74492d192ca99ca94a3f582",
+   "subject": "build(deps): Bump actions/download-artifact from 8.0.0 to 8.0.1 (#14316)",
+   "reason": "no_source_change",
+   "kind": "other",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "09d01042fe6ee88b667b8b854d10bce12f69aacb",
+   "subject": "[automated] Update plugin list (#14309)",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "6aafcdce9022149fcc977205676d1bc12ab43b9b",
+   "subject": "Merge pull request #14305 from bluetech/sphinx-py314",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "291b90acaf076c960a281168f6d971d4b56031c3",
+   "subject": "Merge pull request #14303 from bluetech/sphinx-9",
+   "reason": "no_source_change",
+   "kind": "other",
+   "kind_basis": "changelog_fragment"
+  },
+  {
+   "sha": "5de1f491fe02110686ffdeb68bef3d855687ecab",
+   "subject": "doc: Update training info (#14298)",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "295d9da900a0dbe8b4093d6a6bc977cd567aa4b0",
+   "subject": "Merge pull request #14154 from pytest-dev/dependabot/github_actions/peter-evans/create-pull-request-8.1.0",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "190939265b55b6ece2b2acf626bc755018c71265",
+   "subject": "Merge pull request #14291 from pytest-dev/update-plugin-list/patch-d889ca0f3",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "f7338e05685c952f21f838f0beab95cd29e05452",
+   "subject": "build(deps): Bump actions/download-artifact from 7.0.0 to 8.0.0 (#14277)",
+   "reason": "no_source_change",
+   "kind": "other",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "b8c6e2deb482a443e007b0b9b613df5fa8cd48b7",
+   "subject": "build(deps): Bump actions/upload-artifact from 6.0.0 to 7.0.0 (#14278)",
+   "reason": "no_source_change",
+   "kind": "other",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "de6a71193faa80324d9eb5fef3fa2ab4e20826d9",
+   "subject": "Merge pull request #14276 from pytest-dev/update-plugin-list/patch-ced0a8d4a",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "ced0a8d4a4317f4cb24b4ffb8138deb319dac212",
+   "subject": "Merge pull request #14259 from mitre88/patch-4",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "d6fa26c62873ea648272b337f2dc45d095394745",
+   "subject": "Update customize.rst with pytest minversion note (#14258)",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "38e9af8b1a59aeab0490e71c2d9fd4c277560ceb",
+   "subject": "Add explanation for string context diffs (#14257)",
+   "reason": "no_source_change",
+   "kind": "feature",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "8638c7d3f214c0e0e2f8578280cd6f8765a5771c",
+   "subject": "Update documentation for reportinfo() return values (#14256)",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "2755310d51bf6f9a307fcb89b4f1712fbc8f7dc5",
+   "subject": "TOML integer log levels must be quoted: Updating reference documentation  (#14255)",
+   "reason": "no_source_change",
+   "kind": "other",
+   "kind_basis": "changelog_fragment"
+  },
+  {
+   "sha": "a9b3d41be31933446309af3eff51d9cd81406f50",
+   "subject": "build(deps): Bump django in /testing/plugins_integration (#14252)",
+   "reason": "no_source_change",
+   "kind": "other",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "3a1fe2818c71cb78fad1be74bb9e86760d499ca6",
+   "subject": "Merge pull request #14223 from RonnyPfannschmidt/contributions-agents",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "1faee72a00dd351be3279807f4fa7fbe101f9ff9",
+   "subject": "[automated] Update plugin list (#14245)",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "3000e22ad966943122efa4b3d2eaff796006f756",
+   "subject": "Fix CI docs example file names (#14240)",
+   "reason": "no_source_change",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "9fd1eebd8af715b58832412bb8398d394ab67666",
+   "subject": "doc: fix removed pytest.config reference in historical-notes (#14216)",
+   "reason": "no_source_change",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "16f0764b5f4ff64b2516f805bc96307a1034a834",
+   "subject": "build(deps): Bump pytest-django in /testing/plugins_integration (#14229)",
+   "reason": "no_source_change",
+   "kind": "other",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "c1d7296ba6ee98b9fe4892aa91fa69f4673087c6",
+   "subject": "build(deps): Bump actions/stale from 10.1.1 to 10.2.0 (#14230)",
+   "reason": "no_source_change",
+   "kind": "other",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "11c8bdcd2dad29813c8461ca4664d796bfd0e6ad",
+   "subject": "[automated] Update plugin list (#14225)",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "f081bfbdec7d01c71dd3e60525806755d36606ff",
+   "subject": "Test overriding a fixture that requests a parametrized fixture (#14200)",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "7bc02cca0dd92ec505b4556c054b4e06e9cb8d4d",
+   "subject": "build(deps): Bump codecov/codecov-action from 5.5.1 to 5.5.2 (#14198)",
+   "reason": "no_source_change",
+   "kind": "other",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "4b820f0d30d1f3c05a3aed9b1acd2a24a946164f",
+   "subject": "[automated] Update plugin list (#14194)",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "2f09ddc84ea6a7ccd56f19b0b998c8d2c51a4652",
+   "subject": "doc: fixed typo in file name format (#14191)",
+   "reason": "no_source_change",
+   "kind": "bug_fix",
+   "kind_basis": "commit_message"
+  },
+  {
+   "sha": "3c37b551e71c8b18c5323dac8a27d248bb98a5a9",
+   "subject": "Merge pull request #14184 from him2him2/doc-src-layout-link",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "3740cb962027ed73460c04568b409ef8c52af99e",
+   "subject": "doc: indent envvar directive bodies in reference.rst (#14183)",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "b2310f28314249e4bfa1e0b9817dbef5cb968f4d",
+   "subject": "doc: fix ~75 typos and grammar issues across documentation (#14179)",
+   "reason": "no_source_change",
+   "kind": "bug_fix",
+   "kind_basis": "changelog_fragment"
+  },
+  {
+   "sha": "bda18de6ab84023bd08baf620bc2430f41eb4b5c",
+   "subject": "Upload junit reports codecov (#13778)",
+   "reason": "no_source_change",
+   "kind": "other",
+   "kind_basis": "changelog_fragment"
+  },
+  {
+   "sha": "e77b9a403f94b4a70d588b62ca4dfb66060b84b4",
+   "subject": "doc: Adjust training info (#14174)",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  },
+  {
+   "sha": "d49c94b5c13111790a4b6bc7f320bbc23b2c61e0",
+   "subject": "Merge pull request #14171 from pytest-dev/dependabot/github_actions/re-actors/alls-green-a638d6464689bbb24c325bb3fe9404d63a913030",
+   "reason": "no_source_change",
+   "kind": "unknown",
+   "kind_basis": "none"
+  }
+ ]
+}

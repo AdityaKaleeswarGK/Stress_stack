@@ -1,0 +1,76 @@
+{
+  "repo": "pytest-dev/pytest",
+  "summary": {
+    "kept": 195,
+    "dropped": 205,
+    "needs_enrichment": 0,
+    "by_style": {
+      "merge_commit": 113,
+      "squash": 77,
+      "unknown": 5
+    },
+    "mainline_points": 400,
+    "commits_visited": 400,
+    "commits_measured": 400,
+    "stop_reason": "change_limit",
+    "remaining_in_window": 0,
+    "walk_since": null,
+    "walk_until": null,
+    "selected": 195
+  },
+  "rejection_reasons": {
+    "no_source_change": 203,
+    "no_executable_source_change": 2
+  },
+  "seconds": {
+    "gates": 65.5,
+    "total": 76.5
+  },
+  "kept_bins": {
+    "by_kind": {
+      "bug_fix": 93,
+      "feature": 56,
+      "unknown": 27,
+      "refactor": 15,
+      "other": 4
+    },
+    "by_kind_basis": {
+      "changelog_fragment": 146,
+      "none": 27,
+      "commit_message": 22
+    },
+    "by_size_tier": {
+      "single_file": 136,
+      "multi_file": 49,
+      "wide": 10
+    },
+    "by_kind_and_test": {
+      "bug_fix|tested": 87,
+      "feature|tested": 51,
+      "unknown|tested": 15,
+      "unknown|untested": 12,
+      "refactor|untested": 8,
+      "refactor|tested": 7,
+      "bug_fix|untested": 6,
+      "feature|untested": 5,
+      "other|untested": 3,
+      "other|tested": 1
+    },
+    "mechanical": 0,
+    "backported": 24,
+    "reverted_later": 0
+  },
+  "message_vs_changelog": {
+    "bug_fix <- msg bug_fix": 55,
+    "bug_fix <- msg unknown": 34,
+    "feature <- msg unknown": 27,
+    "other <- msg unknown": 18,
+    "feature <- msg bug_fix": 17,
+    "feature <- msg feature": 8,
+    "other <- msg other": 8,
+    "bug_fix <- msg refactor": 3,
+    "feature <- msg refactor": 3,
+    "bug_fix <- msg feature": 2,
+    "other <- msg bug_fix": 2
+  }
+}
