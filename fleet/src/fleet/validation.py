@@ -299,8 +299,14 @@ def probe_hunks(hunks: list[dict], fail_to_pass: list[str], execute) -> dict:
 
 
 def validate(candidate: dict, root: Path, out: Path, recipe: dict, *, timeout: int = 600,
-             repeats: int = DEFAULT_REPEATS, progress=None) -> dict:
-    """Base once; no-op and oracle states `repeats` times each; then hunk probes."""
+             repeats: int = DEFAULT_REPEATS, era: dict | None = None, progress=None) -> dict:
+    """Base once; no-op and oracle states `repeats` times each; then hunk probes.
+
+    The environment image belongs to the candidate's dependency `era`
+    (`history.eras`), so every candidate whose base declares the same
+    dependencies reuses one image. Pass the era computed over the whole
+    candidate set; without one, the base commit is its own era.
+    """
     out.mkdir(parents=True, exist_ok=True)
     result = {"candidate_id": candidate["id"], "status": "not_verified", "errors": [], "runs": [],
               "labels": [], "validator_version": "2", "measured_at": datetime.now(UTC).isoformat(),
@@ -363,23 +369,39 @@ def validate(candidate: dict, root: Path, out: Path, recipe: dict, *, timeout: i
         # with pip >= 26 (`--uploaded-prior-to`) or uv (`--exclude-newer`);
         # older pip ignores the variable, so the record says which was asked
         # for, not that it took effect.
-        cutoff = pin_date(root, candidate["base_sha"]) if pin else None
+        if era is None:
+            from fleet.history.eras import assign
+
+            era = assign(root, [candidate["base_sha"]], resolve_python=False)[candidate["base_sha"]]
+        if candidate["base_sha"] not in era["commits"]:
+            raise ValueError("The supplied era does not contain this candidate's base commit")
+        result["era"] = {k: era.get(k) for k in ("key", "representative", "cutoff", "resolution",
+                                                 "lockfiles", "python", "python_status")}
+        result["era"]["commits"] = len(era["commits"])
+        cutoff = era["cutoff"] if pin else None
         result["index_cutoff"] = cutoff
         install_prefix = ["/usr/bin/env", f"UV_EXCLUDE_NEWER={cutoff}", f"PIP_UPLOADED_PRIOR_TO={cutoff}"] if cutoff else []
-        key = hashlib.sha256(json.dumps([candidate["repo"], candidate["base_sha"], pinned, install, cutoff, "validator-v2"], sort_keys=True).encode()).hexdigest()[:24]
+        # Keyed by the era, not the commit: candidates that declare the same
+        # dependencies get the same image. The image is built from the era's
+        # representative (newest) commit; each run mounts the candidate's own
+        # tree first on PYTHONPATH, so the installed copy never decides which
+        # code is under test.
+        key = hashlib.sha256(json.dumps([candidate["repo"], era["key"], pinned, install, cutoff, "validator-v3"], sort_keys=True).encode()).hexdigest()[:24]
         tag = f"fleet-validation:{key}"
         with tempfile.TemporaryDirectory(prefix="fleet-validate-") as tmp:
             work = Path(tmp)
             base = work / "base"
             snapshot(root, candidate["base_sha"], base)
-            dockerfile = "\n".join([f"FROM {pinned}", "WORKDIR /workspace", "COPY base/ /workspace/",
+            dockerfile = "\n".join([f"FROM {pinned}", "WORKDIR /workspace", "COPY build/ /workspace/",
                                     "RUN " + json.dumps([*install_prefix, "/bin/sh", "-lc", install]), "ENV HOME=/tmp"]) + "\n"
-            (work / "Dockerfile").write_text(dockerfile)
             (out / "Dockerfile").write_text(dockerfile)
             cached = run(["docker", "image", "inspect", tag], timeout=30)
             result["environment_cache_hit"] = cached.returncode == 0
             if cached.returncode:
-                built = run(["docker", "build", "--tag", tag, str(work)], timeout=900)
+                context = work / "context"
+                snapshot(root, era["representative"], context / "build")
+                (context / "Dockerfile").write_text(dockerfile)
+                built = run(["docker", "build", "--tag", tag, str(context)], timeout=900)
                 (out / "build.log").write_bytes(built.stdout + built.stderr)
                 if built.returncode:
                     raise ValueError("Environment build failed; see build.log")

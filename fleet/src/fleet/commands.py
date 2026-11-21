@@ -14,6 +14,7 @@ from fleet.agent import OpenRouter, review
 from fleet.history.catalog import build_catalog
 from fleet.history.client import GitHubClient, resolve_token
 from fleet.history.commits import CommitFilter, build_database
+from fleet.history.eras import assign as assign_eras, summarise as summarise_eras
 from fleet.history.filtering import filter_history
 from fleet.history.window import GitRepo, parse_since
 from fleet.validation import validate
@@ -147,13 +148,47 @@ def validate_command(directory, candidate, recipe, repeats):
         if len(matches) != 1:
             raise ValueError("Candidate prefix must identify exactly one catalog entry")
         chosen = matches[0]
-        result = validate(chosen, Path(catalog["clone"]), directory / "validation" / chosen["id"] / "manual",
-                          json.loads(recipe.read_text()), repeats=repeats, progress=progress)
+        root = Path(catalog["clone"])
+        # Eras over the whole catalog, so this candidate's image is the one
+        # every other candidate in its era will reuse.
+        era = assign_eras(root, [c["base_sha"] for c in catalog["candidates"]])[chosen["base_sha"]]
+        progress(f"Era {era['key'][:12]}: {len(era['commits'])} candidate base(s), {era['resolution']}")
+        result = validate(chosen, root, directory / "validation" / chosen["id"] / "manual",
+                          json.loads(recipe.read_text()), repeats=repeats, era=era, progress=progress)
         progress(f"Validation: {result['status']}; F2P={len(result.get('fail_to_pass', []))}, P2P={len(result.get('pass_to_pass', []))}")
         if result.get("labels"):
             progress(f"Labels: {', '.join(result['labels'])}")
         if result["errors"]:
             raise ValueError("; ".join(result["errors"]))
+    except (ValueError, RuntimeError, OSError) as exc:
+        raise click.ClickException(str(exc)) from exc
+
+
+@click.command("eras")
+@click.argument("directory", type=click.Path(exists=True, file_okay=False, path_type=Path))
+def eras_command(directory):
+    """Group a workspace's candidates by the environment their base commit needs. Offline."""
+    try:
+        for name in ("filtered_candidates.json", "candidates.json"):
+            path = directory / name
+            if path.is_file():
+                break
+        else:
+            raise ValueError(f"No filtered_candidates.json or candidates.json in {directory}")
+        report = json.loads(path.read_text())
+        root = Path(report["clone"])
+        bases = [c["base_sha"] for c in report["candidates"]]
+        eras = assign_eras(root, bases)
+        distinct = {era["key"]: era for era in eras.values()}
+        write_json(directory / "eras.json", {"source": name, "summary": summarise_eras(eras),
+                                             "eras": sorted(distinct.values(), key=lambda e: e["last_date"])})
+        summary = summarise_eras(eras)
+        progress(f"{summary['commits']} candidate bases -> {summary['eras']} environment images "
+                 f"({summary['locked_eras']} locked, {summary['eras'] - summary['locked_eras']} date-pinned)")
+        for era in sorted(distinct.values(), key=lambda e: e["last_date"]):
+            progress(f"  {era['key'][:12]} {len(era['commits']):4d} bases  {era['first_date'][:10]}..{era['last_date'][:10]}"
+                     f"  {era['resolution']}  python={era.get('python') or 'needs review'}")
+        progress(f"Eras: {directory / 'eras.json'}")
     except (ValueError, RuntimeError, OSError) as exc:
         raise click.ClickException(str(exc)) from exc
 
@@ -225,5 +260,5 @@ def filter_command(repo, repo_path, work_dir, out, ref, since, until,
 
 
 def register_commands(app):
-    for command in (mine, filter_command, agent_command, validate_command, configure, doctor):
+    for command in (mine, filter_command, agent_command, validate_command, eras_command, configure, doctor):
         app.add_command(command)

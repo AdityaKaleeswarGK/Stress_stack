@@ -139,6 +139,32 @@ Configuration-only fixes (including real packaging fixes) are outside this
 pilot's source-focused scope. Passing this filter does not establish that a
 change is a bug fix, a complete PR, or a useful training problem.
 
+### Dependency eras: one environment image per era, not per commit
+
+```bash
+fleet eras .fleet/OWNER--REPO
+```
+
+`fleet eras` groups a workspace's candidates by the dependency declarations at
+their base commit and writes `eras.json`. Commits whose declarations are
+identical share an **era** and one environment image; the candidate's own code
+is mounted at run time and placed first on `PYTHONPATH`, so the installed copy
+never decides which code is tested. `fleet validate` keys its image by era.
+
+What counts toward an era: root-level lockfiles (`uv.lock`, `poetry.lock`,
+`pdm.lock`, `Pipfile.lock`, `pylock.toml`), requirement lists at the root or
+under `requirements/`, `setup.py`, `tox.ini`, `.python-version`, and only the
+dependency sections of `pyproject.toml` and `setup.cfg` (tool settings such as
+ruff's do not start a new era). Files are read from git objects; no repository
+code runs.
+
+An era is `locked` when it has a lockfile and `date_pinned` otherwise. A
+date-pinned era resolves packages as of its newest commit's date
+(`UV_EXCLUDE_NEWER`, and pip >= 26's `--uploaded-prior-to`); whether that suits
+its older commits is measured by each candidate's base run, not assumed.
+Measured on recent history: pytest's 189 kept changes need 10 images, Django's
+199 need 6.
+
 ### Deterministic Python runtime selection (pilot)
 
 `fleet.history.python_runtime.resolve_snapshot(repo, ref)` reads committed

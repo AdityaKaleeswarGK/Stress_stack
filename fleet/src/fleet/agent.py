@@ -88,6 +88,7 @@ def review(catalog: dict, directory: Path, client: OpenRouter, *, max_steps: int
                 {"role": "user", "content": json.dumps({"candidates": summaries, "max_validation_attempts": max_validations})}]
     result = {"model": client.model, "status": "incomplete", "steps": [], "decisions": [], "validations": {}}
     validations = 0
+    eras = None  # computed on the first validation, over every candidate
     inspected, patches_read = set(), set()
     try:
         for step in range(max_steps):
@@ -145,8 +146,11 @@ def review(catalog: dict, directory: Path, client: OpenRouter, *, max_steps: int
                         validations += 1
                         if progress:
                             progress(f"Validating {candidate['id'][:12]}, attempt {validations}")
+                        if eras is None:
+                            from fleet.history.eras import assign
+                            eras = assign(root, [c["base_sha"] for c in candidates.values()])
                         measured = validate(candidate, root, directory / "validation" / candidate["id"] / f"attempt-{validations}",
-                                            args["recipe"], progress=progress)
+                                            args["recipe"], era=eras[candidate["base_sha"]], progress=progress)
                         result["validations"].setdefault(candidate["id"], []).append(measured)
                         observation = {k: measured.get(k) for k in ("status", "errors", "labels", "fail_to_pass", "pass_to_pass",
                                                                      "error_to_pass", "quarantined", "preexisting_failures", "adequacy")}
