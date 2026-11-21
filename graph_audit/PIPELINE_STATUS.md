@@ -26,6 +26,16 @@ Filtering and era detection already handle Go and C/C++ (token-based comment che
 - Track `CMakeLists.txt` files below the repository root (fmt's `test/CMakeLists.txt` declares its test dependencies).
 - Use the recorded toolchain (`go` directive, CMake minimum, C++ standard) to choose the base image.
 
+### Deferred: flakiness and extra validation runs (decided 2026-11-21)
+
+Validation now defaults to two container runs: before the fix (the fix's tests on the old code) and after it. Everything below is built and tested but off, to keep the first end-to-end runs simple and cheap. Turn each back on with `fleet validate` flags once real runs show it is worth its cost:
+
+- `--repeats N` (2 or more): repeat each state and quarantine tests whose result changes between runs. **Accepted risk until then:** a test that fails by chance before the fix and passes after it is counted as a real fail-to-pass test.
+- `--base-run`: run the base commit with its own tests, to separate tests already failing there from ones the fix's test changes broke.
+- `--hunk-probes`: revert each source hunk of a passing candidate to see which changes the tests check.
+
+When revisiting, the cheaper design discussed: re-run only the fail-to-pass tests (not the whole suite) one or two more times per side, for survivors only.
+
 ### Other open work
 
 - Finish the six Glom reviews and independently audit agent assertions, generated probes and task statements.

@@ -152,7 +152,8 @@ def test_validate_end_to_end_with_repeats_quarantine_pinning_and_hunk_probe(tmp_
     docker = FakeDocker()
     monkeypatch.setattr(validation, "run", docker)
     recipe = {"image": "python:3.12-slim", "install_command": "pip install -e .", "test_paths": ["tests"]}
-    result = validation.validate(candidate, repo, tmp_path / "out", recipe, repeats=3)
+    result = validation.validate(candidate, repo, tmp_path / "out", recipe, repeats=3,
+                                 base_run=True, hunk_probes=True)
 
     assert result["status"] == "verified_checks", result["errors"]
     assert result["fail_to_pass"] == ["tests.test_calc::test_add"]
@@ -172,6 +173,22 @@ def test_validate_end_to_end_with_repeats_quarantine_pinning_and_hunk_probe(tmp_
     run_line = next(line for line in docker.dockerfiles[0].splitlines() if line.startswith("RUN "))
     assert "UV_EXCLUDE_NEWER=2024-01-01T00:00:00Z" in run_line and "PIP_UPLOADED_PRIOR_TO=2024-01-01T00:00:00Z" in run_line
     assert json.loads((tmp_path / "out" / "validation.json").read_text())["status"] == "verified_checks"
+
+
+def test_by_default_only_before_and_after_run_once(tmp_path, monkeypatch):
+    repo, candidate = candidate_repo(tmp_path)
+    docker = FakeDocker()
+    monkeypatch.setattr(validation, "run", docker)
+    recipe = {"image": "python:3.12-slim", "install_command": "pip install -e .", "test_paths": ["tests"]}
+    result = validation.validate(candidate, repo, tmp_path / "out", recipe)
+    assert len(docker.launches) == 2
+    assert [r["state"] for r in result["runs"]] == ["before-1", "after-1"]
+    assert result["checks"] == {"repeats": 1, "base_run": False, "hunk_probes": False}
+    assert result["status"] == "verified_checks" and result["fail_to_pass"] == ["tests.test_calc::test_add"]
+    # Without a base run, a test failing before and after is unresolved, not
+    # known to pre-date the fix.
+    assert result["preexisting_failures"] == [] and "tests.test_guard::test_broken" in result["unresolved"]
+    assert result["adequacy"] == {"status": "not_run"}
 
 
 def test_harness_exit_codes_are_not_test_results(tmp_path, monkeypatch):

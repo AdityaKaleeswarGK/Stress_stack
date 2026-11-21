@@ -138,9 +138,11 @@ def agent_command(directory, model, max_steps, validation, max_validations):
 @click.option("--candidate", required=True, help="Full SHA or unambiguous SHA prefix.")
 @click.option("--recipe", type=click.Path(exists=True, dir_okay=False, path_type=Path), required=True,
               help="JSON with image, install_command and test_paths (Python/pytest); optional pin_index_date.")
-@click.option("--repeats", type=click.IntRange(2, 10), default=3, show_default=True,
-              help="Runs per state; tests that disagree across them are quarantined.")
-def validate_command(directory, candidate, recipe, repeats):
+@click.option("--repeats", type=click.IntRange(1, 10), default=1, show_default=True,
+              help="Runs per state. 2 or more quarantines tests that disagree between runs.")
+@click.option("--base-run", is_flag=True, help="Also run the base commit with its own tests.")
+@click.option("--hunk-probes", is_flag=True, help="Revert each source hunk of a passing candidate.")
+def validate_command(directory, candidate, recipe, repeats, base_run, hunk_probes):
     """Reproduce a candidate in Docker using an explicit recipe; no LLM needed."""
     try:
         catalog = load_catalog(directory)
@@ -154,7 +156,8 @@ def validate_command(directory, candidate, recipe, repeats):
         era = assign_eras(root, [c["base_sha"] for c in catalog["candidates"]])[chosen["base_sha"]]
         progress(f"Era {era['key'][:12]}: {len(era['commits'])} candidate base(s), {era['resolution']}")
         result = validate(chosen, root, directory / "validation" / chosen["id"] / "manual",
-                          json.loads(recipe.read_text()), repeats=repeats, era=era, progress=progress)
+                          json.loads(recipe.read_text()), repeats=repeats, base_run=base_run,
+                          hunk_probes=hunk_probes, era=era, progress=progress)
         progress(f"Validation: {result['status']}; F2P={len(result.get('fail_to_pass', []))}, P2P={len(result.get('pass_to_pass', []))}")
         if result.get("labels"):
             progress(f"Labels: {', '.join(result['labels'])}")

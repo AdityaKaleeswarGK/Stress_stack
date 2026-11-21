@@ -117,13 +117,14 @@ def stable(runs: list[dict[str, str]]) -> tuple[dict[str, str], list[str]]:
     return agreed, flaky
 
 
-def judge(base: dict[str, str], before_runs: list[dict[str, str]],
+def judge(base: dict[str, str] | None, before_runs: list[dict[str, str]],
           after_runs: list[dict[str, str]]) -> dict:
     """Classify every test across the three states, then decide.
 
     `base` is the base code with its own tests, `before` the base code with the
     fix's tests (the no-op control) and `after` the fixed code with them (the
-    oracle). Three earlier rules rejected whole candidates for problems confined
+    oracle). `base` is optional: without it, a guard only has to pass before and
+    after, and tests already failing at the base are not separately known. Three earlier rules rejected whole candidates for problems confined
     to tests that decide nothing, and are replaced:
 
     * A test already failing at the base is *recorded*, not fatal. Historical
@@ -148,14 +149,14 @@ def judge(base: dict[str, str], before_runs: list[dict[str, str]],
     error_to_pass = sorted(k for k, v in before.items() if v == "error" and after.get(k) == "pass" and steady(k))
     absent_before = sorted(k for k, v in after.items() if v == "pass" and k not in before and steady(k))
     p2p = sorted(k for k, v in before.items()
-                 if v == "pass" and after.get(k) == "pass" and base.get(k) == "pass" and steady(k))
+                 if v == "pass" and after.get(k) == "pass" and (base is None or base.get(k) == "pass") and steady(k))
     pass_to_fail = sorted(k for k, v in before.items()
                           if v == "pass" and after.get(k) in {"fail", "error"} and steady(k))
     vanished = sorted(k for k, v in before.items() if v == "pass" and k not in after and steady(k))
     pass_to_skip = sorted(k for k, v in before.items() if v == "pass" and after.get(k) == "skip" and steady(k))
     unresolved = sorted(k for k, v in after.items()
                         if v in {"fail", "error"} and before.get(k) in {"fail", "error"} and steady(k))
-    preexisting = sorted(k for k, v in base.items() if v in {"fail", "error"})
+    preexisting = sorted(k for k, v in (base or {}).items() if v in {"fail", "error"})
 
     errors = []
     if not f2p:
@@ -219,7 +220,13 @@ def pin_date(root: Path, sha: str) -> str:
     return stamp.astimezone(UTC).strftime("%Y-%m-%dT%H:%M:%SZ")
 
 
-DEFAULT_REPEATS = 3
+# One run per state by default: before the fix and after it. Repeats (and the
+# flaky-test quarantine they enable), the separate base run and the hunk
+# probes are built and tested but off, to keep the first end-to-end runs
+# simple and cheap (decided 2026-11-21; see graph_audit/PIPELINE_STATUS.md).
+# The known cost: with one run per side, a test that fails by chance before
+# the fix and passes after it looks like a real fail-to-pass test.
+DEFAULT_REPEATS = 1
 MAX_HUNK_PROBES = 8
 # pytest exits 0 (all passed) or 1 (some failed) when it ran and reported.
 # --continue-on-collection-errors is what lets a fix's new test module that
@@ -336,8 +343,15 @@ def probe_hunks(hunks: list[dict], fail_to_pass: list[str], execute) -> dict:
 
 
 def validate(candidate: dict, root: Path, out: Path, recipe: dict, *, timeout: int = 600,
-             repeats: int = DEFAULT_REPEATS, era: dict | None = None, progress=None) -> dict:
-    """Base once; no-op and oracle states `repeats` times each; then hunk probes.
+             repeats: int = DEFAULT_REPEATS, base_run: bool = False, hunk_probes: bool = False,
+             era: dict | None = None, progress=None) -> dict:
+    """The no-op (before) and oracle (after) states, `repeats` times each.
+
+    By default that is two container runs. `base_run` adds a run of the base
+    commit with its own tests, which separates tests already failing there;
+    `repeats` of 2 or more turns on the flaky-test quarantine; `hunk_probes`
+    reverts each source hunk of a passing candidate to see which ones the
+    tests notice.
 
     The environment image belongs to the candidate's dependency `era`
     (`history.eras`), so every candidate whose base declares the same
@@ -348,11 +362,11 @@ def validate(candidate: dict, root: Path, out: Path, recipe: dict, *, timeout: i
     result = {"candidate_id": candidate["id"], "status": "not_verified", "errors": [], "runs": [],
               "labels": [], "validator_version": "2", "measured_at": datetime.now(UTC).isoformat(),
               "base_sha": candidate["base_sha"], "fixed_sha": candidate["fixed_sha"], "recipe": recipe,
-              "repeats": repeats,
+              "checks": {"repeats": repeats, "base_run": base_run, "hunk_probes": hunk_probes},
               "meaning": "Reproduced selected checks only; not a complete correctness proof or published task."}
     try:
-        if repeats < 2:
-            raise ValueError("At least two repeats per state are needed to measure stability")
+        if repeats < 1:
+            raise ValueError("Each state needs at least one run")
         if candidate.get("status") != "ready_for_review":
             raise ValueError("Candidate needs issue/integration enrichment before validation")
         if not any(i.get("state") == "closed" and i.get("body") for i in candidate.get("issues", [])):
@@ -470,7 +484,7 @@ def validate(candidate: dict, root: Path, out: Path, recipe: dict, *, timeout: i
 
             # Interleaved, so a slow drift in machine load lands on both sides
             # rather than masquerading as a difference between them.
-            states = [("base", ())]
+            states = [("base", ())] if base_run else []
             for index in range(1, repeats + 1):
                 states += [(f"before-{index}", ("test",)), (f"after-{index}", ("test", "source"))]
             for state, kinds in states:
@@ -478,7 +492,7 @@ def validate(candidate: dict, root: Path, out: Path, recipe: dict, *, timeout: i
                     progress(f"Running {state}")
                 result["runs"].append(_execute(state, checkout_for(state, kinds), out / state, built_id, paths, timeout, runtime))
             by_state = {r["state"]: r["tests"] for r in result["runs"]}
-            measured = judge(by_state["base"],
+            measured = judge(by_state.get("base") if base_run else None,
                              [by_state[f"before-{i}"] for i in range(1, repeats + 1)],
                              [by_state[f"after-{i}"] for i in range(1, repeats + 1)])
             result.update(measured)
@@ -489,7 +503,10 @@ def validate(candidate: dict, root: Path, out: Path, recipe: dict, *, timeout: i
                     result["labels"].append(name)
             if result["fail_to_pass"] and all(v == "load_error" for v in result["fail_to_pass_kinds"].values()):
                 result["labels"].append("fail_to_pass_by_import_only")
-            if not result["errors"]:
+            if not result["errors"] and not hunk_probes:
+                result["adequacy"] = {"status": "not_run"}
+                result["status"] = "verified_checks"
+            elif not result["errors"]:
                 # Adequacy is only worth paying for on a candidate that passed.
                 hunks = split_hunks(patches["source"])
 
