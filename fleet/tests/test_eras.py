@@ -69,7 +69,8 @@ def test_reverting_a_dependency_change_returns_to_the_earlier_era(tmp_path):
     eras = assign(repo, [a, b, c], resolve_python=False)
     assert eras[a] is eras[c] is not eras[b]
     assert summarise(eras) == {"commits": 3, "eras": 2, "locked_eras": 0, "largest_era": 2,
-                               "single_commit_eras": 1, "pythons": ["None"]}
+                               "single_commit_eras": 1, "pythons": ["None"],
+                               "resolutions": {"date_pinned": 2}}
 
 
 def test_an_unparseable_pyproject_falls_back_to_the_whole_file(tmp_path):
@@ -152,3 +153,56 @@ def test_an_era_that_does_not_contain_the_base_is_refused(tmp_path, monkeypatch)
     recipe = {"image": "python:3.12-slim", "install_command": "pip install .", "test_paths": ["tests"]}
     result = validation.validate(candidate, repo, tmp_path / "out", recipe, era=other)
     assert "does not contain" in result["errors"][0]
+
+
+def test_side_requirement_lists_and_tox_commands_do_not_start_an_era(tmp_path):
+    repo = init_repo(tmp_path / "repo")
+    commit(repo, "requirements/tests.txt", "pytest==8.0\n", "tests", date="2024-01-01T00:00:00Z")
+    commit(repo, "requirements/docs.txt", "sphinx==7.0\n", "docs", date="2024-01-01T01:00:00Z")
+    commit(repo, "tox.ini", "[tox]\nenvlist = py312\n[testenv]\ndeps = -r requirements/tests.txt\ncommands = pytest\n",
+           "tox", date="2024-01-01T02:00:00Z")
+    first = head(repo)
+    commit(repo, "requirements/docs.txt", "sphinx==7.1\n", "docs bump", date="2024-01-02T00:00:00Z")
+    commit(repo, "tox.ini", "[tox]\nenvlist = py312\n[testenv]\ndeps = -r requirements/tests.txt\ncommands = pytest -x\n"
+           "[flake8]\nmax-line-length = 100\n", "tox commands", date="2024-01-03T00:00:00Z")
+    second = head(repo)
+    commit(repo, "requirements/tests.txt", "pytest==8.1\n", "tests bump", date="2024-01-04T00:00:00Z")
+    third = head(repo)
+    keys = [era_key(repo, sha)[0] for sha in (first, second, third)]
+    assert keys[0] == keys[1] != keys[2]
+    assert "requirements/docs.txt" not in era_key(repo, first)[1]
+
+
+def test_without_a_test_list_every_requirement_list_counts(tmp_path):
+    repo = init_repo(tmp_path / "repo")
+    commit(repo, "requirements/dev.txt", "pytest==8.0\n", "dev", date="2024-01-01T00:00:00Z")
+    assert era_key(repo, head(repo))[1] == ["requirements/dev.txt"]
+
+
+def test_go_and_cmake_eras_and_runtimes(tmp_path):
+    repo = init_repo(tmp_path / "repo")
+    commit(repo, "go.mod", "module m\n\ngo 1.22 // floor\n\nrequire a.b/c v1.2.0\n", "mod", date="2024-01-01T00:00:00Z")
+    commit(repo, "go.sum", "a.b/c v1.2.0 h1:x\n", "sum", date="2024-01-01T01:00:00Z")
+    commit(repo, "CMakeLists.txt", "cmake_minimum_required(VERSION 3.20)\nproject(p)\nadd_library(p a.c)\n",
+           "cmake", date="2024-01-01T02:00:00Z")
+    first = head(repo)
+    # A new source file in CMake and a comment in go.mod change nothing.
+    commit(repo, "CMakeLists.txt", "cmake_minimum_required(VERSION 3.20)\nproject(p)\nadd_library(p a.c b.c)\n",
+           "add file", date="2024-01-02T00:00:00Z")
+    second = head(repo)
+    commit(repo, "CMakeLists.txt", "cmake_minimum_required(VERSION 3.20)\nproject(p)\nfind_package(ZLIB)\n"
+           "add_library(p a.c b.c)\n", "zlib", date="2024-01-03T00:00:00Z")
+    third = head(repo)
+    eras = assign(repo, [first, second, third])
+    assert eras[first] is eras[second] is not eras[third]
+    assert eras[first]["resolution"] == "locked"  # go.sum pins the module set
+    # Both toolchains are recorded; the language names the first one found.
+    assert eras[third]["runtime"] == {"language": "go", "go_directive": "1.22", "cmake_minimum": "3.20",
+                                      "cxx_standard": None}
+
+
+def test_a_cmake_only_project_resolves_from_system_packages(tmp_path):
+    repo = init_repo(tmp_path / "repo")
+    commit(repo, "CMakeLists.txt", "cmake_minimum_required(VERSION 3.8...3.28)\nproject(fmt)\n", "c", date="2024-01-01T00:00:00Z")
+    era = assign(repo, [head(repo)])[head(repo)]
+    assert era["resolution"] == "system" and era["runtime"]["cmake_minimum"] == "3.8...3.28"

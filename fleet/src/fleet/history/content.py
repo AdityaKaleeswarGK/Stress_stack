@@ -1,4 +1,4 @@
-"""Cheap Python diff screening using syntax only; never imports mined code.
+"""Cheap diff screening using syntax only; never imports or runs mined code.
 
 Path classification alone admits release constants, comments and docstrings.
 Only discard a candidate when every source file has an understood, excluded
@@ -8,6 +8,7 @@ with an explicit unknown result. AST equality is not a runtime proof.
 from __future__ import annotations
 
 import ast
+import re
 import subprocess
 from pathlib import PurePosixPath
 
@@ -79,12 +80,75 @@ def python_change_kind(before: str, after: str, path: str) -> str:
         return "unknown"
 
 
+# Languages compared by token stream. Headers parse as C++, which accepts C.
+_TREE_SITTER_GRAMMARS = {
+    ".go": "go", ".c": "c", ".h": "cpp", ".cc": "cpp", ".cpp": "cpp", ".cxx": "cpp", ".c++": "cpp",
+    ".hpp": "cpp", ".hh": "cpp", ".hxx": "cpp", ".ipp": "cpp", ".rs": "rust", ".java": "java",
+    ".js": "javascript", ".mjs": "javascript", ".cjs": "javascript", ".jsx": "javascript",
+    ".ts": "typescript", ".tsx": "tsx",
+}
+
+
+# Comments that a compiler or type checker reads. Syntactically comments,
+# semantically code: gin's "fix: sonic on arm64" changed only `//go:build`
+# lines, which decide which files are compiled, and was rejected as
+# comment-only until these were kept as tokens.
+_DIRECTIVE_COMMENT = re.compile(
+    rb"^(//go:|//line |//export |//\s*\+build|//\s*@ts-|///\s*<reference|/\*\s*#__PURE__)")
+
+
+def _tokens(parser, text: str) -> list[tuple[str, bytes]]:
+    """Every leaf token in source order, with ordinary comments left out.
+
+    Directive comments stay in. In a Go file that uses cgo (`import "C"`),
+    every comment stays in, because the comment above that import is C source.
+    """
+    source = text.encode("utf-8", errors="replace")
+    keep_all_comments = b'import "C"' in source
+    tree = parser.parse(source)
+    tokens, stack = [], [tree.root_node]
+    while stack:
+        node = stack.pop()
+        if "comment" in node.type:
+            if keep_all_comments or _DIRECTIVE_COMMENT.match(node.text.lstrip()):
+                tokens.append(("directive_comment", node.text))
+            continue
+        if node.child_count == 0:
+            tokens.append((node.type, node.text))
+            continue
+        stack.extend(reversed(node.children))
+    return tokens
+
+
+def token_change_kind(before: str, after: str, path: str) -> str:
+    """Whether an edit to a non-Python file changed anything but comments and layout.
+
+    Whitespace is never a token, and comment subtrees are skipped, so two
+    files with the same token stream differ only in comments and formatting.
+    This direction is safe even where a grammar misparses (C++ macros often
+    do): a misread comment becomes tokens and makes the files differ, which
+    keeps the change. It can over-keep, never over-reject.
+    """
+    grammar = _TREE_SITTER_GRAMMARS.get(PurePosixPath(path).suffix.lower())
+    if grammar is None:
+        return "unknown"
+    try:
+        from tree_sitter_language_pack import get_parser
+
+        parser = get_parser(grammar)
+        same = _tokens(parser, before) == _tokens(parser, after)
+    except Exception:  # a missing grammar or a parser failure: no verdict
+        return "unknown"
+    return "comments_or_formatting_only" if same else "executable_syntax_changed"
+
+
 def inspect_source_changes(clone: GitRepo, base: str, fixed: str, stats: PatchStats) -> list[dict]:
     findings = []
     for change in stats.source_files:
         row = {"path": change.path, "kind": "unknown"}
         findings.append(row)
-        if change.binary or not change.path.endswith(".py"):
+        suffix = PurePosixPath(change.path).suffix.lower()
+        if change.binary or (suffix != ".py" and suffix not in _TREE_SITTER_GRAMMARS):
             row["reason"] = "unsupported_source_type"
             continue
         try:
@@ -95,9 +159,15 @@ def inspect_source_changes(clone: GitRepo, base: str, fixed: str, stats: PatchSt
                 if size > _MAX_SOURCE_BYTES:
                     raise ValueError("source_file_exceeds_static_analysis_budget")
                 texts.append(_run(["git", "show", spec], cwd=clone.path, timeout=30))
-            row["kind"] = python_change_kind(*texts, change.path)
-            if row["kind"] == "unknown":
-                row["reason"] = "python_syntax_not_analyzable"
+            if suffix == ".py":
+                row["kind"] = python_change_kind(*texts, change.path)
+                if row["kind"] == "unknown":
+                    row["reason"] = "python_syntax_not_analyzable"
+            else:
+                row["kind"] = token_change_kind(*texts, change.path)
+                row["method"] = "tree_sitter_tokens"
+                if row["kind"] == "unknown":
+                    row["reason"] = "tokens_not_analyzable"
         except (GitError, ValueError, UnicodeError, OSError, subprocess.SubprocessError):
             # New/deleted/renamed files and unavailable blobs cannot be compared
             # this way. Preserve them for investigation rather than assume noise.

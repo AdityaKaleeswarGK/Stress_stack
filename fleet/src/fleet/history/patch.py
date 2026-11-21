@@ -51,7 +51,8 @@ class PathKind(StrEnum):
 # never as a substring: substring matching (which SWE-bench uses, and
 # Repo2RLEnv inherits) files `src/click/testing.py` and `docs/testing.md` as
 # tests, because both contain "testing".
-_TEST_DIRS = frozenset({"test", "tests", "testing", "spec", "specs", "e2e", "__tests__", "it"})
+# `testdata` is Go's fixture directory: `go build` ignores it by rule.
+_TEST_DIRS = frozenset({"test", "tests", "testing", "spec", "specs", "e2e", "__tests__", "it", "testdata"})
 _DOC_DIRS = frozenset({"doc", "docs", "documentation", "example", "examples", "sample", "samples"})
 # Prose, plus translation catalogues: `.po`/`.pot`/`.mo` are data a
 # translation service regenerates. Django's "Updated translations from
@@ -71,8 +72,16 @@ _CONFIG_NAMES = frozenset(
         "codecov.yml", ".codecov.yml", "codecov.yaml", "pytest.ini", "requirements.in",
         "manifest.in", ".coveragerc", ".tox-coveragerc", ".readthedocs.yml", ".readthedocs.yaml",
         ".travis.yml", ".travis.yaml",
+        # C and C++ build systems and package managers. `CMakeLists.txt` ends
+        # in `.txt` and was filed as documentation; `conanfile.py` and
+        # `.cmake` modules were filed as source.
+        "cmakelists.txt", "meson.build", "meson_options.txt", "meson.options", "configure.ac",
+        "configure.in", "makefile.am", "makefile.in", "conanfile.txt", "conanfile.py", "conan.lock",
+        "vcpkg.json", "vcpkg-configuration.json", "build.bazel", "module.bazel", "workspace.bazel",
+        "go.work", "go.work.sum",
     }
 )
+_CONFIG_SUFFIXES = (".cmake", ".bzl")
 _REQUIREMENTS_NAME_RE = re.compile(r"^requirements(?:[-_.][\w.-]+)?\.(?:txt|in)$")
 _TEST_BASENAME_RE = re.compile(
     r"""(?x)
@@ -113,7 +122,7 @@ def classify_path(path: str) -> PathKind:
         return PathKind.CONFIG
     if any(part in _CONFIG_DIRS for part in directories):
         return PathKind.CONFIG
-    if basename in _CONFIG_NAMES or _REQUIREMENTS_NAME_RE.fullmatch(basename):
+    if basename in _CONFIG_NAMES or _REQUIREMENTS_NAME_RE.fullmatch(basename) or basename.endswith(_CONFIG_SUFFIXES):
         return PathKind.CONFIG
     if basename.endswith(_DOC_SUFFIXES):
         return PathKind.DOC

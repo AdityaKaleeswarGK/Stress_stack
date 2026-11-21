@@ -14,7 +14,7 @@ gated = time.monotonic() - started
 links = signals.history_links(root)
 kept = []
 for c in report["candidates"]:
-    row = {"sha": c["sha"], "subject": c["subject"], "pr": c.get("pr_number"),
+    row = {"sha": c["sha"], "base_sha": c["base_sha"], "subject": c["subject"], "pr": c.get("pr_number"),
            **signals.classify(c, c["message"], root, links)}
     row["source_analysis"] = [f["kind"] for f in c.get("source_analysis", [])]
     kept.append(row)
@@ -33,10 +33,21 @@ for r in report["rejected"]:
 LABELLED = {"changelog_fragment", "patch_release_notes", "minor_release_notes"}
 truth = [r for r in kept + rejected if r.get("kind_basis") in LABELLED]
 agreement = Counter((r["kind"], r["message"]["kind"]) for r in truth)
+# Which environment image each kept change's base needs.
+from fleet.history import eras as era_module
+started_eras = time.monotonic()
+assigned = era_module.assign(root, [row["base_sha"] for row in kept])
+for row in kept:
+    row["era"] = assigned[row["base_sha"]]["key"]
+distinct = {era["key"]: era for era in assigned.values()}
+era_report = {"summary": era_module.summarise(assigned), "seconds": round(time.monotonic() - started_eras, 1),
+              "eras": sorted(distinct.values(), key=lambda e: e["last_date"])}
 result = {"repo": repo, "summary": report["summary"], "rejection_reasons": report["rejection_reasons"],
+          "eras": era_report,
           "seconds": {"gates": round(gated, 1), "total": round(time.monotonic() - started, 1)},
           "kept_bins": signals.bins(kept),
           "message_vs_changelog": {f"{a} <- msg {b}": n for (a, b), n in agreement.most_common()},
           "kept": kept, "rejected": rejected}
 out.write_text(json.dumps(result, indent=2))
-print(json.dumps({k: result[k] for k in ("summary", "rejection_reasons", "seconds", "kept_bins", "message_vs_changelog")}, indent=2))
+print(json.dumps({k: result[k] for k in ("summary", "rejection_reasons", "seconds", "kept_bins", "message_vs_changelog")}
+                 | {"eras": era_report["summary"]}, indent=2))

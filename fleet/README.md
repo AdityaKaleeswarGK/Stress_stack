@@ -151,19 +151,31 @@ identical share an **era** and one environment image; the candidate's own code
 is mounted at run time and placed first on `PYTHONPATH`, so the installed copy
 never decides which code is tested. `fleet validate` keys its image by era.
 
-What counts toward an era: root-level lockfiles (`uv.lock`, `poetry.lock`,
-`pdm.lock`, `Pipfile.lock`, `pylock.toml`), requirement lists at the root or
-under `requirements/`, `setup.py`, `tox.ini`, `.python-version`, and only the
-dependency sections of `pyproject.toml` and `setup.cfg` (tool settings such as
-ruff's do not start a new era). Files are read from git objects; no repository
-code runs.
+What counts toward an era, read from git objects without running any code:
 
-An era is `locked` when it has a lockfile and `date_pinned` otherwise. A
+- Python: root-level lockfiles (`uv.lock`, `poetry.lock`, `pdm.lock`,
+  `Pipfile.lock`, `pylock.toml`), requirement lists at the root or under
+  `requirements/` (only the test lists when the repository has one),
+  `setup.py`, `.python-version`, `tox.ini`'s install settings, and only the
+  dependency sections of `pyproject.toml` and `setup.cfg`.
+- Go: `go.mod` without comments, `go.sum`, `go.work`.
+- C/C++: the dependency calls in the root `CMakeLists.txt` and `meson.build`
+  (not their source lists), Conan and vcpkg manifests, Meson wraps, and every
+  git submodule at its pinned commit.
+
+Each era also records its toolchain (`runtime`): Go's `go` directive, CMake's
+minimum version and C++ standard, or the Python version from the runtime
+resolver.
+
+An era is `locked` when it has a lockfile (`go.sum` and submodules count),
+`system` when it declares no package manager at all (most C/C++: dependencies
+come from the pinned base image), and `date_pinned` otherwise. A
 date-pinned era resolves packages as of its newest commit's date
 (`UV_EXCLUDE_NEWER`, and pip >= 26's `--uploaded-prior-to`); whether that suits
 its older commits is measured by each candidate's base run, not assumed.
-Measured on recent history: pytest's 189 kept changes need 10 images, Django's
-199 need 6.
+Measured on 400 recent changes each: pytest 189 kept → 7 images, Django
+199 → 6, fmt 235 → 1, flask 175 → 67, gin 175 → 65 (see
+`graph_audit/multilang_filter_eras/`).
 
 ### Deterministic Python runtime selection (pilot)
 

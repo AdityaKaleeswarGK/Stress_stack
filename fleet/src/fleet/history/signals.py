@@ -72,6 +72,9 @@ _WORDS = (
     (FEATURE, re.compile(r"\b(add(s|ed)?|support(s|ed)?|implement\w*|introduc\w+|new|allow(s|ed)?|"
                          r"enable[sd]?|option)\b", re.I)),
 )
+# A merge from a maintenance branch brings that branch's fixes forward, all at
+# once: Flask's "Merge branch 'stable'" carries several fixes in one diff.
+_MAINTENANCE_BRANCH = re.compile(r"(?i)^(?:origin/)?(stable|maint\w*|release[-/]?\S*|\d+\.\d+(?:\.x)?|v?\d+\.x)$")
 _REVERT = re.compile(r"This reverts commit ([0-9a-f]{7,40})", re.I)
 _CHERRY = re.compile(r"\(cherry picked from commit ([0-9a-f]{40})\)")
 _PUBLIC_DEF = re.compile(r"^\+\s*(?:async\s+)?(?:def|class)\s+(?P<name>[A-Za-z]\w*)")
@@ -229,6 +232,10 @@ def classify(record: dict, message: str, root, links) -> dict:
     said = message_signal(message)
     reverts = _REVERT.findall(message)
     shape = diff_signal(root, record["base_sha"], record["sha"], sources)
+    shape["executable_source_changed"] = any(
+        finding.get("kind") == "executable_syntax_changed" for finding in record.get("source_analysis") or [])
+    _, branch = describe(message)
+    maintenance = bool(branch and _MAINTENANCE_BRANCH.match(branch))
 
     if changelog and changelog.get("kind"):
         basis = changelog["source"]
@@ -238,6 +245,10 @@ def classify(record: dict, message: str, root, links) -> dict:
         kind, basis, confidence = BUG_FIX, "reverts_a_commit", "medium"
     elif shape["mechanical"]:
         kind, basis, confidence = REFACTOR, "repeated_edit_across_files", "medium"
+    elif said["kind"] == OTHER and shape.get("executable_source_changed"):
+        # The message says chore/ci/docs/test, but executable source changed.
+        # gin labels real behaviour changes `chore(...)`; the diff outranks it.
+        kind, basis, confidence = UNKNOWN, "message_contradicted_by_diff", "none"
     elif said["kind"] != UNKNOWN:
         kind, basis, confidence = said["kind"], "commit_message", "low"
     else:
@@ -246,6 +257,7 @@ def classify(record: dict, message: str, root, links) -> dict:
         "kind": kind, "kind_basis": basis, "kind_confidence": confidence,
         "changelog": changelog, "message": said,
         "reverts": reverts, "reverted_by": _resolve(reverted, record["sha"]),
+        "maintenance_merge": maintenance,
         "backported_to": backported.get(record["sha"], []),
         "test_changed": bool(tests), "test_files": len(tests),
         "size_tier": size_tier(len(sources)), "source_files": len(sources),
@@ -265,5 +277,6 @@ def bins(rows: list[dict]) -> dict:
                                          for r in rows).most_common()),
         "mechanical": sum(r["mechanical"] for r in rows),
         "backported": sum(bool(r["backported_to"]) for r in rows),
+        "maintenance_merges": sum(bool(r.get("maintenance_merge")) for r in rows),
         "reverted_later": sum(bool(r["reverted_by"]) for r in rows),
     }
