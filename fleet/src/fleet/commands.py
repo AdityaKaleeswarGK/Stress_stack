@@ -63,7 +63,7 @@ def run_review(directory: Path, model: str | None, steps: int, validation: bool,
 @click.option("--until", help="Optional upper history bound.")
 @click.option("--min-source-loc", type=click.IntRange(min=1), default=1, show_default=True)
 @click.option("--max-source-loc", type=click.IntRange(min=1), default=None, help="Optional source-line cap; unlimited by default.")
-@click.option("--max-source-files", type=click.IntRange(min=1), default=10, show_default=True)
+@click.option("--max-source-files", type=click.IntRange(min=1), default=None, help="Optional source-file cap; unlimited by default.")
 @click.option("--keep-direct-pushes", is_flag=True, help="Keep unknown single-parent changes in the main inventory.")
 @click.option("--limit", type=click.IntRange(1, 100), default=5, show_default=True, help="Candidate enrichment budget; remaining inventory is retained.")
 @click.option("--pr", type=click.IntRange(min=1), help="Focus enrichment on one PR.")
@@ -136,8 +136,10 @@ def agent_command(directory, model, max_steps, validation, max_validations):
 @click.argument("directory", type=click.Path(exists=True, file_okay=False, path_type=Path))
 @click.option("--candidate", required=True, help="Full SHA or unambiguous SHA prefix.")
 @click.option("--recipe", type=click.Path(exists=True, dir_okay=False, path_type=Path), required=True,
-              help="JSON with image, install_command and test_paths (Python/pytest).")
-def validate_command(directory, candidate, recipe):
+              help="JSON with image, install_command and test_paths (Python/pytest); optional pin_index_date.")
+@click.option("--repeats", type=click.IntRange(2, 10), default=3, show_default=True,
+              help="Runs per state; tests that disagree across them are quarantined.")
+def validate_command(directory, candidate, recipe, repeats):
     """Reproduce a candidate in Docker using an explicit recipe; no LLM needed."""
     try:
         catalog = load_catalog(directory)
@@ -146,8 +148,10 @@ def validate_command(directory, candidate, recipe):
             raise ValueError("Candidate prefix must identify exactly one catalog entry")
         chosen = matches[0]
         result = validate(chosen, Path(catalog["clone"]), directory / "validation" / chosen["id"] / "manual",
-                          json.loads(recipe.read_text()), progress=progress)
+                          json.loads(recipe.read_text()), repeats=repeats, progress=progress)
         progress(f"Validation: {result['status']}; F2P={len(result.get('fail_to_pass', []))}, P2P={len(result.get('pass_to_pass', []))}")
+        if result.get("labels"):
+            progress(f"Labels: {', '.join(result['labels'])}")
         if result["errors"]:
             raise ValueError("; ".join(result["errors"]))
     except (ValueError, RuntimeError, OSError) as exc:
@@ -191,7 +195,7 @@ def doctor():
 @click.option("--max-commits", type=click.IntRange(min=1), default=200, show_default=True)
 @click.option("--max-changes", type=click.IntRange(min=1), default=100, show_default=True)
 @click.option("--limit", type=click.IntRange(1, 100), default=25, show_default=True, help="Candidates retained after initial filtering.")
-@click.option("--max-source-files", type=click.IntRange(min=1), default=10, show_default=True)
+@click.option("--max-source-files", type=click.IntRange(min=1), default=None, help="Optional source-file cap; unlimited by default.")
 def filter_command(repo, repo_path, work_dir, out, ref, since, until,
                    max_commits, max_changes, limit, max_source_files):
     """Filter historical diffs into an unverified shortlist. No API, LLM or Docker."""

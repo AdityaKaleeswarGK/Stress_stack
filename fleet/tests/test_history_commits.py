@@ -274,7 +274,7 @@ def test_a_ci_only_change_is_dropped(repo: Path) -> None:
     assert database.dropped[str(Rejection.NO_SOURCE_CHANGE)] == 1
 
 
-def test_a_change_spread_over_many_files_is_dropped(repo: Path) -> None:
+def test_a_change_spread_over_many_files_is_dropped_only_when_capped(repo: Path) -> None:
     landed_via_merge(
         repo,
         "Sweeping rename (#10)",
@@ -282,7 +282,8 @@ def test_a_change_spread_over_many_files_is_dropped(repo: Path) -> None:
         date="2026-01-02T00:00:00Z",
     )
 
-    database = build_database(REPO, GitRepo.at(repo))
+    assert str(Rejection.TOO_MANY_SOURCE_FILES) not in build_database(REPO, GitRepo.at(repo)).dropped
+    database = build_database(REPO, GitRepo.at(repo), filters=CommitFilter(max_source_files=10))
     assert database.dropped[str(Rejection.TOO_MANY_SOURCE_FILES)] == 1
 
 

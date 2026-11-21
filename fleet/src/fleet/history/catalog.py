@@ -9,7 +9,30 @@ import urllib.request
 from fleet.history.client import GitHubClient, GitHubError
 from fleet.history.health import commit_health
 from fleet.history.linkage import closed_issue_numbers
+import subprocess
+
 from fleet.workspace import git
+
+
+def patch_id(root, base: str, head: str) -> str:
+    """A diff's identity with line numbers, blob hashes and whitespace removed.
+
+    Comparing two diffs as text asks whether they are the same *bytes*. A PR
+    squashed onto a base that moved during review is the same change with
+    different `index` lines and shifted hunk offsets, so the text comparison
+    called every such PR incomplete. `git patch-id --stable` is git's own
+    answer to "is this the same patch", and is what `git cherry` uses.
+    """
+    diff = subprocess.run(["git", "-C", str(root), "diff", "--no-color", base, head],
+                          capture_output=True, timeout=120)
+    if diff.returncode:
+        raise RuntimeError("Git diff failed")
+    identity = subprocess.run(["git", "-C", str(root), "patch-id", "--stable"], input=diff.stdout,
+                              capture_output=True, timeout=120)
+    if identity.returncode:
+        raise RuntimeError("Git patch-id failed")
+    # Empty output means an empty diff; two empty diffs are equal.
+    return identity.stdout.decode().split()[0] if identity.stdout.strip() else ""
 
 
 def closing_issues(client: GitHubClient, repo: str, number: int) -> list[dict] | None:
@@ -88,9 +111,9 @@ def build_catalog(database: dict, root, client: GitHubClient | None, *, limit: i
                     continue
                 try:
                     patch_base = git(root, "merge-base", r["base_sha"], original_head)
-                    source_diff = git(root, "diff", "--no-color", patch_base, original_head)
-                    landed_diff = git(root, "diff", "--no-color", r["base_sha"], r["sha"])
-                except RuntimeError:
+                    source_diff = patch_id(root, patch_base, original_head)
+                    landed_diff = patch_id(root, r["base_sha"], r["sha"])
+                except (RuntimeError, subprocess.SubprocessError):
                     candidate["notes"].append("Cannot prove complete squash/rebase patch from local objects")
                     continue
                 if source_diff != landed_diff:

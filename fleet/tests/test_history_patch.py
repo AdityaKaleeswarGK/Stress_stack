@@ -256,10 +256,10 @@ def test_a_ci_only_diff_has_nothing_to_fix() -> None:
     assert SelectionPolicy().patch_rejection(stats) is Rejection.NO_SOURCE_CHANGE
 
 
-def test_a_fix_spread_over_many_files_is_rejected() -> None:
+def test_a_fix_spread_over_many_files_is_kept_unless_capped() -> None:
     stats = PatchStats(files=tuple(source(5, path=f"src/f{n}.py") for n in range(11)))
-    assert SelectionPolicy().patch_rejection(stats) is Rejection.TOO_MANY_SOURCE_FILES
-    assert SelectionPolicy(max_source_files=20).patch_rejection(stats) is None
+    assert SelectionPolicy().patch_rejection(stats) is None
+    assert SelectionPolicy(max_source_files=10).patch_rejection(stats) is Rejection.TOO_MANY_SOURCE_FILES
 
 
 def test_requiring_a_test_change_is_available_but_off_by_default() -> None:

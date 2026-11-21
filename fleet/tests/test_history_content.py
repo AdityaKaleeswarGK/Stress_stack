@@ -15,6 +15,11 @@ from fleet.history.patch import classify_path, PathKind
     ('__version__="1"\n', '__version__=calculate()\n', '_version.py', 'executable_syntax_changed'),
     ('raise ValueError("old")\n', 'raise ValueError("new")\n', 'app.py', 'executable_syntax_changed'),
     ('broken (', 'x=1\n', 'app.py', 'unknown'),
+    # Type comments are comments: the parser must not count them as code.
+    ('d[k] = v  # type: ignore[index]\n', 'd[k] = v\n', 'app.py', 'comments_or_formatting_only'),
+    ('def f(a):\n    # type: (int) -> int\n    return a\n', 'def f(a):\n    return a\n', 'app.py',
+     'comments_or_formatting_only'),
+    ('x = []  # type: list[int]\n', 'x = []\n', 'app.py', 'comments_or_formatting_only'),
 ])
 def test_python_screen(before, after, path, expected):
     assert python_change_kind(before, after, path) == expected

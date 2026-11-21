@@ -16,11 +16,26 @@ import xml.etree.ElementTree as ET
 SLOTS = threading.BoundedSemaphore(2)
 
 
-def transitions(original: dict, base: dict, fixed: dict) -> dict:
-    """Keep newly collected passing tests distinct from change-detecting tests."""
+def transitions(original: dict | None, base: dict, fixed: dict) -> dict:
+    """Keep newly collected passing tests distinct from change-detecting tests.
+
+    `original` is what the base snapshot collects with its *own* tests. Pass
+    None when that run was not made: "new" is then unknowable, and the two
+    `newly_collected_*` lists are left out rather than filled with every test.
+    The investigator used to pass `{}` here, which made each of them a copy of
+    `pass_to_pass` / `fail_to_pass` and told the reviewer that every existing
+    upstream test it selected was newly added coverage.
+    """
     common = set(base) & set(fixed)
-    new = set(fixed) - set(original)
     status = lambda rows, k: rows[k]['status']
+    result = _transitions(original, base, fixed, common, status)
+    if original is None:
+        del result['newly_collected_pass_on_both'], result['newly_collected_fail_to_pass']
+    return result
+
+
+def _transitions(original, base, fixed, common, status) -> dict:
+    new = set(fixed) - set(original or {})
     return {
         'fail_to_pass': sorted(k for k in common if status(base,k)=='fail' and status(fixed,k)=='pass'),
         'pass_to_pass': sorted(k for k in common if status(base,k)==status(fixed,k)=='pass'),
@@ -112,8 +127,15 @@ class RuntimeInvestigator:
     def _run(self, snapshot, request_dir, state):
         folder=request_dir/state;folder.mkdir();evidence=folder/'evidence';evidence.mkdir();evidence.chmod(0o777)
         name='fleet-agent-'+uuid.uuid4().hex[:16]
-        command=['docker','run','--rm','--name',name,'--platform','linux/amd64','--network=none',
-                 '--cap-drop=ALL','--security-opt=no-new-privileges','--memory=1g','--cpus=1','--pids-limit=128',
+        # No `--platform`: the pinned image ID already fixes the architecture.
+        # Forcing linux/amd64 here ran every probe under QEMU on an ARM host,
+        # several times slower, inside a 90-second budget. An amd64-only image
+        # still runs (emulated) without the flag; a native one now runs native.
+        # `--init` reaps the probe's children so they cannot exhaust the PID
+        # ceiling; `--memory-swap` equal to `--memory` means no swap, so the
+        # ceiling is the same on every host.
+        command=['docker','run','--rm','--init','--name',name,'--network=none',
+                 '--cap-drop=ALL','--security-opt=no-new-privileges','--memory=1g','--memory-swap=1g','--cpus=1','--pids-limit=128',
                  '--read-only','--tmpfs','/tmp:rw,nosuid,size=256m','--tmpfs','/workspace:rw,nosuid,size=128m,mode=1777','--user','65534:65534',
                  '--mount',f'type=bind,src={snapshot},dst=/snapshot,readonly',
                  '--mount',f'type=bind,src={self.fixed},dst=/fixed,readonly',
@@ -165,8 +187,8 @@ class RuntimeInvestigator:
         for state in (['base','fixed','base_repeat','fixed_repeat'] if args['repeat'] else ['base','fixed']):
             if state.endswith('repeat') and any(r['status']!='measured' for r in runs.values()): break
             runs[state]=self._run(self.base if state.startswith('base') else self.fixed,folder,state)
-        pairs=transitions({},runs['base'].get('tests',{}),runs['fixed'].get('tests',{}))
-        repeat=transitions({},runs['base_repeat'].get('tests',{}),runs['fixed_repeat'].get('tests',{})) if 'fixed_repeat' in runs else None
+        pairs=transitions(None,runs['base'].get('tests',{}),runs['fixed'].get('tests',{}))
+        repeat=transitions(None,runs['base_repeat'].get('tests',{}),runs['fixed_repeat'].get('tests',{})) if 'fixed_repeat' in runs else None
         self.blocked=any(r['status']=='setup_or_report_error' for r in runs.values())
         stable=bool(repeat is not None and all(r['status']=='measured' for r in runs.values()) and
                     {k:v['status'] for k,v in runs['base']['tests'].items()}=={k:v['status'] for k,v in runs['base_repeat']['tests'].items()} and

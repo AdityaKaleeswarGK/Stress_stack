@@ -89,8 +89,8 @@ class SelectionPolicy:
     min_source_loc: int = 1
     # Line counts describe scope; no default upper bound on a possible fix.
     max_source_loc: int | None = None
-    # A fix spread across many files is usually a rename or a sweep.
-    max_source_files: int = 10
+    # Off by default; see CommitFilter.max_source_files.
+    max_source_files: int | None = None
     # Test-only and docs-only diffs leave nothing to fix.
     require_source_change: bool = True
     # Existing tests or a later reproduction may expose a source-only fix.
@@ -115,7 +115,7 @@ class SelectionPolicy:
             return Rejection.NO_SOURCE_CHANGE
         if self.require_test_change and not stats.has_test_change:
             return Rejection.NO_TEST_CHANGE
-        if len(stats.source_files) > self.max_source_files:
+        if self.max_source_files is not None and len(stats.source_files) > self.max_source_files:
             return Rejection.TOO_MANY_SOURCE_FILES
         if stats.source_loc < self.min_source_loc:
             return Rejection.DIFF_TOO_SMALL

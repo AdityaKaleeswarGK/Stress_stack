@@ -148,7 +148,8 @@ def review(catalog: dict, directory: Path, client: OpenRouter, *, max_steps: int
                         measured = validate(candidate, root, directory / "validation" / candidate["id"] / f"attempt-{validations}",
                                             args["recipe"], progress=progress)
                         result["validations"].setdefault(candidate["id"], []).append(measured)
-                        observation = {k: measured.get(k) for k in ("status", "errors", "fail_to_pass", "pass_to_pass")}
+                        observation = {k: measured.get(k) for k in ("status", "errors", "labels", "fail_to_pass", "pass_to_pass",
+                                                                     "error_to_pass", "quarantined", "preexisting_failures", "adequacy")}
                     else:
                         raise ValueError("Unknown or disabled tool")
                 except (ValueError, KeyError, TypeError, OSError, RuntimeError) as exc:

@@ -49,7 +49,7 @@ The shared filename/directory rules classify each changed file as source,
 test, documentation, or configuration. Test-only, documentation-only,
 configuration-only and mixed changes without source code are excluded.
 Source-only fixes are eligible, as are source changes accompanied by tests.
-The default source-file cap remains 10 (`--max-source-files`); there is **no
+There is **no default source-file cap** (`--max-source-files` sets one) and **no
 400-line cap**. Line counts are additions plus deletions, not net growth.
 The report retains totals, per-role counts and every changed path, including
 documentation/configuration accompanying an eligible source change. Binary

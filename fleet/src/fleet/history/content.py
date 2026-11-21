@@ -58,7 +58,12 @@ def _mask_version_values(tree: ast.Module) -> None:
 def python_change_kind(before: str, after: str, path: str) -> str:
     """Classify an existing Python file's edit, without executing either side."""
     try:
-        old, new = (ast.parse(text, type_comments=True) for text in (before, after))
+        # Without `type_comments`: with it, the parser turns `# type: ignore`
+        # and `# type: int` comments into tree nodes, so deleting one reads as
+        # an executable change. pre-commit.ci commits that only dropped stale
+        # `# type: ignore[...]` comments passed this screen for exactly that
+        # reason. Type comments are read by type checkers, never at runtime.
+        old, new = (ast.parse(text) for text in (before, after))
         if ast.dump(old) == ast.dump(new):
             return "comments_or_formatting_only"
         old, new = (_WithoutDocstrings().visit(tree) for tree in (old, new))

@@ -23,7 +23,7 @@ def filter_history(
     max_commits: int = 200,
     max_changes: int = 100,
     limit: int = 25,
-    max_source_files: int = 10,
+    max_source_files: int | None = None,
 ) -> dict:
     """Select up to `limit` source-changing mainline diffs, newest first.
 
@@ -31,7 +31,7 @@ def filter_history(
     The resulting candidates are commit changes awaiting enrichment, not
     certified complete PRs or runnable tasks. No worktree checkout is changed.
     """
-    if max_source_files < 1:
+    if max_source_files is not None and max_source_files < 1:
         raise ValueError("Source file limit must be positive")
     if since is not None and until is not None and since > until:
         raise ValueError("History start must not be after its end")

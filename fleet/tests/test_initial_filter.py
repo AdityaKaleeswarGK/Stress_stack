@@ -113,10 +113,10 @@ def test_file_cap_remains_independent_of_line_counts(repo):
         (repo / f"app{i}.py").write_text("X = 1\n")
     git(repo, "add", ".")
     git(repo, "commit", "-qm", "Broad fix (#1)")
-    result = filter_history("o/r", GitRepo.at(repo))
-    assert result["candidates"] == []
-    assert result["rejection_reasons"]["too_many_source_files"] == 1
-    assert len(filter_history("o/r", GitRepo.at(repo), max_source_files=11)["candidates"]) == 1
+    assert len(filter_history("o/r", GitRepo.at(repo))["candidates"]) == 1
+    capped = filter_history("o/r", GitRepo.at(repo), max_source_files=10)
+    assert capped["candidates"] == []
+    assert capped["rejection_reasons"]["too_many_source_files"] == 1
 
 
 def test_unavailable_base_is_reported_without_fabricating_a_diff(tmp_path):

@@ -70,8 +70,13 @@ class CommitFilter:
     min_source_loc: int = 1
     # Measure large fixes without assuming that size determines relevance.
     max_source_loc: int | None = None
-    # Keep the pilot's scope bounded by source file count.
-    max_source_files: int = 10
+    # Off by default. File count is scope, not fitness: frontier benchmarks
+    # now ship tasks averaging 4 (SWE-bench Pro) to 21 (SWE-EVO) files, and a
+    # cap at 10 removed exactly the multi-file work that still separates the
+    # strongest models. What makes a big task unfair is the part of its patch
+    # no test checks, which the validator's hunk probe measures. Size is
+    # recorded and binned instead; pass a number to restore a hard cap.
+    max_source_files: int | None = None
     # A diff with no application code in it leaves nothing to fix: test-only,
     # docs-only, and CI-only changes all land here.
     require_source_change: bool = True
@@ -95,7 +100,7 @@ class CommitFilter:
             return Rejection.NOT_AN_INTEGRATION_POINT
         if self.require_source_change and not stats.has_source_change:
             return Rejection.NO_SOURCE_CHANGE
-        if len(stats.source_files) > self.max_source_files:
+        if self.max_source_files is not None and len(stats.source_files) > self.max_source_files:
             return Rejection.TOO_MANY_SOURCE_FILES
         if stats.source_loc < self.min_source_loc:
             return Rejection.DIFF_TOO_SMALL
