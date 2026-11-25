@@ -1,0 +1,529 @@
+[
+  {
+    "sha": "6fd41340f30519ddc64a546ad2703dfe53f12356",
+    "subject": "fix Path.__getitem__ off-by-one (GH-299), add test extra to setup.py",
+    "kind": "bug_fix",
+    "kind_basis": "commit_message",
+    "era": "c1a02c54ea9846554d2b021c",
+    "python": "3.14",
+    "test_paths": [
+      "glom/test/test_path_and_t.py"
+    ],
+    "status": "not_verified",
+    "errors": [
+      "Dependency-changing patch needs an explicit environment migration recipe"
+    ],
+    "seconds": 0.0,
+    "cache_hit": null,
+    "fail_to_pass": 0,
+    "pass_to_pass": 0,
+    "pass_to_fail": 0,
+    "labels": [],
+    "fail_to_pass_kinds": {}
+  },
+  {
+    "sha": "e515fb33c7af491c6a20b2618591736361bb1d08",
+    "subject": "Keep PathAccessError printable for Scope/S paths (#249) (#298)",
+    "kind": "unknown",
+    "kind_basis": "none",
+    "era": "c1a02c54ea9846554d2b021c",
+    "python": "3.14",
+    "test_paths": [
+      "glom/test/test_error.py"
+    ],
+    "status": "verified_checks",
+    "errors": [],
+    "seconds": 3.5,
+    "cache_hit": true,
+    "fail_to_pass": 2,
+    "pass_to_pass": 20,
+    "pass_to_fail": 0,
+    "labels": [],
+    "fail_to_pass_kinds": {
+      "glom.test.test_error::test_pae_fallback_for_non_path": "exception",
+      "glom.test.test_error::test_pae_scope_printable": "exception"
+    }
+  },
+  {
+    "sha": "64141ba4794eaadf63242aa76191448159306251",
+    "subject": "Docs refresh: fix dead embeds, stale content, add glompad links, remove backward-compat exports",
+    "kind": "bug_fix",
+    "kind_basis": "commit_message",
+    "era": "c1a02c54ea9846554d2b021c",
+    "python": "3.14",
+    "test_paths": [
+      "glom/test/test_basic.py",
+      "glom/test/test_scope_vars.py"
+    ],
+    "status": "not_verified",
+    "errors": [
+      "No stable fail-to-pass test"
+    ],
+    "seconds": 2.4,
+    "cache_hit": true,
+    "fail_to_pass": 0,
+    "pass_to_pass": 28,
+    "pass_to_fail": 0,
+    "labels": [],
+    "fail_to_pass_kinds": {}
+  },
+  {
+    "sha": "bc653da9afec59bbb9c57230ffa2a12374f0346c",
+    "subject": "Add Python 3.12 (#285)",
+    "kind": "feature",
+    "kind_basis": "commit_message",
+    "era": "4391304411a7d2199485570b",
+    "python": "3.11",
+    "test_paths": [
+      "glom/test/test_basic.py",
+      "glom/test/test_check.py",
+      "glom/test/test_cli.py",
+      "glom/test/test_error.py",
+      "glom/test/test_grouping.py",
+      "glom/test/test_match.py",
+      "glom/test/test_mutation.py",
+      "glom/test/test_path_and_t.py",
+      "glom/test/test_reduction.py",
+      "glom/test/test_scope_vars.py",
+      "glom/test/test_snippets.py",
+      "glom/test/test_spec.py",
+      "glom/test/test_streaming.py",
+      "glom/test/test_target_types.py",
+      "glom/test/test_tutorial.py"
+    ],
+    "status": "not_verified",
+    "errors": [
+      "Dependency-changing patch needs an explicit environment migration recipe"
+    ],
+    "seconds": 0.0,
+    "cache_hit": null,
+    "fail_to_pass": 0,
+    "pass_to_pass": 0,
+    "pass_to_fail": 0,
+    "labels": [],
+    "fail_to_pass_kinds": {}
+  },
+  {
+    "sha": "24c21dcc44cc81abc193aa3bfa2f66304470d205",
+    "subject": "Add --scalar flag to CLI (#280)",
+    "kind": "feature",
+    "kind_basis": "commit_message",
+    "era": "4391304411a7d2199485570b",
+    "python": "3.11",
+    "test_paths": [
+      "glom/test/test_cli.py"
+    ],
+    "status": "verified_checks",
+    "errors": [],
+    "seconds": 5.0,
+    "cache_hit": false,
+    "fail_to_pass": 1,
+    "pass_to_pass": 9,
+    "pass_to_fail": 0,
+    "labels": [
+      "unresolved"
+    ],
+    "fail_to_pass_kinds": {
+      "glom.test.test_cli::test_cli_scalar": "exception"
+    }
+  },
+  {
+    "sha": "d285e7399c4586486cfd1adb203163b5d5bb65e7",
+    "subject": "Handle Python 3.11 (#271)",
+    "kind": "bug_fix",
+    "kind_basis": "commit_message",
+    "era": "8b25297e1c48ef91e9862094",
+    "python": "3.10",
+    "test_paths": [
+      "glom/test/test_error.py"
+    ],
+    "status": "not_verified",
+    "errors": [
+      "No stable fail-to-pass test"
+    ],
+    "seconds": 61.1,
+    "cache_hit": false,
+    "fail_to_pass": 0,
+    "pass_to_pass": 20,
+    "pass_to_fail": 0,
+    "labels": [],
+    "fail_to_pass_kinds": {}
+  },
+  {
+    "sha": "c31c91e96c14ee58a92bce82d199ae6ac8cbbd05",
+    "subject": "Merge pull request #206 from mahmoud/omni-t",
+    "kind": "unknown",
+    "kind_basis": "none",
+    "era": "bee09dc22f727bed0dfe24f0",
+    "python": "3.7",
+    "test_paths": [
+      "glom/test/test_path_and_t.py"
+    ],
+    "status": "verified_checks",
+    "errors": [],
+    "seconds": 49.5,
+    "cache_hit": false,
+    "fail_to_pass": 3,
+    "pass_to_pass": 20,
+    "pass_to_fail": 0,
+    "labels": [],
+    "fail_to_pass_kinds": {
+      "glom.test.test_path_and_t::test_t_arithmetic": "exception",
+      "glom.test.test_path_and_t::test_t_arithmetic_errors": "exception",
+      "glom.test.test_path_and_t::test_t_arithmetic_reprs": "exception"
+    }
+  },
+  {
+    "sha": "55bbcd5d8ff4d07a133048a806604d3c290ac8d7",
+    "subject": "Merge pull request #198 from mahmoud/perf",
+    "kind": "unknown",
+    "kind_basis": "none",
+    "era": "bee09dc22f727bed0dfe24f0",
+    "python": "3.7",
+    "test_paths": [
+      "glom/test/test_path_and_t.py",
+      "glom/test/test_target_types.py"
+    ],
+    "status": "verified_checks",
+    "errors": [],
+    "seconds": 2.0,
+    "cache_hit": true,
+    "fail_to_pass": 1,
+    "pass_to_pass": 31,
+    "pass_to_fail": 0,
+    "labels": [],
+    "fail_to_pass_kinds": {
+      "glom.test.test_path_and_t::test_path_cache": "assertion"
+    }
+  },
+  {
+    "sha": "3cdf4e77c9172c55ae17163b4f899f3db51f52cf",
+    "subject": "Merge pull request #191 from mahmoud/pipe-spec",
+    "kind": "unknown",
+    "kind_basis": "none",
+    "era": "bee09dc22f727bed0dfe24f0",
+    "python": "3.7",
+    "test_paths": [
+      "glom/test/test_basic.py"
+    ],
+    "status": "not_verified",
+    "errors": [
+      "No stable fail-to-pass test (0 error-to-pass and 22 absent-before, which could not run before the fix and so show the code was missing, not that it misbehaved)",
+      "No pass-to-pass regression guard"
+    ],
+    "seconds": 2.0,
+    "cache_hit": true,
+    "fail_to_pass": 0,
+    "pass_to_pass": 0,
+    "pass_to_fail": 0,
+    "labels": [
+      "absent_before"
+    ],
+    "fail_to_pass_kinds": {}
+  },
+  {
+    "sha": "0d6a45b843e9df45d545215661e527dd683a5fb5",
+    "subject": "make PathAccessError.path a Path() object once more, and test as much. Fixes #185.",
+    "kind": "bug_fix",
+    "kind_basis": "commit_message",
+    "era": "bee09dc22f727bed0dfe24f0",
+    "python": "3.7",
+    "test_paths": [
+      "glom/test/test_error.py"
+    ],
+    "status": "verified_checks",
+    "errors": [],
+    "seconds": 2.1,
+    "cache_hit": true,
+    "fail_to_pass": 1,
+    "pass_to_pass": 19,
+    "pass_to_fail": 0,
+    "labels": [],
+    "fail_to_pass_kinds": {
+      "glom.test.test_error::test_pae_api": "assertion"
+    }
+  },
+  {
+    "sha": "b609f91302ef4f35b4d5a0132a0d735248e4ea99",
+    "subject": "Merge pull request #171 from mahmoud/t-dunder",
+    "kind": "unknown",
+    "kind_basis": "none",
+    "era": "708bec4964a4ee4c06205c06",
+    "python": "3.7",
+    "test_paths": [
+      "glom/test/test_path_and_t.py"
+    ],
+    "status": "verified_checks",
+    "errors": [],
+    "seconds": 59.6,
+    "cache_hit": false,
+    "fail_to_pass": 1,
+    "pass_to_pass": 18,
+    "pass_to_fail": 0,
+    "labels": [],
+    "fail_to_pass_kinds": {
+      "glom.test.test_path_and_t::test_t_dunders": "exception"
+    }
+  },
+  {
+    "sha": "efddd66371d14bace5dba919232cd809c1d83163",
+    "subject": "rename Literal to Val, keeping backwards compat",
+    "kind": "refactor",
+    "kind_basis": "commit_message",
+    "era": "708bec4964a4ee4c06205c06",
+    "python": "3.7",
+    "test_paths": [
+      "glom/test/test_basic.py",
+      "glom/test/test_let_vars.py",
+      "glom/test/test_match.py"
+    ],
+    "status": "verified_checks",
+    "errors": [],
+    "seconds": 2.8,
+    "cache_hit": true,
+    "fail_to_pass": 3,
+    "pass_to_pass": 46,
+    "pass_to_fail": 0,
+    "labels": [],
+    "fail_to_pass_kinds": {
+      "glom.test.test_basic::test_call_and_target": "exception",
+      "glom.test.test_basic::test_val": "assertion",
+      "glom.test.test_let_vars::test_let": "exception"
+    }
+  },
+  {
+    "sha": "5806a8abe5321ad403b3455fa3e2158b11a115be",
+    "subject": "Merge pull request #150 from mahmoud/let-var",
+    "kind": "unknown",
+    "kind_basis": "none",
+    "era": "708bec4964a4ee4c06205c06",
+    "python": "3.7",
+    "test_paths": [
+      "glom/test/test_basic.py",
+      "glom/test/test_path_and_t.py"
+    ],
+    "status": "not_verified",
+    "errors": [
+      "No stable fail-to-pass test (0 error-to-pass and 39 absent-before, which could not run before the fix and so show the code was missing, not that it misbehaved)",
+      "No pass-to-pass regression guard"
+    ],
+    "seconds": 2.2,
+    "cache_hit": true,
+    "fail_to_pass": 0,
+    "pass_to_pass": 0,
+    "pass_to_fail": 0,
+    "labels": [
+      "absent_before"
+    ],
+    "fail_to_pass_kinds": {}
+  },
+  {
+    "sha": "c2acc2b4fa5ef90bbb781fa03e4e5095dd8f0d8c",
+    "subject": "fixing T[slice] repr",
+    "kind": "unknown",
+    "kind_basis": "none",
+    "era": "708bec4964a4ee4c06205c06",
+    "python": "3.7",
+    "test_paths": [
+      "glom/test/test_path_and_t.py"
+    ],
+    "status": "verified_checks",
+    "errors": [],
+    "seconds": 2.0,
+    "cache_hit": true,
+    "fail_to_pass": 1,
+    "pass_to_pass": 15,
+    "pass_to_fail": 0,
+    "labels": [],
+    "fail_to_pass_kinds": {
+      "glom.test.test_path_and_t::test_path_t_roundtrip": "assertion"
+    }
+  },
+  {
+    "sha": "00293b2d8c1d9e084148b15f17f2c7338fc0e740",
+    "subject": "Merge pull request #163 from mahmoud/switch",
+    "kind": "feature",
+    "kind_basis": "commit_message",
+    "era": "708bec4964a4ee4c06205c06",
+    "python": "3.7",
+    "test_paths": [
+      "glom/test/test_match.py"
+    ],
+    "status": "not_verified",
+    "errors": [
+      "No stable fail-to-pass test (0 error-to-pass and 23 absent-before, which could not run before the fix and so show the code was missing, not that it misbehaved)",
+      "No pass-to-pass regression guard"
+    ],
+    "seconds": 2.0,
+    "cache_hit": true,
+    "fail_to_pass": 0,
+    "pass_to_pass": 0,
+    "pass_to_fail": 0,
+    "labels": [
+      "absent_before"
+    ],
+    "fail_to_pass_kinds": {}
+  },
+  {
+    "sha": "22f9534e35c40ea9d7156d3ede1441c5074c12f6",
+    "subject": "Merge pull request #94 from mahmoud/match-mode",
+    "kind": "unknown",
+    "kind_basis": "none",
+    "era": "708bec4964a4ee4c06205c06",
+    "python": "3.7",
+    "test_paths": [
+      "glom/test/test_basic.py",
+      "glom/test/test_check.py",
+      "glom/test/test_error.py"
+    ],
+    "status": "not_verified",
+    "errors": [
+      "No stable fail-to-pass test (0 error-to-pass and 36 absent-before, which could not run before the fix and so show the code was missing, not that it misbehaved)"
+    ],
+    "seconds": 2.2,
+    "cache_hit": true,
+    "fail_to_pass": 0,
+    "pass_to_pass": 3,
+    "pass_to_fail": 0,
+    "labels": [
+      "absent_before"
+    ],
+    "fail_to_pass_kinds": {}
+  },
+  {
+    "sha": "30eb7ffe411d5707877d70c8778afe03c4f2bb7f",
+    "subject": "Merge branch 'master' into partial",
+    "kind": "unknown",
+    "kind_basis": "none",
+    "era": "085e5c669fcaf67ac058b5b0",
+    "python": "3.7",
+    "test_paths": [
+      "glom/test/test_basic.py",
+      "glom/test/test_mutation.py"
+    ],
+    "status": "not_verified",
+    "errors": [
+      "Dependency-changing patch needs an explicit environment migration recipe"
+    ],
+    "seconds": 0.0,
+    "cache_hit": null,
+    "fail_to_pass": 0,
+    "pass_to_pass": 0,
+    "pass_to_fail": 0,
+    "labels": [],
+    "fail_to_pass_kinds": {}
+  },
+  {
+    "sha": "586eb1876a70ad4c1d368f6f3424e37027a4767e",
+    "subject": "typecheck Invoke arguments",
+    "kind": "unknown",
+    "kind_basis": "none",
+    "era": "085e5c669fcaf67ac058b5b0",
+    "python": "3.7",
+    "test_paths": [
+      "glom/test/test_basic.py"
+    ],
+    "status": "verified_checks",
+    "errors": [],
+    "seconds": 41.5,
+    "cache_hit": false,
+    "fail_to_pass": 1,
+    "pass_to_pass": 16,
+    "pass_to_fail": 0,
+    "labels": [],
+    "fail_to_pass_kinds": {
+      "glom.test.test_basic::test_invoke": "exception"
+    }
+  },
+  {
+    "sha": "b2f1a7755b09cf6d63912b69a03cb3c9d5040ca7",
+    "subject": "take specfunc out of Invoke's signature, drop the __eq__ (__eq__ implies hashability, which requires composability, esp when taking the __dict__ == __dict__ approach. we should probably just have a big port over of all specs, possibly using attrs)",
+    "kind": "unknown",
+    "kind_basis": "none",
+    "era": "085e5c669fcaf67ac058b5b0",
+    "python": "3.7",
+    "test_paths": [
+      "glom/test/test_basic.py"
+    ],
+    "status": "not_verified",
+    "errors": [
+      "No stable fail-to-pass test"
+    ],
+    "seconds": 2.3,
+    "cache_hit": true,
+    "fail_to_pass": 0,
+    "pass_to_pass": 17,
+    "pass_to_fail": 0,
+    "labels": [],
+    "fail_to_pass_kinds": {}
+  },
+  {
+    "sha": "b39cb1e875c324a5461ac6a047cf6e3d32eb9c2d",
+    "subject": "rename Partial to Invoke, to better position it as the successor to Call.",
+    "kind": "refactor",
+    "kind_basis": "commit_message",
+    "era": "085e5c669fcaf67ac058b5b0",
+    "python": "3.7",
+    "test_paths": [
+      "glom/test/test_basic.py"
+    ],
+    "status": "not_verified",
+    "errors": [
+      "No stable fail-to-pass test (0 error-to-pass and 17 absent-before, which could not run before the fix and so show the code was missing, not that it misbehaved)",
+      "No pass-to-pass regression guard"
+    ],
+    "seconds": 1.8,
+    "cache_hit": true,
+    "fail_to_pass": 0,
+    "pass_to_pass": 0,
+    "pass_to_fail": 0,
+    "labels": [
+      "absent_before"
+    ],
+    "fail_to_pass_kinds": {}
+  },
+  {
+    "sha": "3cb55e0b1951bd47bf76aed1e4009655dd7fbece",
+    "subject": "__repr__ and __eq__ for partial",
+    "kind": "unknown",
+    "kind_basis": "none",
+    "era": "085e5c669fcaf67ac058b5b0",
+    "python": "3.7",
+    "test_paths": [
+      "glom/test/test_basic.py"
+    ],
+    "status": "verified_checks",
+    "errors": [],
+    "seconds": 1.8,
+    "cache_hit": true,
+    "fail_to_pass": 1,
+    "pass_to_pass": 16,
+    "pass_to_fail": 0,
+    "labels": [],
+    "fail_to_pass_kinds": {
+      "glom.test.test_basic::test_partial": "exception"
+    }
+  },
+  {
+    "sha": "4466928f6a2fb2b8f53b6ec3cdfebb1a1139adc9",
+    "subject": "added specfunc to partial",
+    "kind": "feature",
+    "kind_basis": "commit_message",
+    "era": "085e5c669fcaf67ac058b5b0",
+    "python": "3.7",
+    "test_paths": [
+      "glom/test/test_basic.py"
+    ],
+    "status": "verified_checks",
+    "errors": [],
+    "seconds": 1.8,
+    "cache_hit": true,
+    "fail_to_pass": 1,
+    "pass_to_pass": 16,
+    "pass_to_fail": 0,
+    "labels": [],
+    "fail_to_pass_kinds": {
+      "glom.test.test_basic::test_partial": "exception"
+    }
+  }
+]

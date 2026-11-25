@@ -1,0 +1,39 @@
+{
+ "candidate_id": "b609f91302ef4f35b4d5a0132a0d735248e4ea99",
+ "model": "openai/gpt-6-luna",
+ "prompt_version": "fleet-review-v1",
+ "status": "reviewed",
+ "verdict": {
+  "decision": "keep",
+  "reason": "The change provides a supported way to express dunder attribute access through T and makes reserved-attribute errors explain that alternative. The regression test checks both the guidance and that accessing an object's __class__ through the new API works.",
+  "kind": "feature",
+  "failure_cause": "both",
+  "required_interface": [
+   {
+    "name": "T.__",
+    "description": "A method accepting a dunder name without its leading double underscores (for example, T.__('class__')) and returning a T attribute-access specification for the corresponding dunder attribute."
+   }
+  ],
+  "tests_check_whole_fix": "partly",
+  "unchecked_changes": "The updated explanatory docstring and the detailed AttributeError message are only partly checked: the test checks the suggested T.__(\"name__\") text but not the full error wording or documentation.",
+  "title": "Support dunder attribute access in T specifications",
+  "statement": "T reserves attributes beginning with `__`, which prevents accidental collisions with Python's built-in behaviors. However, there is no supported way to use a T specification to access a target's dunder attribute. Add `T.__(name)`, where `name` is the dunder name without its leading `__` (for example, `T.__('class__')` accesses `__class__`). Attempts to access a dunder attribute directly on `T`, such as `T.__name__`, should continue to raise `AttributeError` and guide users to the corresponding `T.__(...)` form."
+ },
+ "check_failures": [],
+ "unresolved_problems": [],
+ "usage": {
+  "prompt_tokens": 2752,
+  "completion_tokens": 310,
+  "cached_tokens": 1469,
+  "cost": 0.000330015,
+  "calls": 1,
+  "reasoning_tokens": 0
+ },
+ "seconds": 79.5,
+ "packet_chars": 4012,
+ "tools": [
+  [
+   "finish"
+  ]
+ ]
+}

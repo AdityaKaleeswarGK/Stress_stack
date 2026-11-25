@@ -1,0 +1,39 @@
+{
+ "candidate_id": "4466928f6a2fb2b8f53b6ec3cdfebb1a1139adc9",
+ "model": "google/gemini-2.5-flash-lite",
+ "prompt_version": "fleet-review-v1",
+ "status": "reviewed",
+ "verdict": {
+  "reason": "The required interface is clearly defined by the test failure and the code changes. A solver can understand the intended functionality and implement the `specfunc` method to satisfy the tests.",
+  "kind": "feature",
+  "decision": "keep",
+  "tests_check_whole_fix": "yes",
+  "required_interface": [
+   {
+    "name": "specfunc",
+    "description": "classmethod to create a Partial specfunc that takes a subspec argument."
+   }
+  ],
+  "statement": "When constructing glom specifications, it is desirable to use existing functions or specifications as building blocks. Currently, the `Partial` class, used for creating specfuncs, does not support being used directly as a specfunc that takes a subspec argument. This prevents users from easily composing complex specifications by passing a subspec to a `Partial` instance. The ability to create a `Partial` specfunc that accepts a subspec is needed.",
+  "unchecked_changes": "",
+  "title": "Add specfunc class method to Partial",
+  "failure_cause": "missing_interface"
+ },
+ "check_failures": [],
+ "unresolved_problems": [],
+ "usage": {
+  "prompt_tokens": 3220,
+  "completion_tokens": 941,
+  "cached_tokens": 0,
+  "cost": 0.0006984,
+  "calls": 1,
+  "reasoning_tokens": 728
+ },
+ "seconds": 82.3,
+ "packet_chars": 3336,
+ "tools": [
+  [
+   "finish"
+  ]
+ ]
+}

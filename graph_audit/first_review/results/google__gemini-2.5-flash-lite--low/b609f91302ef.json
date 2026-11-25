@@ -1,0 +1,49 @@
+{
+ "candidate_id": "b609f91302ef4f35b4d5a0132a0d735248e4ea99",
+ "model": "google/gemini-2.5-flash-lite",
+ "prompt_version": "fleet-review-v1",
+ "status": "reviewed",
+ "verdict": {
+  "failure_cause": "wrong_behaviour",
+  "statement": "When using the T type for path specifications, attempting to access built-in dunder attributes (like __name__) directly raises a generic AttributeError. This prevents users from easily inspecting or using these attributes. The T type should provide a clear and intended mechanism to access dunder attributes, such as a dedicated method, to avoid ambiguity and allow for their use in specifications.",
+  "title": "Improve handling of dunder attributes in T type",
+  "unchecked_changes": "",
+  "decision": "keep",
+  "reason": "The fix updates the TType class to provide a specific mechanism (T.__()) for accessing dunder attributes, improving clarity and usability over the previous generic AttributeError. The fail-to-pass test verifies that the improved error message is shown for direct access and that the new T.__() method functions correctly.",
+  "kind": "bug_fix",
+  "required_interface": [
+   {
+    "description": "A method on T instances to access dunder attributes, e.g., T.__(\"name\")",
+    "name": "__"
+   }
+  ],
+  "tests_check_whole_fix": "yes"
+ },
+ "check_failures": [
+  [
+   "Required name 'T' is not created by the fix (created: ['__'])."
+  ]
+ ],
+ "unresolved_problems": [],
+ "usage": {
+  "prompt_tokens": 7874,
+  "completion_tokens": 1792,
+  "cached_tokens": 918,
+  "cost": 0.00142158,
+  "calls": 5,
+  "reasoning_tokens": 1323
+ },
+ "seconds": 490.3,
+ "packet_chars": 4012,
+ "tools": [
+  [],
+  [],
+  [],
+  [
+   "finish"
+  ],
+  [
+   "finish"
+  ]
+ ]
+}

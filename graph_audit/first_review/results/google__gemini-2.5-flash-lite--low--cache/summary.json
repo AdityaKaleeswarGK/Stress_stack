@@ -1,0 +1,422 @@
+{
+ "model": "google/gemini-2.5-flash-lite",
+ "reasoning": "low",
+ "cache": true,
+ "routes": {
+  "drop": 8,
+  "review": 11,
+  "environment": 3
+ },
+ "decisions": {
+  "keep": 11
+ },
+ "totals": {
+  "prompt_tokens": 115757,
+  "completion_tokens": 23153,
+  "reasoning_tokens": 16715,
+  "cached_tokens": 60911,
+  "cost": 0.01809324333333333,
+  "calls": 23
+ },
+ "per_reviewed_candidate": {
+  "prompt_tokens": 10523.36364,
+  "completion_tokens": 2104.81818,
+  "reasoning_tokens": 1519.54545,
+  "cached_tokens": 5537.36364,
+  "cost": 0.00164,
+  "calls": 2.09091
+ },
+ "summary_usage": {
+  "prompt_tokens": 1517,
+  "completion_tokens": 582,
+  "total_tokens": 2099,
+  "cost": 0.0003845,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.0003845,
+   "upstream_inference_prompt_cost": 0.0001517,
+   "upstream_inference_completions_cost": 0.0002328
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 378,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ },
+ "rows": [
+  {
+   "sha": "00293b2d8c1d9e084148b15f17f2c7338fc0e740",
+   "route": {
+    "route": "drop",
+    "reason": "tests_do_not_detect_fix"
+   }
+  },
+  {
+   "sha": "0d6a45b843e9df45d545215661e527dd683a5fb5",
+   "route": {
+    "route": "review",
+    "reason": "fail_to_pass_found"
+   },
+   "status": "reviewed",
+   "decision": "keep",
+   "kind": "bug_fix",
+   "failure_cause": "wrong_behaviour",
+   "tests_check_whole_fix": "yes",
+   "required": [],
+   "check_failures": 1,
+   "usage": {
+    "prompt_tokens": 8284,
+    "completion_tokens": 1998,
+    "cached_tokens": 3624,
+    "cost": 0.00160344,
+    "calls": 2,
+    "reasoning_tokens": 1530
+   },
+   "tool_calls": 2,
+   "seconds": 162.6
+  },
+  {
+   "sha": "22f9534e35c40ea9d7156d3ede1441c5074c12f6",
+   "route": {
+    "route": "drop",
+    "reason": "tests_do_not_detect_fix"
+   }
+  },
+  {
+   "sha": "24c21dcc44cc81abc193aa3bfa2f66304470d205",
+   "route": {
+    "route": "review",
+    "reason": "fail_to_pass_found"
+   },
+   "status": "reviewed",
+   "decision": "keep",
+   "kind": "feature",
+   "failure_cause": "missing_interface",
+   "tests_check_whole_fix": "yes",
+   "required": [
+    "scalar"
+   ],
+   "check_failures": 0,
+   "usage": {
+    "prompt_tokens": 3641,
+    "completion_tokens": 1041,
+    "cached_tokens": 923,
+    "cost": 0.00069743,
+    "calls": 1,
+    "reasoning_tokens": 756
+   },
+   "tool_calls": 1,
+   "seconds": 79.9
+  },
+  {
+   "sha": "30eb7ffe411d5707877d70c8778afe03c4f2bb7f",
+   "route": {
+    "route": "environment",
+    "reason": "Dependency-changing patch needs an explicit environment migration recipe"
+   }
+  },
+  {
+   "sha": "3cb55e0b1951bd47bf76aed1e4009655dd7fbece",
+   "route": {
+    "route": "review",
+    "reason": "fail_to_pass_found"
+   },
+   "status": "checks_failed",
+   "decision": "keep",
+   "kind": "bug_fix",
+   "failure_cause": "wrong_behaviour",
+   "tests_check_whole_fix": "yes",
+   "required": [
+    "Partial.__repr__",
+    "Partial.__eq__"
+   ],
+   "check_failures": 2,
+   "usage": {
+    "prompt_tokens": 15398,
+    "completion_tokens": 3184,
+    "cached_tokens": 9888,
+    "cost": 0.002257813333333333,
+    "calls": 3,
+    "reasoning_tokens": 2264
+   },
+   "tool_calls": 3,
+   "seconds": 242.1
+  },
+  {
+   "sha": "3cdf4e77c9172c55ae17163b4f899f3db51f52cf",
+   "route": {
+    "route": "drop",
+    "reason": "tests_do_not_detect_fix"
+   }
+  },
+  {
+   "sha": "4466928f6a2fb2b8f53b6ec3cdfebb1a1139adc9",
+   "route": {
+    "route": "review",
+    "reason": "fail_to_pass_found"
+   },
+   "status": "reviewed",
+   "decision": "keep",
+   "kind": "bug_fix",
+   "failure_cause": "missing_interface",
+   "tests_check_whole_fix": "yes",
+   "required": [
+    "Partial.specfunc"
+   ],
+   "check_failures": 0,
+   "usage": {
+    "prompt_tokens": 3142,
+    "completion_tokens": 994,
+    "cached_tokens": 909,
+    "cost": 0.00062999,
+    "calls": 1,
+    "reasoning_tokens": 728
+   },
+   "tool_calls": 1,
+   "seconds": 79.8
+  },
+  {
+   "sha": "55bbcd5d8ff4d07a133048a806604d3c290ac8d7",
+   "route": {
+    "route": "review",
+    "reason": "fail_to_pass_found"
+   },
+   "status": "reviewed",
+   "decision": "keep",
+   "kind": "performance",
+   "failure_cause": "wrong_behaviour",
+   "tests_check_whole_fix": "partly",
+   "required": [
+    "_MAX_CACHE"
+   ],
+   "check_failures": 1,
+   "usage": {
+    "prompt_tokens": 14223,
+    "completion_tokens": 2170,
+    "cached_tokens": 6528,
+    "cost": 0.00224678,
+    "calls": 2,
+    "reasoning_tokens": 1479
+   },
+   "tool_calls": 2,
+   "seconds": 163.2
+  },
+  {
+   "sha": "5806a8abe5321ad403b3455fa3e2158b11a115be",
+   "route": {
+    "route": "drop",
+    "reason": "tests_do_not_detect_fix"
+   }
+  },
+  {
+   "sha": "586eb1876a70ad4c1d368f6f3424e37027a4767e",
+   "route": {
+    "route": "review",
+    "reason": "fail_to_pass_found"
+   },
+   "status": "reviewed",
+   "decision": "keep",
+   "kind": "bug_fix",
+   "failure_cause": "wrong_behaviour",
+   "tests_check_whole_fix": "yes",
+   "required": [],
+   "check_failures": 2,
+   "usage": {
+    "prompt_tokens": 12147,
+    "completion_tokens": 2863,
+    "cached_tokens": 6150,
+    "cost": 0.00206265,
+    "calls": 3,
+    "reasoning_tokens": 2209
+   },
+   "tool_calls": 3,
+   "seconds": 244.0
+  },
+  {
+   "sha": "64141ba4794eaadf63242aa76191448159306251",
+   "route": {
+    "route": "drop",
+    "reason": "tests_do_not_detect_fix"
+   }
+  },
+  {
+   "sha": "6fd41340f30519ddc64a546ad2703dfe53f12356",
+   "route": {
+    "route": "environment",
+    "reason": "Dependency-changing patch needs an explicit environment migration recipe"
+   }
+  },
+  {
+   "sha": "b2f1a7755b09cf6d63912b69a03cb3c9d5040ca7",
+   "route": {
+    "route": "drop",
+    "reason": "tests_do_not_detect_fix"
+   }
+  },
+  {
+   "sha": "b39cb1e875c324a5461ac6a047cf6e3d32eb9c2d",
+   "route": {
+    "route": "drop",
+    "reason": "tests_do_not_detect_fix"
+   }
+  },
+  {
+   "sha": "b609f91302ef4f35b4d5a0132a0d735248e4ea99",
+   "route": {
+    "route": "review",
+    "reason": "fail_to_pass_found"
+   },
+   "status": "reviewed",
+   "decision": "keep",
+   "kind": "bug_fix",
+   "failure_cause": "wrong_behaviour",
+   "tests_check_whole_fix": "yes",
+   "required": [
+    "T.__"
+   ],
+   "check_failures": 0,
+   "usage": {
+    "prompt_tokens": 3332,
+    "completion_tokens": 1050,
+    "cached_tokens": 0,
+    "cost": 0.0007532,
+    "calls": 1,
+    "reasoning_tokens": 790
+   },
+   "tool_calls": 1,
+   "seconds": 80.6
+  },
+  {
+   "sha": "bc653da9afec59bbb9c57230ffa2a12374f0346c",
+   "route": {
+    "route": "environment",
+    "reason": "Dependency-changing patch needs an explicit environment migration recipe"
+   }
+  },
+  {
+   "sha": "c2acc2b4fa5ef90bbb781fa03e4e5095dd8f0d8c",
+   "route": {
+    "route": "review",
+    "reason": "fail_to_pass_found"
+   },
+   "status": "reviewed",
+   "decision": "keep",
+   "kind": "bug_fix",
+   "failure_cause": "wrong_behaviour",
+   "tests_check_whole_fix": "yes",
+   "required": [],
+   "check_failures": 2,
+   "usage": {
+    "prompt_tokens": 13514,
+    "completion_tokens": 2922,
+    "cached_tokens": 10290,
+    "cost": 0.0018799333333333332,
+    "calls": 4,
+    "reasoning_tokens": 2285
+   },
+   "tool_calls": 3,
+   "seconds": 490.6
+  },
+  {
+   "sha": "c31c91e96c14ee58a92bce82d199ae6ac8cbbd05",
+   "route": {
+    "route": "review",
+    "reason": "fail_to_pass_found"
+   },
+   "status": "reviewed",
+   "decision": "keep",
+   "kind": "bug_fix",
+   "failure_cause": "wrong_behaviour",
+   "tests_check_whole_fix": "yes",
+   "required": [
+    "__add__",
+    "__sub__",
+    "__mul__",
+    "__floordiv__",
+    "__truediv__",
+    "__mod__",
+    "__pow__",
+    "__and__",
+    "__or__",
+    "__xor__",
+    "__invert__",
+    "__neg__"
+   ],
+   "check_failures": 0,
+   "usage": {
+    "prompt_tokens": 4660,
+    "completion_tokens": 1485,
+    "cached_tokens": 0,
+    "cost": 0.00106,
+    "calls": 1,
+    "reasoning_tokens": 747
+   },
+   "tool_calls": 1,
+   "seconds": 83.7
+  },
+  {
+   "sha": "d285e7399c4586486cfd1adb203163b5d5bb65e7",
+   "route": {
+    "route": "drop",
+    "reason": "tests_do_not_detect_fix"
+   }
+  },
+  {
+   "sha": "e515fb33c7af491c6a20b2618591736361bb1d08",
+   "route": {
+    "route": "review",
+    "reason": "fail_to_pass_found"
+   },
+   "status": "reviewed",
+   "decision": "keep",
+   "kind": "bug_fix",
+   "failure_cause": "wrong_behaviour",
+   "tests_check_whole_fix": "yes",
+   "required": [],
+   "check_failures": 1,
+   "usage": {
+    "prompt_tokens": 8589,
+    "completion_tokens": 2099,
+    "cached_tokens": 3739,
+    "cost": 0.0016735733333333334,
+    "calls": 2,
+    "reasoning_tokens": 1534
+   },
+   "tool_calls": 2,
+   "seconds": 165.1
+  },
+  {
+   "sha": "efddd66371d14bace5dba919232cd809c1d83163",
+   "route": {
+    "route": "review",
+    "reason": "fail_to_pass_found"
+   },
+   "status": "checks_failed",
+   "decision": "keep",
+   "kind": "refactor",
+   "failure_cause": "both",
+   "tests_check_whole_fix": "yes",
+   "required": [
+    "Val",
+    "Literal"
+   ],
+   "check_failures": 2,
+   "usage": {
+    "prompt_tokens": 28827,
+    "completion_tokens": 3347,
+    "cached_tokens": 18860,
+    "cost": 0.0032284333333333333,
+    "calls": 3,
+    "reasoning_tokens": 2393
+   },
+   "tool_calls": 3,
+   "seconds": 249.1
+  }
+ ]
+}

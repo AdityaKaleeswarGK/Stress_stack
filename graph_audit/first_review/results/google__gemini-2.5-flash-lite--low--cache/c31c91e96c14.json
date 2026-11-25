@@ -1,0 +1,83 @@
+{
+ "candidate_id": "c31c91e96c14ee58a92bce82d199ae6ac8cbbd05",
+ "model": "google/gemini-2.5-flash-lite",
+ "prompt_version": "fleet-review-v1",
+ "status": "reviewed",
+ "verdict": {
+  "decision": "keep",
+  "title": "Add arithmetic and bitwise operations to TType",
+  "failure_cause": "wrong_behaviour",
+  "tests_check_whole_fix": "yes",
+  "unchecked_changes": "",
+  "reason": "The fix adds arithmetic and bitwise operators to the TType class, which were missing, causing TypeErrors in tests that expected this functionality. The problem statement clearly describes the missing operations and how they should behave, allowing a solver to implement the necessary magic methods.",
+  "required_interface": [
+   {
+    "name": "__add__",
+    "description": "implements TType + TType"
+   },
+   {
+    "description": "implements TType - TType",
+    "name": "__sub__"
+   },
+   {
+    "name": "__mul__",
+    "description": "implements TType * TType"
+   },
+   {
+    "description": "implements TType // TType",
+    "name": "__floordiv__"
+   },
+   {
+    "name": "__truediv__",
+    "description": "implements TType / TType"
+   },
+   {
+    "name": "__mod__",
+    "description": "implements TType % TType"
+   },
+   {
+    "description": "implements TType ** TType",
+    "name": "__pow__"
+   },
+   {
+    "name": "__and__",
+    "description": "implements TType & TType"
+   },
+   {
+    "name": "__or__",
+    "description": "implements TType | TType"
+   },
+   {
+    "name": "__xor__",
+    "description": "implements TType ^ TType"
+   },
+   {
+    "description": "implements ~TType",
+    "name": "__invert__"
+   },
+   {
+    "name": "__neg__",
+    "description": "implements -TType"
+   }
+  ],
+  "statement": "The TType object, used for building glom specifications, currently does not support arithmetic or bitwise operations. When attempting to use operators like +, -, *, /, %, **, &, |, ^, ~, or unary -, with TType instances, a TypeError occurs because these operations are not defined. This prevents users from composing complex specifications using familiar mathematical notation.\n\nFor example, expressions like `T + T`, `T * 2`, or `~T` should be valid and result in new TType specifications that represent these operations. The fix should enable these operators to function correctly, allowing for more expressive and concise glom specifications. The expected behavior for these operators is to chain the operations onto the existing TType spec.\n\nRequired interface:\n- `TType.__add__(self, arg)`: Supports `T + arg`.\n- `TType.__sub__(self, arg)`: Supports `T - arg`.\n- `TType.__mul__(self, arg)`: Supports `T * arg`.\n- `TType.__floordiv__(self, arg)`: Supports `T // arg`.\n- `TType.__truediv__(self, arg)`: Supports `T / arg`.\n- `TType.__mod__(self, arg)`: Supports `T % arg`.\n- `TType.__pow__(self, arg)`: Supports `T ** arg`.\n- `TType.__and__(self, arg)`: Supports `T & arg`.\n- `TType.__or__(self, arg)`: Supports `T | arg`.\n- `TType.__xor__(self, arg)`: Supports `T ^ arg`.\n- `TType.__invert__(self)`: Supports `~T`.\n- `TType.__neg__(self)`: Supports `-T`.",
+  "kind": "bug_fix"
+ },
+ "check_failures": [],
+ "unresolved_problems": [],
+ "usage": {
+  "prompt_tokens": 4660,
+  "completion_tokens": 1485,
+  "cached_tokens": 0,
+  "cost": 0.00106,
+  "calls": 1,
+  "reasoning_tokens": 747
+ },
+ "seconds": 83.4,
+ "packet_chars": 7286,
+ "tools": [
+  [
+   "finish"
+  ]
+ ]
+}

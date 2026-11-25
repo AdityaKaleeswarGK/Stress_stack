@@ -1,0 +1,42 @@
+{
+ "candidate_id": "3cb55e0b1951bd47bf76aed1e4009655dd7fbece",
+ "model": "qwen/qwen3.7-flash",
+ "prompt_version": "fleet-review-v1",
+ "status": "reviewed",
+ "verdict": {
+  "decision": "keep",
+  "reason": "The commit adds __repr__ and __eq__ methods to the Partial class. Before the fix, repr() returned the default object representation causing SyntaxError when eval()'d. The test verifies that repr(Partial(...)) produces valid Python code reconstructible via eval(). This is a feature addition of missing dunder methods.",
+  "kind": "feature",
+  "failure_cause": "wrong_behaviour",
+  "required_interface": [],
+  "tests_check_whole_fix": "yes",
+  "unchecked_changes": "",
+  "title": "Add __repr__ and __eq__ to Partial class",
+  "statement": "The `Partial` class in `glom.core` lacks a `__repr__` method. When you call `repr()` on a `Partial` instance, it returns the default Python object representation (e.g., `<glom.core.Partial object at 0x...>`), which is not valid Python syntax and cannot be reconstructed via `eval()`.\n\nAdditionally, `Partial` lacks `__eq__`, so equality comparison between `Partial` instances falls back to identity comparison.\n\n**Expected behavior:**\n- `repr(partial_instance)` should return a string of valid Python code that, when evaluated, produces an equivalent `Partial` object. For example, `Partial(len).specs(T)` should produce something like `\"Partial(len).specs(T)\"`.\n- Two `Partial` instances with the same function, subspec, and argument chain should compare equal with `==`.\n\n**To reproduce:**\n```python\nfrom glom import Partial, T, glom\n\nspec = Partial.specfunc(T).star(args='args').consts(3, b='b').specs(c='c').star(args='args2', kwargs='kwargs')\nrepr(spec)  # currently returns <glom.core.Partial object at ...>, not valid Python\neval(repr(spec))  # raises SyntaxError\n```"
+ },
+ "check_failures": [
+  [
+   "Required name '__repr__' is not created by the fix (created: ['chunks', 'fname']).",
+   "Required name '__eq__' is not created by the fix (created: ['chunks', 'fname'])."
+  ]
+ ],
+ "unresolved_problems": [],
+ "usage": {
+  "prompt_tokens": 9985,
+  "completion_tokens": 1904,
+  "cached_tokens": 0,
+  "cost": 0.00054707,
+  "calls": 2,
+  "reasoning_tokens": 0
+ },
+ "seconds": 170.6,
+ "packet_chars": 6005,
+ "tools": [
+  [
+   "finish"
+  ],
+  [
+   "finish"
+  ]
+ ]
+}

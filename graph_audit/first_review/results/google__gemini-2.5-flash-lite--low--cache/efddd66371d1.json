@@ -1,0 +1,61 @@
+{
+ "candidate_id": "efddd66371d14bace5dba919232cd809c1d83163",
+ "model": "google/gemini-2.5-flash-lite",
+ "prompt_version": "fleet-review-v1",
+ "status": "checks_failed",
+ "verdict": {
+  "title": "Rename Literal to Val, fix backward compatibility issues",
+  "statement": "The `glom` library has been updated to rename the `Literal` class to `Val`. This change aims to make the library's API clearer by using `Val` to represent literal values within specifications. To ensure compatibility with existing code, `Literal` has been maintained as an alias for `Val`. However, tests are failing, indicating that either the new `Val` class is not behaving as expected in certain scenarios (e.g., when used with `T` in path access), or the backward compatibility alias is not correctly established. Users expect `Val` to function as the primary way to inject literal values, and for `Literal` to continue working seamlessly as an alias without introducing new errors.",
+  "kind": "refactor",
+  "tests_check_whole_fix": "yes",
+  "reason": "The refactor involved renaming the `Literal` class to `Val` and ensuring backward compatibility via an alias. The sandbox test failures indicate issues with the implementation of `Val` and its alias `Literal`, leading to `PathAccessError` and incorrect alias checks, suggesting both behavioral and interface problems.",
+  "decision": "keep",
+  "required_interface": [
+   {
+    "description": "The new class for specifying literal values in glom specs, replacing the older `Literal`. It evaluates to its wrapped value.",
+    "name": "Val"
+   },
+   {
+    "description": "An alias for `Val`, maintained for backward compatibility with older codebases that still use `Literal`.",
+    "name": "Literal"
+   }
+  ],
+  "unchecked_changes": "",
+  "failure_cause": "both"
+ },
+ "check_failures": [
+  [
+   "Required name 'Val' is not created by the fix (created: []).",
+   "Required name 'Literal' is not created by the fix (created: [])."
+  ],
+  [
+   "Required name 'Val' is not created by the fix (created: []).",
+   "Required name 'Literal' is not created by the fix (created: [])."
+  ]
+ ],
+ "unresolved_problems": [
+  "Required name 'Val' is not created by the fix (created: []).",
+  "Required name 'Literal' is not created by the fix (created: [])."
+ ],
+ "usage": {
+  "prompt_tokens": 28827,
+  "completion_tokens": 3347,
+  "cached_tokens": 18860,
+  "cost": 0.0032284333333333333,
+  "calls": 3,
+  "reasoning_tokens": 2393
+ },
+ "seconds": 248.7,
+ "packet_chars": 17456,
+ "tools": [
+  [
+   "finish"
+  ],
+  [
+   "finish"
+  ],
+  [
+   "finish"
+  ]
+ ]
+}

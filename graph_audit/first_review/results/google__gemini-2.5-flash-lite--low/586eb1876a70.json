@@ -1,0 +1,50 @@
+{
+ "candidate_id": "586eb1876a70ad4c1d368f6f3424e37027a4767e",
+ "model": "google/gemini-2.5-flash-lite",
+ "prompt_version": "fleet-review-v1",
+ "status": "reviewed",
+ "verdict": {
+  "reason": "The fix introduces a new helper function `_is_spec` to perform stricter type checking on arguments passed to the `Invoke` class constructor. The existing `test_invoke` now verifies that `Invoke` raises a `TypeError` for invalid inputs, addressing the previous incorrect behavior where no error was raised. The statement clearly describes the problem with `Invoke` instantiation and the expected behavior.",
+  "kind": "bug_fix",
+  "tests_check_whole_fix": "yes",
+  "title": "Invoke class constructor should validate callable or Spec instance argument",
+  "unchecked_changes": "",
+  "failure_cause": "wrong_behaviour",
+  "statement": "The `Invoke` class constructor should validate that its `func` argument is either a callable or a `Spec` instance. Currently, it accepts any object, which can lead to unexpected behavior or errors later in the process. When an `Invoke` object is created with an argument that is neither a callable nor a `Spec` instance, it should immediately raise a `TypeError` to indicate the invalid input.",
+  "required_interface": [],
+  "decision": "keep"
+ },
+ "check_failures": [
+  [
+   "Required name 'Invoke' is not created by the fix (created: ['_is_spec', 'strict']).",
+   "Required name '_is_spec' is not used by the changed tests.",
+   "Required name 'TypeError' is not created by the fix (created: ['_is_spec', 'strict'])."
+  ],
+  [
+   "Required name 'Invoke' is not created by the fix (created: ['_is_spec', 'strict']).",
+   "Required name '_is_spec' is not used by the changed tests."
+  ]
+ ],
+ "unresolved_problems": [],
+ "usage": {
+  "prompt_tokens": 13039,
+  "completion_tokens": 3222,
+  "cached_tokens": 0,
+  "cost": 0.0025927,
+  "calls": 3,
+  "reasoning_tokens": 2320
+ },
+ "seconds": 239.9,
+ "packet_chars": 3178,
+ "tools": [
+  [
+   "finish"
+  ],
+  [
+   "finish"
+  ],
+  [
+   "finish"
+  ]
+ ]
+}

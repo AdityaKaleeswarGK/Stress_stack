@@ -1,0 +1,50 @@
+{
+ "candidate_id": "24c21dcc44cc81abc193aa3bfa2f66304470d205",
+ "model": "deepseek/deepseek-v4.1-flash",
+ "prompt_version": "fleet-review-v1",
+ "status": "reviewed",
+ "verdict": {
+  "decision": "keep",
+  "failure_cause": "missing_interface",
+  "kind": "feature",
+  "reason": "Failure is an unknown flag --scalar; the test checks both the unchanged default JSON output and the new bare-scalar output, and a capable engineer can implement the flag and scalar printing branch from a clear issue statement.",
+  "required_interface": [
+   {
+    "description": "A `scalar` option on the glom command, exposed as the CLI flag `--scalar` (a plain presence switch like --debug/--inspect). When given and the glom result is a single scalar value rather than a collection, the CLI prints that value bare, with no surrounding quotes and no trailing newline (a string result 'd' prints exactly d). When absent, or the result is not a scalar, existing behaviour is kept: json.dumps of the result (a string result 'd' prints \"d\" plus a newline).",
+    "name": "scalar"
+   }
+  ],
+  "statement": "When using the glom command-line interface, there is no convenient way to get a single plain value out of the result for use in shell scripts: the result is always serialized as JSON, so a simple extracted string comes back quoted and newline-terminated (for example `glom 'a.b.c' '{\"a\": {\"b\": {\"c\": \"d\"}}}'` prints `\"d\"`). There is no option to get just `d` back.\n\nAdd a `--scalar` flag to the CLI, backed by a `scalar` option on the command. When the flag is passed and the glom result is a single scalar value (e.g. a string, number, boolean or None, as opposed to a list/dict/collection), the command should print that value on its own, with no surrounding quotes and no trailing newline, so it can be piped or captured directly. When the flag is not passed, or when the result is not a scalar, output must stay exactly as it is today: the JSON serialization of the result (still honoring --indent, so a string result is `\"d\"` followed by a newline by default). The flag should be a plain presence switch in the same style as the existing --debug and --inspect options, and it must appear in the command's help/option list so that it can be used as `glom --scalar <spec> <target>`.",
+  "tests_check_whole_fix": "yes",
+  "title": "Add a --scalar flag to the glom CLI",
+  "unchecked_changes": "none"
+ },
+ "check_failures": [
+  [
+   "Required name '--scalar' is not created by the fix (created: ['scalar'])."
+  ]
+ ],
+ "unresolved_problems": [],
+ "usage": {
+  "prompt_tokens": 16066,
+  "completion_tokens": 2044,
+  "cached_tokens": 11648,
+  "cost": 0.0025012572000000003,
+  "calls": 3,
+  "reasoning_tokens": 562
+ },
+ "seconds": 240.9,
+ "packet_chars": 4862,
+ "tools": [
+  [
+   "read_lines",
+   "read_lines"
+  ],
+  [
+   "finish"
+  ],
+  [
+   "finish"
+  ]
+ ]
+}

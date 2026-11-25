@@ -1,0 +1,55 @@
+{
+ "candidate_id": "24c21dcc44cc81abc193aa3bfa2f66304470d205",
+ "model": "qwen/qwen3.7-flash",
+ "prompt_version": "fleet-review-v1",
+ "status": "reviewed",
+ "verdict": {
+  "decision": "keep",
+  "reason": "The fix adds a new `--scalar` CLI flag to the glom command-line interface. Before the fix, running `glom --scalar ...` would fail with \"unknown flag\" error because the flag didn't exist. The change adds: 1) import of `is_scalar` from boltons.iterutils, 2) a `scalar` parameter to `glom_cli`, 3) the `--scalar` CLI option in `get_command()`, and 4) conditional output logic that prints raw scalar values when the flag is set and result is scalar. The test verifies this behavior for both normal and scalar modes. This is a clear feature addition.",
+  "kind": "feature",
+  "failure_cause": "missing_interface",
+  "required_interface": [
+   {
+    "name": "scalar",
+    "description": "A boolean parameter added to glom_cli() and a --scalar CLI flag that, when True and the result is a scalar value, outputs it without JSON quoting or trailing newline."
+   }
+  ],
+  "tests_check_whole_fix": "partly",
+  "unchecked_changes": "The test only exercises the case where the result is a scalar string ('d'). It does not test: non-scalar results with --scalar (should still use JSON output), scalar integers/booleans/nulls, or the interaction between --scalar and other flags like --indent.",
+  "title": "Add --scalar flag to glom CLI for unquoted scalar output",
+  "statement": "When using the glom CLI, there is no way to output a simple scalar result (like a string or number) in a raw, unquoted format suitable for scripting. Currently, all results are always formatted as JSON, meaning a string result like \"d\" is output as `\"d\"` with quotes.\n\nAdd a `--scalar` flag to the glom CLI that, when provided, checks if the result is a single scalar value (not a collection). If so, it prints the value directly without JSON quoting or a trailing newline. If the result is not a scalar, it falls back to normal JSON output.\n\nExample usage:\n- Without --scalar: `glom 'a.b.c' '{\"a\": {\"b\": {\"c\": \"d\"}}}'` outputs `\"d\"\\n`\n- With --scalar: `glom --scalar 'a.b.c' '{\"a\": {\"b\": {\"c\": \"d\"}}}'` outputs `d` (no quotes, no newline)\n\nThis requires adding a `--scalar` boolean CLI option and updating the `glom_cli` function to accept a `scalar` parameter and conditionally format output accordingly."
+ },
+ "check_failures": [
+  [
+   "Required name '--scalar' is not created by the fix (created: ['scalar'])."
+  ]
+ ],
+ "unresolved_problems": [],
+ "usage": {
+  "prompt_tokens": 26846,
+  "completion_tokens": 1378,
+  "cached_tokens": 15232,
+  "cost": 0.000618952,
+  "calls": 5,
+  "reasoning_tokens": 0
+ },
+ "seconds": 393.9,
+ "packet_chars": 4862,
+ "tools": [
+  [
+   "read_diff"
+  ],
+  [
+   "read_lines"
+  ],
+  [
+   "read_lines"
+  ],
+  [
+   "finish"
+  ],
+  [
+   "finish"
+  ]
+ ]
+}

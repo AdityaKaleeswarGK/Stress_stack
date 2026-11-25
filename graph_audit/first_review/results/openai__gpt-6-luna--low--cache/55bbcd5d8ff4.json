@@ -1,0 +1,39 @@
+{
+ "candidate_id": "55bbcd5d8ff4d07a133048a806604d3c290ac8d7",
+ "model": "openai/gpt-6-luna",
+ "prompt_version": "fleet-review-v1",
+ "status": "reviewed",
+ "verdict": {
+  "decision": "keep",
+  "reason": "The sole fail-to-pass test directly verifies that repeated parsing of the same dotted path reuses the cached Path object, and the change provides that behavior with a bounded-cache escape path. This is a performance improvement with a clear, testable contract.",
+  "kind": "performance",
+  "failure_cause": "wrong_behaviour",
+  "required_interface": [
+   {
+    "name": "Path._MAX_CACHE",
+    "description": "Class-level maximum cache size threshold, assignable by callers; when the cache is over this threshold, Path.from_text(text) returns an uncached Path."
+   }
+  ],
+  "tests_check_whole_fix": "partly",
+  "unchecked_changes": "The tests do not exercise the target-type lookup cache, the hot-path changes in _glom/AUTO, or the performance claims; only Path caching and its maximum-cache bypass are covered.",
+  "title": "Cache parsed dotted paths",
+  "statement": "Repeated use of the same dotted string as a glom path currently reparses it and creates a new Path each time. Cache the Path objects produced by `Path.from_text(text)` so repeated calls for the same text return the same object. Keep the cache bounded: expose an assignable class attribute `Path._MAX_CACHE` as the maximum cache size threshold, and once the cache has exceeded that threshold, parse subsequent uncached strings without storing them (so repeated calls for such strings need not return the same object)."
+ },
+ "check_failures": [],
+ "unresolved_problems": [],
+ "usage": {
+  "prompt_tokens": 5442,
+  "completion_tokens": 289,
+  "cached_tokens": 1469,
+  "cost": 0.000655765,
+  "calls": 1,
+  "reasoning_tokens": 0
+ },
+ "seconds": 78.8,
+ "packet_chars": 12604,
+ "tools": [
+  [
+   "finish"
+  ]
+ ]
+}

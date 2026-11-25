@@ -1,0 +1,114 @@
+{
+  "labelled_by": "Claude (Opus 5.5), from each candidate's message, diff and before-run errors; not yet checked by a person",
+  "repo": "mahmoud/glom",
+  "accept_either": "A list means both answers are defensible; either counts as agreement.",
+  "labels": {
+    "0d6a45b843": {
+      "decision": "keep",
+      "kind": "bug_fix",
+      "failure_cause": "wrong_behaviour",
+      "required": [],
+      "note": "PathAccessError.path held a T object instead of a Path; test checks the type."
+    },
+    "24c21dcc44": {
+      "decision": "keep",
+      "kind": "feature",
+      "failure_cause": "missing_interface",
+      "required": [
+        "scalar"
+      ],
+      "note": "New --scalar CLI flag; the statement must name the flag."
+    },
+    "55bbcd5d8f": {
+      "decision": [
+        "drop",
+        "keep"
+      ],
+      "kind": "performance",
+      "failure_cause": "wrong_behaviour",
+      "required": [
+        "_MAX_CACHE"
+      ],
+      "note": "Perf merge; the test checks Path.from_text caching identity and a private _MAX_CACHE attribute. Borderline: keepable only if the statement dictates the private knob. The type-cache half is unchecked."
+    },
+    "b609f91302": {
+      "decision": "keep",
+      "kind": "feature",
+      "failure_cause": [
+        "both",
+        "missing_interface"
+      ],
+      "required": [
+        "__"
+      ],
+      "note": "New T.__('class__') escape method plus an error message that mentions it."
+    },
+    "c2acc2b4fa": {
+      "decision": "keep",
+      "kind": "bug_fix",
+      "failure_cause": "wrong_behaviour",
+      "required": [],
+      "note": "repr(T[1:]) printed slice(...); the repr1 parameter rename is unchecked."
+    },
+    "c31c91e96c": {
+      "decision": "keep",
+      "kind": "feature",
+      "failure_cause": [
+        "missing_interface",
+        "wrong_behaviour"
+      ],
+      "required": [],
+      "note": "Arithmetic operators on T; reached through syntax, and the expected repr format must be stated."
+    },
+    "e515fb33c7": {
+      "decision": "keep",
+      "kind": "bug_fix",
+      "failure_cause": "wrong_behaviour",
+      "required": [],
+      "note": "str() of a PathAccessError on an S path crashed."
+    },
+    "efddd66371": {
+      "decision": [
+        "keep",
+        "drop"
+      ],
+      "kind": "refactor",
+      "failure_cause": [
+        "wrong_behaviour",
+        "both"
+      ],
+      "required": [],
+      "note": "Corrected after review: not purely mechanical. Before the change, Literal and Val were separate classes and the S[...]/T path code unwrapped only Literal, so Val(T) inside a path raised PathAccessError. The change merges them (Literal = Val). Keepable if the statement describes the Val-in-path failure without dictating the merge."
+    },
+    "586eb1876a": {
+      "decision": "keep",
+      "kind": [
+        "bug_fix",
+        "feature"
+      ],
+      "failure_cause": "wrong_behaviour",
+      "required": [],
+      "note": "Invoke() now rejects non-callables with a TypeError; the message the test matches must be stated."
+    },
+    "3cb55e0b19": {
+      "decision": "keep",
+      "kind": "feature",
+      "failure_cause": [
+        "missing_interface",
+        "wrong_behaviour",
+        "both"
+      ],
+      "required": [],
+      "note": "Partial gets __repr__/__eq__ so eval(repr(spec)) == spec; any eval-able repr passes."
+    },
+    "4466928f6a": {
+      "decision": "keep",
+      "kind": "feature",
+      "failure_cause": "missing_interface",
+      "required": [
+        "specfunc"
+      ],
+      "note": "New Partial.specfunc classmethod."
+    }
+  }
+}

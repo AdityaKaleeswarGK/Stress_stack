@@ -1,0 +1,61 @@
+{
+ "candidate_id": "3cb55e0b1951bd47bf76aed1e4009655dd7fbece",
+ "model": "google/gemini-2.5-flash-lite",
+ "prompt_version": "fleet-review-v1",
+ "status": "checks_failed",
+ "verdict": {
+  "failure_cause": "wrong_behaviour",
+  "reason": "The `Partial` class's default string representation causes a `SyntaxError` when evaluated by tests. Adding `__repr__` and `__eq__` methods corrects this behavior, making the representation valid Python code and enabling object comparison, thereby resolving the test failure.",
+  "required_interface": [
+   {
+    "description": "The string representation of the Partial object, which must be valid Python code.",
+    "name": "__repr__"
+   },
+   {
+    "name": "__eq__",
+    "description": "A method to compare two Partial objects for equality."
+   }
+  ],
+  "tests_check_whole_fix": "yes",
+  "title": "Add evaluatable __repr__ and __eq__ to Partial class",
+  "kind": "bug_fix",
+  "decision": "keep",
+  "unchecked_changes": "",
+  "statement": "When inspecting or testing `Partial` objects in `glom`, their string representation is not a valid Python expression, leading to `SyntaxError`. This prevents proper debugging and testing of `Partial` specifications. The goal is to ensure that `Partial` objects have a `__repr__` method that generates evaluatable code and an `__eq__` method for accurate comparisons, resolving the `SyntaxError` and enabling reliable object introspection and testing."
+ },
+ "check_failures": [
+  [
+   "Required name '__repr__' is not created by the fix (created: ['chunks', 'fname']).",
+   "Required name '__eq__' is not created by the fix (created: ['chunks', 'fname'])."
+  ],
+  [
+   "Required name '__repr__' is not created by the fix (created: ['chunks', 'fname']).",
+   "Required name '__eq__' is not created by the fix (created: ['chunks', 'fname'])."
+  ]
+ ],
+ "unresolved_problems": [
+  "Required name '__repr__' is not created by the fix (created: ['chunks', 'fname']).",
+  "Required name '__eq__' is not created by the fix (created: ['chunks', 'fname'])."
+ ],
+ "usage": {
+  "prompt_tokens": 15586,
+  "completion_tokens": 3144,
+  "cached_tokens": 0,
+  "cost": 0.0028161999999999996,
+  "calls": 3,
+  "reasoning_tokens": 2303
+ },
+ "seconds": 240.3,
+ "packet_chars": 6005,
+ "tools": [
+  [
+   "finish"
+  ],
+  [
+   "finish"
+  ],
+  [
+   "finish"
+  ]
+ ]
+}

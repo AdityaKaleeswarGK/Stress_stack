@@ -1,0 +1,76 @@
+{
+ "model": "deepseek/deepseek-v4.1-flash",
+ "reasoning": "low",
+ "cache": false,
+ "routes": {
+  "review": 1
+ },
+ "decisions": {
+  "keep": 1
+ },
+ "totals": {
+  "prompt_tokens": 98140,
+  "completion_tokens": 10586,
+  "reasoning_tokens": 8389,
+  "cached_tokens": 85120,
+  "cost": 0.01711992,
+  "calls": 8
+ },
+ "per_reviewed_candidate": {
+  "prompt_tokens": 98140.0,
+  "completion_tokens": 10586.0,
+  "reasoning_tokens": 8389.0,
+  "cached_tokens": 85120.0,
+  "cost": 0.01712,
+  "calls": 8.0
+ },
+ "summary_usage": {
+  "prompt_tokens": 1394,
+  "completion_tokens": 1061,
+  "total_tokens": 2455,
+  "cost": 0.0016914,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.0016914,
+   "upstream_inference_prompt_cost": 0.0004182,
+   "upstream_inference_completions_cost": 0.0012732
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 814,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ },
+ "rows": [
+  {
+   "sha": "efddd66371d14bace5dba919232cd809c1d83163",
+   "route": {
+    "route": "review",
+    "reason": "fail_to_pass_found"
+   },
+   "status": "reviewed",
+   "decision": "keep",
+   "kind": "refactor",
+   "failure_cause": "wrong_behaviour",
+   "tests_check_whole_fix": "partly",
+   "required": [],
+   "check_failures": 1,
+   "usage": {
+    "prompt_tokens": 98140,
+    "completion_tokens": 10586,
+    "cached_tokens": 85120,
+    "cost": 0.01711992,
+    "calls": 8,
+    "reasoning_tokens": 8389
+   },
+   "tool_calls": 13,
+   "seconds": 650.3
+  }
+ ]
+}

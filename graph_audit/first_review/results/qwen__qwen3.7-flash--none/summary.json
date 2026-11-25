@@ -1,0 +1,76 @@
+{
+ "model": "qwen/qwen3.7-flash",
+ "reasoning": "none",
+ "cache": false,
+ "routes": {
+  "review": 1
+ },
+ "decisions": {
+  "keep": 1
+ },
+ "totals": {
+  "prompt_tokens": 29875,
+  "completion_tokens": 3196,
+  "reasoning_tokens": 0,
+  "cached_tokens": 18560,
+  "cost": 0.00086629,
+  "calls": 3
+ },
+ "per_reviewed_candidate": {
+  "prompt_tokens": 29875.0,
+  "completion_tokens": 3196.0,
+  "reasoning_tokens": 0.0,
+  "cached_tokens": 18560.0,
+  "cost": 0.00087,
+  "calls": 3.0
+ },
+ "summary_usage": {
+  "prompt_tokens": 1368,
+  "completion_tokens": 270,
+  "total_tokens": 1638,
+  "cost": 0.0007344,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.0007344,
+   "upstream_inference_prompt_cost": 0.0004104,
+   "upstream_inference_completions_cost": 0.000324
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ },
+ "rows": [
+  {
+   "sha": "efddd66371d14bace5dba919232cd809c1d83163",
+   "route": {
+    "route": "review",
+    "reason": "fail_to_pass_found"
+   },
+   "status": "checks_failed",
+   "decision": "keep",
+   "kind": "other",
+   "failure_cause": "missing_interface",
+   "tests_check_whole_fix": "yes",
+   "required": [],
+   "check_failures": 2,
+   "usage": {
+    "prompt_tokens": 29875,
+    "completion_tokens": 3196,
+    "cached_tokens": 18560,
+    "cost": 0.00086629,
+    "calls": 3,
+    "reasoning_tokens": 0
+   },
+   "tool_calls": 3,
+   "seconds": 254.7
+  }
+ ]
+}

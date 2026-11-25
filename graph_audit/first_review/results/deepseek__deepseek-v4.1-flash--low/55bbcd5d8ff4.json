@@ -1,0 +1,56 @@
+{
+ "candidate_id": "55bbcd5d8ff4d07a133048a806604d3c290ac8d7",
+ "model": "deepseek/deepseek-v4.1-flash",
+ "prompt_version": "fleet-review-v1",
+ "status": "reviewed",
+ "verdict": {
+  "decision": "keep",
+  "reason": "The single fail-to-pass test only needs repeated Path.from_text calls to return the identical cached object and a class-level _MAX_CACHE knob that disables caching; both are behavior/interface facts a statement can convey without dictating the rest of the performance rewrite, which the tests do not exercise.",
+  "kind": "performance",
+  "failure_cause": "both",
+  "required_interface": [
+   {
+    "name": "Path._MAX_CACHE",
+    "description": "class-level integer attribute on Path (default 10000) controlling the maximum size of the from_text text cache; setting it to 0 must make successive Path.from_text calls for the same text return distinct (non-identical) Path objects"
+   }
+  ],
+  "tests_check_whole_fix": "partly",
+  "unchecked_changes": "The same commit adds several other performance changes that no test checks: a per-TargetRegistry _type_cache (keyed on (obj_type, op), invalidated on register), scope/chainmap fast paths in _glom and AUTO (using scope.maps[0], caching MODE, short-circuiting str specs through Path.from_text), a type(spec) is TType check, TODO comments in Inspect._trace, removal of a stale comment in matching.py Check, and the new glom/test/perf_report.py benchmark script.",
+  "title": "Cache Path.from_text results and expose Path._MAX_CACHE",
+  "statement": "Repeatedly glomming with the same string spec (for example a spec like 'a.b.c' used in a hot loop or on every item of a large list) is slower than it should be, because glom rebuilds an equivalent Path object from the spec text on every evaluation. We want spec-text handling to reuse previously built paths instead of reconstructing them.\n\nChange Path.from_text so that it caches the Path it builds for a given text, keyed on that text, and returns the identical cached object on later calls with the same string. So `Path.from_text('a.b.c') is Path.from_text('a.b.c')` must be True.\n\nThe cache has to be bounded so it cannot grow without limit. Expose the bound as a class-level attribute on Path named `Path._MAX_CACHE` (an integer maximum cache size, defaulting to 10000). While the cache is at or below that size, new entries may be added; once it exceeds the limit, Paths must be built and returned fresh without being stored. Setting `Path._MAX_CACHE = 0` must effectively turn the cache off, so that two successive `Path.from_text('d.e.f')` calls return two distinct (not-identical) Path objects. Cached and freshly built paths must still behave exactly as before (equal to the corresponding Path built from the split text, and usable as a glom spec)."
+ },
+ "check_failures": [
+  [
+   "Required name 'from_text' is not created by the fix (created: ['Obj', 'STR_SPEC', 'T_SPEC', '_CACHE', '_MAX_CACHE', '_type_cache', 'cache_key', 'data', 'end', 'func', 'glom_avg', 'glom_dur', 'num', 'pmap', 'py_avg', 'py_dur', 'ratio', 'run', 'setup_list_of_dict', 'spec'])."
+  ]
+ ],
+ "unresolved_problems": [],
+ "usage": {
+  "prompt_tokens": 40550,
+  "completion_tokens": 7911,
+  "cached_tokens": 33024,
+  "cost": 0.011949144,
+  "calls": 5,
+  "reasoning_tokens": 6076
+ },
+ "seconds": 407.2,
+ "packet_chars": 12604,
+ "tools": [
+  [
+   "read_lines",
+   "read_lines"
+  ],
+  [
+   "read_lines"
+  ],
+  [
+   "read_lines"
+  ],
+  [
+   "finish"
+  ],
+  [
+   "finish"
+  ]
+ ]
+}

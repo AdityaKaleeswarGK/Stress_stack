@@ -1,0 +1,47 @@
+{
+ "candidate_id": "586eb1876a70ad4c1d368f6f3424e37027a4767e",
+ "model": "google/gemini-2.5-flash-lite",
+ "prompt_version": "fleet-review-v1",
+ "status": "reviewed",
+ "verdict": {
+  "kind": "bug_fix",
+  "unchecked_changes": "",
+  "decision": "keep",
+  "required_interface": [],
+  "tests_check_whole_fix": "yes",
+  "reason": "The fix introduces type validation for the `Invoke` constructor, ensuring that it only accepts callables or `Spec` instances. The fail-to-pass test verifies this new validation by checking that a `TypeError` is raised for invalid input. The old code did not enforce this type check, leading to potential runtime errors, and the test failed because it expected this type error which was not raised.",
+  "title": "Type validation for Invoke constructor",
+  "failure_cause": "wrong_behaviour",
+  "statement": "When constructing an `Invoke` object, the library currently accepts any object as the function argument. This can lead to unexpected errors later in the process. Instead, the `Invoke` constructor should only accept callable objects or `Spec` instances, raising a `TypeError` for any other type of input to ensure type safety."
+ },
+ "check_failures": [
+  [
+   "Required name 'Invoke' is not created by the fix (created: ['_is_spec', 'strict'])."
+  ],
+  [
+   "Required name '_is_spec' is not used by the changed tests."
+  ]
+ ],
+ "unresolved_problems": [],
+ "usage": {
+  "prompt_tokens": 12147,
+  "completion_tokens": 2863,
+  "cached_tokens": 6150,
+  "cost": 0.00206265,
+  "calls": 3,
+  "reasoning_tokens": 2209
+ },
+ "seconds": 243.8,
+ "packet_chars": 3178,
+ "tools": [
+  [
+   "finish"
+  ],
+  [
+   "finish"
+  ],
+  [
+   "finish"
+  ]
+ ]
+}

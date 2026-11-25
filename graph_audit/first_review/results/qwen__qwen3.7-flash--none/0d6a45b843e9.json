@@ -1,0 +1,47 @@
+{
+ "candidate_id": "0d6a45b843e9df45d545215661e527dd683a5fb5",
+ "model": "qwen/qwen3.7-flash",
+ "prompt_version": "fleet-review-v1",
+ "status": "reviewed",
+ "verdict": {
+  "decision": "keep",
+  "reason": "The fix corrects a bug where PathAccessError.path was being set to a TType instance instead of a Path object. In _t_eval and _s_first_magic, _t (a TType) was passed directly to PathAccessError instead of wrapping it with Path(). The test verifies that exc_info.value.path is actually a Path instance, which failed before the fix because its __class__ was TType.",
+  "kind": "bug_fix",
+  "failure_cause": "wrong_behaviour",
+  "required_interface": [],
+  "tests_check_whole_fix": "partly",
+  "unchecked_changes": "The fix also changes three other PathAccessError construction sites (_t_eval for '.' op, '[' op, and 'P' op; plus _s_first_magic), but the test only exercises the 'data.3' path access error case which hits the '.' or '[' branch. The 'P' (fuzzy match) branch and _s_first_magic KeyError branch are not directly tested by this specific test.",
+  "title": "PathAccessError.path should be a Path object, not a TType",
+  "statement": "When glom raises a PathAccessError due to a failed path access (e.g., accessing an out-of-range list index or missing attribute), the .path attribute should be a Path() object representing the path that was being accessed. However, before the fix, the .path attribute was set to a TType spec object instead of a proper Path instance.\n\nTo reproduce:\n```python\nfrom glom import glom, T, Path\n\ntarget = {'value': {'data': [0, 1, 2]}}\ntry:\n    glom(target, (T['value'], 'data.3'))\nexcept Exception as e:\n    # e.path should be a Path instance, but it was a TType\n    assert type(e.path) is Path  # would fail before the fix\n```\n\nExpected: `e.path` should be a `Path` object (e.g., `Path('data', '3')`).\nActual before fix: `e.path` was a `TType` instance, not a `Path`.\n\nThe fix wraps the TType spec with `Path()` when constructing `PathAccessError` in core.py's `_t_eval` and `_s_first_magic` functions."
+ },
+ "check_failures": [],
+ "unresolved_problems": [],
+ "usage": {
+  "prompt_tokens": 32732,
+  "completion_tokens": 1032,
+  "cached_tokens": 22400,
+  "cost": 0.00057852,
+  "calls": 5,
+  "reasoning_tokens": 0
+ },
+ "seconds": 389.9,
+ "packet_chars": 4689,
+ "tools": [
+  [
+   "read_diff",
+   "test_failure"
+  ],
+  [
+   "outline"
+  ],
+  [
+   "read_lines"
+  ],
+  [
+   "read_lines"
+  ],
+  [
+   "finish"
+  ]
+ ]
+}

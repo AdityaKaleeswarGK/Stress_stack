@@ -6,6 +6,7 @@ from datetime import UTC, datetime
 import json
 import urllib.request
 
+from fleet import net
 from fleet.history.client import GitHubClient, GitHubError
 from fleet.history.health import commit_health
 from fleet.history.linkage import closed_issue_numbers
@@ -57,7 +58,7 @@ def closing_issues(client: GitHubClient, repo: str, number: int) -> list[dict] |
         payload = {"query": query, "variables": {"owner": owner, "name": name, "number": number, "after": after}}
         request = urllib.request.Request("https://api.github.com/graphql", json.dumps(payload).encode(),
                     {"Authorization": f"Bearer {client.token}", "Content-Type": "application/json"})
-        with urllib.request.urlopen(request, timeout=40) as response:
+        with net.urlopen(request, timeout=40) as response:
             data = json.load(response)
         if data.get("errors"):
             raise GitHubError("GitHub GraphQL could not return closing references")

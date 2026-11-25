@@ -244,3 +244,21 @@ def test_runs_use_the_chosen_runtime_and_check_out_inside_the_workspace(tmp_path
                for a in launch if a.endswith("dst=/workspace")]
     assert sources and all(Path(source).is_relative_to(out) for source in sources)
     assert not list(out.glob(".work-*"))  # cleaned up afterwards
+
+
+def test_patches_apply_to_a_checkout_inside_another_repository(tmp_path):
+    """Regression: inside an outer work tree `git apply` used to skip every path and exit 0."""
+    import subprocess
+
+    from fleet.validation import _apply
+
+    subprocess.run(["git", "init", "-q", str(tmp_path)], check=True)
+    checkout = tmp_path / "evidence" / "run-before-1"
+    checkout.mkdir(parents=True)
+    (checkout / "mod.py").write_text("x = 1\n")
+    # A `diff --git` header is what makes git read paths from the repository root.
+    patch = b"diff --git a/mod.py b/mod.py\n--- a/mod.py\n+++ b/mod.py\n@@ -1 +1 @@\n-x = 1\n+x = 2\n"
+    _apply(checkout, patch)
+    assert (checkout / "mod.py").read_text() == "x = 2\n"
+    _apply(checkout, patch, reverse=True)
+    assert (checkout / "mod.py").read_text() == "x = 1\n"

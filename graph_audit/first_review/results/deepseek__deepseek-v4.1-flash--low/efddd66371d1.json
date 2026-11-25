@@ -1,0 +1,65 @@
+{
+ "candidate_id": "efddd66371d14bace5dba919232cd809c1d83163",
+ "model": "deepseek/deepseek-v4.1-flash",
+ "prompt_version": "fleet-review-v1",
+ "status": "reviewed",
+ "verdict": {
+  "decision": "keep",
+  "reason": "The fail-to-pass tests check user-visible behavior a statement can convey: `Literal` must be the same object as `Val`, and `Val` must be evaluated when used as a segment in T/S path specs (base only special-cased `Literal` in `_t_eval`, causing PathAccessError). No hidden code-dictating details.",
+  "kind": "refactor",
+  "failure_cause": "wrong_behaviour",
+  "required_interface": [],
+  "tests_check_whole_fix": "partly",
+  "unchecked_changes": "Doc/docstring updates in docs/api.rst, docs/snippets.rst, core.py (SKIP/Spec docstrings), and matching.py (import and docstring examples); the internal attribute rename from val to value is not directly asserted.",
+  "title": "Make Val the canonical literal-value spec with Literal as an alias, and evaluate Val in path specs",
+  "statement": "There are currently two nearly identical spec classes for embedding literal values in a glom spec: `Val` and `Literal`. They behave the same way, but they are separate classes, which is confusing and produces inconsistent reprs.\n\nPlease make `Val` the one canonical class and keep `Literal` available only as a backwards-compatibility alias, such that:\n\n- `from glom import Val, Literal` works, and `Literal is Val` is true (the very same class object, not a subclass or a copy).\n- `Val(x)` still acts as a spec that evaluates to `x` (e.g. `glom(None, Val('success')) == 'success'`), and its `repr` is `Val(...)`, e.g. `repr(Val(3.14)) == 'Val(3.14)'`.\n\nAdditionally, there is a bug when a `Val` is used as a segment in a T/S path-access spec: `glom([[1]], S[UP][Val(T)][0][0])` should return `1`, and `glom(data, ('b', [{'a': S[ROOT][Val(T)]['a'], 'c': 'c'}]))` should substitute the literal root target like the older literal spec did. Right now such usages raise a PathAccessError because the path evaluator only treats the old class (and Spec/TType) as an inline spec; make `Val` (which is now the same object as `Literal`) recognized the same way.\n\nFinally, update the documentation/examples that still refer to the old class name so they use `Val`, noting that `Literal` remains as an alias."
+ },
+ "check_failures": [
+  [
+   "Required name 'Val' is not created by the fix (created: []).",
+   "Required name 'Literal' is not created by the fix (created: [])."
+  ]
+ ],
+ "unresolved_problems": [],
+ "usage": {
+  "prompt_tokens": 98140,
+  "completion_tokens": 10586,
+  "cached_tokens": 85120,
+  "cost": 0.01711992,
+  "calls": 8,
+  "reasoning_tokens": 8389
+ },
+ "seconds": 649.9,
+ "packet_chars": 17456,
+ "tools": [
+  [
+   "outline",
+   "search"
+  ],
+  [
+   "read_lines",
+   "read_lines"
+  ],
+  [
+   "test_failure",
+   "test_failure"
+  ],
+  [
+   "read_lines",
+   "search"
+  ],
+  [
+   "search",
+   "search"
+  ],
+  [
+   "read_lines"
+  ],
+  [
+   "finish"
+  ],
+  [
+   "finish"
+  ]
+ ]
+}

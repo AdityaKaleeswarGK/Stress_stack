@@ -1,0 +1,35 @@
+{
+ "candidate_id": "3cb55e0b1951bd47bf76aed1e4009655dd7fbece",
+ "model": "openai/gpt-6-luna",
+ "prompt_version": "fleet-review-v1",
+ "status": "reviewed",
+ "verdict": {
+  "decision": "keep",
+  "reason": "The failure shows that repr(Partial(...)) produced the default object representation, which is not a valid expression and cannot be evaluated. The change provides a compositional representation for Partial variants and equality so represented specs can be compared.",
+  "kind": "feature",
+  "failure_cause": "wrong_behaviour",
+  "required_interface": [],
+  "tests_check_whole_fix": "partly",
+  "unchecked_changes": "The tests check repr does not raise and round-trip equality for a specfunc-based chain, but do not verify the exact representation or equality behavior across other Partial forms.",
+  "title": "Give Partial specs a useful, evaluable representation",
+  "statement": "`Partial` specifications currently use the default object representation, so inspecting one gives an address-like string rather than a readable description, and the representation cannot be evaluated to recover an equivalent specification. Implement a readable `repr` that describes the wrapped function or specfunc and the chained `consts`, `specs`, and `star` operations, and provide equality so equivalent representations compare equal. For example, `eval(repr(spec), globals(), locals())` should yield a `Partial` equal to `spec`, including when built with `Partial.specfunc(...)`."
+ },
+ "check_failures": [],
+ "unresolved_problems": [],
+ "usage": {
+  "prompt_tokens": 6792,
+  "completion_tokens": 257,
+  "cached_tokens": 4852,
+  "cost": 0.00041942,
+  "calls": 2,
+  "reasoning_tokens": 0
+ },
+ "seconds": 156.5,
+ "packet_chars": 6005,
+ "tools": [
+  [],
+  [
+   "finish"
+  ]
+ ]
+}

@@ -1,0 +1,34 @@
+{
+ "candidate_id": "efddd66371d14bace5dba919232cd809c1d83163",
+ "model": "openai/gpt-6-luna",
+ "prompt_version": "fleet-review-v1",
+ "status": "reviewed",
+ "verdict": {
+  "decision": "keep",
+  "reason": "This is a coherent public API rename: Val becomes the canonical literal-value spec and Literal remains an alias, with internal evaluation updated to recognize Val. Existing users retain compatibility while new usage and reprs use Val.",
+  "kind": "feature",
+  "failure_cause": "wrong_behaviour",
+  "required_interface": [],
+  "tests_check_whole_fix": "partly",
+  "unchecked_changes": "Documentation and docstring updates, including the compatibility note and references across API examples, are not directly exercised by the fail-to-pass tests.",
+  "title": "Make Val the canonical literal-value spec while preserving Literal compatibility",
+  "statement": "The spec wrapper for returning a value literally is currently exposed as `Literal`, while `Val` is also present but does not work consistently in all contexts. In particular, `Val(T)` used as a dynamic path component in `S` expressions is treated as a mapping key rather than evaluated, so specs that need to refer to a literal value such as `T` fail with a path access error. Make `Val` the canonical wrapper that evaluates to its wrapped value, including when used as a path component, and keep `Literal` as a backwards-compatible alias to `Val`. The alias and canonical name should refer to the same class; its repr should use `Val(...)`."
+ },
+ "check_failures": [],
+ "unresolved_problems": [],
+ "usage": {
+  "prompt_tokens": 7419,
+  "completion_tokens": 271,
+  "cached_tokens": 1469,
+  "cost": 0.00089389,
+  "calls": 1,
+  "reasoning_tokens": 0
+ },
+ "seconds": 78.3,
+ "packet_chars": 17456,
+ "tools": [
+  [
+   "finish"
+  ]
+ ]
+}

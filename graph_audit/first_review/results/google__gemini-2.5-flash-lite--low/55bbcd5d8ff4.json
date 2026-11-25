@@ -1,0 +1,57 @@
+{
+ "candidate_id": "55bbcd5d8ff4d07a133048a806604d3c290ac8d7",
+ "model": "google/gemini-2.5-flash-lite",
+ "prompt_version": "fleet-review-v1",
+ "status": "checks_failed",
+ "verdict": {
+  "tests_check_whole_fix": "partly",
+  "kind": "performance",
+  "reason": "The fix introduces caching for path parsing to improve performance, which is directly exercised by the `test_path_cache` test. The `Path._MAX_CACHE` variable is explicitly used and modified by this test to control the caching behavior and verify its effect.",
+  "title": "Performance improvements via path parsing caching",
+  "failure_cause": "wrong_behaviour",
+  "statement": "The glom library can be slow when parsing repeatedly used string specifications for paths, leading to higher latency in data transformations. To address this, glom should implement caching mechanisms for frequently used path strings. The fix introduces `Path._CACHE` and `Path._MAX_MAX_CACHE` for path string caching. The `Path.from_text` method is modified to use this cache, ensuring that identical path strings result in the same `Path` object. This optimization is validated by tests that check for object identity after repeated parsing, and by controlling the cache size. The test `test_path_cache` verifies this behavior by setting `Path._MAX_CACHE` and asserting object identity. \n\nRequired interface:\n* `Path._MAX_CACHE`: An integer defining the maximum number of entries for the `Path._CACHE`.",
+  "unchecked_changes": "The performance improvements related to `TargetRegistry._type_cache` and modifications to `_glom` and `AUTO` are not directly exercised by the fail-to-pass tests.",
+  "required_interface": [
+   {
+    "description": "Maximum size of the Path cache.",
+    "name": "Path._MAX_CACHE"
+   }
+  ],
+  "decision": "keep"
+ },
+ "check_failures": [
+  [
+   "Required name '_CACHE' is not used by the changed tests.",
+   "Required name '_type_cache' is not used by the changed tests.",
+   "Required name '_glom' is not created by the fix (created: ['Obj', 'STR_SPEC', 'T_SPEC', '_CACHE', '_MAX_CACHE', '_type_cache', 'cache_key', 'data', 'end', 'func', 'glom_avg', 'glom_dur', 'num', 'pmap', 'py_avg', 'py_dur', 'ratio', 'run', 'setup_list_of_dict', 'spec']).",
+   "Required name 'AUTO' is not created by the fix (created: ['Obj', 'STR_SPEC', 'T_SPEC', '_CACHE', '_MAX_CACHE', '_type_cache', 'cache_key', 'data', 'end', 'func', 'glom_avg', 'glom_dur', 'num', 'pmap', 'py_avg', 'py_dur', 'ratio', 'run', 'setup_list_of_dict', 'spec'])."
+  ],
+  [
+   "Required name '_CACHE' is not used by the changed tests."
+  ]
+ ],
+ "unresolved_problems": [
+  "The statement names fail-to-pass tests: test_path_cache. Describe behaviour instead."
+ ],
+ "usage": {
+  "prompt_tokens": 24521,
+  "completion_tokens": 3794,
+  "cached_tokens": 7842,
+  "cost": 0.00326392,
+  "calls": 3,
+  "reasoning_tokens": 2395
+ },
+ "seconds": 242.5,
+ "packet_chars": 12604,
+ "tools": [
+  [
+   "finish"
+  ],
+  [
+   "finish"
+  ],
+  [
+   "finish"
+  ]
+ ]
+}

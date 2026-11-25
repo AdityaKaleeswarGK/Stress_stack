@@ -1,0 +1,38 @@
+{
+ "candidate_id": "4466928f6a2fb2b8f53b6ec3cdfebb1a1139adc9",
+ "model": "openai/gpt-6-luna",
+ "prompt_version": "fleet-review-v1",
+ "status": "reviewed",
+ "verdict": {
+  "decision": "keep",
+  "kind": "feature",
+  "failure_cause": "missing_interface",
+  "required_interface": [
+   {
+    "name": "Partial.specfunc",
+    "description": "A class method accepting a glom subspec and returning a Partial that uses the result of evaluating that subspec as the callable to invoke."
+   }
+  ],
+  "tests_check_whole_fix": "partly",
+  "unchecked_changes": "The tests cover calling the spec-derived function when the subspec evaluates to a callable, but do not cover more complex subspecs or interactions with Partial's argument-binding helpers.",
+  "title": "Allow Partial to derive its callable from a glom spec",
+  "statement": "`Partial` can wrap ordinary Python functions, but it cannot currently use a glom specification to produce the function to call. Add `Partial.specfunc(subspec)`, which returns a `Partial` configured to evaluate `subspec` against the current target, then invoke the callable that evaluation returns with the arguments accumulated by the Partial. For example, `glom(test, Partial.specfunc(T))` should resolve `T` to the target and call that target with no additional arguments."
+ },
+ "check_failures": [],
+ "unresolved_problems": [],
+ "usage": {
+  "prompt_tokens": 2568,
+  "completion_tokens": 232,
+  "cached_tokens": 1469,
+  "cost": 0.000268015,
+  "calls": 1,
+  "reasoning_tokens": 0
+ },
+ "seconds": 78.8,
+ "packet_chars": 3336,
+ "tools": [
+  [
+   "finish"
+  ]
+ ]
+}

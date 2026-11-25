@@ -1,0 +1,39 @@
+{
+ "candidate_id": "3cb55e0b1951bd47bf76aed1e4009655dd7fbece",
+ "model": "deepseek/deepseek-v4.1-flash",
+ "prompt_version": "fleet-review-v1",
+ "status": "reviewed",
+ "verdict": {
+  "decision": "keep",
+  "reason": "The change adds __repr__ (currently Partial renders as a bare object address, so repr() is not evaluable) and __eq__ (currently identity), both exercised by the fail-to-pass test; a solver can derive an evaluable repr and state-based equality from the described symptoms without the fix's code.",
+  "kind": "feature",
+  "failure_cause": "wrong_behaviour",
+  "required_interface": [],
+  "tests_check_whole_fix": "yes",
+  "unchecked_changes": "",
+  "title": "Partial specs have no readable/evaluable repr and no equality",
+  "statement": "glom.Partial (the helper that upgrades plain Python functions into glom specs) is hard to inspect and compare. Calling repr() on a Partial just prints the default object identity, e.g. something like \"<glom.core.Partial object at 0x...>\", which is unreadable and - worse - cannot be evaluated back with eval(). And two Partial specs built the same way never compare equal, so specs (including ones created via Partial.specfunc(...) and chained with .consts(...), .specs(...) and .star(...)) cannot be compared or round-tripped through their textual form.\n\nTo see it:\n\n    spec = Partial(f).star(args='args').consts(3, b='b').specs(c='c')\n    repr(spec)   # currently an opaque \"<...Partial object at 0x...>\"\n    eval(repr(spec)) == spec   # currently raises SyntaxError, and even a\n                               # hand-built equal spec would compare unequal\n\nWhat should happen instead: repr() on any Partial, including one built from Partial.specfunc(...) and any chain of .consts/.specs/.star, must return a readable Python expression that, when evaluated in a namespace where the referenced names exist, yields an equal Partial. Evaluating that expression must not raise. Two Partial instances must compare equal (==) when they are built from the same function/spec and the same chain of consts/specs/star arguments, and unequal otherwise; equality should be based on the object's type and state rather than identity. These changes must not alter the existing transformation behaviour: glom(...) with Partial specs, including Partial.specfunc(...) chains, must keep producing the same results."
+ },
+ "check_failures": [],
+ "unresolved_problems": [],
+ "usage": {
+  "prompt_tokens": 10260,
+  "completion_tokens": 3006,
+  "cached_tokens": 6400,
+  "cost": 0.0048036,
+  "calls": 2,
+  "reasoning_tokens": 2215
+ },
+ "seconds": 163.3,
+ "packet_chars": 6005,
+ "tools": [
+  [
+   "read_lines",
+   "search",
+   "outline"
+  ],
+  [
+   "finish"
+  ]
+ ]
+}

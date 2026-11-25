@@ -1,0 +1,39 @@
+{
+ "candidate_id": "24c21dcc44cc81abc193aa3bfa2f66304470d205",
+ "model": "google/gemini-2.5-flash-lite",
+ "prompt_version": "fleet-review-v1",
+ "status": "reviewed",
+ "verdict": {
+  "title": "Add --scalar flag to glom CLI for unquoted single value output",
+  "decision": "keep",
+  "unchecked_changes": "The commit message also mentions a fix for the packaging tox job, which is not covered by the provided fail-to-pass tests.",
+  "tests_check_whole_fix": "yes",
+  "statement": "When using the `glom` command-line interface, there is no option to output single, non-collection values without JSON formatting (i.e., without quotes and whitespace). This makes it difficult to use the output directly in shell scripts or other tools that expect raw values. A new `--scalar` flag should be introduced. When this flag is present and the result of the `glom` operation is a scalar value (not a list, dict, etc.), it should be printed directly to standard output without any surrounding quotes or JSON formatting. If the result is not a scalar, the output should remain standard JSON. The CLI should recognize and process the `--scalar` flag.",
+  "reason": "The change adds a new feature to the CLI, and the provided fail-to-pass test directly addresses this new functionality.",
+  "failure_cause": "missing_interface",
+  "kind": "feature",
+  "required_interface": [
+   {
+    "name": "scalar",
+    "description": "boolean flag for the CLI, controlling output format for scalar values"
+   }
+  ]
+ },
+ "check_failures": [],
+ "unresolved_problems": [],
+ "usage": {
+  "prompt_tokens": 3641,
+  "completion_tokens": 1041,
+  "cached_tokens": 923,
+  "cost": 0.00069743,
+  "calls": 1,
+  "reasoning_tokens": 756
+ },
+ "seconds": 79.6,
+ "packet_chars": 4862,
+ "tools": [
+  [
+   "finish"
+  ]
+ ]
+}

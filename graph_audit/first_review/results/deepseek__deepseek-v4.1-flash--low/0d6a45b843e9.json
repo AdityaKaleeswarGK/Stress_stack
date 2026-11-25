@@ -1,0 +1,55 @@
+{
+ "candidate_id": "0d6a45b843e9df45d545215661e527dd683a5fb5",
+ "model": "deepseek/deepseek-v4.1-flash",
+ "prompt_version": "fleet-review-v1",
+ "status": "reviewed",
+ "verdict": {
+  "decision": "keep",
+  "reason": "The fail-to-pass test fails only because PathAccessError.path holds the internal TType path representation instead of a glom.Path instance (assertion `type(path) is Path`); wrapping the internal path in Path at the construction sites fixes it, and the interface (Path, PathAccessError with .path/.exc/.part_idx) is already public. A capable engineer can derive this from a described symptom.",
+  "kind": "bug_fix",
+  "failure_cause": "wrong_behaviour",
+  "required_interface": [],
+  "tests_check_whole_fix": "partly",
+  "unchecked_changes": "The test only exercises the index/`[` access branch of _t_eval (via the string spec 'data.3'). The equivalent wrapping changes in _s_first_magic and the '.' (getattr) and 'P' (fuzzy/Path) branches of _t_eval are not directly exercised by the new test, though they are the same one-line change.",
+  "title": "PathAccessError.path should be a glom.Path instance",
+  "statement": "When a glom access fails, the raised PathAccessError exposes a `path` attribute that is documented as a `glom.Path`. In practice, for some access styles the `path` attribute is instead the library's internal path representation, so `type(err.path)` is not `glom.Path` even though `err.path` compares equal to the expected `glom.Path(...)`.\n\nReproduce with:\n\n    target = {'value': {'data': [0, 1, 2]}}\n    try:\n        glom(target, (T['value'], 'data.3'))\n    except GlomError as e:\n        print(type(e.path))   # currently the internal path type, should be glom.Path\n\nThe error object is otherwise correct: `e.exc` is the underlying `IndexError` and `e.part_idx` is the failing part index.\n\nExpected behavior: `PathAccessError.path` must always be an actual `glom.Path` instance (i.e. `type(err.path) is glom.Path`, and `err.path == Path('data', '3')` for the example above), for every kind of failing access handled when evaluating a T/Path-style spec (attribute access, item/index access, and target-registry/fuzzy access, as well as the S-variable first-access case). The underlying exception (`exc`) and `part_idx` should remain as they are, and error messages/reprs must keep showing the path the same way.\n\nKeep `Path` and `PathAccessError` importable from `glom` as they are today; `PathAccessError.exc`, `PathAccessError.path`, and `PathAccessError.part_idx` remain the public attributes."
+ },
+ "check_failures": [],
+ "unresolved_problems": [],
+ "usage": {
+  "prompt_tokens": 48163,
+  "completion_tokens": 5972,
+  "cached_tokens": 31360,
+  "cost": 0.011402685,
+  "calls": 7,
+  "reasoning_tokens": 4470
+ },
+ "seconds": 568.7,
+ "packet_chars": 4689,
+ "tools": [
+  [
+   "search",
+   "search"
+  ],
+  [
+   "read_lines",
+   "read_lines"
+  ],
+  [
+   "search",
+   "read_lines"
+  ],
+  [
+   "read_lines"
+  ],
+  [
+   "read_lines"
+  ],
+  [
+   "search"
+  ],
+  [
+   "finish"
+  ]
+ ]
+}

@@ -1,0 +1,34 @@
+{
+ "candidate_id": "0d6a45b843e9df45d545215661e527dd683a5fb5",
+ "model": "openai/gpt-6-luna",
+ "prompt_version": "fleet-review-v1",
+ "status": "reviewed",
+ "verdict": {
+  "decision": "keep",
+  "reason": "PathAccessError.path regressed to the internal TType specification rather than a Path object for failures while evaluating T expressions. The new assertion demonstrates the expected public path type and confirms exception, path contents, and part index.",
+  "kind": "bug_fix",
+  "failure_cause": "wrong_behaviour",
+  "required_interface": [],
+  "tests_check_whole_fix": "partly",
+  "unchecked_changes": "The test covers indexed access failure in a T expression; the changes also normalize the path for missing-key, attribute, and fuzzy-match failures in other T evaluation branches.",
+  "title": "Keep PathAccessError.path as a Path for T-expression failures",
+  "statement": "When access through a T expression fails, `PathAccessError.path` can expose the internal T expression type instead of the public `Path` object. For example, evaluating `glom({'value': {'data': [0, 1, 2]}}, (T['value'], 'data.3'))` raises an error whose path should be `Path('data', '3')`, but currently is not a `Path`. Ensure access errors raised during T-expression evaluation consistently expose a `Path` instance, while preserving the original exception and correct failing-part index."
+ },
+ "check_failures": [],
+ "unresolved_problems": [],
+ "usage": {
+  "prompt_tokens": 3013,
+  "completion_tokens": 258,
+  "cached_tokens": 0,
+  "cost": 0.000505575,
+  "calls": 1,
+  "reasoning_tokens": 0
+ },
+ "seconds": 78.8,
+ "packet_chars": 4689,
+ "tools": [
+  [
+   "finish"
+  ]
+ ]
+}

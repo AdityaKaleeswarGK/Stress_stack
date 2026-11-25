@@ -276,6 +276,12 @@ def _execute(state: str, checkout: Path, evidence: Path, image_id: str, paths: l
              timeout: int, runtime: str = "runc") -> dict:
     """One sandboxed pytest run. Infrastructure failures raise; test failures do not."""
     evidence.mkdir(parents=True, exist_ok=True)
+    # Colima's file sharing shows host folders to the VM as root-owned 0755.
+    # runc does not enforce that on the share, but gVisor checks permissions
+    # itself, so the unprivileged test user could not write its JUnit report
+    # and every run under gVisor failed as "JUnit report missing". Only this
+    # per-run results folder is opened; the code mount stays read-only.
+    evidence.chmod(0o777)
     # Never reuse a JUnit file left by a previous attempt.
     (evidence / "junit.xml").unlink(missing_ok=True)
     name = f"fleet-{uuid.uuid4().hex[:16]}"
@@ -308,9 +314,25 @@ def _execute(state: str, checkout: Path, evidence: Path, image_id: str, paths: l
 
 
 def _apply(checkout: Path, patch: bytes, *, reverse: bool = False) -> None:
-    applied = run(["git", "apply", "--binary", *(["-R"] if reverse else []), "-"], cwd=checkout, input=patch)
+    """Apply `patch` to a plain (non-git) checkout, and prove it took effect.
+
+    Inside another repository's work tree `git apply` treats the checkout as
+    a subdirectory of that repository, silently skips every path "outside"
+    it and still exits 0. Checkouts live in the evidence folder, which can
+    sit inside a repository (Fleet's own `.fleet/`), so discovery is stopped
+    at the checkout's parent, and a reverse `--check` confirms the change is
+    now present rather than trusting the exit code.
+    """
+    env = {**os.environ, "GIT_CEILING_DIRECTORIES": str(checkout.resolve().parent)}
+    direction = ["-R"] if reverse else []
+    applied = run(["git", "apply", "--binary", *direction, "-"], cwd=checkout, input=patch, env=env)
     if applied.returncode:
         raise ValueError("patch does not apply cleanly")
+    if patch.strip():
+        undo = [] if reverse else ["-R"]
+        check = run(["git", "apply", "--binary", "--check", *undo, "-"], cwd=checkout, input=patch, env=env)
+        if check.returncode:
+            raise ValueError("patch reported success but its changes are not in the checkout")
 
 
 def probe_hunks(hunks: list[dict], fail_to_pass: list[str], execute) -> dict:
@@ -344,8 +366,11 @@ def probe_hunks(hunks: list[dict], fail_to_pass: list[str], execute) -> dict:
 
 def validate(candidate: dict, root: Path, out: Path, recipe: dict, *, timeout: int = 600,
              repeats: int = DEFAULT_REPEATS, base_run: bool = False, hunk_probes: bool = False,
-             era: dict | None = None, progress=None) -> dict:
+             era: dict | None = None, require_issue: bool = True, progress=None) -> dict:
     """The no-op (before) and oracle (after) states, `repeats` times each.
+
+    `require_issue=False` validates commit-only candidates (no linked closed
+    issue); the problem statement then has to come from the review stage.
 
     By default that is two container runs. `base_run` adds a run of the base
     commit with its own tests, which separates tests already failing there;
@@ -367,9 +392,9 @@ def validate(candidate: dict, root: Path, out: Path, recipe: dict, *, timeout: i
     try:
         if repeats < 1:
             raise ValueError("Each state needs at least one run")
-        if candidate.get("status") != "ready_for_review":
+        if require_issue and candidate.get("status") != "ready_for_review":
             raise ValueError("Candidate needs issue/integration enrichment before validation")
-        if not any(i.get("state") == "closed" and i.get("body") for i in candidate.get("issues", [])):
+        if require_issue and not any(i.get("state") == "closed" and i.get("body") for i in candidate.get("issues", [])):
             raise ValueError("A closed issue with a problem description is required")
         image = recipe.get("image", "")
         install = recipe.get("install_command", "")

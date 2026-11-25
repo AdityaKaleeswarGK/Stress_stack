@@ -1,0 +1,41 @@
+{
+ "candidate_id": "c31c91e96c14ee58a92bce82d199ae6ac8cbbd05",
+ "model": "openai/gpt-6-luna",
+ "prompt_version": "fleet-review-v1",
+ "status": "reviewed",
+ "verdict": {
+  "decision": "keep",
+  "reason": "Before this change, operators on T raise TypeError instead of producing evaluable specifications. The added tests cover expression evaluation, representations, and conversion of arithmetic failures to PathAccessError.",
+  "kind": "feature",
+  "failure_cause": "wrong_behaviour",
+  "required_interface": [],
+  "tests_check_whole_fix": "partly",
+  "unchecked_changes": "Floor-division expression construction is added but evaluation is not implemented (the evaluation branch is commented out); the tests do not cover floor division. The legacy __div__ alias is also untested.",
+  "title": "Support arithmetic expressions with T",
+  "statement": "Using arithmetic or bitwise operators on `T` currently raises `TypeError`, preventing these operations from being used in glom specifications. Support building and evaluating expressions using addition, subtraction, multiplication, true division, modulo, exponentiation, bitwise AND/OR/XOR, and unary inversion and negation. For example, `glom(2, T + T)` should return `4`, and `glom(2, -T)` should return `-2`. Expression representations should be readable and preserve grouping, and failures such as division by zero should be surfaced as `PathAccessError`."
+ },
+ "check_failures": [
+  [
+   "failure_cause says a name was missing, but required_interface is empty."
+  ]
+ ],
+ "unresolved_problems": [],
+ "usage": {
+  "prompt_tokens": 8170,
+  "completion_tokens": 516,
+  "cached_tokens": 5403,
+  "cost": 0.000657805,
+  "calls": 2,
+  "reasoning_tokens": 0
+ },
+ "seconds": 157.3,
+ "packet_chars": 7286,
+ "tools": [
+  [
+   "finish"
+  ],
+  [
+   "finish"
+  ]
+ ]
+}

@@ -3,10 +3,12 @@ from __future__ import annotations
 
 import json
 import os
+import time
 from pathlib import Path
 import urllib.error
 import urllib.request
 
+from fleet import net
 from fleet.validation import validate
 from fleet.workspace import git, write_json
 
@@ -48,18 +50,39 @@ class OpenRouter:
         if not model:
             raise ValueError("Choose a tool-capable model with --model or OPENROUTER_MODEL.")
 
-    def complete(self, messages: list, tools: list) -> dict:
-        payload = {"model": self.model, "messages": messages, "tools": tools,
-                   "tool_choice": "auto", "max_tokens": 1800,
-                   "provider": {"require_parameters": True}}
+    # Reasoning models spend hidden tokens before answering; those count
+    # against max_tokens and cost output price. "low" keeps some thinking,
+    # "none" turns it off, None leaves the provider's default.
+    reasoning: str | None = "low"
+
+    def complete(self, messages: list, tools: list, max_tokens: int = 1800) -> dict:
+        payload = {"model": self.model, "messages": messages, "max_tokens": max_tokens,
+                   "usage": {"include": True}}
+        if self.reasoning == "none":
+            payload["reasoning"] = {"enabled": False}
+        elif self.reasoning:
+            payload["reasoning"] = {"effort": self.reasoning, "exclude": True}
+        # Among providers serving this model, prefer the fastest; the default
+        # (cheapest first) routed a review step to one at ~8 tokens/second.
+        payload["provider"] = {"sort": "throughput"}
+        if tools:
+            payload.update(tools=tools, tool_choice="auto")
+            payload["provider"]["require_parameters"] = True
         request = urllib.request.Request(ENDPOINT, json.dumps(payload).encode(),
                    {"Authorization": f"Bearer {self.key}", "Content-Type": "application/json"})
-        try:
-            with urllib.request.urlopen(request, timeout=120) as response:
-                data = json.load(response)
-        except urllib.error.HTTPError as exc:
-            # Do not log raw request headers or automatically retry billable calls.
-            raise RuntimeError(f"OpenRouter HTTP {exc.code}; check model, credentials and account balance") from None
+        for attempt in range(2):
+            try:
+                with net.urlopen(request, timeout=180) as response:
+                    data = json.load(response)
+                break
+            except urllib.error.HTTPError as exc:
+                # Rate limits and provider outages are not billed, so one
+                # retry is safe; anything else is not retried. Raw request
+                # headers are never logged.
+                if exc.code in {429, 500, 502, 503} and attempt == 0:
+                    time.sleep(5)
+                    continue
+                raise RuntimeError(f"OpenRouter HTTP {exc.code}; check model, credentials and account balance") from None
         if data.get("error") or not data.get("choices"):
             raise RuntimeError("OpenRouter returned no completion")
         return data

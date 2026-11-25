@@ -1,0 +1,47 @@
+{
+ "candidate_id": "4466928f6a2fb2b8f53b6ec3cdfebb1a1139adc9",
+ "model": "deepseek/deepseek-v4.1-flash",
+ "prompt_version": "fleet-review-v1",
+ "status": "reviewed",
+ "verdict": {
+  "decision": "keep",
+  "reason": "Single new API `Partial.specfunc` with clear documented semantics; the fail-to-pass test only requires that name plus the dynamic-func behavior in glomit, which a statement can convey without dictating code.",
+  "kind": "feature",
+  "failure_cause": "missing_interface",
+  "required_interface": [
+   {
+    "name": "Partial.specfunc",
+    "description": "Classmethod/alternate constructor: Partial.specfunc(subspec) returns a Partial whose callable is not fixed at construction but is computed by glomming subspec against the target; that resulting callable is then invoked with the accumulated positional/keyword arguments (none if none were added) and its return value becomes the glom result."
+   }
+  ],
+  "tests_check_whole_fix": "partly",
+  "unchecked_changes": "The `subspec` attribute plumbing in `__init__` and the `func = self.func or recurse(self.subspec)` branch are exercised, but the interaction of specfunc-created Partials with consts/specs/star chaining and the added `__repr__` TODO comment are not covered.",
+  "title": "Add Partial.specfunc for target-derived callables",
+  "statement": "glom's `Partial` helper lets you upgrade ordinary Python functions into glom specs by fixing the function up front and then attaching constant arguments (`.consts`), sub-specs (`.specs`), or starred args/kwargs (`.star`). There's no way, however, to leave the function itself open and decide which callable to invoke based on the target being processed.\n\nPlease add that capability as a new alternate constructor on `Partial`:\n\n    Partial.specfunc(subspec)\n\nGiven `subspec`, it should return a `Partial` whose function is derived by glomming `subspec` against the target at evaluation time (for example, `Partial.specfunc(T)` where `T` resolves to a callable in the target), rather than a function fixed at construction time. When that `Partial` is used as a spec, glom should evaluate `subspec` against the target to obtain the callable, then call it with whatever positional and keyword arguments have been accumulated by `.consts`/`.specs`/`.star` (with no arguments if none were added), and return the callable's result. So `glom(<some callable>, Partial.specfunc(T))` should invoke that callable with no args and yield its return value.\n\nExisting `Partial` usage must keep working unchanged: `Partial(func)` still stores `func` and calling `.consts`, `.specs`, or `.star` on it still builds up arguments and invokes `func` as before."
+ },
+ "check_failures": [],
+ "unresolved_problems": [],
+ "usage": {
+  "prompt_tokens": 14512,
+  "completion_tokens": 2309,
+  "cached_tokens": 10368,
+  "cost": 0.004076208,
+  "calls": 3,
+  "reasoning_tokens": 1278
+ },
+ "seconds": 237.4,
+ "packet_chars": 3336,
+ "tools": [
+  [
+   "read_lines",
+   "read_lines"
+  ],
+  [
+   "read_lines",
+   "read_lines"
+  ],
+  [
+   "finish"
+  ]
+ ]
+}

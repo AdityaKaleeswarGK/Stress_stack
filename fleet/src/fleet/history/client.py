@@ -35,6 +35,8 @@ from datetime import UTC, datetime
 from pathlib import Path
 from typing import Any, Callable, Iterator
 
+from fleet import net
+
 logger = logging.getLogger(__name__)
 
 API_ROOT = "https://api.github.com"
@@ -100,7 +102,7 @@ Transport = Callable[[str, dict[str, str]], Response]
 def _urllib_transport(url: str, headers: dict[str, str]) -> Response:
     request = urllib.request.Request(url, headers=headers)
     try:
-        with urllib.request.urlopen(request, timeout=30) as raw:
+        with net.urlopen(request, timeout=30) as raw:
             return Response(
                 status=raw.status,
                 body=raw.read(),

@@ -1,0 +1,39 @@
+{
+ "candidate_id": "b609f91302ef4f35b4d5a0132a0d735248e4ea99",
+ "model": "google/gemini-2.5-flash-lite",
+ "prompt_version": "fleet-review-v1",
+ "status": "reviewed",
+ "verdict": {
+  "kind": "bug_fix",
+  "title": "Allow specific access to dunder attributes on T objects",
+  "decision": "keep",
+  "tests_check_whole_fix": "yes",
+  "required_interface": [
+   {
+    "name": "T.__",
+    "description": "A method to access dunder attributes on T instances, e.g., T.__('class__')"
+   }
+  ],
+  "reason": "The change modifies how the `T` object in `glom.core.py` handles double-underscore attributes, introducing a new `T.__()` method for accessing them while preserving a specific error message for direct dunder access. This directly addresses the observed behavior and is well-covered by the provided test.",
+  "statement": "When using the `T` object for path-based access in glom, attempting to access attributes that start and end with double underscores (dunder attributes) directly results in an `AttributeError`. This prevents accessing built-in Python attributes like `__class__` or `__name__` through `T`. It should be possible to access these attributes using a dedicated mechanism, and direct access should provide a helpful error message guiding the user to this mechanism.",
+  "failure_cause": "wrong_behaviour",
+  "unchecked_changes": ""
+ },
+ "check_failures": [],
+ "unresolved_problems": [],
+ "usage": {
+  "prompt_tokens": 3332,
+  "completion_tokens": 1050,
+  "cached_tokens": 0,
+  "cost": 0.0007532,
+  "calls": 1,
+  "reasoning_tokens": 790
+ },
+ "seconds": 80.3,
+ "packet_chars": 4012,
+ "tools": [
+  [
+   "finish"
+  ]
+ ]
+}

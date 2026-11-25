@@ -1,0 +1,52 @@
+{
+ "candidate_id": "efddd66371d14bace5dba919232cd809c1d83163",
+ "model": "qwen/qwen3.7-flash",
+ "prompt_version": "fleet-review-v1",
+ "status": "checks_failed",
+ "verdict": {
+  "decision": "keep",
+  "reason": "The commit renames the Literal class to Val while preserving backwards compatibility via Literal = Val. The three fail-to-pass tests exercise the new Val class definition, its registration in the type-checking logic in _t_eval, and the backwards-compatibility alias. This is a clear refactor that any capable engineer could implement from the problem statement.",
+  "kind": "other",
+  "failure_cause": "missing_interface",
+  "required_interface": [],
+  "tests_check_whole_fix": "yes",
+  "unchecked_changes": "None",
+  "title": "Rename Literal to Val with backwards compatibility",
+  "statement": "In glom, the Literal spec class (which wraps a literal value to prevent it from being interpreted as a path/subspec) has been renamed to Val to better reflect its purpose. The old Literal name should still work for backwards compatibility.\n\nThe change involves renaming the Literal class to Val in glom/core.py. The Val class stores its value in self.value and implements glomit(target, scope) returning that value. The type check in _t_eval must recognize Val instances during path evaluation so they are not treated as dict keys. A backwards-compatibility alias Literal = Val should be added at the end of core.py. Both Val and Literal must be exported from glom/__init__.py. References in glom/matching.py should use Val instead of Literal.\n\nTo reproduce the issue before the fix: importing Val from glom raises ImportError, and using Val(...) in a spec causes a KeyError because Val is not recognized as a special spec type. After the fix, Val works as expected, and Literal remains available as an alias pointing to Val."
+ },
+ "check_failures": [
+  [
+   "The statement quotes 1 line(s) of the fix's code, e.g. 'if type(arg) in (Spec, TType, Val):'.",
+   "Required name 'Val' is not created by the fix (created: []).",
+   "Required name 'Literal' is not created by the fix (created: [])."
+  ],
+  [
+   "Required name 'Val' is not created by the fix (created: []).",
+   "Required name 'Literal' is not created by the fix (created: [])."
+  ]
+ ],
+ "unresolved_problems": [
+  "failure_cause says a name was missing, but required_interface is empty."
+ ],
+ "usage": {
+  "prompt_tokens": 29875,
+  "completion_tokens": 3196,
+  "cached_tokens": 18560,
+  "cost": 0.00086629,
+  "calls": 3,
+  "reasoning_tokens": 0
+ },
+ "seconds": 254.3,
+ "packet_chars": 17456,
+ "tools": [
+  [
+   "finish"
+  ],
+  [
+   "finish"
+  ],
+  [
+   "finish"
+  ]
+ ]
+}

@@ -1,0 +1,46 @@
+{
+ "candidate_id": "24c21dcc44cc81abc193aa3bfa2f66304470d205",
+ "model": "openai/gpt-6-luna",
+ "prompt_version": "fleet-review-v1",
+ "status": "reviewed",
+ "verdict": {
+  "decision": "keep",
+  "reason": "The change adds a usable CLI mode that emits scalar results directly while preserving the existing JSON output for normal invocations. The fail-to-pass test verifies the new option is recognized and removes quoting and the trailing newline from a string result.",
+  "kind": "feature",
+  "failure_cause": "missing_interface",
+  "required_interface": [
+   {
+    "name": "scalar",
+    "description": "The `--scalar` command-line flag, exposed as the `scalar` option to `glom_cli`; when enabled, scalar results are printed directly without JSON quoting or a trailing newline."
+   }
+  ],
+  "tests_check_whole_fix": "partly",
+  "unchecked_changes": "The tests do not cover scalar results of types other than strings, non-scalar results with --scalar, or debug/inspect behavior with the new option.",
+  "title": "Add raw scalar output to the CLI",
+  "statement": "Add a `--scalar` option to the `glom` command for scripting. By default, results should retain the current JSON formatting (for example, a string result is quoted and followed by a newline). When `--scalar` is supplied and the result is a single scalar value rather than a collection, print it directly without JSON quoting or trailing whitespace. Non-scalar results should continue to use the normal JSON output. The option should be available to `glom_cli` as `scalar`. For example, `glom --scalar a.b.c '{\"a\": {\"b\": {\"c\": \"d\"}}}'` should write `d` with no newline."
+ },
+ "check_failures": [
+  [
+   "Required name '--scalar' is not created by the fix (created: ['scalar'])."
+  ]
+ ],
+ "unresolved_problems": [],
+ "usage": {
+  "prompt_tokens": 6376,
+  "completion_tokens": 611,
+  "cached_tokens": 4490,
+  "cost": 0.00058605,
+  "calls": 2,
+  "reasoning_tokens": 0
+ },
+ "seconds": 158.5,
+ "packet_chars": 4862,
+ "tools": [
+  [
+   "finish"
+  ],
+  [
+   "finish"
+  ]
+ ]
+}

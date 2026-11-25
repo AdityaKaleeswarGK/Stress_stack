@@ -1,0 +1,39 @@
+{
+ "candidate_id": "24c21dcc44cc81abc193aa3bfa2f66304470d205",
+ "model": "google/gemini-2.5-flash-lite",
+ "prompt_version": "fleet-review-v1",
+ "status": "reviewed",
+ "verdict": {
+  "decision": "keep",
+  "reason": "The problem statement clearly describes the new CLI flag and its intended behavior, which is sufficient for a solver to implement the fix.",
+  "kind": "feature",
+  "failure_cause": "missing_interface",
+  "statement": "The `glom` command-line interface currently outputs all results, including single scalar values, as JSON strings. This can be inconvenient for scripting when a simple scalar output is desired, without the surrounding quotes and JSON formatting. A new `--scalar` flag should be added to the CLI. When this flag is present and the `glom` operation results in a scalar value (e.g., a string, number, boolean, None), the CLI should output this value directly, without JSON encoding or surrounding quotes. If the result is not a scalar, it should be output as usual (e.g., JSON formatted). This feature requires the `scalar` command-line option and the ability to detect scalar types within the CLI output logic.",
+  "unchecked_changes": "",
+  "tests_check_whole_fix": "yes",
+  "title": "Add --scalar flag to glom CLI for scalar output",
+  "required_interface": [
+   {
+    "name": "scalar",
+    "description": "The --scalar command-line flag, which enables scalar output for non-collection results."
+   }
+  ]
+ },
+ "check_failures": [],
+ "unresolved_problems": [],
+ "usage": {
+  "prompt_tokens": 3719,
+  "completion_tokens": 1005,
+  "cached_tokens": 0,
+  "cost": 0.0007739,
+  "calls": 1,
+  "reasoning_tokens": 733
+ },
+ "seconds": 80.2,
+ "packet_chars": 4862,
+ "tools": [
+  [
+   "finish"
+  ]
+ ]
+}

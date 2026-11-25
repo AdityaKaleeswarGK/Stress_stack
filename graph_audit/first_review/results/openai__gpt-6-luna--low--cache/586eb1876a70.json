@@ -1,0 +1,33 @@
+{
+ "candidate_id": "586eb1876a70ad4c1d368f6f3424e37027a4767e",
+ "model": "openai/gpt-6-luna",
+ "prompt_version": "fleet-review-v1",
+ "status": "reviewed",
+ "verdict": {
+  "decision": "keep",
+  "kind": "bug_fix",
+  "failure_cause": "wrong_behaviour",
+  "required_interface": [],
+  "tests_check_whole_fix": "partly",
+  "unchecked_changes": "The tests verify rejection of an invalid Invoke argument, but do not appear to exercise acceptance of Spec instances or the _is_spec helper\u2019s broader type-detection behavior.",
+  "title": "Validate Invoke targets",
+  "statement": "`Invoke` currently accepts arbitrary objects as its target and fails later when the invocation is evaluated. Validate the target when constructing `Invoke`: accept callable objects and `Spec` instances, and otherwise raise `TypeError` with a message identifying the expected callable-or-Spec requirement. Existing `Invoke.specfunc(...)` behavior should remain supported."
+ },
+ "check_failures": [],
+ "unresolved_problems": [],
+ "usage": {
+  "prompt_tokens": 2529,
+  "completion_tokens": 162,
+  "cached_tokens": 1469,
+  "cost": 0.00022814,
+  "calls": 1,
+  "reasoning_tokens": 0
+ },
+ "seconds": 77.5,
+ "packet_chars": 3178,
+ "tools": [
+  [
+   "finish"
+  ]
+ ]
+}

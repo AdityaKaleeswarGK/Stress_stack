@@ -182,7 +182,7 @@ def test_openrouter_protocol_and_key_not_in_payload(monkeypatch):
         observed["payload"] = json.loads(request.data)
         observed["authorization"] = request.headers["Authorization"]
         return Reply()
-    monkeypatch.setattr("urllib.request.urlopen", urlopen)
+    monkeypatch.setattr("fleet.net.urlopen", urlopen)
     OpenRouter("test/model", key="test-secret").complete([{"role": "user", "content": "hi"}], [{"type": "function"}])
     assert observed["authorization"] == "Bearer test-secret"
     assert "test-secret" not in json.dumps(observed["payload"])

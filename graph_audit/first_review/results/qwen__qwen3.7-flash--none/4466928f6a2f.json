@@ -1,0 +1,57 @@
+{
+ "candidate_id": "4466928f6a2fb2b8f53b6ec3cdfebb1a1139adc9",
+ "model": "qwen/qwen3.7-flash",
+ "prompt_version": "fleet-review-v1",
+ "status": "reviewed",
+ "verdict": {
+  "decision": "keep",
+  "reason": "This is a legitimate feature addition. The test clearly demonstrates the expected behavior: using Partial.specfunc(T) to create a spec that resolves a subspec (T) to get a function from the target, then calls it. The failure is a missing_interface error (AttributeError for specfunc). A capable engineer could implement this from the description.",
+  "kind": "feature",
+  "failure_cause": "missing_interface",
+  "required_interface": [
+   {
+    "name": "specfunc",
+    "description": "A classmethod on Partial that takes a subspec and returns a Partial instance where the subspec will be resolved to get the actual function to call"
+   }
+  ],
+  "tests_check_whole_fix": "yes",
+  "unchecked_changes": "",
+  "title": "Add specfunc classmethod to Partial for dynamic function resolution",
+  "statement": "The `Partial` class in glom is used to wrap arbitrary Python functions so they can be integrated into glom specs. Currently, you must pass the function directly to `Partial(func)`. However, there is no way to create a Partial where the function itself is determined by resolving a subspec at runtime.\n\n**Expected behavior:**\nAdd a `specfunc` classmethod to `Partial` that allows creating a Partial where a subspec is first resolved to obtain the function, which is then called with any additional arguments/kwargs.\n\nUsage example:\n```python\nfrom glom import glom, T, Partial\n\ndef my_func(*args, **kwargs):\n    return \"result\"\n\n# Use specfunc to resolve T (the target) as the function\nresult = glom(my_func, Partial.specfunc(T))\n# This should call my_func() with no arguments and return \"result\"\n```\n\nThe `specfunc(subspec)` classmethod should:\n1. Create a Partial instance with the given subspec\n2. Store the subspec separately so that during execution, it can be resolved via glom to obtain the actual callable\n3. When called, resolve the subspec to get the function, then invoke it with any accumulated args/kwargs\n\nRequired interface:\n- `Partial.specfunc(subspec)` - classmethod that creates a Partial for dynamic function resolution"
+ },
+ "check_failures": [],
+ "unresolved_problems": [],
+ "usage": {
+  "prompt_tokens": 43468,
+  "completion_tokens": 1671,
+  "cached_tokens": 34176,
+  "cost": 0.000701046,
+  "calls": 7,
+  "reasoning_tokens": 0
+ },
+ "seconds": 560.3,
+ "packet_chars": 3336,
+ "tools": [
+  [
+   "outline"
+  ],
+  [
+   "read_lines"
+  ],
+  [
+   "read_lines"
+  ],
+  [
+   "read_lines"
+  ],
+  [
+   "search"
+  ],
+  [
+   "test_failure"
+  ],
+  [
+   "finish"
+  ]
+ ]
+}
